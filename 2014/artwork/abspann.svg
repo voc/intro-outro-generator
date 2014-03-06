@@ -220,6 +220,6 @@
       x="890"
       width="120"
       height="42"
-      xlink:href="%lizenz.svg" />
+      xlink:href="file:///%workdir/%lizenz.svg" />
   </g>
 </svg>
