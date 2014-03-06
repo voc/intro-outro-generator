@@ -131,7 +131,7 @@ def abspann(lizenz, workdir='artwork', outdir='..'):
 		os.system('cd {0} && rsvg-convert .gen.svg > .frames/{1:04d}.png'.format(workdir, frameNr))
 
 	ensure_files_removed(filename)
-	os.system('cd {0} && avconv -f image2 -i .frames/%04d.png -c:v libx264 -preset veryslow -qp 0 "{1}"'.format(workdir, filename))
+	os.system('cd {0} && avconv -f image2 -i .frames/%04d.png -c:v libx264 -preset veryslow -qp 0 "{1}"'.format(workdir, filename) + ('' if debug else '>/dev/null 2>&1'))
 
 	if debug:
 		print "aufräumen"
