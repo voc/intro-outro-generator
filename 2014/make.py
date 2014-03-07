@@ -101,6 +101,44 @@ def vorspannFrames():
 	for i in range(0, frames):
 		yield (frame+i, 1, 0, 1)
 
+def pauseFrames():
+	# 12 Sekunden
+
+	# 2 Sekunden Text1 stehen
+	frame = 0
+	frames = 2*fps
+	for i in range(0, frames):
+		yield (frame+i, 1, 0)
+
+	# 2 Sekunden Fadeout Text1
+	frame = frame+i+1
+	frames = 2*fps
+	for i in range(0, frames):
+		yield (frame+i, 1-easeOutCubic(i, 0, 1, frames), 0)
+
+	# 2 Sekunden Fadein Text2
+	frame = frame+i+1
+	frames = 2*fps
+	for i in range(0, frames):
+		yield (frame+i, 0, easeOutCubic(i, 0, 1, frames))
+
+	# 2 Sekunden Text2 stehen
+	frame = frame+i+1
+	frames = 2*fps
+	for i in range(0, frames):
+		yield (frame+i, 0, 1)
+
+	# 2 Sekunden Fadeout Text2
+	frame = frame+i+1
+	frames = 2*fps
+	for i in range(0, frames):
+		yield (frame+i, 0, 1-easeOutCubic(i, 0, 1, frames))
+
+	# 2 Sekunden Fadein Text1
+	frame = frame+i+1
+	frames = 2*fps
+	for i in range(0, frames):
+		yield (frame+i, easeOutCubic(i, 0, 1, frames), 0)
 
 
 def abspann(lizenz, workdir='artwork', outdir='..'):
@@ -180,6 +218,44 @@ def vorspann(id, title, personnames, workdir='artwork', outdir='..'):
 	shutil.rmtree(os.path.join(workdir, '.frames'))
 	ensure_files_removed(os.path.join(workdir, '.gen.svg'))
 
+def pause(workdir='artwork', outdir='..'):
+	if debug:
+		print "erzeuge Pause-Loop"
+
+	filename = os.path.join(outdir, 'pause.mp4')
+	dvfilename = os.path.join(outdir, 'pause.dv')
+
+	ensure_path_exists(os.path.join(workdir, '.frames'))
+
+	with open(os.path.join(workdir, 'pause.svg'), 'r') as pause_file:
+		pause = pause_file.read()
+
+	for (frameNr, opacity1, opacity2) in pauseFrames():
+		if debug:
+			print "frameNr {0:2d} => opacity1 {1:0.2f}, opacity2 {2:0.2f}".format(frameNr, opacity1, opacity2)
+
+		pairs = \
+			('%opacity1', str(opacity1)), \
+			('%opacity2', str(opacity2)), \
+			('%workdir', os.path.realpath(workdir) )
+
+		with open(os.path.join(workdir, '.gen.svg'), 'w') as gen_file:
+			gen_pause = reduce(lambda a, kv: a.replace(*kv), pairs, pause)
+			gen_file.write( gen_pause )
+
+		os.system('cd {0} && rsvg-convert .gen.svg > .frames/{1:04d}.png'.format(workdir, frameNr))
+
+	ensure_files_removed(filename)
+	os.system('cd {0} && avconv -f image2 -i .frames/%04d.png -c:v libx264 -preset veryslow -qp 0 "{1}"'.format(workdir, filename) + ('' if debug else '>/dev/null 2>&1'))
+
+	ensure_files_removed(dvfilename)
+	os.system('cd {0} && avconv -f image2 -i .frames/%04d.png -target pal-dv "{1}"'.format(workdir, dvfilename) + ('' if debug else '>/dev/null 2>&1'))
+
+	if debug:
+		print "aufräumen"
+	shutil.rmtree(os.path.join(workdir, '.frames'))
+	ensure_files_removed(os.path.join(workdir, '.gen.svg'))
+
 
 def events():
 	print "downloading pentabarf schedule"
@@ -204,6 +280,7 @@ if debug:
 	print "!!! DEBUG MODE !!!"
 	vorspann(667, 'OpenJUMP - Überblick, Neuigkeiten, Zusammenarbeit/Schnittstellen mit proprietärer Software', 'Matthias Scholz')
 	abspann('by-sa')
+	pause()
 	sys.exit(0)
 
 
@@ -217,6 +294,7 @@ for (id, title, personnames) in events():
 tasks.put( ('abspann', 'by-sa') )
 tasks.put( ('abspann', 'by-nc-sa') )
 tasks.put( ('abspann', 'cc-zero') )
+tasks.put( ('pause') )
 
 num_worker_threads = multiprocessing.cpu_count()
 print "{0} tasks in queue, starting {1} worker threads".format( tasks.qsize(), num_worker_threads )
