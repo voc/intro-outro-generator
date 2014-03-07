@@ -297,7 +297,7 @@ tasks.put( ('abspann', 'cc-zero') )
 tasks.put( ('pause') )
 
 num_worker_threads = multiprocessing.cpu_count()
-print "{0} tasks in queue, starting {1} worker threads".format( tasks.qsize(), num_worker_threads )
+print "{0} tasks in queue, starting {1} worker threads".format( tasks.qsize() - num_worker_threads, num_worker_threads )
 
 for _ in range(num_worker_threads):
 	tasks.put(None) # put sentinel to signal the end
@@ -329,7 +329,7 @@ def worker():
 		opts = task[1:] + (tempdir, outdir)
 
 		fn(*opts)
-		tprint( 'finished {0}'.format(task) )
+		tprint( 'finished {0}, {1} tasks left'.format(task, tasks.qsize() - num_worker_threads) )
 		tasks.task_done()
 
 	tprint("cleaning up worker")
