@@ -65,7 +65,7 @@ def vorspannFilename(id, title):
 # svg does not have a method for automatic line breaking, that rsvg is capable of
 # so we do it in python as good as we can
 def vorspannTitle(title):
-	return '</tspan><tspan x="150" dy="45">'.join(textwrap.wrap(title, 28))
+	return '</tspan><tspan x="150" dy="45">'.join(textwrap.wrap(title, 35))
 
 
 
