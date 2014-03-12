@@ -329,7 +329,7 @@ for (id, title, personnames) in events():
 for lizenz in ('by-sa', 'by-nc-sa', 'cc-zero'):
 	tasks.put((
 		'abspann.svg',
-		'abspann-{0}.mp4'.format(lizenz),
+		'abspann-{0}.dv'.format(lizenz),
 		abspannFrames,
 		{'%lizenz':lizenz}
 	))
@@ -337,7 +337,7 @@ for lizenz in ('by-sa', 'by-nc-sa', 'cc-zero'):
 # place the pause-sequence into the queue
 tasks.put((
 	'pause.svg',
-	'pause.mp4',
+	'pause.dv',
 	pauseFrames
 ))
 
