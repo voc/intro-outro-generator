@@ -10,7 +10,7 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1024"
+   width="720"
    height="576"
    id="svg2"
    version="1.1"
@@ -150,7 +150,7 @@
       <image
          xlink:href="file:///%workdir/foto-soft.jpg"
          y="313.82144"
-         x="-3.2142856"
+         x="-200.2142856"
          id="image_background"
          height="768"
          width="1024" />
