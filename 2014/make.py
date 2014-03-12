@@ -60,7 +60,7 @@ def slugify(value):
 
 # create a filename from the events' id and a slugified version of the title
 def vorspannFilename(id, title):
-	return u'{0:04d}-{1}.mp4'.format(id, slugify(unicode(title)))
+	return u'{0:04d}-{1}.dv'.format(id, slugify(unicode(title)))
 
 # svg does not have a method for automatic line breaking, that rsvg is capable of
 # so we do it in python as good as we can
@@ -236,7 +236,7 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 
 	# invoke avconv aka ffmpeg and renerate a lossles-mp4 from the frames
 	#  if we're not in debug-mode, suppress all output
-	os.system('cd {0} && avconv -f image2 -i .frames/%04d.png -c:v libx264 -preset veryslow -qp 0 "{1}"'.format(workdir, outfile) + ('' if debug else '>/dev/null 2>&1'))
+	os.system('cd {0} && avconv -f image2 -i .frames/%04d.png -target pal-dv "{1}"'.format(workdir, outfile) + ('' if debug else '>/dev/null 2>&1'))
 
 	# as before, in non-debug-mode the thread-worker does all progress messages
 	if debug:
