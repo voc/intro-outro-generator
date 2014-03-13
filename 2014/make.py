@@ -321,7 +321,7 @@ titlemap = {
 
 # iterate over all events extracted from the schedule xml-export
 for (id, title, personnames) in events():
-	if titlemap[id]:
+	if id in titlemap:
 		title = titlemap[id]
 
 	# generate a task description and put them into the queue
