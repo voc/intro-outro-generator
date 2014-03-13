@@ -250,7 +250,7 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 
 
 
-# Download the Events-Schedule ans parse all Events out of it. Yield a tupel for each Event
+# Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event
 def events():
 	print "downloading pentabarf schedule"
 
