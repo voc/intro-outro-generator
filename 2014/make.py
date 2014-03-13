@@ -315,8 +315,15 @@ if debug:
 # threaded task queue
 tasks = Queue()
 
+titlemap = {
+	708: "Neue WEB-Anwendungen des LGRB Baden-Württemberg im Überblick"
+}
+
 # iterate over all events extracted from the schedule xml-export
 for (id, title, personnames) in events():
+	if titlemap[id]:
+		title = titlemap[id]
+
 	# generate a task description and put them into the queue
 	tasks.put((
 		'vorspann.svg',
