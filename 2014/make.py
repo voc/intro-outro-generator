@@ -231,10 +231,10 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 		# incrwement frame-number
 		frameNr += 1
 
-	# remove the mp4 we are about to (re-)generate
+	# remove the dv we are about to (re-)generate
 	ensureFilesRemoved(os.path.join(workdir, outfile))
 
-	# invoke avconv aka ffmpeg and renerate a lossles-mp4 from the frames
+	# invoke avconv aka ffmpeg and renerate a lossles-dv from the frames
 	#  if we're not in debug-mode, suppress all output
 	os.system('cd {0} && avconv -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv "{1}"'.format(workdir, outfile) + ('' if debug else '>/dev/null 2>&1'))
 
@@ -298,13 +298,13 @@ if debug:
 
 	render(
 		'abspann.svg',
-		'../abspann-by-sa.mp4',
+		'../abspann-by-sa.dv',
 		abspannFrames,
 		{'%lizenz': 'by-sa'}
 	)
 
 	render('pause.svg',
-		'../pause.mp4',
+		'../pause.dv',
 		pauseFrames
 	)
 
