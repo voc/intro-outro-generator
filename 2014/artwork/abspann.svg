@@ -163,8 +163,8 @@
          width="166" />
     </g>
     <g
-       style="opacity:%opacity"
-       id="g3849">
+       style="opacity:1"
+       id="banderole">
       <rect
          id="rect_banderole"
          width="1024"
@@ -216,7 +216,7 @@
     </g>
     <image
       style="opacity:1"
-      id="lizenz"
+      id="license"
       y="950"
       x="890"
       width="120"

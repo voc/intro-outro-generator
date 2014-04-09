@@ -108,6 +108,7 @@ def vorspannFrames():
 	for i in range(0, frames):
 		yield (
 			('box',   'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames)),
+			('url',   'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames)),
 			('text1', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames)),
 			('text2', 'opacity', 0)
 		)
@@ -117,6 +118,7 @@ def vorspannFrames():
 	for i in range(0, frames):
 		yield {
 			('box',   'opacity', 1),
+			('url',   'opacity', 1),
 			('text1', 'opacity', "%.2f" % (1-(float(i)/frames))),
 			('text2', 'opacity', 0)
 		}
@@ -126,6 +128,7 @@ def vorspannFrames():
 	for i in range(0, frames):
 		yield {
 			('box',   'opacity', 1),
+			('url',   'opacity', 1),
 			('text1', 'opacity', 0),
 			('text2', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames))
 		}
@@ -135,6 +138,7 @@ def vorspannFrames():
 	for i in range(0, frames):
 		yield {
 			('box',   'opacity', 1),
+			('url',   'opacity', 1),
 			('text1', 'opacity', 0),
 			('text2', 'opacity', 1)
 		}
