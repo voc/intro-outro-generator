@@ -179,14 +179,14 @@
        id="g_background"
        transform="translate(3.2142857,-29.821429)">
       <image
-         xlink:href="file:///%workdir/foto-soft.jpg"
+         xlink:href="foto-soft.jpg"
          width="1024"
          height="768"
          id="image_background"
          x="-3.2142856"
          y="313.82144" />
       <image
-         xlink:href="file:///%workdir/logo_ohne_rand-332.png"
+         xlink:href="logo_ohne_rand-332.png"
          width="166"
          height="166"
          id="image_logo"
@@ -194,8 +194,8 @@
          y="537.82141" />
     </g>
     <g
-       style="opacity:%opacityBox"
-       id="g3091x">
+       style="opacity:1"
+       id="box">
       <rect
          style="fill:#ffffff;fill-opacity:0.50196078"
          ry="0.0062701544"
@@ -206,8 +206,8 @@
          id="rect_banderole_1" />
     </g>
     <g
-       style="opacity:%opacity1"
-       id="g3091">
+       style="opacity:0"
+       id="text1">
       <text
          sodipodi:linespacing="80.000001%"
          id="text2992"
@@ -244,8 +244,8 @@
            sodipodi:role="line">2014</tspan></text>
     </g>
     <g
-       style="opacity:%opacity2"
-       id="g3115"
+       style="opacity:1"
+       id="text2"
        transform="translate(-70,202)">
       <text
          xml:space="preserve"
@@ -257,8 +257,8 @@
            sodipodi:role="line"
            x="149.334"
            y="625.30579"
-           id="tspan3002-1"
-           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#7b9199;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold">%personnames</tspan></text>
+           id="personnames"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#7b9199;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold">$personnames</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:43px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
@@ -269,7 +269,7 @@
            sodipodi:role="line"
            x="150.58771"
            y="696.31714"
-           id="tspan2998-1-5">%title</tspan></text>
+           id="title">$title</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -281,7 +281,7 @@
          sodipodi:role="line"
          x="563.25279"
          y="1042"
-         id="tspan3002-3-3-1"
-         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold">fossgis.de/konferenz/2014/programm/events/%id.de.html</tspan></text>
+         id="url"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold">fossgis.de/konferenz/2014/programm/events/$id.de.html</tspan></text>
   </g>
 </svg>

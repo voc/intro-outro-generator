@@ -9,7 +9,9 @@ import shutil
 import errno
 import unicodedata
 import urllib2
-import xml.etree.ElementTree as ET
+#import xml.etree.ElementTree as etree
+from lxml import etree
+import cssutils
 import textwrap
 import tempfile
 import threading
@@ -67,6 +69,8 @@ def vorspannFilename(id, title):
 def vorspannTitle(title):
 	return '</tspan><tspan x="150" dy="45">'.join(textwrap.wrap(title, 35))
 
+def vorspannUrl(id):
+	return 'fossgis.de/konferenz/2014/programm/events/'+str(id)+'.de.html'
 
 
 def abspannFrames():
@@ -76,24 +80,24 @@ def abspannFrames():
 	frames = 2*fps
 	for i in range(0, frames):
 		yield {
-			'%opacity': easeOutCubic(i, 0, 1, frames),
-			'%opacityLizenz': 0
+			('banderole', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames) ),
+			('license', 'opacity', 0)
 		}
 
 	# 2 Sekunde Fadein Lizenz-Logo
 	frames = 2*fps
 	for i in range(0, frames):
 		yield {
-			'%opacity': 1,
-			'%opacityLizenz': float(i)/frames
+			('banderole', 'opacity', 1),
+			('license', 'opacity', "%.2f" % (float(i)/frames))
 		}
 
 	# 1 Sekunde stehen bleiben
 	frames = 1*fps
 	for i in range(0, frames):
 		yield {
-			'%opacity': 1,
-			'%opacityLizenz': 1
+			('banderole', 'opacity', 1),
+			('license', 'opacity', 1)
 		}
 
 def vorspannFrames():
@@ -102,37 +106,37 @@ def vorspannFrames():
 	# 2 Sekunden Text 1
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
-			'%opacityBox': easeOutCubic(i, 0, 1, frames),
-			'%opacity1': easeOutCubic(i, 0, 1, frames),
-			'%opacity2': 0
-		}
+		yield (
+			('box',   'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames)),
+			('text1', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames)),
+			('text2', 'opacity', 0)
+		)
 
 	# 1 Sekunde Fadeout Text 1
 	frames = 1*fps
 	for i in range(0, frames):
 		yield {
-			'%opacityBox': 1,
-			'%opacity1': 1-(float(i)/frames),
-			'%opacity2': 0
+			('box',   'opacity', 1),
+			('text1', 'opacity', "%.2f" % (1-(float(i)/frames))),
+			('text2', 'opacity', 0)
 		}
 
 	# 2 Sekunden Text 2
 	frames = 2*fps
 	for i in range(0, frames):
 		yield {
-			'%opacityBox': 1,
-			'%opacity1': 0,
-			'%opacity2': easeOutCubic(i, 0, 1, frames)
+			('box',   'opacity', 1),
+			('text1', 'opacity', 0),
+			('text2', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames))
 		}
 
 	# 2 Sekunden stehen bleiben
 	frames = 2*fps
 	for i in range(0, frames):
 		yield {
-			'%opacityBox': 1,
-			'%opacity1': 0,
-			'%opacity2': 1
+			('box',   'opacity', 1),
+			('text1', 'opacity', 0),
+			('text2', 'opacity', 1)
 		}
 
 def pauseFrames():
@@ -142,50 +146,51 @@ def pauseFrames():
 	frames = 2*fps
 	for i in range(0, frames):
 		yield {
-			'%opacity1': 1,
-			'%opacity2': 0
+			('text1', 'opacity', 1),
+			('text2', 'opacity', 0)
 		}
 
 	# 2 Sekunden Fadeout Text1
 	frames = 2*fps
 	for i in range(0, frames):
 		yield {
-			'%opacity1': 1-easeOutCubic(i, 0, 1, frames),
-			'%opacity2': 0
+			('text1', 'opacity', "%.2f" % (1-easeOutCubic(i, 0, 1, frames))),
+			('text2', 'opacity', 0)
 		}
 
 	# 2 Sekunden Fadein Text2
 	frames = 2*fps
 	for i in range(0, frames):
 		yield {
-			'%opacity1': 0,
-			'%opacity2': easeOutCubic(i, 0, 1, frames)
+			('text1', 'opacity', 0),
+			('text2', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames))
 		}
 
 	# 2 Sekunden Text2 stehen
 	frames = 2*fps
 	for i in range(0, frames):
 		yield {
-			'%opacity1': 0,
-			'%opacity2': 1
+			('text1', 'opacity', 0),
+			('text2', 'opacity', 1)
 		}
 
 	# 2 Sekunden Fadeout Text2
 	frames = 2*fps
 	for i in range(0, frames):
 		yield {
-			'%opacity1': 0,
-			'%opacity2': 1-easeOutCubic(i, 0, 1, frames)
+			('text1', 'opacity', 0),
+			('text2', 'opacity', "%.2f" % (1-easeOutCubic(i, 0, 1, frames)))
 		}
 
 	# 2 Sekunden Fadein Text1
 	frames = 2*fps
 	for i in range(0, frames):
 		yield {
-			'%opacity1': easeOutCubic(i, 0, 1, frames),
-			'%opacity2': 0
+			('text1', 'opacity', "%.2f" % (easeOutCubic(i, 0, 1, frames))),
+			('text2', 'opacity', 0)
 		}
 
+cssutils.ser.prefs.lineSeparator = ' '
 
 def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 	# in debug mode we have no thread-worker which prints its progress
@@ -197,33 +202,41 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 
 	# open and parse the input file
 	with open(os.path.join(workdir, infile), 'r') as fp:
-		svg = fp.read()
+		svgstr = fp.read()
+		for key in parameters.keys():
+			svgstr = svgstr.replace(key, str(parameters[key]))
+
+		svg = etree.fromstring(svgstr)
+
+	# find all images and force them to absolute file-urls
+	namespaces = {'xlink': 'http://www.w3.org/1999/xlink', 'svg': 'http://www.w3.org/2000/svg'}
+	for el in svg.findall(".//svg:image[@xlink:href]", namespaces=namespaces):
+		el.attrib['{http://www.w3.org/1999/xlink}href'] = 'file:///' + os.path.realpath(workdir) + '/' + el.attrib['{http://www.w3.org/1999/xlink}href']
+
 
 	# frame-number counter
 	frameNr = 0
 
 	# iterate through the animation seqence frame by frame
-	# frame is a dictionary with key/value-pairs ("replace-pairs"), where the key
-	# is searched for in the source svg-file and every occurence is replaced by
-	# its companion the value
+	# frame is a ... tbd
 	for frame in sequence():
 		# print a line for each and every frame generated
 		if debug:
 			print "frameNr {0:2d} => {1}".format(frameNr, frame)
 
-		# extend the frame-dictionary with additional replace-pairs from the arguments
-		frame.update(parameters)
-
-		# add some more useful replace-pairs
-		frame['%workdir'] = os.path.realpath(workdir)
-
 		# open the output-file (named ".gen.svg" in the workdir)
 		with open(os.path.join(workdir, '.gen.svg'), 'w') as fp:
-			# apply the replace-pairs to the input text, by replacing each key with its companion value
-			gen_svg = reduce(lambda x, y: x.replace(y, str(frame[y])), frame, svg)
+			# apply the replace-pairs to the input text, by finding the specified xml-elements by thier id and modify thier css-parameter the correct value
+			for replaceinfo in frame:
+				(id, key, value) = replaceinfo
+
+				for el in svg.findall(".//*[@id='"+id.replace("'", "\\'")+"']"):
+					style = cssutils.parseStyle( el.attrib['style'] )
+					style[key] = unicode(value)
+					el.attrib['style'] = style.cssText
 
 			# write the generated svg-text into the output-file
-			fp.write( gen_svg )
+			fp.write( etree.tostring(svg) )
 
 		# invoke rsvg to convert the generated svg-file into a png inside the .frames-directory
 		os.system('cd {0} && rsvg-convert .gen.svg > .frames/{1:04d}.png'.format(workdir, frameNr))
@@ -236,7 +249,7 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 
 	# invoke avconv aka ffmpeg and renerate a lossles-dv from the frames
 	#  if we're not in debug-mode, suppress all output
-	os.system('cd {0} && avconv -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv "{1}"'.format(workdir, outfile) + ('' if debug else '>/dev/null 2>&1'))
+	os.system('cd {0} && avconv -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -shortest "{1}"'.format(workdir, outfile) + ('' if debug else '>/dev/null 2>&1'))
 
 	# as before, in non-debug-mode the thread-worker does all progress messages
 	if debug:
@@ -257,7 +270,7 @@ def events():
 	# use --offline to skip networking
 	if offline:
 		# parse the offline-version
-		schedule = ET.parse('schedule.de.xml').getroot()
+		schedule = etree.parse('schedule.de.xml').getroot()
 
 	else:
 		# download the schedule
@@ -267,7 +280,7 @@ def events():
 		xml = response.read()
 
 		# parse into ElementTree
-		schedule = ET.fromstring(xml)
+		schedule = etree.fromstring(xml)
 
 	# iterate all days
 	for day in schedule.iter('day'):
@@ -291,16 +304,19 @@ if debug:
 
 	render(
 		'vorspann.svg',
-		os.path.join('..', vorspannFilename(667, title)),
+		os.path.join('..', str(667)+".dv"),
 		vorspannFrames,
-		{'%id': 664, '%title': vorspannTitle(title), '%personnames': 'Matthias Scholz' }
+		{
+			'$id': 667,
+			'$title': vorspannTitle(title),
+			'$personnames': 'Matthias Scholz'
+		}
 	)
 
 	render(
 		'abspann.svg',
-		'../abspann-by-sa.dv',
-		abspannFrames,
-		{'%lizenz': 'by-sa'}
+		'../outro.dv',
+		abspannFrames
 	)
 
 	render('pause.svg',
@@ -327,19 +343,21 @@ for (id, title, personnames) in events():
 	# generate a task description and put them into the queue
 	tasks.put((
 		'vorspann.svg',
-		vorspannFilename(id, title),
+		str(id)+".dv",
 		vorspannFrames,
-		{'%id':id, '%title':vorspannTitle(title), '%personnames':personnames }
+		{
+			'$id': id,
+			'$title': vorspannTitle(title),
+			'$personnames': personnames
+		}
 	))
 
-# iterate over the licences and place a task into the queue
-for lizenz in ('by-sa', 'by-nc-sa', 'cc-zero'):
-	tasks.put((
-		'abspann.svg',
-		'abspann-{0}.dv'.format(lizenz),
-		abspannFrames,
-		{'%lizenz':lizenz}
-	))
+# place a task for the outro into the queue
+tasks.put((
+	'abspann.svg',
+	'outro.dv',
+	abspannFrames
+))
 
 # place the pause-sequence into the queue
 tasks.put((

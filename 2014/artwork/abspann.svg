@@ -148,14 +148,14 @@
        id="g_background"
        transform="translate(3.2142857,-29.821429)">
       <image
-         xlink:href="file:///%workdir/foto-soft.jpg"
+         xlink:href="foto-soft.jpg"
          y="313.82144"
          x="-3.2142856"
          id="image_background"
          height="768"
          width="1024" />
       <image
-         xlink:href="file:///%workdir/logo_ohne_rand-332.png"
+         xlink:href="logo_ohne_rand-332.png"
          y="537.82141"
          x="28.785715"
          id="image_logo"
@@ -215,11 +215,12 @@
 
     </g>
     <image
-      style="opacity:%opacityLizenz"
+      style="opacity:1"
+      id="lizenz"
       y="950"
       x="890"
       width="120"
       height="42"
-      xlink:href="file:///%workdir/%lizenz.svg" />
+      xlink:href="by-sa.svg" />
   </g>
 </svg>
