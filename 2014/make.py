@@ -12,6 +12,7 @@ import urllib2
 #import xml.etree.ElementTree as etree
 from lxml import etree
 import cssutils
+import logging
 import textwrap
 import tempfile
 import threading
@@ -195,6 +196,7 @@ def pauseFrames():
 		}
 
 cssutils.ser.prefs.lineSeparator = ' '
+cssutils.log.setLevel(logging.ERROR)
 
 def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 	# in debug mode we have no thread-worker which prints its progress
