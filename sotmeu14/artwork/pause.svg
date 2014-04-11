@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="576"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="pause.svg">
+  <defs
+     id="defs20">
+    <filter
+       id="filter3772"
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow">
+      <feFlood
+         id="feFlood3774"
+         flood-opacity="0.5"
+         flood-color="rgb(255,255,255)"
+         result="flood" />
+      <feComposite
+         id="feComposite3776"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur3778"
+         in="composite"
+         stdDeviation="3"
+         result="blur" />
+      <feOffset
+         id="feOffset3780"
+         dx="1"
+         dy="1"
+         result="offset" />
+      <feComposite
+         id="feComposite3782"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter3772-5"
+       inkscape:label="Drop Shadow">
+      <feFlood
+         id="feFlood3774-9"
+         flood-opacity="0.5"
+         flood-color="rgb(255,255,255)"
+         result="flood" />
+      <feComposite
+         id="feComposite3776-9"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur3778-3"
+         stdDeviation="3"
+         result="blur" />
+      <feOffset
+         id="feOffset3780-4"
+         dx="1"
+         dy="1"
+         result="offset" />
+      <feComposite
+         id="feComposite3782-9"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="543.97851"
+     inkscape:cy="296.83429"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer_background"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="993"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,576"
+       id="guide2996" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,0"
+       id="guide2998" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="0,0"
+       id="guide3000" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1024,0"
+       id="guide3002" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="32,0"
+       id="guide3029" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,544"
+       id="guide3031" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer_background"
+     transform="translate(0,-476)">
+    <g
+       id="g_background"
+       transform="translate(3.2142857,-29.821429)">
+      <image
+         xlink:href="foto-soft.jpg"
+         y="313.82144"
+         x="-3.2142856"
+         id="image_background"
+         height="768"
+         width="1024" />
+      <image
+         xlink:href="logo_ohne_rand-332.png"
+         y="537.82141"
+         x="28.785715"
+         id="image_logo"
+         height="166"
+         width="166" />
+    </g>
+    <g
+       id="g3091x">
+      <rect
+         style="fill:#ffffff;fill-opacity:0.50196078"
+         ry="0.0062701544"
+         y="777"
+         x="0"
+         height="230"
+         width="1024"
+         id="rect_banderole_1" />
+    </g>
+    <g
+       style="opacity:1"
+       id="text1">
+      <text
+         sodipodi:linespacing="80.000001%"
+         id="text2992"
+         y="836.83752"
+         x="75.964493"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3772);font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#7b9199;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           id="tspan2996"
+           y="883.23755"
+           x="85.964493"
+           sodipodi:role="line">         Berlin</tspan><tspan
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#7b9199;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           id="tspan3002"
+           y="929.63751"
+           x="75.964493"
+           sodipodi:role="line">19. - 21. März 2014</tspan></text>
+      <text
+         sodipodi:linespacing="80.000001%"
+         id="text2992-5"
+         y="837.2262"
+         x="77.218193"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#f2f4f5;fill-opacity:1;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           y="837.2262"
+           x="77.218193"
+           id="tspan2994-9"
+           sodipodi:role="line">FOSSGIS Konferenz</tspan><tspan
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           id="tspan2998-1"
+           y="883.62622"
+           x="77.218193"
+           sodipodi:role="line">2014</tspan><tspan
+           style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119000000609%;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold;fill:#f2f4f5;fill-opacity:1"
+           id="tspan3002-3"
+           y="990.82617"
+           x="77.218193"
+           sodipodi:role="line">fossgis.de/konferenz/2014/</tspan></text>
+
+    </g>
+    <g
+       style="opacity:0"
+       id="text2">
+      <text
+         sodipodi:linespacing="80.000001%"
+         id="text2992-5"
+         y="837.2262"
+         x="77.218193"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           id="tspan2998-1"
+           y="900.62622"
+           x="77.218193"
+           sodipodi:role="line">Gleich geht's weiter...</tspan></text>
+
+    </g>
+  </g>
+</svg>
