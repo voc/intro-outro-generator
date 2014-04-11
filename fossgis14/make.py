@@ -81,7 +81,7 @@ def abspannFrames():
 	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('banderole', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames) ),
+			('banderole', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames) ),
 			('license', 'opacity', 0)
 		)
 
@@ -90,7 +90,7 @@ def abspannFrames():
 	for i in range(0, frames):
 		yield (
 			('banderole', 'opacity', 1),
-			('license', 'opacity', "%.2f" % (float(i)/frames))
+			('license', 'opacity', "%.4f" % (float(i)/frames))
 		)
 
 	# 1 Sekunde stehen bleiben
@@ -108,9 +108,9 @@ def vorspannFrames():
 	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('box',   'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames)),
-			('url',   'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames)),
-			('text1', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames)),
+			('box',   'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames)),
+			('url',   'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames)),
+			('text1', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames)),
 			('text2', 'opacity', 0)
 		)
 
@@ -120,7 +120,7 @@ def vorspannFrames():
 		yield (
 			('box',   'opacity', 1),
 			('url',   'opacity', 1),
-			('text1', 'opacity', "%.2f" % (1-(float(i)/frames))),
+			('text1', 'opacity', "%.4f" % (1-(float(i)/frames))),
 			('text2', 'opacity', 0)
 		)
 
@@ -131,7 +131,7 @@ def vorspannFrames():
 			('box',   'opacity', 1),
 			('url',   'opacity', 1),
 			('text1', 'opacity', 0),
-			('text2', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames))
+			('text2', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames))
 		)
 
 	# 2 Sekunden stehen bleiben
@@ -159,7 +159,7 @@ def pauseFrames():
 	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('text1', 'opacity', "%.2f" % (1-easeOutCubic(i, 0, 1, frames))),
+			('text1', 'opacity', "%.4f" % (1-easeOutCubic(i, 0, 1, frames))),
 			('text2', 'opacity', 0)
 		)
 
@@ -168,7 +168,7 @@ def pauseFrames():
 	for i in range(0, frames):
 		yield (
 			('text1', 'opacity', 0),
-			('text2', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames))
+			('text2', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames))
 		)
 
 	# 2 Sekunden Text2 stehen
@@ -184,14 +184,14 @@ def pauseFrames():
 	for i in range(0, frames):
 		yield (
 			('text1', 'opacity', 0),
-			('text2', 'opacity', "%.2f" % (1-easeOutCubic(i, 0, 1, frames)))
+			('text2', 'opacity', "%.4f" % (1-easeOutCubic(i, 0, 1, frames)))
 		)
 
 	# 2 Sekunden Fadein Text1
 	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('text1', 'opacity', "%.2f" % (easeOutCubic(i, 0, 1, frames))),
+			('text1', 'opacity', "%.4f" % (easeOutCubic(i, 0, 1, frames))),
 			('text2', 'opacity', 0)
 		)
 
