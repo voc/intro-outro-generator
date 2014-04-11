@@ -80,26 +80,26 @@ def abspannFrames():
 	# 2 Sekunden Fadein Text
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('banderole', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames) ),
 			('license', 'opacity', 0)
-		}
+		)
 
 	# 2 Sekunde Fadein Lizenz-Logo
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('banderole', 'opacity', 1),
 			('license', 'opacity', "%.2f" % (float(i)/frames))
-		}
+		)
 
 	# 1 Sekunde stehen bleiben
 	frames = 1*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('banderole', 'opacity', 1),
 			('license', 'opacity', 1)
-		}
+		)
 
 def vorspannFrames():
 	# 7 Sekunden
@@ -117,32 +117,32 @@ def vorspannFrames():
 	# 1 Sekunde Fadeout Text 1
 	frames = 1*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('box',   'opacity', 1),
 			('url',   'opacity', 1),
 			('text1', 'opacity', "%.2f" % (1-(float(i)/frames))),
 			('text2', 'opacity', 0)
-		}
+		)
 
 	# 2 Sekunden Text 2
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('box',   'opacity', 1),
 			('url',   'opacity', 1),
 			('text1', 'opacity', 0),
 			('text2', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames))
-		}
+		)
 
 	# 2 Sekunden stehen bleiben
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('box',   'opacity', 1),
 			('url',   'opacity', 1),
 			('text1', 'opacity', 0),
 			('text2', 'opacity', 1)
-		}
+		)
 
 def pauseFrames():
 	# 12 Sekunden
@@ -150,50 +150,50 @@ def pauseFrames():
 	# 2 Sekunden Text1 stehen
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('text1', 'opacity', 1),
 			('text2', 'opacity', 0)
-		}
+		)
 
 	# 2 Sekunden Fadeout Text1
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('text1', 'opacity', "%.2f" % (1-easeOutCubic(i, 0, 1, frames))),
 			('text2', 'opacity', 0)
-		}
+		)
 
 	# 2 Sekunden Fadein Text2
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('text1', 'opacity', 0),
 			('text2', 'opacity', "%.2f" % easeOutCubic(i, 0, 1, frames))
-		}
+		)
 
 	# 2 Sekunden Text2 stehen
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('text1', 'opacity', 0),
 			('text2', 'opacity', 1)
-		}
+		)
 
 	# 2 Sekunden Fadeout Text2
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('text1', 'opacity', 0),
 			('text2', 'opacity', "%.2f" % (1-easeOutCubic(i, 0, 1, frames)))
-		}
+		)
 
 	# 2 Sekunden Fadein Text1
 	frames = 2*fps
 	for i in range(0, frames):
-		yield {
+		yield (
 			('text1', 'opacity', "%.2f" % (easeOutCubic(i, 0, 1, frames))),
 			('text2', 'opacity', 0)
-		}
+		)
 
 cssutils.ser.prefs.lineSeparator = ' '
 cssutils.log.setLevel(logging.ERROR)
