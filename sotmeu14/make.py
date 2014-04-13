@@ -45,6 +45,10 @@ def easeInCubic(t, b, c, d):
 	t=float(t)/d
 	return c*(t)*t*t + b;
 
+def easeOutQuad(t, b, c, d):
+	t=float(t)/d
+	return -c *(t)*(t-2) + b;
+
 # try to create all folders needed and skip, they already exist
 def ensurePathExists(path):
 	try:
@@ -80,31 +84,34 @@ def vorspannUrl(id):
 
 
 def abspannFrames():
-	# 5 Sekunden
+	# 9 Sekunden
 
-	# 2 Sekunden Fadein Text
-	frames = 2*fps
+	# 3 Sekunden Fadein Logo
+	frames = int(3*fps)
 	for i in range(0, frames):
 		yield (
-			('banderole', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames) ),
-			('license', 'opacity', 0)
+			('logo',  'style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
+			('box',   'style',    'opacity', 0)
 		)
 
-	# 2 Sekunde Fadein Lizenz-Logo
-	frames = 2*fps
+	# 3 Sekunde Fadein Box
+	frames = 3*fps
 	for i in range(0, frames):
 		yield (
-			('banderole', 'opacity', 1),
-			('license', 'opacity', "%.4f" % (float(i)/frames))
+			('logo',  'style',    'opacity', 1),
+			('box',   'style',    'opacity', "%.4f" % easeOutQuad(i, 0, 1, frames)),
+			('box',   'attr',     'transform', 'translate(0,%.4f)' % easeOutQuad(i, 94, -94, frames) )
+			#('box',   'attr',     'transform', 'translate(%.4f,0)' % easeOutQuad(i, 960, -960, frames) )
 		)
 
-	# 1 Sekunde stehen bleiben
-	frames = 1*fps
+	# 3 Sekunden stehen bleiben
+	frames = 3*fps
 	for i in range(0, frames):
 		yield (
-			('banderole', 'opacity', 1),
-			('license', 'opacity', 1)
+			('logo',  'style',    'opacity', 1),
+			('box',   'style',    'opacity', 1)
 		)
+
 
 def vorspannFrames():
 	# 7 Sekunden
@@ -113,84 +120,69 @@ def vorspannFrames():
 	frames = int(math.ceil(0.5*fps))
 	for i in range(0, frames):
 		yield (
-			('logo',  'opacity', 0),
-			('box',   'opacity', 0)
+			('logo',  'style',    'opacity', 0),
+			('box',   'style',    'opacity', 0)
 		)
 
-	# 3 Sekunden Fadein Logo
-	frames = 3*fps
+	# 1.5 Sekunden Fadein Logo
+	frames = int(math.ceil(1.5*fps))
 	for i in range(0, frames):
 		yield (
-			('logo',  'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
-			('box',   'opacity', 0)
+			('logo',  'style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
+			('box',   'style',    'opacity', 0)
 		)
 
 	# 3 Sekunde Fadein Box
 	frames = 3*fps
 	for i in range(0, frames):
 		yield (
-			('logo',  'opacity', 1),
-			('box',   'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames))
+			('logo',  'style',    'opacity', 1),
+			('box',   'style',    'opacity', "%.4f" % easeOutQuad(i, 0, 1, frames)),
+			('box',   'attr',     'transform', 'translate(0,%.4f)' % easeOutQuad(i, 198, -198, frames) )
+			#('box',   'attr',     'transform', 'translate(%.4f,0)' % easeOutQuad(i, 960, -960, frames) )
 		)
 
 	# 3 Sekunden stehen bleiben
-	frames = int(math.ceil(2.5*fps))
+	frames = 3*fps
 	for i in range(0, frames):
 		yield (
-			('logo',  'opacity', 1),
-			('box',   'opacity', 1)
+			('logo',  'style',    'opacity', 1),
+			('box',   'style',    'opacity', 1)
 		)
 
 def pauseFrames():
 	# 12 Sekunden
 
-	# 2 Sekunden Text1 stehen
-	frames = 2*fps
-	for i in range(0, frames):
-		yield (
-			('text1', 'opacity', 1),
-			('text2', 'opacity', 0)
-		)
+	texts = {
+		'text1': "0.0",
+		'text2': "0.0",
+		'text3': "0.0"
+	}
 
-	# 2 Sekunden Fadeout Text1
-	frames = 2*fps
-	for i in range(0, frames):
-		yield (
-			('text1', 'opacity', "%.4f" % (1-easeOutCubic(i, 0, 1, frames))),
-			('text2', 'opacity', 0)
-		)
+	for name in texts.keys():
+		# 2 Sekunden einfaden
+		frames = 2*fps
+		for i in range(0, frames):
+			texts[name] = "%.4f" % easeOutQuad(i, 0, 1, frames)
 
-	# 2 Sekunden Fadein Text2
-	frames = 2*fps
-	for i in range(0, frames):
-		yield (
-			('text1', 'opacity', 0),
-			('text2', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames))
-		)
+			yield (
+				('text1', 'style',	'opacity', texts['text1']),
+				('text2', 'style',	'opacity', texts['text2']),
+				('text3', 'style',	'opacity', texts['text3'])
+			)
 
-	# 2 Sekunden Text2 stehen
-	frames = 2*fps
-	for i in range(0, frames):
-		yield (
-			('text1', 'opacity', 0),
-			('text2', 'opacity', 1)
-		)
+		# 2 Sekunden ausfaden
+		frames = 2*fps
+		for i in range(0, frames):
+			texts[name] = "%.4f" % easeOutQuad(i, 1, -1, frames)
 
-	# 2 Sekunden Fadeout Text2
-	frames = 2*fps
-	for i in range(0, frames):
-		yield (
-			('text1', 'opacity', 0),
-			('text2', 'opacity', "%.4f" % (1-easeOutCubic(i, 0, 1, frames)))
-		)
+			yield (
+				('text1', 'style',	'opacity', texts['text1']),
+				('text2', 'style',	'opacity', texts['text2']),
+				('text3', 'style',	'opacity', texts['text3'])
+			)
 
-	# 2 Sekunden Fadein Text1
-	frames = 2*fps
-	for i in range(0, frames):
-		yield (
-			('text1', 'opacity', "%.4f" % (easeOutCubic(i, 0, 1, frames))),
-			('text2', 'opacity', 0)
-		)
+		texts[name] = "0.0"
 
 cssutils.ser.prefs.lineSeparator = ' '
 cssutils.log.setLevel(logging.ERROR)
@@ -231,12 +223,16 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 		with open(os.path.join(workdir, '.gen.svg'), 'w') as fp:
 			# apply the replace-pairs to the input text, by finding the specified xml-elements by thier id and modify thier css-parameter the correct value
 			for replaceinfo in frame:
-				(id, key, value) = replaceinfo
+				(id, type, key, value) = replaceinfo
 
 				for el in svg.findall(".//*[@id='"+id.replace("'", "\\'")+"']"):
-					style = cssutils.parseStyle( el.attrib['style'] if 'style' in el.attrib else '' )
-					style[key] = unicode(value)
-					el.attrib['style'] = style.cssText
+					if type == 'style':
+						style = cssutils.parseStyle( el.attrib['style'] if 'style' in el.attrib else '' )
+						style[key] = unicode(value)
+						el.attrib['style'] = style.cssText
+
+					elif type == 'attr':
+						el.attrib[key] = value
 
 			# write the generated svg-text into the output-file
 			fp.write( etree.tostring(svg) )
@@ -316,16 +312,16 @@ if debug:
 		}
 	)
 
-	# render(
-	# 	'abspann.svg',
-	# 	'../outro.dv',
-	# 	abspannFrames
-	# )
+	render(
+		'abspann.svg',
+		'../outro.dv',
+		abspannFrames
+	)
 
-	# render('pause.svg',
-	# 	'../pause.dv',
-	# 	pauseFrames
-	# )
+	render('pause.svg',
+		'../pause.dv',
+		pauseFrames
+	)
 
 	sys.exit(0)
 

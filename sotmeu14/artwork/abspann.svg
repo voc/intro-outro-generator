@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="pause.svg">
+   sodipodi:docname="abspann.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -160,72 +160,6 @@
        y1="570.69666"
        x2="1155.0508"
        y2="570.69666" />
-    <filter
-       color-interpolation-filters="sRGB"
-       id="filter4858-8"
-       inkscape:label="Drop Shadow"
-       width="1.2">
-      <feFlood
-         id="feFlood4860-3"
-         flood-opacity="0.29666666666666669"
-         flood-color="rgb(255,255,255)"
-         result="flood" />
-      <feComposite
-         id="feComposite4862-7"
-         in2="SourceGraphic"
-         in="flood"
-         operator="in"
-         result="composite1" />
-      <feGaussianBlur
-         id="feGaussianBlur4864-2"
-         stdDeviation="2"
-         result="blur" />
-      <feOffset
-         id="feOffset4866-9"
-         dx="2"
-         dy="2.2000000000000002"
-         result="offset" />
-      <feComposite
-         id="feComposite4868-5"
-         in2="offset"
-         in="SourceGraphic"
-         operator="over"
-         result="composite2"
-         dy="0" />
-    </filter>
-    <filter
-       color-interpolation-filters="sRGB"
-       id="filter4858-8-6"
-       inkscape:label="Drop Shadow"
-       width="1.2">
-      <feFlood
-         id="feFlood4860-3-0"
-         flood-opacity="0.29666666666666669"
-         flood-color="rgb(255,255,255)"
-         result="flood" />
-      <feComposite
-         id="feComposite4862-7-2"
-         in2="SourceGraphic"
-         in="flood"
-         operator="in"
-         result="composite1" />
-      <feGaussianBlur
-         id="feGaussianBlur4864-2-5"
-         stdDeviation="2"
-         result="blur" />
-      <feOffset
-         id="feOffset4866-9-4"
-         dx="2"
-         dy="2.2000000000000002"
-         result="offset" />
-      <feComposite
-         id="feComposite4868-5-9"
-         in2="offset"
-         in="SourceGraphic"
-         operator="over"
-         result="composite2"
-         dy="0" />
-    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -234,11 +168,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="503.06491"
-     inkscape:cy="170.62633"
+     inkscape:zoom="0.7"
+     inkscape:cx="577.86908"
+     inkscape:cy="199.70028"
      inkscape:document-units="px"
-     inkscape:current-layer="box"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="993"
@@ -287,10 +221,6 @@
        orientation="1,0"
        position="994,0"
        id="guide3031" />
-    <sodipodi:guide
-       orientation="0,1"
-       position="510.09586,50.114988"
-       id="guide3868" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -312,12 +242,12 @@
     <image
        sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sotmeu14/artwork/img-townhall-soft.jpg"
        xlink:href="img-townhall-soft.jpg"
-       width="1024"
-       height="681"
-       id="image2993"
-       x="0"
+       style="opacity:1"
        y="471.36218"
-       style="opacity:1" />
+       x="0"
+       id="image2993"
+       height="681"
+       width="1024" />
     <g
        transform="matrix(1.1340084,0,0,1.1340084,184.93504,-29.166503)"
        id="logo"
@@ -325,11 +255,11 @@
       <image
          sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sotmeu14/artwork/Logo.de.svg"
          xlink:href="Logo.de.svg"
-         width="590"
-         height="300"
-         id="manuimage2993"
+         y="471.36218"
          x="0"
-         y="471.36218" />
+         id="manuimage2993"
+         height="300"
+         width="590" />
     </g>
     <g
        id="box">
@@ -343,41 +273,24 @@
          style="opacity:0.45;fill:url(#linearGradient3079);fill-opacity:1;fill-rule:nonzero;stroke:none" />
       <text
          sodipodi:linespacing="125%"
-         id="text1"
-         y="995.68701"
-         x="322.22845"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;fill:#4b9dd0;fill-opacity:1;filter:url(#filter4858);font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         id="text4535"
+         y="1013.687"
+         x="132.22845"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;fill:#444448;fill-opacity:0.94117647;filter:url(#filter4858);font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
          xml:space="preserve"><tspan
-           y="995.68701"
-           x="322.22845"
+           y="1013.687"
+           x="132.22845"
            sodipodi:role="line"
            id="tspan91"
-           style="font-size:40px;fill:#4b9dd0;fill-opacity:1">gleich geht's weiter</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text2"
-         y="998.58508"
-         x="326.44351"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;fill:#4b9dd0;fill-opacity:1;filter:url(#filter4858-8);font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-         xml:space="preserve"
-         transform="translate(-4.390023e-6,-3.8281246e-7)"><tspan
-           y="998.58508"
-           x="326.44351"
-           sodipodi:role="line"
-           id="tspan91-0"
-           style="font-size:40px;fill:#4b9dd0;fill-opacity:1">we'll be back soon</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text3"
-         y="998.42493"
-         x="233.16673"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;fill:#4b9dd0;fill-opacity:1;filter:url(#filter4858-8-6);font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-         xml:space="preserve"><tspan
-           y="998.42493"
-           x="233.16673"
-           sodipodi:role="line"
-           id="tspan91-0-7"
-           style="font-size:40px;fill:#4b9dd0;fill-opacity:1">nous serons bientôt de retour</tspan></text>
+           style="font-size:16px">Creative Commons Attribution-ShareAlike 3.0 Unported License.</tspan></text>
+      <image
+         sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sotmeu14/artwork/by-sa.svg"
+         xlink:href="by-sa.svg"
+         width="120"
+         height="42"
+         id="license"
+         x="134"
+         y="952.36218" />
     </g>
   </g>
 </svg>
