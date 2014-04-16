@@ -237,8 +237,8 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 			# write the generated svg-text into the output-file
 			fp.write( etree.tostring(svg) )
 
-		# invoke rsvg to convert the generated svg-file into a png inside the .frames-directory
-		os.system('cd {0} && rsvg-convert .gen.svg > .frames/{1:04d}.png'.format(workdir, frameNr))
+		# invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
+		os.system('cd {0} && inkscape --export-png=.frames/{1:04d}.png .gen.svg >/dev/null 2>&1'.format(workdir, frameNr))
 
 		# incrwement frame-number
 		frameNr += 1
