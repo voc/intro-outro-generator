@@ -265,8 +265,8 @@
        id="box">
       <rect
          ry="0.0062541137"
-         y="831.5907"
-         x="84.766617"
+         y="831"
+         x="84"
          height="196.92351"
          width="1388.1221"
          id="bar"
@@ -274,23 +274,23 @@
       <text
          sodipodi:linespacing="125%"
          id="text4531"
-         y="881.2298"
-         x="121.91596"
+         y="881"
+         x="122"
          style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter4858);font-family:Sans"
          xml:space="preserve"><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#4b9dd0;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-           y="881.2298"
+           y="881"
            x="120"
            id="tspan4533"
            sodipodi:role="line">$personnames</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text4535"
-         y="921.68701"
-         x="122.22846"
+         y="922"
+         x="122"
          style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#444448;fill-opacity:0.94117647000000004;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans;filter:url(#filter4858)"
          xml:space="preserve"><tspan
-           y="921.68701"
+           y="921"
            x="120"
            sodipodi:role="line"
            id="tspan91">$title</tspan></text>
