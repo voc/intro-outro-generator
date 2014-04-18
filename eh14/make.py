@@ -12,6 +12,7 @@ import unicodedata
 import urllib2
 #import xml.etree.ElementTree as etree
 from lxml import etree
+from xml.sax.saxutils import escape as xmlescape
 import cssutils
 import logging
 import textwrap
@@ -179,7 +180,7 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 	with open(os.path.join(workdir, infile), 'r') as fp:
 		svgstr = fp.read()
 		for key in parameters.keys():
-			svgstr = svgstr.replace(key, str(parameters[key]))
+			svgstr = svgstr.replace(key, xmlescape(str(parameters[key])))
 
 		svg = etree.fromstring(svgstr)
 
