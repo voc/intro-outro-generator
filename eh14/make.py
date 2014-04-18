@@ -273,7 +273,7 @@ def events():
 					personnames.append(person.text)
 
 				# yield a tupel with the event-id, event-title and person-names
-				yield ( int(event.get('id')), event.find('title').text, event.find('subtitle').text, ', '.join(personnames) )
+				yield ( int(event.get('id')), event.find('title').text, event.find('subtitle').text or '', ', '.join(personnames) )
 
 
 # debug-mode selected by --debug switch
