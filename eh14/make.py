@@ -253,7 +253,7 @@ def events():
 
 	else:
 		# download the schedule
-		response = urllib2.urlopen('http://www.fossgis.de/konferenz/2014/programm/schedule.de.xml')
+		response = urllib2.urlopen('http://eh14.easterhegg.eu/pages/fahrplan/schedule.xml')
 
 		# read xml-source
 		xml = response.read()
