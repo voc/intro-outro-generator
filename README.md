@@ -47,7 +47,7 @@ To form an fase-in-opacity-animation, the frame-generator could look like this:
 			('logo',  'style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
 		)
 
-```easeInCubic``` is an easing-function stolen from the [jquery-easing plugin](http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js) ([easing-cheat-sheet](http://easings.net/). They take 4 parameters:
+```easeInCubic``` is an easing-function stolen from the [jquery-easing plugin](http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js) ([easing-cheat-sheet](http://easings.net/)). They take 4 parameters:
  - t: current time
  - b: beginning value
  - c: change In value
