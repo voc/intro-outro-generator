@@ -38,7 +38,7 @@ The animation sequence is controlled by the three frame-generator routines vorsp
 ### CSS-Style-Modifications
 ```('logo',  'style',    'opacity', 1),``` - locate object with id ```logo``` in the svg, parse its ```style```-attribute as css-inline-string and change the value of the css-property ```opacity``` to 1. The Tupel-Element ```'style'``` is fixed and declares the type of action which is applied to the specified element. All other tupele-mebers can be modified to suit your needs.
 
-To form an fase-in-opacity-animation, the frame-generator could look like this:
+To form an fade-in-opacity-animation, the frame-generator could look like this:
 
 	# three seconds of animation
 	frames = 3*fps
@@ -54,7 +54,6 @@ To form an fase-in-opacity-animation, the frame-generator could look like this:
  - d: duration (of time)
 
 So to fade the logo out, the generator yould look like this:
-To form an ease-in-opacity-animation, the frame-generator could look like this:
 
 	# three seconds of animation
 	frames = 3*fps
