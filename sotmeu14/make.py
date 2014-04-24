@@ -321,7 +321,7 @@ if debug:
 tasks = Queue()
 
 # iterate over all events extracted from the schedule xml-export
-for (id, title, personnames) in events():
+for (id, title, subtitle, personnames) in events():
 	if id in titlemap:
 		title = titlemap[id]
 
