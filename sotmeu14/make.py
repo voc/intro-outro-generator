@@ -17,6 +17,7 @@ import tempfile
 import threading
 import multiprocessing
 from threading import Thread, Lock
+import subprocess
 from Queue import Queue
 
 # URL to Schedule-XML
@@ -222,10 +223,15 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 			fp.write( etree.tostring(svg) )
 
 		# invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-		os.system('cd {0} && inkscape --export-png=.frames/{1:04d}.png .gen.svg >/dev/null 2>&1'.format(workdir, frameNr))
+		errorReturn = subprocess.check_output('cd {0} && inkscape --export-png=.frames/{1:04d}.png .gen.svg 2>&1 >/dev/null'.format(workdir, frameNr), shell=True)
+		if errorReturn != '':
+			print "inkscape exitted with error\n"+errorReturn
+			sys.exit(42)
 
 		# incrwement frame-number
 		frameNr += 1
+
+
 
 	# remove the dv we are about to (re-)generate
 	ensureFilesRemoved(os.path.join(workdir, outfile))
