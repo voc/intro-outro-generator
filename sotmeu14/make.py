@@ -6,6 +6,7 @@ import glob
 import os
 import re
 import math
+import time
 import shutil
 import errno
 import urllib2
@@ -437,13 +438,32 @@ def worker():
 	# mark the sentinal as done
 	tasks.task_done()
 
+# List of running threads
+threads = []
 
 # generate and start the threads
 for i in range(num_worker_threads):
 	t = Thread(target=worker)
 	t.daemon = True
 	t.start()
+	threads.append(t)
 
 # wait until they finished doing the work
-tasks.join()
+# we're doing it the manual way because tasks.join() would wait until all tasks are done,
+# even if the worker threads crash due to broken svgs, Ctrl-C termination or whatnot
+while True:
+	if tasks.empty() == True:
+		break
+
+	# sleep while the workers work
+	time.sleep(1)
+
+	# check if all worker-threads are still alive
+	thread_count = len(filter(lambda t: t.is_alive(), threads))
+
+	# exit otherwise
+	if thread_count != num_worker_threads:
+		tprint("{0} of {1} threads have died, ending".format(num_worker_threads - thread_count, num_worker_threads))
+		sys.exit(23)
+
 print "all worker threads ended"
