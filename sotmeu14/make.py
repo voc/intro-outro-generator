@@ -228,7 +228,7 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 			print "inkscape exitted with error\n"+errorReturn
 			sys.exit(42)
 
-		# incrwement frame-number
+		# increment frame-number
 		frameNr += 1
 
 
