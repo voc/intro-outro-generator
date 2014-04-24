@@ -101,6 +101,7 @@ def abspannFrames():
 	for i in range(0, frames):
 		yield (
 			('logo',  'style',    'opacity', 1),
+			('lizenz','style',    'opacity', 1),
 		)
 
 	# 4 Sekunde Fadeout Logo
@@ -108,6 +109,15 @@ def abspannFrames():
 	for i in range(0, frames):
 		yield (
 			('logo',  'style',    'opacity', "%.4f" % easeInCubic(i, 1, -1, frames)),
+			('lizenz','style',    'opacity', 1),
+		)
+
+	# 4 Sekunde Fadeout Logo
+	frames = 1*fps
+	for i in range(0, frames):
+		yield (
+			('logo',  'style',    'opacity', 0),
+			('lizenz','style',    'opacity', "%.4f" % easeInCubic(i, 1, -1, frames)),
 		)
 
 	# 3 Sekunden stehen bleiben
@@ -115,6 +125,7 @@ def abspannFrames():
 	for i in range(0, frames):
 		yield (
 			('logo',  'style',    'opacity', 0),
+			('lizenz','style',    'opacity', 0),
 		)
 
 
@@ -202,10 +213,10 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 
 
 
-render('vorspann.svg',
-	'../intro.dv',
-	vorspannFrames
-)
+# render('vorspann.svg',
+# 	'../intro.dv',
+# 	vorspannFrames
+# )
 
 render(
 	'abspann.svg',
