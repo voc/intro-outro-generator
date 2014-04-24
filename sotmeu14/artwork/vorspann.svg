@@ -168,9 +168,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="83.861659"
-     inkscape:cy="280.49488"
+     inkscape:zoom="5.6"
+     inkscape:cx="167.31824"
+     inkscape:cy="174.4509"
      inkscape:document-units="px"
      inkscape:current-layer="box"
      showgrid="false"
@@ -242,12 +242,12 @@
     <image
        sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sotmeu14/artwork/img-townhall-soft.jpg"
        xlink:href="img-townhall-soft.jpg"
-       y="471.36218"
-       x="0"
-       id="image2993"
-       height="681"
+       style="opacity:1"
        width="1024"
-       style="opacity:1" />
+       height="681"
+       id="image2993"
+       x="0"
+       y="471.36218" />
     <g
        transform="matrix(0.48994061,0,0,0.48994061,704.93504,274.4227)"
        id="logo"
@@ -255,11 +255,11 @@
       <image
          sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sotmeu14/artwork/Logo.de.svg"
          xlink:href="Logo.de.svg"
-         y="471.36218"
-         x="0"
-         id="manuimage2993"
+         width="590"
          height="300"
-         width="590" />
+         id="manuimage2993"
+         x="0"
+         y="471.36218" />
     </g>
     <g
        id="box">
@@ -275,25 +275,36 @@
          sodipodi:linespacing="125%"
          id="text4531"
          y="881"
-         x="122"
+         x="119.29951"
          style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter4858);font-family:Sans"
          xml:space="preserve"><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#4b9dd0;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
            y="881"
-           x="120"
+           x="119.29951"
            id="tspan4533"
            sodipodi:role="line">$personnames</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4535"
-         y="922"
-         x="122"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#444448;fill-opacity:0.94117647000000004;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans;filter:url(#filter4858)"
-         xml:space="preserve"><tspan
-           y="921"
-           x="120"
-           sodipodi:role="line"
-           id="tspan91">$title</tspan></text>
-    </g>
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot3041"
+         style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+           id="flowRegion3043"><rect
+             id="rect3045"
+             width="268.70059"
+             height="81.822357"
+             x="212.13203"
+             y="457.81216" /></flowRegion><flowPara
+           id="flowPara3047"></flowPara></flowRoot>      <flowRoot
+         xml:space="preserve"
+         id="flowRoot3049"
+         style="font-size:32px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#444448;fill-opacity:0.94117647;stroke:none;filter:url(#filter4858);font-family:Sans"
+         transform="translate(-115.67858,459.97825)"><flowRegion
+           id="flowRegion3051"><rect
+             id="rect3053"
+             width="864.31305"
+             height="138.8662"
+             x="235.36554"
+             y="428.51773"
+             style="font-size:32px;fill:#444448;fill-opacity:0.94117647" /></flowRegion><flowPara
+           id="flowPara3055">$title</flowPara></flowRoot>    </g>
   </g>
 </svg>

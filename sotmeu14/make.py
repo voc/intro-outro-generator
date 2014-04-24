@@ -8,18 +8,24 @@ import re
 import math
 import shutil
 import errno
-import unicodedata
 import urllib2
-#import xml.etree.ElementTree as etree
 from lxml import etree
+from xml.sax.saxutils import escape as xmlescape
 import cssutils
 import logging
-import textwrap
 import tempfile
 import threading
 import multiprocessing
 from threading import Thread, Lock
 from Queue import Queue
+
+# URL to Schedule-XML
+scheduleUrl = 'http://www.fossgis.de/konferenz/2014/programm/schedule.de.xml'
+
+# For (really) too long titles
+titlemap = {
+	#708: "Neue WEB-Anwendungen des LGRB Baden-Württemberg im Überblick"
+}
 
 # Frames per second. Increasing this renders more frames, the avconf-statements would still need modifications
 fps = 25
@@ -61,27 +67,6 @@ def ensurePathExists(path):
 def ensureFilesRemoved(pattern):
 	for f in glob.glob(pattern):
 		os.unlink(f)
-
-# Normalizes string, converts to lowercase, removes non-alpha characters,
- #and converts spaces to hyphens.
-def slugify(value):
-	value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
-	value = unicode(re.sub('[^\w\s-]', '', value).strip().lower())
-	value = unicode(re.sub('[-\s]+', '-', value))
-	return value
-
-# create a filename from the events' id and a slugified version of the title
-def vorspannFilename(id, title):
-	return u'{0:04d}-{1}.dv'.format(id, slugify(unicode(title)))
-
-# svg does not have a method for automatic line breaking, that rsvg is capable of
-# so we do it in python as good as we can
-def vorspannTitle(title):
-	return '</tspan><tspan x="120" dy="35">'.join(textwrap.wrap(title, 50))
-
-def vorspannUrl(id):
-	return 'fossgis.de/konferenz/2014/programm/events/'+str(id)+'.de.html'
-
 
 def abspannFrames():
 	# 9 Sekunden
@@ -199,7 +184,7 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 	with open(os.path.join(workdir, infile), 'r') as fp:
 		svgstr = fp.read()
 		for key in parameters.keys():
-			svgstr = svgstr.replace(key, str(parameters[key]))
+			svgstr = svgstr.replace(key, xmlescape(str(parameters[key])))
 
 		svg = etree.fromstring(svgstr)
 
@@ -207,7 +192,6 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 	namespaces = {'xlink': 'http://www.w3.org/1999/xlink', 'svg': 'http://www.w3.org/2000/svg'}
 	for el in svg.findall(".//svg:image[@xlink:href]", namespaces=namespaces):
 		el.attrib['{http://www.w3.org/1999/xlink}href'] = 'file:///' + os.path.realpath(workdir) + '/' + el.attrib['{http://www.w3.org/1999/xlink}href']
-
 
 	# frame-number counter
 	frameNr = 0
@@ -273,7 +257,7 @@ def events():
 
 	else:
 		# download the schedule
-		response = urllib2.urlopen('http://www.fossgis.de/konferenz/2014/programm/schedule.de.xml')
+		response = urllib2.urlopen(scheduleUrl)
 
 		# read xml-source
 		xml = response.read()
@@ -293,22 +277,22 @@ def events():
 					personnames.append(person.text)
 
 				# yield a tupel with the event-id, event-title and person-names
-				yield ( int(event.get('id')), event.find('title').text, ', '.join(personnames) )
+				yield ( int(event.get('id')), event.find('title').text, event.find('subtitle').text or '', ', '.join(personnames) )
 
 
 # debug-mode selected by --debug switch
 if debug:
 	print "!!! DEBUG MODE !!!"
-	title = 'OpenJUMP - Überblick, Neuigkeiten, Zusammenarbeit/Schnittstellen mit proprietärer Software'
 
 	render(
 		'vorspann.svg',
-		os.path.join('..', str(667)+".dv"),
+		'../intro.dv',
 		vorspannFrames,
 		{
 			'$id': 667,
-			'$title': vorspannTitle(title),
-			'$personnames': 'Matthias Scholz'
+			'$title': 'OpenJUMP - Überblick, Neuigkeiten, Zusammenarbeit/Schnittstellen mit proprietärer Software',
+			'$subtitle': 'Even more news about OpenJUMP',
+			'$personnames': 'Matthias S.'
 		}
 	)
 
@@ -330,10 +314,6 @@ if debug:
 # threaded task queue
 tasks = Queue()
 
-titlemap = {
-	708: "Neue WEB-Anwendungen des LGRB Baden-Württemberg im Überblick"
-}
-
 # iterate over all events extracted from the schedule xml-export
 for (id, title, personnames) in events():
 	if id in titlemap:
@@ -346,7 +326,8 @@ for (id, title, personnames) in events():
 		vorspannFrames,
 		{
 			'$id': id,
-			'$title': vorspannTitle(title),
+			'$title': title,
+			'$subtitle': subtitle,
 			'$personnames': personnames
 		}
 	))
