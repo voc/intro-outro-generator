@@ -13,7 +13,7 @@ Okay, let's go.
  - Fork this repo on github and clone your personal fork to your local system.
  - Copy one of the existing setups (I'd suggest sotmeu14 for a start).
  - Open ```artwork/vorspann.svg``` (preroll template) in inkscape and modify it. You can also just create a new one. For the VOC-Setup you should use a Pixel-Resolution of ```1024x576``` (16:9 Aspect Ratio).
- - Group things togeter that should be animated together (like subtitle and speaker-text)
+ - Group things together that should be animated together (like subtitle and speaker-text)
  - Use Flow-Text (in Inkscape drag an Area of Text instead of just placing a single line). This way the text will automatically wrap inside the specified area if it gets too long.
  - Type Placeholder-Texts where the script should substitute content from your schedule-xml. By default the following placeholders are substituted
    - ```$id``` - Talk-ID (useful in links to the Frab-Page)
