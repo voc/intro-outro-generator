@@ -27,7 +27,7 @@ Okay, let's go.
    - search for ```!!! DEBUG MODE !!!``` and comment the sections about abspann (postroll) and pause
    - run ```./make.py --debug``` to generate your first preroll
    - if it looks good, duplicate vorspann.svg to abspann.svg (postroll) and pause.svg (pause-loop) and modify them according to your needs. You can use different IDs if required
-   - modify abspannFrames and pauseFrames liek before an test them using ```./make.py --debug```
+   - modify abspannFrames and pauseFrames like before an test them using ```./make.py --debug```
    - it they look like you'd want them to, run ```make.py```.
    - You can use any debianesque linux (can be headless) to generate the videos. More cores help more.
 
