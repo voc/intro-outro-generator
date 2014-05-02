@@ -78,5 +78,5 @@ The other form a sub-tuble can have is ```('box',   'attr',     'transform', 'tr
 It works! It doesn't work!
 --------------------------
 If it works, push your code to github. This way everybody can see which beautiful animations you created and we can all learn from each other.
-If it doesn't work, ask [on IRC](irc://irc.hackint.org/voc), on [the Mailinglist](mailto:video@lists.ccc.de) or drop me a [personal mail](mailto:github@mazdermind.de) and we'll see that we can solve your problem.
+If it doesn't work, ask [on IRC](https://kthx.de:9090/?channels=voc), on [the Mailinglist](mailto:video@lists.ccc.de) or drop me a [personal mail](mailto:github@mazdermind.de) and we'll see that we can solve your problem.
 If you think you found a bug, [file an Issue](https://github.com/MaZderMind/c3voc-toolz/issues). Or even better, fix it and [send a Pull-Request](https://github.com/MaZderMind/c3voc-toolz/pulls).
