@@ -157,9 +157,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="873.34104"
-     inkscape:cy="395.16467"
+     inkscape:zoom="4"
+     inkscape:cx="974.42742"
+     inkscape:cy="526.32334"
      inkscape:document-units="px"
      inkscape:current-layer="layer1-7"
      showgrid="false"
@@ -204,7 +204,7 @@
        id="guide3027" />
     <sodipodi:guide
        orientation="1,0"
-       position="122.22846,648.51793"
+       position="32,0"
        id="guide3029" />
     <sodipodi:guide
        orientation="1,0"
@@ -233,14 +233,13 @@
        id="layer1-7"
        inkscape:label="Ebene 1">
       <image
-         sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sendezentrum14/artwork/sz.png"
-         xlink:href="sz.png"
-         style="opacity:0.75000000000000000;stroke:none;stroke-opacity:1;stroke-width:41.81523319000000072;stroke-miterlimit:4;stroke-dasharray:none"
-         width="319.21854"
-         height="49.578899"
-         id="image3108"
-         x="261.12152"
-         y="758.95026" />
+         y="698.86792"
+         x="427.90219"
+         id="image3023"
+         xlink:href="file:///home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sendezentrum14/artwork/signet.png"
+         height="203.91621"
+         width="214.59206"
+         style="opacity:0.85" />
     </g>
   </g>
 </svg>
