@@ -21,14 +21,6 @@ from threading import Thread, Lock
 import subprocess
 from Queue import Queue
 
-# URL to Schedule-XML
-scheduleUrl = 'http://www.fossgis.de/konferenz/2014/programm/schedule.de.xml'
-
-# For (really) too long titles
-titlemap = {
-	#708: "Neue WEB-Anwendungen des LGRB Baden-Württemberg im Überblick"
-}
-
 # Frames per second. Increasing this renders more frames, the avconf-statements would still need modifications
 fps = 25
 
@@ -36,26 +28,9 @@ fps = 25
 # just renders one type of video
 debug = ('--debug' in sys.argv)
 
-# using --offline only skips the network fetching and use a local schedule.de.xml
-offline = ('--offline' in sys.argv)
-
 # set charset of output-terminal
 reload(sys)
 sys.setdefaultencoding('utf-8')
-
-# t: current time, b: begInnIng value, c: change In value, d: duration
-# copied from jqueryui
-def easeOutCubic(t, b, c, d):
-	t=float(t)/d-1
-	return c*((t)*t*t + 1) + b
-
-def easeInCubic(t, b, c, d):
-	t=float(t)/d
-	return c*(t)*t*t + b;
-
-def easeOutQuad(t, b, c, d):
-	t=float(t)/d
-	return -c *(t)*(t-2) + b;
 
 # try to create all folders needed and skip, they already exist
 def ensurePathExists(path):
@@ -70,106 +45,15 @@ def ensureFilesRemoved(pattern):
 	for f in glob.glob(pattern):
 		os.unlink(f)
 
-def abspannFrames():
-	# 9 Sekunden
-
-	# 3 Sekunden Fadein Logo
-	frames = int(3*fps)
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
-			('box',   'style',    'opacity', 0)
-		)
-
-	# 3 Sekunde Fadein Box
-	frames = 3*fps
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', 1),
-			('box',   'style',    'opacity', "%.4f" % easeOutQuad(i, 0, 1, frames)),
-			('box',   'attr',     'transform', 'translate(0,%.4f)' % easeOutQuad(i, 94, -94, frames) )
-			#('box',   'attr',     'transform', 'translate(%.4f,0)' % easeOutQuad(i, 960, -960, frames) )
-		)
-
-	# 3 Sekunden stehen bleiben
-	frames = 3*fps
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', 1),
-			('box',   'style',    'opacity', 1)
-		)
-
-
-def vorspannFrames():
+def pauseFrames():
 	# 7 Sekunden
 
-	# 0.5 Sekunden stehen bleiben
-	frames = int(math.ceil(0.5*fps))
+	frames = 7*fps
 	for i in range(0, frames):
 		yield (
-			('logo',  'style',    'opacity', 0),
-			('box',   'style',    'opacity', 0)
+			('sun', 'attr',	'transform', "translate(625, 625) translate(-450, -375) rotate(%.4f) translate(-625, -625)" % (float(i)/float(frames)*30)),
 		)
 
-	# 1.5 Sekunden Fadein Logo
-	frames = int(math.ceil(1.5*fps))
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
-			('box',   'style',    'opacity', 0)
-		)
-
-	# 3 Sekunde Fadein Box
-	frames = 3*fps
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', 1),
-			('box',   'style',    'opacity', "%.4f" % easeOutQuad(i, 0, 1, frames)),
-			('box',   'attr',     'transform', 'translate(0,%.4f)' % easeOutQuad(i, 198, -198, frames) )
-			#('box',   'attr',     'transform', 'translate(%.4f,0)' % easeOutQuad(i, 960, -960, frames) )
-		)
-
-	# 3 Sekunden stehen bleiben
-	frames = 3*fps
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', 1),
-			('box',   'style',    'opacity', 1)
-		)
-
-def pauseFrames():
-	# 12 Sekunden
-
-	texts = {
-		'text1': "0.0",
-		'text2': "0.0",
-		'text3': "0.0"
-	}
-
-	for name in texts.keys():
-		# 2 Sekunden einfaden
-		frames = 2*fps
-		for i in range(0, frames):
-			texts[name] = "%.4f" % easeOutQuad(i, 0, 1, frames)
-
-			yield (
-				('text1', 'style',	'opacity', texts['text1']),
-				('text2', 'style',	'opacity', texts['text2']),
-				('text3', 'style',	'opacity', texts['text3'])
-			)
-
-		# 2 Sekunden ausfaden
-		frames = 2*fps
-		for i in range(0, frames):
-			texts[name] = "%.4f" % easeOutQuad(i, 1, -1, frames)
-
-			yield (
-				('text1', 'style',	'opacity', texts['text1']),
-				('text2', 'style',	'opacity', texts['text2']),
-				('text3', 'style',	'opacity', texts['text3'])
-			)
-
-		texts[name] = "0.0"
 
 cssutils.ser.prefs.lineSeparator = ' '
 cssutils.log.setLevel(logging.ERROR)
@@ -252,218 +136,20 @@ def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
 	ensureFilesRemoved(os.path.join(workdir, '.gen.svg'))
 
 
-
-# Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event
-def events():
-	print "downloading pentabarf schedule"
-
-	# use --offline to skip networking
-	if offline:
-		# parse the offline-version
-		schedule = etree.parse('schedule.de.xml').getroot()
-
-	else:
-		# download the schedule
-		response = urllib2.urlopen(scheduleUrl)
-
-		# read xml-source
-		xml = response.read()
-
-		# parse into ElementTree
-		schedule = etree.fromstring(xml)
-
-	# iterate all days
-	for day in schedule.iter('day'):
-		# iterate all rooms
-		for room in day.iter('room'):
-			# iterate events on that day in this room
-			for event in room.iter('event'):
-				# aggregate names of the persons holding this talk
-				personnames = []
-				for person in event.find('persons').iter('person'):
-					personnames.append(person.text)
-
-				# yield a tupel with the event-id, event-title and person-names
-				yield ( int(event.get('id')), event.find('title').text, event.find('subtitle').text or '', ', '.join(personnames) )
-
-
-# debug-mode selected by --debug switch
-if debug:
-	print "!!! DEBUG MODE !!!"
-
-	render(
-		'vorspann.svg',
-		'../intro.dv',
-		vorspannFrames,
-		{
-			'$id': 667,
-			'$title': 'OpenJUMP - Überblick, Neuigkeiten, Zusammenarbeit/Schnittstellen mit proprietärer Software',
-			'$subtitle': 'Even more news about OpenJUMP',
-			'$personnames': 'Matthias S.'
-		}
-	)
-
-	render(
-		'abspann.svg',
-		'../outro.dv',
-		abspannFrames
-	)
-
-	render('pause.svg',
-		'../pause.dv',
-		pauseFrames
-	)
-
-	sys.exit(0)
-
-
-
-# threaded task queue
-tasks = Queue()
-
-# iterate over all events extracted from the schedule xml-export
-for (id, title, subtitle, personnames) in events():
-	if id in titlemap:
-		title = titlemap[id]
-
-	# generate a task description and put them into the queue
-	tasks.put((
-		'vorspann.svg',
-		str(id)+".dv",
-		vorspannFrames,
-		{
-			'$id': id,
-			'$title': title,
-			'$subtitle': subtitle,
-			'$personnames': personnames
-		}
-	))
-
-# place a task for the outro into the queue
-tasks.put((
-	'abspann.svg',
-	'outro.dv',
-	abspannFrames
-))
-
-# place the pause-sequence into the queue
-tasks.put((
+render(
 	'pause.svg',
-	'pause.dv',
+	'../pause.dv',
 	pauseFrames
-))
+)
 
-# one working thread per cpu
-num_worker_threads = multiprocessing.cpu_count()
-print "{0} tasks in queue, starting {1} worker threads".format(tasks.qsize(), num_worker_threads)
+render(
+	'novideo.svg',
+	'../novideo.dv',
+	pauseFrames
+)
 
-# put a sentinel for each thread into the queue to signal the end
-for _ in range(num_worker_threads):
-	tasks.put(None)
-
-# this lock ensures, that only one thread at a time is writing to stdout
-# and avoids output from multiple threads intermixing
-printLock = Lock() 
-def tprint(str):
-	# aquire lock
-	printLock.acquire()
-
-	# print thread-name and message
-	print threading.current_thread().name+': '+str
-
-	# release lock
-	printLock.release()
-
-
-# thread worker
-def worker():
-	# generate a tempdir for this worker-thread and use the artwork-subdir as temporary folder
-	tempdir = tempfile.mkdtemp()
-	workdir = os.path.join(tempdir, 'artwork')
-
-	# save the current working dir as output-dir
-	outdir = os.getcwd()
-
-	# print a message that we're about to initialize our environment
-	tprint("initializing worker in {0}, writing result to {1}".format(tempdir, outdir))
-
-	# copy the artwork-dir into the tempdir
-	shutil.copytree('artwork', workdir)
-
-	# loop until all tasks are done (when the thread fetches a sentinal from the queue)
-	while True:
-		# fetch a task from the queue
-		task = tasks.get()
-
-		# if it is a stop-sentinal break out of the loop
-		if task == None:
-			break
-
-		# print that we're about to render a task
-		tprint('rendering {0}'.format(task[1]))
-
-		# render options
-		opts = (
-			# argument 0 is the input file. prepend the workdir
-			os.path.join(workdir, task[0]),
-
-			# argument 1 is the output file. prepend the outdir
-			os.path.join(outdir, task[1]),
-
-			# argument 2 is the frame generator, nothing to do here
-			task[2],
-
-			# argument 3 are the extra parameters
-			task[3] if len(task) > 3 else {},
-
-			# argument 4 is the workdir path
-			workdir
-		)
-
-		# render with these arguments
-		render(*opts)
-
-		# print that we're finished
-		tprint('finished {0}, {1} tasks left'.format(task[1], max(0, tasks.qsize() - num_worker_threads)))
-
-		# mark the task as finished
-		tasks.task_done()
-
-	# all tasks from the queue done, clean up
-	tprint("cleaning up worker")
-
-	# remove the tempdir
-	shutil.rmtree(tempdir)
-
-	# mark the sentinal as done
-	tasks.task_done()
-
-# List of running threads
-threads = []
-
-# generate and start the threads
-for i in range(num_worker_threads):
-	t = Thread(target=worker)
-	t.daemon = True
-	t.start()
-	threads.append(t)
-
-# wait until they finished doing the work
-# we're doing it the manual way because tasks.join() would wait until all tasks are done,
-# even if the worker threads crash due to broken svgs, Ctrl-C termination or whatnot
-while True:
-	if tasks.empty() == True:
-		break
-
-	# sleep while the workers work
-	time.sleep(1)
-
-	# check if all worker-threads are still alive
-	thread_count = len(filter(lambda t: t.is_alive(), threads))
-
-	# exit otherwise
-	if thread_count != num_worker_threads:
-		tprint("{0} of {1} threads have died, ending".format(num_worker_threads - thread_count, num_worker_threads))
-		sys.exit(23)
-
-print "all worker threads ended"
+render(
+	'nostream.svg',
+	'../nostream.dv',
+	pauseFrames
+)
