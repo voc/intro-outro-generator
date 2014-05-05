@@ -157,9 +157,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="974.42742"
-     inkscape:cy="526.32334"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="560.46925"
+     inkscape:cy="502.34512"
      inkscape:document-units="px"
      inkscape:current-layer="layer1-7"
      showgrid="false"
@@ -233,13 +233,14 @@
        id="layer1-7"
        inkscape:label="Ebene 1">
       <image
-         y="698.86792"
-         x="427.90219"
-         id="image3023"
+         sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sendezentrum14/artwork/signet-simple.png"
          xlink:href="signet-simple.png"
-         height="561"
-         width="518"
-         style="opacity:0.85" />
+         style="opacity:0.85"
+         width="162.18384"
+         height="175.64697"
+         id="image3023"
+         x="418.15625"
+         y="758.95026" />
     </g>
   </g>
 </svg>
