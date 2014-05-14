@@ -309,15 +309,24 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-476.36218)">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3907"
+       width="1168.5714"
+       height="862.85712"
+       x="-44.285713"
+       y="-114"
+       transform="translate(0,476.36218)"
+       ry="0.0062541137" />
     <image
-       sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sotmeu14/artwork/img-townhall-soft.jpg"
-       xlink:href="img-townhall-soft.jpg"
-       width="1024"
-       height="681"
-       id="image2993"
+       sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sotmeu14/artwork/IMG_0791.JPG"
+       xlink:href="IMG_0791.JPG"
+       style="opacity:0.5"
+       width="1040"
+       height="780"
+       id="image3048"
        x="0"
-       y="471.36218"
-       style="opacity:1" />
+       y="398.36218" />
     <g
        transform="matrix(1.1340084,0,0,1.1340084,184.93504,-29.166503)"
        id="logo"

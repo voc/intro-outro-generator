@@ -22,7 +22,7 @@ import subprocess
 from Queue import Queue
 
 # URL to Schedule-XML
-scheduleUrl = 'http://www.fossgis.de/konferenz/2014/programm/schedule.de.xml'
+scheduleUrl = 'http://sotm-eu.org/export.xml'
 
 # For (really) too long titles
 titlemap = {

@@ -19,51 +19,6 @@
   <defs
      id="defs4">
     <linearGradient
-       id="linearGradient3807">
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0;"
-         offset="0"
-         id="stop3809" />
-      <stop
-         id="stop3815"
-         offset="0.2"
-         style="stop-color:#ffffff;stop-opacity:0.78431374;" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0.78431374;"
-         offset="1"
-         id="stop3811" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3807"
-       id="linearGradient3813"
-       x1="650"
-       y1="595.07648"
-       x2="1230"
-       y2="595.07648"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1,0,0,0.99744172,-74.949237,-22.857439)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3807"
-       id="linearGradient3819"
-       x1="575.05078"
-       y1="570.69666"
-       x2="1155.0508"
-       y2="570.69666"
-       gradientUnits="userSpaceOnUse"
-       spreadMethod="reflect" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3807-2"
-       id="linearGradient3819-8"
-       x1="575.05078"
-       y1="570.69666"
-       x2="1155.0508"
-       y2="570.69666"
-       gradientUnits="userSpaceOnUse"
-       spreadMethod="reflect" />
-    <linearGradient
        id="linearGradient3807-2">
       <stop
          style="stop-color:#ffffff;stop-opacity:0;"
@@ -79,7 +34,7 @@
          id="stop3811-1" />
     </linearGradient>
     <linearGradient
-       gradientTransform="matrix(2.3933139,0,0,1,-1291.5105,359.35582)"
+       gradientTransform="matrix(2.5381415,0,0,1,-1458.7473,359.35582)"
        y2="570.69666"
        x2="1155.0508"
        y1="570.69666"
@@ -88,43 +43,6 @@
        gradientUnits="userSpaceOnUse"
        id="linearGradient4017"
        xlink:href="#linearGradient3807-2"
-       inkscape:collect="always" />
-    <linearGradient
-       gradientTransform="matrix(2.3933139,0,0,1,-1291.5105,359.35582)"
-       y2="570.69666"
-       x2="1155.0508"
-       y1="570.69666"
-       x1="575.05078"
-       spreadMethod="reflect"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient4017-1"
-       xlink:href="#linearGradient3807-2-2"
-       inkscape:collect="always" />
-    <linearGradient
-       id="linearGradient3807-2-2">
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0;"
-         offset="0"
-         id="stop3809-5-5" />
-      <stop
-         id="stop3815-1-7"
-         offset="0.2"
-         style="stop-color:#ffffff;stop-opacity:1;" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
-         offset="1"
-         id="stop3811-1-0" />
-    </linearGradient>
-    <linearGradient
-       y2="570.69666"
-       x2="1155.0508"
-       y1="570.69666"
-       x1="575.05078"
-       spreadMethod="reflect"
-       gradientTransform="matrix(2.3933139,0,0,1,-842.013,2.87365)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient4510"
-       xlink:href="#linearGradient3807-2-2"
        inkscape:collect="always" />
     <filter
        id="filter4858"
@@ -168,11 +86,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="167.31824"
-     inkscape:cy="174.4509"
+     inkscape:zoom="0.7"
+     inkscape:cx="690.00238"
+     inkscape:cy="323.10924"
      inkscape:document-units="px"
-     inkscape:current-layer="box"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="993"
@@ -239,15 +157,24 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-476.36218)">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3907"
+       width="1168.5714"
+       height="862.85712"
+       x="-44.285713"
+       y="-114"
+       transform="translate(0,476.36218)"
+       ry="0.0062541137" />
     <image
-       sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sotmeu14/artwork/img-townhall-soft.jpg"
-       xlink:href="img-townhall-soft.jpg"
-       style="opacity:1"
-       width="1024"
-       height="681"
-       id="image2993"
+       sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sotmeu14/artwork/IMG_0791.JPG"
+       xlink:href="IMG_0791.JPG"
+       style="opacity:0.5"
+       width="1040"
+       height="780"
+       id="image3048"
        x="0"
-       y="471.36218" />
+       y="398.36218" />
     <g
        transform="matrix(0.48994061,0,0,0.48994061,704.93504,274.4227)"
        id="logo"
@@ -255,20 +182,20 @@
       <image
          sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/sotmeu14/artwork/Logo.de.svg"
          xlink:href="Logo.de.svg"
-         width="590"
-         height="300"
-         id="manuimage2993"
+         y="471.36218"
          x="0"
-         y="471.36218" />
+         id="manuimage2993"
+         height="300"
+         width="590" />
     </g>
     <g
        id="box">
       <rect
          ry="0.0062541137"
          y="831"
-         x="84"
+         x="-1.2789769e-13"
          height="196.92351"
-         width="1388.1221"
+         width="1472.1221"
          id="bar"
          style="opacity:0.45;fill:url(#linearGradient4017);fill-opacity:1;fill-rule:nonzero;stroke:none" />
       <text
@@ -293,7 +220,7 @@
              height="81.822357"
              x="212.13203"
              y="457.81216" /></flowRegion><flowPara
-           id="flowPara3047"></flowPara></flowRoot>      <flowRoot
+           id="flowPara3047" /></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot3049"
          style="font-size:32px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#444448;fill-opacity:0.94117647;stroke:none;filter:url(#filter4858);font-family:Sans"
