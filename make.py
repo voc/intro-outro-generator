@@ -21,13 +21,18 @@ from threading import Thread, Lock
 import subprocess
 from Queue import Queue
 
-# URL to Schedule-XML
-scheduleUrl = 'http://sotm-eu.org/export.xml'
+# Project-Name
+if len(sys.argv) < 2:
+	print "you must specify a project-name as first argument, eg. './make.py sotmeu14'"
+	sys.exit(1)
 
-# For (really) too long titles
-titlemap = {
-	#708: "Neue WEB-Anwendungen des LGRB Baden-Württemberg im Überblick"
-}
+projectname = sys.argv[1]
+try:
+	sys.path.append(projectname)
+	project = __import__(projectname)
+except ImportError:
+	print "you must specify a project-name as first argument, eg. './make.py sotmeu14'. The supplied value '{0}' seems not to be a valid project (there is no '{0}/__init__.py').".format(projectname);
+	sys.exit(1)
 
 # Frames per second. Increasing this renders more frames, the avconf-statements would still need modifications
 fps = 25
@@ -43,20 +48,6 @@ offline = ('--offline' in sys.argv)
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-# t: current time, b: begInnIng value, c: change In value, d: duration
-# copied from jqueryui
-def easeOutCubic(t, b, c, d):
-	t=float(t)/d-1
-	return c*((t)*t*t + 1) + b
-
-def easeInCubic(t, b, c, d):
-	t=float(t)/d
-	return c*(t)*t*t + b;
-
-def easeOutQuad(t, b, c, d):
-	t=float(t)/d
-	return -c *(t)*(t-2) + b;
-
 # try to create all folders needed and skip, they already exist
 def ensurePathExists(path):
 	try:
@@ -70,111 +61,10 @@ def ensureFilesRemoved(pattern):
 	for f in glob.glob(pattern):
 		os.unlink(f)
 
-def abspannFrames():
-	# 9 Sekunden
-
-	# 3 Sekunden Fadein Logo
-	frames = int(3*fps)
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
-			('box',   'style',    'opacity', 0)
-		)
-
-	# 3 Sekunde Fadein Box
-	frames = 3*fps
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', 1),
-			('box',   'style',    'opacity', "%.4f" % easeOutQuad(i, 0, 1, frames)),
-			('box',   'attr',     'transform', 'translate(0,%.4f)' % easeOutQuad(i, 94, -94, frames) )
-			#('box',   'attr',     'transform', 'translate(%.4f,0)' % easeOutQuad(i, 960, -960, frames) )
-		)
-
-	# 3 Sekunden stehen bleiben
-	frames = 3*fps
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', 1),
-			('box',   'style',    'opacity', 1)
-		)
-
-
-def vorspannFrames():
-	# 7 Sekunden
-
-	# 0.5 Sekunden stehen bleiben
-	frames = int(math.ceil(0.5*fps))
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', 0),
-			('box',   'style',    'opacity', 0)
-		)
-
-	# 1.5 Sekunden Fadein Logo
-	frames = int(math.ceil(1.5*fps))
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
-			('box',   'style',    'opacity', 0)
-		)
-
-	# 3 Sekunde Fadein Box
-	frames = 3*fps
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', 1),
-			('box',   'style',    'opacity', "%.4f" % easeOutQuad(i, 0, 1, frames)),
-			('box',   'attr',     'transform', 'translate(0,%.4f)' % easeOutQuad(i, 198, -198, frames) )
-			#('box',   'attr',     'transform', 'translate(%.4f,0)' % easeOutQuad(i, 960, -960, frames) )
-		)
-
-	# 3 Sekunden stehen bleiben
-	frames = 3*fps
-	for i in range(0, frames):
-		yield (
-			('logo',  'style',    'opacity', 1),
-			('box',   'style',    'opacity', 1)
-		)
-
-def pauseFrames():
-	# 12 Sekunden
-
-	texts = {
-		'text1': "0.0",
-		'text2': "0.0",
-		'text3': "0.0"
-	}
-
-	for name in texts.keys():
-		# 2 Sekunden einfaden
-		frames = 2*fps
-		for i in range(0, frames):
-			texts[name] = "%.4f" % easeOutQuad(i, 0, 1, frames)
-
-			yield (
-				('text1', 'style',	'opacity', texts['text1']),
-				('text2', 'style',	'opacity', texts['text2']),
-				('text3', 'style',	'opacity', texts['text3'])
-			)
-
-		# 2 Sekunden ausfaden
-		frames = 2*fps
-		for i in range(0, frames):
-			texts[name] = "%.4f" % easeOutQuad(i, 1, -1, frames)
-
-			yield (
-				('text1', 'style',	'opacity', texts['text1']),
-				('text2', 'style',	'opacity', texts['text2']),
-				('text3', 'style',	'opacity', texts['text3'])
-			)
-
-		texts[name] = "0.0"
-
 cssutils.ser.prefs.lineSeparator = ' '
 cssutils.log.setLevel(logging.ERROR)
 
-def render(infile, outfile, sequence, parameters={}, workdir='artwork'):
+def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projectname, 'artwork')):
 	# in debug mode we have no thread-worker which prints its progress
 	if debug:
 		print "generating {0} from {1}".format(outfile, infile)
@@ -264,7 +154,7 @@ def events():
 
 	else:
 		# download the schedule
-		response = urllib2.urlopen(scheduleUrl)
+		response = urllib2.urlopen(project.scheduleUrl)
 
 		# read xml-source
 		xml = response.read()
@@ -284,36 +174,47 @@ def events():
 					personnames.append(person.text)
 
 				# yield a tupel with the event-id, event-title and person-names
-				yield ( int(event.get('id')), event.find('title').text, event.find('subtitle').text or '', ', '.join(personnames) )
+				yield {
+					'id': int(event.get('id')),
+					'title': project.titlemap[id] if id in project.titlemap else event.find('title').text,
+					'subtitle': event.find('subtitle').text or '',
+					'persons': personnames,
+					'personnames': ', '.join(personnames)
+				}
 
+# expose helper-methods method to project
+project.events = events
+project.render = render
+
+project.fps = fps
+
+# t: current time, b: begInnIng value, c: change In value, d: duration
+# copied from jqueryui
+def easeOutCubic(t, b, c, d):
+	t=float(t)/d-1
+	return c*((t)*t*t + 1) + b
+
+def easeInCubic(t, b, c, d):
+	t=float(t)/d
+	return c*(t)*t*t + b;
+
+def easeOutQuad(t, b, c, d):
+	t=float(t)/d
+	return -c *(t)*(t-2) + b;
+
+# expose easings to project
+project.easeOutCubic = easeOutCubic
+project.easeInCubic = easeInCubic
+project.easeOutQuad = easeOutQuad
 
 # debug-mode selected by --debug switch
 if debug:
 	print "!!! DEBUG MODE !!!"
 
-	render(
-		'vorspann.svg',
-		'../intro.dv',
-		vorspannFrames,
-		{
-			'$id': 667,
-			'$title': 'OpenJUMP - Überblick, Neuigkeiten, Zusammenarbeit/Schnittstellen mit proprietärer Software',
-			'$subtitle': 'Even more news about OpenJUMP',
-			'$personnames': 'Matthias S.'
-		}
-	)
+	# call into project which calls render as needed
+	project.debug()
 
-	render(
-		'abspann.svg',
-		'../outro.dv',
-		abspannFrames
-	)
-
-	render('pause.svg',
-		'../pause.dv',
-		pauseFrames
-	)
-
+	# exit early
 	sys.exit(0)
 
 
@@ -321,37 +222,8 @@ if debug:
 # threaded task queue
 tasks = Queue()
 
-# iterate over all events extracted from the schedule xml-export
-for (id, title, subtitle, personnames) in events():
-	if id in titlemap:
-		title = titlemap[id]
-
-	# generate a task description and put them into the queue
-	tasks.put((
-		'vorspann.svg',
-		str(id)+".dv",
-		vorspannFrames,
-		{
-			'$id': id,
-			'$title': title,
-			'$subtitle': subtitle,
-			'$personnames': personnames
-		}
-	))
-
-# place a task for the outro into the queue
-tasks.put((
-	'abspann.svg',
-	'outro.dv',
-	abspannFrames
-))
-
-# place the pause-sequence into the queue
-tasks.put((
-	'pause.svg',
-	'pause.dv',
-	pauseFrames
-))
+# call into project which generates the tasks
+project.tasks(tasks)
 
 # one working thread per cpu
 num_worker_threads = multiprocessing.cpu_count()
@@ -382,13 +254,13 @@ def worker():
 	workdir = os.path.join(tempdir, 'artwork')
 
 	# save the current working dir as output-dir
-	outdir = os.getcwd()
+	outdir = os.path.join(os.getcwd(), projectname)
 
 	# print a message that we're about to initialize our environment
 	tprint("initializing worker in {0}, writing result to {1}".format(tempdir, outdir))
 
 	# copy the artwork-dir into the tempdir
-	shutil.copytree('artwork', workdir)
+	shutil.copytree(os.path.join(projectname, 'artwork'), workdir)
 
 	# loop until all tasks are done (when the thread fetches a sentinal from the queue)
 	while True:
