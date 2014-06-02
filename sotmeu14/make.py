@@ -458,12 +458,4 @@ while True:
 	# sleep while the workers work
 	time.sleep(1)
 
-	# check if all worker-threads are still alive
-	thread_count = len(filter(lambda t: t.is_alive(), threads))
-
-	# exit otherwise
-	if thread_count != num_worker_threads:
-		tprint("{0} of {1} threads have died, ending".format(num_worker_threads - thread_count, num_worker_threads))
-		sys.exit(23)
-
 print "all worker threads ended"
