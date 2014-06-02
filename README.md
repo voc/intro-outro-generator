@@ -12,24 +12,27 @@ Okay, let's go.
  - Install python2.7, python-lxml, python-cssutils, inkscape and libav-tools
  - Fork this repo on github and clone your personal fork to your local system.
  - Copy one of the existing setups (I'd suggest sotmeu14 for a start).
- - Open ```artwork/vorspann.svg``` (preroll template) in inkscape and modify it. You can also just create a new one. For the VOC-Setup you should use a Pixel-Resolution of ```1024x576``` (16:9 Aspect Ratio).
+ - Open ```artwork/intro.svg``` (preroll template) in inkscape and modify it. You can also just create a new one. For the VOC-Setup you should use a Pixel-Resolution of ```1024x576``` (16:9 Aspect Ratio).
  - Group things together that should be animated together (like subtitle and speaker-text)
  - Use Flow-Text (in Inkscape drag an Area of Text instead of just placing a single line). This way the text will automatically wrap inside the specified area if it gets too long.
- - Type Placeholder-Texts where the script should substitute content from your schedule-xml. By default the following placeholders are substituted
+ - Type Placeholder-Texts where the script should substitute content from your schedule.xml. By default the following placeholders are substituted
    - ```$id``` - Talk-ID (useful in links to the Frab-Page)
    - ```$title``` - Title of the Talk
    - ```$subtitle``` - You guessed it...
    - ```$personnames``` - Comma-Separated list of Speaker-Names
  - Give IDs to the Objects and Groups you want to animate (Inkscape Shift-Ctrl-O)
- - Edit your copy of make.py
+ - Edit your copy of __init__.py - this is your project configuration
    - set ```scheduleUrl``` to the url of your schedule.xml-file
-   - modify vorspannFrames (preroll) - see section about the frame-generators below
-   - search for ```!!! DEBUG MODE !!!``` and comment the sections about abspann (postroll) and pause
-   - run ```./make.py --debug``` to generate your first preroll
-   - if it looks good, duplicate vorspann.svg to abspann.svg (postroll) and pause.svg (pause-loop) and modify them according to your needs. You can use different IDs if required
-   - modify abspannFrames and pauseFrames like before an test them using ```./make.py --debug```
-   - it they look like you'd want them to, run ```make.py```.
+   - modify introFrames (preroll) - see section about the frame-generators below
+   - search for ```def debug()``` and comment the sections about outro (postroll) and pause
+   - run ```./make.py yourproject/ --debug``` to generate your first intro
+   - if it looks good, duplicate intro.svg to outro.svg (postroll) and pause.svg (pause-loop) and modify them according to your needs. You can use different IDs in your SVG if required
+   - modify outroFrames and pauseFrames like before an test them using ```./make.py yourproject/ --debug```
+   - if everything look like you'd want them to, run ```./make.py yourproject/```.
    - You can use any debianesque linux (can be headless) to generate the videos. More cores help more.
+ - Run ```./make-snapshots.sh yourproject/``` to generate a png from a specific time-index of your .dv-files. You can run ```./make-snapshots.sh yourproject/ 5``` to get a png for the frame at the 5th second of all your dvs. Default is 3 seconds.
+   - Viewing through those pngs to check if all intros are looking good with the real-world titles- and person-names
+   - Viewing through the pngs is faster then opening each .dv and waiting 5 seconds.
 
 The Frame-Generators
 --------------------
