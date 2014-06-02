@@ -12,7 +12,7 @@ titlemap = {
 }
 
 
-def abspannFrames():
+def outroFrames():
 	# 9 Sekunden
 
 	# 3 Sekunden Fadein Logo
@@ -42,7 +42,7 @@ def abspannFrames():
 		)
 
 
-def vorspannFrames():
+def introFrames():
 	# 7 Sekunden
 
 	# 0.5 Sekunden stehen bleiben
@@ -115,9 +115,9 @@ def pauseFrames():
 
 def debug():
 	render(
-		'vorspann.svg',
+		'intro.svg',
 		'../intro.dv',
-		vorspannFrames,
+		introFrames,
 		{
 			'$id': 667,
 			'$title': 'OpenJUMP - Überblick, Neuigkeiten, Zusammenarbeit/Schnittstellen mit proprietärer Software',
@@ -127,9 +127,9 @@ def debug():
 	)
 
 	render(
-		'abspann.svg',
+		'outro.svg',
 		'../outro.dv',
-		abspannFrames
+		outroFrames
 	)
 
 	render('pause.svg',
@@ -143,9 +143,9 @@ def tasks(queue):
 
 		# generate a task description and put them into the queue
 		queue.put((
-			'vorspann.svg',
+			'intro.svg',
 			str(event['id'])+".dv",
-			vorspannFrames,
+			introFrames,
 			{
 				'$id': event['id'],
 				'$title': event['title'],
@@ -156,9 +156,9 @@ def tasks(queue):
 
 	# place a task for the outro into the queue
 	queue.put((
-		'abspann.svg',
+		'outro.svg',
 		'outro.dv',
-		abspannFrames
+		outroFrames
 	))
 
 	# place the pause-sequence into the queue
