@@ -26,7 +26,7 @@ if len(sys.argv) < 2:
 	print "you must specify a project-name as first argument, eg. './make.py sotmeu14'"
 	sys.exit(1)
 
-projectname = sys.argv[1]
+projectname = sys.argv[1].strip('/')
 try:
 	sys.path.append(projectname)
 	project = __import__(projectname)
