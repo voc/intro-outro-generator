@@ -1,4 +1,5 @@
 *.mp4
 *.dv
+*.pyc
 schedule.de.xml
 
