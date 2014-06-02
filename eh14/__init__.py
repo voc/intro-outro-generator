@@ -4,7 +4,7 @@
 import math
 
 # URL to Schedule-XML
-scheduleUrl = 'http://sotm-eu.org/export.xml'
+scheduleUrl = 'http://eh14.easterhegg.eu/pages/fahrplan/schedule.xml'
 
 # For (really) too long titles
 titlemap = {
