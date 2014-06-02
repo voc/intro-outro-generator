@@ -1,4 +1,4 @@
-Frab-Based Pre- and Postroll-Generator
+Frab-Based Into- and Outro-Generator
 ===========================================
 
 This is a scripted pre-, postroll and pause-clip generator. It takes a Frab/frab schedule-xml and artwork as svg and generates .dv-clips ready-to-use with the [VOC](https://c3voc.de/wiki/)-CRS (Continuous Recording System) or any other System. It can aĺso be modified to generate Lossless h264 or something different if reqired.
