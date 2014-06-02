@@ -11,7 +11,7 @@ if [ -z $ss ]; then
 fi
 
 for dv in *.dv; do
-	png="$(basename $dv .dv).png"
+	png="snapshot-$(basename $dv .dv).png"
 	echo "$dv @ second $ss -> $png"
 	avconv -loglevel error -i $dv -ss $ss -frames:v 1 -vf scale='iw*sar:ih' -f image2 -c png $png;
 done
