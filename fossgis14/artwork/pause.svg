@@ -89,9 +89,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="543.97851"
-     inkscape:cy="296.83429"
+     inkscape:zoom="1.4"
+     inkscape:cx="210.57253"
+     inkscape:cy="235.39609"
      inkscape:document-units="px"
      inkscape:current-layer="layer_background"
      showgrid="false"
@@ -148,6 +148,7 @@
        id="g_background"
        transform="translate(3.2142857,-29.821429)">
       <image
+         sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/fossgis14/artwork/foto-soft.jpg"
          xlink:href="foto-soft.jpg"
          y="313.82144"
          x="-3.2142856"
@@ -155,6 +156,7 @@
          height="768"
          width="1024" />
       <image
+         sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/fossgis14/artwork/logo_ohne_rand-332.png"
          xlink:href="logo_ohne_rand-332.png"
          y="537.82141"
          x="28.785715"
@@ -174,23 +176,23 @@
          id="rect_banderole_1" />
     </g>
     <g
-       style="opacity:1"
+       style="opacity:0.25"
        id="text1">
       <text
          sodipodi:linespacing="80.000001%"
          id="text2992"
-         y="836.83752"
+         y="876.83752"
          x="75.964493"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3772);font-family:Sans"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:80.00000119000000609%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3772);font-family:Sans"
          xml:space="preserve"><tspan
-           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#7b9199;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119000000609%;fill:#7b9199;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
            id="tspan2996"
-           y="883.23755"
-           x="85.964493"
+           y="876.83752"
+           x="75.964493"
            sodipodi:role="line">         Berlin</tspan><tspan
-           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#7b9199;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119000000609%;fill:#7b9199;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
            id="tspan3002"
-           y="929.63751"
+           y="915.23755"
            x="75.964493"
            sodipodi:role="line">19. - 21. März 2014</tspan></text>
       <text
@@ -198,41 +200,44 @@
          id="text2992-5"
          y="837.2262"
          x="77.218193"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:80.00000119000000609%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
          xml:space="preserve"><tspan
-           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#f2f4f5;fill-opacity:1;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119000000609%;fill:#f2f4f5;fill-opacity:1;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
            y="837.2262"
            x="77.218193"
            id="tspan2994-9"
            sodipodi:role="line">FOSSGIS Konferenz</tspan><tspan
-           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119000000609%;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
            id="tspan2998-1"
-           y="883.62622"
+           y="875.62622"
            x="77.218193"
            sodipodi:role="line">2014</tspan><tspan
-           style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119000000609%;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold;fill:#f2f4f5;fill-opacity:1"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119000000609%;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           y="914.02618"
+           x="77.218193"
+           sodipodi:role="line"
+           id="tspan3018" /><tspan
+           style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119000000609%;fill:#f2f4f5;fill-opacity:1;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
            id="tspan3002-3"
-           y="990.82617"
+           y="934.56445"
            x="77.218193"
            sodipodi:role="line">fossgis.de/konferenz/2014/</tspan></text>
-
     </g>
     <g
-       style="opacity:0"
+       style="opacity:1"
        id="text2">
       <text
          sodipodi:linespacing="80.000001%"
-         id="text2992-5"
+         id="text39"
          y="837.2262"
          x="77.218193"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:80.00000119000000609%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
          xml:space="preserve"><tspan
-           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
-           id="tspan2998-1"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119000000609%;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           id="tspan41"
            y="900.62622"
            x="77.218193"
            sodipodi:role="line">Gleich geht's weiter...</tspan></text>
-
     </g>
   </g>
 </svg>
