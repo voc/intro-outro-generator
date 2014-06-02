@@ -62,7 +62,7 @@ def ensureFilesRemoved(pattern):
 		os.unlink(f)
 
 cssutils.ser.prefs.lineSeparator = ' '
-cssutils.log.setLevel(logging.ERROR)
+cssutils.log.setLevel(logging.FATAL)
 
 def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projectname, 'artwork')):
 	# in debug mode we have no thread-worker which prints its progress
