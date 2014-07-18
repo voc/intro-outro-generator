@@ -202,10 +202,15 @@ def easeOutQuad(t, b, c, d):
 	t=float(t)/d
 	return -c *(t)*(t-2) + b;
 
-# expose easings to project
+def easeLinear(t, b, c, d):
+	t=float(t)/d
+	return t*c+b
+
+# expose easings to project # HACKYYYYY
 project.easeOutCubic = easeOutCubic
 project.easeInCubic = easeInCubic
 project.easeOutQuad = easeOutQuad
+project.easeLinear = easeLinear
 
 # debug-mode selected by --debug switch
 if debug:
