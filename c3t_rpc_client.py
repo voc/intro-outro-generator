@@ -32,7 +32,9 @@ import sys
 # method: method to access
 ############################
 def C3TClient(url, method, group, host, secret, args):
-    url = url + "rpc"
+    if 'rpc' != url[-3:]:
+        url = url + "rpc"
+    
 #     if host == None:
 #         host = socket.getfqdn()
         
