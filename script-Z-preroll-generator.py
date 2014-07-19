@@ -20,13 +20,17 @@ url = os.environ['CRS_TRACKER']
 token = os.environ['CRS_TOKEN']
 secret = os.environ['CRS_SECRET']
 
+filter = {}
+if not os.environ.get('CRS_ROOM') is None:
+	filter['Fahrplan.Room'] = os.environ['CRS_ROOM']
+
 def generatePreroll(ticket):
 	print('generating preroll for', ticket)
 
 while True:
 	print('Asking RPC for {0}-tickets which are ready for state {1}'.format(ticket_type, ticket_state))
 
-	ticket_id = rpc.assignNextUnassignedForState(ticket_type, ticket_state, url, token, host, secret)
+	ticket_id = rpc.assignNextUnassignedForState(ticket_type, ticket_state, url, token, host, secret, filter)
 	if ticket_id != False:
 		ticket = rpc.getTicketProperties(str(ticket_id), url, token, host, secret)
 		generatePreroll(ticket)
