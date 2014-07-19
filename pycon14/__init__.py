@@ -84,7 +84,7 @@ def tasks(queue):
 		queue.put((
 			'intro.svg',
 			str(event['id'])+".dv",
-			introFrames,
+			pyconFrames,
 			{
 				'$id': event['id'],
 				'$title': event['title'],
