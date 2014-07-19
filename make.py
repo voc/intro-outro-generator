@@ -170,14 +170,15 @@ def events():
 			for event in room.iter('event'):
 				# aggregate names of the persons holding this talk
 				personnames = []
-				for person in event.find('persons').iter('person'):
-					personnames.append(person.text)
+				if event.find('persons') is not None:
+					for person in event.find('persons').iter('person'):
+						personnames.append(person.text)
 
 				# yield a tupel with the event-id, event-title and person-names
 				yield {
 					'id': int(event.get('id')),
 					'title': project.titlemap[id] if id in project.titlemap else event.find('title').text,
-					'subtitle': event.find('subtitle').text or '',
+					'subtitle': event.find('subtitle').text if event.find('subtitle') is not None else '',
 					'persons': personnames,
 					'personnames': ', '.join(personnames)
 				}
