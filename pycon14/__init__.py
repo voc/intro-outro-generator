@@ -44,7 +44,7 @@ def pyconFrames():
 			('text', 'style', 'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
 		)
 
-	frames = 66
+	frames = 65
 	for i in range(0, frames):
 		givenFrame += 1
 		yield (
