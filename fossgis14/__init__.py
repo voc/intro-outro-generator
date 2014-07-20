@@ -1,5 +1,6 @@
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
+
+from renderlib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'http://www.fossgis.de/konferenz/2014/programm/schedule.de.xml'
@@ -157,7 +158,7 @@ def debug():
 
 def tasks(queue):
 	# iterate over all events extracted from the schedule xml-export
-	for event in events():
+	for event in events(scheduleUrl, titlemap):
 
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
