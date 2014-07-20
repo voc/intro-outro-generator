@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
 import sys
@@ -9,7 +9,7 @@ import math
 import time
 import shutil
 import errno
-import urllib2
+import urllib
 from lxml import etree
 from xml.sax.saxutils import escape as xmlescape
 import cssutils
@@ -19,11 +19,11 @@ import threading
 import multiprocessing
 from threading import Thread, Lock
 import subprocess
-from Queue import Queue
+from queue import Queue
 
 # Project-Name
 if len(sys.argv) < 2:
-	print "you must specify a project-name as first argument, eg. './make.py sotmeu14'"
+	print("you must specify a project-name as first argument, eg. './make.py sotmeu14'")
 	sys.exit(1)
 
 projectname = sys.argv[1].strip('/')
@@ -31,7 +31,7 @@ try:
 	sys.path.append(projectname)
 	project = __import__(projectname)
 except ImportError:
-	print "you must specify a project-name as first argument, eg. './make.py sotmeu14'. The supplied value '{0}' seems not to be a valid project (there is no '{0}/__init__.py').".format(projectname);
+	print("you must specify a project-name as first argument, eg. './make.py sotmeu14'. The supplied value '{0}' seems not to be a valid project (there is no '{0}/__init__.py').".format(projectname))
 	sys.exit(1)
 
 # Frames per second. Increasing this renders more frames, the avconf-statements would still need modifications
@@ -43,10 +43,6 @@ debug = ('--debug' in sys.argv)
 
 # using --offline only skips the network fetching and use a local schedule.de.xml
 offline = ('--offline' in sys.argv)
-
-# set charset of output-terminal
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 # try to create all folders needed and skip, they already exist
 def ensurePathExists(path):
@@ -67,7 +63,7 @@ cssutils.log.setLevel(logging.FATAL)
 def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projectname, 'artwork')):
 	# in debug mode we have no thread-worker which prints its progress
 	if debug:
-		print "generating {0} from {1}".format(outfile, infile)
+		print("generating {0} from {1}".format(outfile, infile))
 
 	# make sure a .frames-directory exists in out workdir
 	ensurePathExists(os.path.join(workdir, '.frames'))
@@ -78,7 +74,7 @@ def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projec
 		for key in parameters.keys():
 			svgstr = svgstr.replace(key, xmlescape(str(parameters[key])))
 
-		svg = etree.fromstring(svgstr)
+		svg = etree.fromstring(svgstr.encode('utf-8'))
 
 	# find all images and force them to absolute file-urls
 	namespaces = {'xlink': 'http://www.w3.org/1999/xlink', 'svg': 'http://www.w3.org/2000/svg'}
@@ -93,7 +89,7 @@ def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projec
 	for frame in sequence():
 		# print a line for each and every frame generated
 		if debug:
-			print "frameNr {0:2d} => {1}".format(frameNr, frame)
+			print("frameNr {0:2d} => {1}".format(frameNr, frame))
 
 		# open the output-file (named ".gen.svg" in the workdir)
 		with open(os.path.join(workdir, '.gen.svg'), 'w') as fp:
@@ -104,19 +100,19 @@ def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projec
 				for el in svg.findall(".//*[@id='"+id.replace("'", "\\'")+"']"):
 					if type == 'style':
 						style = cssutils.parseStyle( el.attrib['style'] if 'style' in el.attrib else '' )
-						style[key] = unicode(value)
+						style[key] = str(value)
 						el.attrib['style'] = style.cssText
 
 					elif type == 'attr':
 						el.attrib[key] = value
 
 			# write the generated svg-text into the output-file
-			fp.write( etree.tostring(svg) )
+			fp.write( etree.tostring(svg, encoding='unicode') )
 
 		# invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-		errorReturn = subprocess.check_output('cd {0} && inkscape --export-png=.frames/{1:04d}.png .gen.svg 2>&1 >/dev/null'.format(workdir, frameNr), shell=True)
+		errorReturn = subprocess.check_output('cd {0} && inkscape --export-png=.frames/{1:04d}.png .gen.svg 2>&1 >/dev/null'.format(workdir, frameNr), shell=True, universal_newlines=True)
 		if errorReturn != '':
-			print "inkscape exitted with error\n"+errorReturn
+			print("inkscape exitted with error\n"+errorReturn)
 			sys.exit(42)
 
 		# increment frame-number
@@ -133,7 +129,7 @@ def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projec
 
 	# as before, in non-debug-mode the thread-worker does all progress messages
 	if debug:
-		print "cleanup"
+		print("cleanup")
 
 	# remove the .frames-dir with all frames in it
 	shutil.rmtree(os.path.join(workdir, '.frames'))
@@ -145,7 +141,7 @@ def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projec
 
 # Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event
 def events():
-	print "downloading pentabarf schedule"
+	print("downloading pentabarf schedule")
 
 	# use --offline to skip networking
 	if offline:
@@ -154,7 +150,7 @@ def events():
 
 	else:
 		# download the schedule
-		response = urllib2.urlopen(project.scheduleUrl)
+		response = urllib.urlopen(project.scheduleUrl)
 
 		# read xml-source
 		xml = response.read()
@@ -215,7 +211,7 @@ project.easeLinear = easeLinear
 
 # debug-mode selected by --debug switch
 if debug:
-	print "!!! DEBUG MODE !!!"
+	print("!!! DEBUG MODE !!!")
 
 	# call into project which calls render as needed
 	project.debug()
@@ -233,7 +229,7 @@ project.tasks(tasks)
 
 # one working thread per cpu
 num_worker_threads = multiprocessing.cpu_count()
-print "{0} tasks in queue, starting {1} worker threads".format(tasks.qsize(), num_worker_threads)
+print("{0} tasks in queue, starting {1} worker threads".format(tasks.qsize(), num_worker_threads))
 
 # put a sentinel for each thread into the queue to signal the end
 for _ in range(num_worker_threads):
@@ -247,7 +243,7 @@ def tprint(str):
 	printLock.acquire()
 
 	# print thread-name and message
-	print threading.current_thread().name+': '+str
+	print(threading.current_thread().name+': '+str)
 
 	# release lock
 	printLock.release()
@@ -336,4 +332,4 @@ while True:
 	# sleep while the workers work
 	time.sleep(1)
 
-print "all worker threads ended"
+print("all worker threads ended")
