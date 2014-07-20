@@ -9,7 +9,7 @@ import math
 import time
 import shutil
 import errno
-import urllib
+from urllib.request import urlopen
 from lxml import etree
 from xml.sax.saxutils import escape as xmlescape
 import cssutils
@@ -20,6 +20,25 @@ import multiprocessing
 from threading import Thread, Lock
 import subprocess
 from queue import Queue
+
+class Rendertask:
+	def __init__(self, infile, sequence, parameters={}, outfile=None, workdir='.'):
+		self.infile =  infile
+		self.sequence = sequence
+		self.parameters = parameters
+		self.outfile = outfile
+		self.workdir = workdir
+
+	def fromtupel(tuple):
+		return Rendertask(tuple[0], tuple[2], tuple[3], tuple[1])
+
+	def ensure(input):
+		if isinstance(input, tuple):
+			return Rendertask.fromtupel(input)
+		elif isinstance(input, Rendertask):
+			return input
+		else:
+			return None
 
 # Project-Name
 if len(sys.argv) < 2:
@@ -61,38 +80,36 @@ cssutils.ser.prefs.lineSeparator = ' '
 cssutils.log.setLevel(logging.FATAL)
 
 def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projectname, 'artwork')):
+	return rendertask(Rendertask(infile=infile, outfile=outfile, sequence=sequence, parameters=parameters, workdir=workdir))
+
+def rendertask(task):
 	# in debug mode we have no thread-worker which prints its progress
 	if debug:
-		print("generating {0} from {1}".format(outfile, infile))
+		print("generating {0} from {1}".format(task.outfile, task.infile))
 
 	# make sure a .frames-directory exists in out workdir
-	ensurePathExists(os.path.join(workdir, '.frames'))
+	ensurePathExists(os.path.join(task.workdir, '.frames'))
 
 	# open and parse the input file
-	with open(os.path.join(workdir, infile), 'r') as fp:
+	with open(os.path.join(task.workdir, task.infile), 'r') as fp:
 		svgstr = fp.read()
-		for key in parameters.keys():
-			svgstr = svgstr.replace(key, xmlescape(str(parameters[key])))
+		for key in task.parameters.keys():
+			svgstr = svgstr.replace(key, xmlescape(str(task.parameters[key])))
 
 		svg = etree.fromstring(svgstr.encode('utf-8'))
-
-	# find all images and force them to absolute file-urls
-	namespaces = {'xlink': 'http://www.w3.org/1999/xlink', 'svg': 'http://www.w3.org/2000/svg'}
-	for el in svg.findall(".//svg:image[@xlink:href]", namespaces=namespaces):
-		el.attrib['{http://www.w3.org/1999/xlink}href'] = 'file:///' + os.path.realpath(workdir) + '/' + el.attrib['{http://www.w3.org/1999/xlink}href']
 
 	# frame-number counter
 	frameNr = 0
 
 	# iterate through the animation seqence frame by frame
 	# frame is a ... tbd
-	for frame in sequence():
+	for frame in task.sequence():
 		# print a line for each and every frame generated
 		if debug:
 			print("frameNr {0:2d} => {1}".format(frameNr, frame))
 
 		# open the output-file (named ".gen.svg" in the workdir)
-		with open(os.path.join(workdir, '.gen.svg'), 'w') as fp:
+		with open(os.path.join(task.workdir, '.gen.svg'), 'w') as fp:
 			# apply the replace-pairs to the input text, by finding the specified xml-elements by thier id and modify thier css-parameter the correct value
 			for replaceinfo in frame:
 				(id, type, key, value) = replaceinfo
@@ -110,7 +127,7 @@ def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projec
 			fp.write( etree.tostring(svg, encoding='unicode') )
 
 		# invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-		errorReturn = subprocess.check_output('cd {0} && inkscape --export-png=.frames/{1:04d}.png .gen.svg 2>&1 >/dev/null'.format(workdir, frameNr), shell=True, universal_newlines=True)
+		errorReturn = subprocess.check_output('cd {0} && inkscape --export-png=.frames/{1:04d}.png .gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr), shell=True, universal_newlines=True)
 		if errorReturn != '':
 			print("inkscape exitted with error\n"+errorReturn)
 			sys.exit(42)
@@ -121,21 +138,21 @@ def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projec
 
 
 	# remove the dv we are about to (re-)generate
-	ensureFilesRemoved(os.path.join(workdir, outfile))
+	ensureFilesRemoved(os.path.join(task.workdir, task.outfile))
 
 	# invoke avconv aka ffmpeg and renerate a lossles-dv from the frames
 	#  if we're not in debug-mode, suppress all output
-	os.system('cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(workdir, outfile) + ('' if debug else '>/dev/null 2>&1'))
+	os.system('cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile) + ('' if debug else '>/dev/null 2>&1'))
 
 	# as before, in non-debug-mode the thread-worker does all progress messages
 	if debug:
 		print("cleanup")
 
 	# remove the .frames-dir with all frames in it
-	shutil.rmtree(os.path.join(workdir, '.frames'))
+	shutil.rmtree(os.path.join(task.workdir, '.frames'))
 
 	# remove the generated svg
-	ensureFilesRemoved(os.path.join(workdir, '.gen.svg'))
+	ensureFilesRemoved(os.path.join(task.workdir, '.gen.svg'))
 
 
 
@@ -150,7 +167,7 @@ def events():
 
 	else:
 		# download the schedule
-		response = urllib.urlopen(project.scheduleUrl)
+		response = urlopen(project.scheduleUrl)
 
 		# read xml-source
 		xml = response.read()
@@ -182,6 +199,8 @@ def events():
 # expose helper-methods method to project
 project.events = events
 project.render = render
+project.rendertask = rendertask
+project.Rendertask = Rendertask
 
 project.fps = fps
 
@@ -267,38 +286,25 @@ def worker():
 	# loop until all tasks are done (when the thread fetches a sentinal from the queue)
 	while True:
 		# fetch a task from the queue
-		task = tasks.get()
+		task = Rendertask.ensure(tasks.get())
 
 		# if it is a stop-sentinal break out of the loop
 		if task == None:
 			break
 
 		# print that we're about to render a task
-		tprint('rendering {0}'.format(task[1]))
+		tprint('rendering {0} from {1}'.format(task.outfile, task.infile))
 
-		# render options
-		opts = (
-			# argument 0 is the input file. prepend the workdir
-			os.path.join(workdir, task[0]),
-
-			# argument 1 is the output file. prepend the outdir
-			os.path.join(outdir, task[1]),
-
-			# argument 2 is the frame generator, nothing to do here
-			task[2],
-
-			# argument 3 are the extra parameters
-			task[3] if len(task) > 3 else {},
-
-			# argument 4 is the workdir path
-			workdir
-		)
+		# prepend workdir to input file
+		task.infile = os.path.join(workdir, task.infile)
+		task.outfile = os.path.join(outdir, task.outfile)
+		task.workdir = workdir
 
 		# render with these arguments
-		render(*opts)
+		rendertask(task)
 
 		# print that we're finished
-		tprint('finished {0}, {1} tasks left'.format(task[1], max(0, tasks.qsize() - num_worker_threads)))
+		tprint('finished {0}, {1} tasks left'.format(task.outfile, max(0, tasks.qsize() - num_worker_threads)))
 
 		# mark the task as finished
 		tasks.task_done()
