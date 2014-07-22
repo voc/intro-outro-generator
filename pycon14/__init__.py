@@ -77,8 +77,13 @@ def debug():
 	# )
 
 def tasks(queue):
+	uid = []
 	# iterate over all events extracted from the schedule xml-export
 	for event in events():
+		if event['id'] in uid:
+			continue
+
+		uid.append(event['id'])
 
 		# generate a task description and put them into the queue
 		queue.put((
