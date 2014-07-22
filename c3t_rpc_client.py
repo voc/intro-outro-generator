@@ -43,7 +43,7 @@ def C3TClient(url, method, group, host, secret, args):
     #####################
     # assemble static part of signature arguments
     # 1. URL  2. method name  3. worker group token  4. hostname
-    sig_args = url  + "&" + method + "&" + group + "&" + host + "&"
+    sig_args = urllib.parse.quote(url  + "&" + method + "&" + group + "&" + host + "&", '')
     
     #### add method args
     if len(args) > 0:
@@ -52,20 +52,17 @@ def C3TClient(url, method, group, host, secret, args):
             arg = args[i]
             if isinstance(arg, dict):
                 for k in arg:
-                    sig_args = str(sig_args) + "[" + str(k) + "]=" + str(arg[k])
+                    sig_args = str(sig_args) + urllib.parse.quote("[" + str(k) + "]", '') + "=" + urllib.parse.quote(str(arg[k]), '')
             else:
-                sig_args = str(sig_args) + str(arg)
+                sig_args = str(sig_args) + urllib.parse.quote(str(arg), '')
             
             if i < (len(args) -1):
-                sig_args = sig_args + "&" 
+                sig_args = sig_args + urllib.parse.quote("&", '')
             i = i + 1
     
-    ##### quote URL and generate the hash     
-    #hash signature
-    sig_args_enc = urllib.parse.quote_plus(sig_args, "=")
         
     #### generate the hmac hash with key
-    hash =  hmac.new(bytes(secret, 'utf-8'), bytes(sig_args_enc, 'utf-8'), hashlib.sha256)
+    hash =  hmac.new(bytes(secret, 'utf-8'), bytes(sig_args, 'utf-8'), hashlib.sha256)
     
     #### add signature as last parameter to the arg list
     args.append(hash.hexdigest())
