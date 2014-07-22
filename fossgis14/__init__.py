@@ -186,3 +186,15 @@ def tasks(queue):
 		outfile = 'pause.dv',
 		sequence = pauseFrames
 	))
+
+def ticket(ticket):
+	return Rendertask(
+		infile = 'intro.svg',
+		sequence = introFrames,
+		parameters = {
+			'$id': ticket['Fahrplan.ID'],
+			'$title': ticket.get('Fahrplan.Title'),
+			'$subtitle': ticket.get('Fahrplan.Subtitle'),
+			'$personnames': ticket.get('Fahrplan.Person_list')
+		}
+	)

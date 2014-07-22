@@ -1,5 +1,6 @@
 #!/usr/bin/python
-# -*- coding: UTF-8 -*-
+
+from renderlib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'https://ep2014.europython.eu/schedule.frab.xml'
@@ -65,32 +66,21 @@ def debug():
 		}
 	)
 
-	# render(
-	# 	'outro.svg',
-	# 	'../outro.dv',
-	# 	outroFrames
-	# )
-
-	# render('pause.svg',
-	# 	'../pause.dv',
-	# 	pauseFrames
-	# )
-
 def tasks(queue):
 	uid = []
 	# iterate over all events extracted from the schedule xml-export
-	for event in events():
+	for event in events(scheduleUrl):
 		if event['id'] in uid:
 			continue
 
 		uid.append(event['id'])
 
 		# generate a task description and put them into the queue
-		queue.put((
-			'intro.svg',
-			str(event['id'])+".dv",
-			pyconFrames,
-			{
+		queue.put(Rendertask(
+			infile = 'intro.svg',
+			outfile = str(event['id'])+".dv",
+			sequence = pyconFrames,
+			parameters = {
 				'$id': event['id'],
 				'$title': event['title'],
 				'$subtitle': event['subtitle'],
@@ -98,16 +88,14 @@ def tasks(queue):
 			}
 		))
 
-	# # place a task for the outro into the queue
-	# queue.put((
-	# 	'outro.svg',
-	# 	'outro.dv',
-	# 	outroFrames
-	# ))
-
-	# # place the pause-sequence into the queue
-	# queue.put((
-	# 	'pause.svg',
-	# 	'pause.dv',
-	# 	pauseFrames
-	# ))
+def ticket(ticket):
+	return Rendertask(
+		infile = 'intro.svg',
+		sequence = introFrames,
+		parameters = {
+			'$id': ticket['Fahrplan.ID'],
+			'$title': ticket.get('Fahrplan.Title'),
+			'$subtitle': ticket.get('Fahrplan.Subtitle'),
+			'$personnames': ticket.get('Fahrplan.Person_list')
+		}
+	)

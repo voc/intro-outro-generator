@@ -1,6 +1,6 @@
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
 
+from renderlib import *
 import math
 
 def pauseFrames():
@@ -34,20 +34,20 @@ def debug():
 
 def tasks(queue):
 	# place the pause-sequence into the queue
-	queue.put((
-		'pause.svg',
-		'pause.dv',
-		pauseFrames
+	queue.put(Rendertask(
+		infile = 'pause.svg',
+		outfile = 'pause.dv',
+		sequence = pauseFrames
 	))
 
-	queue.put((
-		'nostream.svg',
-		'nostream.dv',
-		pauseFrames
+	queue.put(Rendertask(
+		infile = 'nostream.svg',
+		outfile = 'nostream.dv',
+		sequence = pauseFrames
 	))
 
-	queue.put((
-		'novideo.svg',
-		'novideo.dv',
-		pauseFrames
+	queue.put(Rendertask(
+		infile = 'novideo.svg',
+		outfile = 'novideo.dv',
+		sequence = pauseFrames
 	))

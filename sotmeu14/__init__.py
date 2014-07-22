@@ -1,6 +1,6 @@
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
 
+from renderlib import *
 import math
 
 # URL to Schedule-XML
@@ -139,14 +139,14 @@ def debug():
 
 def tasks(queue):
 	# iterate over all events extracted from the schedule xml-export
-	for event in events():
+	for event in events(scheduleUrl):
 
 		# generate a task description and put them into the queue
-		queue.put((
-			'intro.svg',
-			str(event['id'])+".dv",
-			introFrames,
-			{
+		queue.put(Rendertask(
+			infile = 'intro.svg',
+			outfile = str(event['id'])+".dv",
+			sequence = introFrames,
+			parameters = {
 				'$id': event['id'],
 				'$title': event['title'],
 				'$subtitle': event['subtitle'],
@@ -155,15 +155,27 @@ def tasks(queue):
 		))
 
 	# place a task for the outro into the queue
-	queue.put((
-		'outro.svg',
-		'outro.dv',
-		outroFrames
+	queue.put(Rendertask(
+		infile = 'outro.svg',
+		outfile = 'outro.dv',
+		sequence = outroFrames
 	))
 
 	# place the pause-sequence into the queue
-	queue.put((
-		'pause.svg',
-		'pause.dv',
-		pauseFrames
+	queue.put(Rendertask(
+		infile = 'pause.svg',
+		outfile = 'pause.dv',
+		sequence = pauseFrames
 	))
+
+def ticket(ticket):
+	return Rendertask(
+		infile = 'intro.svg',
+		sequence = introFrames,
+		parameters = {
+			'$id': ticket['Fahrplan.ID'],
+			'$title': ticket.get('Fahrplan.Title'),
+			'$subtitle': ticket.get('Fahrplan.Subtitle'),
+			'$personnames': ticket.get('Fahrplan.Person_list')
+		}
+	)

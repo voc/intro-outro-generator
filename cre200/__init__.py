@@ -1,5 +1,6 @@
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
+
+from renderlib import *
 
 def outroFrames():
 	# 8 Sekunden
@@ -79,15 +80,15 @@ def debug():
 
 def tasks(queue):
 	# generate a task description and put them into the queue
-	queue.put((
-		'intro.svg',
-		"intro.dv",
-		introFrames
+	queue.put(Rendertask(
+		infile = 'intro.svg',
+		outfile = "intro.dv",
+		sequence = introFrames
 	))
 
 	# place a task for the outro into the queue
-	queue.put((
-		'outro.svg',
-		'outro.dv',
-		outroFrames
+	queue.put(Rendertask(
+		infile = 'outro.svg',
+		outfile = 'outro.dv',
+		sequence = outroFrames
 	))
