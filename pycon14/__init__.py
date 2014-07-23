@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import subprocess
 from renderlib import *
 
 # URL to Schedule-XML
@@ -99,3 +100,8 @@ def ticket(ticket):
 			'$personnames': ticket.get('Fahrplan.Person_list')
 		}
 	)
+
+def deploy(ticket, task):
+	for encoder in range(1, 3):
+		print("encoder{n}".format(n=encoder))
+		subprocess.check_call('rsync -v --bwlimit=1000 --progress -e="ssh -A voc@gw.ep14.c3voc.de ssh -A voc@encoder{n}.lan.c3voc.de" {file} :/tmp/'.format(n=encoder, file=task.outfile), shell=True)

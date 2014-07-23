@@ -40,6 +40,10 @@ def generatePreroll(ticket):
 	task.workdir = os.path.join(os.getcwd(), projectname, 'artwork')
 	renderlib.rendertask(task)
 
+	if hasattr(project, 'deploy'):
+		print("deploying")
+		project.deploy(ticket, task)
+
 
 while True:
 	print('Asking RPC for {0}-tickets which are ready for state {1}'.format(ticket_type, ticket_state))
