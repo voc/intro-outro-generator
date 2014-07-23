@@ -10,6 +10,7 @@ import renderlib
 import c3t_rpc_client as rpc
 
 print("C3TT preroll generator")
+renderlib.debug = True
 
 if os.environ.get('CRS_TOKEN') is None or os.environ.get('CRS_SECRET') is None:
 	print('CRS_TOKEN or CRS_SECRET is empty. did you source the tracker-scripts-profile?')
@@ -38,6 +39,8 @@ def generatePreroll(ticket):
 	task = project.ticket(ticket)
 	task.outfile = os.path.join(ticket['Processing.Path.Intros'], ticket['Fahrplan.ID'] + '.dv')
 	task.workdir = os.path.join(os.getcwd(), projectname, 'artwork')
+
+	print("rendering")
 	renderlib.rendertask(task)
 
 	if hasattr(project, 'deploy'):
