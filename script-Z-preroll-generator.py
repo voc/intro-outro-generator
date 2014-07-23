@@ -58,7 +58,9 @@ while True:
 			generatePreroll(ticket)
 			rpc.setTicketDone(str(ticket_id), url, token, host, secret)
 		except:
-			rpc.setTicketFailed(str(ticket_id), str(traceback.format_exc()), url, token, host, secret)
+			error = str(traceback.format_exc())
+			print(error)
+			rpc.setTicketFailed(str(ticket_id), error, url, token, host, secret)
 	
 	else:
 		print('No ticket found')
