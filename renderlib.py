@@ -98,7 +98,7 @@ def rendertask(task):
 	for frame in task.sequence():
 		# print a line for each and every frame generated
 		if debug:
-			print("frameNr {0:2d} => {1}".format(frameNr, frame))
+			print("frameNr {0:3d} => {1}".format(frameNr, frame))
 
 		# open the output-file (named ".gen.svg" in the workdir)
 		with open(os.path.join(task.workdir, '.gen.svg'), 'w') as fp:
