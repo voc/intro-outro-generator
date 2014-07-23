@@ -202,5 +202,5 @@ def ticket(ticket):
 
 def deploy(ticket, task):
 	for encoder in range(1, 6):
-		print("encoder{n}".format(n=encoder))
+		print(colored("--> rsync'ing to encoder{n}".format(n=encoder), 'green'))
 		subprocess.check_call('rsync -v --bwlimit=1000 --progress -e="ssh -A voc@gw.ep14.c3voc.de ssh -A voc@encoder{n}.lan.c3voc.de" {file} :{file}'.format(n=encoder, file=task.outfile), shell=True)

@@ -9,6 +9,12 @@ import os
 import renderlib
 import c3t_rpc_client as rpc
 
+try:
+	from termcolor import colored
+except ImportError:
+	def colored(str, col):
+		return str
+
 print("C3TT preroll generator")
 renderlib.debug = True
 
@@ -40,16 +46,16 @@ def generatePreroll(ticket):
 	task.outfile = os.path.join(ticket['Processing.Path.Intros'], ticket['Fahrplan.ID'] + '.dv')
 	task.workdir = os.path.join(os.getcwd(), projectname, 'artwork')
 
-	print("rendering")
+	print(colored("rendering", 'green'))
 	renderlib.rendertask(task)
 
 	if hasattr(project, 'deploy'):
-		print("deploying")
+		print(colored("deploying", 'green'))
 		project.deploy(ticket, task)
 
 
 while True:
-	print('Asking RPC for {0}-tickets which are ready for state {1}'.format(ticket_type, ticket_state))
+	print(colored('Asking RPC for {0}-tickets which are ready for state {1}'.format(ticket_type, ticket_state), 'yellow'))
 
 	ticket_id = rpc.assignNextUnassignedForState(ticket_type, ticket_state, url, token, host, secret, filter)
 	if ticket_id != False:
@@ -59,7 +65,7 @@ while True:
 			rpc.setTicketDone(str(ticket_id), url, token, host, secret)
 		except:
 			error = str(traceback.format_exc())
-			print(error)
+			print(colored(error, 'red'))
 			rpc.setTicketFailed(str(ticket_id), error, url, token, host, secret)
 	
 	else:

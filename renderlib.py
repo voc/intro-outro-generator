@@ -180,3 +180,9 @@ def events(scheduleUrl, titlemap={}):
 					'persons': personnames,
 					'personnames': ', '.join(personnames)
 				}
+
+try:
+	from termcolor import colored
+except ImportError:
+	def colored(str, col):
+		return str
