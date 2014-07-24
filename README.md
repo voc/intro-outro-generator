@@ -80,7 +80,18 @@ The other form a sub-tuble can have is ```('box',   'attr',     'transform', 'tr
 FEM/VOC-Tracker-Integration
 ---------------------------
 *that script-Z-thingy*
-The [FEM](http://fem.tu-ilmenau.de/) and the [VOC](https://c3voc.de/) uses a special Ticket-Tracker to keep track of the Talks on an event. Various tasks are performed around the recorded Videomaterial (preparing, cutting, encoding, releasing) - synchronized by the Tracker. The files starting with `script-Z` are experiments to integrate the intro-rendering into this process. On some Events the Schedule is very fluid with talks being addes or names changing over the whole conference. Using the Scripts to render the prerols when they are actually needed (and not some days before the conference) would help to get the always-freshest prerolls but it would an additional (computational intense) task to the publishing process. It's undecided if the scr
+The [FEM](http://fem.tu-ilmenau.de/) and the [VOC](https://c3voc.de/) uses a special Ticket-Tracker to keep track of the Talks on an event. Various tasks are performed around the recorded Videomaterial (preparing, cutting, encoding, releasing) - synchronized by the Tracker. The files starting with ```script-Z``` are experiments to integrate the intro-rendering into this process. On some Events the Schedule is very fluid with talks being addes or names changing over the whole conference. Using the Scripts to render the prerols when they are actually needed (and not some days before the conference) would help to get the always-freshest prerolls but it would an additional (computational intense) task to the publishing process.
+
+Generating an Live-Stream-Overlay
+---------------------------------
+While your working on your Video-Artwork you can create another required asset: the stream overlay. When we'll live-stream your Talks we can't send prerolls ovet the live-stream. To let your viewer now what program they are watching at, we usually overlay a transparent image over the live-stream like most television programs do, too.
+Just create another SVG of the size 1024x576 and throw your logo into your prefered corner. To have it looking good we would suggest
+ - to test it on dark as well as bright background and add a glow or a backround-box if neccessary
+ - avoid thin lines or small text that will not be visible in the final size
+ - set an opacity of 0.8 to 1.0 (below 0.8 it usually won't be recognizable on a bumpy background)
+Save your file as ```artwork/overlay.svg```
+
+When you're done, call ```./make-overlay.sh yourproject/``` which will generate two .pngs in your artwork directory. One of them looks squeezed - don't worry, that is correct.
 
 It works! It doesn't work!
 --------------------------
