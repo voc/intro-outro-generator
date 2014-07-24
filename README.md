@@ -77,6 +77,10 @@ The other form a sub-tuble can have is ```('box',   'attr',     'transform', 'tr
 			('box',   'attr',     'transform', 'translate(0,%.4f)' % easeOutQuad(i, 100, -100, frames) ),
 		)
 
+FEM/VOC-Tracker-Integration
+---------------------------
+*that script-Z-thingy*
+The [FEM](http://fem.tu-ilmenau.de/) and the [VOC](https://c3voc.de/) uses a special Ticket-Tracker to keep track of the Talks on an event. Various tasks are performed around the recorded Videomaterial (preparing, cutting, encoding, releasing) - synchronized by the Tracker. The files starting with `script-Z` are experiments to integrate the intro-rendering into this process. On some Events the Schedule is very fluid with talks being addes or names changing over the whole conference. Using the Scripts to render the prerols when they are actually needed (and not some days before the conference) would help to get the always-freshest prerolls but it would an additional (computational intense) task to the publishing process. It's undecided if the scr
 
 It works! It doesn't work!
 --------------------------
