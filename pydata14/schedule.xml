@@ -75,18 +75,18 @@
 				</persons>
 			</event>
 		</room>
-		<room name="B05/B06">
+		<room name="B05">
 			<event id="20221">
 				<title>scikit-learn</title>
 				<track>Other</track>
-				<date>2014-07-25T014:10:00+0200</date>
+				<date>2014-07-25T012:45:00+0200</date>
 				<start>12:45</start>
 				<duration>02:45</duration>
 				<recording>
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>None</abstract>
 				<description>None</description>
@@ -105,7 +105,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>Vincent D. Warmerdam is a data scientist and developer at GoDataDriven and a former university lecturer of mathematics and statistics. He is fluent in python, R and javascript and is currently checking out with scala and julia. Currently he does a lot of research on machine learning algorithms and applications that can solve problems in real time. The intersection of the algorithm and the use-case is of the most interest to him. During a half year sabbatical he travelled as a true digital nomad from Buenos Aires to San Fransisco while still programming for clients. He has two nationalities (US/Netherlands) and lives in Amsterdam.</abstract>
 				<description>Vincent D. Warmerdam is a data scientist and developer at GoDataDriven and a former university lecturer of mathematics and statistics. He is fluent in python, R and javascript and is currently checking out with scala and julia. Currently he does a lot of research on machine learning algorithms and applications that can solve problems in real time. The intersection of the algorithm and the use-case is of the most interest to him. During a half year sabbatical he travelled as a true digital nomad from Buenos Aires to San Fransisco while still programming for clients. He has two nationalities (US/Netherlands) and lives in Amsterdam.</description>
@@ -124,7 +124,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>mETL is an ETL package written in Python which was developed to load elective data for Central European University. Program can be used in a more general way, it can be used to load practically any kind of data to any target. Code is open source and available for anyone who want to use it. The main advantage to configurable via Yaml files and You have the possibility to write any transformation in Python and You can use it natively from any framework as well. We are using this tool in production for many of our clients and It is really stable and reliable. The project has a few contributors all around the world right now and I hope many developer will join soon. I really want to show you how you can use it in your daily work. In this tutorial We will see the most common situations: - Installation - Write simple Yaml configration files to load CSV, JSON, XML into MySQL or PostgreSQL Database, or convert CSV to JSON, etc. - Add tranformations on your fields - Filter records based on condition - Walk through a directory to feed the tool - How the mapping works - Generate Yaml configurations automatically from data source - Migrate a database to another database</abstract>
 				<description>mETL is an ETL package written in Python which was developed to load elective data for Central European University. Program can be used in a more general way, it can be used to load practically any kind of data to any target. Code is open source and available for anyone who want to use it. The main advantage to configurable via Yaml files and You have the possibility to write any transformation in Python and You can use it natively from any framework as well. We are using this tool in production for many of our clients and It is really stable and reliable. The project has a few contributors all around the world right now and I hope many developer will join soon. I really want to show you how you can use it in your daily work. In this tutorial We will see the most common situations: - Installation - Write simple Yaml configration files to load CSV, JSON, XML into MySQL or PostgreSQL Database, or convert CSV to JSON, etc. - Add tranformations on your fields - Filter records based on condition - Walk through a directory to feed the tool - How the mapping works - Generate Yaml configurations automatically from data source - Migrate a database to another database</description>
@@ -271,7 +271,7 @@
 				</persons>
 			</event>
 		</room>
-		<room name="B05/B06">
+		<room name="B05">
 			<event id="20231">
 				<title>Quantified Self: Analyzing the Big Data of our Daily Life</title>
 				<track>Other</track>
@@ -282,7 +282,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>Applications for self tracking that collect, analyze, or publish personal and medical data are getting more popular. This includes either a broad variety of medical and healthcare apps in the fields of telemedicine, remote care, treatment, or interaction with patients, and a huge increasing number of self tracking apps that aims to acquire data form from people’s daily life. The Quantified Self movement goes far beyond collecting or generating medical data. It aims in gathering data of all kinds of activities, habits, or relations that could help to understand and improve one’s behavior, health, or well-being. Both, health apps as well as Quantified Self apps use either just the smartphone as data source (e.g., questionnaires, manual data input, smartphone sensors) or external devices and sensors such as ‘classical’ medical devices (e.g,. blood pressure meters) or wearable devices (e.g., wristbands or eye glasses). The data can be used to get insights into the medical condition or one’s personal life and behavior. This talk will provide an overview of the various data sources and data formats that are relevant for self tracking as well as strategies and examples for analyzing that data with Python. The talk will cover:
 				Accessing local and distributed sources for the heterogeneous Quantified Self data. That includes local data files generated by smartphone apps and web applications as well as data stored on cloud resources via APIs (e.g., data that is stored by vendors of self tracking hardware or data of social media channels, weather data, traffic data etc.)
@@ -309,7 +309,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>Tim Berners-Lee defined the Semantic Web as a web of data that can be processed directly and indirectly by machines.
 				More precisely, the Semantic Web can be defined as a set of standards and best practices for sharing data and the semantics of that data over the Web to be used by applications [DuCharme, 2013].
@@ -344,7 +344,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>This talk will be about my latest project in mall analytics, where we estimated visitor trends in malls around the globe using telco data as a basis, and employed map reduce technologies and data science to extrapolate from this basis to reality and correct for biases. We succeeded in extracting valuable information such as count of visitors per hour, demographics breakdown, competitor analysis and popularity of the mall among different parts of the surrounding areas, all the while preserving user privacy and working only with aggregated data. I will show an overview of our system's modules, how we got a first raw estimation of the visitors and their behaviours, and how we refined and evaluated this estimation using pandas, matplotlib, scikit-learn and other python libraries.</abstract>
 				<description>This talk will be about my latest project in mall analytics, where we estimated visitor trends in malls around the globe using telco data as a basis, and employed map reduce technologies and data science to extrapolate from this basis to reality and correct for biases. We succeeded in extracting valuable information such as count of visitors per hour, demographics breakdown, competitor analysis and popularity of the mall among different parts of the surrounding areas, all the while preserving user privacy and working only with aggregated data. I will show an overview of our system's modules, how we got a first raw estimation of the visitors and their behaviours, and how we refined and evaluated this estimation using pandas, matplotlib, scikit-learn and other python libraries.</description>
@@ -363,7 +363,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>When talking of parallel processing, some task requires a substantial set-up time. This is the case of Natural Language Processing (NLP) tasks such as classification, where models need to be loaded into memory. In these situations, we can not start a new process for every data set to be handled, but the system needs to be ready to process new incoming data. This talk will look at job queue systems, with particular focus on gearman. We will see how we are using it at Synthesio for NLP tasks; how to set up workers and clients, make it redundant and robust, monitor its activity and adapt to demand.</abstract>
 				<description>When talking of parallel processing, some task requires a substantial set-up time. This is the case of Natural Language Processing (NLP) tasks such as classification, where models need to be loaded into memory. In these situations, we can not start a new process for every data set to be handled, but the system needs to be ready to process new incoming data. This talk will look at job queue systems, with particular focus on gearman. We will see how we are using it at Synthesio for NLP tasks; how to set up workers and clients, make it redundant and robust, monitor its activity and adapt to demand.</description>
@@ -382,7 +382,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>This talk presents a very hands-on approach for identifying research and technology trends in various industries with a little bit of Pandas here, NTLK there and all cooked up in an IPython Notebook. Three examples featured in this talk are:
 				How to find out the most interesting research topics cutting edge companies are after right now?
@@ -409,7 +409,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>This talk will walk through what the US government has done in terms of spying on US citizens and foreigners with their PRISM program, then walk through how to do exactly that with Python.</abstract>
 				<description>This talk will walk through what the US government has done in terms of spying on US citizens and foreigners with their PRISM program, then walk through how to do exactly that with Python.</description>
@@ -428,7 +428,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>For data, and data science, to be the fuel of the 21th century, data driven applications should not be confined to dashboards and static analyses. Instead they should be the driver of the organizations that own or generates the data. Most of these applications are web-based and require real-time access to the data. However, many Big Data analyses and tools are inherently batch-driven and not well suited for real-time and performance-critical connections with applications. Trade-offs become often inevitable, especially when mixing multiple tools and data sources.   In this talk we will describe our journey to build a data driven application at a large Dutch financial institution. We will dive into the issues we faced, why we chose Python and pandas and what that meant for real-time data analysis (and agile development).   Important points in the talk will be, among others, the handling of geographical data, the access to hundreds of millions of records as well as the real time analysis of millions of data points.</abstract>
 				<description>For data, and data science, to be the fuel of the 21th century, data driven applications should not be confined to dashboards and static analyses. Instead they should be the driver of the organizations that own or generates the data. Most of these applications are web-based and require real-time access to the data. However, many Big Data analyses and tools are inherently batch-driven and not well suited for real-time and performance-critical connections with applications. Trade-offs become often inevitable, especially when mixing multiple tools and data sources.   In this talk we will describe our journey to build a data driven application at a large Dutch financial institution. We will dive into the issues we faced, why we chose Python and pandas and what that meant for real-time data analysis (and agile development).   Important points in the talk will be, among others, the handling of geographical data, the access to hundreds of millions of records as well as the real time analysis of millions of data points.</description>
@@ -447,7 +447,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>None.</abstract>
 				<description>None.</description>
@@ -593,7 +593,7 @@
 				</persons>
 			</event>
 		</room>
-		<room name="B05/B06">
+		<room name="B05">
 			<event id="20249">
 				<title>ABBY - A Django app to document your A/B tests</title>
 				<track>Other</track>
@@ -604,7 +604,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>ABBY is a Django app that helps you manage your A/B tests. The main objective is to document all tests happening in your company, in order to better understand which measures work and which don't. Thereby leading to a better understanding of your product and your customer. ABBY offers a front-end that makes it easy to edit, delete or create tests and to add evaluation results. Further, it provides a RESTful API to integrate directly with our platform to easily handle A/B tests without touching the front-end. Another notable feature is the possibility to upload a CSV file and have the A/B test auto-evaluated, although this feature is considered highly experimental. At Jimdo, a do-it-yourself website builder, we have a team of about 180 people from different countries and with professional backgrounds just as diverse. Therefore it is crucial to have tools that allow having a common perspective on the tests. This facilitates having data informed discussions and to deduce effective solutions. In our opinion tools like ABBY are cornerstones to achieve the ultimate goal of being a data-driven company. It enables all our co-workers to review past and plan future tests to further improve our product and to raise the happiness of our customers. The proposed talk will give a detailed overview of ABBY, which eventually will be open-sourced, and its capabilities. I will further discuss the motivation behind the app and the influence it has on the way our company is becoming increasingly data driven.</abstract>
 				<description>ABBY is a Django app that helps you manage your A/B tests. The main objective is to document all tests happening in your company, in order to better understand which measures work and which don't. Thereby leading to a better understanding of your product and your customer. ABBY offers a front-end that makes it easy to edit, delete or create tests and to add evaluation results. Further, it provides a RESTful API to integrate directly with our platform to easily handle A/B tests without touching the front-end. Another notable feature is the possibility to upload a CSV file and have the A/B test auto-evaluated, although this feature is considered highly experimental. At Jimdo, a do-it-yourself website builder, we have a team of about 180 people from different countries and with professional backgrounds just as diverse. Therefore it is crucial to have tools that allow having a common perspective on the tests. This facilitates having data informed discussions and to deduce effective solutions. In our opinion tools like ABBY are cornerstones to achieve the ultimate goal of being a data-driven company. It enables all our co-workers to review past and plan future tests to further improve our product and to raise the happiness of our customers. The proposed talk will give a detailed overview of ABBY, which eventually will be open-sourced, and its capabilities. I will further discuss the motivation behind the app and the influence it has on the way our company is becoming increasingly data driven.</description>
@@ -623,7 +623,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>Lessons from translating Google's deep learning algorithm into Python. Can a Python port compete with Google's tightly optimized C code? Spoiler: making use of Python and its vibrant ecosystem (generators, NumPy, Cython...), the optimized Python port is cleaner, more readable and clocks in—somewhat astonishingly—4x faster than Google's C. This is 12,000x faster than a naive, pure Python implementation and 100x faster than an optimized NumPy implementation. The talk will go over what went well (data streaming to process humongous datasets, parallelization and avoiding GIL with Cython, plugging into BLAS) as well as trouble along the way (BLAS idiosyncrasies, Cython issues, dead ends). The quest is also documented on my blog.</abstract>
 				<description>Lessons from translating Google's deep learning algorithm into Python. Can a Python port compete with Google's tightly optimized C code? Spoiler: making use of Python and its vibrant ecosystem (generators, NumPy, Cython...), the optimized Python port is cleaner, more readable and clocks in—somewhat astonishingly—4x faster than Google's C. This is 12,000x faster than a naive, pure Python implementation and 100x faster than an optimized NumPy implementation. The talk will go over what went well (data streaming to process humongous datasets, parallelization and avoiding GIL with Cython, plugging into BLAS) as well as trouble along the way (BLAS idiosyncrasies, Cython issues, dead ends). The quest is also documented on my blog.</description>
@@ -642,7 +642,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>Conda is an open source package manager, which can be used to manage binary packages and virtual environments on any platform. It is the package manager of the Anaconda Python distribution, although it can be used independently of Anaconda. We will look at how conda solves many of the problems that have plagued Python packaging in the past, followed by a demonstration of its features.
 				We will look at the issues that have plagued packaging in the Python ecosystem in the past, and discuss how Conda solves these problems. We will show how to use conda to manage multiple environments. Finally, we will look at how to build your own conda packages.</abstract>
@@ -663,7 +663,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>In this talk I would like to show you a few real-life use-cases where Elasticsearch can help you make sense of your data. We will start with the most basic use case of searching your unstructured data and move on to more advanced topics such as faceting, aggregations and structured search. I would like to demonstrate that the very same tool and dataset can be used for real-time analytics as well as the basis for your more advanced data processing jobs. All in a distributed environment capable of handling terabyte-sized datasets. All examples will be shown with real data and python code demoing the new libraries we have been working on to make this process easier.</abstract>
 				<description>In this talk I would like to show you a few real-life use-cases where Elasticsearch can help you make sense of your data. We will start with the most basic use case of searching your unstructured data and move on to more advanced topics such as faceting, aggregations and structured search. I would like to demonstrate that the very same tool and dataset can be used for real-time analytics as well as the basis for your more advanced data processing jobs. All in a distributed environment capable of handling terabyte-sized datasets. All examples will be shown with real data and python code demoing the new libraries we have been working on to make this process easier.</description>
@@ -682,7 +682,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>We will give an introduction to the recent development of Deep Neural Networks and focus in particular on Convolution Networks which are well suited to image classification problems. We will also provide you with the practical knowledge of how to get started with using ConvNets via the cuda-convnet python library.</abstract>
 				<description>We will give an introduction to the recent development of Deep Neural Networks and focus in particular on Convolution Networks which are well suited to image classification problems. We will also provide you with the practical knowledge of how to get started with using ConvNets via the cuda-convnet python library.</description>
@@ -701,7 +701,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>Lawyers are not famed for their mathematical ability. On the contary - the law almost self-selects as a career choice for the numerically-challenged. So when the one UK tax that property lawyers generally felt comfortable dealing with (lease duty) was replaced with a new tax (stamp duty land tax) that was both arithmetically demanding and conceptually complex, it was inevitable that significant frustrations would arise. Suddenly, lawyers had to deal with concepts such as net present valuations, aggregation of several streams of fluctuating figures, and constant integration of a complex suite of credits and disregards. This talk is a description of how - against a backdrop of data-drunk tax authorities, legal pressures on businesses to have appropriate compliance systems in place, and the constant pressure on their law firms to commoditise compliance services, Pandas may be about to make a foray from its venerable financial origins into a brave new fiscal world - and can revolutionise an industry by doing so. A case study covering the author's development of a Pandas-based stamp duty land tax engine ("ORVILLE") is discussed, and the inherent usefulness of Pandas in the world of tax analysis is explored.</abstract>
 				<description>Lawyers are not famed for their mathematical ability. On the contary - the law almost self-selects as a career choice for the numerically-challenged. So when the one UK tax that property lawyers generally felt comfortable dealing with (lease duty) was replaced with a new tax (stamp duty land tax) that was both arithmetically demanding and conceptually complex, it was inevitable that significant frustrations would arise. Suddenly, lawyers had to deal with concepts such as net present valuations, aggregation of several streams of fluctuating figures, and constant integration of a complex suite of credits and disregards. This talk is a description of how - against a backdrop of data-drunk tax authorities, legal pressures on businesses to have appropriate compliance systems in place, and the constant pressure on their law firms to commoditise compliance services, Pandas may be about to make a foray from its venerable financial origins into a brave new fiscal world - and can revolutionise an industry by doing so. A case study covering the author's development of a Pandas-based stamp duty land tax engine ("ORVILLE") is discussed, and the inherent usefulness of Pandas in the world of tax analysis is explored.</description>
@@ -720,7 +720,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>None.</abstract>
 				<description>None.</description>
@@ -739,7 +739,7 @@
 				<license/>
 				<optout>false</optout>
 				</recording>
-				<room>B05/B06</room>
+				<room>B05</room>
 				<language>en</language>
 				<abstract>None.</abstract>
 				<description>None.</description>
