@@ -33,7 +33,7 @@
 			<event id="20270">
 				<title>Exploratory Time Series Analysis of NYC Subway Data</title>
 				<track>Other</track>
-				<date>2014-07-25T015:55:00+0200</date>
+				<date>2014-07-25T15:55:00+0200</date>
 				<start>15:55</start>
 				<duration>01:20</duration>
 				<recording>
@@ -79,7 +79,7 @@
 			<event id="20221">
 				<title>scikit-learn</title>
 				<track>Other</track>
-				<date>2014-07-25T012:45:00+0200</date>
+				<date>2014-07-25T12:45:00+0200</date>
 				<start>12:45</start>
 				<duration>02:45</duration>
 				<recording>
@@ -98,7 +98,7 @@
 			<event id="20269">
 				<title>Visualising Data through Pandas</title>
 				<track>Other</track>
-				<date>2014-07-25T015:55:00+0200</date>
+				<date>2014-07-25T15:55:00+0200</date>
 				<start>15:55</start>
 				<duration>01:20</duration>
 				<recording>
@@ -117,7 +117,7 @@
 			<event id="20253">
 				<title>Extract Transform Load using mETL</title>
 				<track>Other</track>
-				<date>2014-07-25T017:25:00+0200</date>
+				<date>2014-07-25T17:25:00+0200</date>
 				<start>17:25</start>
 				<duration>01:05</duration>
 				<recording>
