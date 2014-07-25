@@ -1,0 +1,756 @@
+<schedule>
+	<conference>
+		<title>PyData Berlin 2014</title>
+		<acronym>Berlin2014</acronym>
+		<start>2014-07-25</start>
+		<end>2014-07-27</end>
+		<days>3</days>
+		<timeslot_duration>00:15</timeslot_duration>
+	</conference>
+	<day date="2014-07-25" index="1">
+		<room name="B09">
+			<event id="20254">
+				<title>Interactive Plots Using Bokeh</title>
+				<track>Other</track>
+				<date>2014-07-25T12:45:00+0200</date>
+				<start>12:45</start>
+				<duration>02:45</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>Bokeh is a Python interactive visualization library for large datasets that natively uses the latest web technologies. Its goal is to provide elegant, concise construction of novel graphics in the style of Protovis/D3, while delivering high-performance interactivity over large data to thin clients. This tutorial will walk users through the steps to create different kinds of interactive plots using Bokeh. We will cover using Bokeh for static HTML output, the IPython notebook, and plot hosting and embedding using the Bokeh server.
+				</abstract>
+				<description>
+				Bokeh is a Python interactive visualization library for large datasets that natively uses the latest web technologies. Its goal is to provide elegant, concise construction of novel graphics in the style of Protovis/D3, while delivering high-performance interactivity over large data to thin clients. This tutorial will walk users through the steps to create different kinds of interactive plots using Bokeh. We will cover using Bokeh for static HTML output, the IPython notebook, and plot hosting and embedding using the Bokeh server.</description>
+				<type>tutorial</type>
+				<persons>
+					<person id="20038">Bryan Van De Ven</person>
+				</persons>
+			</event>
+			<event id="20270">
+				<title>Exploratory Time Series Analysis of NYC Subway Data</title>
+				<track>Other</track>
+				<date>2014-07-25T015:55:00+0200</date>
+				<start>15:55</start>
+				<duration>01:20</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>What questions arise during a quick model assessment? In this hands-on-tutorial we want to cover the whole chain from preparing data to choosing and fitting a model to properly assessing the quality of a predictive model. Our dataset in this tutorial are the numbers of people entering and exiting New York subway stations. Among other ways of building a predictive model, we introduce the python package pydse ( http://pydse.readthedocs.org/ ) and apply it to the dataset in order to derive the parameters of an ARMA-model (autoregressive moving average). At the end of the tutorial we evaluate the models and examine the strengths and weaknesses of various ways to measure the accuracy and quality of a predictive model.
+				</abstract>
+				<description>
+				What questions arise during a quick model assessment? In this hands-on-tutorial we want to cover the whole chain from preparing data to choosing and fitting a model to properly assessing the quality of a predictive model. Our dataset in this tutorial are the numbers of people entering and exiting New York subway stations. Among other ways of building a predictive model, we introduce the python package pydse ( http://pydse.readthedocs.org/ ) and apply it to the dataset in order to derive the parameters of an ARMA-model (autoregressive moving average). At the end of the tutorial we evaluate the models and examine the strengths and weaknesses of various ways to measure the accuracy and quality of a predictive model.</description>
+				<type>tutorial</type>
+				<persons>
+					<person id="20335">Felix Marczinowski</person>
+					<person id="20334">Philipp Mack</person>
+					<person id="20336">Sönke Niekamp</person>
+				</persons>
+			</event>
+			<event id="20276">
+				<title>Packaging and Deployment</title>
+				<track>Other</track>
+				<date>2014-07-25T17:25:00+0200</date>
+				<start>17:25</start>
+				<duration>01:05</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>None.
+				</abstract>
+				<description>
+				None.</description>
+				<type>tutorial</type>
+				<persons>
+					<person id="20036">Travis Oliphant</person>
+				</persons>
+			</event>
+		</room>
+		<room name="B05/B06">
+			<event id="20221">
+				<title>scikit-learn</title>
+				<track>Other</track>
+				<date>2014-07-25T014:10:00+0200</date>
+				<start>12:45</start>
+				<duration>02:45</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>None</abstract>
+				<description>None</description>
+				<type>tutorial</type>
+				<persons>
+					<person id="20203">Andreas Mueller</person>
+				</persons>
+			</event>
+			<event id="20269">
+				<title>Visualising Data through Pandas</title>
+				<track>Other</track>
+				<date>2014-07-25T015:55:00+0200</date>
+				<start>15:55</start>
+				<duration>01:20</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>Vincent D. Warmerdam is a data scientist and developer at GoDataDriven and a former university lecturer of mathematics and statistics. He is fluent in python, R and javascript and is currently checking out with scala and julia. Currently he does a lot of research on machine learning algorithms and applications that can solve problems in real time. The intersection of the algorithm and the use-case is of the most interest to him. During a half year sabbatical he travelled as a true digital nomad from Buenos Aires to San Fransisco while still programming for clients. He has two nationalities (US/Netherlands) and lives in Amsterdam.</abstract>
+				<description>Vincent D. Warmerdam is a data scientist and developer at GoDataDriven and a former university lecturer of mathematics and statistics. He is fluent in python, R and javascript and is currently checking out with scala and julia. Currently he does a lot of research on machine learning algorithms and applications that can solve problems in real time. The intersection of the algorithm and the use-case is of the most interest to him. During a half year sabbatical he travelled as a true digital nomad from Buenos Aires to San Fransisco while still programming for clients. He has two nationalities (US/Netherlands) and lives in Amsterdam.</description>
+				<type>tutorial</type>
+				<persons>
+					<person id="20332">Vincent Warmerdam</person>
+				</persons>
+			</event>
+			<event id="20253">
+				<title>Extract Transform Load using mETL</title>
+				<track>Other</track>
+				<date>2014-07-25T017:25:00+0200</date>
+				<start>17:25</start>
+				<duration>01:05</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>mETL is an ETL package written in Python which was developed to load elective data for Central European University. Program can be used in a more general way, it can be used to load practically any kind of data to any target. Code is open source and available for anyone who want to use it. The main advantage to configurable via Yaml files and You have the possibility to write any transformation in Python and You can use it natively from any framework as well. We are using this tool in production for many of our clients and It is really stable and reliable. The project has a few contributors all around the world right now and I hope many developer will join soon. I really want to show you how you can use it in your daily work. In this tutorial We will see the most common situations: - Installation - Write simple Yaml configration files to load CSV, JSON, XML into MySQL or PostgreSQL Database, or convert CSV to JSON, etc. - Add tranformations on your fields - Filter records based on condition - Walk through a directory to feed the tool - How the mapping works - Generate Yaml configurations automatically from data source - Migrate a database to another database</abstract>
+				<description>mETL is an ETL package written in Python which was developed to load elective data for Central European University. Program can be used in a more general way, it can be used to load practically any kind of data to any target. Code is open source and available for anyone who want to use it. The main advantage to configurable via Yaml files and You have the possibility to write any transformation in Python and You can use it natively from any framework as well. We are using this tool in production for many of our clients and It is really stable and reliable. The project has a few contributors all around the world right now and I hope many developer will join soon. I really want to show you how you can use it in your daily work. In this tutorial We will see the most common situations: - Installation - Write simple Yaml configration files to load CSV, JSON, XML into MySQL or PostgreSQL Database, or convert CSV to JSON, etc. - Add tranformations on your fields - Filter records based on condition - Walk through a directory to feed the tool - How the mapping works - Generate Yaml configurations automatically from data source - Migrate a database to another database</description>
+				<type>tutorial</type>
+				<persons>
+					<person id="20162">Bence Faludi</person>
+				</persons>
+			</event>
+		</room>
+	</day>
+	<day date="2014-07-26" index="2">
+		<room name="B09">
+			<event id="20258">
+				<title>Generators Will Free Your Mind</title>
+				<track>Other</track>
+				<date>2014-07-26T10:10:00+0200</date>
+				<start>10:10</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>James Powell is a professional Python programmer based in New York City. He is the chair of the NYC Python meetup nycpython.com and has spoken on Python/CPython topics at PyData SV, PyData NYC, PyTexas, PyArkansas, PyGotham, and at the NYC Python meetup. He also authors a blog on programming topics at seriously.dontusethiscode.com</abstract>
+				<description>James Powell is a professional Python programmer based in New York City. He is the chair of the NYC Python meetup nycpython.com and has spoken on Python/CPython topics at PyData SV, PyData NYC, PyTexas, PyArkansas, PyGotham, and at the NYC Python meetup. He also authors a blog on programming topics at seriously.dontusethiscode.com</description>
+				<type>talk</type>
+				<persons>
+					<person id="20103">James Powell</person>
+				</persons>
+			</event>
+			<event id="20271">
+				<title>Driving Moore's Law with Python-Powered Machine Learning: An Insider's Perspective</title>
+				<track>Other</track>
+				<date>2014-07-26T11:00:00+0200</date>
+				<start>11:00</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>People talk about a Moore's Law for gene sequencing, a Moore's Law for software, etc. This is talk is about *the* Moore's Law, the bull that the other "Laws" ride; and how Python-powered ML helps drive it. How do we keep making ever-smaller devices? How do we harness atomic-scale physics? Large-scale machine learning is key. The computation drives new chip designs, and those new chip designs are used for new computations, ad infinitum. High-dimensional regression, classification, active learning, optimization, ranking, clustering, density estimation, scientific visualization, massively parallel processing -- it all comes into play, and Python is powering it all.</abstract>
+				<description>People talk about a Moore's Law for gene sequencing, a Moore's Law for software, etc. This is talk is about *the* Moore's Law, the bull that the other "Laws" ride; and how Python-powered ML helps drive it. How do we keep making ever-smaller devices? How do we harness atomic-scale physics? Large-scale machine learning is key. The computation drives new chip designs, and those new chip designs are used for new computations, ad infinitum. High-dimensional regression, classification, active learning, optimization, ranking, clustering, density estimation, scientific visualization, massively parallel processing -- it all comes into play, and Python is powering it all.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20337">Trent McConaghy</person>
+				</persons>
+			</event>
+			<event id="20259">
+				<title>Interactive Analysis of (Large) Financial Data Sets</title>
+				<track>Other</track>
+				<date>2014-07-26T12:30:00+0200</date>
+				<start>12:30</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>None.</abstract>
+				<description>None.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20212">Yves Hilpisch</person>
+				</persons>
+			</event>
+			<event id="20260">
+				<title>Data Oriented Programming</title>
+				<track>Other</track>
+				<date>2014-07-26T13:20:00+0200</date>
+				<start>13:20</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>Computers have traditionally been thought as tools for performing computations with numbers. Of course, its name in English has a lot to do with this conception, but in other languages, like the french 'ordinateur' (which express concepts more like sorting or classifying), one can clearly see the other side of the coin: computers can also be used to extract (usually new) information from data. Storage, reduction, classification, selection, sorting, grouping, among others, are typical operations in this 'alternate' goal of computers, and although carrying out all these tasks does imply doing a lot of computations, it also requires thinking about the computer as a different entity than the view offered by the traditional von Neumann architecture (basically a CPU with memory). In fact, when it is about programming the data handling efficiently, the most interesting part of a computer is the so-called hierarchical storage, where the different levels of caches in CPUs, the RAM memory, the SSD layers (there are several in the market already), the mechanical disks and finally, the network, are pretty much more important than the ALUs (arithmetic and logical units) in CPUs. In data handling, techniques like data deduplication and compression become critical when speaking about dealing with extremely large datasets. Moreover, distributed environments are useful mainly because of its increased storage capacities and I/O bandwidth, rather than for their aggregated computing throughput. During my talk I will describe several programming paradigms that should be taken in account when programming data oriented applications and that are usually different than those required for achieving pure computational throughput. But specially, and in a surprising turnaround, how the amazing amount of computational power in modern CPUs can also be useful for data handling as well.</abstract>
+				<description>Computers have traditionally been thought as tools for performing computations with numbers. Of course, its name in English has a lot to do with this conception, but in other languages, like the french 'ordinateur' (which express concepts more like sorting or classifying), one can clearly see the other side of the coin: computers can also be used to extract (usually new) information from data. Storage, reduction, classification, selection, sorting, grouping, among others, are typical operations in this 'alternate' goal of computers, and although carrying out all these tasks does imply doing a lot of computations, it also requires thinking about the computer as a different entity than the view offered by the traditional von Neumann architecture (basically a CPU with memory). In fact, when it is about programming the data handling efficiently, the most interesting part of a computer is the so-called hierarchical storage, where the different levels of caches in CPUs, the RAM memory, the SSD layers (there are several in the market already), the mechanical disks and finally, the network, are pretty much more important than the ALUs (arithmetic and logical units) in CPUs. In data handling, techniques like data deduplication and compression become critical when speaking about dealing with extremely large datasets. Moreover, distributed environments are useful mainly because of its increased storage capacities and I/O bandwidth, rather than for their aggregated computing throughput. During my talk I will describe several programming paradigms that should be taken in account when programming data oriented applications and that are usually different than those required for achieving pure computational throughput. But specially, and in a surprising turnaround, how the amazing amount of computational power in modern CPUs can also be useful for data handling as well.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20173">Francesc Alted</person>
+				</persons>
+			</event>
+			<event id="20266">
+				<title>Low-rank matrix approximations in Python</title>
+				<track>Other</track>
+				<date>2014-07-26T14:10:00+0200</date>
+				<start>14:10</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>Low-rank approximations of data matrices have become an important tool in machine learning and data mining. They allow for embedding high dimensional data in lower dimensional spaces and can therefore mitigate effects due to noise, uncover latent relations, or facilitate further processing. These properties have been proven successful in many application areas such as bio-informatics, computer vision, text processing, recommender systems, social network analysis, among others. Present day technologies are characterized by exponentially growing amounts of data. Recent advances in sensor technology, internet applications, and communication networks call for methods that scale to very large and/or growing data matrices. In this talk, we will describe how to efficiently analyze data by means of matrix factorization using the Python Matrix Factorization Toolbox (PyMF) and HDF5. We will briefly cover common methods such as k-means clustering, PCA, or Archetypal Analysis which can be easily cast as a matrix decomposition, and explain their usefulness for everyday data analysis tasks.</abstract>
+				<description>Low-rank approximations of data matrices have become an important tool in machine learning and data mining. They allow for embedding high dimensional data in lower dimensional spaces and can therefore mitigate effects due to noise, uncover latent relations, or facilitate further processing. These properties have been proven successful in many application areas such as bio-informatics, computer vision, text processing, recommender systems, social network analysis, among others. Present day technologies are characterized by exponentially growing amounts of data. Recent advances in sensor technology, internet applications, and communication networks call for methods that scale to very large and/or growing data matrices. In this talk, we will describe how to efficiently analyze data by means of matrix factorization using the Python Matrix Factorization Toolbox (PyMF) and HDF5. We will briefly cover common methods such as k-means clustering, PCA, or Archetypal Analysis which can be easily cast as a matrix decomposition, and explain their usefulness for everyday data analysis tasks.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20329">Christian Thurau</person>
+				</persons>
+			</event>
+			<event id="20250">
+				<title>Algorithmic Trading with Zipline</title>
+				<track>Other</track>
+				<date>2014-07-26T15:05:00+0200</date>
+				<start>15:05</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>Python is quickly becoming the glue language which holds together data science and related fields like quantitative finance. Zipline is a BSD-licensed quantitative trading system which allows easy backtesting of investment algorithms on historical data. The system is fundamentally event-driven and a close approximation of how live-trading systems operate. Moreover, Zipline comes "batteries included" as many common statistics like moving average and linear regression can be readily accessed from within a user-written algorithm. Input of historical data and output of performance statistics is based on Pandas DataFrames to integrate nicely into the existing Python eco-system. Furthermore, statistic and machine learning libraries like matplotlib, scipy, statsmodels, and sklearn integrate nicely to support development, analysis and visualization of state-of-the-art trading systems. Zipline is currently used in production as the backtesting engine powering Quantopian.com -- a free, community-centered platform that allows development and real-time backtesting of trading algorithms in the web browser.</abstract>
+				<description>Python is quickly becoming the glue language which holds together data science and related fields like quantitative finance. Zipline is a BSD-licensed quantitative trading system which allows easy backtesting of investment algorithms on historical data. The system is fundamentally event-driven and a close approximation of how live-trading systems operate. Moreover, Zipline comes "batteries included" as many common statistics like moving average and linear regression can be readily accessed from within a user-written algorithm. Input of historical data and output of performance statistics is based on Pandas DataFrames to integrate nicely into the existing Python eco-system. Furthermore, statistic and machine learning libraries like matplotlib, scipy, statsmodels, and sklearn integrate nicely to support development, analysis and visualization of state-of-the-art trading systems. Zipline is currently used in production as the backtesting engine powering Quantopian.com -- a free, community-centered platform that allows development and real-time backtesting of trading algorithms in the web browser.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20090">Thomas Wiecki</person>
+				</persons>
+			</event>
+			<event id="20256">
+				<title>Speed Without Drag</title>
+				<track>Other</track>
+				<date>2014-07-26T15:55:00+0200</date>
+				<start>15:55</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>Speed without drag: making code faster when there's no time to waste A practical walkthrough over the state-of-the-art of low-friction numerical Python enhancing solutions, covering: exhausting CPython, NumPy, Numba, Parakeet, Cython, Theano, Pyston, PyPy/NumPyPy and Blaze.</abstract>
+				<description>Speed without drag: making code faster when there's no time to waste A practical walkthrough over the state-of-the-art of low-friction numerical Python enhancing solutions, covering: exhausting CPython, NumPy, Numba, Parakeet, Cython, Theano, Pyston, PyPy/NumPyPy and Blaze.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20109">Saul Diez-Guerra</person>
+				</persons>
+			</event>
+		</room>
+		<room name="B05/B06">
+			<event id="20231">
+				<title>Quantified Self: Analyzing the Big Data of our Daily Life</title>
+				<track>Other</track>
+				<date>2014-07-26T10:10:00+0200</date>
+				<start>10:10</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>Applications for self tracking that collect, analyze, or publish personal and medical data are getting more popular. This includes either a broad variety of medical and healthcare apps in the fields of telemedicine, remote care, treatment, or interaction with patients, and a huge increasing number of self tracking apps that aims to acquire data form from people’s daily life. The Quantified Self movement goes far beyond collecting or generating medical data. It aims in gathering data of all kinds of activities, habits, or relations that could help to understand and improve one’s behavior, health, or well-being. Both, health apps as well as Quantified Self apps use either just the smartphone as data source (e.g., questionnaires, manual data input, smartphone sensors) or external devices and sensors such as ‘classical’ medical devices (e.g,. blood pressure meters) or wearable devices (e.g., wristbands or eye glasses). The data can be used to get insights into the medical condition or one’s personal life and behavior. This talk will provide an overview of the various data sources and data formats that are relevant for self tracking as well as strategies and examples for analyzing that data with Python. The talk will cover:
+				Accessing local and distributed sources for the heterogeneous Quantified Self data. That includes local data files generated by smartphone apps and web applications as well as data stored on cloud resources via APIs (e.g., data that is stored by vendors of self tracking hardware or data of social media channels, weather data, traffic data etc.)
+				Homogenizing the data. Especially, covering typical problems of heterogeneous Quantified Self data, such as missing data or different and non-standard data formatting.
+				Analyzing and visualizing the data. Depending on the questions one has, the data can be analyzed with statistical methods or correlations. For example, to get insight into one's personal physical activities, steps data form activity trackers can be correlated to location data and weather information. The talk covers how to conduct this and other data analysis tasks with tools such as pandas and how to visualize the results.
+				The examples in this talk will be shown as interactive IPython sessions.</abstract>
+				<description>Applications for self tracking that collect, analyze, or publish personal and medical data are getting more popular. This includes either a broad variety of medical and healthcare apps in the fields of telemedicine, remote care, treatment, or interaction with patients, and a huge increasing number of self tracking apps that aims to acquire data form from people’s daily life. The Quantified Self movement goes far beyond collecting or generating medical data. It aims in gathering data of all kinds of activities, habits, or relations that could help to understand and improve one’s behavior, health, or well-being. Both, health apps as well as Quantified Self apps use either just the smartphone as data source (e.g., questionnaires, manual data input, smartphone sensors) or external devices and sensors such as ‘classical’ medical devices (e.g,. blood pressure meters) or wearable devices (e.g., wristbands or eye glasses). The data can be used to get insights into the medical condition or one’s personal life and behavior. This talk will provide an overview of the various data sources and data formats that are relevant for self tracking as well as strategies and examples for analyzing that data with Python. The talk will cover:
+				Accessing local and distributed sources for the heterogeneous Quantified Self data. That includes local data files generated by smartphone apps and web applications as well as data stored on cloud resources via APIs (e.g., data that is stored by vendors of self tracking hardware or data of social media channels, weather data, traffic data etc.)
+				Homogenizing the data. Especially, covering typical problems of heterogeneous Quantified Self data, such as missing data or different and non-standard data formatting.
+				Analyzing and visualizing the data. Depending on the questions one has, the data can be analyzed with statistical methods or correlations. For example, to get insight into one's personal physical activities, steps data form activity trackers can be correlated to location data and weather information. The talk covers how to conduct this and other data analysis tasks with tools such as pandas and how to visualize the results.
+				The examples in this talk will be shown as interactive IPython sessions.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20285">Andreas Schreiber</person>
+				</persons>
+			</event>
+			<event id="20244">
+				<title>Semantic Python: Mastering Linked Data with Python</title>
+				<track>Other</track>
+				<date>2014-07-26T11:00:00+0200</date>
+				<start>11:00</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>Tim Berners-Lee defined the Semantic Web as a web of data that can be processed directly and indirectly by machines.
+				More precisely, the Semantic Web can be defined as a set of standards and best practices for sharing data and the semantics of that data over the Web to be used by applications [DuCharme, 2013].
+				In particular, the Semantic Web is built on top of three main pillars: the RDF (i.e., Resource Description Framework) data model, the SPARQL query language, and the OWL standard for storing vocabularies and ontologies. These standards allows the huge amount of data on the Web to be available in a unique and unified standard format, contributing to the definition of the Web of Data (WoD) [1].
+				The WoD makes the web data to be reachable and easily manageable by Semantic Web tools, providing also the relationships among these data (thus practically setting up the “Web”). This collection of interrelated datasets on the Web can also be referred to as Linked Data [1].
+				Two typical examples of large Linked Dataset are FreeBase, and DBPedia, which essentially provides the so called Common sense Knowledge in RDF format.
+				Python offers a very powerful and easy to use library to work with Linked Data: rdflib.
+				RDFLib is a lightweight and functionally complete RDF library, allowing applications to access, create and manage RDF graphs in a very Pythonic fashion.
+				In this talk, a general overview of the main features provided by the rdflib package will be presented. To this end, several code examples will be discussed, along with a case study concerning the analysis of a (semantic) social graph. This case study will be focused on the integration between the networkx module and the rdflib library in order to crawl, access (via SPARQL), and analyze a Social Linked Data Graph represented using the FOAF (Friend of a Friend) schema.
+				This talk is intended for an Novice level audience, assuming a good knowledge of the Python language.</abstract>
+				<description>Tim Berners-Lee defined the Semantic Web as a web of data that can be processed directly and indirectly by machines.
+				More precisely, the Semantic Web can be defined as a set of standards and best practices for sharing data and the semantics of that data over the Web to be used by applications [DuCharme, 2013].
+				In particular, the Semantic Web is built on top of three main pillars: the RDF (i.e., Resource Description Framework) data model, the SPARQL query language, and the OWL standard for storing vocabularies and ontologies. These standards allows the huge amount of data on the Web to be available in a unique and unified standard format, contributing to the definition of the Web of Data (WoD) [1].
+				The WoD makes the web data to be reachable and easily manageable by Semantic Web tools, providing also the relationships among these data (thus practically setting up the “Web”). This collection of interrelated datasets on the Web can also be referred to as Linked Data [1].
+				Two typical examples of large Linked Dataset are FreeBase, and DBPedia, which essentially provides the so called Common sense Knowledge in RDF format.
+				Python offers a very powerful and easy to use library to work with Linked Data: rdflib.
+				RDFLib is a lightweight and functionally complete RDF library, allowing applications to access, create and manage RDF graphs in a very Pythonic fashion.
+				In this talk, a general overview of the main features provided by the rdflib package will be presented. To this end, several code examples will be discussed, along with a case study concerning the analysis of a (semantic) social graph. This case study will be focused on the integration between the networkx module and the rdflib library in order to crawl, access (via SPARQL), and analyze a Social Linked Data Graph represented using the FOAF (Friend of a Friend) schema.
+				This talk is intended for an Novice level audience, assuming a good knowledge of the Python language.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20299">Valerio Maggio</person>
+				</persons>
+			</event>
+			<event id="20241">
+				<title>Mall Analytics Using Telco Data &amp; Pandas</title>
+				<track>Other</track>
+				<date>2014-07-26T12:30:00+0200</date>
+				<start>12:30</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>This talk will be about my latest project in mall analytics, where we estimated visitor trends in malls around the globe using telco data as a basis, and employed map reduce technologies and data science to extrapolate from this basis to reality and correct for biases. We succeeded in extracting valuable information such as count of visitors per hour, demographics breakdown, competitor analysis and popularity of the mall among different parts of the surrounding areas, all the while preserving user privacy and working only with aggregated data. I will show an overview of our system's modules, how we got a first raw estimation of the visitors and their behaviours, and how we refined and evaluated this estimation using pandas, matplotlib, scikit-learn and other python libraries.</abstract>
+				<description>This talk will be about my latest project in mall analytics, where we estimated visitor trends in malls around the globe using telco data as a basis, and employed map reduce technologies and data science to extrapolate from this basis to reality and correct for biases. We succeeded in extracting valuable information such as count of visitors per hour, demographics breakdown, competitor analysis and popularity of the mall among different parts of the surrounding areas, all the while preserving user privacy and working only with aggregated data. I will show an overview of our system's modules, how we got a first raw estimation of the visitors and their behaviours, and how we refined and evaluated this estimation using pandas, matplotlib, scikit-learn and other python libraries.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20302">Karolina Alexiou</person>
+				</persons>
+			</event>
+			<event id="20234">
+				<title>Parallel processing using python and gearman</title>
+				<track>Other</track>
+				<date>2014-07-26T13:20:00+0200</date>
+				<start>13:20</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>When talking of parallel processing, some task requires a substantial set-up time. This is the case of Natural Language Processing (NLP) tasks such as classification, where models need to be loaded into memory. In these situations, we can not start a new process for every data set to be handled, but the system needs to be ready to process new incoming data. This talk will look at job queue systems, with particular focus on gearman. We will see how we are using it at Synthesio for NLP tasks; how to set up workers and clients, make it redundant and robust, monitor its activity and adapt to demand.</abstract>
+				<description>When talking of parallel processing, some task requires a substantial set-up time. This is the case of Natural Language Processing (NLP) tasks such as classification, where models need to be loaded into memory. In these situations, we can not start a new process for every data set to be handled, but the system needs to be ready to process new incoming data. This talk will look at job queue systems, with particular focus on gearman. We will see how we are using it at Synthesio for NLP tasks; how to set up workers and clients, make it redundant and robust, monitor its activity and adapt to demand.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20304">Pedro Miguel Dias Cardoso</person>
+				</persons>
+			</event>
+			<event id="20237">
+				<title>Street Fighting Trend Research</title>
+				<track>Other</track>
+				<date>2014-07-26T14:10:00+0200</date>
+				<start>14:10</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>This talk presents a very hands-on approach for identifying research and technology trends in various industries with a little bit of Pandas here, NTLK there and all cooked up in an IPython Notebook. Three examples featured in this talk are:
+				How to find out the most interesting research topics cutting edge companies are after right now?
+				How to pick sessions from a large conference program (think PyCon, PyData or Strata) that are presenting something really novel?
+				How to automagically identify trends in industries such as computer vision or telecommunications?
+				The talk will show how to tackle common tasks in applied trend research and technology foresight from identifying a data-source, getting the data and data cleaning to presenting the insights in meaningful visualizations.</abstract>
+				<description>This talk presents a very hands-on approach for identifying research and technology trends in various industries with a little bit of Pandas here, NTLK there and all cooked up in an IPython Notebook. Three examples featured in this talk are:
+				How to find out the most interesting research topics cutting edge companies are after right now?
+				How to pick sessions from a large conference program (think PyCon, PyData or Strata) that are presenting something really novel?
+				How to automagically identify trends in industries such as computer vision or telecommunications?
+				The talk will show how to tackle common tasks in applied trend research and technology foresight from identifying a data-source, getting the data and data cleaning to presenting the insights in meaningful visualizations.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20324">Benedikt Koehler</person>
+				</persons>
+			</event>
+			<event id="20274">
+				<title>How to Spy with Python</title>
+				<track>Other</track>
+				<date>2014-07-26T15:05:00+0200</date>
+				<start>15:05</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>This talk will walk through what the US government has done in terms of spying on US citizens and foreigners with their PRISM program, then walk through how to do exactly that with Python.</abstract>
+				<description>This talk will walk through what the US government has done in terms of spying on US citizens and foreigners with their PRISM program, then walk through how to do exactly that with Python.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20282">Lynn Root</person>
+				</persons>
+			</event>
+			<event id="20246">
+				<title>Python and pandas as back end to real-time data driven applications</title>
+				<track>Other</track>
+				<date>2014-07-26T15:55:00+0200</date>
+				<start>15:55</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>For data, and data science, to be the fuel of the 21th century, data driven applications should not be confined to dashboards and static analyses. Instead they should be the driver of the organizations that own or generates the data. Most of these applications are web-based and require real-time access to the data. However, many Big Data analyses and tools are inherently batch-driven and not well suited for real-time and performance-critical connections with applications. Trade-offs become often inevitable, especially when mixing multiple tools and data sources.   In this talk we will describe our journey to build a data driven application at a large Dutch financial institution. We will dive into the issues we faced, why we chose Python and pandas and what that meant for real-time data analysis (and agile development).   Important points in the talk will be, among others, the handling of geographical data, the access to hundreds of millions of records as well as the real time analysis of millions of data points.</abstract>
+				<description>For data, and data science, to be the fuel of the 21th century, data driven applications should not be confined to dashboards and static analyses. Instead they should be the driver of the organizations that own or generates the data. Most of these applications are web-based and require real-time access to the data. However, many Big Data analyses and tools are inherently batch-driven and not well suited for real-time and performance-critical connections with applications. Trade-offs become often inevitable, especially when mixing multiple tools and data sources.   In this talk we will describe our journey to build a data driven application at a large Dutch financial institution. We will dive into the issues we faced, why we chose Python and pandas and what that meant for real-time data analysis (and agile development).   Important points in the talk will be, among others, the handling of geographical data, the access to hundreds of millions of records as well as the real time analysis of millions of data points.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20303">Giovanni Lanzani</person>
+				</persons>
+			</event>
+			<event id="20263">
+				<title>Dealing With Complexity</title>
+				<track>Other</track>
+				<date>2014-07-26T09:00:00+0200</date>
+				<start>09:00</start>
+				<duration>01:00</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>None.</abstract>
+				<description>None.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20326">Jean-Paul Schmetz</person>
+				</persons>
+			</event>
+		</room>
+	</day>
+	<day date="2014-07-27" index="3">
+		<room name="B09">
+			<event id="20268">
+				<title>Introduction to the Signal Processing and Classification Environment pySPACE</title>
+				<track>Other</track>
+				<date>2014-07-27T10:10:00+0200</date>
+				<start>10:10</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>This talk will give a basic introduction to the pySPACE framework and its current applications.
+
+				pySPACE (Signal Processing And Classification Environment) is a modular software for the processing of large data streams that has been specifically designed to enable distributed execution and empirical evaluation of signal processing chains. Various signal processing algorithms (so called nodes) are available within the software, from finite impulse response filters over data-dependent spatial filters (e.g., PCA, CSP, xDAWN) to established classifiers (e.g., SVM, LDA). pySPACE incorporates the concept of node and node chains of the Modular Toolkit for Data Processing (MDP) framework. Due to its modular architecture, the software can easily be extended with new processing nodes and more general operations. Large scale empirical investigations can be configured using simple text-configuration files in the YAML format, executed on different (distributed) computing modalities, and evaluated using an interactive graphical user interface.
+
+				pySPACE allows the user to connect nodes modularly and automatically benchmark the respective chains for different parameter settings and compare these with other node chains, e.g., by automatic evaluation of classification performances provided within the software. In addition, the pySPACElive mode of execution can be used for online processing of streamed data. The software specifically supports but is not limited to EEG data. Any kind of time series or feature vector data can be processed and analyzed.
+
+				pySPACE additionally provides interfaces to specialized signal processing libraries such as SciPy, scikit-learn, LIBSVM, the WEKA Machine Learning Framework, and the Maja Machine Learning Framework (MMLF).
+
+				Web page: http://pyspace.github.io/pyspace/</abstract>
+				<description>This talk will give a basic introduction to the pySPACE framework and its current applications.
+
+				pySPACE (Signal Processing And Classification Environment) is a modular software for the processing of large data streams that has been specifically designed to enable distributed execution and empirical evaluation of signal processing chains. Various signal processing algorithms (so called nodes) are available within the software, from finite impulse response filters over data-dependent spatial filters (e.g., PCA, CSP, xDAWN) to established classifiers (e.g., SVM, LDA). pySPACE incorporates the concept of node and node chains of the Modular Toolkit for Data Processing (MDP) framework. Due to its modular architecture, the software can easily be extended with new processing nodes and more general operations. Large scale empirical investigations can be configured using simple text-configuration files in the YAML format, executed on different (distributed) computing modalities, and evaluated using an interactive graphical user interface.
+
+				pySPACE allows the user to connect nodes modularly and automatically benchmark the respective chains for different parameter settings and compare these with other node chains, e.g., by automatic evaluation of classification performances provided within the software. In addition, the pySPACElive mode of execution can be used for online processing of streamed data. The software specifically supports but is not limited to EEG data. Any kind of time series or feature vector data can be processed and analyzed.
+
+				pySPACE additionally provides interfaces to specialized signal processing libraries such as SciPy, scikit-learn, LIBSVM, the WEKA Machine Learning Framework, and the Maja Machine Learning Framework (MMLF).
+
+				Web page: http://pyspace.github.io/pyspace/</description>
+				<type>talk</type>
+				<persons>
+					<person id="20331">Mario Michael Krell</person>
+				</persons>
+			</event>
+			<event id="20226">
+				<title>Fast Serialization of Numpy Arrays with Bloscpack</title>
+				<track>Other</track>
+				<date>2014-07-27T11:00:00+0200</date>
+				<start>11:00</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>Bloscpack [1] is a reference implementation and file-format for fast serialization of numerical data. It features lightweight, chunked and compressed storage, based on the extremely fast Blosc [2] metacodec and supports serialization of Numpy arrays out-of-the-box. Recently, Blosc -- being the metacodec that it is -- has received support for using the popular and widely used Snappy [3], LZ4 [4], and ZLib [5] codecs, and so, now Bloscpack supports serializing Numpy arrays easily with those codecs! In this talk I will present recent benchmarks of Bloscpack performance on a variety of artificial and real-world datasets with a special focus on the newly available codecs. In these benchmarks I will compare Bloscpack, both performance and usability wise, to alternatives such as Numpy's native offerings (NPZ and NPY), HDF5/PyTables [6], and if time permits, to novel bleeding edge solutions. Lastly I will argue that compressed and chunked storage format such as Bloscpack can be and somewhat already is a useful substrate on which to build more powerful applications such as online analytical processing engines and distributed computing frameworks. [1]: https://github.com/Blosc/bloscpack [2]: https://github.com/Blosc/c-blosc/ [3]: http://code.google.com/p/snappy/ [4]: http://code.google.com/p/lz4/ [5]: http://www.zlib.net/ [6]: http://www.pytables.org/moin</abstract>
+				<description>Bloscpack [1] is a reference implementation and file-format for fast serialization of numerical data. It features lightweight, chunked and compressed storage, based on the extremely fast Blosc [2] metacodec and supports serialization of Numpy arrays out-of-the-box. Recently, Blosc -- being the metacodec that it is -- has received support for using the popular and widely used Snappy [3], LZ4 [4], and ZLib [5] codecs, and so, now Bloscpack supports serializing Numpy arrays easily with those codecs! In this talk I will present recent benchmarks of Bloscpack performance on a variety of artificial and real-world datasets with a special focus on the newly available codecs. In these benchmarks I will compare Bloscpack, both performance and usability wise, to alternatives such as Numpy's native offerings (NPZ and NPY), HDF5/PyTables [6], and if time permits, to novel bleeding edge solutions. Lastly I will argue that compressed and chunked storage format such as Bloscpack can be and somewhat already is a useful substrate on which to build more powerful applications such as online analytical processing engines and distributed computing frameworks. [1]: https://github.com/Blosc/bloscpack [2]: https://github.com/Blosc/c-blosc/ [3]: http://code.google.com/p/snappy/ [4]: http://code.google.com/p/lz4/ [5]: http://www.zlib.net/ [6]: http://www.pytables.org/moin</description>
+				<type>talk</type>
+				<persons>
+					<person id="20308">Valentin Haenel</person>
+				</persons>
+			</event>
+			<event id="20251">
+				<title>Exploring Patent Data with Python</title>
+				<track>Other</track>
+				<date>2014-07-27T13:20:00+0200</date>
+				<start>13:20</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>Experiences from building a recommendation engine for patent search using pythonic NLP and topic modeling tools such as Gensim.</abstract>
+				<description>Experiences from building a recommendation engine for patent search using pythonic NLP and topic modeling tools such as Gensim.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20315">Franta Polach</person>
+				</persons>
+			</event>
+			<event id="20247">
+				<title>Networks meet Finance in Python</title>
+				<track>Other</track>
+				<date>2014-07-27T14:10:00+0200</date>
+				<start>14:10</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>In the course of the 2008 Lehman and the subsequent European debt crisis, it became clear that both industry and regulators had underestimated the degree of interconnectedness and interdependency across financial assets and institutions. This type of information is especially well represented by network models, which had first gained popularity in other areas, such as computer science, biology and social sciences.
+				Although in its early stages, the study of network models in finance is gaining momentum and could be key to building the next generation of risk management tools and averting future financial crises. After a short overview of some of the most relevant work in the field, I will walk through (real data) examples using the pydata toolset.</abstract>
+				<description>In the course of the 2008 Lehman and the subsequent European debt crisis, it became clear that both industry and regulators had underestimated the degree of interconnectedness and interdependency across financial assets and institutions. This type of information is especially well represented by network models, which had first gained popularity in other areas, such as computer science, biology and social sciences.
+				Although in its early stages, the study of network models in finance is gaining momentum and could be key to building the next generation of risk management tools and averting future financial crises. After a short overview of some of the most relevant work in the field, I will walk through (real data) examples using the pydata toolset.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20298">Miguel Vaz</person>
+				</persons>
+			</event>
+			<event id="20238">
+				<title>IPython and Sympy to Develop a Kalman Filter for Multisensor Data Fusion</title>
+				<track>Other</track>
+				<date>2014-07-27T15:05:00+0200</date>
+				<start>15:05</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>The best filter algorithm to fuse multiple sensor informations is the Kalman filter. To implement it for non-linear dynamic models (e.g. a car), analytic calculations for the matrices are necessary. In this talk, one can see, how the IPython Notebook and Sympy helps to develop an optimal filter to fuse sensor information from different sources (e.g. acceleration, speed and GPS position) to get an optimal estimate. more: http://balzer82.github.io/Kalman/</abstract>
+				<description>The best filter algorithm to fuse multiple sensor informations is the Kalman filter. To implement it for non-linear dynamic models (e.g. a car), analytic calculations for the matrices are necessary. In this talk, one can see, how the IPython Notebook and Sympy helps to develop an optimal filter to fuse sensor information from different sources (e.g. acceleration, speed and GPS position) to get an optimal estimate. more: http://balzer82.github.io/Kalman/</description>
+				<type>talk</type>
+				<persons>
+					<person id="20306">Paul Balzer</person>
+				</persons>
+			</event>
+			<event id="20232">
+				<title>Massively Parallel Processing with Procedural Python</title>
+				<track>Other</track>
+				<date>2014-07-27T15:55:00+0200</date>
+				<start>15:55</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B09</room>
+				<language>en</language>
+				<abstract>The Python data ecosystem has grown beyond the confines of single machines to embrace scalability. Here we describe one of our approaches to scaling, which is already being used in production systems. The goal of in-database analytics is to bring the calculations to the data, reducing transport costs and I/O bottlenecks. Using PL/Python we can run parallel queries across terabytes of data using not only pure SQL but also familiar PyData packages such as scikit-learn and nltk. This approach can also be used with PL/R to make use of a wide variety of R packages. We look at examples on Postgres compatible systems such as the Greenplum Database and on Hadoop through Pivotal HAWQ. We will also introduce MADlib, Pivotal’s open source library for scalable in-database machine learning, which uses Python to glue SQL queries to low level C++ functions and is also usable through the PyMADlib package.</abstract>
+				<description>The Python data ecosystem has grown beyond the confines of single machines to embrace scalability. Here we describe one of our approaches to scaling, which is already being used in production systems. The goal of in-database analytics is to bring the calculations to the data, reducing transport costs and I/O bottlenecks. Using PL/Python we can run parallel queries across terabytes of data using not only pure SQL but also familiar PyData packages such as scikit-learn and nltk. This approach can also be used with PL/R to make use of a wide variety of R packages. We look at examples on Postgres compatible systems such as the Greenplum Database and on Hadoop through Pivotal HAWQ. We will also introduce MADlib, Pivotal’s open source library for scalable in-database machine learning, which uses Python to glue SQL queries to low level C++ functions and is also usable through the PyMADlib package.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20310">Ronert Obst</person>
+				</persons>
+			</event>
+		</room>
+		<room name="B05/B06">
+			<event id="20249">
+				<title>ABBY - A Django app to document your A/B tests</title>
+				<track>Other</track>
+				<date>2014-07-27T10:10:00+0200</date>
+				<start>10:10</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>ABBY is a Django app that helps you manage your A/B tests. The main objective is to document all tests happening in your company, in order to better understand which measures work and which don't. Thereby leading to a better understanding of your product and your customer. ABBY offers a front-end that makes it easy to edit, delete or create tests and to add evaluation results. Further, it provides a RESTful API to integrate directly with our platform to easily handle A/B tests without touching the front-end. Another notable feature is the possibility to upload a CSV file and have the A/B test auto-evaluated, although this feature is considered highly experimental. At Jimdo, a do-it-yourself website builder, we have a team of about 180 people from different countries and with professional backgrounds just as diverse. Therefore it is crucial to have tools that allow having a common perspective on the tests. This facilitates having data informed discussions and to deduce effective solutions. In our opinion tools like ABBY are cornerstones to achieve the ultimate goal of being a data-driven company. It enables all our co-workers to review past and plan future tests to further improve our product and to raise the happiness of our customers. The proposed talk will give a detailed overview of ABBY, which eventually will be open-sourced, and its capabilities. I will further discuss the motivation behind the app and the influence it has on the way our company is becoming increasingly data driven.</abstract>
+				<description>ABBY is a Django app that helps you manage your A/B tests. The main objective is to document all tests happening in your company, in order to better understand which measures work and which don't. Thereby leading to a better understanding of your product and your customer. ABBY offers a front-end that makes it easy to edit, delete or create tests and to add evaluation results. Further, it provides a RESTful API to integrate directly with our platform to easily handle A/B tests without touching the front-end. Another notable feature is the possibility to upload a CSV file and have the A/B test auto-evaluated, although this feature is considered highly experimental. At Jimdo, a do-it-yourself website builder, we have a team of about 180 people from different countries and with professional backgrounds just as diverse. Therefore it is crucial to have tools that allow having a common perspective on the tests. This facilitates having data informed discussions and to deduce effective solutions. In our opinion tools like ABBY are cornerstones to achieve the ultimate goal of being a data-driven company. It enables all our co-workers to review past and plan future tests to further improve our product and to raise the happiness of our customers. The proposed talk will give a detailed overview of ABBY, which eventually will be open-sourced, and its capabilities. I will further discuss the motivation behind the app and the influence it has on the way our company is becoming increasingly data driven.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20301">Andy Goldschmidt</person>
+				</persons>
+			</event>
+			<event id="20228">
+				<title>Faster than Google? Optimization lessons in Python.</title>
+				<track>Other</track>
+				<date>2014-07-27T11:00:00+0200</date>
+				<start>11:00</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>Lessons from translating Google's deep learning algorithm into Python. Can a Python port compete with Google's tightly optimized C code? Spoiler: making use of Python and its vibrant ecosystem (generators, NumPy, Cython...), the optimized Python port is cleaner, more readable and clocks in—somewhat astonishingly—4x faster than Google's C. This is 12,000x faster than a naive, pure Python implementation and 100x faster than an optimized NumPy implementation. The talk will go over what went well (data streaming to process humongous datasets, parallelization and avoiding GIL with Cython, plugging into BLAS) as well as trouble along the way (BLAS idiosyncrasies, Cython issues, dead ends). The quest is also documented on my blog.</abstract>
+				<description>Lessons from translating Google's deep learning algorithm into Python. Can a Python port compete with Google's tightly optimized C code? Spoiler: making use of Python and its vibrant ecosystem (generators, NumPy, Cython...), the optimized Python port is cleaner, more readable and clocks in—somewhat astonishingly—4x faster than Google's C. This is 12,000x faster than a naive, pure Python implementation and 100x faster than an optimized NumPy implementation. The talk will go over what went well (data streaming to process humongous datasets, parallelization and avoiding GIL with Cython, plugging into BLAS) as well as trouble along the way (BLAS idiosyncrasies, Cython issues, dead ends). The quest is also documented on my blog.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20286">Radim Řehůřek</person>
+				</persons>
+			</event>
+			<event id="20275">
+				<title>Conda: a cross-platform package manager for any binary distribution</title>
+				<track>Other</track>
+				<date>2014-07-27T13:20:00+0200</date>
+				<start>13:20</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>Conda is an open source package manager, which can be used to manage binary packages and virtual environments on any platform. It is the package manager of the Anaconda Python distribution, although it can be used independently of Anaconda. We will look at how conda solves many of the problems that have plagued Python packaging in the past, followed by a demonstration of its features.
+				We will look at the issues that have plagued packaging in the Python ecosystem in the past, and discuss how Conda solves these problems. We will show how to use conda to manage multiple environments. Finally, we will look at how to build your own conda packages.</abstract>
+				<description>Conda is an open source package manager, which can be used to manage binary packages and virtual environments on any platform. It is the package manager of the Anaconda Python distribution, although it can be used independently of Anaconda. We will look at how conda solves many of the problems that have plagued Python packaging in the past, followed by a demonstration of its features.
+				We will look at the issues that have plagued packaging in the Python ecosystem in the past, and discuss how Conda solves these problems. We will show how to use conda to manage multiple environments. Finally, we will look at how to build your own conda packages.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20339">Ilan Schnell</person>
+				</persons>
+			</event>
+			<event id="20235">
+				<title>Make sense of your (big) data using Elasticsearch</title>
+				<track>Other</track>
+				<date>2014-07-27T14:10:00+0200</date>
+				<start>14:10</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>In this talk I would like to show you a few real-life use-cases where Elasticsearch can help you make sense of your data. We will start with the most basic use case of searching your unstructured data and move on to more advanced topics such as faceting, aggregations and structured search. I would like to demonstrate that the very same tool and dataset can be used for real-time analytics as well as the basis for your more advanced data processing jobs. All in a distributed environment capable of handling terabyte-sized datasets. All examples will be shown with real data and python code demoing the new libraries we have been working on to make this process easier.</abstract>
+				<description>In this talk I would like to show you a few real-life use-cases where Elasticsearch can help you make sense of your data. We will start with the most basic use case of searching your unstructured data and move on to more advanced topics such as faceting, aggregations and structured search. I would like to demonstrate that the very same tool and dataset can be used for real-time analytics as well as the basis for your more advanced data processing jobs. All in a distributed environment capable of handling terabyte-sized datasets. All examples will be shown with real data and python code demoing the new libraries we have been working on to make this process easier.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20313">Honza Král</person>
+				</persons>
+			</event>
+			<event id="20257">
+				<title>Intro to ConvNets</title>
+				<track>Other</track>
+				<date>2014-07-27T15:05:00+0200</date>
+				<start>15:05</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>We will give an introduction to the recent development of Deep Neural Networks and focus in particular on Convolution Networks which are well suited to image classification problems. We will also provide you with the practical knowledge of how to get started with using ConvNets via the cuda-convnet python library.</abstract>
+				<description>We will give an introduction to the recent development of Deep Neural Networks and focus in particular on Convolution Networks which are well suited to image classification problems. We will also provide you with the practical knowledge of how to get started with using ConvNets via the cuda-convnet python library.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20316">Kashif Rasul</person>
+				</persons>
+			</event>
+			<event id="20240">
+				<title>Pandas' Thumb: unexpected evolutionary use of a Python library.</title>
+				<track>Other</track>
+				<date>2014-07-27T15:55:00+0200</date>
+				<start>15:55</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>Lawyers are not famed for their mathematical ability. On the contary - the law almost self-selects as a career choice for the numerically-challenged. So when the one UK tax that property lawyers generally felt comfortable dealing with (lease duty) was replaced with a new tax (stamp duty land tax) that was both arithmetically demanding and conceptually complex, it was inevitable that significant frustrations would arise. Suddenly, lawyers had to deal with concepts such as net present valuations, aggregation of several streams of fluctuating figures, and constant integration of a complex suite of credits and disregards. This talk is a description of how - against a backdrop of data-drunk tax authorities, legal pressures on businesses to have appropriate compliance systems in place, and the constant pressure on their law firms to commoditise compliance services, Pandas may be about to make a foray from its venerable financial origins into a brave new fiscal world - and can revolutionise an industry by doing so. A case study covering the author's development of a Pandas-based stamp duty land tax engine ("ORVILLE") is discussed, and the inherent usefulness of Pandas in the world of tax analysis is explored.</abstract>
+				<description>Lawyers are not famed for their mathematical ability. On the contary - the law almost self-selects as a career choice for the numerically-challenged. So when the one UK tax that property lawyers generally felt comfortable dealing with (lease duty) was replaced with a new tax (stamp duty land tax) that was both arithmetically demanding and conceptually complex, it was inevitable that significant frustrations would arise. Suddenly, lawyers had to deal with concepts such as net present valuations, aggregation of several streams of fluctuating figures, and constant integration of a complex suite of credits and disregards. This talk is a description of how - against a backdrop of data-drunk tax authorities, legal pressures on businesses to have appropriate compliance systems in place, and the constant pressure on their law firms to commoditise compliance services, Pandas may be about to make a foray from its venerable financial origins into a brave new fiscal world - and can revolutionise an industry by doing so. A case study covering the author's development of a Pandas-based stamp duty land tax engine ("ORVILLE") is discussed, and the inherent usefulness of Pandas in the world of tax analysis is explored.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20317">Chris Nyland</person>
+				</persons>
+			</event>
+			<event id="20262">
+				<title>Commodity Machine Learning</title>
+				<track>Other</track>
+				<date>2014-07-27T09:00:00+0200</date>
+				<start>09:00</start>
+				<duration>01:00</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>None.</abstract>
+				<description>None.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20203">Andreas Mueller</person>
+				</persons>
+			</event>
+			<event id="20261">
+				<title>Building the PyData Community</title>
+				<track>Other</track>
+				<date>2014-07-27T12:30:00+0200</date>
+				<start>12:30</start>
+				<duration>00:40</duration>
+				<recording>
+				<license/>
+				<optout>false</optout>
+				</recording>
+				<room>B05/B06</room>
+				<language>en</language>
+				<abstract>None.</abstract>
+				<description>None.</description>
+				<type>talk</type>
+				<persons>
+					<person id="20036">Travis Oliphant</person>
+				</persons>
+			</event>
+		</room>
+	</day>
+</schedule>
+
+
+
