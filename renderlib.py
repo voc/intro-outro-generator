@@ -119,7 +119,7 @@ def rendertask(task):
 			fp.write( etree.tostring(svg, encoding='unicode') )
 
 		# invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-		errorReturn = subprocess.check_output('cd {0} && inkscape --export-png=.frames/{1:04d}.png .gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr), shell=True, universal_newlines=True)
+		errorReturn = subprocess.check_output('cd {0} && inkscape --export-background=white --export-png=.frames/{1:04d}.png .gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr), shell=True, universal_newlines=True)
 		if errorReturn != '':
 			print("inkscape exitted with error\n"+errorReturn)
 			sys.exit(42)
