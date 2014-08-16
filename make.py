@@ -21,8 +21,8 @@ projectname = sys.argv[1].strip('/')
 try:
 	project = renderlib.loadProject(projectname)
 except ImportError:
-	print("you must specify a project-name as first argument, eg. './make.py sotmeu14'. The supplied value '{0}' seems not to be a valid project (there is no '{0}/__init__.py').".format(projectname))
-	sys.exit(1)
+	print("you must specify a project-name as first argument, eg. './make.py sotmeu14'. The supplied value '{0}' seems not to be a valid project (there is no '{0}/__init__.py').\n".format(projectname))
+	raise
 
 # using --debug skips the threading, the network fetching of the schedule and
 # just renders one type of video
