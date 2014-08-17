@@ -159,21 +159,21 @@ def pauseFrames():
 		)
 
 def debug():
-	# render('intro.svg',
-	# 	'../intro.dv',
-	# 	introFrames,
-	# 	{
-	# 		'$id': 1302,
-	# 		'$title': 'VlizedLab - Eine Open Source-Virtualisierungslösung für PC-Räume',
-	# 		'$subtitle': 'IT Automatisierung und zentrales Management mit SALT',
-	# 		'$personnames': 'Thorsten Kramm'
-	# 	}
-	# )
+	render('intro.svg',
+		'../intro.dv',
+		introFrames,
+		{
+			'$id': 1302,
+			'$title': 'VlizedLab - Eine Open Source-Virtualisierungslösung für PC-Räume',
+			'$subtitle': 'IT Automatisierung und zentrales Management mit SALT',
+			'$personnames': 'Thorsten Kramm'
+		}
+	)
 
-	# render('outro.svg',
-	# 	'../outro.dv',
-	# 	outroFrames
-	# )
+	render('outro.svg',
+		'../outro.dv',
+		outroFrames
+	)
 
 	render('pause.svg',
 		'../pause.dv',
