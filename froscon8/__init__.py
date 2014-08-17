@@ -20,6 +20,7 @@ def introFrames():
 		p = path.point(i / frames) - init
 		yield (
 			('animatePath', 'style', 'opacity', 0),
+			('date', 'style', 'opacity', 0),
 		)
 
 	frames = 3*fps
@@ -29,7 +30,18 @@ def introFrames():
 			('frog', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),
 		)
 
-	frames = 2*fps
+	frames = int(0.5*fps)
+	for i in range(0, frames):
+		yield tuple()
+
+	frames = 1*fps
+	for i in range(0, frames):
+		yield (
+			('url', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
+			('date', 'style', 'opacity', easeOutQuad(i, 0, 1, frames)),
+		)
+
+	frames = int(1.5*fps)
 	for i in range(0, frames):
 		yield tuple()
 

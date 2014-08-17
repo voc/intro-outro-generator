@@ -201,9 +201,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142135"
-     inkscape:cx="766.15295"
-     inkscape:cy="456.74489"
+     inkscape:zoom="0.49999998"
+     inkscape:cx="239.195"
+     inkscape:cy="596.52111"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -537,5 +537,17 @@
        id="animatePath"
        d="m 402.12503,764.2372 c 0,0 46.88241,-220.97993 130.94607,-212.13112 76,8 126.05393,115.62866 126.05393,115.62866 0,0 91.8771,-159.56589 166,-129.12256 56,23 109.75365,129.08389 109.75365,129.08389 0,0 64.21158,-135.08068 125.66052,-106.06307 36,17.00002 60.0503,97.61646 60.0503,97.61646"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-size:44.7326355px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Open Sans;-inkscape-font-specification:Open Sans Light"
+       x="305.25974"
+       y="988.60712"
+       id="text3062"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3064"
+         x="305.25974"
+         y="988.60712"
+         style="font-size:44.7326355px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Open Sans;-inkscape-font-specification:Open Sans Light">23.- 24. August 2014</tspan></text>
   </g>
 </svg>

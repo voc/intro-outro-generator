@@ -202,8 +202,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="448.45222"
-     inkscape:cy="142.89604"
+     inkscape:cx="497.96939"
+     inkscape:cy="192.20725"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -420,7 +420,7 @@
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <flowRoot
        xml:space="preserve"
-       id="flowRoot3815"
+       id="url"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        transform="translate(-258,510.36218)"><flowRegion
          id="flowRegion3817"><rect
@@ -431,5 +431,18 @@
            y="312.37131"
            style="text-align:end;text-anchor:end" /></flowRegion><flowPara
          id="flowPara3821"
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans">http://programm.froscon.de/2014/events/$id.html</flowPara></flowRoot>  </g>
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans">http://programm.froscon.de/2014/events/$id.html</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="date"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;opacity:0.25"
+       transform="translate(-257.99975,510.36255)"><flowRegion
+         id="flowRegion3817-9"><rect
+           id="rect3819-3"
+           width="486.27167"
+           height="22.430193"
+           x="790.53937"
+           y="312.37131"
+           style="text-align:end;text-anchor:end" /></flowRegion><flowPara
+         id="flowPara3821-6"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans">23.- 24. August 2014</flowPara></flowRoot>  </g>
 </svg>
