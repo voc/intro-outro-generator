@@ -8,7 +8,7 @@ from renderlib import *
 scheduleUrl = 'http://programm.froscon.de/2014/schedule.xml'
 
 def introFrames():
-	xml = etree.parse('froscon8/artwork/intro.svg').getroot()
+	xml = etree.parse('froscon9/artwork/intro.svg').getroot()
 	pathstr = xml.find(".//*[@id='animatePath']").get('d')
 	frog = xml.find(".//*[@id='animatePath']").get('d')
 	path = svg.path.parse_path(pathstr)
@@ -60,7 +60,7 @@ def introFrames():
 		)
 
 def outroFrames():
-	xml = etree.parse('froscon8/artwork/outro.svg').getroot()
+	xml = etree.parse('froscon9/artwork/outro.svg').getroot()
 	pathstr = xml.find(".//*[@id='animatePath']").get('d')
 	frog = xml.find(".//*[@id='animatePath']").get('d')
 	path = svg.path.parse_path(pathstr)
