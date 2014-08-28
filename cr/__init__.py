@@ -74,11 +74,11 @@ def pauseFrames():
 
 
 def debug():
-	render(
-		'pause.svg',
-		'../pause.dv',
-		pauseFrames
-	)
+	# render(
+	# 	'pause.svg',
+	# 	'../pause.dv',
+	# 	pauseFrames
+	# )
 
 	render(
 		'intro.svg',
