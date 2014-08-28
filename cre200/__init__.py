@@ -29,8 +29,8 @@ def outroFrames():
 			('lizenz','style',    'opacity', "%.4f" % easeInCubic(i, 1, -1, frames)),
 		)
 
-	# 3 Sekunden stehen bleiben
-	frames = 3*fps
+	# 1 Sekunden stehen bleiben
+	frames = 1*fps
 	for i in range(0, frames):
 		yield (
 			('logo',  'style',    'opacity', 0),

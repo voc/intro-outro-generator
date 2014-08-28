@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="vorspann.svg">
+   sodipodi:docname="intro.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -158,7 +158,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="540.08483"
+     inkscape:cx="544.12545"
      inkscape:cy="356.25416"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -237,7 +237,7 @@
        y="0"
        transform="translate(0,476.36218)" />
     <image
-       sodipodi:absref="/home/peter/AAA-VOC/mazdermind-c3voc-toolz/vor-abspann/cre200/artwork/chaosradio-logo-transparent-300.png"
+       sodipodi:absref="/home/peter/AAA-VOC/intro-outro-generator/cre200/artwork/chaosradio-logo-transparent-300.png"
        xlink:href="chaosradio-logo-transparent-300.png"
        width="300"
        height="116"
@@ -255,11 +255,11 @@
          x="511.9707"
          y="831.94586"
          id="tspan3833"
-         style="-inkscape-font-specification:Nimbus Sans L;font-family:Nimbus Sans L;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">CR200 Der Chaos Computer Club</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L">CR204</tspan><tspan
          sodipodi:role="line"
          x="511.9707"
-         y="881.94586"
+         y="881.95636"
          id="tspan3842"
-         style="-inkscape-font-specification:Nimbus Roman No9 L Italic;font-family:Nimbus Roman No9 L;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal">The Next Generation?</tspan></text>
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Italic">Passwörter</tspan></text>
   </g>
 </svg>
