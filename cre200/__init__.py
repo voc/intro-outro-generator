@@ -64,8 +64,22 @@ def introFrames():
 			('text',  'style',    'opacity', 1),
 		)
 
+def pauseFrames():
+	# 8 Sekunden im kresi drehen
+	frames = int(8*fps)
+	for i in range(0, frames):
+		yield (
+			('logo',  'attr',     'transform', 'translate(%.4f, %.4f)' % (math.sin(i / frames * math.pi * 2) * 200, math.cos(i / frames * math.pi * 2) * 180) ),
+		)
+
 
 def debug():
+	render(
+		'pause.svg',
+		'../pause.dv',
+		pauseFrames
+	)
+
 	render(
 		'intro.svg',
 		'../intro.dv',
