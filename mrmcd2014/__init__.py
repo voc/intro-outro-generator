@@ -13,7 +13,7 @@ titlemap = {
 	5985: 'Dem Stromnetz auf die Finger geguckt',
 	6036: 'Nuclear Dis-armament Hacks',
 	6032: 'Baustellen-eröffnung',
-	6029: 'Temperaturmessun mit dem Arduino',
+	6029: 'Arduino Tempera-turmessungen',
 	6028: 'Geheimdienste und Spione',
 	6026: 'Die Kunst, von der Kunst zu leben',
 	6000: 'ChaosFamilien Duell',
