@@ -95,7 +95,7 @@ def rendertask(task):
 
 	# iterate through the animation seqence frame by frame
 	# frame is a ... tbd
-	for frame in task.sequence():
+	for frame in task.sequence(task.parameters):
 		# print a line for each and every frame generated
 		if debug:
 			print("frameNr {0:3d} => {1}".format(frameNr, frame))
@@ -114,6 +114,9 @@ def rendertask(task):
 
 					elif type == 'attr':
 						el.attrib[key] = value
+
+					elif type == 'text':
+						el.text = value
 
 			# write the generated svg-text into the output-file
 			fp.write( etree.tostring(svg, encoding='unicode') )
