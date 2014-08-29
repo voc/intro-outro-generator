@@ -962,7 +962,7 @@
          points="224.224,116.447 226.133,104.117 240.289,104.672 238.379,117.003 "
          style="fill:#be1622" /></g><g
        transform="matrix(0.9706564,0.24047071,-0.24047071,0.9706564,39.630258,-175.25613)"
-       id="bar2"
+       id="bar1"
        style="filter:url(#filter4574-1)"><polygon
          id="polygon196-7"
          points="12.631,99.122 26.746,97.937 26.365,110.409 12.249,111.595 "
@@ -1043,7 +1043,7 @@
          y="91.934273"
          style="fill:#ffffff;fill-opacity:1" /></text>
 <g
-       id="bar1"
+       id="bar2"
        transform="translate(4.2084413e-8,-23.105752)"><g
          transform="translate(0,-36.969204)"
          style="filter:url(#filter4574)"
