@@ -23,6 +23,7 @@ def introFrames(parameters):
 	yield (
 		('namesbar', 'style', 'opacity', 0),
 		('title', 'text', None, ''),
+		('titleHidden', 'text', None, ''),
 	)
 
 	for char in range(0, len(title) + 1):
@@ -30,6 +31,7 @@ def introFrames(parameters):
 			frames += 1
 			yield (
 				('title', 'text', None, title[:char]),
+				('titleHidden', 'text', None, title[char:]),
 			)
 
 	frames = 4*fps

@@ -111,9 +111,9 @@
      inkscape:window-height="993"
      id="namedview520"
      showgrid="false"
-     inkscape:zoom="3.6928166"
-     inkscape:cx="629.5845"
-     inkscape:cy="385.48013"
+     inkscape:zoom="1.3056078"
+     inkscape:cx="532.50433"
+     inkscape:cy="606.87876"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -138,7 +138,9 @@
            x="19.914097"
            y="15.341592" /></flowRegion><flowPara
          id="title"
-         style="font-size:110px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:DIN Schablonierschrift;-inkscape-font-specification:DIN Schablonierschrift">$title</flowPara></flowRoot><g
+         style="font-size:110px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:DIN Schablonierschrift;-inkscape-font-specification:DIN Schablonierschrift">$tit<flowSpan
+   style="opacity:0"
+   id="titleHidden">le</flowSpan></flowPara></flowRoot><g
        id="g4775"
        transform="matrix(0.95014662,0,0,0.95014662,0.1320066,1.4895836)"><polygon
          id="polygon18"
