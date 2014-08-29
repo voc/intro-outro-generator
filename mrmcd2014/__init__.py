@@ -7,8 +7,15 @@ from renderlib import *
 # URL to Schedule-XML
 scheduleUrl = 'http://fahrplan.mrmcd.net/schedule.xml'
 
+# For (really) too long titles
+titlemap = {
+	5985: 'Dem Stromnetz auf die Finger geguckt',
+}
+
 def introFrames(parameters):
-	title = parameters['$title']
+	id = parameters['$id']
+	title = titlemap[id] if id in titlemap else parameters['$title'].strip()
+
 	rnd = random.Random()
 	rnd.seed(title)
 	frames = 0
