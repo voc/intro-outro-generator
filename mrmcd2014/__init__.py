@@ -9,7 +9,18 @@ scheduleUrl = 'http://fahrplan.mrmcd.net/schedule.xml'
 
 # For (really) too long titles
 titlemap = {
+	6037: 'End-to-Display Verschlüsselung',
 	5985: 'Dem Stromnetz auf die Finger geguckt',
+	6036: 'Nuclear Dis-armament Hacks',
+	6032: 'Baustellen-eröffnung',
+	6029: 'Temperaturmessun mit dem Arduino',
+	6028: 'Geheimdienste und Spione',
+	6026: 'Die Kunst, von der Kunst zu leben',
+	6000: 'ChaosFamilien Duell',
+	5977: 'Security Nightmar es for Journalists',
+	5957: 'Verhandlungen & Kommunikation',
+	5906: 'Quanten-kryptographie',
+	5821: 'angewandte konsensdemokratie',
 }
 
 def introFrames(parameters):
@@ -88,21 +99,21 @@ def outroFrames(parameters):
 		)
 
 def debug():
-	# render('intro.svg',
-	# 	'../intro.dv',
-	# 	introFrames,
-	# 	{
-	# 		'$id': 5985,
-	# 		'$title': 'Dem Stromnetz auf die Finger geguckt',
-	# 		'$subtitle': 'Netzfrequenz messen for fun and profit',
-	# 		'$personnames': 'gonium'
-	# 	}
-	# )
-
-	render('outro.svg',
-		'../outro.dv',
-		outroFrames
+	render('intro.svg',
+		'../intro.dv',
+		introFrames,
+		{
+			'$id': 5924,
+			'$title': 'Eliminating DOM-based XSS',
+			'$subtitle': '',
+			'$personnames': 'Tobias Mueller'
+		}
 	)
+
+	# render('outro.svg',
+	# 	'../outro.dv',
+	# 	outroFrames
+	# )
 
 def tasks(queue):
 	# iterate over all events extracted from the schedule xml-export
