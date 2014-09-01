@@ -52,7 +52,6 @@ def introFrames(parameters):
 		)
 
 def outroFrames(parameters):
-
 	frames = int(0.5*fps)
 	for i in range(0, frames):
 		yield (
@@ -98,6 +97,15 @@ def outroFrames(parameters):
 			('bar3', 'style', 'opacity', 1),
 		)
 
+
+def pauseFrames(parameters):
+	frames = int(8*fps)
+	for i in range(0, frames):
+		yield (
+			('marquee', 'attr', 'x', '%.4f' % easeLinear(i, -30.767517, 356.766757, frames)),
+			('marquee', 'attr', 'y', '%.4f' % easeLinear(i, -5.9523463, 1.153944, frames)),
+		)
+
 def debug():
 	render('intro.svg',
 		'../intro.dv',
@@ -110,10 +118,15 @@ def debug():
 		}
 	)
 
-	# render('outro.svg',
-	# 	'../outro.dv',
-	# 	outroFrames
-	# )
+	render('outro.svg',
+		'../outro.dv',
+		outroFrames
+	)
+
+	render('pause.svg',
+		'../pause.dv',
+		pauseFrames
+	)
 
 def tasks(queue):
 	# iterate over all events extracted from the schedule xml-export
