@@ -99,11 +99,11 @@ def outroFrames(parameters):
 
 
 def pauseFrames(parameters):
-	frames = int(8*fps)
+	frames = int(2*fps)
 	for i in range(0, frames):
 		yield (
-			('marquee', 'attr', 'x', '%.4f' % easeLinear(i, -30.767517, 356.766757, frames)),
-			('marquee', 'attr', 'y', '%.4f' % easeLinear(i, -5.9523463, 1.153944, frames)),
+			('marquee', 'attr', 'x', '%.4f' % easeLinear(i, -108.66403, 110.3719675, frames)),
+			('marquee', 'attr', 'y', '%.4f' % easeLinear(i, -6.3296866, -0.0262695, frames)),
 		)
 
 def debug():
