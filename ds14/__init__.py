@@ -2,6 +2,7 @@
 
 import svg.path, random
 from lxml import etree
+from slugify import slugify
 from renderlib import *
 
 # URL to Schedule-XML
@@ -78,7 +79,7 @@ def tasks(queue):
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
 			infile = 'intro.svg',
-			outfile = str(event['id'])+".dv",
+			outfile = str(event['id'])+" "+slugify(event['title'])+".dv",
 			sequence = introFrames,
 			parameters = {
 				'$id': event['id'],
