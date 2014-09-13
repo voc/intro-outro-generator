@@ -99,29 +99,29 @@ def outroFrames(parameters):
 
 
 def pauseFrames(parameters):
-	frames = int(2*fps)
+	frames = int(4*fps)
 	for i in range(0, frames):
 		yield (
-			('marquee', 'attr', 'x', '%.4f' % easeLinear(i, -108.66403, 110.3719675, frames)),
-			('marquee', 'attr', 'y', '%.4f' % easeLinear(i, -6.3296866, -0.0262695, frames)),
+			('marquee', 'attr', 'x', '%.4f' % easeLinear(i, -108.66403, 6.9679418+108.66403, frames)),
+			('marquee', 'attr', 'y', '%.4f' % easeLinear(i, -6.3296866, 6.3296866-6.4861546, frames)),
 		)
 
 def debug():
-	render('intro.svg',
-		'../intro.dv',
-		introFrames,
-		{
-			'$id': 5924,
-			'$title': 'Eliminating DOM-based XSS',
-			'$subtitle': '',
-			'$personnames': 'Tobias Mueller'
-		}
-	)
+	# render('intro.svg',
+	# 	'../intro.dv',
+	# 	introFrames,
+	# 	{
+	# 		'$id': 5924,
+	# 		'$title': 'Eliminating DOM-based XSS',
+	# 		'$subtitle': '',
+	# 		'$personnames': 'Tobias Mueller'
+	# 	}
+	# )
 
-	render('outro.svg',
-		'../outro.dv',
-		outroFrames
-	)
+	# render('outro.svg',
+	# 	'../outro.dv',
+	# 	outroFrames
+	# )
 
 	render('pause.svg',
 		'../pause.dv',
@@ -131,7 +131,8 @@ def debug():
 def tasks(queue):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl):
-
+		if event['id'] != 6034:
+			continue
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
 			infile = 'intro.svg',
