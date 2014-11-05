@@ -38,6 +38,13 @@ def easeOutQuad(t, b, c, d):
 	t=float(t)/d
 	return -c *(t)*(t-2) + b;
 
+def easeInOutQuad(t, b, c, d):
+	t=float(t)/(d/2)
+	if (t < 1):
+		return c/2*t*t + b;
+	t=t-1
+	return -c/2 * (t*(t-2) - 1) + b;
+
 def easeLinear(t, b, c, d):
 	t=float(t)/d
 	return t*c+b
