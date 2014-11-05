@@ -120,10 +120,10 @@ def rendertask(task):
 						el.attrib['style'] = style.cssText
 
 					elif type == 'attr':
-						el.attrib[key] = value
+						el.attrib[key] = str(value)
 
 					elif type == 'text':
-						el.text = value
+						el.text = str(value)
 
 			# write the generated svg-text into the output-file
 			fp.write( etree.tostring(svg, encoding='unicode') )
