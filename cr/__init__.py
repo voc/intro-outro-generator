@@ -58,7 +58,7 @@ def pauseFrames(p):
 	frames = int(8*fps)
 	for i in range(0, frames):
 		yield (
-			('logo',  'attr',     'transform', 'translate(%.4f, %.4f)' % (math.sin(i / frames * math.pi * 2) * 200, math.cos(i / frames * math.pi * 2) * 180) ),
+			('logo',  'attr',     'transform', 'translate(%.4f, %.4f)' % (math.sin(i / frames * math.pi * 2) * 300, math.cos(i / frames * math.pi * 2) * 280) ),
 		)
 
 
