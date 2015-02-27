@@ -139,12 +139,20 @@ def rendertask(task):
 
 
 
-	# remove the dv we are about to (re-)generate
+	# remove the dv/ts we are about to (re-)generate
 	ensureFilesRemoved(os.path.join(task.workdir, task.outfile))
 
 	# invoke avconv aka ffmpeg and renerate a lossles-dv from the frames
 	#  if we're not in debug-mode, suppress all output
-	os.system('cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile) + ('' if debug else '>/dev/null 2>&1'))
+	if task.outfile.endswith('.ts'):
+		cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -c:v mpeg2video -b:v 5000k -f mpegts -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
+	else:
+		cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
+
+	if debug:
+		print(cmd)
+
+	r = os.system(cmd + ('' if debug else '>/dev/null 2>&1'))
 
 	# as before, in non-debug-mode the thread-worker does all progress messages
 	if debug:
