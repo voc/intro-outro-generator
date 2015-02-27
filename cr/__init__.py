@@ -2,7 +2,7 @@
 
 from renderlib import *
 
-def outroFrames():
+def outroFrames(p):
 	# 8 Sekunden
 
 	# 1 Sekunden stehen bleiben
@@ -37,7 +37,7 @@ def outroFrames():
 			('lizenz','style',    'opacity', 0),
 		)
 
-def introFrames():
+def introFrames(p):
 	# 8 Sekunden
 
 	# 2 Sekunden Fadein logo
@@ -64,7 +64,7 @@ def introFrames():
 			('text',  'style',    'opacity', 1),
 		)
 
-def pauseFrames():
+def pauseFrames(p):
 	# 8 Sekunden im kresi drehen
 	frames = int(8*fps)
 	for i in range(0, frames):
@@ -82,27 +82,40 @@ def debug():
 
 	render(
 		'intro.svg',
-		'../intro.dv',
+		'../intro.ts',
 		introFrames
 	)
 
 	render(
 		'outro.svg',
-		'../outro.dv',
+		'../outro.ts',
 		outroFrames
+	)
+
+	render(
+		'pause.svg',
+		'../pause.ts',
+		pauseFrames
 	)
 
 def tasks(queue):
 	# generate a task description and put them into the queue
 	queue.put(Rendertask(
 		infile = 'intro.svg',
-		outfile = "intro.dv",
+		outfile = "intro.ts",
 		sequence = introFrames
 	))
 
 	# place a task for the outro into the queue
 	queue.put(Rendertask(
 		infile = 'outro.svg',
-		outfile = 'outro.dv',
+		outfile = 'outro.ts',
+		sequence = outroFrames
+	))
+
+	# place a task for the pause into the queue
+	queue.put(Rendertask(
+		infile = 'pause.svg',
+		outfile = 'pause.ts',
 		sequence = outroFrames
 	))
