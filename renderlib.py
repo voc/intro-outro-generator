@@ -156,6 +156,9 @@ def rendertask(task):
 
 	# as before, in non-debug-mode the thread-worker does all progress messages
 	if debug:
+		if r != 0:
+			sys.exit()
+
 		print("cleanup")
 
 	# remove the .frames-dir with all frames in it
