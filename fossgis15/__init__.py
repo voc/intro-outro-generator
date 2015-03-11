@@ -139,10 +139,10 @@ def debug():
 		'../intro.dv',
 		introFrames,
 		{
-			'$id': 667,
-			'$title': 'OpenJUMP - Überblick, Neuigkeiten, Zusammenarbeit/Schnittstellen mit proprietärer Software',
-			'$subtitle': 'Even more news about OpenJUMP',
-			'$personnames': 'Matthias Scholz'
+			'$id': 904,
+			'$title': 'Was ist Open Source, wie funktioniert das?',
+			'$subtitle': 'Die Organisation der Open Geo- und GIS-Welt. Worauf man achten sollte.',
+			'$personnames': 'Arnulf Christl, Astrid Emde, Dominik Helle, Till Adams'
 		}
 	)
 

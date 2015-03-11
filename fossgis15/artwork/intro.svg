@@ -120,16 +120,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="409.69421"
-     inkscape:cy="179.01394"
+     inkscape:zoom="1.4"
+     inkscape:cx="477.84909"
+     inkscape:cy="209.50307"
      inkscape:document-units="px"
-     inkscape:current-layer="g_background"
+     inkscape:current-layer="layer_background"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1920"
-     inkscape:window-height="993"
+     inkscape:window-height="1014"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1">
@@ -245,67 +245,6 @@
            x="77.218193"
            sodipodi:role="line">2015</tspan></text>
     </g>
-    <g
-       id="text2"
-       transform="translate(-70,202)">
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3772-3);font-family:Sans"
-         x="149.334"
-         y="635.91711"
-         id="text2992-4"
-         sodipodi:linespacing="80.000001%"><tspan
-           sodipodi:role="line"
-           x="149.334"
-           y="635.91711"
-           id="personnames"
-           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:80.00000119%;fill:#7b9199;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold">$personnames</tspan></text>
-      <flowRoot
-         xml:space="preserve"
-         id="flowRoot3025"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         transform="translate(70,274)"><flowRegion
-           id="flowRegion3027"><rect
-             id="rect3029"
-             width="227.14285"
-             height="43.57143"
-             x="189.28572"
-             y="383.14285" /></flowRegion><flowPara
-           id="flowPara3031" /></flowRoot>      <flowRoot
-         xml:space="preserve"
-         id="flowRoot3033"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
-           id="flowRegion3035"><rect
-             id="rect3037"
-             width="24.285715"
-             height="42.857143"
-             x="55"
-             y="416.71429" /></flowRegion><flowPara
-           id="flowPara3039" /></flowRoot>      <flowRoot
-         xml:space="preserve"
-         id="flowRoot3041"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         transform="translate(70,274)"><flowRegion
-           id="flowRegion3043"><rect
-             id="rect3045"
-             width="404.28571"
-             height="152.85715"
-             x="240"
-             y="376.71429" /></flowRegion><flowPara
-           id="flowPara3047" /></flowRoot>      <flowRoot
-         xml:space="preserve"
-         id="flowRoot3057"
-         style="font-size:43px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         transform="translate(74,266)"><flowRegion
-           id="flowRegion3059"><rect
-             id="rect3061"
-             width="933.57141"
-             height="141.42857"
-             x="75.714287"
-             y="381"
-             style="font-size:43px" /></flowRegion><flowPara
-           style="font-size:43px;font-weight:bold;line-height:107.00000525%;fill:#f2f4f5;fill-opacity:1;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
-           id="flowPara3835">$title</flowPara></flowRoot>    </g>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:end;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -318,5 +257,20 @@
          y="1043.1428"
          id="url"
          style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:80.00000119%;text-anchor:end;fill:#f2f4f5;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold">fossgis.de/konferenz/2015/programm/events/$id.de.html</tspan></text>
-  </g>
+    <flowRoot
+       xml:space="preserve"
+       id="text2"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(31.857143,489.71429)"
+       inkscape:label="#text2"><flowRegion
+         id="flowRegion3041"><rect
+           id="rect3043"
+           width="970.71429"
+           height="206.42857"
+           x="46.42857"
+           y="318.14285" /></flowRegion><flowPara
+         style="font-size:48px;font-weight:bold;line-height:90%;fill:#7b9199;fill-opacity:1;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+         id="flowPara3025">$personnames</flowPara><flowPara
+         id="flowPara3048"
+         style="font-size:48px;font-weight:bold;line-height:90%;fill:#f2f4f5;fill-opacity:1;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold">$title</flowPara></flowRoot>  </g>
 </svg>
