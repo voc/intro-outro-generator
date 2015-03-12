@@ -197,7 +197,7 @@ def events(scheduleUrl, titlemap={}):
 				yield {
 					'id': int(event.get('id')),
 					'title': titlemap[id] if id in titlemap else event.find('title').text.strip(),
-					'subtitle': event.find('subtitle').text.strip() if event.find('subtitle') is not None else '',
+					'subtitle': event.find('subtitle').text.strip() if event.find('subtitle') is not None and event.find('subtitle').text is not None else '',
 					'persons': personnames,
 					'personnames': ', '.join(personnames)
 				}
