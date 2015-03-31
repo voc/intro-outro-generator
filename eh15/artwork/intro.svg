@@ -67,7 +67,7 @@
        d="M2347.6,885.2h65.9V730.2h-65.9V885.2z M1567.4,397.7   c-18.7,12.3-35.6,27.5-49.7,45c-16.4,20.3-28.9,43.7-37.1,68.5c26.4-11.3,55.1-17.1,83.8-17c28.2,0.1,56.5,5.9,82.5,17   c-3.1-27.1-14.3-53.4-31.4-74.6C1602.4,420.3,1586,406.9,1567.4,397.7 M1917.4-58l-44.1,35.4c-102.8,93.4-144.6,123.4-260.1,181.1   C1365.7,253,1269.8,411.9,1248,588.8l381.4,108.2l-263.6-122.2c18.9-197.2,142.3-330.5,367.4-370.5H2177L1856.7,519v84.2h96.9   c92.2,0,158.9,15.5,200.7,46.3c42.4,31.2,63.7,78.5,63.7,142.3c0,75.3-20.1,132.8-61.1,171.5c-40.5,38.3-100.1,56.3-178,57.2   c-84.5,1-165.3-22-229.1-57.6c-26,28-50.4,51.7-83.3,69.4c-24.4,13.1-52.1,19.6-66.3,17.4c-17.6-2.7-20.9-21.8-20.9-35.8   c-0.1-47.5,15.9-93.6,24-120.9l-20.5-10.5c-22.2,38-42.3,79.5-54.5,117.4c-32.5,13.7-59.2,20.8-82.5,24c-23.3,3.2-41.5,4-50.6-2.6   c-13.4-9.6-10.8-29.2-7-42.3c12.2-42.3,35.1-74.5,54.1-106.5l-17.5-15.3c-24.4,24.6-66,67.1-92.9,115.7   c-19,34.2-27.3,64.7-20.9,88.6c6.4,23.9,27.9,39.8,62.8,45c34,5,81.8-0.5,144.9-17c9.4,36.3,31.9,47.6,66.8,47.6   c39.6,0,101.4,2.1,173.7-42c65.3,27.8,137.8,15.4,219.9,15.4c113.6,0,212.1-27.3,277.5-103.9c29.9,35.4,74.4,58,124.4,58   c90.1,0,163.2-73.1,163.2-163.2c0-69.1-43.2-128.1-103.9-151.9v74.6c20.7,17.1,33.6,42.6,33.6,71.6c0,51.5-41.5,93.4-92.9,93.4   c-51.5,0-93.4-41.9-93.4-93.4c0-28.8,13.1-54.5,33.6-71.6v-83.4c-8.2-62.9-32.3-112.4-72.4-148.4c-49.6-46.1-121.2-69-215.1-69   h-42.8l320.7-319V114h-368.7c2.4-37.9-6.5-77.4-14.4-116.5L1917.4-58z"
        id="path13" /></g><flowRoot
      xml:space="preserve"
-     id="flowRoot3014"
+     id="text"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:150%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
      transform="translate(0,-16)"><flowRegion
        id="flowRegion3016"><rect
@@ -78,8 +78,8 @@
          y="597.20709"
          style="line-height:150%" /></flowRegion><flowPara
        id="flowPara3020"
-       style="font-size:47.94689941px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:150%;fill:#1ec290;fill-opacity:1;font-family:TeX Gyre Adventor;-inkscape-font-specification:TeX Gyre Adventor">Nick Sullivan</flowPara><flowPara
+       style="font-size:47.94689941px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:150%;fill:#1ec290;fill-opacity:1;font-family:TeX Gyre Adventor;-inkscape-font-specification:TeX Gyre Adventor">$personnames</flowPara><flowPara
        id="flowPara3022"
-       style="font-size:58px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:120.00000477000000387%;font-family:TeX Gyre Adventor;-inkscape-font-specification:TeX Gyre Adventor Bold;fill:#4d3823;fill-opacity:1">Heartache and Heartbleed: The insider’s perspective on the aftermath of Heartbleed</flowPara><flowPara
+       style="font-size:58px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:120.00000477000000387%;font-family:TeX Gyre Adventor;-inkscape-font-specification:TeX Gyre Adventor Bold;fill:#4d3823;fill-opacity:1">$title</flowPara><flowPara
        style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:150%;fill:#6f5d4a;fill-opacity:1;font-family:TeX Gyre Adventor;-inkscape-font-specification:TeX Gyre Adventor"
-       id="flowPara3016">The untold story of what really happened, how it was patched and what was learned.</flowPara></flowRoot></svg>
+       id="flowPara3016">$subtitle</flowPara></flowRoot></svg>
