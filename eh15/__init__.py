@@ -42,6 +42,29 @@ def introFrames(parameters):
 			('text', 'attr',     'transform', 'translate(%.4f, 0)' % 30),
 		)
 
+def pauseFrames():
+	# 7 Sekunden
+
+	# 3 Sekunde Text FadeIn
+	frames = 3*fps
+	for i in range(0, frames):
+		yield (
+			('text','style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
+		)
+
+	# 3 Sekunde Text FadeOut
+	frames = 3*fps
+	for i in range(0, frames):
+		yield (
+			('text','style',    'opacity', "%.4f" % easeInCubic(i, 1, -1, frames)),
+		)
+
+	# 1 Sekunde stehen lassen
+	frames = 1*fps
+	for i in range(0, frames):
+		yield (
+			('text','style',    'opacity', 0),
+		)
 
 def debug():
 	render(
@@ -66,6 +89,11 @@ def debug():
 			'$subtitle': 'Physiologie von Schlaf und Wachzustand',
 			'$personnames': 'Christina'
 		}
+	)
+
+	render('pause.svg',
+		'../pause.dv',
+		pauseFrames
 	)
 
 def tasks(queue):
@@ -95,4 +123,11 @@ def tasks(queue):
 				'$subtitle': event['subtitle'],
 				'$personnames': event['personnames']
 			}
+		))
+
+		# place the pause-sequence into the queue
+		queue.put(Rendertask(
+			infile = 'pause.svg',
+			outfile = 'pause.dv',
+			sequence = pauseFrames
 		))
