@@ -42,7 +42,7 @@ def introFrames(parameters):
 			('text', 'attr',     'transform', 'translate(%.4f, 0)' % 30),
 		)
 
-def pauseFrames():
+def pauseFrames(parameters):
 	# 7 Sekunden
 
 	# 3 Sekunde Text FadeIn
@@ -67,7 +67,7 @@ def pauseFrames():
 		)
 
 def debug():
-	render(
+	'''	render(
 		'intro.svg',
 		'../intro.dv',
 		introFrames,
@@ -89,8 +89,7 @@ def debug():
 			'$subtitle': 'Physiologie von Schlaf und Wachzustand',
 			'$personnames': 'Christina'
 		}
-	)
-
+	)'''
 	render('pause.svg',
 		'../pause.dv',
 		pauseFrames
@@ -99,6 +98,10 @@ def debug():
 def tasks(queue):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl):
+
+		# HACK: only render event 49
+		#if event['id'] != 49:
+		#	continue
 
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
@@ -125,9 +128,9 @@ def tasks(queue):
 			}
 		))
 
-		# place the pause-sequence into the queue
-		queue.put(Rendertask(
-			infile = 'pause.svg',
-			outfile = 'pause.dv',
-			sequence = pauseFrames
-		))
+	# place the pause-sequence into the queue
+	queue.put(Rendertask(
+		infile = 'pause.svg',
+		outfile = 'pause.dv',
+		sequence = pauseFrames
+	))
