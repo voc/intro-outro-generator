@@ -1,6 +1,6 @@
 #!/bin/bash
 if ! pushd $1 >/dev/null 2>&1; then
-	echo "call with a project-name, eg. './make-snapshots sotmeu14' after you rendered your dv-files."
+	echo "call with a project-name, eg. './make-snapshots sotmeu14' after you rendered your dv/ts-files."
 	exit 1
 fi
 
@@ -11,9 +11,15 @@ if [ -z $ss ]; then
 fi
 
 for dv in *.dv; do
-	png="snapshot-$(basename $dv .dv).png"
+	png="$dv.png"
 	echo "$dv @ second $ss -> $png"
 	avconv -loglevel error -i $dv -ss $ss -frames:v 1 -vf scale='iw*sar:ih' -f image2 -c png $png;
+done
+
+for ts in *.ts; do
+        png="$ts.png"
+        echo "$ts @ second $ss -> $png"
+        avconv -loglevel error -i $ts -ss $ss -frames:v 1 -vf scale='iw*sar:ih' -f image2 -c png $png;
 done
 
 popd >/dev/null 2>&1
