@@ -34,6 +34,10 @@ def easeInCubic(t, b, c, d):
 	t=float(t)/d
 	return c*(t)*t*t + b;
 
+def easeInQuad(t, b, c, d):
+	t=float(t)/d
+	return c*t*t + b;
+
 def easeOutQuad(t, b, c, d):
 	t=float(t)/d
 	return -c *(t)*(t-2) + b;
