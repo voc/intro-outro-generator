@@ -53,6 +53,15 @@ def easeLinear(t, b, c, d):
 	t=float(t)/d
 	return t*c+b
 
+def easeDelay(easer, delay, t, b, c, d):
+	if t < delay:
+		return b
+
+	if t - delay > d:
+		return b+c
+
+	return easer(t - delay, b, c, d)
+
 class Rendertask:
 	def __init__(self, infile, sequence, parameters={}, outfile=None, workdir='.'):
 		self.infile =  infile
