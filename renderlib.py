@@ -158,7 +158,7 @@ def rendertask(task):
 	# invoke avconv aka ffmpeg and renerate a lossles-dv from the frames
 	#  if we're not in debug-mode, suppress all output
 	if task.outfile.endswith('.ts'):
-		cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -pix_fmt yuv420p -c:v mpeg2video -b:v 5000k -f mpegts -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
+		cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -pix_fmt yuv420p -c:v mpeg2video -qscale 0 -f mpegts -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
 	else:
 		cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
 
