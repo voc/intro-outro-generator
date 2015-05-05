@@ -17,7 +17,9 @@ if len(sys.argv) < 2:
 	print("you must specify a project-name as first argument, eg. './make.py sotmeu14'")
 	sys.exit(1)
 
-projectname = sys.argv[1].strip('/')
+args = sys.argv[1:]
+
+projectname = args.pop(0).strip('/')
 try:
 	project = renderlib.loadProject(projectname)
 except ImportError:
@@ -51,7 +53,7 @@ if renderlib.debug:
 tasks = Queue()
 
 # call into project which generates the tasks
-project.tasks(tasks)
+project.tasks(tasks, args)
 
 # one working thread per cpu
 num_worker_threads = multiprocessing.cpu_count()
