@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="1920"
+   height="1080">
+  <style
+     type="text/css"
+     id="style4">
+    path { fill: #000; stroke-width: 106px; stroke-opacity: 0 }
+    #bg { fill: #fff }
+    #one, #cee, #two {
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    #one {
+      stroke: #f00;
+      animation-name: red;
+    }
+    #cee {
+      stroke: #0f0;
+      animation-name: green;
+    }
+    #two {
+      stroke: #66f;
+      animation-name: blue;
+    }
+    #dot1 {
+      fill: #f0f;
+      animation: dotwalk 23s linear 5s infinite alternate;
+    }
+  </style>
+  <rect
+     style="opacity:1;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect3348"
+     width="1922"
+     height="1082"
+     x="-1"
+     y="-1" />
+  <g
+     id="g3346"
+     transform="translate(5e-6,-9.716398)">
+    <rect
+       height="530"
+       width="1430"
+       y="144.84746"
+       x="245"
+       id="bg" />
+    <path
+       d="m 244.49999,462.84746 106.00001,0 0,-106 -53,0 0,-159 53,0 0,-53 212,0 0,53 106,0 0,-53 371,0 0,53 106,0 0,-53 424,0 0,53 53,0 0,53 53,0 0,-182.203392 -1431,0 z"
+       id="top-border" />
+    <path
+       d="m 1092.5,409.84746 53,0 0,53 -53,0 z"
+       id="dot1" />
+    <path
+       d="m 1622.5,462.84746 53,0 0,53 -53,0 z"
+       id="dot2" />
+    <path
+       d="m 350.5,250.84746 53,0 0,-53 106,0 0,318 106,0 0,53 -318,0 0,-53 106,0 0,-212 -53,0 z"
+       id="one" />
+    <path
+       d="m 668.5,250.84746 53,0 0,-53 264.99999,0 0,53 53.00001,0 0,53 -106,0 0,-53 -159,0 0,265 159,0 0,-53 106,0 0,53 -53.00001,0 0,53 -264.99999,0 0,-53 -53,0 z"
+       id="cee" />
+    <path
+       d="m 1145.5,356.84746 0,-106 53,0 0,-53 265,0 0,53 53,0 0,106 -53,0 0,53 -53,0 0,53 -53,0 0,53 212,0 0,53 -424,0 0,-53 53,0 0,-53 53,0 0,-53 53,0 0,-53 53,0 0,-53 53,0 0,-53 -159,0 0,106 z"
+       id="two" />
+    <path
+       d="m 244.49999,755.08476 1431.00001,0 0,-80.2373 -530,0 0,-53 -53,0 0,53 -795,0 0,-53 -53,0 z"
+       id="bottom-border" />
+  </g>
+  <flowRoot
+     xml:space="preserve"
+     id="text"
+     style="font-size:60px;line-height:125%;font-family:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none" transform="translate(958.0,764.6)">
+    <flowPara id="flowPara4170" style="font-weight:bold">1. Chaos Cologne</flowPara>
+    <flowPara style="fill:#66f" id="flowPara4172">$personnames</flowPara>
+    <flowPara style="fill:#0f0" id="flowPara4174">$title</flowPara>
+    <flowPara style="fill:#f00" id="flowPara3357">$subtitle</flowPara>
+  </flowRoot>
+</svg>
