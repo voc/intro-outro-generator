@@ -36,38 +36,50 @@ def introFramesLight(p):
             ]
 
 def introFramesDot(p):
-    frames = 10*fps
+    frames = int(9.5 * fps)
     steps  = [
-        (5, 0, 159),
-        (33, -848, 159),
-        (37, -848, 53),
-        (40, -742, 53),
-        (43, -742, -106),
-        (45, -795, -106),
-        (47, -795, -212),
-        (49, -742, -212),
-        (51, -742, -265),
-        (56, -583, -265),
-        (58, -583, -212),
-        (63, -424, -212),
-        (65, -424, -265),
-        (75, -106, -265),
-        (77, -106, -212),
-        (81, 0, -212),
-        (86, 0, -53),
-        (93, 0, 0),
-        (100, 0, 0)
+        (0, 0),
+        (0, 159),
+        (-848, 159),
+        (-848, 53),
+        (-742, 53),
+        (-742, -106),
+        (-795, -106),
+        (-795, -212),
+        (-742, -212),
+        (-742, -265),
+        (-583, -265),
+        (-583, -212),
+        (-424, -212),
+        (-424, -265),
+        (-106, -265),
+        (-106, -212),
+        (0, -212),
+        (0, -53),
+        (0, 0)
     ]
 
+    steps_with_shift = [(0,0,0)]
+    total_shift = 0
+    for (oldx, oldy), (x, y) in zip(steps, steps[1:]):
+        duration = abs(x - oldx) + abs(y - oldy)
+        total_shift += duration
+        steps_with_shift.append((duration, x, y))
+
     prev = (0, 0, 0)
-    for step in steps:
-        dur = int((step[0] - prev[0]) * frames / 100)
+    for step in steps_with_shift:
+        dur = int(frames * step[0] / total_shift)
         for i in range(0, dur):
             yield [
                 ('dot1', 'attr', 'transform', 'translate({:.4f}, {:.4f})'.format(easeLinear(i, prev[1], step[1]-prev[1], dur),
                                                                                  easeLinear(i, prev[2], step[2]-prev[2], dur)))
             ]
         prev = step
+
+    for _ in range(int(0.5 * fps)):
+        yield [
+            ('dot1', 'attr', 'transform', 'translate(0, 0)')
+        ]
 
 def introFrameText(p):
     frames = 2*fps
