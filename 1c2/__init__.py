@@ -3,6 +3,14 @@
 from renderlib import *
 from itertools import zip_longest
 
+# URL to Schedule-XML
+scheduleUrl = 'http://chaos.cologne/Fahrplan/schedule.xml'
+
+# For (really) too long titles
+titlemap = {
+
+}
+
 def introFramesLight(p):
     frames = int(1.5*fps)
     max_opac = 0.7
@@ -70,12 +78,12 @@ def introFrameText(p):
         ]
 
 def introFrames(p):
-    for e in zip_longest(zip(introFramesDot(p), introFramesLight(p)), introFrameText(p), fillvalue=[('text', 'style', 'opacity', '1')]):
-        yield e[0][0] + e[0][1] + e[1]
+    for (i, j), z in zip_longest(zip(introFramesDot(p), introFramesLight(p)), introFrameText(p), fillvalue=[]):
+        yield i + j + z
 
 def outroFrames(p):
     # 5 Sekunden stehen bleiben
-    frames = 1*fps
+    frames = 5*fps
     for i in range(0, frames):
         yield []
 
@@ -92,11 +100,30 @@ def debug():
         }
     )
 
-#   render(
-#       'outro.svg',
-#       '../outro.ts',
-#       outroFrames
-#   )
+    render(
+        'outro.svg',
+        '../outro.ts',
+        outroFrames
+    )
 
-def tasks(queue):
-    raise NotImplementedError('call with --debug to render your intro/outro')
+def tasks(queue, args):
+    # iterate over all events extracted from the schedule xml-export
+    for event in events(scheduleUrl):
+        # generate a task description and put them into the queue
+        queue.put(Rendertask(
+            infile = 'intro.svg',
+            outfile = str(event['id'])+'.ts',
+            sequence = introFrames,
+            parameters = {
+                '$id': event['id'],
+                '$title': event['title'],
+                '$subtitle': event['subtitle'],
+                '$personnames': event['personnames']
+            }
+        ))
+
+    queue.put(Rendertask(
+        infile = 'outro.svg',
+        outfile = 'outro.ts',
+        sequence = outroFrames
+    ))

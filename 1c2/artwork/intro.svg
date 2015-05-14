@@ -9,26 +9,10 @@
      id="style4">
     path { fill: #000; stroke-width: 106px; stroke-opacity: 0 }
     #bg { fill: #fff }
-    #one, #cee, #two {
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-    }
-    #one {
-      stroke: #f00;
-      animation-name: red;
-    }
-    #cee {
-      stroke: #0f0;
-      animation-name: green;
-    }
-    #two {
-      stroke: #66f;
-      animation-name: blue;
-    }
-    #dot1 {
-      fill: #f0f;
-      animation: dotwalk 23s linear 5s infinite alternate;
-    }
+    #one { stroke: #f00 }
+    #cee { stroke: #0f0 }
+    #two { stroke: #66f }
+    #dot1 { fill: #f0f }
   </style>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -75,6 +59,6 @@
     <flowPara id="flowPara4170" style="font-weight:bold">1. Chaos Cologne</flowPara>
     <flowPara style="fill:#66f" id="flowPara4172">$personnames</flowPara>
     <flowPara style="fill:#0f0" id="flowPara4174">$title</flowPara>
-    <flowPara style="fill:#f00" id="flowPara3357">$subtitle</flowPara>
+    <flowPara style="font-size:40px;fill:#f00" id="flowPara3357">$subtitle</flowPara>
   </flowRoot>
 </svg>
