@@ -8,17 +8,24 @@ scheduleUrl = 'http://chaos.cologne/Fahrplan/schedule.xml'
 
 # For (really) too long titles
 titlemap = {
+    6620: "Konzert: Patchbay extended",
+    6656: "Messung von Biosignalen in Videos",
+}
 
+# For (really) too long subtitles
+subtitlemap = {
+    6620: "Boolean Disasters and Ghostnik Melodies",
 }
 
 def introFramesLight(p):
-    frames = int(1.5*fps)
+    frames = 1*fps
     max_opac = 0.7
 
     while True:
         for i in range(0, frames):
             yield [
-                ('one', 'style', 'stroke-opacity', '{:.4f}'.format(easeLinear(i, 0, max_opac, frames)))
+                ('one', 'style', 'stroke-opacity', '{:.4f}'.format(easeLinear(i, 0, max_opac, frames))),
+                ('two', 'style', 'stroke-opacity', '0')
             ]
         for i in range(0, frames):
             yield [
@@ -27,16 +34,18 @@ def introFramesLight(p):
             ]
         for i in range(0, frames):
             yield [
+                ('one', 'style', 'stroke-opacity', '0'),
                 ('cee', 'style', 'stroke-opacity', '{:.4f}'.format(easeLinear(frames-i, 0, max_opac, frames))),
                 ('two', 'style', 'stroke-opacity', '{:.4f}'.format(easeLinear(i, 0, max_opac, frames)))
             ]
         for i in range(0, frames):
             yield [
+                ('cee', 'style', 'stroke-opacity', '0'),
                 ('two', 'style', 'stroke-opacity', '{:.4f}'.format(easeLinear(frames-i, 0, max_opac, frames)))
             ]
 
 def introFramesDot(p):
-    frames = int(9.5 * fps)
+    frames = 11*fps
     steps  = [
         (0, 0),
         (0, 159),
@@ -76,13 +85,13 @@ def introFramesDot(p):
             ]
         prev = step
 
-    for _ in range(int(0.5 * fps)):
+    for _ in range(0, int(1.5*fps)):
         yield [
             ('dot1', 'attr', 'transform', 'translate(0, 0)')
         ]
 
 def introFrameText(p):
-    frames = 2*fps
+    frames = 3*fps
 
     for i in range(0, frames):
         yield [
@@ -93,6 +102,10 @@ def introFrames(p):
     for (i, j), z in zip_longest(zip(introFramesDot(p), introFramesLight(p)), introFrameText(p), fillvalue=[]):
         yield i + j + z
 
+def pauseFrames(p):
+    for i, j in zip(introFramesDot(p), introFramesLight(p)):
+        yield i + j
+
 def outroFrames(p):
     # 5 Sekunden stehen bleiben
     frames = 5*fps
@@ -100,6 +113,18 @@ def outroFrames(p):
         yield []
 
 def debug():
+    render(
+        'pause.svg',
+        '../pause.ts',
+        pauseFrames
+    )
+
+    render(
+        'outro.svg',
+        '../outro.ts',
+        outroFrames
+    )
+
     render(
         'intro.svg',
         '../intro.ts',
@@ -112,24 +137,25 @@ def debug():
         }
     )
 
-    render(
-        'outro.svg',
-        '../outro.ts',
-        outroFrames
-    )
-
 def tasks(queue, args):
+    queue.put(Rendertask(
+        infile = 'pause.svg',
+        outfile = 'pause.ts',
+        sequence = pauseFrames
+    ))
+
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
+        id = event['id']
         # generate a task description and put them into the queue
         queue.put(Rendertask(
             infile = 'intro.svg',
             outfile = str(event['id'])+'.ts',
             sequence = introFrames,
             parameters = {
-                '$id': event['id'],
-                '$title': event['title'],
-                '$subtitle': event['subtitle'],
+                '$id': id,
+                '$title': titlemap[id] if id in titlemap else event['title'],
+                '$subtitle': subtitlemap[id] if id in subtitlemap else event['subtitle'],
                 '$personnames': event['personnames']
             }
         ))
