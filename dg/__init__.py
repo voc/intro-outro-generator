@@ -45,9 +45,9 @@ def debug():
 		'../intro.ts',
 		introFrames,
 		parameters={
-			'$id': 50,
-			'$title': 'ZigBee',
-			'$person': 'Stephan'
+			'$id': 51,
+			'$title': 'Puppet … Konfigurationsmanagement',
+			'$person': 'Robert'
 		}
 	)
 
