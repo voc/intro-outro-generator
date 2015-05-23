@@ -77,9 +77,9 @@
          x="169.14554"
          y="597.20709"
          style="line-height:150%" /></flowRegion><flowPara
-       id="flowPara3020"
+       id="personnames"
        style="font-size:47.94689941px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:150%;fill:#1ec290;fill-opacity:1;font-family:TeX Gyre Adventor;-inkscape-font-specification:TeX Gyre Adventor">$personnames</flowPara><flowPara
-       id="flowPara3022"
+       id="title"
        style="font-size:58px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:120.00000477000000387%;font-family:TeX Gyre Adventor;-inkscape-font-specification:TeX Gyre Adventor Bold;fill:#4d3823;fill-opacity:1">$title</flowPara><flowPara
        style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:150%;fill:#6f5d4a;fill-opacity:1;font-family:TeX Gyre Adventor;-inkscape-font-specification:TeX Gyre Adventor"
-       id="flowPara3016">$subtitle</flowPara></flowRoot></svg>
+       id="subtitle">$subtitle</flowPara></flowRoot></svg>
