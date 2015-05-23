@@ -1,5 +1,6 @@
 *.mp4
 *.dv
+*.ts
 *.pyc
 schedule.de.xml
 .frames
