@@ -111,15 +111,10 @@ def debug():
 	)
 
 def tasks(queue):
-	uid = []
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl):
-		if event['id'] in uid:
-			continue
 
-		uid.append(event['id'])
-
-		# generate a task description and put them into the queue
+		# generate a task description and put it into the queue
 		queue.put(Rendertask(
 			infile = 'intro.svg',
 			outfile = str(event['id'])+".dv",
