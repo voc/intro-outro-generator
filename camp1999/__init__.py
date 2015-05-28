@@ -2,6 +2,10 @@
 
 from renderlib import *
 
+# URL to Schedule-XML
+scheduleUrl = 'http://annaberg6.de/stuff/camp99/schedule.xml'
+
+
 def introFrames(p):
 	move=50
 
@@ -67,8 +71,22 @@ def debug():
 		outroFrames
 	)
 
-def tasks(queue):
-	raise NotImplementedError('call with --debug to render your intro/outro')
+def tasks(queue, args):
+        # iterate over all events extracted from the schedule xml-export
+        for event in events(scheduleUrl):
+
+                queue.put(Rendertask(
+                        infile = 'intro.svg',
+                        outfile = str(event['id'])+".dv",
+                        sequence = introFrames,
+                        parameters = {
+                                '$id': event['id'],
+                                '$title': event['title'],
+                                '$subtitle': event['subtitle'],
+                                '$personnames': event['personnames'],
+                                '$person': event['personnames']
+                        }
+                ))
 
 
 def ticket(ticket):

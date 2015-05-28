@@ -78,14 +78,14 @@
        y="476.36218"
        x="222"
        id="image3818"
-       xlink:href="file:///home/peter/AAA-VOC/intro-outro-generator/camp1999/artwork/no-rocket.gif"
+       xlink:href="file:///home/git/intro-generator/camp1999/artwork/no-rocket.gif"
        height="170"
        width="580" />
     <image
        y="476.36218"
        x="222"
        id="rocket"
-       xlink:href="file:///home/peter/AAA-VOC/intro-outro-generator/camp1999/artwork/rocket.gif"
+       xlink:href="file:///home/git/intro-generator/camp1999/artwork/rocket.gif"
        height="170"
        width="580"
        style="opacity:1"
@@ -102,11 +102,11 @@
          id="tspan3781"
          x="318.5"
          y="826.86218"
-         style="font-size:72px;font-style:normal;fill:#ffffff;fill-opacity:1;font-family:Minecraftia;-inkscape-font-specification:Minecraftia">THE END!!!</tspan></text>
+         style="font-size:72px;font-style:normal;fill:#ffffff;fill-opacity:1;font-family:Minecraftia;-inkscape-font-specification:Minecraftia">Licensed to the public under CC-BY-SA 3.0</tspan></text>
     <image
        width="315.27777"
        height="227"
-       xlink:href="file:///home/peter/AAA-VOC/intro-outro-generator/camp1999/artwork/chaosknoten.gif"
+       xlink:href="file:///home/git/intro-generator/camp1999/artwork/chaosknoten.gif"
        id="knoten"
        x="354.36111"
        y="818.36218"

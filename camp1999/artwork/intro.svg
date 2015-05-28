@@ -78,14 +78,14 @@
        y="476.36218"
        x="222"
        id="image3818"
-       xlink:href="file:///home/peter/AAA-VOC/intro-outro-generator/camp1999/artwork/no-rocket.gif"
+       xlink:href="file:///home/git/intro-generator/camp1999/artwork/no-rocket.gif"
        height="170"
        width="580" />
     <image
        y="476.36218"
        x="222"
        id="rocket"
-       xlink:href="file:///home/peter/AAA-VOC/intro-outro-generator/camp1999/artwork/rocket.gif"
+       xlink:href="file:///home/git/intro-generator/camp1999/artwork/rocket.gif"
        height="170"
        width="580"
        style="opacity:1"
@@ -96,7 +96,7 @@
       <image
          width="150"
          height="108"
-         xlink:href="file:///home/peter/AAA-VOC/intro-outro-generator/camp1999/artwork/chaosknoten.gif"
+         xlink:href="file:///home/git/intro-generator/camp1999/artwork/chaosknoten.gif"
          id="image3807"
          x="238.20825"
          y="889.34686" />
@@ -127,6 +127,6 @@
          id="tspan3781"
          x="381.5"
          y="840.86218"
-         style="font-size:72px;font-style:normal;fill:#ffffff;fill-opacity:1;font-family:Minecraftia;-inkscape-font-specification:Minecraftia">1999!!!</tspan></text>
+         style="font-size:72px;font-style:normal;fill:#ffffff;fill-opacity:1;font-family:Minecraftia;-inkscape-font-specification:Minecraftia">cccamp_1999</tspan></text>
   </g>
 </svg>
