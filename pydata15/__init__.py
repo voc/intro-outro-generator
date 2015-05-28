@@ -126,3 +126,10 @@ def tasks(queue):
 				'$personnames': event['personnames']
 			}
 		))
+
+	# generate a task description and put it into the queue
+	queue.put(Rendertask(
+		infile = 'outro.svg',
+		outfile = 'outro.dv',
+		sequence = outroFrames
+	))
