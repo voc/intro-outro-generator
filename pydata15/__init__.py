@@ -110,7 +110,7 @@ def debug():
 		}
 	)
 
-def tasks(queue):
+def tasks(queue, parameters):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl):
 
