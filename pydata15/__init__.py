@@ -9,7 +9,7 @@ scheduleUrl = 'https://raw.githubusercontent.com/pydataberlin/pydataberlin.githu
 
 # For (really) too long titles
 titlemap = {
-	
+	69233462: 'pyData Berlin 2015: keynote'
 }
 
 def introFrames(parameters):
