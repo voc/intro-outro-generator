@@ -91,7 +91,31 @@ def outroFrames(parameters):
 			('text', 'style', 'opacity', easeLinear(i, 1, -1, frames)),
 		)
 
+
+def pauseFrames(parameters):
+	frames = 10*fps
+	for i in range(0, frames):
+		yield (
+			('pause1', 'attr',   'x', '%.4f' % easeLinear(i, -268, 1295, frames)),
+			('pause1', 'style', 'opacity', 1),
+			('pause2', 'style', 'opacity', 0),
+		)
+
+	frames = 10*fps
+	for i in range(0, frames):
+		yield (
+			('pause2', 'attr',   'x', '%.4f' % easeLinear(i, -268, 1295, frames)),
+			('pause2', 'style', 'opacity', 1),
+			('pause1', 'style', 'opacity', 0),
+		)
+
 def debug():
+	render(
+		'pause.svg',
+		'../pause.dv',
+		pauseFrames
+	)
+
 	render(
 		'outro.svg',
 		'../outro.dv',
@@ -132,4 +156,11 @@ def tasks(queue, parameters):
 		infile = 'outro.svg',
 		outfile = 'outro.dv',
 		sequence = outroFrames
+	))
+
+	# generate a task description and put it into the queue
+	queue.put(Rendertask(
+		infile = 'pause.svg',
+		outfile = 'pause.dv',
+		sequence = pauseFrames
 	))
