@@ -47,7 +47,7 @@ def debug():
 		parameters={
 			'$id': 52,
 			'$title': 'Reproducible Builds',
-			'$person': 'H01ger'
+			'$person': 'h01ger'
 		}
 	)
 
