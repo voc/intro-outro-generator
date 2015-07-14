@@ -157,14 +157,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="761.4239"
-     inkscape:cy="640.42026"
+     inkscape:cx="764.28104"
+     inkscape:cy="468.99169"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="993"
-     inkscape:window-x="0"
+     inkscape:window-x="1280"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="true"
@@ -243,33 +243,30 @@
        x="0"
        y="-27.637817" />
     <image
-       y="320.36218"
-       x="864"
-       id="image3803"
+       sodipodi:absref="/home/peter/AAA-VOC/intro-outro-generator/dg/artwork/datengarten-alpha.png"
        xlink:href="datengarten-alpha.png"
+       width="192"
        height="192"
-       width="192" />
-    <text
+       id="image3803"
+       x="864"
+       y="320.36218" />
+    <flowRoot
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
-       x="959.53125"
-       y="578.07648"
        id="text"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3808"
-         x="959.53125"
-         y="578.07648"
-         style="text-align:center;text-anchor:middle;font-size:64px">Datengarten $id</tspan><tspan
-         sodipodi:role="line"
-         x="959.53125"
-         y="628.07648"
-         id="tspan3810"
-         style="text-align:center;text-anchor:middle;font-size:72px;font-weight:bold;-inkscape-font-specification:Courier 10 Pitch Bold">$title</tspan><tspan
-         sodipodi:role="line"
-         x="959.53125"
-         y="678.07648"
-         id="tspan3812"
-         style="text-align:center;text-anchor:middle">$person</tspan></text>
-  </g>
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       transform="translate(0,-27.63782)"
+       inkscape:label="#flowRoot3029"><flowRegion
+         id="flowRegion3031"><rect
+           id="rect3033"
+           width="1855.7142"
+           height="514.28571"
+           x="32.857143"
+           y="540"
+           style="font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch" /></flowRegion><flowPara
+         id="flowPara3035"
+         style="font-size:64px;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch">Datengarten $id</flowPara><flowPara
+         id="flowPara3037"
+         style="font-size:72px;font-weight:bold;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch Bold">$title</flowPara><flowPara
+         id="flowPara3039"
+         style="text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch">$person</flowPara></flowRoot>  </g>
 </svg>
