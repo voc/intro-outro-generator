@@ -57,5 +57,5 @@ def debug():
 		outroFrames
 	)
 
-def tasks(queue):
+def tasks(queue, args):
 	raise NotImplementedError('call with --debug to render your intro/outro')
