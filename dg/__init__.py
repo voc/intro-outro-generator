@@ -45,9 +45,9 @@ def debug():
 		'../intro.ts',
 		introFrames,
 		parameters={
-			'$id': 52,
-			'$title': 'Reproducible Builds',
-			'$person': 'h01ger'
+			'$id': 55,
+			'$title': 'Technology and data use among vulnerable communities',
+			'$person': 'Zara Rahman'
 		}
 	)
 
