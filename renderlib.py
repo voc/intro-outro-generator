@@ -24,43 +24,14 @@ def loadProject(projectname):
 	sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), projectname))
 	return __import__(projectname)
 
-# t: current time, b: begInnIng value, c: change In value, d: duration
-# copied from jqueryui
-def easeOutCubic(t, b, c, d):
-	t=float(t)/d-1
-	return c*((t)*t*t + 1) + b
-
-def easeInCubic(t, b, c, d):
-	t=float(t)/d
-	return c*(t)*t*t + b;
-
-def easeInQuad(t, b, c, d):
-	t=float(t)/d
-	return c*t*t + b;
-
-def easeOutQuad(t, b, c, d):
-	t=float(t)/d
-	return -c *(t)*(t-2) + b;
-
-def easeInOutQuad(t, b, c, d):
-	t=float(t)/(d/2)
-	if (t < 1):
-		return c/2*t*t + b;
-	t=t-1
-	return -c/2 * (t*(t-2) - 1) + b;
-
-def easeLinear(t, b, c, d):
-	t=float(t)/d
-	return t*c+b
-
-def easeDelay(easer, delay, t, b, c, d):
+def easeDelay(easer, delay, t, b, c, d, *args):
 	if t < delay:
 		return b
 
 	if t - delay > d:
 		return b+c
 
-	return easer(t - delay, b, c, d)
+	return easer(t - delay, b, c, d, *args)
 
 class Rendertask:
 	def __init__(self, infile, sequence, parameters={}, outfile=None, workdir='.'):
@@ -175,7 +146,7 @@ def rendertask(task):
 		print("cleanup")
 
 	# remove the .frames-dir with all frames in it
-	shutil.rmtree(os.path.join(task.workdir, '.frames'))
+	#shutil.rmtree(os.path.join(task.workdir, '.frames'))
 
 	# remove the generated svg
 	ensureFilesRemoved(os.path.join(task.workdir, '.gen.svg'))
