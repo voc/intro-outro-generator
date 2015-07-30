@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-import random
+import random, sys
 from renderlib import *
+from easing import *
 
 scheduleUrl = 'https://events.ccc.de/camp/2015/Fahrplan/schedule.xml'
 titlemap = {}
@@ -18,7 +19,7 @@ def introFrames(parameters):
 	targets = {}
 
 	frames = 5*fps
-	maxdelay = int(frames/4)
+	maxdelay = int(frames/2)
 
 	for tile in tiles:
 		targets[tile] = (
@@ -31,7 +32,7 @@ def introFrames(parameters):
 		)
 
 	# 5 Sekunde Kacheln zusammenbauen
-	for i in range(0, frames):
+	for i in range(0, frames+maxdelay):
 		placements = []
 		for tile in tiles:
 			delay = targets[tile][2]
@@ -39,14 +40,26 @@ def introFrames(parameters):
 			tx = targets[tile][0]
 			ty = targets[tile][1]
 
-			x = easeDelay(easeInOutQuad, delay, i, tx, -tx, frames-maxdelay)
-			y = easeDelay(easeInOutQuad, delay, i, ty, -ty, frames-maxdelay)
+			x = easeDelay(easeOutQuint, delay, i, tx, -tx, frames)
+			y = easeDelay(easeOutQuint, delay, i, ty, -ty, frames)
 
 			placements.append(
 				('g%u' % tile, 'attr', 'transform', 'translate(%.4f, %.4f)' % (x, y))
 			)
 
 		yield placements
+
+
+	# final placement
+	placements = []
+	for tile in tiles:
+		placements.append(
+			('g%u' % tile, 'attr', 'transform', 'translate(%.4f, %.4f)' % (0, 0))
+		)
+
+	# final frame
+	yield placements
+
 
 def outroFrames(p):
 	# 5 Sekunden stehen bleiben
