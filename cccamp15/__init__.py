@@ -150,7 +150,7 @@ def tasks(queue, args):
 			sequence = introFrames,
 			parameters = {
 				'$id': event['id'],
-				'$title': event['title'],
+				'$title': event['title'].upper(),
 				'$subtitle': event['subtitle'],
 				'$personnames': event['personnames']
 			}

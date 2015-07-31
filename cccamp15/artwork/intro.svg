@@ -7,7 +7,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1920"
@@ -27,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="771.01569"
-     inkscape:cy="614.78598"
+     inkscape:cx="297.589"
+     inkscape:cy="610.74537"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -546,17 +545,13 @@
            y="15.07449"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.50000381px;line-height:100%;font-family:Neris;-inkscape-font-specification:Neris;text-align:center;text-anchor:middle" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:80.00000763px;line-height:100%;font-family:Neris;-inkscape-font-specification:'Neris Light';text-align:start;letter-spacing:-3.00000024px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-         id="flowPara3567">#2342</flowPara><flowPara
+         id="flowPara3567">#$id</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:80.00000763px;line-height:100%;font-family:Neris;-inkscape-font-specification:'Neris Heavy';text-align:start;letter-spacing:-3.00000024px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-         id="flowPara4475">HOW NOT TO SEE</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:80.00000763px;line-height:100%;font-family:Neris;-inkscape-font-specification:'Neris Heavy';text-align:start;letter-spacing:-3.00000024px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-         id="flowPara4477">FNORDS</flowPara><flowPara
+         id="flowPara4477">$title</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:80.00000763px;line-height:100%;font-family:Neris;-inkscape-font-specification:'Neris Light';text-align:start;letter-spacing:-3.00000024px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-         id="flowPara4479">if you don't see the fnord, it</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:80.00000763px;line-height:100%;font-family:Neris;-inkscape-font-specification:'Neris Light';text-align:start;letter-spacing:-3.00000024px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-         id="flowPara4481">can't eat you</flowPara><flowPara
+         id="flowPara4481">$subtitle</flowPara><flowPara
          style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-size:80.00000763px;line-height:100%;font-family:Neris;-inkscape-font-specification:'Neris Light Italic';text-align:start;letter-spacing:-3.00000024px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#918f90;fill-opacity:1"
-         id="flowPara4483">alice, bob, carol, eve</flowPara></flowRoot>    <g
+         id="flowPara4483">$personnames</flowPara></flowRoot>    <g
        id="g4867"
        transform="translate(-60.000003,-60.000006)">
       <g
