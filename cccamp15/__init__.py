@@ -49,6 +49,14 @@ def introFrames(parameters):
 				('g%u' % tile, 'attr', 'transform', 'translate(%.4f, %.4f)' % (x, y))
 			)
 
+		x = easeDelay(easeOutQuint, frames, i, -25, 25, maxdelay)
+		opacity = easeDelay(easeLinear, frames, i, 0, 1, maxdelay)
+
+		placements.extend([
+			('text', 'style', 'opacity', '%.4f' % opacity),
+			('text', 'attr', 'transform', 'translate(%.4f, 0)' % x)
+		])
+
 		yield placements
 
 
