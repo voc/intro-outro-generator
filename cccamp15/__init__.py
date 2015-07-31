@@ -19,16 +19,18 @@ def introFrames(parameters):
 	targets = {}
 
 	frames = 5*fps
-	maxdelay = int(frames/2)
+	maxdelay = 0
 
 	for tile in tiles:
+		delay = rnd.randint(0, frames)
+		maxdelay = max(maxdelay, delay)
 		targets[tile] = (
 			# x/y
 			rnd.randint(-1200, -800),
 			rnd.randint(-600, 600),
 
 			# delay
-			rnd.randint(0, maxdelay)
+			delay
 		)
 
 	# 5 Sekunde Kacheln zusammenbauen
