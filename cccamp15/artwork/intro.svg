@@ -78,16 +78,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,27.637408)">
-    <image
-       sodipodi:absref="/home/peter/AAA-VOC/intro-outro-generator/cccamp15/artwork/title.jpg"
-       xlink:href="title.jpg"
-       y="272.93396"
-       x="85.714287"
-       id="image3550"
-       preserveAspectRatio="none"
-       height="1080.0001"
-       width="1920.0001"
-       style="opacity:0" />
     <g
        transform="matrix(1.25,0,0,-1.25,195.11427,1166.1521)"
        id="logo"
