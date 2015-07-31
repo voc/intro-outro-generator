@@ -12,8 +12,7 @@ def introFrames(parameters):
 	title = titlemap[id] if id in titlemap else parameters['$title'].strip()
 
 	rnd = random.Random()
-	#rnd.seed(title)
-	rnd.seed("blafoo23")
+	rnd.seed(id)
 
 	tiles = range(1, 28)
 	targets = {}
@@ -26,7 +25,7 @@ def introFrames(parameters):
 		maxdelay = max(maxdelay, delay)
 		targets[tile] = (
 			# x/y
-			rnd.randint(-1200, -820),
+			rnd.randint(-1200, -900),
 			rnd.randint(-600, 600),
 
 			# delay
@@ -54,7 +53,8 @@ def introFrames(parameters):
 
 		placements.extend([
 			('text', 'style', 'opacity', '%.4f' % opacity),
-			('text', 'attr', 'transform', 'translate(%.4f, 0)' % x)
+			('text', 'attr', 'transform', 'translate(%.4f, 0)' % x),
+			('rocket', 'style', 'opacity', '0'),
 		])
 
 		yield placements
@@ -75,24 +75,39 @@ def introFrames(parameters):
 	# final frame
 	yield placements
 
-	return
+	# start rotation
+	dr = 30
+
+	# start point
+	dx = -890
+	dy = 660
+
+	# distance from origin
+	ox = 830
+	oy = 576
+
+	# landing height
+	lh = 15
 
 	# fly the rocket
-	dr = 20.000
-	dx = 1648.5714
-	dy = -1562.8571
-
-	ox = -111.42858
-	oy = 1265.7144
-
 	frames = 3*fps
 	for i in range(0, frames):
-		r = easeLinear(i, 0, dr, frames)
-		x = easeLinear(i, 0, dx, frames)
-		y = easeLinear(i, 0, dy, frames)
+		r = easeOutQuad(i, dr, -dr, frames)
+		x = easeOutQuad(i, dx, -dx, frames)
+		y = easeOutQuad(i, dy, -dy - lh, frames)
 
 		yield (
-			('rocket', 'attr', 'transform', 'rotate(%.4f, %.4f, %.4f) translate(%.4f, %.4f)' % (r, ox+x, oy+y, x, y)),
+			('rocket', 'style', 'opacity', '1'),
+			('rocket', 'attr', 'transform', 'translate(%.4f, %.4f) rotate(%.4f, %.4f, %.4f)' % (x, y, r, ox, oy)),
+		)
+
+	# land the rocket
+	frames = 1*fps
+	for i in range(0, frames):
+		y = easeLinear(i, -lh, lh, frames)
+
+		yield (
+			('rocket', 'attr', 'transform', 'translate(0, %.4f)' % y),
 		)
 
 
@@ -122,4 +137,22 @@ def debug():
 	# )
 
 def tasks(queue, args):
-	raise NotImplementedError('call with --debug to render your intro/outro')
+	# iterate over all events extracted from the schedule xml-export
+	for event in events(scheduleUrl):
+
+		# HACK: only render event 49
+		#if event['id'] != 49:
+		#	continue
+
+		queue.put(Rendertask(
+			infile = 'intro.svg',
+			outfile = str(event['id'])+".ts",
+			sequence = introFrames,
+			parameters = {
+				'$id': event['id'],
+				'$title': event['title'],
+				'$subtitle': event['subtitle'],
+				'$personnames': event['personnames']
+			}
+		))
+

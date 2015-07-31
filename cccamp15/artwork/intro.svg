@@ -27,10 +27,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="640.65224"
-     inkscape:cy="633.69474"
+     inkscape:cx="771.01569"
+     inkscape:cy="614.78598"
      inkscape:document-units="px"
-     inkscape:current-layer="g4867"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1014"
@@ -53,7 +53,7 @@
        inkscape:label=""
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
-       position="1041.4286,879.99999"
+       position="872.77184,1028.3353"
        orientation="0,1"
        id="guide4485" />
     <sodipodi:guide
@@ -550,10 +550,10 @@
        inkscape:label="#flowRoot3553"><flowRegion
          id="flowRegion3555"><rect
            id="rect3557"
-           width="854.14764"
-           height="577.59332"
-           x="947.17649"
-           y="163.074498"
+           width="856.16803"
+           height="729.11627"
+           x="947.17651"
+           y="15.07449"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.50000381px;line-height:100%;font-family:Neris;-inkscape-font-specification:Neris;text-align:center;text-anchor:middle" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:80.00000763px;line-height:100%;font-family:Neris;-inkscape-font-specification:'Neris Light';text-align:start;letter-spacing:-3.00000024px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
          id="flowPara3567">#2342</flowPara><flowPara
@@ -1034,8 +1034,7 @@
          inkscape:connector-curvature="0"
          inkscape:label="#path344" />
       <g
-         id="rocket"
-         inkscape:label="#g6441">
+         id="rocket">
         <path
            inkscape:connector-curvature="0"
            id="path364"
