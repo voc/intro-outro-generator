@@ -15,7 +15,7 @@ def introFrames(parameters):
 	#rnd.seed(title)
 	rnd.seed("blafoo23")
 
-	tiles = range(1, 27)
+	tiles = range(1, 28)
 	targets = {}
 
 	frames = 5*fps
@@ -26,7 +26,7 @@ def introFrames(parameters):
 		maxdelay = max(maxdelay, delay)
 		targets[tile] = (
 			# x/y
-			rnd.randint(-1200, -800),
+			rnd.randint(-1200, -820),
 			rnd.randint(-600, 600),
 
 			# delay
@@ -64,11 +64,36 @@ def introFrames(parameters):
 	placements = []
 	for tile in tiles:
 		placements.append(
-			('g%u' % tile, 'attr', 'transform', 'translate(%.4f, %.4f)' % (0, 0))
+			('g%u' % tile, 'attr', 'transform', 'translate(%.4f, %.4f)' % (0, 0)),
 		)
+
+	placements.extend([
+		('text', 'style', 'opacity', '%.4f' % 1),
+		('text', 'attr', 'transform', 'translate(%.4f, 0)' % 0)
+	])
 
 	# final frame
 	yield placements
+
+	return
+
+	# fly the rocket
+	dr = 20.000
+	dx = 1648.5714
+	dy = -1562.8571
+
+	ox = -111.42858
+	oy = 1265.7144
+
+	frames = 3*fps
+	for i in range(0, frames):
+		r = easeLinear(i, 0, dr, frames)
+		x = easeLinear(i, 0, dx, frames)
+		y = easeLinear(i, 0, dy, frames)
+
+		yield (
+			('rocket', 'attr', 'transform', 'rotate(%.4f, %.4f, %.4f) translate(%.4f, %.4f)' % (r, ox+x, oy+y, x, y)),
+		)
 
 
 def outroFrames(p):
