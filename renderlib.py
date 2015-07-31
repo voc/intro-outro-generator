@@ -146,7 +146,7 @@ def rendertask(task):
 		print("cleanup")
 
 	# remove the .frames-dir with all frames in it
-	#shutil.rmtree(os.path.join(task.workdir, '.frames'))
+	shutil.rmtree(os.path.join(task.workdir, '.frames'))
 
 	# remove the generated svg
 	ensureFilesRemoved(os.path.join(task.workdir, '.gen.svg'))
