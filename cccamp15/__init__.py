@@ -33,6 +33,8 @@ def introFrames(parameters):
 			delay
 		)
 
+	print('useddelay=%u maxdelay=%u' % (useddelay, maxdelay))
+
 	# 5 Sekunde Kacheln zusammenbauen
 	for i in range(0, frames+useddelay):
 		placements = []
@@ -49,8 +51,8 @@ def introFrames(parameters):
 				('g%u' % tile, 'attr', 'transform', 'translate(%.4f, %.4f)' % (x, y))
 			)
 
-		x = easeDelay(easeOutQuint, frames, i, -25, 25, maxdelay)
-		opacity = easeDelay(easeLinear, frames, i, 0, 1, maxdelay)
+		x = easeDelay(easeOutQuint, frames, i, -25, 25, useddelay)
+		opacity = easeDelay(easeLinear, frames, i, 0, 1, useddelay)
 
 		placements.extend([
 			('text', 'style', 'opacity', '%.4f' % opacity),
@@ -111,6 +113,7 @@ def introFrames(parameters):
 			('rocket', 'attr', 'transform', 'translate(0, %.4f)' % y),
 		)
 
+	print('remaining frames=%u' % (maxdelay - useddelay))
 	# stay there 1.5s + fill up flyin-delay
 	frames = 25+13 + maxdelay - useddelay
 	for i in range(0, frames):
@@ -132,10 +135,36 @@ def introFrames(parameters):
 		('fade', 'style', 'opacity', '1'),
 	)
 
-
 def outroFrames(p):
-	# 5 Sekunden stehen bleiben
-	frames = 5*fps
+	# 3 Sekunden VOC-Logo
+	frames = 3*fps
+	for i in range(0, frames):
+		yield (
+			('b', 'style', 'opacity', '0'),
+			('black', 'style', 'opacity', '0'),
+			('a', 'style', 'opacity', '1'),
+		)
+
+	# 1 Sekunden Fade to Black
+	frames = 1*fps
+	for i in range(0, frames):
+		yield (
+			('b', 'style', 'opacity', '0'),
+			('black', 'style', 'opacity', '%.4f' % easeLinear(i, 0, 1, frames)),
+			('a', 'style', 'opacity', '%.4f' % easeLinear(i, 1, -1, frames)),
+		)
+
+	# 1 Sekunden Fade in CCC-Text
+	frames = 1*fps
+	for i in range(0, frames):
+		yield (
+			('b', 'style', 'opacity', '%.4f' % easeLinear(i, 0, 1, frames)),
+			('black', 'style', 'opacity', '1'),
+			('a', 'style', 'opacity', '0'),
+		)
+
+	# 3 Sekunden stay-there
+	frames = 3*fps
 	for i in range(0, frames):
 		yield []
 
@@ -152,11 +181,11 @@ def debug():
 		}
 	)
 
-	# render(
-	# 	'outro.svg',
-	# 	'../outro.ts',
-	# 	outroFrames
-	# )
+	render(
+		'outro.svg',
+		'../outro.ts',
+		outroFrames
+	)
 
 def tasks(queue, args):
 	# iterate over all events extracted from the schedule xml-export
