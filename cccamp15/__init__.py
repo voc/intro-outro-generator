@@ -18,11 +18,12 @@ def introFrames(parameters):
 	targets = {}
 
 	frames = 5*fps
-	maxdelay = 0
+	useddelay = 0
+	maxdelay = int(frames/2)
 
 	for tile in tiles:
-		delay = rnd.randint(0, frames)
-		maxdelay = max(maxdelay, delay)
+		delay = rnd.randint(0, maxdelay)
+		useddelay = max(useddelay, delay)
 		targets[tile] = (
 			# x/y
 			rnd.randint(-1200, -900),
@@ -33,7 +34,7 @@ def introFrames(parameters):
 		)
 
 	# 5 Sekunde Kacheln zusammenbauen
-	for i in range(0, frames+maxdelay):
+	for i in range(0, frames+useddelay):
 		placements = []
 		for tile in tiles:
 			delay = targets[tile][2]
@@ -109,6 +110,27 @@ def introFrames(parameters):
 		yield (
 			('rocket', 'attr', 'transform', 'translate(0, %.4f)' % y),
 		)
+
+	# stay there 1.5s + fill up flyin-delay
+	frames = 25+13 + maxdelay - useddelay
+	for i in range(0, frames):
+		yield (
+			('rocket', 'attr', 'transform', 'translate(0, 0)'),
+		)
+
+	# fade all out 0.5 s
+	frames = 12
+	for i in range(0, frames):
+		yield (
+			('fade', 'attr', 'x', '0'),
+			('fade', 'attr', 'y', '0'),
+			('fade', 'style', 'opacity', '%.4f' % easeLinear(i, 0, 1, frames)),
+		)
+
+	# final frame
+	yield (
+		('fade', 'style', 'opacity', '1'),
+	)
 
 
 def outroFrames(p):
