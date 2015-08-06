@@ -3,6 +3,7 @@
 import random, sys
 from renderlib import *
 from easing import *
+from colour import Color
 
 scheduleUrl = 'https://events.ccc.de/camp/2015/Fahrplan/schedule.xml'
 titlemap = {}
@@ -157,6 +158,75 @@ def outroFrames(p):
 			('plate', 'style', 'opacity', '%.4f' % 1),
 		)
 
+def supersourceFrames(p):
+	counts = {
+		'brown': 4,
+		'green': 7,
+		'orange': 5,
+		'purple': 4,
+		'blueish': 4,
+	}
+
+	sequences = {
+		'brown': ['brown', 'orange', 'purple', 'blueish', 'brown'],
+		'green': ['green', 'purple', 'blueish', 'orange', 'green'],
+		'orange': ['orange', 'blueish', 'brown', 'green', 'orange'],
+		'purple': ['purple', 'orange', 'green', 'blueish', 'purple'],
+		'blueish': ['blueish', 'brown', 'green', 'purple', 'blueish'],
+	}
+
+	bgs = {
+		'brown': Color('#94694d'),
+		'green': Color('#6c9e30'),
+		'orange': Color('#e1983a'),
+		'purple': Color('#77438d'),
+		'blueish': Color('#707f9a'),
+	}
+
+	grids = {
+		'brown': Color('#7a563f'),
+		'green': Color('#598227'),
+		'orange': Color('#ba7d2f'),
+		'purple': Color('#623672'),
+		'blueish': Color('#5c687e'),
+	}
+
+	bg_frames = {}
+	grid_frames = {}
+
+	frames_per_transition = 5*fps
+	num_transitions = 0
+
+	for name in sequences:
+		bg_frames[name] = []
+		grid_frames[name] = []
+		sequence = sequences[name]
+		num_transitions = len(sequence)
+
+		for transition in range(1, len(sequence)):
+			start = sequence[transition-1]
+			end = sequence[transition]
+
+			bg_frames[name].extend(
+				bgs[start].range_to(bgs[end], frames_per_transition)
+			)
+			grid_frames[name].extend(
+				grids[start].range_to(grids[end], frames_per_transition)
+			)
+
+	frames = frames_per_transition * (num_transitions - 1)
+
+	for frame in range(0, frames):
+		changes = []
+		for name in sequences:
+			for idx in range(0, counts[name]+1):
+				changes.extend([
+					('bg-%s-%u' % (name, idx), 'style', 'fill', bg_frames[name][frame]),
+					('grid-%s-%u' % (name, idx), 'style', 'fill', grid_frames[name][frame]),
+				])
+
+		yield changes
+
 def debug():
 	render(
 		'intro.svg',
@@ -174,6 +244,12 @@ def debug():
 		'outro.svg',
 		'../outro.ts',
 		outroFrames
+	)
+
+	render(
+		'supersource.svg',
+		'../supersource.ts',
+		supersourceFrames
 	)
 
 def tasks(queue, args):
@@ -200,4 +276,10 @@ def tasks(queue, args):
 		infile = 'outro.svg',
 		outfile = 'outro.ts',
 		sequence = outroFrames
+	))
+
+	queue.put(Rendertask(
+		infile = 'supersource.svg',
+		outfile = 'supersource.ts',
+		sequence = supersourceFrames
 	))
