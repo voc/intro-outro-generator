@@ -136,37 +136,26 @@ def introFrames(parameters):
 	)
 
 def outroFrames(p):
-	# 3 Sekunden VOC-Logo
+	# 3 Sekunden Stillstand
 	frames = 3*fps
 	for i in range(0, frames):
 		yield (
-			('b', 'style', 'opacity', '0'),
-			('black', 'style', 'opacity', '0'),
-			('a', 'style', 'opacity', '1'),
+			('plate', 'style', 'opacity', '%.4f' % 0),
 		)
 
-	# 1 Sekunden Fade to Black
-	frames = 1*fps
+	# 2 Sekunden Lizenz
+	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('b', 'style', 'opacity', '0'),
-			('black', 'style', 'opacity', '%.4f' % easeLinear(i, 0, 1, frames)),
-			('a', 'style', 'opacity', '%.4f' % easeLinear(i, 1, -1, frames)),
+			('plate', 'style', 'opacity', '%.4f' % easeLinear(i, 0, 1, frames)),
 		)
 
-	# 1 Sekunden Fade in CCC-Text
-	frames = 1*fps
+	# 2 Sekunden Stillstand
+	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('b', 'style', 'opacity', '%.4f' % easeLinear(i, 0, 1, frames)),
-			('black', 'style', 'opacity', '1'),
-			('a', 'style', 'opacity', '0'),
+			('plate', 'style', 'opacity', '%.4f' % 1),
 		)
-
-	# 3 Sekunden stay-there
-	frames = 3*fps
-	for i in range(0, frames):
-		yield []
 
 def debug():
 	render(
@@ -207,3 +196,8 @@ def tasks(queue, args):
 			}
 		))
 
+	queue.put(Rendertask(
+		infile = 'outro.svg',
+		outfile = 'outro.ts',
+		sequence = outroFrames
+	))
