@@ -137,11 +137,28 @@ def introFrames(parameters):
 	)
 
 def outroFrames(p):
-	# 3 Sekunden Stillstand
+	# 3 Sekunden Logo
+	frames = 10
+	for i in range(0, frames):
+		yield (
+			('plate', 'style', 'opacity', '%.4f' % 0),
+			('logo', 'style', 'opacity', '%.4f' % 0),
+		)
+
+	# 3 Sekunden Logo
 	frames = 3*fps
 	for i in range(0, frames):
 		yield (
 			('plate', 'style', 'opacity', '%.4f' % 0),
+			('logo', 'style', 'opacity', '%.4f' % easeLinear(i, 0, 1, frames)),
+		)
+
+	# 1 Sekunde Stillstand
+	frames = 1*fps
+	for i in range(0, frames):
+		yield (
+			('plate', 'style', 'opacity', '%.4f' % 0),
+			('logo', 'style', 'opacity', '%.4f' % 1),
 		)
 
 	# 2 Sekunden Lizenz
@@ -149,6 +166,7 @@ def outroFrames(p):
 	for i in range(0, frames):
 		yield (
 			('plate', 'style', 'opacity', '%.4f' % easeLinear(i, 0, 1, frames)),
+			('logo', 'style', 'opacity', '%.4f' % 1),
 		)
 
 	# 2 Sekunden Stillstand
@@ -156,6 +174,15 @@ def outroFrames(p):
 	for i in range(0, frames):
 		yield (
 			('plate', 'style', 'opacity', '%.4f' % 1),
+			('logo', 'style', 'opacity', '%.4f' % 1),
+		)
+
+	# 2 Sekunden Fadeout
+	frames = 2*fps
+	for i in range(0, frames):
+		yield (
+			('plate', 'style', 'opacity', '%.4f' % easeLinear(i, 1, -1, frames)),
+			('logo', 'style', 'opacity', '%.4f' % easeLinear(i, 1, -1, frames)),
 		)
 
 def supersourceFrames(p):
