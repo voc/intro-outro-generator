@@ -951,28 +951,5 @@
            inkscape:connector-curvature="0" />
       </g>
     </g>
-    <g
-       id="test-images"
-       inkscape:label="#g13918"
-       transform="translate(0,-1200)">
-      <image
-         sodipodi:absref="/home/peter/AAA-VOC/intro-outro-generator/cccamp15/artwork/overlays/s1_hd.png"
-         xlink:href="overlays/s1_hd.png"
-         width="1920"
-         height="1080"
-         preserveAspectRatio="none"
-         id="image13479"
-         x="-4.745484e-09"
-         y="-27.637897" />
-      <image
-         sodipodi:absref="/home/peter/AAA-VOC/intro-outro-generator/cccamp15/artwork/test-video.png"
-         xlink:href="test-video.png"
-         y="-27.637829"
-         x="4.5545643e-05"
-         id="image12893"
-         preserveAspectRatio="none"
-         height="1080"
-         width="1920.0001" />
-    </g>
   </g>
 </svg>
