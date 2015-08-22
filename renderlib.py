@@ -183,7 +183,8 @@ def events(scheduleUrl, titlemap={}):
 					'title': titlemap[id] if id in titlemap else (event.find('title').text.strip() if event.find('title') is not None and event.find('title').text is not None else ''),
 					'subtitle': event.find('subtitle').text.strip() if event.find('subtitle') is not None and event.find('subtitle').text is not None else '',
 					'persons': personnames,
-					'personnames': ', '.join(personnames)
+					'personnames': ', '.join(personnames),
+					'room': room.attrib['name'],
 				}
 
 try:
