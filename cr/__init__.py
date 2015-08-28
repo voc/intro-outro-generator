@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from renderlib import *
+from easing import *
 
 def outroFrames(p):
 	# 8 Sekunden
