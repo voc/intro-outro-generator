@@ -7,10 +7,19 @@ import math
 def easeLinear(t, b, c, d):
 	return c*t/d + b
 
+
+def easeOutCubic(t, b, c, d):
+	t=float(t)/d-1
+	return c*((t)*t*t + 1) + b
+
+def easeInCubic(t, b, c, d):
+	t=float(t)/d
+	return c*(t)*t*t + b;
+
+
 def easeInQuad(t, b, c, d):
 	t /= d
 	return c*t*t + b
-
 
 def easeOutQuad(t, b, c, d):
 	t /= d
