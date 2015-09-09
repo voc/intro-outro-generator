@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from renderlib import *
+from easing import *
 
 def introFrames(p):
 	move=50
@@ -44,10 +45,10 @@ def debug():
 		'intro.svg',
 		'../intro.ts',
 		introFrames,
-		parameters={
-			'$id': 55,
-			'$title': 'Technology and data use among vulnerable communities',
-			'$person': 'Zara Rahman'
+		{
+			'$id': 56,
+			'$title': 'Hands-on Rad1o',
+			'$person': 'schneider'
 		}
 	)
 
