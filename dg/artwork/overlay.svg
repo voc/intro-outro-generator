@@ -14,8 +14,11 @@
    height="1080"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="intro.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="overlay.svg"
+   inkscape:export-filename="/home/peter/AAA-VOC/intro-outro-generator/dg/artwork/overlay.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <linearGradient
@@ -148,6 +151,37 @@
          result="composite2"
          dy="0" />
     </filter>
+    <filter
+       inkscape:menu-tooltip="In and out glow with a possible offset and colorizable flood"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Cutout Glow"
+       style="color-interpolation-filters:sRGB;"
+       id="filter4197">
+      <feOffset
+         dy="3"
+         dx="3"
+         id="feOffset4199" />
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur4201" />
+      <feFlood
+         flood-color="rgb(255,255,255)"
+         flood-opacity="1"
+         result="flood"
+         id="feFlood4203" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite"
+         id="feComposite4205" />
+      <feBlend
+         in="blur"
+         in2="composite"
+         mode="normal"
+         id="feBlend4207" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -157,14 +191,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="764.28104"
-     inkscape:cy="468.99169"
+     inkscape:cx="1152.558"
+     inkscape:cy="580.83708"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="993"
-     inkscape:window-x="1280"
+     inkscape:window-height="1014"
+     inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="true"
@@ -235,38 +269,14 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,27.63782)">
-    <rect
-       style="fill:#f9f9f9;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect3797"
-       width="1920"
-       height="1080"
-       x="0"
-       y="-27.637817" />
     <image
        sodipodi:absref="/home/peter/AAA-VOC/intro-outro-generator/dg/artwork/datengarten-alpha.png"
        xlink:href="datengarten-alpha.png"
-       width="192"
-       height="192"
+       style="filter:url(#filter4197)"
+       y="4.3621802"
+       x="1696"
        id="image3803"
-       x="864"
-       y="320.36218" />
-    <flowRoot
-       xml:space="preserve"
-       id="text"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
-       transform="translate(0,-27.63782)"
-       inkscape:label="#flowRoot3029"><flowRegion
-         id="flowRegion3031"><rect
-           id="rect3033"
-           width="1855.7142"
-           height="514.28571"
-           x="32.857143"
-           y="540"
-           style="font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch" /></flowRegion><flowPara
-         id="flowPara3035"
-         style="font-size:64px;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch">Datengarten $id</flowPara><flowPara
-         id="flowPara3037"
-         style="font-size:72px;font-weight:bold;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch Bold">$title</flowPara><flowPara
-         id="flowPara3039"
-         style="text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch">$person</flowPara></flowRoot>  </g>
+       height="192"
+       width="192" />
+  </g>
 </svg>
