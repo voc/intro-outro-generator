@@ -66,11 +66,6 @@ def outroFrames(params):
 		yield tuple()
 
 
-def pauseFrames(params):
-	# 12 Sekunden
-	pass
-
-
 def debug():
 	render(
 		'outro.svg',
@@ -90,7 +85,7 @@ def debug():
 		}
 	)
 
-def tasks(queue):
+def tasks(queue, params):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl, titlemap):
 
