@@ -257,27 +257,39 @@ def supersourceFrames(p):
 def debug():
 	render(
 		'intro.svg',
-		'../intro.ts',
+		'../6983.ts',
 		introFrames,
 		parameters={
-			'$id': 6543,
-			'$title': 'NSA-Untersuchungsausschuss - Wer kontrolliert wen?',
-			'$subtitle': 'A Practical Introduction to Acoustic Cryptanalysis',
-			'$person': 'Frantisek Algoldor Apfelbeck'
+			'$id': 6983,
+			'$title': 'Infrastructure Review',
+			'$subtitle': '',
+			'$personnames': 'Will, Arjen, MaZderMind, Fengel'
 		}
 	)
 
-	render(
-		'outro.svg',
-		'../outro.ts',
-		outroFrames
-	)
+	# render(
+	# 	'intro.svg',
+	# 	'../8.ts',
+	# 	introFrames,
+	# 	parameters={
+	# 		'$id': 8,
+	# 		'$title': 'The Incredible Herrengedeck',
+	# 		'$subtitle': 'Chanson-Punk aus Berlin',
+	# 		'$personnames': ''
+	# 	}
+	# )
 
-	render(
-		'supersource.svg',
-		'../supersource.ts',
-		supersourceFrames
-	)
+	# render(
+	# 	'outro.svg',
+	# 	'../outro.ts',
+	# 	outroFrames
+	# )
+
+	# render(
+	# 	'supersource.svg',
+	# 	'../supersource.ts',
+	# 	supersourceFrames
+	# )
 
 def tasks(queue, args):
 	# iterate over all events extracted from the schedule xml-export
