@@ -4,7 +4,7 @@ from renderlib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'http://daniel.molkentin.de/schedule-systemd.conf-29-10-2015-1.xml'
+scheduleUrl = 'http://daniel.molkentin.de/schedule-systemd.conf-04-11-2015.xml'
 
 # For (really) too long titles
 titlemap = {
