@@ -25,14 +25,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1163"
+     inkscape:window-height="1014"
      id="namedview3103"
      showgrid="false"
-     inkscape:zoom="0.942"
-     inkscape:cx="600.72273"
-     inkscape:cy="386.5622"
+     inkscape:zoom="0.66609459"
+     inkscape:cx="359.75303"
+     inkscape:cy="282.06238"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg3039" />
   <metadata
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -62,6 +62,14 @@
        id="path-effect5068"
        is_visible="true" />
   </defs>
+  <rect
+     style="opacity:1;fill:#222222;fill-opacity:1;stroke:#000000;stroke-width:0.97421455;stroke-opacity:1"
+     id="rect"
+     width="1279.0258"
+     height="189.02579"
+     x="0.48710728"
+     y="308.48712"
+     inkscape:label="#rect4157" />
   <g
      id="title">
     <flowRoot
@@ -85,7 +93,7 @@
   <g
      id="persons">
     <flowRoot
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;"
        transform="translate(21.859209,72.186837)"
        xml:space="preserve"
        id="flowRoot4224"><flowRegion
@@ -94,44 +102,49 @@
            x="26.12545"
            height="197.42853"
            width="765.46735"
-           id="rect4956" /></flowRegion><flowPara
+           id="rect4956"
+           style="fill:#ffffff;fill-opacity:1;" /></flowRegion><flowPara
          id="flowPara4958"
-         style="-inkscape-font-specification:'Source Sans Pro';font-family:'Source Sans Pro';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">$personnames</flowPara></flowRoot>  </g>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     x="471.1196"
-     y="610.65521"
-     id="text3116"
-     sodipodi:linespacing="125%"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold'"
-       sodipodi:role="line"
-       x="471.1196"
+         style="-inkscape-font-specification:'Source Sans Pro';font-family:'Source Sans Pro';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#ffffff;fill-opacity:1;">$personnames</flowPara></flowRoot>  </g>
+  <g
+     id="logo"
+     inkscape:label="#g4159">
+    <text
+       sodipodi:linespacing="125%"
+       id="text3116"
        y="610.65521"
-       id="tspan3120">systemd.conf 2015</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold'"
-       sodipodi:role="line"
-       x="471.1196"
-       y="673.15521"
-       id="tspan3124" /></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     x="567.69849"
-     y="647.32062"
-     id="text3276"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan3278"
-       x="567.69849"
+       x="611.11963"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan3120"
+         y="610.65521"
+         x="611.11963"
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold'">systemd.conf 2015</tspan><tspan
+         id="tspan3124"
+         y="673.15521"
+         x="611.11963"
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold'" /></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3276"
        y="647.32062"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro'">november 5th - 7th</tspan></text>
+       x="744.24585"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro'"
+         y="647.32062"
+         x="744.24585"
+         id="tspan3278"
+         sodipodi:role="line">november 5th - 7th</tspan></text>
+  </g>
   <g
      id="subtitle">
     <flowRoot
        inkscape:label="#flowRoot3466"
        transform="translate(-3.3829785,0)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#222222;fill-opacity:1;stroke:none;"
        xml:space="preserve"
        id="flowRoot4236"><flowRegion
          id="flowRegion3468"><rect
@@ -139,7 +152,8 @@
            x="52.016987"
            height="144.37367"
            width="757.96179"
-           id="rect3470" /></flowRegion><flowPara
-         style="font-size:32px;-inkscape-font-specification:'Source Sans Pro';font-family:'Source Sans Pro';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="rect3470"
+           style="fill:#222222;fill-opacity:1;" /></flowRegion><flowPara
+         style="font-size:32px;-inkscape-font-specification:'Source Sans Pro';font-family:'Source Sans Pro';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#222222;fill-opacity:1;"
          id="flowPara3472">$subtitle</flowPara></flowRoot>  </g>
 </svg>

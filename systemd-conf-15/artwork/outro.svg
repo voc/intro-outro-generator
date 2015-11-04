@@ -25,14 +25,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1163"
+     inkscape:window-height="1014"
      id="namedview3103"
      showgrid="false"
-     inkscape:zoom="0.942"
-     inkscape:cx="638.93929"
-     inkscape:cy="386.5622"
+     inkscape:zoom="0.66609459"
+     inkscape:cx="352.43501"
+     inkscape:cy="336.57215"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg3039" />
   <metadata
@@ -62,43 +62,50 @@
        id="path-effect5068"
        is_visible="true" />
   </defs>
+  <rect
+     style="opacity:1;fill:#222222;fill-opacity:1;stroke:#000000;stroke-width:0.61123663;stroke-opacity:1"
+     id="rect4157"
+     width="1279.3888"
+     height="74.388763"
+     x="0.30561832"
+     y="0.30561826" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     x="471.1196"
+     x="372.95898"
      y="610.65521"
      id="text3116"
      sodipodi:linespacing="125%"><tspan
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold'"
        sodipodi:role="line"
-       x="471.1196"
+       x="372.95898"
        y="610.65521"
        id="tspan3120">systemd.conf 2015</tspan><tspan
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold'"
        sodipodi:role="line"
-       x="471.1196"
+       x="372.95898"
        y="673.15521"
        id="tspan3124" /></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     x="567.69849"
+     x="506.08521"
      y="647.32062"
      id="text3276"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3278"
-       x="567.69849"
+       x="506.08521"
        y="647.32062"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro'">november 5th - 7th</tspan></text>
   <g
-     transform="translate(252.95966,-26.169402)"
-     id="license">
+     id="license"
+     inkscape:label="#g4211">
     <g
        inkscape:export-ydpi="300.23013"
        inkscape:export-xdpi="300.23013"
        inkscape:export-filename="/mnt/hgfs/Bov/Documents/Work/2007/cc/identity/srr buttons/big/by-sa.png"
-       transform="matrix(1.9875614,0,0,1.9873388,-52.882878,140.22227)"
+       transform="matrix(1.9875614,0,0,1.9873388,164.61181,114.05287)"
        id="g4528">
       <path
          style="fill:#aab2ab"

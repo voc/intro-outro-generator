@@ -21,6 +21,7 @@ def introFrames(params):
 			('title', 'style',    'opacity', "%.4f" % 0),
 			('subtitle', 'style', 'opacity', "%.4f" % 0),
 			('persons', 'style',   'opacity', "%.4f" % 0),
+			('rect', 'style',   'opacity', "%.4f" % 0),
 		)
 
 	# 4 Sekunde Text Fadein
@@ -33,6 +34,7 @@ def introFrames(params):
 			('subtitle', 'style', 'opacity', "%.4f" % easeDelay(easeLinear, 1*fps, i, 0, 1, 2*fps)),
 			('subtitle', 'attr',  'transform', 'translate(%.4f, 0)' % easeDelay(easeOutQuad, 1*fps, i, -move, move, 2*fps)),
 
+			('rect',    'style',   'opacity', "%.4f" % easeDelay(easeLinear, 2*fps, i, 0, 1, 2*fps)),
 			('persons', 'style',   'opacity', "%.4f" % easeDelay(easeLinear, 2*fps, i, 0, 1, 2*fps)),
 			('persons', 'attr',    'transform', 'translate(%.4f, 0)' % easeDelay(easeOutQuad, 2*fps, i, -move, move, 2*fps)),
 		)
@@ -41,6 +43,17 @@ def introFrames(params):
 	frames = 2*fps
 	for i in range(0, frames):
 		yield tuple()
+
+	# 1 Sekunde fadeout
+	frames = 1*fps
+	for i in range(0, frames):
+		yield (
+			('title', 'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
+			('subtitle', 'style', 'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
+			('persons', 'style',  'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
+			('rect', 'style',     'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
+			('logo', 'style',     'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
+		)
 
 def outroFrames(params):
 	move=50
