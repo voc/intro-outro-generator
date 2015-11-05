@@ -100,20 +100,20 @@ def debug():
 
 def tasks(queue, params):
 	# iterate over all events extracted from the schedule xml-export
-#	for event in events(scheduleUrl, titlemap):
-#
-#		# generate a task description and put them into the queue
-#		queue.put(Rendertask(
-#			infile = 'intro.svg',
-#			outfile = str(event['id'])+".dv",
-#			sequence = introFrames,
-#			parameters = {
-#				'$id': event['id'],
-#				'$title': event['title'],
-#				'$subtitle': event['subtitle'],
-#				'$personnames': event['personnames']
-#			}
-#		))
+	for event in events(scheduleUrl, titlemap):
+
+		# generate a task description and put them into the queue
+		queue.put(Rendertask(
+			infile = 'intro.svg',
+			outfile = str(event['id'])+".dv",
+			sequence = introFrames,
+			parameters = {
+				'$id': event['id'],
+				'$title': event['title'],
+				'$subtitle': event['subtitle'],
+				'$personnames': event['personnames']
+			}
+		))
 
 	# place a task for the outro into the queue
 	queue.put(Rendertask(
