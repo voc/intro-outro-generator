@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="1920"
+   height="1080"
+   id="svg3039"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="intro.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1295"
+     inkscape:window-height="744"
+     id="namedview3103"
+     showgrid="false"
+     inkscape:zoom="0.5"
+     inkscape:cx="991.89992"
+     inkscape:cy="525.89439"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3039" />
+  <metadata
+     id="metadata3045">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3043">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5076"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5072"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5068"
+       is_visible="true" />
+  </defs>
+  <rect
+     style="fill:#f78a02;fill-opacity:1;stroke:#f78a02;stroke-width:1.00125456000000002;stroke-opacity:1"
+     id="rect"
+     width="1372.9988"
+     height="185.99876"
+     x="0.50062728"
+     y="433.43469"
+     inkscape:label="#rect4157" />
+  <g
+     id="title"
+     transform="matrix(3.2094238,0,0,3.2094238,-87.70117,-121.60026)">
+    <flowRoot
+       inkscape:label="#title"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(18.046709,4.2462845)"
+       xml:space="preserve"
+       id="flowRoot4216"><flowRegion
+         id="flowRegion4938"><rect
+           y="40.400318"
+           x="29.932016"
+           height="114.07965"
+           width="1047.2805"
+           id="rect4940" /></flowRegion><flowPara
+         id="flowPara6942"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial Bold;font-size:37.38988911px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">$title</flowPara><flowPara
+         id="flowPara3464"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Source Sans Pro;-inkscape-font-specification:Source Sans Pro" /><flowPara
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Source Sans Pro;-inkscape-font-specification:Source Sans Pro"
+         id="flowPara3462" /></flowRoot>  </g>
+  <g
+     id="persons"
+     transform="matrix(1.5,0,0,1.5,0,-29.065939)">
+    <flowRoot
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(21.859209,65.520172)"
+       xml:space="preserve"
+       id="flowRoot4224"><flowRegion
+         id="flowRegion4954"><rect
+           y="271.05231"
+           x="26.12545"
+           height="197.42853"
+           width="765.46735"
+           id="rect4956"
+           style="fill:#ffffff;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara4958"
+         style="font-size:53.33333206px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold">$personnames</flowPara></flowRoot>  </g>
+  <g
+     id="subtitle"
+     transform="matrix(3.2955617,0,0,3.2955617,-92.120433,-336.70576)">
+    <flowRoot
+       inkscape:label="#flowRoot3466"
+       transform="translate(-3.3829785,0)"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#222222;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       id="flowRoot4236"><flowRegion
+         id="flowRegion3468"><rect
+           y="163.73672"
+           x="52.016987"
+           height="144.37367"
+           width="757.96179"
+           id="rect3470"
+           style="fill:#222222;fill-opacity:1" /></flowRegion><flowPara
+         style="font-size:33.37822502px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#222222;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         id="flowPara3472">$subtitle</flowPara></flowRoot>  </g>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3902"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Umpush;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Umpush;font-stretch:normal;font-variant:normal"><flowRegion
+       id="flowRegion3904"><rect
+         id="rect3906"
+         width="92"
+         height="182"
+         x="-20"
+         y="632" /></flowRegion><flowPara
+       id="flowPara3908"></flowPara></flowRoot>  <g
+     id="g3967"
+     transform="translate(70,0)">
+    <rect
+       y="620"
+       x="-72"
+       height="160"
+       width="652.1557"
+       id="rect3910"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <flowRoot
+       transform="translate(10,0)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Umpush;-inkscape-font-specification:Umpush"
+       id="flowRoot3124"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3126"><rect
+           style="fill:#ffffff;fill-opacity:1"
+           y="620"
+           x="-2"
+           height="168"
+           width="888"
+           id="rect3128" /></flowRegion><flowPara
+         style="font-size:120px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold"
+         id="flowPara3130">DENOG7</flowPara><flowPara
+         id="flowPara3132" /></flowRoot>    <rect
+       y="778"
+       x="-70.952095"
+       height="160"
+       width="1635.9521"
+       id="rect3910-2"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <flowRoot
+       transform="translate(11,158)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Umpush;-inkscape-font-specification:Umpush"
+       id="flowRoot3124-7"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3126-4"><rect
+           style="fill:#ffffff;fill-opacity:1"
+           y="620"
+           x="-2"
+           height="190"
+           width="1524"
+           id="rect3128-3" /></flowRegion><flowPara
+         id="flowPara3132-2"
+         style="font-size:120px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">darmstadtium, Darmstadt Darmstadt</flowPara></flowRoot>  </g>
+</svg>
