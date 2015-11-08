@@ -11,18 +11,10 @@
   </conference>
   <day date="2015-10-29" index="1">
     <room name="DENOG">
-      <event guid="3d7c3386-7e31-11e5-b91e-cca64afeb3e6" id="1">
-        <date>2015-10-29T12:00:00+01:00</date>
-        <room>DENOG</room>
-        <title>Anmeldung &amp; Welcome Lunch</title>
-        <start>12:00</start>
-        <type>lecture</type>
-        <duration>1:00</duration>
-      </event>
       <event guid="3d7c39b0-7e31-11e5-b91e-9aac1fd3bce4" id="2">
         <date>2015-10-29T13:00:00+01:00</date>
         <room>DENOG</room>
-        <title>Begr&#195;&#188;&#195;&#376;ung</title>
+        <title>Begrüßung</title>
         <start>13:00</start>
         <type>lecture</type>
         <duration>0:45</duration>
@@ -71,7 +63,7 @@
         interconnection case pending at the Swiss
         regulator.</abstract>
         <persons>
-          <person>Fredy K&#195;&#188;nzler, Init7</person>
+          <person>Fredy Künzler, Init7</person>
         </persons>
         <links>
           <link href='http://media.denog.de/meetings/denog7/12-Kuenzler-Buffering_Sucks.pdf'>
@@ -91,15 +83,6 @@
           <link href='http://media.denog.de/meetings/denog7/13.2-Axians%20Corporate_Okt-%202015_ENG.pdf'>
           Slides - Axians</link>
         </links>
-      </event>
-      <event guid="3d7c3e43-7e31-11e5-b91e-c01ba942c227" id="6">
-        <date>2015-10-29T15:00:00+01:00</date>
-        <room>DENOG</room>
-        <title>PGP Keysigning (w&#195;&#164;hrend
-        Kaffeepause)</title>
-        <start>15:00</start>
-        <type>lecture</type>
-        <duration>1:00</duration>
       </event>
       <event guid="3d7c3f51-7e31-11e5-b91e-e74da05edcc2" id="7">
         <date>2015-10-29T16:00:00+01:00</date>
@@ -165,21 +148,21 @@
       <event guid="3d7c4272-7e31-11e5-b91e-aaaeb62766e3" id="10">
         <date>2015-10-29T17:30:00+01:00</date>
         <room>DENOG</room>
-        <title>Freie Endger&#195;&#164;tewahl</title>
+        <title>Freie Endgerätewahl</title>
         <start>17:30</start>
         <type>lecture</type>
         <duration>0:30</duration>
         <abstract>Die Abschaffung des Routerzwangs hin zu einer
-        freien Endger&#195;&#164;tewahl ist ein wichtiger Schritt
+        freien Endgerätewahl ist ein wichtiger Schritt
         auf dem Weg zu einer freiheitlichen
         Informationsgesellschaft. In den letzten Jahren hat sich
-        ein B&#195;&#188;ndnis aus deutschen
-        Endger&#195;&#164;teherstellern zusammengefunden, um die
+        ein Bündnis aus deutschen
+        Endgeräteherstellern zusammengefunden, um die
         logische Konsequenz aus der Liberalisierung des
         Telekommunikationsmarktes in die deutsche Gesetzgebung
-        einflie&#195;&#376;en zu lassen. Dabei geht es aber nicht
+        einfließen zu lassen. Dabei geht es aber nicht
         nur um die Endverbraucher, sondern auch um die
-        St&#195;&#164;rkung der Innovationsf&#195;&#164;higkeit der
+        Stärkung der Innovationsfähigkeit der
         deutschen IT-Branche.</abstract>
         <persons>
           <person>Simon Kissel, Viprinet</person>
@@ -243,7 +226,7 @@
         connectors and fibre options in the datacentre now we have
         40G und 100G as a standard. Especially for these parallel
         transmission applications you should consider to rethink
-        your wiring if you don&#194;&#185;t want to get stuck in
+        your wiring if you don't want to get stuck in
         troubleshooting your links. Finally some practical examples
         of broken optical components after and during field
         installation &#194;&#173; real cases which happen every day
