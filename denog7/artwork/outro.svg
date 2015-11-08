@@ -30,8 +30,8 @@
      id="namedview3103"
      showgrid="false"
      inkscape:zoom="0.4"
-     inkscape:cx="1077.8595"
-     inkscape:cy="597.63037"
+     inkscape:cx="790.3595"
+     inkscape:cy="572.63037"
      inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -71,13 +71,12 @@
      x="2.8742189"
      y="0.37420374" />
   <g
-     id="license"
-     inkscape:label="#g4211">
+     id="license">
     <g
        inkscape:export-ydpi="300.23013"
        inkscape:export-xdpi="300.23013"
        inkscape:export-filename="/mnt/hgfs/Bov/Documents/Work/2007/cc/identity/srr buttons/big/by-sa.png"
-       transform="matrix(4.5341244,0,0,4.5336166,-480.72929,-126.69043)"
+       transform="matrix(4.5341244,0,0,4.5336166,-124.47929,403.30957)"
        id="g4528">
       <path
          style="fill:#aab2ab"
@@ -204,10 +203,11 @@
     </g>
   </g>
   <image
-     y="285.84668"
-     x="603.55652"
-     id="image3213"
+     sodipodi:absref="denog7-small.jpg"
      xlink:href="denog7-small.jpg"
+     y="285.84668"
+     x="574.4834"
+     id="image3213"
      height="348.25"
      width="771.0332"
      style="fill:#f98806;fill-opacity:1" />
