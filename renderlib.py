@@ -2,6 +2,7 @@
 
 import os
 import sys
+import re
 import glob
 import math
 import shutil
@@ -175,13 +176,28 @@ def events(scheduleUrl, titlemap={}):
 				personnames = []
 				if event.find('persons') is not None:
 					for person in event.find('persons').iter('person'):
-						personnames.append(person.text)
+						personname = re.sub( '\s+', ' ', person.text ).strip()
+						personnames.append(personname)
+
+				id = int(event.get('id'))
+
+				if id in titlemap:
+					title = titlemap[id]
+				elif event.find('title') is not None and event.find('title').text is not None:
+					title = re.sub( '\s+', ' ', event.find('title').text ).strip()
+				else:
+					title = ''
+
+				if event.find('subtitle') is not None and event.find('subtitle').text is not None:
+					subtitle = re.sub( '\s+', ' ', event.find('subtitle').text ).strip()
+				else:
+					subtitle = ''
 
 				# yield a tupel with the event-id, event-title and person-names
 				yield {
-					'id': int(event.get('id')),
-					'title': titlemap[id] if id in titlemap else (event.find('title').text.strip() if event.find('title') is not None and event.find('title').text is not None else ''),
-					'subtitle': event.find('subtitle').text.strip() if event.find('subtitle') is not None and event.find('subtitle').text is not None else '',
+					'id': id,
+					'title': title,
+					'subtitle': subtitle,
 					'persons': personnames,
 					'personnames': ', '.join(personnames),
 					'room': room.attrib['name'],
