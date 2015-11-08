@@ -29,12 +29,23 @@
      id="namedview3103"
      showgrid="false"
      inkscape:zoom="0.5"
-     inkscape:cx="991.89992"
+     inkscape:cx="737.89992"
      inkscape:cy="525.89439"
      inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg3039" />
+     inkscape:current-layer="svg3039"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="1,0"
+       position="78,704"
+       id="guide3020" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="362,1008"
+       id="guide3022" />
+  </sodipodi:namedview>
   <metadata
      id="metadata3045">
     <rdf:RDF>
@@ -72,7 +83,7 @@
      inkscape:label="#rect4157" />
   <g
      id="title"
-     transform="matrix(3.2094238,0,0,3.2094238,-87.70117,-121.60026)">
+     transform="translate(32,12)">
     <flowRoot
        inkscape:label="#title"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -82,50 +93,32 @@
          id="flowRegion4938"><rect
            y="40.400318"
            x="29.932016"
-           height="114.07965"
-           width="1047.2805"
+           height="186.07965"
+           width="1359.2805"
            id="rect4940" /></flowRegion><flowPara
          id="flowPara6942"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial Bold;font-size:37.38988911px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">$title</flowPara><flowPara
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">$title</flowPara><flowPara
          id="flowPara3464"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Source Sans Pro;-inkscape-font-specification:Source Sans Pro" /><flowPara
          style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Source Sans Pro;-inkscape-font-specification:Source Sans Pro"
          id="flowPara3462" /></flowRoot>  </g>
   <g
      id="persons"
-     transform="matrix(1.5,0,0,1.5,0,-29.065939)">
+     transform="translate(50.015791,18)">
     <flowRoot
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-       transform="translate(21.859209,65.520172)"
+       style="font-size:100px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       transform="translate(1.859209,187.52017)"
        xml:space="preserve"
        id="flowRoot4224"><flowRegion
          id="flowRegion4954"><rect
            y="271.05231"
            x="26.12545"
-           height="197.42853"
-           width="765.46735"
+           height="153.42853"
+           width="1281.4673"
            id="rect4956"
-           style="fill:#ffffff;fill-opacity:1" /></flowRegion><flowPara
+           style="font-size:100px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans" /></flowRegion><flowPara
          id="flowPara4958"
-         style="font-size:53.33333206px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold">$personnames</flowPara></flowRoot>  </g>
-  <g
-     id="subtitle"
-     transform="matrix(3.2955617,0,0,3.2955617,-92.120433,-336.70576)">
-    <flowRoot
-       inkscape:label="#flowRoot3466"
-       transform="translate(-3.3829785,0)"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#222222;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"
-       id="flowRoot4236"><flowRegion
-         id="flowRegion3468"><rect
-           y="163.73672"
-           x="52.016987"
-           height="144.37367"
-           width="757.96179"
-           id="rect3470"
-           style="fill:#222222;fill-opacity:1" /></flowRegion><flowPara
-         style="font-size:33.37822502px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#222222;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-         id="flowPara3472">$subtitle</flowPara></flowRoot>  </g>
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans">$personnames</flowPara></flowRoot>  </g>
   <flowRoot
      xml:space="preserve"
      id="flowRoot3902"
@@ -136,7 +129,7 @@
          height="182"
          x="-20"
          y="632" /></flowRegion><flowPara
-       id="flowPara3908"></flowPara></flowRoot>  <g
+       id="flowPara3908" /></flowRoot>  <g
      id="g3967"
      transform="translate(70,0)">
     <rect
@@ -181,4 +174,14 @@
            id="rect3128-3" /></flowRegion><flowPara
          id="flowPara3132-2"
          style="font-size:120px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">darmstadtium, Darmstadt Darmstadt</flowPara></flowRoot>  </g>
-</svg>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3024"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Umpush;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Umpush;font-stretch:normal;font-variant:normal"><flowRegion
+       id="flowRegion3026"><rect
+         id="rect3028"
+         width="32"
+         height="78"
+         x="72"
+         y="528" /></flowRegion><flowPara
+       id="flowPara3030" /></flowRoot></svg>
