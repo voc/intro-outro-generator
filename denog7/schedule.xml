@@ -243,7 +243,7 @@
       <event guid="3d7c46bd-7e31-11e5-b91e-d5b71048004c" id="14">
         <date>2015-10-30T11:00:00+01:00</date>
         <room>DENOG</room>
-        <title>Peering DB 2.0</title>
+        <title>Multi-Domain VPN</title>
         <start>11:00</start>
         <type>lecture</type>
         <duration>0:30</duration>
