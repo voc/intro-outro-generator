@@ -76,15 +76,31 @@ def introFrames(params):
         )
 
 def outroFrames(params):
-    pass
+    frames = 2*fps
+    for i in range(0, frames):
+        yield (
+            ('layer1', 'style', 'opacity', '%.4f' % 1),
+        )
 
+    frames = int(0.5*fps)
+    for i in range(0, frames):
+        opacity = 1 - easeInCubic(i, 0, 1, frames)
+        yield (
+            ('layer1', 'style', 'opacity', '%.4f' % opacity),
+        )
+
+    frames = int(0.2 * fps)
+    for i in range(0, frames):
+        yield (
+            ('layer1', 'style', 'opacity', '%.4f' % 0),
+        )
 
 def debug():
-    #render(
-    #    'outro.svg',
-    #    '../outro.dv',
-    #    outroFrames
-    #)
+    render(
+        'outro.svg',
+        '../outro.dv',
+        outroFrames
+    )
 
     render(
         'intro.svg',
@@ -115,8 +131,8 @@ def tasks(queue, params):
         ))
 
         # place a task for the outro into the queue
-        #queue.put(Rendertask(
-        #        infile = 'outro.svg',
-        #        outfile = 'outro.dv',
-        #        sequence = outroFrames
-        #))
+        queue.put(Rendertask(
+                infile = 'outro.svg',
+                outfile = 'outro.dv',
+                sequence = outroFrames
+        ))
