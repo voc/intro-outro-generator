@@ -7,6 +7,7 @@ import glob
 import math
 import shutil
 import errno
+import shutil
 from lxml import etree
 from xml.sax.saxutils import escape as xmlescape
 import cssutils
@@ -87,10 +88,23 @@ def rendertask(task):
 
 	# iterate through the animation seqence frame by frame
 	# frame is a ... tbd
+	cache = {}
 	for frame in task.sequence(task.parameters):
 		# print a line for each and every frame generated
 		if debug:
 			print("frameNr {0:3d} => {1}".format(frameNr, frame))
+
+		frame = tuple(frame)
+		if frame in cache:
+			print("cache hit, reusing frame {0}".format(cache[frame]))
+
+			framedir = task.workdir + "/.frames/"
+			shutil.copyfile("{0}/{1:04d}.png".format(framedir, cache[frame]), "{0}/{1:04d}.png".format(framedir, frameNr))
+
+			frameNr += 1
+			continue
+		else:
+			cache[frame] = frameNr
 
 		# open the output-file (named ".gen.svg" in the workdir)
 		with open(os.path.join(task.workdir, '.gen.svg'), 'w') as fp:
