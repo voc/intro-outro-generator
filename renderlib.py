@@ -96,7 +96,8 @@ def rendertask(task):
 
 		frame = tuple(frame)
 		if frame in cache:
-			print("cache hit, reusing frame {0}".format(cache[frame]))
+			if debug:
+				print("cache hit, reusing frame {0}".format(cache[frame]))
 
 			framedir = task.workdir + "/.frames/"
 			shutil.copyfile("{0}/{1:04d}.png".format(framedir, cache[frame]), "{0}/{1:04d}.png".format(framedir, frameNr))
