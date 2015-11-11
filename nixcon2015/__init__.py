@@ -130,9 +130,9 @@ def tasks(queue, params):
             }
         ))
 
-        # place a task for the outro into the queue
-        queue.put(Rendertask(
-                infile = 'outro.svg',
-                outfile = 'outro.dv',
-                sequence = outroFrames
-        ))
+    # place a task for the outro into the queue
+    queue.put(Rendertask(
+        infile = 'outro.svg',
+        outfile = 'outro.dv',
+        sequence = outroFrames
+    ))
