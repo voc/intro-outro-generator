@@ -37,6 +37,11 @@ def outroFrames(parameters):
     for i in range(0, frames):
         yield ()
 
+def pauseFrames(parameters):
+    frames = 5*fps
+    for i in range(0, frames):
+        yield ()
+
 def debug():
     render(
         'intro.svg',
@@ -53,6 +58,12 @@ def debug():
         'outro.svg',
         '../outro.ts',
         outroFrames
+    )
+
+    render(
+        'pause.svg',
+        '../pause.dv',
+        pauseFrames
     )
 
 def tasks(queue, parameters):
@@ -78,4 +89,10 @@ def tasks(queue, parameters):
         infile = 'outro.svg',
         outfile = 'outro.ts',
         sequence = outroFrames
+    ))
+
+    queue.put(Rendertask(
+        infile = 'pause.svg',
+        outfile = 'pause.dv',
+        sequence = pauseFrames
     ))
