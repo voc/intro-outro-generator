@@ -45,7 +45,7 @@ def pauseFrames(parameters):
 def debug():
     render(
         'intro.svg',
-        '../intro.ts',
+        '../intro.dv',
         introFrames,
         {
             '$title': "Podcasten aus dem Bundestag – die Entstehung eines politischen Formats",
@@ -56,7 +56,7 @@ def debug():
 
     render(
         'outro.svg',
-        '../outro.ts',
+        '../outro.dv',
         outroFrames
     )
 
@@ -76,7 +76,7 @@ def tasks(queue, parameters):
         # generate a task description and put it into the queue
         queue.put(Rendertask(
             infile = 'intro.svg',
-            outfile = str(event['id'])+".ts",
+            outfile = str(event['id']) + ".dv",
             sequence = introFrames,
             parameters = {
                 '$title': event['title'],
@@ -87,7 +87,7 @@ def tasks(queue, parameters):
 
     queue.put(Rendertask(
         infile = 'outro.svg',
-        outfile = 'outro.ts',
+        outfile = 'outro.dv',
         sequence = outroFrames
     ))
 
