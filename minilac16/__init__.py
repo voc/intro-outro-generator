@@ -2,6 +2,10 @@
 
 from renderlib import *
 from easing import *
+from lxml import etree
+
+# URL to Schedule-XML
+scheduleUrl = 'https://live.dus.c3voc.de/lac16/schedule.xml'
 
 def introFrames(p):
 	move=50
@@ -36,22 +40,48 @@ def outroFrames(p):
 		yield []
 
 def debug():
-	render(
-		'intro.svg',
-		'../intro.ts',
-		introFrames,
-		{
-			'$id': 2,
-			'$title': 'Essential Aspects on Mixing',
-			'$person': 'Jimson Drift'
-		}
-	)
-
 #	render(
-#		'outro.svg',
-#		'../outro.ts',
-#		outroFrames
+#		'intro.svg',
+#		'../intro.ts',
+#		introFrames,
+#		{
+#			'$id': 2,
+#			'$title': 'Essential Aspects on Mixing',
+#			'$person': 'Jimson Drift'
+#		}
 #	)
+
+	render(
+		'outro.svg',
+		'../outro.ts',
+		outroFrames
+	)
 
 def tasks(queue, args):
 	raise NotImplementedError('call with --debug to render your intro/outro')
+def tasks(queue, args):
+        # iterate over all events extracted from the schedule xml-export
+        for event in events(scheduleUrl):
+                if event['room'] not in ('Seminar room', 'Soundlab', 'Mainhall'): 
+                        print("skipping room %s (%s)" % (event['room'], event['title']))
+                        continue
+
+                # generate a task description and put them into the queue
+                queue.put(Rendertask(
+                        infile = 'intro.svg',
+                        outfile = str(event['id'])+".dv",
+                        sequence = introFrames,
+                        parameters = {
+                                '$id': event['id'],
+                                '$title': event['title'],
+                                '$subtitle': event['subtitle'],
+                                '$personnames': event['personnames']
+                        }
+                ))
+
+        # place a task for the outro into the queue
+        queue.put(Rendertask(
+                infile = 'outro.svg',
+                outfile = 'outro.dv',
+                sequence = outroFrames
+        ))
