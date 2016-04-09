@@ -40,16 +40,16 @@ def outroFrames(p):
 		yield []
 
 def debug():
-#	render(
-#		'intro.svg',
-#		'../intro.ts',
-#		introFrames,
-#		{
-#			'$id': 2,
-#			'$title': 'Essential Aspects on Mixing',
-#			'$person': 'Jimson Drift'
-#		}
-#	)
+	render(
+		'intro.svg',
+		'../intro.ts',
+		introFrames,
+		{
+			'$id': 2,
+			'$title': 'Essential Aspects on Mixing',
+			'$person': 'Jimson Drift'
+		}
+	)
 
 	render(
 		'outro.svg',
@@ -75,7 +75,7 @@ def tasks(queue, args):
                                 '$id': event['id'],
                                 '$title': event['title'],
                                 '$subtitle': event['subtitle'],
-                                '$personnames': event['personnames']
+                                '$person': event['personnames']
                         }
                 ))
 
