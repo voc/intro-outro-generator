@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<schedule>
+    <conference>
+        <acronym>miniLAC16</acronym>
+        <title>Mini Linux Audio Conference 2016</title>
+    </conference>
+    <day index="1">
+        <room name="Mainhall">
+            <event guid="" id="8">
+                <date>2016-04-07T10:00:00+02:00</date>
+                <start>10:00</start>
+                <duration>00:15</duration>
+                <room>Mainhall</room>
+                <title>Opening</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lecture</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>Dave, excds and riot say hello, introduce the place and themselves. You know the drill.</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="1">Dave, Excds, riot</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="2">
+                <date>2016-04-07T10:30:00+02:00</date>
+                <start>10:30</start>
+                <duration>00:50</duration>
+                <room>Mainhall</room>
+                <title>Open-Source Haptics for Music</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lecture</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description> I have created several open-source software and hardware repositories for integrating haptic technology into music performance including 1) the FireFader Arduino-based haptic device, which can be easily customized for a wide array of haptics applications, 2) Synth-A-Modeler, a modular physical modeling environment that integrates together the digital waveguide, mass-interaction, and modal synthesis paradigms,  and 3) the HSP library of objects for physical modeling in pd/Max. These open-source repositories will be explained using a series of musical examples, showing how the repositories can be used for discovering and exploring new frontiers in digital music. Interested community members can gain practical experience during the Sunday afternoon/evening workshop.</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="2">Edgarberdahl</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="12">
+                <date>2016-04-07T12:00:00+02:00</date>
+                <start>12:00</start>
+                <duration>00:45</duration>
+                <room>Mainhall</room>
+                <title>OpenAV on Fabla2</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description> This workshop, given by Harry van Haaren of [http://openavproductions.com OpenAV Productions] will introduce the [https://github.com/harryhaaren/openAV-Fabla2 Fabla2] sampler, and its capabilities for studio and live-performance.  * How to build your own Layered Kit * Sequencing Beats in Ardour * Setting up for live-performance in Jalv * The Mysterious AuxBus feature for FX (and howto with [http://openavproductions.com/artyfx ArtyFX]) * A Demo - what audio-damage can a sampler even do? * Audience hands-on : yes you get to play with it! :D  Any questions about this workshop should be directed to Harry: &lt;harryhaaren@gmail.com&gt;</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="3">Harryhaaren</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="20">
+                <date>2016-04-07T13:00:00+02:00</date>
+                <start>13:00</start>
+                <duration>01:30</duration>
+                <room>Mainhall</room>
+                <title>Linux Live on Stage - SuperBoucle, Carla, Faust &amp; LV2 Plugins</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description> In this workshop we want to show you a complete and fully functional Live Setup for the stage. "Live" means, you can musically interact with the music (by arranging and mixing the tracks on-the-fly) using only midi controllers. It is based on SuperBoucle (for arrangements), Carla (for mixing), a bunch of self-made Faust plugins and applications (Beat Repeater, Cut Sequencer) and a lot of other well-known Linux Audio Software (Yoshimi, SooperLooper, Calf Plugins, etc...) First we want to show and explain the brand new SuperBoucle and the new features we added, then we'll go on Carla and the Faust applications needed for a perfect live mixing environment. This workshop aims also to be an open and interactive discussion about how to use Linux on the stage, so every ideas (dicussions, tests, coding, install-party...) are welcome! Teaser: http://www.sonejo.net/node/81</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="4">Vince</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="13">
+                <date>2016-04-07T15:00:00+02:00</date>
+                <start>15:00</start>
+                <duration>01:30</duration>
+                <room>Mainhall</room>
+                <title>Plugin Programming with Faust</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description> This workshop (90 min) will give a practical introduction to programming LV2 and VST plugins on Linux using Faust.  Topics:  * Installing the required software ([http://faust.grame.fr/ Faust], [https://bitbucket.org/agraef/faust-lv2 faust-lv2] + [https://bitbucket.org/agraef/faust-vst faust-vst]) * How to program basic instrument and effect plugins with Faust * Compiling [http://lv2plug.in/ LV2] and [http://www.steinberg.net/en/company/developers.html VST] plugins * Using Faust plugins in various Linux DAWs ([http://ardour.org/ Ardour], [http://www.bitwig.com Bitwig], [http://qtractor.sourceforge.net/ Qtractor], [https://www.tracktion.com/ Tracktion]) * MIDI control and [https://www.midi.org/specifications/item/midi-tuning MIDI tuning] (MTS) capabilities  Slides are also available on Gitbub: [https://github.com/agraef/lac16-faust-demo/blob/master/FaustPlugins.pdf FaustPlugins.pdf] |attachment=</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="5">Aggraef</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="15">
+                <date>2016-04-07T17:00:00+02:00</date>
+                <start>17:00</start>
+                <duration>02:00</duration>
+                <room>Mainhall</room>
+                <title>Yet Same Old Qstuff* (continued)</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description> The proposed talk/workshop is nothing more than a follow-up to the tradition of LAC2013@IEM-Graz, LAC2014@ZKM-Karlsruhe and LAC2015@JGU-Mainz, as an informal hands-on demonstration to the most relevant issues and not so obvious ones of the Qstuff* software collection. Main subject though shall be Qtractor [4], an audio/MIDI multi-track sequencer project which also marks its return to Berlin where it was first announced (cf. LAC2007@TU-Berlin). Developers and users are kindly invited to discuss, complain and more importantly, exchange thoughts about the present and future of all this Qstuff*.   The Qstuff* are, in order of appearance: :[1] QjackCtl - A JACK Audio Connection Kit Qt GUI Interface ::http://qjackctl.sourceforge.net ::https://github.com/rncbc/qjackctl :[2] Qsynth - A fluidsynth Qt GUI Interface ::http://qsynth.sourceforge.net ::https://github.com/rncbc/qsynth :[3] Qsampler - A LinuxSampler Qt GUI Interface ::http://qsampler.sourceforge.net ::https://github.com/rncbc/qsampler ::https://github.com/rncbc/liblscp :[4] Qtractor - An audio/MIDI multi-track sequencer ::http://qtractor.sourceforge.net ::https://github.com/rncbc/qtractor :[5] QXGEdit - A Qt XG Editor ::http://qxgedit.sourceforge.net ::https://github.com/rncbc/qxgedit :[6] QmidiNet - A MIDI Network Gateway via UDP/IP Multicast ::http://qmidinet.sourceforge.net ::https://github.com/rncbc/qmidinet :[7] QmidiCtl - A MIDI Remote Controller via UDP/IP Multicast ::http://qmidictl.sourceforge.net ::https://github.com/rncbc/qmidictl :[8] synthv1 - an old-school polyphonic synthesizer ::http://synthv1.sourceforge.net ::https://github.com/rncbc/synthv1 :[9] samplv1 - an old-school polyphonic sampler ::http://samplv1.sourceforge.net ::https://github.com/rncbc/samplv1 :[10] drumkv1 - an old-school drum-kit sampler ::http://drumkv1.sourceforge.net ::https://github.com/rncbc/drumkv1</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="6">Rncbc</person>
+                </persons>
+                <links></links>
+            </event>
+        </room>
+        <room name="Seminar room">
+            <event guid="" id="4">
+                <date>2016-04-07T14:45:00+02:00</date>
+                <start>14:45</start>
+                <duration>00:15</duration>
+                <room>Seminar room</room>
+                <title>The Haptic Hand</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lecture</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>  The haptic hand is a greatly simplified robotic hand that is designed to mirror the human hand and provide haptic force feedback for applications in music. The "fingers" of the haptic hand device are laid out to align with four of the fingers of the human hand. A key is placed on each of the "fingers" so that a human hand can perform music by interacting with the keys. The haptic hand is distinguished from other haptic keyboards in the sense that each finger is meant to stay with a particular key. The haptic hand promotes unencumbered interaction with the keys. The user can easily position a finger over a key and press downward to activate it––the user does not need to insert his or her fingers into an unwieldy exoskeleton or set of thimbles. An example video demonstrates some musical ideas afforded by this open-source software and hardware project.</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="7">Denis Huber</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="21">
+                <date>2016-04-07T15:15:00+02:00</date>
+                <start>15:15</start>
+                <duration>01:30</duration>
+                <room>Seminar room</room>
+                <title>loop - Open educational instruments made in pure data</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>We would like to share the results of our master thesis, the loop-Ensemble. We used Pure data Extended to develop three interconnectable musical instruments that are able to self-describe their technical principles via interaction. They are supposed to be used by students in higher secondary levels, but can also be enjoyed by anyone else. The three instruments ADD, DRUMBO and JERRY can loosely be assigned to musical roles: Bass, drums and lead. These borders are surmountable very quickly due to their ambivalent sound production. The interconnection of the three instruments in particular supports loop-based play that reminds of electronic dance music as well as sound experiments. We will give a short demonstration that focuses on open educational resources (OERs), the ensemble itself and its pedagogical possibilities. After that we can fire them up and start making some noise.    </description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="8">loop2016</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="19">
+                <date>2016-04-07T17:00:00+02:00</date>
+                <start>17:00</start>
+                <duration>01:30</duration>
+                <room>Seminar room</room>
+                <title>Canorus - A next generation open source music score editor</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>  The workshop will be lead by Canorus developers Matevž Jekovec, Reinhard Katzmann, and Georg Rudolph. Topics: * We will start with the history of Canorus * Then we'll compose a simple multi-voice, multi-instrument score and present the philosophy behind writing a score using Canorus. * We'll present the python-based scripting backend and algorithmic composition. * Afterwards we'll present Harmonia, a python-based Canorus plugin used for analyzing the music score. * We'll conclude with the roadmap and missing features. Audience will have the opportunity to express their opinion and request new features in person.</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="9">Matevž Jekovec, Reinhard Katzmann, Georg Rudolph</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="1">
+                <date>2016-04-07T18:45:00+02:00</date>
+                <start>18:45</start>
+                <duration>00:45</duration>
+                <room>Seminar room</room>
+                <title>Stepp0r a renoise plugin</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lecture</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>I presented my plugin unofficial at the LAC2015. People liked it, and said I should create a presentation about it. This time I will present the plugin and talk about future plans (and maybe encourage people to join the project :D)</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="10">Palo</person>
+                </persons>
+                <links></links>
+            </event>
+        </room>
+        <room name="Soundlab">
+            <event guid="" id="22">
+                <date>2016-04-07T12:00:00+02:00</date>
+                <start>12:00</start>
+                <duration>00:45</duration>
+                <room>Soundlab</room>
+                <title>Introduction to microphony</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>I'll go trough all the microphone-basics, from different transducers, transformers and polar patterns up to stereo microphony.[t.b.e]</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="11">raven</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="11">
+                <date>2016-04-07T15:00:00+02:00</date>
+                <start>15:00</start>
+                <duration>01:30</duration>
+                <room>Soundlab</room>
+                <title>Essential Aspects on Mixing</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>This workshop, conducted by Gerald Mwangi of Jimson Drift (www.jimson-drift.de) focuses on the early stages of mixing in music production. I want to share my experiences on initial EQing, Gating and Compressing to clean up the mix and collect the experiences of others. I will supply some gear: 5" monitors, headphones, and a usb soundcard.  The workshop will held as follows: * I will first give a 15min talk on initial EQing, Gating and use of Compressors * Then persons from the audience shall get time slots of approx 10min on my monitors to show their projects/get impressions on their mix * This should allow for 6-7 people on the Loudspeakers. Others have the oppurtunity to use headphones to apply the tips to their mixes * As the workshop is focused on the initial mixing, further topics like stereo panning, reverb, accentuation by EQing will be postponed to the end * I consider myself in intermediate noob! So I invite the 'professionals' and the other noobs for an open discussion</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="12">JimsonDrift</person>
+                </persons>
+                <links></links>
+            </event>
+        </room>
+    </day>
+    <day index="2">
+        <room name="Mainhall">
+            <event guid="" id="6">
+                <date>2016-04-08T10:00:00+02:00</date>
+                <start>10:00</start>
+                <duration>01:30</duration>
+                <room>Mainhall</room>
+                <title>LAC is dead! Long live miniLAC!</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lecture</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>This meta lecture is about the process of doing a Linux Audio Conference. I'd like to talk about: * what the process was like for us as a loose community * what the pitfalls were * what improvements we'd like to see (for us and for all future organizers) * what we as a community can do  I'd like to see this end in an open discussion about the general organizational topics, inviting outsiders to have a glimpse at the process and connect with potential helpful institutions and persons.</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="13">Dave, riot</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="3">
+                <date>2016-04-08T12:00:00+02:00</date>
+                <start>12:00</start>
+                <duration>00:40</duration>
+                <room>Mainhall</room>
+                <title>On Hobbyist Software</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lecture</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>Talk addresses the specific character of software, written as a hobby, and what a user, unfamiliar with a hobbyist community and the body of hobbyist software, should expect from such software in terms of usability and functionality. Additionally, I give my views on why such things should be expected.  First version of the talk was given at a Linux Audio meeting in Köln: https://www.youtube.com/watch?v=JlaBuFfkQdM</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="14">Louigi_Verona</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="5">
+                <date>2016-04-08T13:00:00+02:00</date>
+                <start>13:00</start>
+                <duration>00:15</duration>
+                <room>Mainhall</room>
+                <title>Modal Synthesis using Synth-A-Modeler</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lecture</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>  Modal synthesis is a sound synthesis technique that bridges the gap between traditional "unidirectional" signal processing and computer simulation of acoustic phenomena. After explaining the theory of modal synthesis, example models in Synth-A-Modeler will be presented to demonstrate how modal synthesis can be used for music composition. Finally, an excerpt from Zak Berkowitz's composition *Calder Song* will be played to demonstrate how modal resonators can be situated in space.</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="15">Pascal Kaap, Zak Berkowitz</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="7">
+                <date>2016-04-08T15:00:00+02:00</date>
+                <start>15:00</start>
+                <duration>00:45</duration>
+                <room>Mainhall</room>
+                <title>The Public Domain Project - Building a long term music archive with open source and crowd sourcing</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lecture</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description> The volunteer driven [http://publicdomainproject.org/ Public Domain Project] goals are to collect, digitize and make freely available audio records which in the public domain (no copyrights on it anymore). Our project is comparable to what the Gutenberg Project is doing for books or the IMSLP is doing for scores. For creative people our project makes available a great source of music to inspire you and you are free to use this music in every-way. Such a project has very different requirements on the software and formats used than for example a music studio. But because of the underlying core values of FOSS several projects are of great help for our work and will help us to minimize the risk of technological obsolescence.  I will present our project, what and how we are doing, the free software we are using (and the few gaps) and what will come in the next time (as 2016 will be a great step forward).</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="16">nuess0r</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="18">
+                <date>2016-04-08T16:00:00+02:00</date>
+                <start>16:00</start>
+                <duration>03:00</duration>
+                <room>Mainhall</room>
+                <title>BELA - an open-source embedded platform for low-latency interactive audio</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>  This hands-on workshop introduces participants to Bela, an open source embedded platform for ultra-low latency audio and sensor processing based on the BeagleBone Black. We will present the hardware and software features of Bela through a tutorial that gets participants started developing interactive music projects. Bela projects can be developed in C/C++ or Pure Data (Pd), and the platform features an on-board browser-based IDE for getting started quickly. This workshop will focus specifically on using C++ with Bela to create self-contained instruments.  :http://bela.io [http://www.eecs.qmul.ac.uk/~andrewm/ Augmented Instruments Lab]</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="17">Giuliomoro</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="9">
+                <date>2016-04-08T21:00:00+02:00</date>
+                <start>21:00</start>
+                <duration>00:30</duration>
+                <room>Mainhall</room>
+                <title>Closing</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lecture</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>Dave, excds and riot wrap things up and say goodbye. You've been there!</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="1">Dave, Excds, riot</person>
+                </persons>
+                <links></links>
+            </event>
+        </room>
+        <room name="Seminar room">
+            <event guid="" id="14">
+                <date>2016-04-08T10:00:00+02:00</date>
+                <start>10:00</start>
+                <duration>02:00</duration>
+                <room>Seminar room</room>
+                <title>Physical Modeling using Synth-A-Modeler</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>  This workshop (90 min) will give an introduction to physical modeling using examples that participants are invited to modify in order to create their own new physical models.  ''Note: Peter Vasil will only be able to attend if this is scheduled on Sunday.''</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="18">Edgarberdahl, Peter Vasil, Denis Huber</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="23">
+                <date>2016-04-08T12:00:00+02:00</date>
+                <start>12:00</start>
+                <duration>01:30</duration>
+                <room>Seminar room</room>
+                <title>Let's make some plugins!</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Hacking</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>This hacking event will be for creating and porting audio plugins. It will be mostly focused on [https://github.com/DISTRHO/DPF DPF] but the contents are applicable to other frameworks.  Topics:  * Create the skeleton for your project (git repo, LICENSE, Makefile, etc) * Make a simple, UI-less plugin * Create a simple custom UI * Deploy builds for Linux, Mac OS and Windows * Test run the plugin in several DAWs and as JACK standalone * Bonus: Create the plugin DSP using Max</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="19">FalkTX</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="24">
+                <date>2016-04-08T15:00:00+02:00</date>
+                <start>15:00</start>
+                <duration>01:00</duration>
+                <room>Seminar room</room>
+                <title>Publishing your LV2 plugins to the MOD Cloud</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Hacking</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>This hacking event (60 mins) will be for publishing your existing LV2 audio/midi plugins to the MOD Cloud system.  Topics:  * Verification (ttl validation and basic error checking) * Cross-compile * Create your own GUI * Publish * Test it live on a MOD Duo!</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="19">FalkTX</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="17">
+                <date>2016-04-08T17:00:00+02:00</date>
+                <start>17:00</start>
+                <duration>01:30</duration>
+                <room>Seminar room</room>
+                <title>Getting to know Yoshimi</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>An informal demonstration and explanation of some of the less obvious features of Yoshimi, highlighting usability and convenience.  * Configuration and Recent History * Audio and Midi routing * Roots, Banks and Instruments * Command Line Interface * Direct part access * Channel switching * Vector Control</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="20">Folderol</person>
+                </persons>
+                <links></links>
+            </event>
+        </room>
+        <room name="Soundlab">
+            <event guid="" id="10">
+                <date>2016-04-08T10:00:00+02:00</date>
+                <start>10:00</start>
+                <duration>00:45</duration>
+                <room>Soundlab</room>
+                <title>Stepp0r a renoise plugin</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>This Workshop is in addition to the Lecture, and focuses on LUA scripting to create renoise plugins (like Stepp0r).</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="10">Palo</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="16">
+                <date>2016-04-08T12:00:00+02:00</date>
+                <start>12:00</start>
+                <duration>01:30</duration>
+                <room>Soundlab</room>
+                <title>One Hour Challenge</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>A challenge to produce a music track within 60 minutes. Participants get a short MIDI file as a starting point, and work on their track using the tools and techniques of their choice.</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="21">Umcaruje</person>
+                </persons>
+                <links></links>
+            </event>
+            <event guid="" id="56">
+                <date>2016-04-08T17:00:00+02:00</date>
+                <start>17:00</start>
+                <duration>01:30</duration>
+                <room>Soundlab</room>
+                <title>Bitwig Studio Updates</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop</type>
+                <language>en</language>
+                <abstract></abstract>
+                <description>I'll go trough all the most important updates in Bitwig Studio from last years LAC to this miniLAC. We'll work together and try out things to see, what is possible with the newest stuff. Also, this is my warmup for the later LSN ;)</description>
+                <recording>
+                    <optout>false</optout>
+                    <license>CC-BY-SA</license>
+                </recording>
+                <persons>
+                    <person id="22">riot</person>
+                </persons>
+                <links></links>
+            </event>
+        </room>
+    </day>
+</schedule>

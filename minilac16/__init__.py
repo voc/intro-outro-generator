@@ -69,7 +69,7 @@ def tasks(queue, args):
                 # generate a task description and put them into the queue
                 queue.put(Rendertask(
                         infile = 'intro.svg',
-                        outfile = str(event['id'])+".dv",
+                        outfile = str(event['id'])+".ts",
                         sequence = introFrames,
                         parameters = {
                                 '$id': event['id'],
@@ -82,6 +82,6 @@ def tasks(queue, args):
         # place a task for the outro into the queue
         queue.put(Rendertask(
                 infile = 'outro.svg',
-                outfile = 'outro.dv',
+                outfile = 'outro.ts',
                 sequence = outroFrames
         ))
