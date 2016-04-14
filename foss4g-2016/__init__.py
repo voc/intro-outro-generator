@@ -54,12 +54,12 @@ def outroFrames(p):
 		)
 
 	# 3 Sekunden
-	frames = 3*fps
+	frames = 6*fps
 	for i in range(0, frames):
 		yield (
-			('g1', 'style',    'opacity', "%.4f" % easeDelay(easeLinear, 0.0*fps, i, 0, 1, 2*fps)),
-			('g2', 'style',    'opacity', "%.4f" % easeDelay(easeLinear, 0.5*fps, i, 0, 1, 2*fps)),
-			('g3', 'style',    'opacity', "%.4f" % easeDelay(easeLinear, 1.0*fps, i, 0, 1, 2*fps)),
+			('g1', 'style',    'opacity', "%.4f" % easeDelay(easeLinear, 0*fps, i, 0, 1, 4*fps)),
+			('g2', 'style',    'opacity', "%.4f" % easeDelay(easeLinear, 1*fps, i, 0, 1, 4*fps)),
+			('g3', 'style',    'opacity', "%.4f" % easeDelay(easeLinear, 2*fps, i, 0, 1, 4*fps)),
 		)
 
 	# five final frames
@@ -71,17 +71,17 @@ def outroFrames(p):
 		)
 
 def debug():
-	# render(
-	# 	'intro.svg',
-	# 	'../intro.ts',
-	# 	introFrames,
-	# 	{
-	# 		'$id': 65,
-	# 		'$title': 'Passwort, Karte oder Gesicht',
-	# 		'$subtitle': 'zur Sicherheit von Authentifizierungssystemen',
-	# 		'$personnames': 'starbug'
-	# 	}
-	# )
+	render(
+		'intro.svg',
+		'../intro.ts',
+		introFrames,
+		{
+			'$id': 65,
+			'$title': 'Passwort, Karte oder Gesicht',
+			'$subtitle': 'zur Sicherheit von Authentifizierungssystemen',
+			'$personnames': 'starbug'
+		}
+	)
 
 	render(
 		'outro.svg',
