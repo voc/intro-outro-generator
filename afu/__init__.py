@@ -26,7 +26,7 @@ def introFrames(p):
 	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('text', 'style',    'opacity', "%.4f" % 0),
+			('text', 'style',    'opacity', "%.4f" % 1),
 			('text', 'attr',     'transform', 'translate(%.4f, 0)' % 0),
 		)
 
@@ -57,9 +57,9 @@ def debug():
 		'../intro.ts',
 		introFrames,
 		{
-			'$id': 1,
-			'$title': 'Spaziergang durch den Funkgerätewald',
-			'$person': 'Andreas DJ3EI'
+			'$id': 2,
+			'$title': 'Notfunk',
+			'$person': 'Mike DJ9OZ'
 		}
 	)
 
