@@ -23,7 +23,6 @@ def bounce(i, min, max, frames):
         return max - easeInOutQuad(i - frames/2, min, max, frames/2)
 
 def introFrames(parameters):
-        frames = 10
         yield (
             ('textblock',   'style', 'opacity',  '%.4f' % 0),
             ('layer-icons', 'style', 'display',  'inline'),
@@ -34,47 +33,16 @@ def introFrames(parameters):
             ('repeat',      'style', 'opacity',  '%.4f' % 0),
         )
 
-        for i in range(0, frames):
+        for icon in ('eat', 'sleep', 'code', 'repeat'):
+            frames = 12
+            for i in range(0, frames):
                 scale = easeLinear(i, 0.5, 2, frames)
                 move = -0.5 * scale + 0.5
                 x = 1920 * move
                 y = 1080 * move
                 yield (
-                        ('eat',         'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
-                        ('eat',         'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
-                )
-
-        frames = 12
-        for i in range(0, frames):
-                scale = easeLinear(i, 0.5, 2, frames)
-                move = -0.5 * scale + 0.5
-                x = 1920 * move
-                y = 1080 * move
-                yield (
-                        ('sleep',       'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
-                        ('sleep',       'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
-                )
-
-        frames = 12
-        for i in range(0, frames):
-                scale = easeLinear(i, 0.5, 2, frames)
-                move = -0.5 * scale + 0.5
-                x = 1920 * move
-                y = 1080 * move
-                yield (
-                        ('code',        'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
-                        ('code',        'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
-                )
-
-        frames = 12
-        for i in range(0, frames):
-                scale = easeLinear(i, 0.5, 2, frames)
-                move = -0.5 * scale + 0.5
-                x = 1920 * move
-                y = 1080 * move
-                yield (
-                        ('repeat',      'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
-                        ('repeat',      'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
+                    (icon,         'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
+                    (icon,         'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
                 )
 
         frames = 12
