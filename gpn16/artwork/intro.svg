@@ -59,10 +59,9 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Background"
-     sodipodi:insensitive="true">
+     inkscape:label="Background">
     <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#005d8f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:23.29999924;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#1486cc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:23.29999924;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
        id="rect4162"
        width="1920"
        height="1080"
