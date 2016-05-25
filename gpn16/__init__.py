@@ -87,27 +87,29 @@ def pauseFrames(parameters):
                 )
 
 def debug():
-	render(
-	'intro.svg',
-	'../intro.ts',
+    render(
+        'intro.svg',
+        '../intro.ts',
         introFrames
-        )
-	# render(
-	# 	'outro.svg',
-	# 	'../outro.ts',
-	# 	outroFrames
-	# )
-	#render(
-	#	'intro.svg',
-	#	'../intro.ts',
-	#	introFrames,
-	#	{
-	#		'$id': 20227,
-	#		'$title': "Leben mit dem Saurier",
-	#		'$subtitle': '',
-	#		'$personnames': 'Sarah'
-	#	}
-	#)
+    )
+
+    # render(
+    #   'outro.svg',
+    #   '../outro.ts',
+    #   outroFrames
+    # )
+
+    #render(
+    #   'intro.svg',
+    #   '../intro.ts',
+    #   introFrames,
+    #   {
+    #       '$id': 20227,
+    #       '$title': "Leben mit dem Saurier",
+    #       '$subtitle': '',
+    #       '$personnames': 'Sarah'
+    #   }
+    #)
 
 def tasks(queue, parameters):
     # iterate over all events extracted from the schedule xml-export
