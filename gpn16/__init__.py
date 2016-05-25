@@ -43,7 +43,7 @@ def introFrames(parameters):
                         ('eat',         'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
                 )
 
-        frames = 10
+        frames = 12
         for i in range(0, frames):
                 scale = easeLinear(i, 0.5, 2, frames)
                 move = -0.5 * scale + 0.5
@@ -54,7 +54,7 @@ def introFrames(parameters):
                         ('sleep',       'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
                 )
 
-        frames = 10
+        frames = 12
         for i in range(0, frames):
                 scale = easeLinear(i, 0.5, 2, frames)
                 move = -0.5 * scale + 0.5
@@ -65,7 +65,7 @@ def introFrames(parameters):
                         ('code',        'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
                 )
 
-        frames = 10
+        frames = 12
         for i in range(0, frames):
                 scale = easeLinear(i, 0.5, 2, frames)
                 move = -0.5 * scale + 0.5
@@ -76,7 +76,7 @@ def introFrames(parameters):
                         ('repeat',      'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
                 )
 
-        frames = 10
+        frames = 12
         for i in range(0, frames):
                 scale = easeLinear(i, 0.5, 0.5, frames)
                 move = -0.5 * scale + 0.5
@@ -94,7 +94,7 @@ def introFrames(parameters):
                     ('textblock',   'style', 'opacity',  '%.4f' % 1)
             )
 
-        frames = 10
+        frames = 12
         for i in range(0, frames):
                 scale = easeLinear(i, 1, 1.5, frames)
                 move = -0.5 * scale + 0.5
