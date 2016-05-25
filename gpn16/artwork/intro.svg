@@ -20,22 +20,22 @@
      id="defs4" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#005d8f"
+     pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="1177.0642"
-     inkscape:cy="573.52298"
+     inkscape:zoom="0.175"
+     inkscape:cx="24.589507"
+     inkscape:cy="588.61655"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1600"
-     inkscape:window-height="1177"
+     inkscape:window-height="1016"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -54,6 +54,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,27.637839)">
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#005d8f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:23.29999924;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="rect4162"
+       width="1920"
+       height="1080"
+       x="0"
+       y="-27.637838" />
     <g
        transform="matrix(1,0,0,-1,960.005,512.34716)"
        style="fill:#ffffff;fill-opacity:1"
