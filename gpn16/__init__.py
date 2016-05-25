@@ -103,16 +103,27 @@ def introFrames(parameters):
 #             )
 
 def pauseFrames(parameters):
-    frames = 5*fps
-    for i in range(0, frames):
-        percentage = easeLinear(i, 0, 10, frames)
         yield (
-                ('glow',   'attr',     'x', '%.4f' %  (-0.045 * percentage / 10 )),
-                ('glow',   'attr',     'y', '%.4f' %  (-0.09 * percentage / 10 )),
-                ('glow',   'attr',     'width', '%.4f' % (1 + percentage / 10 * 0.18) ),
-                ('glow',   'attr',     'height', '%.4f' % (1 + percentage / 10 * 0.36) ),
-                ('glowBlur',   'attr',     'stdDeviation', '%.4f' % (percentage / 10 * 19.858825)),
+            ('layer-icons', 'style', 'display',  'inline'),
+
+            ('eat',         'style', 'opacity',  '%.4f' % 0),
+            ('sleep',       'style', 'opacity',  '%.4f' % 0),
+            ('code',        'style', 'opacity',  '%.4f' % 0),
+            ('repeat',      'style', 'opacity',  '%.4f' % 0),
+        )
+
+        for icon in ('eat', 'sleep', 'code', 'repeat'):
+            frames = 12
+            for i in range(0, frames):
+                yield (
+                    ('eat',         'style', 'opacity',  '%.4f' % 0),
+                    ('sleep',       'style', 'opacity',  '%.4f' % 0),
+                    ('code',        'style', 'opacity',  '%.4f' % 0),
+                    ('repeat',      'style', 'opacity',  '%.4f' % 0),
+
+                    (icon,          'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames)),
                 )
+
 
 def debug():
     render(

@@ -26,8 +26,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="190.94034"
-     inkscape:cy="287.2402"
+     inkscape:cx="-297.63109"
+     inkscape:cy="281.52591"
      inkscape:document-units="px"
      inkscape:current-layer="layer-icons"
      showgrid="false"
@@ -72,10 +72,9 @@
      style="display:inline">
     <g
        id="eat"
-       inkscape:label="#g5170"
-       transform="translate(-557.14286,9.8575219e-7)">
+       inkscape:label="#g4171">
       <g
-         transform="matrix(1,0,0,-1,960.005,512.34716)"
+         transform="matrix(1,0,0,-1,402.86214,512.34716)"
          id="eat-inner">
         <g
            id="g12"
@@ -109,11 +108,10 @@
     </g>
     <g
        id="code"
-       inkscape:label="#g5164"
-       transform="translate(-557.14286,-4.6350001e-6)">
+       inkscape:label="#g4184">
       <g
          style="font-size:medium;font-family:ProstoSans-Bold;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
-         transform="translate(717.25155,401.37325)"
+         transform="translate(160.10869,401.37325)"
          id="code-inner">
         <path
            id="path4138"
@@ -134,10 +132,9 @@
     </g>
     <g
        id="sleep"
-       inkscape:label="#g5158"
-       transform="translate(-557.14286,9.9999988e-7)">
+       inkscape:label="#g4194">
       <g
-         transform="translate(392.14286,238.57143)"
+         transform="translate(-165,238.57143)"
          id="sleep-inner">
         <path
            d="m 363.61614,205.17623 c 0,-10.968 8.891,-19.858 19.858,-19.858 10.967,0 19.858,8.891 19.858,19.858 0,10.967 -8.891,19.858 -19.858,19.858 -10.967,0 -19.858,-8.89 -19.858,-19.858 z"
@@ -160,9 +157,9 @@
     </g>
     <g
        id="repeat"
-       inkscape:label="#g5149"
-       transform="translate(-557.14286,3.5071359e-6)">
+       inkscape:label="#g4207">
       <g
+         transform="translate(-557.14286,3.5071359e-6)"
          id="repeat-inner">
         <path
            d="m 1087.366,384.80213 -353.43398,0 c -31.336,0 -56.692,25.357 -56.692,56.693 l 0,141.73303 c 0,31.336 25.357,56.693 56.693,56.693"
@@ -174,7 +171,7 @@
            style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
            transform="matrix(1,0,0,-1,960.01198,512.19516)">
           <polygon
-             points="199.117,127.119 112.765,77.256 112.765,176.973 "
+             points="112.765,176.973 199.117,127.119 112.765,77.256 "
              id="polygon16"
              style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
         </g>
@@ -189,7 +186,7 @@
            style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
            transform="matrix(1,0,0,-1,960.01198,512.19516)">
           <polygon
-             points="-199.14,-127.453 -112.787,-77.59 -112.787,-177.307 "
+             points="-112.787,-177.307 -199.14,-127.453 -112.787,-77.59 "
              id="polygon26"
              style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
         </g>
