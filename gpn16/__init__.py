@@ -10,6 +10,7 @@ scheduleUrl = 'https://entropia.de/GPN16:Fahrplan:XML?action=raw'
 
 # For (really) too long titles
 titlemap = {
+    #
 }
 
 def bounce(i, min, max, frames):
@@ -175,23 +176,23 @@ def debug():
     #   }
     #)
 
-def tasks(queue, parameters):
+def tasks(queue, args):
     # iterate over all events extracted from the schedule xml-export
-        for event in events(scheduleUrl):
+    for event in events(scheduleUrl):
 
-            if len(args) > 0:
-                if not str(event['id']) in args:
-                    continue
+        if len(args) > 0:
+            if not str(event['id']) in args:
+                continue
 
-            # generate a task description and put it into the queue
-            queue.put(Rendertask(
-                infile = 'intro.svg',
-                outfile = str(event['id'])+".ts",
-                sequence = introFrames,
-                parameters = {
-                    '$id': event['id'],
-                    '$title': event['title'],
-                    '$subtitle': event['subtitle'],
-                    '$personnames': event['personnames']
-                    }
-                ))
+        # generate a task description and put it into the queue
+        queue.put(Rendertask(
+            infile = 'intro.svg',
+            outfile = str(event['id'])+".ts",
+            sequence = introFrames,
+            parameters = {
+                '$ID': event['id'],
+                '$TITLE': event['title'],
+                '$SUBTITLE': event['subtitle'],
+                '$SPEAKER': event['personnames']
+                }
+            ))
