@@ -125,23 +125,30 @@ def pauseFrames(parameters):
                 )
 
 
+def outroFrames(p):
+    # 5 Sekunden stehen bleiben
+    frames = 5*fps
+    for i in range(0, frames):
+        yield []
+
 def debug():
     render(
         'intro.svg',
         '../intro.ts',
         introFrames
     )
+
     render(
         'pause.svg',
         '../pause.ts',
         pauseFrames
     )
 
-    # render(
-    #   'outro.svg',
-    #   '../outro.ts',
-    #   outroFrames
-    # )
+    render(
+      'outro.svg',
+      '../outro.ts',
+      outroFrames
+    )
 
     #render(
     #   'intro.svg',
