@@ -26,8 +26,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="92.085614"
-     inkscape:cy="78.582849"
+     inkscape:cx="912.64036"
+     inkscape:cy="192.86856"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -50,17 +50,25 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,27.637839)">
+     id="layer2"
+     inkscape:label="Background"
+     sodipodi:insensitive="true">
     <rect
        style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#005d8f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:23.29999924;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
        id="rect4162"
        width="1920"
        height="1080"
        x="0"
-       y="-27.637838" />
+       y="0" />
+  </g>
+  <g
+     inkscape:label="Icons"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,27.637839)"
+     style="display:inline"
+     sodipodi:insensitive="true">
     <g
        id="eat"
        inkscape:label="#g5170">
@@ -161,7 +169,7 @@
            style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
            transform="matrix(1,0,0,-1,960.01198,512.19516)">
           <polygon
-             points="199.117,127.119 112.765,77.256 112.765,176.973 "
+             points="112.765,176.973 199.117,127.119 112.765,77.256 "
              id="polygon16"
              style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
         </g>
@@ -176,11 +184,28 @@
            style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
            transform="matrix(1,0,0,-1,960.01198,512.19516)">
           <polygon
-             points="-199.14,-127.453 -112.787,-77.59 -112.787,-177.307 "
+             points="-112.787,-177.307 -199.14,-127.453 -112.787,-77.59 "
              id="polygon26"
              style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
         </g>
       </g>
     </g>
   </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Text"
+     style="display:inline">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5196"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:559.99999046%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion5198"><rect
+           id="rect5200"
+           width="1842.8572"
+           height="1002.8571"
+           x="42.857143"
+           y="45.714287" /></flowRegion><flowPara
+         id="flowPara5202"
+         style="line-height:120%;-inkscape-font-specification:'Prosto Sans Bold';font-family:'Prosto Sans';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;fill:#ffffff;fill-opacity:1;font-size:80px">Lalalala</flowPara></flowRoot>  </g>
 </svg>
