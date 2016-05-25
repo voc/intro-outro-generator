@@ -103,26 +103,17 @@ def introFrames(parameters):
 #             )
 
 def pauseFrames(parameters):
+    frames = 25*3
+    for i in range(0, frames):
         yield (
-            ('layer-icons', 'style', 'display',  'inline'),
-
-            ('eat',         'style', 'opacity',  '%.4f' % 0),
-            ('sleep',       'style', 'opacity',  '%.4f' % 0),
-            ('code',        'style', 'opacity',  '%.4f' % 0),
-            ('repeat',      'style', 'opacity',  '%.4f' % 0),
+            ('sleep-flood', 'attr', 'flood-opacity', '%.4f' % bounce(i, 0.0, 1.0, frames)),
         )
 
-        for icon in ('eat', 'sleep', 'code', 'repeat'):
-            frames = 12
-            for i in range(0, frames):
-                yield (
-                    ('eat',         'style', 'opacity',  '%.4f' % 0),
-                    ('sleep',       'style', 'opacity',  '%.4f' % 0),
-                    ('code',        'style', 'opacity',  '%.4f' % 0),
-                    ('repeat',      'style', 'opacity',  '%.4f' % 0),
-
-                    (icon,          'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames)),
-                )
+    frames = 25*1
+    for i in range(0, frames):
+        yield (
+            ('sleep-flood', 'attr', 'flood-opacity', '%.4f' % 0),
+        )
 
 
 def outroFrames(p):
