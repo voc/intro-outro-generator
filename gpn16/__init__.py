@@ -92,6 +92,11 @@ def debug():
         '../intro.ts',
         introFrames
     )
+    render(
+        'pause.svg',
+        '../pause.ts',
+        pauseFrames
+    )
 
     # render(
     #   'outro.svg',
