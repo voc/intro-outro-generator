@@ -155,10 +155,10 @@ def debug():
     #   '../intro.ts',
     #   introFrames,
     #   {
-    #       '$id': 20227,
-    #       '$title': "Leben mit dem Saurier",
-    #       '$subtitle': '',
-    #       '$personnames': 'Sarah'
+    #       '$ID': 20227,
+    #       '$TITLE': "Leben mit dem Saurier",
+    #       '$SUBTITLE': '',
+    #       '$SPEAKER': 'Sarah'
     #   }
     #)
 
