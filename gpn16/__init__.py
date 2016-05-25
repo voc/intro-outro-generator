@@ -23,31 +23,54 @@ def bounce(i, min, max, frames):
 
 def introFrames(parameters):
         frames = 10
+        yield (
+            ('eat',         'style', 'opacity',  '%.4f' % 0),
+            ('sleep',       'style', 'opacity',  '%.4f' % 0),
+            ('code',        'style', 'opacity',  '%.4f' % 0),
+            ('repeat',      'style', 'opacity',  '%.4f' % 0),
+        )
+
         for i in range(0, frames):
+                scale = easeLinear(i, 0.5, 2, frames)
+                move = -0.5 * scale + 0.5
+                x = 1920 * move
+                y = 1080 * move
                 yield (
-                        ('eatTransform',         'attr',  'transform', "scale(%.4f)" % easeLinear(i, 0.5, 2.0, frames)),
-                        ('eatTransform',        'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
+                        ('eat',         'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
+                        ('eat',         'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
                 )
 
         frames = 10
         for i in range(0, frames):
+                scale = easeLinear(i, 0.5, 2, frames)
+                move = -0.5 * scale + 0.5
+                x = 1920 * move
+                y = 1080 * move
                 yield (
-                        ('sleep',         'attr',  'transform', "scale(%.4f)" % easeLinear(i, 0.5, 2.0, frames)),
-                        ('sleepTransform',        'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
+                        ('sleep',       'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
+                        ('sleep',       'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
                 )
 
         frames = 10
         for i in range(0, frames):
+                scale = easeLinear(i, 0.5, 2, frames)
+                move = -0.5 * scale + 0.5
+                x = 1920 * move
+                y = 1080 * move
                 yield (
-                        ('codeTransform',         'attr',  'transform', "scale(%.4f)" % easeLinear(i, 0.5, 2.0, frames)),
-                        ('codeTransform',        'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
+                        ('code',        'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
+                        ('code',        'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
                 )
 
         frames = 10
         for i in range(0, frames):
+                scale = easeLinear(i, 0.5, 2, frames)
+                move = -0.5 * scale + 0.5
+                x = 1920 * move
+                y = 1080 * move
                 yield (
-                        ('repeatTransform',         'attr',  'transform', "scale(%.4f)" % easeLinear(i, 0.5, 2.0, frames)),
-                        ('repeatTransform',        'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
+                        ('repeat',      'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
+                        ('repeat',      'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
                 )
 
 
