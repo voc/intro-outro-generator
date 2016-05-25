@@ -23,12 +23,12 @@
        y="-40%" height="180%"
        x="-40%" width="180%"
        inkscape:label="Drop Shadow"
-       id="filter4447">
+       id="glow">
       <feFlood
-         flood-opacity="0.1"
+         flood-opacity="1.0"
          flood-color="rgb(255,255,255)"
          result="flood"
-         id="sleep-flood" />
+         id="glowFlood" />
       <feComposite
          in="flood"
          in2="SourceGraphic"
@@ -107,6 +107,7 @@
      style="display:inline">
     <g
        id="sleep"
+       style="filter:url(#glow)"
        inkscape:label="#g4194">
       <g
          transform="translate(-165,238.57143)"
@@ -131,8 +132,7 @@
       </g>
     </g>
     <g
-       id="g4428"
-       style="filter:url(#filter4447)">
+       id="g4428">
       <path
          d="m 832.90692,410.54575 0,203.63284 40.72656,0 0,-63.99889 52.36273,0 c 56.72629,0 87.27119,-30.54493 87.27119,-69.81698 0,-39.27204 -30.5449,-69.81697 -87.27119,-69.81697 l -93.08929,0 z m 93.08929,33.45397 c 27.63589,0 45.09013,17.45424 45.09013,36.363 0,18.90877 -17.45424,36.36301 -45.09013,36.36301 l -52.36273,0 0,-72.72601 52.36273,0 z"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:290.90405273px;line-height:559.99999046%;font-family:'Prosto Sans';-inkscape-font-specification:'Prosto Sans Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

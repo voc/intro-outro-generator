@@ -106,13 +106,13 @@ def pauseFrames(parameters):
     frames = 25*3
     for i in range(0, frames):
         yield (
-            ('sleep-flood', 'attr', 'flood-opacity', '%.4f' % bounce(i, 0.0, 1.0, frames)),
+            ('glowFlood', 'attr', 'flood-opacity', '%.4f' % bounce(i, 0.0, 1.0, frames)),
         )
 
     frames = 25*1
     for i in range(0, frames):
         yield (
-            ('sleep-flood', 'attr', 'flood-opacity', '%.4f' % 0),
+            ('glowFlood', 'attr', 'flood-opacity', '%.4f' % 0),
         )
 
 
