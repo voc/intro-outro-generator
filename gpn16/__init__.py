@@ -24,6 +24,9 @@ def bounce(i, min, max, frames):
 def introFrames(parameters):
         frames = 10
         yield (
+            ('textblock',   'style', 'opacity',  '%.4f' % 0),
+            ('layer-icons', 'style', 'display',  'inline'),
+
             ('eat',         'style', 'opacity',  '%.4f' % 0),
             ('sleep',       'style', 'opacity',  '%.4f' % 0),
             ('code',        'style', 'opacity',  '%.4f' % 0),
@@ -73,7 +76,40 @@ def introFrames(parameters):
                         ('repeat',      'style', 'opacity',  '%.4f' % bounce(i, 0.0, 1.0, frames))
                 )
 
+        frames = 10
+        for i in range(0, frames):
+                scale = easeLinear(i, 0.5, 0.5, frames)
+                move = -0.5 * scale + 0.5
+                x = 1920 * move
+                y = 1080 * move
+                yield (
+                        ('textblock',   'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
+                        ('textblock',   'style', 'opacity',  '%.4f' % easeLinear(i, 0.0, 1.0, frames))
+                )
 
+        frames = 25*3
+        for i in range(0, frames):
+            yield (
+                    ('textblock',   'attr',  'transform', "scale(%.4f)" % 1),
+                    ('textblock',   'style', 'opacity',  '%.4f' % 1)
+            )
+
+        frames = 10
+        for i in range(0, frames):
+                scale = easeLinear(i, 1, 1.5, frames)
+                move = -0.5 * scale + 0.5
+                x = 1920 * move
+                y = 1080 * move
+                yield (
+                        ('textblock',   'attr',  'transform', "translate(%.4f, %.4f) scale(%.4f)" % (x, y, scale)),
+                        ('textblock',   'style', 'opacity',  '%.4f' % easeLinear(i, 1.0, -1.0, frames))
+                )
+
+        frames = 5
+        for i in range(0, frames):
+            yield (
+                    ('textblock',   'style', 'opacity',  '%.4f' % 0),
+            )
 
 # def outroFrames(parameters):
 #     frames = 2*fps

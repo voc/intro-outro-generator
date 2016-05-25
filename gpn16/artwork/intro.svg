@@ -26,8 +26,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="912.64036"
-     inkscape:cy="192.86856"
+     inkscape:cx="900.94034"
+     inkscape:cy="292.95449"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -36,7 +36,14 @@
      inkscape:window-height="1016"
      inkscape:window-x="0"
      inkscape:window-y="27"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="73.571429,972.5"
+       orientation="1,0"
+       id="guide5258" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -65,9 +72,9 @@
   <g
      inkscape:label="Icons"
      inkscape:groupmode="layer"
-     id="layer1"
+     id="layer-icons"
      transform="translate(0,27.637839)"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <g
        id="eat"
@@ -195,17 +202,70 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Text"
-     style="display:inline">
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5196"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:559.99999046%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
-         id="flowRegion5198"><rect
-           id="rect5200"
-           width="1842.8572"
-           height="1002.8571"
-           x="42.857143"
-           y="45.714287" /></flowRegion><flowPara
-         id="flowPara5202"
-         style="line-height:120%;-inkscape-font-specification:'Prosto Sans Bold';font-family:'Prosto Sans';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;fill:#ffffff;fill-opacity:1;font-size:80px">Lalalala</flowPara></flowRoot>  </g>
+     style="display:inline;">
+    <g
+       id="textblock"
+       inkscape:label="#g5274">
+      <rect
+         y="61.997288"
+         x="53.997288"
+         height="116.00542"
+         width="996.00543"
+         id="rect5212"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:3.99457598;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="559.99999%"
+         id="text5229"
+         y="148"
+         x="72.14286"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:559.99999046%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:80px;font-family:'Prosto Sans';-inkscape-font-specification:'Prosto Sans Bold';fill:#ffffff;fill-opacity:1"
+           y="148"
+           x="72.14286"
+           id="tspan5231"
+           sodipodi:role="line">$SPEAKER</tspan></text>
+      <rect
+         y="178.01817"
+         x="54.018169"
+         height="595.96368"
+         width="1811.9636"
+         id="rect5212-2"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:4.03633928;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+      <flowRoot
+         transform="translate(-10,-6)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:120.00000477%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot5250"
+         xml:space="preserve"><flowRegion
+           id="flowRegion5252"><rect
+             style="line-height:120.00000477%"
+             y="192.07591"
+             x="80.812202"
+             height="563.76294"
+             width="1753.1389"
+             id="rect5254" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:80px;font-family:'Prosto Sans';-inkscape-font-specification:'Prosto Sans Bold';fill:#ffffff;fill-opacity:1"
+           id="flowPara5256">$TITLE</flowPara><flowPara
+           id="flowPara5262"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:80px;font-family:'Prosto Sans';-inkscape-font-specification:'Prosto Sans Bold';fill:#ffffff;fill-opacity:0.50196081;opacity:1">$SUBTITLE</flowPara></flowRoot>      <rect
+         y="677.87677"
+         x="1669.8767"
+         height="96.24646"
+         width="196.24648"
+         id="rect5268"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:0;fill-rule:nonzero;stroke:#ffffff;stroke-width:3.75353909;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="559.99999%"
+         id="text5270"
+         y="747"
+         x="1682.08"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:559.99999046%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60px;font-family:'Prosto Sans';-inkscape-font-specification:'Prosto Sans Bold';fill:#ffffff;fill-opacity:1"
+           y="747"
+           x="1682.08"
+           id="tspan5272"
+           sodipodi:role="line">$ID</tspan></text>
+    </g>
+  </g>
 </svg>
