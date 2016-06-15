@@ -6,6 +6,10 @@ from easing import *
 # URL to Schedule-XML
 scheduleUrl = 'http://frab.fossgis-konferenz.de/en/foss4g-2016/public/schedule.xml'
 
+titlemap = {
+	#708: "Neue WEB-Anwendungen des LGRB Baden-Württemberg im Überblick"
+}
+
 def introFrames(p):
 	move=50
 
