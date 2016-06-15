@@ -3,6 +3,9 @@
 from renderlib import *
 from easing import *
 
+# URL to Schedule-XML
+scheduleUrl = 'http://frab.fossgis-konferenz.de/en/foss4g-2016/public/schedule.xml'
+
 def introFrames(p):
 	move=50
 
