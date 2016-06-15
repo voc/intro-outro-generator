@@ -118,4 +118,32 @@ def debug():
 	)
 
 def tasks(queue, args):
-	raise NotImplementedError('call with --debug to render your intro/outro')
+	# iterate over all events extracted from the schedule xml-export
+	for event in events(scheduleUrl, titlemap):
+
+		# generate a task description and put them into the queue
+		queue.put(Rendertask(
+			infile = 'intro.svg',
+			outfile = str(event['id'])+".ts",
+			sequence = introFrames,
+			parameters = {
+				'$id': event['id'],
+				'$title': event['title'],
+				'$subtitle': event['subtitle'],
+				'$personnames': event['personnames']
+			}
+		))
+
+	# place a task for the outro into the queue
+	queue.put(Rendertask(
+		infile = 'outro.svg',
+		outfile = 'outro.dv',
+		sequence = outroFrames
+	))
+
+	# place the pause-sequence into the queue
+	queue.put(Rendertask(
+		infile = 'pause.svg',
+		outfile = 'pause.dv',
+		sequence = pauseFrames
+	))
