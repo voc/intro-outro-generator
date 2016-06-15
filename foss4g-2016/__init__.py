@@ -70,23 +70,51 @@ def outroFrames(p):
 			('g3', 'style',    'opacity', "%.4f" % 1),
 		)
 
+def pauseFrames(p):
+	# 3 Sekunden animation bleiben
+
+	for nr in range(0, 3):
+		# 10 sekunden sehen
+		frames = 3*fps
+		for i in range(0, frames):
+			yield (
+				('image%u' % ((nr+0)%3), 'style',    'opacity', "%.4f" % 1),
+				('image%u' % ((nr+1)%3), 'style',    'opacity', "%.4f" % 0),
+				('image%u' % ((nr+2)%3), 'style',    'opacity', "%.4f" % 0),
+			)
+
+		# 1 sekunde faden
+		frames = 2*fps
+		for i in range(0, frames):
+			yield (
+				('image%u' % ((nr+0)%3), 'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
+				('image%u' % ((nr+1)%3), 'style',    'opacity', "%.4f" % easeLinear(i, 0, +1, frames)),
+				('image%u' % ((nr+2)%3), 'style',    'opacity', "%.4f" % 0),
+			)
+
 def debug():
-	render(
-		'intro.svg',
-		'../intro.ts',
-		introFrames,
-		{
-			'$id': 65,
-			'$title': 'Passwort, Karte oder Gesicht',
-			'$subtitle': 'zur Sicherheit von Authentifizierungssystemen',
-			'$personnames': 'starbug'
-		}
-	)
+	# render(
+	# 	'intro.svg',
+	# 	'../intro.ts',
+	# 	introFrames,
+	# 	{
+	# 		'$id': 65,
+	# 		'$title': 'Passwort, Karte oder Gesicht',
+	# 		'$subtitle': 'zur Sicherheit von Authentifizierungssystemen',
+	# 		'$personnames': 'starbug'
+	# 	}
+	# )
+
+	# render(
+	# 	'outro.svg',
+	# 	'../outro.ts',
+	# 	outroFrames
+	# )
 
 	render(
-		'outro.svg',
-		'../outro.ts',
-		outroFrames
+		'pause.svg',
+		'../pause.ts',
+		pauseFrames
 	)
 
 def tasks(queue, args):

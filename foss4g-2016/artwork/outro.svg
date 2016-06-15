@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="428.58661"
-     inkscape:cy="336.54291"
+     inkscape:zoom="1.4"
+     inkscape:cx="874.56464"
+     inkscape:cy="88.823033"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="g3"
      showgrid="false"
      units="px"
      showguides="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:window-height="1021"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -84,17 +84,23 @@
        inkscape:label=""
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
-       position="20.000001,70"
-       orientation="0,1"
-       id="guide4708"
-       inkscape:label=""
-       inkscape:color="rgb(0,0,255)" />
-    <sodipodi:guide
        position="1850.0001,20"
        orientation="1,0"
        id="guide4302"
        inkscape:label=""
        inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="741.02483,205.67211"
+       orientation="1,0"
+       id="guide4244" />
+    <sodipodi:guide
+       position="1339.2858,-257.14286"
+       orientation="0,-1"
+       id="guide4248" />
+    <sodipodi:guide
+       position="1180.0001,-82.142857"
+       orientation="1,0"
+       id="guide4252" />
   </sodipodi:namedview>
   <metadata
      id="metadata4266">
@@ -503,7 +509,7 @@
        transform="matrix(0.42793827,0,0,0.42793827,13.580927,631.5475)" />
     <g
        id="g2"
-       transform="matrix(0.48854251,0,0,0.48854251,732.98368,538.83406)"
+       transform="matrix(0.48854251,0,0,0.48854251,732.98368,508.83406)"
        style="fill:#ffffff;fill-opacity:1"
        inkscape:label="#g4258">
       <path
@@ -533,7 +539,7 @@
     <g
        id="g3"
        inkscape:label="Layer 1"
-       transform="matrix(3.6666668,0,0,3.6666668,740.00005,902.46707)">
+       transform="matrix(3.6666668,0,0,3.6666668,740.00005,872.46707)">
       <g
          inkscape:export-ydpi="300.23013"
          inkscape:export-xdpi="300.23013"
@@ -613,6 +619,18 @@
              inkscape:connector-curvature="0" />
         </g>
       </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.19869137px;line-height:559.99999046%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-0.16925545"
+         y="53.355335"
+         id="text4240"
+         sodipodi:linespacing="559.99999%"><tspan
+           sodipodi:role="line"
+           id="tspan4242"
+           x="-0.16925545"
+           y="53.355335"
+           style="fill:#ffffff;fill-opacity:1">CC-BY - Deutschland 3.0</tspan></text>
     </g>
   </g>
 </svg>
