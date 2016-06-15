@@ -93,23 +93,23 @@ def pauseFrames(p):
 			)
 
 def debug():
-	# render(
-	# 	'intro.svg',
-	# 	'../intro.ts',
-	# 	introFrames,
-	# 	{
-	# 		'$id': 65,
-	# 		'$title': 'Passwort, Karte oder Gesicht',
-	# 		'$subtitle': 'zur Sicherheit von Authentifizierungssystemen',
-	# 		'$personnames': 'starbug'
-	# 	}
-	# )
+	render(
+		'intro.svg',
+		'../intro.ts',
+		introFrames,
+		{
+			'$id': 65,
+			'$title': 'Passwort, Karte oder Gesicht',
+			'$subtitle': 'zur Sicherheit von Authentifizierungssystemen',
+			'$personnames': 'starbug'
+		}
+	)
 
-	# render(
-	# 	'outro.svg',
-	# 	'../outro.ts',
-	# 	outroFrames
-	# )
+	render(
+		'outro.svg',
+		'../outro.ts',
+		outroFrames
+	)
 
 	render(
 		'pause.svg',
