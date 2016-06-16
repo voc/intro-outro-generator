@@ -144,13 +144,13 @@ def tasks(queue, args):
 	# place a task for the outro into the queue
 	queue.put(Rendertask(
 		infile = 'outro.svg',
-		outfile = 'outro.dv',
+		outfile = 'outro.ts',
 		sequence = outroFrames
 	))
 
 	# place the pause-sequence into the queue
 	queue.put(Rendertask(
 		infile = 'pause.svg',
-		outfile = 'pause.dv',
+		outfile = 'pause.ts',
 		sequence = pauseFrames
 	))
