@@ -27,15 +27,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="850.84149"
-     inkscape:cy="538.55911"
+     inkscape:cx="455.87185"
+     inkscape:cy="534.5185"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
      units="px"
      showguides="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:window-height="1021"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -109,15 +109,15 @@
      transform="translate(0,27.637408)"
      sodipodi:insensitive="true">
     <image
-       sodipodi:absref="/home/peter/AAA-VOC/intro-outro-generator/foss4g-2016/artwork/Abendpanorama-2014-01.jpg"
+       sodipodi:absref="/home/peter/VOC/intro-outro-generator/foss4g-2016/artwork/Abendpanorama-2014-01.jpg"
        xlink:href="Abendpanorama-2014-01.jpg"
-       y="-27.637316"
-       x="0"
-       id="image4277"
-       style="image-rendering:optimizeQuality"
-       preserveAspectRatio="none"
+       width="1920"
        height="1280"
-       width="1920" />
+       preserveAspectRatio="none"
+       style="image-rendering:optimizeQuality"
+       id="image4277"
+       x="0"
+       y="-27.637316" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -224,10 +224,6 @@
            style="stroke:#ffffff;stroke-width:2.00000024;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.75000763px;line-height:120.00000477%;font-family:'Passion One';-inkscape-font-specification:'Passion One';letter-spacing:0.75000006px;fill:#2980b9;fill-opacity:1;stroke:#ffffff;stroke-width:2.00000024;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="flowPara4845">$title</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:62.50000381px;line-height:120.00000477%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';fill:#cbd7d7;fill-opacity:1;stroke:none;stroke-width:2.00000024;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="flowPara5777">$subtitle</flowPara><flowPara
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:62.50000381px;line-height:120.00000477%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Italic';fill:#cbd7d7;fill-opacity:1;stroke:none;stroke-width:2.00000024;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="flowPara5779" /><flowPara
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:62.50000381px;line-height:120.00000477%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Italic';fill:#cbd7d7;fill-opacity:1;stroke:none;stroke-width:2.00000024;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="flowPara5781">$personnames</flowPara></flowRoot>    <g
        transform="translate(393.29805,-6.6448132)"
