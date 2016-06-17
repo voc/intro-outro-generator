@@ -115,9 +115,29 @@
        height="1280"
        preserveAspectRatio="none"
        style="image-rendering:optimizeQuality"
-       id="image4277"
+       id="image0"
        x="0"
        y="-27.637316" />
+    <image
+       sodipodi:absref="/home/peter/VOC/intro-outro-generator/foss4g-2016/artwork/Panorama-v-Stadthaus-2013-02.jpg"
+       xlink:href="Panorama-v-Stadthaus-2013-02.jpg"
+       width="2220.386"
+       height="1110.0364"
+       preserveAspectRatio="none"
+       style="opacity:0;image-rendering:optimizeQuality"
+       id="image1"
+       x="-191.62154"
+       y="-33.373199" />
+    <image
+       sodipodi:absref="/home/peter/VOC/intro-outro-generator/foss4g-2016/artwork/ship.jpg"
+       xlink:href="ship.jpg"
+       width="1985.7144"
+       height="1116.9644"
+       preserveAspectRatio="none"
+       style="opacity:0;image-rendering:optimizeQuality"
+       id="image2"
+       x="-14.285739"
+       y="-39.066048" />
   </g>
   <g
      inkscape:groupmode="layer"

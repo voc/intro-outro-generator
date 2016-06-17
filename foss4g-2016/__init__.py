@@ -13,11 +13,17 @@ titlemap = {
 def introFrames(p):
 	move=50
 
+	nr = p['$id'];
+
 	# five initial frames
 	for i in range(0, 5):
 		yield (
 			('text', 'style',    'opacity', "%.4f" % 0),
 			('text', 'attr',     'transform', 'translate(%.4f, 0)' % -move),
+
+			('image%u' % ((nr+0)%3), 'style',    'opacity', "%.4f" % 1),
+			('image%u' % ((nr+1)%3), 'style',    'opacity', "%.4f" % 0),
+			('image%u' % ((nr+2)%3), 'style',    'opacity', "%.4f" % 0),
 		)
 
 	# 3 Sekunde Text Fadein
