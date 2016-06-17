@@ -7,7 +7,7 @@ from easing import *
 scheduleUrl = 'http://frab.fossgis-konferenz.de/en/foss4g-2016/public/schedule.xml'
 
 titlemap = {
-	#708: "Neue WEB-Anwendungen des LGRB Baden-Württemberg im Überblick"
+	1533: "Building applications with FOSS4G bricks"
 }
 
 def introFrames(p):
