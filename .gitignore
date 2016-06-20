@@ -2,7 +2,7 @@
 *.dv
 *.ts
 *.mov
-*.png
+*/*.png
 *.pyc
 schedule.de.xml
 .frames
