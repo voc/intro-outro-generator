@@ -120,8 +120,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="1330.4041"
-     inkscape:cy="393.47739"
+     inkscape:cx="1219.7676"
+     inkscape:cy="755.42394"
      inkscape:document-units="px"
      inkscape:current-layer="g_background"
      showgrid="false"
@@ -173,7 +173,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -188,70 +188,19 @@
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/P1000778-gaussblur-75.JPG"
          xlink:href="P1000778-gaussblur-75.JPG"
-         width="1920"
-         height="1440"
-         id="image_background"
+         y="-1135.3215"
          x="162.78572"
-         y="-1135.3215" />
+         id="image_background"
+         height="1440"
+         width="1920" />
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/logo_ohne_rand.png"
          xlink:href="logo_ohne_rand.png"
-         width="166"
-         height="166"
+         y="-743.32147"
+         x="1801.7858"
          id="image_logo"
-         x="1884.7858"
-         y="-743.32147" />
-    </g>
-    <g
-       style="opacity:1"
-       id="box"
-       transform="scale(1.875,1)">
-      <rect
-         style="fill:#ffffff;fill-opacity:0.50196078"
-         ry="0.0062701544"
-         y="777"
-         x="0"
-         height="230"
-         width="1024"
-         id="rect_banderole_1" />
-    </g>
-    <g
-       id="text1"
-       style="opacity:0.25">
-      <text
-         sodipodi:linespacing="80.000001%"
-         id="text2992"
-         y="876.83752"
-         x="75.964493"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3772)"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none"
-           id="tspan2996"
-           y="876.83752"
-           x="75.964493"
-           sodipodi:role="line">         Salzburg</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none"
-           id="tspan3002"
-           y="915.23755"
-           x="75.964493"
-           sodipodi:role="line">04. - 06. Juli 2016</tspan></text>
-      <text
-         sodipodi:linespacing="80.000001%"
-         id="text2992-5"
-         y="837.2262"
-         x="77.218193"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1"
-           y="837.2262"
-           x="77.218193"
-           id="tspan2994-9"
-           sodipodi:role="line">FOSSGIS Konferenz</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none"
-           id="tspan2998-1"
-           y="875.62622"
-           x="77.218193"
-           sodipodi:role="line">2016</tspan></text>
+         height="249"
+         width="249" />
     </g>
     <text
        xml:space="preserve"
@@ -265,20 +214,75 @@
          y="1043.1428"
          id="url"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';text-align:end;text-anchor:end;fill:#f2f4f5;fill-opacity:1;stroke:none">frab.fossgis-konferenz.de/de/2016/public/events/$id</tspan></text>
-    <flowRoot
-       xml:space="preserve"
-       id="text2"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="translate(31.857143,489.71429)"
-       inkscape:label="#text2"><flowRegion
-         id="flowRegion3041"><rect
-           id="rect3043"
-           width="1809.7142"
-           height="188.24582"
-           x="46.42857"
-           y="318.14285" /></flowRegion><flowPara
-         style="font-weight:bold;font-size:48px;line-height:89.99999762%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1"
-         id="flowPara3025">$personnames</flowPara><flowPara
-         id="flowPara3048"
-         style="font-weight:bold;font-size:48px;line-height:89.99999762%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1">$title</flowPara></flowRoot>  </g>
+    <g
+       id="g4177"
+       transform="matrix(1.3478261,0,0,1.3478261,0,-350.26087)">
+      <g
+         transform="scale(1.875,1)"
+         id="box"
+         style="opacity:1">
+        <rect
+           id="rect_banderole_1"
+           width="759.74194"
+           height="230"
+           x="0"
+           y="777"
+           ry="0.0062701544"
+           style="fill:#ffffff;fill-opacity:0.50196078" />
+      </g>
+      <g
+         style="opacity:0.25"
+         id="text1">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3772)"
+           x="75.964493"
+           y="876.83752"
+           id="text2992"
+           sodipodi:linespacing="80.000001%"><tspan
+             sodipodi:role="line"
+             x="75.964493"
+             y="876.83752"
+             id="tspan2996"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none">         Salzburg</tspan><tspan
+             sodipodi:role="line"
+             x="75.964493"
+             y="915.23755"
+             id="tspan3002"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none">04. - 06. Juli 2016</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           x="77.218193"
+           y="837.2262"
+           id="text2992-5"
+           sodipodi:linespacing="80.000001%"><tspan
+             sodipodi:role="line"
+             id="tspan2994-9"
+             x="77.218193"
+             y="837.2262"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1">FOSSGIS Konferenz</tspan><tspan
+             sodipodi:role="line"
+             x="77.218193"
+             y="875.62622"
+             id="tspan2998-1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none">2016</tspan></text>
+      </g>
+      <flowRoot
+         inkscape:label="#text2"
+         transform="translate(31.857143,489.71429)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         id="text2"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3041"><rect
+             y="318.14285"
+             x="46.42857"
+             height="184.0062"
+             width="1322.4885"
+             id="rect3043" /></flowRegion><flowPara
+           id="flowPara3025"
+           style="font-weight:bold;font-size:48px;line-height:89.99999762%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1">$personnames</flowPara><flowPara
+           style="font-weight:bold;font-size:48px;line-height:89.99999762%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1"
+           id="flowPara3048">$title</flowPara></flowRoot>    </g>
+  </g>
 </svg>

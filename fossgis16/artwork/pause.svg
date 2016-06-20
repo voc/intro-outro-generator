@@ -90,10 +90,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="1147.3926"
-     inkscape:cy="-75.962259"
+     inkscape:cx="752.42296"
+     inkscape:cy="728.11916"
      inkscape:document-units="px"
-     inkscape:current-layer="layer_background"
+     inkscape:current-layer="g3091x"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -104,8 +104,10 @@
      inkscape:window-maximized="1">
     <sodipodi:guide
        orientation="0,1"
-       position="0,576"
-       id="guide2996" />
+       position="0,1080"
+       id="guide2996"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        orientation="0,1"
        position="0,0"
@@ -126,8 +128,16 @@
        id="guide3029" />
     <sodipodi:guide
        orientation="0,1"
-       position="0,544"
-       id="guide3031" />
+       position="0,1048"
+       id="guide3031"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="1888,0"
+       orientation="1,0"
+       id="guide4168"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -152,97 +162,101 @@
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/P1000778-gaussblur-75.JPG"
          xlink:href="P1000778-gaussblur-75.JPG"
-         y="-1135.3215"
-         x="162.78572"
-         id="image_background"
+         width="1920"
          height="1440"
-         width="1920" />
+         id="image_background"
+         x="162.78572"
+         y="-1135.3215" />
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/logo_ohne_rand.png"
          xlink:href="logo_ohne_rand.png"
-         y="-743.32147"
-         x="1884.7858"
+         width="249"
+         height="249"
          id="image_logo"
-         height="166"
-         width="166" />
+         x="1801.7858"
+         y="-743.32147" />
     </g>
     <g
-       id="g3091x"
-       transform="matrix(1.875,0,0,1,-8.2519531e-7,504.00003)">
-      <rect
-         style="fill:#ffffff;fill-opacity:0.50196078"
-         ry="0.0062701544"
-         y="777"
-         x="0"
-         height="230"
-         width="1024"
-         id="rect_banderole_1" />
-    </g>
-    <g
-       style="opacity:0.25"
-       id="text1"
-       transform="translate(-8.2519531e-7,504.00003)">
-      <text
-         sodipodi:linespacing="80.000001%"
-         id="text2992"
-         y="876.83752"
-         x="75.964493"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3772)"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none"
-           id="tspan2996"
+       id="g4170"
+       transform="matrix(1.3478261,0,0,1.3478261,2.8702446e-7,-525.56523)">
+      <g
+         transform="matrix(1.875,0,0,1,-8.2519531e-7,504.00003)"
+         id="g3091x">
+        <rect
+           id="rect_banderole_1"
+           width="759.74194"
+           height="230"
+           x="0"
+           y="777"
+           ry="0.0062701544"
+           style="fill:#ffffff;fill-opacity:0.50196078" />
+      </g>
+      <g
+         transform="translate(-8.2519531e-7,504.00003)"
+         id="text1"
+         style="opacity:0.25">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3772)"
+           x="75.964493"
            y="876.83752"
-           x="75.964493"
-           sodipodi:role="line">         Münster</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none"
-           id="tspan3002"
-           y="915.23755"
-           x="75.964493"
-           sodipodi:role="line">11. - 13. März 2015</tspan></text>
-      <text
-         sodipodi:linespacing="80.000001%"
-         id="text2992-5"
-         y="837.2262"
-         x="77.218193"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1"
+           id="text2992"
+           sodipodi:linespacing="80.000001%"><tspan
+             sodipodi:role="line"
+             x="75.964493"
+             y="876.83752"
+             id="tspan2996"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none">         Münster</tspan><tspan
+             sodipodi:role="line"
+             x="75.964493"
+             y="915.23755"
+             id="tspan3002"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none">11. - 13. März 2015</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           x="77.218193"
            y="837.2262"
+           id="text2992-5"
+           sodipodi:linespacing="80.000001%"><tspan
+             sodipodi:role="line"
+             id="tspan2994-9"
+             x="77.218193"
+             y="837.2262"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1">FOSSGIS Konferenz</tspan><tspan
+             sodipodi:role="line"
+             x="77.218193"
+             y="875.62622"
+             id="tspan2998-1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none">2016</tspan><tspan
+             id="tspan3018"
+             sodipodi:role="line"
+             x="77.218193"
+             y="914.02618"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none" /><tspan
+             sodipodi:role="line"
+             x="77.218193"
+             y="934.56445"
+             id="tspan3002-3"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1">www.fossgis-konferenz.de/2016</tspan></text>
+      </g>
+      <g
+         transform="translate(-8.2519531e-7,504.00003)"
+         id="text2"
+         style="opacity:1">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
            x="77.218193"
-           id="tspan2994-9"
-           sodipodi:role="line">FOSSGIS Konferenz</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none"
-           id="tspan2998-1"
-           y="875.62622"
-           x="77.218193"
-           sodipodi:role="line">2016</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none"
-           y="914.02618"
-           x="77.218193"
-           sodipodi:role="line"
-           id="tspan3018" /><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1"
-           id="tspan3002-3"
-           y="934.56445"
-           x="77.218193"
-           sodipodi:role="line">www.fossgis-konferenz.de/2016</tspan></text>
-    </g>
-    <g
-       style="opacity:1"
-       id="text2"
-       transform="translate(-8.2519531e-7,504.00003)">
-      <text
-         sodipodi:linespacing="80.000001%"
-         id="text39"
-         y="837.2262"
-         x="77.218193"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none"
-           id="tspan41"
            y="837.2262"
-           x="77.218193"
-           sodipodi:role="line">Gleich geht's weiter...</tspan></text>
+           id="text39"
+           sodipodi:linespacing="80.000001%"><tspan
+             sodipodi:role="line"
+             x="77.218193"
+             y="837.2262"
+             id="tspan41"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none">Gleich geht's weiter...</tspan></text>
+      </g>
     </g>
   </g>
 </svg>

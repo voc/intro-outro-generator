@@ -89,9 +89,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="1516.7237"
-     inkscape:cy="-124.32481"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="746.79903"
+     inkscape:cy="439.08621"
      inkscape:document-units="px"
      inkscape:current-layer="layer_background"
      showgrid="false"
@@ -104,8 +104,10 @@
      inkscape:window-maximized="1">
     <sodipodi:guide
        orientation="0,1"
-       position="0,576"
-       id="guide2996" />
+       position="0,1080"
+       id="guide2996"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        orientation="0,1"
        position="0,0"
@@ -126,8 +128,10 @@
        id="guide3029" />
     <sodipodi:guide
        orientation="0,1"
-       position="0,544"
-       id="guide3031" />
+       position="0,1048"
+       id="guide3031"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="1888,281.42857"
        orientation="1,0"
@@ -158,26 +162,27 @@
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/P1000778-gaussblur-75.JPG"
          xlink:href="P1000778-gaussblur-75.JPG"
-         y="-1135.3215"
-         x="162.78572"
-         id="image_background"
+         width="1920"
          height="1440"
-         width="1920" />
+         id="image_background"
+         x="162.78572"
+         y="-1135.3215" />
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/logo_ohne_rand.png"
          xlink:href="logo_ohne_rand.png"
-         y="-743.32147"
-         x="1884.7858"
+         width="249"
+         height="249"
          id="image_logo"
-         height="166"
-         width="166" />
+         x="1801.7858"
+         y="-743.32147" />
     </g>
     <g
        style="opacity:1"
-       id="banderole">
+       id="banderole"
+       transform="matrix(1.3478261,0,0,1.3478261,2.8702447e-7,-525.56522)">
       <rect
          id="rect_banderole"
-         width="1920"
+         width="1424.5161"
          height="230"
          x="-8.2519534e-07"
          y="1281"
@@ -231,11 +236,11 @@
     <image
        sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/by-sa.svg"
        xlink:href="by-sa.svg"
-       style="opacity:1"
+       height="84"
+       width="240"
+       x="1648"
+       y="1412"
        id="license"
-       y="1454"
-       x="1768"
-       width="120"
-       height="42" />
+       style="opacity:1" />
   </g>
 </svg>
