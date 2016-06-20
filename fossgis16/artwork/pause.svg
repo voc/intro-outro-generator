@@ -50,37 +50,6 @@
          operator="over"
          result="composite2" />
     </filter>
-    <filter
-       color-interpolation-filters="sRGB"
-       id="filter3772-5"
-       inkscape:label="Drop Shadow">
-      <feFlood
-         id="feFlood3774-9"
-         flood-opacity="0.5"
-         flood-color="rgb(255,255,255)"
-         result="flood" />
-      <feComposite
-         id="feComposite3776-9"
-         in2="SourceGraphic"
-         in="flood"
-         operator="in"
-         result="composite1" />
-      <feGaussianBlur
-         id="feGaussianBlur3778-3"
-         stdDeviation="3"
-         result="blur" />
-      <feOffset
-         id="feOffset3780-4"
-         dx="1"
-         dy="1"
-         result="offset" />
-      <feComposite
-         id="feComposite3782-9"
-         in2="offset"
-         in="SourceGraphic"
-         operator="over"
-         result="composite2" />
-    </filter>
   </defs>
   <sodipodi:namedview
      id="base"

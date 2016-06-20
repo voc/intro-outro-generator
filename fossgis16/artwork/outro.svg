@@ -89,9 +89,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="1807.7317"
-     inkscape:cy="178.89877"
+     inkscape:zoom="0.35"
+     inkscape:cx="180.46983"
+     inkscape:cy="-63.258514"
      inkscape:document-units="px"
      inkscape:current-layer="layer_background"
      showgrid="false"
@@ -162,19 +162,19 @@
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/P1000778-gaussblur-75.JPG"
          xlink:href="P1000778-gaussblur-75.JPG"
-         y="-1135.3215"
-         x="162.78572"
-         id="image_background"
+         width="1920"
          height="1440"
-         width="1920" />
+         id="image_background"
+         x="162.78572"
+         y="-1135.3215" />
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/logo_ohne_rand.png"
          xlink:href="logo_ohne_rand.png"
-         y="-743.32147"
-         x="1801.7858"
-         id="image_logo"
+         width="249"
          height="249"
-         width="249" />
+         id="image_logo"
+         x="1801.7858"
+         y="-743.32147" />
     </g>
     <g
        style="opacity:1"
@@ -235,10 +235,11 @@
     </g>
     <g
        transform="matrix(1.9786883,0,0,1.9784667,1294.4604,1263.9383)"
-       id="g287"
+       id="license"
        inkscape:export-filename="/mnt/hgfs/Bov/Documents/Work/2007/cc/identity/srr buttons/big/by-sa.png"
        inkscape:export-xdpi="300.23013"
-       inkscape:export-ydpi="300.23013">
+       inkscape:export-ydpi="300.23013"
+       inkscape:label="#g287">
       <path
          inkscape:connector-curvature="0"
          id="path3817_2_"

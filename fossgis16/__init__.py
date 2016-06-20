@@ -47,9 +47,9 @@ def introFrames(params):
 	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('box',   'style', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames)),
+			('box-und-text1',   'style', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames)),
 			('url',   'style', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames)),
-			('text1', 'style', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames)),
+			('text1', 'style', 'opacity', "%.4f" % 1),
 			('text2', 'style', 'opacity', 0)
 		)
 
@@ -57,7 +57,7 @@ def introFrames(params):
 	frames = 1*fps
 	for i in range(0, frames):
 		yield (
-			('box',   'style', 'opacity', 1),
+			('box-und-text1',   'style', 'opacity', 1),
 			('url',   'style', 'opacity', 1),
 			('text1', 'style', 'opacity', "%.4f" % (1-(float(i)/frames))),
 			('text2', 'style', 'opacity', 0)
@@ -67,7 +67,7 @@ def introFrames(params):
 	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('box',   'style', 'opacity', 1),
+			('box-und-text1',   'style', 'opacity', 1),
 			('url',   'style', 'opacity', 1),
 			('text1', 'style', 'opacity', 0),
 			('text2', 'style', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames))
@@ -77,7 +77,7 @@ def introFrames(params):
 	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('box',   'style', 'opacity', 1),
+			('box-und-text1',   'style', 'opacity', 1),
 			('url',   'style', 'opacity', 1),
 			('text1', 'style', 'opacity', 0),
 			('text2', 'style', 'opacity', 1)
