@@ -7,17 +7,23 @@ from easing import *
 scheduleUrl = 'http://frab.fossgis-konferenz.de/en/foss4g-2016/public/schedule.xml'
 
 titlemap = {
-	#708: "Neue WEB-Anwendungen des LGRB Baden-Württemberg im Überblick"
+	1533: "Building applications with FOSS4G bricks"
 }
 
 def introFrames(p):
 	move=50
+
+	nr = p['$id'];
 
 	# five initial frames
 	for i in range(0, 5):
 		yield (
 			('text', 'style',    'opacity', "%.4f" % 0),
 			('text', 'attr',     'transform', 'translate(%.4f, 0)' % -move),
+
+			('image%u' % ((nr+0)%3), 'style',    'opacity', "%.4f" % 1),
+			('image%u' % ((nr+1)%3), 'style',    'opacity', "%.4f" % 0),
+			('image%u' % ((nr+2)%3), 'style',    'opacity', "%.4f" % 0),
 		)
 
 	# 3 Sekunde Text Fadein
@@ -140,17 +146,3 @@ def tasks(queue, args):
 				'$personnames': event['personnames']
 			}
 		))
-
-	# place a task for the outro into the queue
-	queue.put(Rendertask(
-		infile = 'outro.svg',
-		outfile = 'outro.ts',
-		sequence = outroFrames
-	))
-
-	# place the pause-sequence into the queue
-	queue.put(Rendertask(
-		infile = 'pause.svg',
-		outfile = 'pause.ts',
-		sequence = pauseFrames
-	))
