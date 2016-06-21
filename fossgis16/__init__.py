@@ -158,7 +158,7 @@ def debug():
 		pauseFrames
 	)
 
-def tasks(queue):
+def tasks(queue, args):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl, titlemap):
 
