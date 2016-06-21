@@ -89,9 +89,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="180.46983"
-     inkscape:cy="-63.258514"
+     inkscape:zoom="1.979899"
+     inkscape:cx="37.327"
+     inkscape:cy="132.58015"
      inkscape:document-units="px"
      inkscape:current-layer="layer_background"
      showgrid="false"
@@ -99,7 +99,7 @@
      inkscape:guide-bbox="true"
      inkscape:window-width="1920"
      inkscape:window-height="1021"
-     inkscape:window-x="0"
+     inkscape:window-x="1280"
      inkscape:window-y="27"
      inkscape:window-maximized="1">
     <sodipodi:guide
@@ -162,19 +162,19 @@
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/P1000778-gaussblur-75.JPG"
          xlink:href="P1000778-gaussblur-75.JPG"
-         width="1920"
-         height="1440"
-         id="image_background"
+         y="-1135.3215"
          x="162.78572"
-         y="-1135.3215" />
+         id="image_background"
+         height="1440"
+         width="1920" />
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/logo_ohne_rand.png"
          xlink:href="logo_ohne_rand.png"
-         width="249"
-         height="249"
-         id="image_logo"
+         y="-743.32147"
          x="1801.7858"
-         y="-743.32147" />
+         id="image_logo"
+         height="249"
+         width="249" />
     </g>
     <g
        style="opacity:1"
@@ -353,5 +353,17 @@
            style="clip-rule:evenodd;fill-rule:evenodd" />
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       x="30.53125"
+       y="1542.3694"
+       id="text2992-5-5-3-3"
+       sodipodi:linespacing="80.000001%"><tspan
+         sodipodi:role="line"
+         x="30.53125"
+         y="1542.3694"
+         id="url-6"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';text-align:start;text-anchor:start;fill:#f2f4f5;fill-opacity:1;stroke:none">Bild © GG</tspan></text>
   </g>
 </svg>
