@@ -50,7 +50,7 @@ def pauseFrames(parameters):
     frames = 25*3
     for i in range(0, frames):
         yield (
-            ('glowFlood', 'attr', 'flood-opacity', '%.4f' % bounce(i, 0.0, 1.0, frames)),
+            ('pause', 'attr', 'flood-opacity', '%.4f' % bounce(i, 0.0, 1.0, frames)),
         )
 
     frames = 25*1
@@ -72,10 +72,10 @@ def debug():
       '../intro.ts',
       introFrames,
       {
-          '$ID': 20227,
-          '$TITLE': "Leben mit dem Saurier",
-          '$SUBTITLE': '',
-          '$SPEAKER': 'Sarah'
+          '$ID': 4711,
+          '$TITLE': "Long Long Long title is LONG",
+          '$SUBTITLE': 'Long Long Long Long subtitle is LONGER',
+          '$SPEAKER': 'Long Name of Dr. Dr. Prof. Dr. Long Long'
       }
     )
 
