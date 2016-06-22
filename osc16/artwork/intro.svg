@@ -162,23 +162,27 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="872.11089"
+     inkscape:cx="927.46356"
      inkscape:cy="419.43002"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
      units="px"
-     inkscape:window-width="1596"
-     inkscape:window-height="861"
-     inkscape:window-x="0"
-     inkscape:window-y="18"
-     inkscape:window-maximized="0"
-     showguides="false"
+     inkscape:window-width="1295"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     showguides="true"
      inkscape:guide-bbox="true">
     <sodipodi:guide
        position="73.571429,972.5"
        orientation="1,0"
        id="guide5258" />
+    <sodipodi:guide
+       position="142.85714,848.57143"
+       orientation="1,0"
+       id="guide4243" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -3946,10 +3950,10 @@
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect5947"
-       width="1325.7142"
-       height="17.142857"
+       width="1451.4285"
+       height="3"
        x="110"
-       y="505.42859" />
+       y="503.57147" />
   </g>
   <g
      inkscape:label="Icons"
@@ -4087,7 +4091,7 @@
      style="display:inline;">
     <g
        id="textblock"
-       transform="translate(-50,0)">
+       transform="matrix(0.9364115,0,0,1,-39.68849,0)">
       <flowRoot
          transform="translate(20.297422,482.85714)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:'Alte Haas Grotesk';-inkscape-font-specification:'Alte Haas Grotesk';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -4100,7 +4104,7 @@
              width="1657.1427"
              id="rect5061" /></flowRegion><flowPara
            id="flowPara5065"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:80px;line-height:120.00000477%;font-family:'Prosto Sans';-inkscape-font-specification:'Prosto Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">$TITLE</flowPara></flowRoot>      <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:80px;line-height:120.00000477%;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">$TITLE</flowPara></flowRoot>      <flowRoot
          transform="translate(20.297422,720.8076)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:'Alte Haas Grotesk';-inkscape-font-specification:'Alte Haas Grotesk';letter-spacing:0px;word-spacing:0px;display:inline;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          id="subtitle"
@@ -4113,7 +4117,7 @@
              width="1657.1427"
              id="rect5061-4" /></flowRegion><flowPara
            id="flowPara5065-4"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:80px;line-height:120.00000477%;font-family:'Prosto Sans';-inkscape-font-specification:'Prosto Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;fill-opacity:1">$SUBTITLE</flowPara></flowRoot>      <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:80px;line-height:120.00000477%;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;fill-opacity:1">$SUBTITLE</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="ID"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.5px;line-height:100%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -4127,17 +4131,17 @@
              style="font-size:7.5px;line-height:100%;fill:#ffffff;fill-opacity:1" /></flowRegion><flowPara
            id="flowPara4190"
            style="font-size:60px;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1">$ID</flowPara></flowRoot>      <flowRoot
-         transform="translate(20.297422,206.52189)"
+         transform="translate(18.161609,299.66475)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:'Alte Haas Grotesk';-inkscape-font-specification:'Alte Haas Grotesk';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          id="speaker"
          xml:space="preserve"><flowRegion
            id="flowRegion5059-9"><rect
              y="62.857143"
              x="137.14285"
-             height="214.28568"
-             width="1265.7141"
+             height="108.5714"
+             width="1378.6071"
              id="rect5061-3" /></flowRegion><flowPara
            id="flowPara5121"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:80px;line-height:120.00000477%;font-family:'Prosto Sans';-inkscape-font-specification:'Prosto Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">$SPEAKER</flowPara></flowRoot>    </g>
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:80px;line-height:120.00000477%;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">$SPEAKER</flowPara></flowRoot>    </g>
   </g>
 </svg>
