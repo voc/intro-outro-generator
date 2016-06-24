@@ -4095,15 +4095,15 @@
          d="m 36.619718,309.25606 c 221.666672,0 443.333332,0 665.000002,0"
          style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.11761975px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <flowRoot
-         transform="translate(-104.22535,163.38028)"
+         transform="translate(-104.22535,255.38028)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:'Alte Haas Grotesk';-inkscape-font-specification:'Alte Haas Grotesk';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;image-rendering:auto"
          id="title"
          xml:space="preserve"><flowRegion
            id="flowRegion5059"><rect
              y="62.857143"
              x="137.14285"
-             height="73.561356"
-             width="669.81873"
+             height="118.63178"
+             width="669.89941"
              id="rect5061" /></flowRegion><flowPara
            id="flowPara5065"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:32.5px;line-height:120.00000477%;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">$TITLE</flowPara></flowRoot>      <flowRoot
@@ -4120,7 +4120,7 @@
              id="rect5061-4" /></flowRegion><flowPara
            id="flowPara5065-4"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:32.5px;line-height:120.00000477%;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;fill-opacity:1">$SUBTITLE</flowPara></flowRoot>      <flowRoot
-         transform="translate(-101.6499,285.835)"
+         transform="translate(-101.6499,197.835)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;line-height:125%;font-family:'Alte Haas Grotesk';-inkscape-font-specification:'Alte Haas Grotesk';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;image-rendering:auto"
          id="speaker"
          xml:space="preserve"><flowRegion
@@ -4128,7 +4128,7 @@
              style="font-size:27.5px"
              y="62.857143"
              x="137.14285"
-             height="93.078461"
+             height="42.374241"
              width="667.32397"
              id="rect5061-3" /></flowRegion><flowPara
            id="flowPara5121"
