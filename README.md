@@ -1,7 +1,7 @@
 Frab-Based Into- and Outro-Generator
 ===========================================
 
-This is a scripted pre-, postroll and pause-clip generator. It takes a Frab/frab schedule-xml and artwork as svg and generates .dv-clips ready-to-use with the [VOC](https://c3voc.de/)-CRS (Conference Recording System) or any other System. It can aĺso be modified to generate Lossless h264 or something different if reqired.
+This is a scripted pre-, postroll and pause-clip generator. It takes a Frab/frab schedule-xml and artwork as svg and generates .dv- or .ts-clips ready-to-use with the [VOC](https://c3voc.de/)-CRS (Conference Recording System) or any other System. It can aĺso be modified to generate Lossless h264 or something different if reqired.
 
 Following the requirements of the CRS-Setup it generates one postroll, one pause-sequence and multiple prerolls - one per Talk in your Schedule-xml, but it should be simple to modify this if your Setup needs it.
 
@@ -12,7 +12,7 @@ Okay, let's go.
  - Install python3, python3-lxml, python3-cssutils, inkscape and libav-tools
  - Fork this repo on github and clone your personal fork to your local system.
  - Copy one of the existing setups (I'd suggest Datengarten `dg` for a start).
- - Open `artwork/intro.svg` (preroll template) in inkscape and modify it. You can also just create a new one. For the VOC-Setup you should use a Pixel-Resolution of `1024x576` (16:9 Aspect Ratio).
+ - Open `artwork/intro.svg` (preroll template) in inkscape and modify it. You can also just create a new one. For the VOC-Setup you should use a Pixel-Resolution of `1920×1080` (or for the legacy SD/.dv-Pipeline `1024×576`).
  - Group things together that should be animated together (like subtitle and speaker-text)
  - Use Flow-Text (in Inkscape drag an Area of Text instead of just placing a single line). This way the text will automatically wrap inside the specified area if it gets too long.
  - Type Placeholder-Texts where the script should substitute content from your schedule.xml. By default the following placeholders are substituted
@@ -30,9 +30,9 @@ Okay, let's go.
    - modify outroFrames and pauseFrames like before an test them using `./make.py yourproject/ --debug`
    - if everything look like you'd want them to, run `./make.py yourproject/`.
    - You can use any debianesque linux (can be headless) to generate the videos. More cores help more.
- - Run `./make-snapshots.sh yourproject/` to generate a png from a specific time-index of your .dv-files. You can run `./make-snapshots.sh yourproject/ 5` to get a png for the frame at the 5th second of all your dvs. Default is 3 seconds.
+ - Run `./make-snapshots.sh yourproject/` to generate a png from a specific time-index of your .ts or .dv-files. You can run `./make-snapshots.sh yourproject/ 5` to get a png for the frame at the 5th second of all your clips. Default is 3 seconds.
    - Viewing through those pngs to check if all intros are looking good with the real-world titles- and person-names
-   - Viewing through the pngs is faster then opening each .dv and waiting 5 seconds.
+   - Viewing through the pngs is faster then opening each clip and waiting 5 seconds.
 
 The Frame-Generators
 --------------------
@@ -85,13 +85,13 @@ The [FEM](http://fem.tu-ilmenau.de/) and the [VOC](https://c3voc.de/) uses a spe
 Generating an Live-Stream-Overlay
 ---------------------------------
 While your working on your Video-Artwork you can create another required asset: the stream overlay. When we'll live-stream your Talks we can't send prerolls ovet the live-stream. To let your viewer now what program they are watching at, we usually overlay a transparent image over the live-stream like most television programs do, too.
-Just create another SVG of the size 1024x576 and throw your logo into your prefered corner. To have it looking good we would suggest
+Just create another SVG of the size 1920×1080 (or 1024×576 if you're only targeting the legacy SD-Pipeline) and throw your logo into your prefered corner. To have it looking good we would suggest
  - to test it on dark as well as bright background and add a glow or a backround-box if neccessary
  - avoid thin lines or small text that will not be visible in the final size
  - set an opacity of 0.8 to 1.0 (below 0.8 it usually won't be recognizable on a bumpy background)
 Save your file as `artwork/overlay.svg`
 
-When you're done, call `./make-overlay.sh yourproject/` which will generate two .pngs in your artwork directory. One of them looks squeezed - don't worry, that is correct.
+When you're done, call `./make-overlay.sh yourproject/` which will generate three .pngs in your artwork directory. One of them looks squeezed - don't worry, that is correct.
 
 It works! It doesn't work!
 --------------------------
