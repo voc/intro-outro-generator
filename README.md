@@ -11,7 +11,7 @@ Okay, let's go.
 
  - Install python3, python3-lxml, python3-cssutils, inkscape and libav-tools
  - Fork this repo on github and clone your personal fork to your local system.
- - Copy one of the existing setups (I'd suggest sotmeu14 for a start).
+ - Copy one of the existing setups (I'd suggest Datengarten `dg` for a start).
  - Open ```artwork/intro.svg``` (preroll template) in inkscape and modify it. You can also just create a new one. For the VOC-Setup you should use a Pixel-Resolution of ```1024x576``` (16:9 Aspect Ratio).
  - Group things together that should be animated together (like subtitle and speaker-text)
  - Use Flow-Text (in Inkscape drag an Area of Text instead of just placing a single line). This way the text will automatically wrap inside the specified area if it gets too long.
