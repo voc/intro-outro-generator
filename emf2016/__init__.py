@@ -15,43 +15,23 @@ def introFrames(p):
 
 	nr = p['$id'];
 
-	# five initial frames
-	for i in range(0, 5):
-		yield (
-			('text', 'style',    'opacity', "%.4f" % 0),
-			('text', 'attr',     'transform', 'translate(%.4f, 0)' % -move),
 
-			('image%u' % ((nr+0)%3), 'style',    'opacity', "%.4f" % 1),
-			('image%u' % ((nr+1)%3), 'style',    'opacity', "%.4f" % 0),
-			('image%u' % ((nr+2)%3), 'style',    'opacity', "%.4f" % 0),
-		)
-
-	# 3 Sekunde Text Fadein
-	frames = 3*fps
-	for i in range(0, frames):
-		yield (
-			('text', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
-			('text', 'attr',     'transform', 'translate(%.4f, 0)' % easeOutQuad(i, move, -move, frames)),
-		)
-
-	# 2 Sekunden stehen lassen
-	frames = 2*fps
+	# Hold still
+	frames = 5*fps
 	for i in range(0, frames):
 		yield ()
 
-	# 3 Sekunde Text Fadeout
-	frames = 3*fps
+	# 1s fade out
+	frames = 1*fps
 	for i in range(0, frames):
 		yield (
 			('text', 'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
-			('text', 'attr',     'transform', 'translate(%.4f, 0)' % easeInQuad(i, 0, -move, frames)),
 		)
 
-	# two final frames
-	for i in range(0, 2):
+	# final frames
+	for i in range(0,5):
 		yield (
 			('text', 'style',    'opacity', "%.4f" % 0),
-			('text', 'attr',     'transform', 'translate(%.4f, 0)' % move),
 		)
 
 def outroFrames(p):
@@ -111,24 +91,24 @@ def debug():
 		'../intro.ts',
 		introFrames,
 		{
-			'$id': 65,
-			'$title': 'Passwort, Karte oder Gesicht',
-			'$subtitle': 'zur Sicherheit von Authentifizierungssystemen',
-			'$personnames': 'starbug'
+			'$id': 69,
+			'$title': 'How To Make "Your Mum" Jokes Successfully',
+			'$subtitle': 'But not necessarily tastefully',
+			'$personnames': 'Matt Gray'
 		}
 	)
 
-	render(
-		'outro.svg',
-		'../outro.ts',
-		outroFrames
-	)
-
-	render(
-		'pause.svg',
-		'../pause.ts',
-		pauseFrames
-	)
+#	render(
+#		'outro.svg',
+#		'../outro.ts',
+#		outroFrames
+#	)
+#
+#	render(
+#		'pause.svg',
+#		'../pause.ts',
+#		pauseFrames
+#	)
 
 def tasks(queue, args):
 	# iterate over all events extracted from the schedule xml-export
