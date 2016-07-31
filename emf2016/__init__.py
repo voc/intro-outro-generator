@@ -6,9 +6,7 @@ from easing import *
 # URL to Schedule-XML
 scheduleUrl = 'https://www.emfcamp.org/schedule.frab'
 
-titlemap = {
-	1533: "Building applications with FOSS4G bricks"
-}
+titlemap = {}
 
 def introFrames(p):
 	move=50
@@ -16,74 +14,58 @@ def introFrames(p):
 	nr = p['$id'];
 
 
-	# Hold still
+	# Show Title
 	frames = 5*fps
 	for i in range(0, frames):
-		yield ()
+		yield (
+			('sponsors', 'style',    'opacity', 0),
+			('white', 'style',    'opacity', 0),
+		)
 
-	# 1s fade out
-	frames = 1*fps
+	# Fade In Sponsor
+	frames = int(fps/2)
 	for i in range(0, frames):
 		yield (
-			('text', 'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
+			('white', 'style',    'opacity', easeLinear(i, 0, 1, frames)),
+			('sponsors', 'style',    'opacity', 0),
+			('text', 'style',    'opacity', easeLinear(i, 1, 0, frames)),
+			('bg', 'style',    'opacity', easeLinear(i, 1, 0, frames)),
+		)
+	
+	frames = int(fps/2)
+	for i in range(0, frames):
+		yield (
+			('white', 'style',    'opacity', 1),
+			('sponsors', 'style',    'opacity', easeLinear(i, 0, 1, frames)),
+			('text', 'style',    'opacity', 0),
+			('bg', 'style',    'opacity',0),
+		)
+		
+	# Show Sponsor
+	frames = 5*fps
+	for i in range(0, frames):
+		yield (
+			('white', 'style',    'opacity', 1),
+			('sponsors', 'style',    'opacity', 1),
+			('text', 'style',    'visibility', 0),
+			('bg', 'style',    'visibility', 0),
 		)
 
-	# final frames
-	for i in range(0,5):
-		yield (
-			('text', 'style',    'opacity', "%.4f" % 0),
-		)
+
 
 def outroFrames(p):
-	# 3 Sekunden animation bleiben
+	# hold slide for 5s
 	frames = 5*fps
-
-	# five initial frames
-	for i in range(0, 5):
-		yield (
-			('g1', 'style',    'opacity', "%.4f" % 0),
-			('g2', 'style',    'opacity', "%.4f" % 0),
-			('g3', 'style',    'opacity', "%.4f" % 0),
-		)
-
-	# 3 Sekunden
-	frames = 6*fps
 	for i in range(0, frames):
 		yield (
-			('g1', 'style',    'opacity', "%.4f" % easeDelay(easeLinear, 0*fps, i, 0, 1, 4*fps)),
-			('g2', 'style',    'opacity', "%.4f" % easeDelay(easeLinear, 1*fps, i, 0, 1, 4*fps)),
-			('g3', 'style',    'opacity', "%.4f" % easeDelay(easeLinear, 2*fps, i, 0, 1, 4*fps)),
-		)
-
-	# five final frames
-	for i in range(0, 5):
-		yield (
-			('g1', 'style',    'opacity', "%.4f" % 1),
-			('g2', 'style',    'opacity', "%.4f" % 1),
-			('g3', 'style',    'opacity', "%.4f" % 1),
 		)
 
 def pauseFrames(p):
-	# 3 Sekunden animation bleiben
-
-	for nr in range(0, 3):
-		# 10 sekunden sehen
-		frames = 3*fps
-		for i in range(0, frames):
-			yield (
-				('image%u' % ((nr+0)%3), 'style',    'opacity', "%.4f" % 1),
-				('image%u' % ((nr+1)%3), 'style',    'opacity', "%.4f" % 0),
-				('image%u' % ((nr+2)%3), 'style',    'opacity', "%.4f" % 0),
-			)
-
-		# 1 sekunde faden
-		frames = 2*fps
-		for i in range(0, frames):
-			yield (
-				('image%u' % ((nr+0)%3), 'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
-				('image%u' % ((nr+1)%3), 'style',    'opacity', "%.4f" % easeLinear(i, 0, +1, frames)),
-				('image%u' % ((nr+2)%3), 'style',    'opacity', "%.4f" % 0),
-			)
+	# hold slide for 5s
+	frames = 5*fps
+	for i in range(0, frames):
+		yield (
+		)
 
 def debug():
 	render(
@@ -98,17 +80,17 @@ def debug():
 		}
 	)
 
-#	render(
-#		'outro.svg',
-#		'../outro.ts',
-#		outroFrames
-#	)
-#
-#	render(
-#		'pause.svg',
-#		'../pause.ts',
-#		pauseFrames
-#	)
+	render(
+		'outro.svg',
+		'../outro.ts',
+		outroFrames
+	)
+
+	render(
+		'pause.svg',
+		'../pause.ts',
+		pauseFrames
+	)
 
 def tasks(queue, args):
 	# iterate over all events extracted from the schedule xml-export
