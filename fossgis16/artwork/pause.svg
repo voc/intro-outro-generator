@@ -59,8 +59,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="752.42296"
-     inkscape:cy="728.11916"
+     inkscape:cx="400.88988"
+     inkscape:cy="724.07855"
      inkscape:document-units="px"
      inkscape:current-layer="g3091x"
      showgrid="false"
@@ -68,7 +68,7 @@
      inkscape:guide-bbox="true"
      inkscape:window-width="1920"
      inkscape:window-height="1021"
-     inkscape:window-x="0"
+     inkscape:window-x="1280"
      inkscape:window-y="27"
      inkscape:window-maximized="1">
     <sodipodi:guide
@@ -129,21 +129,21 @@
        id="g_background"
        transform="translate(-162.78572,1251.3215)">
       <image
-         sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/P1000778-gaussblur-75.JPG"
-         xlink:href="P1000778-gaussblur-75.JPG"
-         width="1920"
-         height="1440"
-         id="image_background"
+         sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/P1000778.JPG"
+         xlink:href="P1000778.JPG"
+         y="-1135.3215"
          x="162.78572"
-         y="-1135.3215" />
+         id="image_background"
+         height="1440"
+         width="1920" />
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis16/artwork/logo_ohne_rand.png"
          xlink:href="logo_ohne_rand.png"
-         width="249"
-         height="249"
-         id="image_logo"
+         y="-743.32147"
          x="1801.7858"
-         y="-743.32147" />
+         id="image_logo"
+         height="249"
+         width="249" />
     </g>
     <g
        id="g4170"
@@ -159,6 +159,19 @@
            y="777"
            ry="0.0062701544"
            style="fill:#ffffff;fill-opacity:0.50196078" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:21.67332268px;line-height:80.00000119%;font-family:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+           x="16.542841"
+           y="752.40576"
+           id="text2992-5-5-3-3"
+           sodipodi:linespacing="80.000001%"
+           transform="scale(0.73029674,1.3693064)"><tspan
+             sodipodi:role="line"
+             x="16.542841"
+             y="752.40576"
+             id="url-6"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.66932869px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';text-align:start;text-anchor:start;fill:#f2f4f5;fill-opacity:1;stroke:none">Bild © GG</tspan></text>
       </g>
       <g
          transform="translate(-8.2519531e-7,504.00003)"
@@ -175,12 +188,12 @@
              x="75.964493"
              y="876.83752"
              id="tspan2996"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none">         Münster</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none">         Salzburg</tspan><tspan
              sodipodi:role="line"
              x="75.964493"
              y="915.23755"
              id="tspan3002"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none">11. - 13. März 2015</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none">04. - 06. Juli 2016</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
