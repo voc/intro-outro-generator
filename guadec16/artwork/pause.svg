@@ -45,17 +45,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="931.22298"
-     inkscape:cy="513.85159"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="844.1274"
+     inkscape:cy="328.96382"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:window-height="1080"
      inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      fit-margin-top="5"
      fit-margin-left="5"
      fit-margin-right="5"
@@ -124,10 +124,9 @@
     </g>
     <g
        id="onhold"
-       inkscape:label="#onhold"
-       transform="translate(0,-51.382727)">
+       inkscape:label="#onhold">
       <flowRoot
-         transform="matrix(1.0069294,0,0,1,4672.4721,529.55567)"
+         transform="matrix(1.0069294,0,0,1,4672.4721,549.52063)"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.98549747px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#555555;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          id="flowRoot7495-8-6-7"
          xml:space="preserve"><flowRegion
