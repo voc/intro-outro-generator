@@ -39,7 +39,6 @@ def introFrames(parameters):
             ('longspeaker', 'style',    'opacity', "0"),
             ('overlay', 'style',    'opacity', "0"),
             ('guadeclogo', 'style',    'opacity', "0"),
-            ('onhold', 'style',    'opacity', "0"),
             ('onlinediscussion', 'style',    'opacity', "0"),
         )
 
@@ -73,15 +72,13 @@ def introFrames(parameters):
             ('presentedby', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames-1)),
             ('presentedby', 'attr',     'transform', 'translate(0, %.4f)' % easeOutQuad(i, -move, move, frames-1)),
         )
-    # 0.2 seconds speaker/onhold text fade in
+    # 0.2 seconds speaker text fade in
     frames = int(fps/5)
     for i in range(0, frames):
         yield (
             ('speaker', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames-1)),
             ('longspeaker', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames-1)),
             ('speakertranslator', 'attr',     'transform', 'translate(0, %.4f)' % easeOutQuad(i, -move, move, frames-1)),
-            ('onhold', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames-1)),
-            ('onhold', 'attr',     'transform', 'translate(0, %.4f)' % easeOutQuad(i, -move, move, frames-1)),
             ('onlinediscussion', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames-1)),
         )
 
@@ -92,10 +89,25 @@ def introFrames(parameters):
             ('title', 'style',    'opacity', "1"),
             ('longtitle', 'style',    'opacity', "1"),
             ('presentedby', 'style',    'opacity', "1"),
-            ('onhold', 'style',    'opacity', "1"),
             ('speaker', 'style',    'opacity', "1"),
             ('longspeaker', 'style',    'opacity', "1"),
         )
+
+def pauseFrames(p):
+    # pulsing on hold with 1,5 seconds interval
+    frames = int(1.3*fps)
+    for i in range(0, frames):
+        yield (
+            ('onhold', 'style',    'opacity', "%.4f" % easeLinear(i, 1, -0.8, frames-1)),
+        )
+        
+    frames = int(1.5*fps)
+    for i in range(0, frames):
+        yield (
+            ('onhold', 'style',    'opacity', "%.4f" % easeLinear(i, 0.2, 1, frames-1)),
+        )
+
+
 
 def outroFrames(p):
     # 7 seconds of slow scaling, fade to black at the end
@@ -133,7 +145,7 @@ def debug():
     render(
         'pause.svg',
         '../pause.ts',
-        introFrames,
+        pauseFrames,
     )
 
     render(
