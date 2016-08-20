@@ -51,14 +51,18 @@ def introFrames(args):
 
 	frames = int(1.5*fps)
 	for i in range(0, frames):
-		yield tuple()
-
-	frames = 1*fps
-	for i in range(0, frames):
 		yield (
+			('url', 'style', 'opacity', 0),
+			('date', 'style', 'opacity', 1),
 			('bar',   'style', 'opacity', easeLinear(i, 1, -1, frames)),
 			('title', 'style', 'opacity', easeLinear(i, 1, -1, frames)),
 		)
+
+
+	# frames = 1*fps
+	# for i in range(0, frames):
+	# 	yield (
+	# 	)
 
 	frames = int(0.5*fps)+1
 	for i in range(0, frames):
@@ -109,17 +113,22 @@ def outroFrames(args):
 
 	frames = 2*fps
 	for i in range(0, frames):
-		yield tuple()
+		yield (
+			('logo',   'style', 'opacity', 0),
+			('license',   'style', 'opacity', 1),
+		)
 
 	frames = 1*fps
 	for i in range(0, frames):
 		yield (
+			('logo',   'style', 'opacity', 0),
 			('license',   'style', 'opacity', easeLinear(i, 1, -1, frames)),
 		)
 
 	frames = 1*fps
 	for i in range(0, frames):
 		yield (
+			('logo',   'style', 'opacity', 0),
 			('license',   'style', 'opacity', 0),
 		)
 
