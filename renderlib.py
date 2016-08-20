@@ -128,8 +128,15 @@ def rendertask(task):
 			# write the generated svg-text into the output-file
 			fp.write( etree.tostring(svg, encoding='unicode') )
 
+		if task.outfile.endswith('.ts'):
+			width = 1920
+			height = 1080
+		else:
+			width = 1024
+			height = 576
+
 		# invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-		errorReturn = subprocess.check_output('cd {0} && inkscape --export-background=white --export-png=$(pwd)/.frames/{1:04d}.png $(pwd)/.gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr), shell=True, universal_newlines=True)
+		errorReturn = subprocess.check_output('cd {0} && inkscape --export-background=white --export-width={2} --export-height={3} --export-png=$(pwd)/.frames/{1:04d}.png $(pwd)/.gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr, width, height), shell=True, universal_newlines=True)
 		if errorReturn != '':
 			print("inkscape exitted with error\n"+errorReturn)
 			sys.exit(42)
