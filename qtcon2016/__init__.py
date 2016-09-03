@@ -102,9 +102,39 @@ def debug():
 
 def tasks(queue, args):
 	# iterate over all events extracted from the schedule xml-export
+	print(args)
+	eventid=-1
+	try:
+		if args[0]:
+			eventid=int(args[0])
+	except:
+		pass
+	fixupname = []
+	fixuptitle = []
 	for event in events(scheduleUrl, titlemap):
-
 		# generate a task description and put them into the queue
+		fixup = 0
+		if not eventid == -1:
+			if not eventid == event['id']:
+				print ('skip', event['id'])
+				continue
+		if event['title'] == event['subtitle']:
+			event['subtitle'] = ""
+			print ("fix subtitlei for",event['id'])
+			fixup=1
+		if event['personnames'] == ".":
+			event['personnames'] =""
+			print ("fixup personname . for",event['id'])
+			fixup=2
+		if event['personnames'] == '-':
+			event['personnames']=''
+			print ("fixup person for",event['id'])
+			fixup=2
+		if fixup == 1:
+			fixuptitle.append(event['id'])
+		if fixup == 2:
+			fixupname.append(event['id'])
+		#continue
 		queue.put(Rendertask(
 			infile = 'intro.svg',
 			outfile = str(event['id'])+".ts",
@@ -116,3 +146,5 @@ def tasks(queue, args):
 				'$personnames': event['personnames']
 			}
 		))
+	print("fixup names:", fixupname)
+	print("fixup title:", fixuptitle)
