@@ -68,7 +68,6 @@ optional arguments:
                             To skip all IDs (just generate intro/outro/background files) use it with --id 000000
                             
   --skip SKIP [SKIP ...]
-                        
                             Skip outro, pause and/or background files in rendering if not needed.
                             This argument must not be used together with --debug
                             Usage: ./make.py yourproject/ --skip pause out bg
