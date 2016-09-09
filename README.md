@@ -42,8 +42,7 @@ Start your own project by copying "00_example_render_byid" folder which contains
 
 Just type ./make.py or ./make.py -h in the main directory and you'll get the following help information.
 
-usage: make.py [-h] [--debug] [--id ID [ID ...]] [--skip SKIP [SKIP ...]]
-               yourproject/
+usage: see help with option -h
 
 C3VOC Intro-Outro-Generator
 
@@ -75,7 +74,6 @@ optional arguments:
                             Usage: ./make.py yourproject/ --skip pause out bg
                             Example - only generate outro: ./make.py yourproject/ --skip pause bg
                             Example - only generate pause and background: ./make.py yourproject/ --skip out
-
 
 The Frame-Generators
 --------------------
