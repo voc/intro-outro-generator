@@ -42,7 +42,8 @@ Start your own project by copying "00_example_render_byid" folder which contains
 
 Just type `./make.py` or `./make.py -h` in the main directory and you'll get the following help information.
 
-```usage: see help with option -h
+```
+usage: see help with option -h
 
 C3VOC Intro-Outro-Generator
 
