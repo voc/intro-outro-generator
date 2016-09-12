@@ -46,9 +46,9 @@ def debug():
 		'../intro.ts',
 		introFrames,
 		{
-			'$id': 56,
-			'$title': 'Hands-on Rad1o',
-			'$person': 'schneider'
+			'$id': 69,
+			'$title': 'Ethik des Digitalen',
+			'$person': 'Daniel Domscheit-Berg'
 		}
 	)
 
