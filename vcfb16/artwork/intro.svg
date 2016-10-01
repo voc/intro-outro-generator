@@ -37,8 +37,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35355339"
-     inkscape:cx="684.90293"
-     inkscape:cy="564.99058"
+     inkscape:cx="238.01143"
+     inkscape:cy="560.74794"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -15536,7 +15536,7 @@
          style="font-size:180px;fill:#dcdcdc" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="88.166519"
        y="961.85254"
        id="personnames"
@@ -15545,30 +15545,32 @@
          id="tspan5767"
          x="88.166519"
          y="961.85254"
-         style="font-size:60px;fill:#dcdcdc;-inkscape-font-specification:'Computerfont Medium';font-family:Computerfont;font-weight:500;font-style:normal;font-stretch:normal;font-variant:normal">$personnames</tspan></text>
+         style="font-size:60px;fill:#dcdcdc;-inkscape-font-specification:'TeX Gyre Adventor';font-family:'TeX Gyre Adventor';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">$personnames</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="subtitle"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"><flowRegion
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0,116)"><flowRegion
          id="flowRegion5773"><rect
            id="rect5775"
-           width="1374.6155"
-           height="458.20523"
+           width="1354.8165"
+           height="311.12698"
            x="84.852814"
-           y="436.5257"
-           style="-inkscape-font-specification:sans-serif;font-family:sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" /></flowRegion><flowPara
+           y="296.5257" /></flowRegion><flowPara
          id="flowPara5777"
-         style="font-size:90px;fill:#dcdcdc;-inkscape-font-specification:'Computerfont Medium';font-family:Computerfont;font-weight:500;font-style:normal;font-stretch:normal;font-variant:normal">$subtitle</flowPara></flowRoot>    <flowRoot
+         style="font-size:90px;fill:#dcdcdc">$subtitle</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="title"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"><flowRegion
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
          id="flowRegion5781"><rect
            id="rect5783"
            width="1776.2522"
            height="305.47012"
            x="84.852814"
            y="115.50635"
-           style="font-size:90px;-inkscape-font-specification:sans-serif;font-family:sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" /></flowRegion><flowPara
-         style="font-size:125px;fill:#d3d3d3;-inkscape-font-specification:'Computerfont Medium';font-family:Computerfont;font-weight:500;font-style:normal;font-stretch:normal;font-variant:normal"
-         id="flowPara27326">$title</flowPara></flowRoot>  </g>
+           style="font-size:90px" /></flowRegion><flowPara
+         style="font-size:125px;fill:#d3d3d3;-inkscape-font-specification:'TeX Gyre Adventor';font-family:'TeX Gyre Adventor';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+         id="flowPara27326">$title</flowPara><flowPara
+         style="font-size:125px;fill:#d3d3d3"
+         id="flowPara7385" /></flowRoot>  </g>
 </svg>
