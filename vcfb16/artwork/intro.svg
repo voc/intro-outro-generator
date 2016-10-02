@@ -37,14 +37,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35355339"
-     inkscape:cx="928.1206"
+     inkscape:cx="878.62313"
      inkscape:cy="560.74794"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1360"
-     inkscape:window-height="692"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -15549,23 +15549,22 @@
     <flowRoot
        xml:space="preserve"
        id="subtitle"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       ><flowRegion
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
          id="flowRegion5773"><rect
            id="rect5775"
-           width="1366.1302"
-           height="342.23972"
+           width="1368.9586"
+           height="463.86206"
            x="84.852814"
            y="443.5257" /></flowRegion><flowPara
-         style="font-size:90px;fill:#dcdcdc"
+         style="font-size:80px;fill:#dcdcdc"
          id="flowPara7388">$subtitle</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="title"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
          id="flowRegion5781"><rect
            id="rect5783"
-           width="1776.2522"
-           height="305.47012"
+           width="1801.708"
+           height="531.74432"
            x="84.852814"
            y="115.50635"
            style="font-size:90px" /></flowRegion><flowPara
