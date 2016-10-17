@@ -1,0 +1,1 @@
+ffmpeg -i session_opener-25fps.mp4 given-frames/frame%04d.png
