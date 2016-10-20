@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 from lxml import etree
-from slugify import slugify
 from renderlib import *
 from renderlib import *
 from easing import *
@@ -75,13 +74,13 @@ def debug():
 	# 	outroFrames
 	# )
 
-def tasks(queue):
+def tasks(queue, args):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl):
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
 			infile = 'intro.svg',
-			outfile = str(event['id'])+" "+slugify(event['title'])+".dv",
+			outfile = str(event['id'])+".ts",
 			sequence = introFrames,
 			parameters = {
 				'$id': event['id'],
