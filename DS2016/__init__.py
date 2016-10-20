@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from lxml import etree
+from slugify import slugify
 from renderlib import *
 from renderlib import *
 from easing import *
@@ -25,18 +26,18 @@ def introFrames(parameters):
 	frames = 1*fps
 	for i in range(0, frames):
 		yield (
-			('names', 'style', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames)),
-			('title', 'style', 'opacity', 0),
+			('names', 'style', 'opacity', 0),
+			('title', 'style', 'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
 		)
 
 	frames = 1*fps
 	for i in range(0, frames):
 		yield (
-			('names', 'style', 'opacity', 1),
-			('title', 'style', 'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
+			('names', 'style', 'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
+			('title', 'style', 'opacity', 1),
 		)
 
-	frames = 3*fps
+	frames = 4*fps
 	for i in range(0, frames):
 		yield (
 			('names', 'style', 'opacity', 1),
@@ -47,15 +48,15 @@ def introFrames(parameters):
 	for i in range(0, frames):
 		yield (
 			('names', 'style', 'opacity', "%.4f" % easeOutCubic(i, 1, -1, frames)),
-			('title', 'style', 'opacity', "%.4f" % easeInCubic(i, 1, -1, frames)),
+			('title', 'style', 'opacity', "%.4f" % easeOutCubic(i, 1, -1, frames)),
 		)
 
-	frames = 1*fps
-	for i in range(0, frames):
-		yield (
-			('names', 'style', 'opacity', 0),
-			('title', 'style', 'opacity', 0),
-		)
+	#frames = 1*fps
+	#for i in range(0, frames):
+	#	yield (
+	#		('names', 'style', 'opacity', 0),
+	#		('title', 'style', 'opacity', 0),
+	#	)
 
 def debug():
 	render('intro.svg',
