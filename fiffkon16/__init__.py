@@ -2,105 +2,90 @@
 
 from renderlib import *
 from easing import *
+import math
 
 # URL to Schedule-XML
-scheduleUrl = 'file://' + os.path.join(os.path.dirname(os.path.abspath(__file__)), 'schedule.xml')
+scheduleUrl = 'http://data.testi.ber.c3voc.de/schedule/fiffkon16/schedule-Hoersaal.xml'
 
 # For (really) too long titles
 titlemap = {
 	#708: "Neue WEB-Anwendungen des LGRB Baden-Württemberg im Überblick"
 }
 
-def introFrames(params):
-	move=40
 
-	# 1 Sekunden stillstand
-	frames = 1*fps
-	for i in range(0, frames):
-		yield (
-			('title', 'style',    'opacity', "%.4f" % 0),
-			('subtitle', 'style', 'opacity', "%.4f" % 0),
-			('persons', 'style',   'opacity', "%.4f" % 0),
-			('rect', 'style',   'opacity', "%.4f" % 0),
-		)
-
-	# 4 Sekunde Text Fadein
-	frames = 4*fps
-	for i in range(0, frames):
-		yield (
-			('title', 'style',    'opacity', "%.4f" % easeDelay(easeLinear, 0*fps, i, 0, 1, 2*fps)),
-			('title', 'attr',     'transform', 'translate(%.4f, 0)' % easeDelay(easeOutQuad, 0*fps, i, -move, move, 2*fps)),
-
-			('subtitle', 'style', 'opacity', "%.4f" % easeDelay(easeLinear, 1*fps, i, 0, 1, 2*fps)),
-			('subtitle', 'attr',  'transform', 'translate(%.4f, 0)' % easeDelay(easeOutQuad, 1*fps, i, -move, move, 2*fps)),
-
-			('rect',    'style',   'opacity', "%.4f" % easeDelay(easeLinear, 2*fps, i, 0, 1, 2*fps)),
-			('persons', 'style',   'opacity', "%.4f" % easeDelay(easeLinear, 2*fps, i, 0, 1, 2*fps)),
-			('persons', 'attr',    'transform', 'translate(%.4f, 0)' % easeDelay(easeOutQuad, 2*fps, i, -move, move, 2*fps)),
-		)
-
-	# 2 Sekunden stillstand
-	frames = 2*fps
-	for i in range(0, frames):
-		yield tuple()
-
-	# 1 Sekunde fadeout
-	frames = 1*fps
-	for i in range(0, frames):
-		yield (
-			('title', 'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
-			('subtitle', 'style', 'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
-			('persons', 'style',  'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
-			('rect', 'style',     'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
-			('logo', 'style',     'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
-		)
-
-def outroFrames(params):
-	move=50
-
-	# 1 Sekunden stillstand
-	frames = 1*fps
-	for i in range(0, frames):
-		yield (
-			('license', 'style',   'opacity', "%.4f" % 0),
-		)
-
-	# 2 Sekunde Text Fadein
+def outroFrames(p):
 	frames = 2*fps
 	for i in range(0, frames):
 		yield (
-			('license', 'style',  'opacity', "%.4f" % easeDelay(easeLinear, 0*fps, i, 0, 1, 2*fps)),
-			('license', 'attr',   'transform', 'translate(%.4f, 0)' % easeDelay(easeOutQuad, 0*fps, i, -move, move, 2*fps)),
+			('logo',   'style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
+			('plate',  'style',    'opacity', 0),
 		)
 
-	# 2 Sekunden stillstand
+	frames = 1*fps
+	for i in range(0, frames):
+		yield (
+			('logo',   'style',    'opacity', 1),
+			('plate',  'style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
+		)
+
 	frames = 2*fps
 	for i in range(0, frames):
-		yield tuple()
+		yield (
+			('logo',   'style',    'opacity', 1),
+			('plate',  'style',    'opacity', 1),
+		)
+
+def introFrames(p):
+	frames = math.floor(1.5*fps)
+	for i in range(0, frames):
+		yield (
+			('header', 'attr',    'y',       659),
+			('text',  'style',    'opacity', 0),
+		)
+
+	frames = 1*fps
+	for i in range(0, frames):
+		yield (
+			('text',  'style',    'opacity', "%.4f" % easeInCubic(i, 0, 1, frames)),
+		)
+
+	frames = math.ceil(3.5*fps)
+	for i in range(0, frames):
+		yield (
+			('text',  'style',    'opacity', 1),
+		)
+
+def pauseFrames(p):
+	pass
 
 
 def debug():
-	render(
-		'outro.svg',
-		'../outro.ts',
-		outroFrames
-	)
-
 	render(
 		'intro.svg',
 		'../intro.ts',
 		introFrames,
 		{
-			'$id': 904,
-			'$title': 'Was ist Open Source, wie funktioniert das?',
-			'$subtitle': 'Die Organisation der Open Geo- und GIS-Welt. Worauf man achten sollte.',
-			'$personnames': 'Arnulf Christl, Astrid Emde, Dominik Helle, Till Adams'
+			'$id': 6526,
+			'$title': 'Nachrichtendienstliche Zugriffe auf Telekommunikation und IKT-Strukuren und ihre Implikationen für individuelle und staatliche Souveränität',
+			'$subtitle': '',
+			'$personnames': 'Andy Müller-Maguhn'
 		}
 	)
 
+	#render(
+	#	'outro.svg',
+	#	'../outro.ts',
+	#	outroFrames
+	#)
+
+	# render('pause.svg',
+	# 	'../pause.ts',
+	# 	pauseFrames
+	# )
+
 def tasks(queue, params):
 	# iterate over all events extracted from the schedule xml-export
-	for event in events(scheduleUrl, titlemap):
+	for event in events(scheduleUrl):
 
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
@@ -121,3 +106,10 @@ def tasks(queue, params):
 		outfile = 'outro.ts',
 		sequence = outroFrames
 	))
+
+	# # place the pause-sequence into the queue
+	# queue.put(Rendertask(
+	# 	infile = 'pause.svg',
+	# 	outfile = 'pause.ts',
+	# 	sequence = pauseFrames
+	# ))
