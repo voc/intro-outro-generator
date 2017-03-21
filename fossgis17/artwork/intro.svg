@@ -58,11 +58,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="671.95503"
-     inkscape:cy="333.84506"
+     inkscape:zoom="0.35"
+     inkscape:cx="1237.7451"
+     inkscape:cy="-112.36108"
      inkscape:document-units="px"
-     inkscape:current-layer="layer_background"
+     inkscape:current-layer="g_background"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -137,19 +137,19 @@
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis17/artwork/passau.jpg"
          xlink:href="passau.jpg"
-         y="-775.32147"
-         x="-437.21429"
-         id="image_background"
+         width="1920"
          height="1080"
-         width="3946.6667" />
+         id="image_background"
+         x="162.78572"
+         y="-775.32147" />
       <image
          sodipodi:absref="/home/peter/VOC/intro-outro-generator/fossgis17/artwork/logo_ohne_rand.png"
          xlink:href="logo_ohne_rand.png"
-         y="-743.32147"
-         x="1801.7858"
-         id="image_logo"
+         width="249"
          height="249"
-         width="249" />
+         id="image_logo"
+         x="1801.7858"
+         y="-743.32147" />
     </g>
     <text
        xml:space="preserve"
