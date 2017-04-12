@@ -11,7 +11,7 @@ from itertools import permutations
 
 
 # URL to Schedule-XML
-scheduleUrl = 'https://programm.froscon.de/2016/schedule.xml'
+scheduleUrl = 'https://eh17.easterhegg.eu/Fahrplan/schedule.xml'
 
 # For (really) too long titles
 titlemap = {
@@ -44,12 +44,26 @@ class background(animate):
         self.pathstr = xml.find(".//*[@id='animatePath']").get('d')
         self.path = svg.path.parse_path(self.pathstr)
         self.init = self.path.point(0)
-        
-        
+  
     def frame(self,frame):
-        p = self.path.point(frame / self.frames) - self.init
+        p = self.path.point(self.relframe(frame) / self.frames) - self.init
         return (
            ('bgtext', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)), )
+  
+  
+class logotext(animate):
+    
+    def __init__(self, low, high, xml):
+        animate.__init__(self, low, high, xml)
+        
+        self.pathstr = xml.find(".//*[@id='textPath']").get('d')
+        self.path = svg.path.parse_path(self.pathstr)
+        self.init = self.path.point(0)
+        
+    def frame(self,frame):
+        p = self.path.point(self.relframe(frame) / self.frames) - self.init
+        return (
+           ('ehtext', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)), )
 
 
 class urldate(animate):
@@ -104,7 +118,8 @@ def introFrames(args):
     animations = [
         background(0,6,xml),
         urldate(0.5,1,xml),
-        hasenfarbe(1,5,xml)]
+        hasenfarbe(1,5,xml),
+        logotext(4,5,xml)]
     
     
     frames = int(6 * fps)
@@ -286,7 +301,7 @@ def debug():
         introFrames,
         {
             '$id': 1302,
-            '$title': 'VlizedLab - Eine Open Source-Virtualisierungslösung für PC-Räume',
+            '$title': 'VlizedLab - Eine Open Source-\nVirtualisierungslösung für PC-Räume',
             '$subtitle': 'IT Automatisierung und zentrales Management mit SALT',
             '$personnames': 'Thorsten Kramm',
             '$url':'blubb',
@@ -309,7 +324,7 @@ def debug():
 def tasks(queue, args):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if event['room'] not in ('Saal 1', 'Saal 3', 'Saal 4', 'Saal 5', 'Saal 6', 'Saal 7', 'Saal 8'):
+        if event['room'] not in ('Vortragssaal', 'Großes Kolleg'):
             print("skipping room %s (%s)" % (event['room'], event['title']))
             continue
 
