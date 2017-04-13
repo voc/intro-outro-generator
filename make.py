@@ -11,15 +11,62 @@ import multiprocessing
 from threading import Thread, Lock
 from queue import Queue
 import renderlib
+import argparse
 
-# Project-Name
+# Parse arguments
+parser = argparse.ArgumentParser(description='C3VOC Intro-Outro-Generator', usage="see help with option -h", formatter_class=argparse.RawTextHelpFormatter)
+parser.add_argument('projectpath', action="store", metavar='yourproject/', type=str, help='''
+    Path to your project is a required argument.
+    Usage: ./make.py yourproject/
+    Without any further argument(s) given, your whole project will be rendered.
+	''')
+parser.add_argument('--debug', action="store_true", default=False, help='''
+    Run script in debug mode and just render the debug values
+    given in your projects __init.py__
+    This argument must not be used together with --id
+    Usage: ./make.py yourproject/ --debug
+	''')
+parser.add_argument('--id', nargs='+', action="store", type=int, help='''
+    Only render the given ID(s) from your projects schedule.
+    This argument must not be used together with --debug
+    Usage: ./make.py yourproject/ --id 4711 0815 4223 1337
+    To skip all IDs (just generate intro/outro/background files) use it with --id 000000
+	''')
+parser.add_argument('--skip', nargs='+', action="store", type=str, help='''
+    Skip outro, pause and/or background files in rendering if not needed.
+    This argument must not be used together with --debug
+    Usage: ./make.py yourproject/ --skip pause out bg
+    Example - only generate outro: ./make.py yourproject/ --skip pause bg
+    Example - only generate pause and background: ./make.py yourproject/ --skip out
+	''')
+
 if len(sys.argv) < 2:
-	print("you must specify a project-name as first argument, eg. './make.py sotmeu14'")
+	parser.print_help()
 	sys.exit(1)
 
-args = sys.argv[1:]
+args = parser.parse_args()
 
-projectname = args.pop(0).strip('/')
+if not (args.debug==False or args.id==None):
+	print("##################################################")
+	print("Error! You must not use --debug and --id together!")
+	print("##################################################")
+	parser.print_help()
+	sys.exit(1)
+
+if not (args.debug==False or args.skip==None):
+	print("####################################################")
+	print("Error! You must not use --debug and --skip together!")
+	print("####################################################")
+	parser.print_help()
+	sys.exit(1)
+
+print(args)
+
+# Set values from argparse
+projectname=args.projectpath.strip('/')
+projectpath=args.projectpath
+
+# Check if project exists
 try:
 	project = renderlib.loadProject(projectname)
 except ImportError:
@@ -28,7 +75,8 @@ except ImportError:
 
 # using --debug skips the threading, the network fetching of the schedule and
 # just renders one type of video
-renderlib.debug = ('--debug' in sys.argv)
+renderlib.debug = args.debug
+#sys.exit(1)
 
 def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projectname, 'artwork')):
 	task = renderlib.Rendertask(infile=infile, outfile=outfile, sequence=sequence, parameters=parameters, workdir=workdir)
@@ -53,7 +101,7 @@ if renderlib.debug:
 tasks = Queue()
 
 # call into project which generates the tasks
-project.tasks(tasks, args)
+project.tasks(tasks, projectpath, args.id, args.skip)
 
 # one working thread per cpu
 num_worker_threads = multiprocessing.cpu_count()
@@ -65,7 +113,7 @@ for _ in range(num_worker_threads):
 
 # this lock ensures, that only one thread at a time is writing to stdout
 # and avoids output from multiple threads intermixing
-printLock = Lock() 
+printLock = Lock()
 def tprint(str):
 	# aquire lock
 	printLock.acquire()

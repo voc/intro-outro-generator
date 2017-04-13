@@ -11,7 +11,8 @@ Okay, let's go.
 
  - Install python3, python3-lxml, python3-cssutils, inkscape and libav-tools
  - Fork this repo on github and clone your personal fork to your local system.
- - Copy one of the existing setups (I'd suggest Datengarten `dg` for a start).
+ - Copy one of the existing setup: 00_example_render_byid
+    - If you are using a newer version of intro-outro-generator, don't copy any of the other projects, as the __init.py__ may not contain all mandatory parameters in the tasks function.
  - Open `artwork/intro.svg` (preroll template) in inkscape and modify it. You can also just create a new one. For the VOC-Setup you should use a Pixel-Resolution of `1920×1080` (or for the legacy SD/.dv-Pipeline `1024×576`).
  - Group things together that should be animated together (like subtitle and speaker-text)
  - Use Flow-Text (in Inkscape drag an Area of Text instead of just placing a single line). This way the text will automatically wrap inside the specified area if it gets too long.
@@ -33,6 +34,55 @@ Okay, let's go.
  - Run `./make-snapshots.sh yourproject/` to generate a png from a specific time-index of your .ts or .dv-files. You can run `./make-snapshots.sh yourproject/ 5` to get a png for the frame at the 5th second of all your clips. Default is 3 seconds.
    - Viewing through those pngs to check if all intros are looking good with the real-world titles- and person-names
    - Viewing through the pngs is faster then opening each clip and waiting 5 seconds.
+
+Quick start
+--------------------
+
+Start your own project by copying "00_example_render_byid" folder which contains all changes to use the new features.
+
+Just type `./make.py` or `./make.py -h` in the main directory and you'll get the following help information.
+
+```
+usage: see help with option -h
+
+C3VOC Intro-Outro-Generator
+
+positional arguments:
+
+  yourproject/
+    Path to your project is a required argument.
+    Usage: ./make.py yourproject/
+    Without any further argument(s) given, your whole project will be rendered.
+                            
+
+optional arguments:
+
+  -h, --help
+
+    show this help message and exit
+
+  --debug
+
+    Run script in debug mode and just render the debug values
+    given in your projects __init.py__
+    This argument must not be used together with --id
+    Usage: ./make.py yourproject/ --debug
+                            
+  --id ID [ID ...]
+
+    Only render the given ID(s) from your projects schedule.
+    This argument must not be used together with --debug
+    Usage: ./make.py yourproject/ --id 4711 0815 4223 1337
+    To skip all IDs (just generate intro/outro/background files) use it with --id 000000
+                            
+  --skip SKIP [SKIP ...]
+
+    Skip outro, pause and/or background files in rendering if not needed.
+    This argument must not be used together with --debug
+    Usage: ./make.py yourproject/ --skip pause out bg
+    Example - only generate outro: ./make.py yourproject/ --skip pause bg
+    Example - only generate pause and background: ./make.py yourproject/ --skip out
+```
 
 The Frame-Generators
 --------------------
