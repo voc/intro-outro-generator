@@ -9,7 +9,7 @@ Yes! That's what I want!
 ------------------------
 Okay, let's go.
 
- - Install python3, python3-lxml, python3-cssutils, inkscape and libav-tools
+ - Install python3, python3-lxml, python3-cssutils (or use virtualenv, see below), inkscape and libav-tools
  - Fork this repo on github and clone your personal fork to your local system.
  - Copy one of the existing setup: 00_example_render_byid
     - If you are using a newer version of intro-outro-generator, don't copy any of the other projects, as the __init.py__ may not contain all mandatory parameters in the tasks function.
@@ -34,6 +34,24 @@ Okay, let's go.
  - Run `./make-snapshots.sh yourproject/` to generate a png from a specific time-index of your .ts or .dv-files. You can run `./make-snapshots.sh yourproject/ 5` to get a png for the frame at the 5th second of all your clips. Default is 3 seconds.
    - Viewing through those pngs to check if all intros are looking good with the real-world titles- and person-names
    - Viewing through the pngs is faster then opening each clip and waiting 5 seconds.
+
+#### Python3 virtualenv
+
+Create virtualenv and fetch python deps:
+
+```
+$ virtualenv -p python3 env  
+$ . ./env/bin/activate
+$ pip3 install -r requirements.txt
+```
+
+##### Debian
+
+On debian, for python lxml dependencies:
+
+```
+sudo apt-get install libxml2-dev libxslt1-dev
+```
 
 Quick start
 --------------------
