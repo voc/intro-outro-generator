@@ -236,9 +236,12 @@ def debug():
     render('outro.svg',
            '../outro.ts',
            outroFrames,
+#    render('intro.svg',
+#           '../intro.ts',
+#           introFrames,
            {
             '$id': 1302,
-            '$title': 'VlizedLab - Eine Open Source-Virtualisierungslösung für PC-Räume',
+            '$title': 'VlizedLab - Eine Open Source-Virtualisierungslösung für PC-Räume Tolle dinge und weiter Anlagen in zweiter Zeile',
             '$subtitle': 'IT Automatisierung und zentrales Management mit SALT',
             '$personnames': 'Thorsten Kramm',
             '$url': 'blubb',
@@ -257,7 +260,7 @@ def debug():
 #     )
 
 
-def tasks(queue, args):
+def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
         if event['room'] not in ('Vortragssaal', 'Großes Kolleg'):
