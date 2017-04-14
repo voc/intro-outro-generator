@@ -14,7 +14,7 @@
    height="576"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.0 r"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="outro.svg">
   <defs
      id="defs4">
@@ -207,10 +207,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2492"
-     inkscape:window-height="1411"
-     inkscape:window-x="68"
-     inkscape:window-y="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1023"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true">
@@ -771,7 +771,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#ff00ff;fill-rule:evenodd;stroke:#ff00ff;stroke-width:1.63000846px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 0,118.76966 V 1546.4263"
+       d="M -13.2,118.76966 V 1546.4263"
        id="flyinPath"
        inkscape:connector-curvature="0"
        inkscape:label="flyinPath"
