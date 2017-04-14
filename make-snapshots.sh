@@ -13,13 +13,13 @@ fi
 for dv in *.dv; do
 	png="$dv.png"
 	echo "$dv @ second $ss -> $png"
-	ffmpeg -loglevel error -i $dv -ss $ss -frames:v 1 -vf scale='iw*sar:ih' -f image2 -c png $png;
+	ffmpeg -loglevel error -i $dv -ss $ss -frames:v 1 -vf scale='iw*sar:ih' -f image2 -y -c png $png;
 done
 
 for ts in *.ts; do
         png="$ts.png"
         echo "$ts @ second $ss -> $png"
-        ffmpeg -loglevel error -i $ts -ss $ss -frames:v 1 -vf scale='iw*sar:ih' -f image2 -c png $png;
+        ffmpeg -loglevel error -i $ts -ss $ss -frames:v 1 -vf scale='iw*sar:ih' -f image2 -y -c png $png;
 done
 
 popd >/dev/null 2>&1
