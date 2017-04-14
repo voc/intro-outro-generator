@@ -20,73 +20,73 @@ titlemap = {
 
 
 class animate(object):
-    
+
     def __init__(self, low, high, xml):
         self.low = low * fps
         self.high = high * fps
         self.frames = self.high - self.low
         self.xml = xml
-    
+
     def get(self, frame):
- 
+
         if self.low <= frame <= self.high:
             return self.frame(frame)
 
-    def relframe(self,frame):
+    def relframe(self, frame):
         return frame - self.low
 
-            
+
 class background(animate):
-    
+
     def __init__(self, low, high, xml):
         animate.__init__(self, low, high, xml)
-        
+
         self.pathstr = xml.find(".//*[@id='animatePath']").get('d')
         self.path = svg.path.parse_path(self.pathstr)
         self.init = self.path.point(0)
-  
-    def frame(self,frame):
+
+    def frame(self, frame):
         p = self.path.point(self.relframe(frame) / self.frames) - self.init
         return (
-           ('bgtext', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)), )
-  
-  
+           ('bgtext', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),)
+
+
 class logotext(animate):
-    
+
     def __init__(self, low, high, xml):
         animate.__init__(self, low, high, xml)
-        
+
         self.pathstr = xml.find(".//*[@id='textPath']").get('d')
         self.path = svg.path.parse_path(self.pathstr)
         self.init = self.path.point(0)
-        
-    def frame(self,frame):
+
+    def frame(self, frame):
         p = self.path.point(self.relframe(frame) / self.frames) - self.init
         return (
-           ('ehtext', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)), )
+           ('ehtext', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),)
 
 
 class urldate(animate):
-    
-    def frame(self,frame):
+
+    def frame(self, frame):
         return(
             ('url', 'style', 'opacity', easeOutQuad(self.relframe(frame), 1, -1, self.frames)),
             ('date', 'style', 'opacity', easeOutQuad(self.relframe(frame), 0, 1, self.frames)),
             )
-        
-        
+
+
 class hasenfarbe(animate):
-    
+
     def __init__(self, low, high, xml):
         animate.__init__(self, low, high, xml)
-        colors=['#9e00a0','#ffe72d','#ff8600','#0bc401','#d40010','#0049da']
-        self.hasen=[]
+        colors = ['#9e00a0', '#ffe72d', '#ff8600', '#0bc401', '#d40010', '#0049da']
+        self.hasen = []
         for p in permutations(colors):
             self.hasen.append(p)
         random.shuffle(self.hasen)
 
-    
-    def frame(self,frame):
+
+    def frame(self, frame):
         if frame % 3 is 0:
             return(
                 ('hase001', 'style', 'fill', self.hasen[frame][0]),
@@ -111,20 +111,27 @@ class hasenfarbe(animate):
                 ('hase020', 'style', 'fill', self.hasen[frame][5]),
                 )
 
-        
+
+class cclogo(animate):
+
+    def frame(self, frame):
+        return (
+            ('license', 'style', 'opacity', easeLinear(self.relframe(frame), 0, 1, self.frames)),
+            )
+
+
 def introFrames(args):
     xml = etree.parse('eh17/artwork/intro.svg').getroot()
 
     animations = [
-        background(0,6,xml),
-        urldate(0.5,1,xml),
-        hasenfarbe(1,5,xml),
-        logotext(4,5,xml)]
-    
-    
+        background(0, 6, xml),
+        urldate(0.5, 1, xml),
+        hasenfarbe(1, 5, xml),
+        logotext(4, 5, xml)]
+
     frames = int(6 * fps)
-    for frame in range(0,frames):
-        
+    for frame in range(0, frames):
+
         frameactions = ()
         for a in animations:
                 action = a.get(frame)
@@ -133,65 +140,29 @@ def introFrames(args):
 
         print (frameactions)
         yield frameactions
-  
-  
-  
-def unused():
-           
-    
-    bg_i = 0
-    
-    frames = int(0.5 * fps)
-    for i in range(0, frames):
-        p = path.point(i / frames) - init
-        yield (
-            ('bgtext', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),
-            ('animatePath', 'style', 'opacity', 0),
-            ('date', 'style', 'opacity', 0),
-        )
-        bg_i += 1
 
-    frames = 3 * fps
-    for i in range(0, frames):
-        p = path.point(i / frames) - init
-        yield (
-            ('bgtext', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),
-        )
-
-    frames = int(0.5 * fps)
-    for i in range(0, frames):
-        yield tuple()
-
-    frames = 1 * fps
-    for i in range(0, frames):
-        yield (
-            ('url', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
-            ('date', 'style', 'opacity', easeOutQuad(i, 0, 1, frames)),
-        )
-
-    frames = int(1.5 * fps)
-    for i in range(0, frames):
-        yield (
-            ('url', 'style', 'opacity', 0),
-            ('date', 'style', 'opacity', 1),
-            ('bar', 'style', 'opacity', easeLinear(i, 1, -1, frames)),
-            ('title', 'style', 'opacity', easeLinear(i, 1, -1, frames)),
-        )
-
-
-    # frames = 1*fps
-    # for i in range(0, frames):
-    #     yield (
-    #     )
-
-    frames = int(0.5 * fps) + 1
-    for i in range(0, frames):
-        yield (
-            ('bar', 'style', 'opacity', 0),
-            ('title', 'style', 'opacity', 0),
-        )
 
 def outroFrames(args):
+    xml = etree.parse('eh17/artwork/outro.svg').getroot()
+
+    animations = [
+        background(0, 15, xml),
+        hasenfarbe(1, 5, xml),
+        cclogo(0.5, 2, xml)]
+
+    frames = int(14 * fps)
+    for frame in range(0, frames):
+
+        frameactions = ()
+        for a in animations:
+                action = a.get(frame)
+                if action:
+                    frameactions += action
+
+        print (frameactions)
+        yield frameactions
+
+def oldoutroFrames(args):
     xml = etree.parse('eh17/artwork/outro.svg').getroot()
     pathstr = xml.find(".//*[@id='animatePath']").get('d')
     frog = xml.find(".//*[@id='animatePath']").get('d')
@@ -301,12 +272,12 @@ def debug():
         introFrames,
         {
             '$id': 1302,
-            '$title': 'VlizedLab - Eine Open Source-\nVirtualisierungslösung für PC-Räume',
+            '$title': 'VlizedLab - Eine Open Source-Virtualisierungslösung für PC-Räume',
             '$subtitle': 'IT Automatisierung und zentrales Management mit SALT',
             '$personnames': 'Thorsten Kramm',
             '$url':'blubb',
             '$date':'huhu'
-    
+
         }
     )
 
