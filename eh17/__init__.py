@@ -5,7 +5,6 @@ import os.path
 from renderlib import *
 from easing import *
 import svg.path
-from twisted.words.protocols.irc import lowDequote
 import random
 from itertools import permutations
 
