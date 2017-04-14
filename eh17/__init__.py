@@ -85,7 +85,6 @@ class hasenfarbe(animate):
             self.hasen.append(p)
         random.shuffle(self.hasen)
 
-
     def frame(self, frame):
         if frame % 3 is 0:
             return(
@@ -120,11 +119,37 @@ class cclogo(animate):
             )
 
 
+class flyin(animate):
+
+    def __init__(self, low, high, xml, svgid, runout=True):
+        animate.__init__(self, low, high, xml)
+        self.pathstr = xml.find(".//*[@id='flyinPath']").get('d')
+        self.path = svg.path.parse_path(self.pathstr)
+        self.init = self.path.point(0)
+        self.stopf = self.relframe(self.high) / 3
+        self.contf = 2 * self.stopf
+        print(self.contf)
+        self.svgid = svgid
+        self.runout = runout
+
+    def frame(self, frame):
+        if self.relframe(frame) <= self.stopf:
+            p = self.path.point(self.relframe(frame) / (self.frames)) - self.init
+            self.stoppos = p
+            return (
+                (self.svgid, 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),)
+
+        if self.runout and self.relframe(frame) >= self.contf:
+            p = self.path.point(self.relframe(frame) / (self.frames)) - self.init - self.stoppos
+            return (
+                (self.svgid, 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),)
+
+
 def introFrames(args):
     xml = etree.parse('eh17/artwork/intro.svg').getroot()
 
     animations = [
-        background(0, 6, xml),
+        background(0, 15, xml),
         urldate(0.5, 1, xml),
         hasenfarbe(1, 5, xml),
         logotext(4, 5, xml)]
@@ -147,10 +172,11 @@ def outroFrames(args):
 
     animations = [
         background(0, 15, xml),
-        hasenfarbe(1, 5, xml),
-        cclogo(0.5, 2, xml)]
+        hasenfarbe(0, 15, xml),
+        flyin(0.5, 2, xml, 'zufall'),
+        flyin(1.5, 3, xml, 'ccby', False)]
 
-    frames = int(14 * fps)
+    frames = int(4 * fps)
     for frame in range(0, frames):
 
         frameactions = ()
@@ -162,66 +188,6 @@ def outroFrames(args):
         print (frameactions)
         yield frameactions
 
-def oldoutroFrames(args):
-    xml = etree.parse('eh17/artwork/outro.svg').getroot()
-    pathstr = xml.find(".//*[@id='animatePath']").get('d')
-    frog = xml.find(".//*[@id='animatePath']").get('d')
-    path = svg.path.parse_path(pathstr)
-
-    init = path.point(0)
-
-    frames = int(0.5 * fps)
-    for i in range(0, frames):
-        p = path.point(i / frames) - init
-        yield (
-            ('animatePath', 'style', 'opacity', 0),
-            ('license', 'style', 'opacity', 0),
-        )
-
-    frames = 3 * fps
-    for i in range(0, frames):
-        p = path.point(i / frames) - init
-        yield (
-            ('frog', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),
-        )
-
-    frames = int(0.5 * fps) + 1
-    for i in range(0, frames):
-        yield tuple()
-
-    frames = 1 * fps
-    for i in range(0, frames):
-        yield (
-            ('logo', 'style', 'opacity', easeLinear(i, 1, -1, frames)),
-        )
-
-    frames = 1 * fps
-    for i in range(0, frames):
-        yield (
-            ('logo', 'style', 'opacity', 0),
-            ('license', 'style', 'opacity', easeLinear(i, 0, 1, frames)),
-        )
-
-    frames = 2 * fps
-    for i in range(0, frames):
-        yield (
-            ('logo', 'style', 'opacity', 0),
-            ('license', 'style', 'opacity', 1),
-        )
-
-    frames = 1 * fps
-    for i in range(0, frames):
-        yield (
-            ('logo', 'style', 'opacity', 0),
-            ('license', 'style', 'opacity', easeLinear(i, 1, -1, frames)),
-        )
-
-    frames = 1 * fps
-    for i in range(0, frames):
-        yield (
-            ('logo', 'style', 'opacity', 0),
-            ('license', 'style', 'opacity', 0),
-        )
 
 def pauseFrames(args):
     frames = 2 * fps
@@ -266,20 +232,20 @@ def pauseFrames(args):
             ('text2', 'style', 'opacity', 0),
         )
 
+
 def debug():
-    render('intro.svg',
-        '../intro.ts',
-        introFrames,
-        {
+    render('outro.svg',
+           '../outro.ts',
+           outroFrames,
+           {
             '$id': 1302,
             '$title': 'VlizedLab - Eine Open Source-Virtualisierungslösung für PC-Räume',
             '$subtitle': 'IT Automatisierung und zentrales Management mit SALT',
             '$personnames': 'Thorsten Kramm',
-            '$url':'blubb',
-            '$date':'huhu'
-
-        }
-    )
+            '$url': 'blubb',
+            '$date': 'huhu'
+           }
+           )
 
 # #    render('outro.svg',
 #         '../outro.ts',
