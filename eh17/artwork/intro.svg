@@ -14,7 +14,7 @@
    height="576"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.0 r"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="intro.svg">
   <defs
      id="defs4">
@@ -202,15 +202,15 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="479.0757"
-     inkscape:cy="53.103792"
+     inkscape:cx="342.34815"
+     inkscape:cy="357.58036"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2492"
-     inkscape:window-height="1411"
-     inkscape:window-x="68"
-     inkscape:window-y="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1023"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true">
@@ -253,7 +253,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -736,17 +736,19 @@
          id="flowPara4684" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4686"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:25px;font-family:'Adobe Courier';-inkscape-font-specification:'Adobe Courier, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:36px;font-family:'Adobe Courier';-inkscape-font-specification:'Adobe Courier, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(0,520.74696)"><flowRegion
-         id="flowRegion4688"><rect
+         id="flowRegion4688"
+         style="font-size:37.33333206px;line-height:36px"><rect
            id="rect4690"
            width="710.35028"
            height="140.76242"
            x="54"
-           y="0" /></flowRegion><flowPara
-         id="flowPara4692"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:eh17;-inkscape-font-specification:'eh17, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">$title</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:eh17;-inkscape-font-specification:'eh17, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
+           y="0"
+           style="font-size:37.33333206px;line-height:36px" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:26px;font-family:eh17;-inkscape-font-specification:'eh17, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
+         id="flowPara192">$title</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:26px;font-family:eh17;-inkscape-font-specification:'eh17, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
          id="flowPara4672" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="url"
@@ -805,5 +807,15 @@
          id="flowPara4692-8"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:eh17;-inkscape-font-specification:'eh17, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start;fill:#ffffff">$subtitle</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:eh17;-inkscape-font-specification:'eh17, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start;fill:#ffffff"
-         id="flowPara4672-3" /></flowRoot>  </g>
+         id="flowPara4672-3" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="178.89801"
+       y="552.43768"
+       id="text178"><tspan
+         sodipodi:role="line"
+         x="178.89801"
+         y="587.82831"
+         id="tspan180" /></text>
+  </g>
 </svg>
