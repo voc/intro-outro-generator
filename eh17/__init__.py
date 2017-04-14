@@ -263,10 +263,16 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
+        if 000000 in idlist:
+            continue
         if event['room'] not in ('Vortragssaal', 'Großes Kolleg'):
             print("skipping room %s (%s)" % (event['room'], event['title']))
             continue
-
+        if not (idlist==None):
+            if int(event['id']) not in idlist:
+                print("skipping id %s (%s)" % (event['id'], event['title']))
+                continue
+        
         # generate a task description and put them into the queue
         queue.put(Rendertask(
             infile='intro.svg',
