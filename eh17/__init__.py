@@ -263,15 +263,20 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if 000000 in idlist:
-            continue
-        if event['room'] not in ('Vortragssaal', 'Großes Kolleg'):
-            print("skipping room %s (%s)" % (event['room'], event['title']))
-            continue
-        if not (idlist==None):
+        if not (idlist == None):
+            if 000000 in idlist:
+                continue
             if int(event['id']) not in idlist:
                 print("skipping id %s (%s)" % (event['id'], event['title']))
                 continue
+        if event['room'] not in ('Vortragssaal', 'Großes Kolleg'):
+            print("skipping room %s (%s)" % (event['room'], event['title']))
+            continue
+
+        eventTitle = event['title']
+
+        if event['id'] == 8496:
+            eventTitle = 'Know your tools                        - I’m firing my laser! -'
         
         # generate a task description and put them into the queue
         queue.put(Rendertask(
@@ -280,7 +285,7 @@ def tasks(queue, args, idlist, skiplist):
             sequence=introFrames,
             parameters={
                 '$id': event['id'],
-                '$title': event['title'],
+                '$title': eventTitle,
                 '$subtitle': event['subtitle'],
                 '$personnames': event['personnames']
             }
