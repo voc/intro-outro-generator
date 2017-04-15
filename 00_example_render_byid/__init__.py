@@ -230,15 +230,16 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if 000000 in idlist:
-            continue
         if event['room'] not in ('Chirurgie (Saal 1.04)', 'Kreißsaal (Saal 1.11)'):
-            print("skipping room %s (%s)" % (event['room'], event['title']))
+            print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
             continue
-        if not (idlist==None):
-            if int(event['id']) not in idlist:
-                print("skipping id %s (%s)" % (event['id'], event['title']))
-                continue
+        if not (idlist==[]):
+                if 000000 in idlist:
+                        print("skipping id (%s [%s])" % (event['title'], event['id']))
+                        continue
+                if int(event['id']) not in idlist:
+                        print("skipping id (%s [%s])" % (event['title'], event['id']))
+                        continue
 
         # generate a task description and put them into the queue
         queue.put(Rendertask(

@@ -100,6 +100,13 @@ if renderlib.debug:
 # threaded task queue
 tasks = Queue()
 
+#initialize args.id and args.skip, if they are not given by the user
+if (args.id==None):
+	args.id = []
+
+if (args.skip==None):
+	args.skip = []
+
 # call into project which generates the tasks
 project.tasks(tasks, projectpath, args.id, args.skip)
 
