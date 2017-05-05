@@ -195,11 +195,21 @@ def events(scheduleUrl, titlemap={}):
 			# iterate events on that day in this room
 			for event in room.iter('event'):
 				# aggregate names of the persons holding this talk
+				persons = []
 				personnames = []
+				personnames2 = []
 				if event.find('persons') is not None:
 					for person in event.find('persons').iter('person'):
 						personname = re.sub( '\s+', ' ', person.text ).strip()
-						personnames.append(personname)
+						personname = personname.split(",")[0]
+						persons.append(personname)
+
+				i = iter(persons)
+				personnames = [ next(i) ]
+				try:
+					personnames2 = [ next(i) ]
+				except StopIteration:
+					pass
 
 				id = int(event.get('id'))
 
@@ -220,8 +230,8 @@ def events(scheduleUrl, titlemap={}):
 					'id': id,
 					'title': title,
 					'subtitle': subtitle,
-					'persons': personnames,
-					'personnames': ', '.join(personnames),
+					'personnames': ''.join(personnames),
+					'personnames2': ''.join(personnames2),
 					'room': room.attrib['name'],
 				}
 
