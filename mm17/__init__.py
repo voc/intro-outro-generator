@@ -7,158 +7,59 @@ from easing import *
 scheduleUrl = 'https://c3voc.de/share/schedules/mm17.xml'
 
 def introFrames(args):
-#fade in pillgroup0
+#show for 1 second
     frames = 1*fps
     for i in range(0, frames):
         yield (
-            ('pillgroup0', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('pillgroup1', 'style', 'opacity', 0),
-            ('pillgroup2', 'style', 'opacity', 0),
-            ('pillgroup3', 'style', 'opacity', 0),
-            ('pillgroup4', 'style', 'opacity', 0),
-            ('logotext', 'style', 'opacity', 0),
             ('title', 'style', 'opacity', 0),
-            ('subtitle', 'style', 'opacity', 0),
             ('persons', 'style', 'opacity', 0),
-	    ('persons2', 'style', 'opacity', 0),
-            ('id', 'style', 'opacity', 0),
+            ('persons2', 'style', 'opacity', 0),
         )
-#fade in title, subtitle, persons and id
+
+#fade in 2 seconds
     frames = 2*fps
     for i in range(0, frames):
         yield(
             ('title', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('subtitle', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
             ('persons', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-	    ('persons2', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('id', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
+            ('persons2', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
         )
-#show whole image for 2 seconds
+
+#show for 5 seconds
     frames = 5*fps
     for i in range(0, frames):
         yield(
             ('title', 'style', 'opacity', 1),
-            ('subtitle', 'style', 'opacity', 1),
             ('persons', 'style', 'opacity', 1),
-	    ('persons2', 'style', 'opacity', 1),
-            ('id', 'style', 'opacity', 1),
+            ('persons2', 'style', 'opacity', 1),
         )
 
-def backgroundFrames(parameters):
-    # 40 Sekunden
-
-        frames = 20*fps
-        for i in range(0, frames):
-            xshift = (i+1) * 300/frames
-            yshift = ((i+1) * (150/frames))
-            yield(
-                        ('pillgroup', 'attr', 'transform', 'translate(%.4f, %.4f)' % (xshift, yshift)),
-            )
-
-        frames = 20*fps
-        for i in range(0, frames):
-            xshift = 300 - ((i+1) * (300/frames))
-            yshift = 150 - ((i+1) * (150/frames))
-            yield(
-                        ('pillgroup', 'attr', 'transform', 'translate(%.4f, %.4f)' % (xshift, yshift)),
-            )
+def backgroundFrames(arg):
+#show for 1 second
+    frames = 1*fps
+    for i in range(0, frames):
+        yield tuple()
 
 def outroFrames(args):
-#fadein outro graphics
-    frames = 3*fps
+# show for 6 seconds
+    frames = 6*fps
     for i in range(0, frames):
-        yield(
-            ('pillgroup', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('logotext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('c3voclogo', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('c3voctext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('bysalogo', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('bysatext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-        )
-    frames = 3*fps
-    for i in range(0, frames):
-        yield(
-            ('pillgroup', 'style', 'opacity', 1),
-            ('logotext', 'style', 'opacity', 1),
-            ('c3voclogo', 'style', 'opacity', 1),
-            ('c3voctext', 'style', 'opacity', 1),
-            ('bysalogo', 'style', 'opacity', 1),
-            ('bysatext', 'style', 'opacity', 1),
-        )
+        yield tuple()
 
 def pauseFrames(args):
-#fade heartgroups
-        frames = int(0.5*fps)
-        for i in range(0, frames):
-                yield (
-                        ('heartgroup1', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                        ('heartgroup2', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                        ('heartgroup3', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                )
-        for i in range(0, frames):
-                yield (
-                        ('heartgroup1', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                        ('heartgroup2', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                        ('heartgroup3', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                )
-        for i in range(0, frames):
-                yield (
-                        ('heartgroup1', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                        ('heartgroup2', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                        ('heartgroup3', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                )
-        for i in range(0, frames):
-                yield (
-                        ('heartgroup1', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                        ('heartgroup2', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                        ('heartgroup3', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                )
-        for i in range(0, frames):
-                yield (
-                        ('heartgroup1', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                        ('heartgroup2', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                        ('heartgroup3', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                )
-        for i in range(0, frames):
-                yield (
-                        ('heartgroup1', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                        ('heartgroup2', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                        ('heartgroup3', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                )
-        for i in range(0, frames):
-                yield (
-                        ('heartgroup1', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                        ('heartgroup2', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                        ('heartgroup3', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                )
-        for i in range(0, frames):
-                yield (
-                        ('heartgroup1', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                        ('heartgroup2', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                        ('heartgroup3', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                )
-        for i in range(0, frames):
-                yield (
-                        ('heartgroup1', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                        ('heartgroup2', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                        ('heartgroup3', 'style', 'opacity', easeInQuad(i, 0.25, 0.75, frames)),
-                )
-        for i in range(0, frames):
-                yield (
-                        ('heartgroup1', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                        ('heartgroup2', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                        ('heartgroup3', 'style', 'opacity', easeInQuad(i, 1, -0.75, frames)),
-                )
+# show for 1 second
+    frames = 1*fps
+    for i in range(0, frames):
+        yield tuple()
 
 def debug():
     render('intro.svg',
         '../intro.ts',
         introFrames,
         {
-            '$id': 7776,
-            '$title': 'StageWar live!',
-            '$subtitle': 'Metal Konzert',
-            '$persons':  'www.stagewar.de'
+            '$title': 'Make Munich Vortag',
+            '$persons1': 'MM17 1',
+            '$persons2': 'MM17 2'
         }
     )
 
@@ -198,9 +99,8 @@ def tasks(queue, args, idlist, skiplist):
             parameters = {
                 '$id': event['id'],
                 '$title': event['title'],
-                '$subtitle': event['subtitle'],
                 '$persons1': event['personnames'].upper(),
-		'$persons2': event['personnames2'].upper()
+                '$persons2': event['personnames2'].upper()
             }
         ))
 
