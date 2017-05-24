@@ -277,10 +277,10 @@
 	<sceneSettings>
 		<width>1920</width>
 		<height>1080</height>
-		<duration>510</duration>
+		<duration>425</duration>
 		<shouldOverrideFCDuration>0</shouldOverrideFCDuration>
-		<frameRate>30</frameRate>
-		<NTSC>1</NTSC>
+		<frameRate>25</frameRate>
+		<NTSC>0</NTSC>
 		<channels>4</channels>
 		<pixelAspectRatio>1</pixelAspectRatio>
 		<workingGamut>0</workingGamut>
