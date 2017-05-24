@@ -103,14 +103,15 @@ def render(event):
 				locationpath=intermediate_clip)
 
 		while True:
+			time.sleep(5)
 			ps = subprocess.check_output(shlex.split('ps aux')).decode('utf-8')
 
 			pscnt = ps.count('compressord')
-			if pscnt == 0:
+			filexists = os.path.isfile(intermediate_clip)
+			if pscnt == 0 and filexists:
 				break
 
-			print("  still "+str(pscnt)+" Compressor.app-processes running")
-			time.sleep(5)
+			print("  "+str(pscnt)+" Compressor.app-processes running, filexists? "+str(filexists))
 
 
 		print("  generated intermediate-clip in " + intermediate_clip + ", now starting transcoder")
@@ -134,5 +135,6 @@ for event in events:
 		i=i, n=n,
 		id=event['id'],
 		title=event['title']))
-	render(event)
 
+	render(event)
+	print()
