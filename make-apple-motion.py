@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 
+import subprocess
 import renderlib
 import argparse
+import tempfile
+import shlex
+import time
 import sys
+import os
+
+from xml.sax.saxutils import escape as xmlescape
 
 # Parse arguments
 parser = argparse.ArgumentParser(
@@ -61,10 +68,62 @@ if args.debug:
 else:
 	events = renderlib.events(args.schedule)
 
+def run_check(command, **kwargs):
+	args = {}
+	for key, value in kwargs.items():
+		args[key] = shlex.quote(value)
+
+	command = command.format(**args)
+	print(" -> "+command)
+	subprocess.check_call(shlex.split(command))
+
+def render(event):
+	with tempfile.TemporaryDirectory() as tempdir:
+		work_doc = os.path.join(tempdir, "work.motn")
+		intermediate_clip = os.path.join(tempdir, "intermediate.mov")
+		final_clip = os.path.join(os.path.dirname(args.motn), str(event['id'])+'.ts')
+
+		with open(args.motn, 'r') as fp:
+			xmlstr = fp.read()
+
+		for key, value in event.items():
+			xmlstr = xmlstr.replace("$"+str(key), xmlescape(str(value)))
+
+		with open(work_doc, 'w') as fp:
+			fp.write(xmlstr)
+
+		print("  generated work-document in " + work_doc + ", now starting compressor")
+		run_check(
+			'/Applications/Compressor.app/Contents/MacOS/Compressor -jobpath "{jobpath}" -settingpath {home}/Library/Application\ Support/Compressor/Settings/Apple\ ProRes\ 4444.cmprstng -locationpath "{locationpath}"',
+				jobpath=work_doc,
+				home=os.getenv('HOME'),
+				locationpath=intermediate_clip)
+
+		while True:
+			ps = subprocess.check_output(shlex.split('ps aux')).decode('utf-8')
+
+			pscnt = ps.count('compressord')
+			if pscnt == 0:
+				break
+
+			print("  still "+str(pscnt)+" Compressor.app-processes running")
+			time.sleep(5)
+
+
+		print("  generated intermediate-clip in " + intermediate_clip + ", now starting transcoder")
+		run_check(
+			'ffmpeg -y -i "{input}" -ar 48000 -ac 1 -f s16le -i /dev/zero -map 0:0 -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:0 -map 1:0 -map 1:0 -map 1:0 -shortest -f mpegts "{output}"',
+				input=intermediate_clip,
+				output=final_clip)
+
+		print("  transcoded final-clip to " + final_clip)
+
+
 
 for event in events:
-	if args.ids and evenbt['id'] not in args.ids:
+	if args.ids and event['id'] not in args.ids:
 		continue
 
 	print("rendering", event)
+	render(event)
 
