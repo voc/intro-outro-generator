@@ -253,7 +253,7 @@
 	<displayEffects>1</displayEffects>
 	<videoVerticalZoom>1.1111111111111112</videoVerticalZoom>
 	<audioVerticalZoom>1</audioVerticalZoom>
-	<displayRange in="-603058918 1290625000 3 0" out="17484261147 1000000000 3 0"/>
+	<displayRange in="-731731 1566000 3 0" out="27380353 1566000 3 0"/>
 </timeline>
 
 <curveeditor>
@@ -261,8 +261,8 @@
 	<snapping>0</snapping>
 	<displayAudioWaveform>0</displayAudioWaveform>
 	<lockKeyframesInTime>0</lockKeyframesInTime>
-	<displayRange in="-603058918 1290625000 3 0" out="17484261147 1000000000 3 0"/>
-	<currentviewvolume originx="-0.46726114711864408" originy="-62.5" width="17.951522294" height="125"/>
+	<displayRange in="-731731 1566000 3 0" out="27380353 1566000 3 0"/>
+	<currentviewvolume originx="-0.46726117496807151" originy="-62.5" width="17.951522349936145" height="125"/>
 	<snapshotChannels>0</snapshotChannels>
 </curveeditor>
 
@@ -327,8 +327,8 @@
 		<version>2</version>
 	</publishSettings>
 	<currentFrame>832832 120000 1 0</currentFrame>
-	<currentObject>1825768938</currentObject>
-	<activeLayer>1999734643</activeLayer>
+	<currentObject>1999738555</currentObject>
+	<activeLayer>1999738555</activeLayer>
 	<timeRange offset="0 1 1 0" duration="2042040 120000 1 0"/>
 	<playRange offset="0 1 1 0" duration="2042040 120000 1 0"/>
 	<flags>1</flags>
@@ -345,7 +345,7 @@
 	<scenenode name="Projekt" id="1825768938" factoryID="17" version="5">
 		<scenenode name="Widget" id="1825768939" factoryID="12" version="5">
 			<flags>0</flags>
-			<timing in="0 1 1 0" out="-4004 120000 1 0" offset="0 1 1 0"/>
+			<timing in="0 1 1 0" out="-128128 3840000 1 0" offset="0 1 1 0"/>
 			<foldFlags>0</foldFlags>
 			<baseFlags>16</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704"/>
@@ -357,18 +357,18 @@
 			</parameter>
 		</scenenode>
 		<flags>0</flags>
-		<timing in="0 1 1 0" out="-4004 120000 1 0" offset="0 1 1 0"/>
+		<timing in="0 1 1 0" out="-128128 3840000 1 0" offset="0 1 1 0"/>
 		<foldFlags>0</foldFlags>
-		<baseFlags>268435473</baseFlags>
+		<baseFlags>16</baseFlags>
 		<parameter name="Eigenschaften" id="1" flags="8589938704"/>
 		<parameter name="Objekt" id="2" flags="8589938704"/>
 	</scenenode>
-	<layer name="Gruppe 1" id="1999738555">
-		<scenenode name="Rechteck 1" id="1999738552" factoryID="15" version="5">
+	<layer name="Blackout" id="1999738555">
+		<scenenode name="Rechteck" id="1999738552" factoryID="15" version="5">
 			<isShapeStyle>0</isShapeStyle>
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
-			<timing in="1873872 120000 1 0" out="2058056 120000 1 0" offset="1873872 120000 1 0"/>
+			<timing in="1873872 120000 1 0" out="65857792 3840000 1 0" offset="1873872 120000 1 0"/>
 			<foldFlags>0</foldFlags>
 			<baseFlags>524304</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -490,9 +490,9 @@
 		</scenenode>
 		<aspectRatio>1</aspectRatio>
 		<flags>0</flags>
-		<timing in="1873872 120000 1 0" out="2058056 120000 1 0" offset="-84084 120000 1 0"/>
+		<timing in="1873872 120000 1 0" out="65857792 3840000 1 0" offset="-84084 120000 1 0"/>
 		<foldFlags>0</foldFlags>
-		<baseFlags>524304</baseFlags>
+		<baseFlags>268959761</baseFlags>
 		<parameter name="Eigenschaften" id="1" flags="8589938704">
 			<parameter name="Beleuchtung" id="230" flags="8589938706">
 				<foldFlags>15</foldFlags>
@@ -519,7 +519,7 @@
 				<validTracks>1</validTracks>
 				<aspectRatio>1</aspectRatio>
 				<flags>0</flags>
-				<timing in="608608 120000 1 0" out="2042040 120000 1 0" offset="612612 120000 1 0"/>
+				<timing in="608608 120000 1 0" out="65345280 3840000 1 0" offset="612612 120000 1 0"/>
 				<foldFlags>16384</foldFlags>
 				<baseFlags>524368</baseFlags>
 				<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -581,7 +581,7 @@
 			</scenenode>
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
-			<timing in="608608 120000 1 0" out="2042040 120000 1 0" offset="1905904 120000 1 0"/>
+			<timing in="608608 120000 1 0" out="65345280 3840000 1 0" offset="1905904 120000 1 0"/>
 			<foldFlags>1</foldFlags>
 			<baseFlags>524368</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -618,7 +618,7 @@
 				<parameter name="Aperture Höhe" id="313" flags="12884901906" default="1080" value="1080"/>
 			</parameter>
 			<behavior name="Bewegungspfad" id="1999736771" factoryID="25">
-				<timing in="608608 120000 1 0" out="916916 120000 1 0" offset="612612 120000 1 0"/>
+				<timing in="608608 120000 1 0" out="29341312 3840000 1 0" offset="612612 120000 1 0"/>
 				<baseFlags>8589934672</baseFlags>
 				<parameter name="Position" id="200" flags="9263190034">
 					<foldFlags>15</foldFlags>
@@ -806,7 +806,7 @@
 				</parameter>
 			</behavior>
 			<behavior name="Einrasten an Bewegung" id="1999736772" factoryID="28">
-				<timing in="608608 120000 1 0" out="1033032 120000 1 0" offset="612612 120000 1 0"/>
+				<timing in="608608 120000 1 0" out="33057024 3840000 1 0" offset="612612 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 			</behavior>
 		</layer>
@@ -815,7 +815,7 @@
 				<validTracks>0</validTracks>
 				<aspectRatio>1</aspectRatio>
 				<flags>0</flags>
-				<timing in="0 120000 1 0" out="596596 120000 1 0" offset="0 1 1 0"/>
+				<timing in="0 120000 1 0" out="19091072 3840000 1 0" offset="0 1 1 0"/>
 				<foldFlags>16384</foldFlags>
 				<baseFlags>524304</baseFlags>
 				<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -874,7 +874,7 @@
 			</scenenode>
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
-			<timing in="0 120000 1 0" out="596596 120000 1 0" offset="0 1 1 0"/>
+			<timing in="0 120000 1 0" out="19091072 3840000 1 0" offset="0 1 1 0"/>
 			<foldFlags>1</foldFlags>
 			<baseFlags>524304</baseFlags>
 			<locked>1</locked>
@@ -915,7 +915,7 @@
 				<parameter name="Aperture Höhe" id="313" flags="12884901906" default="1080" value="1080"/>
 			</parameter>
 			<behavior name="Bewegungspfad" id="1998662574" factoryID="25">
-				<timing in="0 120000 1 0" out="596596 120000 1 0" offset="0 1 1 0"/>
+				<timing in="0 120000 1 0" out="19091072 3840000 1 0" offset="0 1 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<parameter name="Position" id="200" flags="9263190034">
 					<foldFlags>15</foldFlags>
@@ -1115,13 +1115,13 @@
 				</parameter>
 			</behavior>
 			<behavior name="Einrasten an Bewegung" id="1998662576" factoryID="28">
-				<timing in="0 120000 1 0" out="596596 120000 1 0" offset="0 1 1 0"/>
+				<timing in="0 120000 1 0" out="19091072 3840000 1 0" offset="0 1 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 			</behavior>
 		</layer>
 		<aspectRatio>1</aspectRatio>
 		<flags>0</flags>
-		<timing in="0 120000 1 0" out="2042040 120000 1 0" offset="0 1 1 0"/>
+		<timing in="0 120000 1 0" out="65345280 3840000 1 0" offset="0 1 1 0"/>
 		<foldFlags>1</foldFlags>
 		<baseFlags>524368</baseFlags>
 		<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -1164,7 +1164,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -1225,7 +1225,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -1292,7 +1292,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -1359,7 +1359,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -1426,7 +1426,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -1493,7 +1493,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -1560,7 +1560,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -1627,7 +1627,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -1693,7 +1693,7 @@
 			<styleRun style="1999738801" offset="1" length="11"/>
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
-			<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+			<timing in="680680 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 			<foldFlags>1</foldFlags>
 			<baseFlags>34078736</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -1739,7 +1739,7 @@
 				</parameter>
 				<parameter name="An Schnittmarken beschneiden" id="372" flags="8606744592" default="0" value="0"/>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738838" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739149" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -1748,7 +1748,7 @@
 				</parameter>
 			</parameter>
 			<behavior name="Bleary Out" id="1999737311" factoryID="19">
-				<timing in="1637636 120000 1 0" out="1877876 120000 1 0" offset="1637636 120000 1 0"/>
+				<timing in="1637636 120000 1 0" out="60092032 3840000 1 0" offset="1637636 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<parameter name="Format" id="1000" flags="8589938704">
 					<foldFlags>4</foldFlags>
@@ -1862,7 +1862,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738838" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739149" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -1871,7 +1871,7 @@
 				</parameter>
 			</behavior>
 			<behavior name="Bleary In" id="1999737312" factoryID="19">
-				<timing in="680680 120000 1 0" out="816816 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="26138112 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<parameter name="Format" id="1000" flags="8589938704">
 					<foldFlags>4</foldFlags>
@@ -1984,7 +1984,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738838" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739149" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -1993,7 +1993,7 @@
 				</parameter>
 			</behavior>
 			<behavior name="Collapse In" id="1999737313" factoryID="19">
-				<timing in="680680 120000 1 0" out="920920 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="29469440 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<enabled>0</enabled>
 				<parameter name="Format" id="1000" flags="8589938704">
@@ -2512,7 +2512,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738838" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739149" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -2521,7 +2521,7 @@
 				</parameter>
 			</behavior>
 			<behavior name="Breeze In" id="1999737314" factoryID="19">
-				<timing in="680680 120000 1 0" out="776776 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="680680 120000 1 0" out="24856832 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<enabled>0</enabled>
 				<parameter name="Format" id="1000" flags="8589938704">
@@ -2624,7 +2624,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738838" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739149" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -2645,7 +2645,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="792792 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="792792 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -2706,7 +2706,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="792792 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="792792 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -2773,7 +2773,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="792792 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="792792 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>851968</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -2840,7 +2840,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="792792 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="792792 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -2907,7 +2907,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="792792 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="792792 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -2974,7 +2974,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="792792 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="792792 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -3041,7 +3041,7 @@
 				<previewWidth>0</previewWidth>
 				<previewHeight>0</previewHeight>
 				<presetName>Normal</presetName>
-				<timing in="792792 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="792792 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8657043504</baseFlags>
 				<foldFlags>786432</foldFlags>
 				<parameter name="Schrift" id="83" flags="12884906000">
@@ -3106,7 +3106,7 @@
 			<styleRun style="1999737188" offset="0" length="6"/>
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
-			<timing in="792792 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+			<timing in="792792 120000 1 0" out="60092032 3840000 1 0" offset="680680 120000 1 0"/>
 			<foldFlags>0</foldFlags>
 			<baseFlags>34078800</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -3152,7 +3152,7 @@
 				</parameter>
 				<parameter name="An Schnittmarken beschneiden" id="372" flags="8606744592" default="0" value="0"/>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738904" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739215" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3161,7 +3161,7 @@
 				</parameter>
 			</parameter>
 			<behavior name="Bleary Out" id="1999736343" factoryID="19">
-				<timing in="1713712 120000 1 0" out="1877876 120000 1 0" offset="1637636 120000 1 0"/>
+				<timing in="1713712 120000 1 0" out="60092032 3840000 1 0" offset="1637636 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<parameter name="Format" id="1000" flags="8589938704">
 					<foldFlags>4</foldFlags>
@@ -3275,7 +3275,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738904" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739215" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3284,7 +3284,7 @@
 				</parameter>
 			</behavior>
 			<behavior name="Bleary In" id="1999736241" factoryID="19">
-				<timing in="792792 120000 1 0" out="920920 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="792792 120000 1 0" out="29469440 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<foldFlags>4</foldFlags>
 				<parameter name="Format" id="1000" flags="8589938704">
@@ -3398,7 +3398,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738904" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739215" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3407,7 +3407,7 @@
 				</parameter>
 			</behavior>
 			<behavior name="Collapse In" id="1999735936" factoryID="19">
-				<timing in="792792 120000 1 0" out="920920 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="792792 120000 1 0" out="29469440 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<enabled>0</enabled>
 				<parameter name="Format" id="1000" flags="8589938704">
@@ -3900,7 +3900,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738904" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739215" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3909,7 +3909,7 @@
 				</parameter>
 			</behavior>
 			<behavior name="Breeze In" id="1999735911" factoryID="19">
-				<timing in="776776 120000 1 0" out="776776 120000 1 0" offset="680680 120000 1 0"/>
+				<timing in="776776 120000 1 0" out="24856832 3840000 1 0" offset="680680 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<enabled>0</enabled>
 				<parameter name="Format" id="1000" flags="8589938704">
@@ -4004,7 +4004,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738904" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739215" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -4017,7 +4017,7 @@
 			<isShapeStyle>0</isShapeStyle>
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
-			<timing in="440440 120000 1 0" out="2038036 120000 1 0" offset="440440 120000 1 0"/>
+			<timing in="440440 120000 1 0" out="65217152 3840000 1 0" offset="440440 120000 1 0"/>
 			<foldFlags>0</foldFlags>
 			<baseFlags>524304</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -4176,7 +4176,7 @@
 		</scenenode>
 		<aspectRatio>1</aspectRatio>
 		<flags>0</flags>
-		<timing in="440440 120000 1 0" out="2038036 120000 1 0" offset="0 1 1 0"/>
+		<timing in="440440 120000 1 0" out="65217152 3840000 1 0" offset="0 1 1 0"/>
 		<foldFlags>0</foldFlags>
 		<baseFlags>524368</baseFlags>
 		<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -4234,7 +4234,7 @@
 			<validTracks>1</validTracks>
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
-			<timing in="628628 120000 1 0" out="2650648 120000 1 0" offset="612612 120000 1 0"/>
+			<timing in="628628 120000 1 0" out="84820736 3840000 1 0" offset="612612 120000 1 0"/>
 			<foldFlags>16384</foldFlags>
 			<baseFlags>524304</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -4366,13 +4366,13 @@
 				<parameter name="Höhe" id="314" flags="8589934610" default="1" value="240"/>
 			</parameter>
 			<filter name="Gamma" id="1999738574" factoryID="24" pluginUUID="9F2DAEB8-1875-4E0E-B62F-DF1E28C1999B" pluginVersion="0" pluginName="Gamma" pluginDynamicParams="0">
-				<timing in="628628 120000 1 0" out="2650648 120000 1 0" offset="628628 120000 1 0"/>
+				<timing in="628628 120000 1 0" out="84820736 3840000 1 0" offset="628628 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<parameter name="Gamma" id="1" flags="12884901904" default="1" value="0"/>
 				<parameter name="Mix" id="10001" flags="12884901888" default="1" value="1"/>
 			</filter>
 			<behavior name="Bewegungspfad" id="1999737057" factoryID="25">
-				<timing in="628628 120000 1 0" out="920920 120000 1 0" offset="612612 120000 1 0"/>
+				<timing in="628628 120000 1 0" out="29469440 3840000 1 0" offset="612612 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<parameter name="Position" id="200" flags="9263190034">
 					<foldFlags>15</foldFlags>
@@ -4550,7 +4550,7 @@
 		</scenenode>
 		<aspectRatio>1</aspectRatio>
 		<flags>0</flags>
-		<timing in="628628 120000 1 0" out="2650648 120000 1 0" offset="0 1 1 0"/>
+		<timing in="628628 120000 1 0" out="84820736 3840000 1 0" offset="0 1 1 0"/>
 		<foldFlags>0</foldFlags>
 		<baseFlags>524304</baseFlags>
 		<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -4577,7 +4577,7 @@
 		<scenenode name="Wolken" id="1999737952" factoryID="11" pluginUUID="EFCC7FE1-DE19-4D8C-A88F-A1A616C93962" pluginVersion="1" pluginName="Wolken" version="5">
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
-			<timing in="0 120000 1 0" out="2726724 120000 1 0" offset="688688 120000 1 0"/>
+			<timing in="0 120000 1 0" out="87255168 3840000 1 0" offset="688688 120000 1 0"/>
 			<foldFlags>1</foldFlags>
 			<baseFlags>524304</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -5080,7 +5080,7 @@
 				</parameter>
 			</parameter>
 			<filter name="Verpixeln" id="1999737958" factoryID="24" pluginUUID="5E7CA164-3AAF-4C70-A377-567E5796528A" pluginVersion="0" pluginName="Verpixeln" pluginDynamicParams="0">
-				<timing in="0 120000 1 0" out="2726724 120000 1 0" offset="0 120000 1 0"/>
+				<timing in="0 120000 1 0" out="87255168 3840000 1 0" offset="0 120000 1 0"/>
 				<baseFlags>8589934608</baseFlags>
 				<parameter name="Mitte" id="1" flags="12884905984">
 					<foldFlags>15</foldFlags>
@@ -5094,7 +5094,7 @@
 			<validTracks>1</validTracks>
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
-			<timing in="0 120000 1 0" out="2134132 120000 1 0" offset="0 120000 1 0"/>
+			<timing in="0 120000 1 0" out="68292224 3840000 1 0" offset="0 120000 1 0"/>
 			<foldFlags>16384</foldFlags>
 			<baseFlags>524304</baseFlags>
 			<enabled>0</enabled>
@@ -5124,7 +5124,7 @@
 		</scenenode>
 		<aspectRatio>1</aspectRatio>
 		<flags>0</flags>
-		<timing in="0 120000 1 0" out="2726724 120000 1 0" offset="0 1 1 0"/>
+		<timing in="0 120000 1 0" out="87255168 3840000 1 0" offset="0 1 1 0"/>
 		<foldFlags>1</foldFlags>
 		<baseFlags>524304</baseFlags>
 		<parameter name="Eigenschaften" id="1" flags="8589938704">
@@ -5158,7 +5158,7 @@
 			<creationDuration>1</creationDuration>
 			<mediaID></mediaID>
 			<flags>0</flags>
-			<timing in="0 1 1 0" out="0 120000 1 0" offset="0 1 1 0"/>
+			<timing in="0 1 1 0" out="0 153600 1 0" offset="0 1 1 0"/>
 			<foldFlags>0</foldFlags>
 			<baseFlags>524304</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704"/>
@@ -5197,7 +5197,7 @@
 			<creationDuration>1</creationDuration>
 			<mediaID></mediaID>
 			<flags>0</flags>
-			<timing in="0 1 1 0" out="0 120000 1 0" offset="0 1 1 0"/>
+			<timing in="0 1 1 0" out="0 153600 1 0" offset="0 1 1 0"/>
 			<foldFlags>0</foldFlags>
 			<baseFlags>524304</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704"/>
@@ -5228,7 +5228,7 @@
 			<creationDuration>1</creationDuration>
 			<mediaID></mediaID>
 			<flags>0</flags>
-			<timing in="0 1 1 0" out="0 120000 1 0" offset="0 1 1 0"/>
+			<timing in="0 1 1 0" out="0 153600 1 0" offset="0 1 1 0"/>
 			<foldFlags>0</foldFlags>
 			<baseFlags>524304</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704"/>
@@ -5259,7 +5259,7 @@
 			</parameter>
 		</clip>
 		<flags>0</flags>
-		<timing in="0 1 1 0" out="0 120000 1 0" offset="0 1 1 0"/>
+		<timing in="0 1 1 0" out="0 153600 1 0" offset="0 1 1 0"/>
 		<foldFlags>0</foldFlags>
 		<baseFlags>524304</baseFlags>
 		<parameter name="Eigenschaften" id="1" flags="8589938704"/>
