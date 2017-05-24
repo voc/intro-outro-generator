@@ -312,9 +312,9 @@
 	<publishSettings>
 		<version>2</version>
 	</publishSettings>
-	<currentFrame>350208 153600 1 0</currentFrame>
-	<currentObject>3000001209</currentObject>
-	<activeLayer>1998662577</activeLayer>
+	<currentFrame>270336 153600 1 0</currentFrame>
+	<currentObject>1825768938</currentObject>
+	<activeLayer>1999739049</activeLayer>
 	<timeRange offset="0 1 1 0" duration="1843200 153600 1 0"/>
 	<playRange offset="0 1 1 0" duration="1843200 153600 1 0"/>
 	<flags>1</flags>
@@ -339,7 +339,7 @@
 		<flags>0</flags>
 		<timing in="0 1 1 0" out="-128128 3840000 1 0" offset="0 1 1 0"/>
 		<foldFlags>0</foldFlags>
-		<baseFlags>16</baseFlags>
+		<baseFlags>268435473</baseFlags>
 		<parameter name="Eigenschaften" id="1" flags="8589938704"/>
 		<parameter name="Objekt" id="2" flags="8589938704"/>
 	</scenenode>
@@ -870,7 +870,7 @@
 				</parameter>
 				<parameter name="An Schnittmarken beschneiden" id="372" flags="8606744592" default="0" value="0"/>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="0">
-					<parameter name="Substanz" id="3000001151" flags="12884906002" factoryID="0">
+					<parameter name="Substanz" id="3000001547" flags="12884906002" factoryID="0">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -1086,7 +1086,7 @@
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
 			<timing in="1081344 153600 1 0" out="46124672 3840000 1 0" offset="1081344 153600 1 0"/>
-			<foldFlags>1</foldFlags>
+			<foldFlags>0</foldFlags>
 			<baseFlags>524304</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
 				<parameter name="Transformieren" id="100" flags="8589938704">
@@ -1290,7 +1290,7 @@
 					</parameter>
 				</parameter>
 				<parameter name="Ausgangsform" id="210" flags="77330448400" default="0" value="0"/>
-				<parameter name="Tempo" id="202" flags="8606777360" default="0" value="3"/>
+				<parameter name="Tempo" id="202" flags="8606777360" default="0" value="8"/>
 				<parameter name="Eigenes Tempo" id="204" flags="8606810128">
 					<curve type="1" default="0" value="0" round="0">
 						<numberOfKeypoints>3</numberOfKeypoints>
@@ -1394,7 +1394,7 @@
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
 			<timing in="577536 153600 1 0" out="33529472 3840000 1 0" offset="577536 153600 1 0"/>
-			<foldFlags>1</foldFlags>
+			<foldFlags>0</foldFlags>
 			<baseFlags>524368</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
 				<parameter name="Transformieren" id="100" flags="8589938704">
@@ -1598,7 +1598,7 @@
 					</parameter>
 				</parameter>
 				<parameter name="Ausgangsform" id="210" flags="77330448400" default="0" value="0"/>
-				<parameter name="Tempo" id="202" flags="8606777360" default="0" value="3"/>
+				<parameter name="Tempo" id="202" flags="8606777360" default="0" value="8"/>
 				<parameter name="Eigenes Tempo" id="204" flags="8606810128">
 					<curve type="1" default="0" value="0" round="0">
 						<numberOfKeypoints>3</numberOfKeypoints>
@@ -1636,7 +1636,7 @@
 		</layer>
 		<layer name="Plane" id="1825769356">
 			<scenenode name="plane" id="1825769357" factoryID="12" version="5">
-				<validTracks>0</validTracks>
+				<validTracks>1</validTracks>
 				<aspectRatio>1</aspectRatio>
 				<flags>0</flags>
 				<timing in="0 120000 1 0" out="19091072 3840000 1 0" offset="0 1 1 0"/>
@@ -1646,28 +1646,22 @@
 					<parameter name="Transformieren" id="100" flags="8589938705">
 						<parameter name="Position" id="101" flags="8589938704">
 							<foldFlags>15</foldFlags>
-							<parameter name="X" id="1" flags="8589934612" default="0" value="-36.305685796748904"/>
-							<parameter name="Y" id="2" flags="8589934612" default="0" value="16.299909513518301"/>
-							<parameter name="Z" id="3" flags="8589934612" default="0" value="0"/>
+							<parameter name="X" id="1" flags="8589934608" default="0" value="-36.305685796748904"/>
+							<parameter name="Y" id="2" flags="8589934608" default="0" value="16.299909513518301"/>
 						</parameter>
 						<parameter name="Rotation" id="109" flags="8589938704">
 							<foldFlags>15</foldFlags>
-							<parameter name="X" id="1" flags="8589934612" default="0" value="0"/>
-							<parameter name="Y" id="2" flags="8589934612" default="0" value="0"/>
-							<parameter name="Z" id="3" flags="8589934612" default="0" value="0.65855665154404508"/>
-							<parameter name="Animieren" id="4" flags="8590000148" default="0" value="0"/>
+							<parameter name="Z" id="3" flags="8589934608" default="0" value="0.65855665154404508"/>
 						</parameter>
 						<parameter name="Skalieren" id="105" flags="8589938704">
 							<foldFlags>15</foldFlags>
-							<parameter name="X" id="1" flags="8589934612" default="1" value="1.1216540211916604"/>
-							<parameter name="Y" id="2" flags="8589934612" default="1" value="1.1216540211916604"/>
-							<parameter name="Z" id="3" flags="8589934612" default="1" value="1"/>
+							<parameter name="X" id="1" flags="8589934608" default="1" value="1.1216540211916604"/>
+							<parameter name="Y" id="2" flags="8589934608" default="1" value="1.1216540211916604"/>
 						</parameter>
 						<parameter name="Ankerpunkt" id="107" flags="8589938704">
 							<foldFlags>15</foldFlags>
-							<parameter name="X" id="1" flags="12884901908" default="0.5" value="0.5"/>
-							<parameter name="Y" id="2" flags="12884901908" default="0.5" value="0.5"/>
-							<parameter name="Z" id="3" flags="8589934612" default="0" value="0"/>
+							<parameter name="X" id="1" flags="12884901904" default="0.5" value="0.5"/>
+							<parameter name="Y" id="2" flags="12884901904" default="0.5" value="0.5"/>
 						</parameter>
 					</parameter>
 					<parameter name="Beleuchtung" id="230" flags="8589938706">
@@ -1681,17 +1675,13 @@
 					</parameter>
 					<parameter name="Medien" id="324" flags="8589938705">
 						<foldFlags>4</foldFlags>
-						<parameter name="Ausgangsmedien" id="300" flags="81604444180" default="1825769354" value="1825769354"/>
+						<parameter name="Ausgangsmedien" id="300" flags="81604444176" default="1825769354" value="1825769354"/>
 						<parameter name="Ausgangsmedien" id="325" flags="8590000146"/>
 					</parameter>
-					<parameter name="Seitennummer" id="301" flags="8589934612" default="1" value="1"/>
-					<parameter name="Tempo" id="309" flags="8594194452" default="1" value="1"/>
-					<parameter name="Rückwärts" id="310" flags="8594194452" default="0" value="0"/>
 					<parameter name="Retime-Wert" id="304" flags="8590066066" default="1" value="1"/>
 					<parameter name="Retime-Wert-Cache" id="319" flags="8590065810" default="1" value="1"/>
 				</parameter>
 				<parameter name="Objekt" id="2" flags="8589938704">
-					<parameter name="Drop-Zone" id="311" flags="8589934740" default="0" value="0"/>
 					<parameter name="Breite" id="313" flags="8589934610" default="1" value="369"/>
 					<parameter name="Höhe" id="314" flags="8589934610" default="1" value="241"/>
 				</parameter>
@@ -1699,23 +1689,21 @@
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
 			<timing in="0 120000 1 0" out="19091072 3840000 1 0" offset="0 1 1 0"/>
-			<foldFlags>1</foldFlags>
+			<foldFlags>0</foldFlags>
 			<baseFlags>524304</baseFlags>
-			<locked>1</locked>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
 				<parameter name="Transformieren" id="100" flags="8589938704">
 					<parameter name="Position" id="101" flags="8589938704">
 						<foldFlags>15</foldFlags>
-						<parameter name="X" id="1" flags="8606711828" default="0" value="-1357.4990271705469"/>
-						<parameter name="Y" id="2" flags="8606711828" default="0" value="701.56028399772777"/>
-						<parameter name="Z" id="3" flags="8606711828" default="0" value="0"/>
+						<parameter name="X" id="1" flags="8606711824" default="0" value="-1357.4990271705469"/>
+						<parameter name="Y" id="2" flags="8606711824" default="0" value="701.56028399772777"/>
+						<parameter name="Z" id="3" flags="8606711824" default="0" value="0"/>
 					</parameter>
 					<parameter name="Rotation" id="109" flags="8589938704">
 						<foldFlags>15</foldFlags>
-						<parameter name="X" id="1" flags="8606711828" default="0" value="0"/>
-						<parameter name="Y" id="2" flags="8606711828" default="0" value="0"/>
-						<parameter name="Z" id="3" flags="8606711828" default="0" value="0"/>
-						<parameter name="Animieren" id="4" flags="8590000148" default="0" value="0"/>
+						<parameter name="X" id="1" flags="8606711824" default="0" value="0"/>
+						<parameter name="Y" id="2" flags="8606711824" default="0" value="0"/>
+						<parameter name="Z" id="3" flags="8606711824" default="0" value="0"/>
 					</parameter>
 				</parameter>
 				<parameter name="Beleuchtung" id="230" flags="8589938706">
@@ -1729,10 +1717,8 @@
 				</parameter>
 			</parameter>
 			<parameter name="Objekt" id="2" flags="8589938704">
-				<parameter name="Typ" id="307" flags="8590000148" default="0" value="0"/>
-				<parameter name="Feste Auflösung" id="301" flags="8589936660" default="0" value="0"/>
-				<parameter name="Feste Breite" id="302" flags="12901679124" default="1920" value="1920"/>
-				<parameter name="Feste Höhe" id="303" flags="12901679124" default="1080" value="1080"/>
+				<parameter name="Feste Breite" id="302" flags="12901679120" default="1920" value="1920"/>
+				<parameter name="Feste Höhe" id="303" flags="12901679120" default="1080" value="1080"/>
 				<parameter name="Reduzieren" id="311" flags="8589934610" default="0" value="0"/>
 				<parameter name="Reihenfolge der Ebenen" id="305" flags="8589934610" default="0" value="0"/>
 				<parameter name="Aperture Breite" id="312" flags="12884901906" default="1920" value="1920"/>
@@ -1907,7 +1893,7 @@
 					</parameter>
 				</parameter>
 				<parameter name="Ausgangsform" id="210" flags="77330448400" default="0" value="0"/>
-				<parameter name="Tempo" id="202" flags="8606777360" default="0" value="3"/>
+				<parameter name="Tempo" id="202" flags="8606777360" default="0" value="8"/>
 				<parameter name="Eigenes Tempo" id="204" flags="8606810128">
 					<curve type="1" default="0" value="0" round="0">
 						<numberOfKeypoints>3</numberOfKeypoints>
@@ -1978,14 +1964,14 @@
 	<layer name="Hintergrund" id="1998662577">
 		<scenenode name="BgLoop-Inframe" id="3000001209" factoryID="12" version="5">
 			<validTracks>1</validTracks>
-			<aspectRatio>0</aspectRatio>
+			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
 			<timing in="1689600 153600 1 0" out="1843200 153600 1 0" offset="620544 153600 1 0"/>
 			<foldFlags>16384</foldFlags>
-			<baseFlags>268959761</baseFlags>
+			<baseFlags>524304</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
 				<parameter name="Füllmethode" id="200" flags="8589938704">
-					<parameter name="Deckkraft" id="202" flags="8589934608">
+					<parameter name="Deckkraft" id="202" flags="8606711824">
 						<curve type="1" default="1" value="1">
 							<numberOfKeypoints>2</numberOfKeypoints>
 							<min>0</min>
@@ -2018,7 +2004,7 @@
 				</parameter>
 				<parameter name="Medien" id="324" flags="8589938704">
 					<foldFlags>4</foldFlags>
-					<parameter name="Ausgangsmedien" id="300" flags="81604444176" default="3000001097" value="3000001211"/>
+					<parameter name="Ausgangsmedien" id="300" flags="81621221392" default="3000001097" value="3000001211"/>
 					<parameter name="Ausgangsmedien" id="325" flags="8590000146"/>
 				</parameter>
 				<parameter name="Seitennummer" id="301" flags="8589934610" default="1" value="1"/>
