@@ -66,6 +66,27 @@ def outroFrames(p):
     for i in range(0, frames):
         yield []
 
+def backgroundFrames(parameters):
+    frames = 25*3
+    for i in range(0, frames):
+        yield (
+            ('pause', 'attr', 'flood-opacity', '%.4f' % bounce(i, 0.0, 1.0, frames)),
+        )
+
+    frames = 25*1
+    for i in range(0, frames):
+        yield (
+            ('glowFlood', 'attr', 'flood-opacity', '%.4f' % 0),
+            )
+
+        frames = 20*fps
+        for i in range(0, frames):
+            xshift = 300 - ((i+1) * (300/frames))
+            yshift = 150 - ((i+1) * (150/frames))
+            yield(
+                        ('pillgroup', 'attr', 'transform', 'translate(%.4f, %.4f)' % (xshift, yshift)),
+            )
+
 def debug():
     render(
       'intro.svg',
