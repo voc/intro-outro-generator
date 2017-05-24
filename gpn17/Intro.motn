@@ -327,7 +327,7 @@
 		<version>2</version>
 	</publishSettings>
 	<currentFrame>1309308 120000 1 0</currentFrame>
-	<currentObject>1999735165</currentObject>
+	<currentObject>1999737308</currentObject>
 	<activeLayer>1999734643</activeLayer>
 	<timeRange offset="0 1 1 0" duration="2042040 120000 1 0"/>
 	<playRange offset="0 1 1 0" duration="2042040 120000 1 0"/>
@@ -1555,12 +1555,147 @@
 					</parameter>
 				</parameter>
 			</style>
-			<styleRun style="1999737325" offset="0" length="8"/>
+			<style name="Stil 1" id="1999738799" factoryID="2">
+				<copyFlags>65535</copyFlags>
+				<previewWidth>0</previewWidth>
+				<previewHeight>0</previewHeight>
+				<presetName>Normal</presetName>
+				<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<baseFlags>8657043504</baseFlags>
+				<foldFlags>786432</foldFlags>
+				<parameter name="Schrift" id="83" flags="12884906000">
+					<font>RussoOne</font>
+					<defaultFont>Helvetica</defaultFont>
+				</parameter>
+				<parameter name="Größe" id="3" flags="8606711824" default="48" value="54"/>
+				<parameter name="Stil" id="14" flags="8589938704">
+					<foldFlags>131072</foldFlags>
+					<parameter name="Farbe" id="16" flags="8589938704">
+						<foldFlags>15</foldFlags>
+						<parameter name="Rot" id="1" flags="8606711824" default="1" value="0"/>
+						<parameter name="Grün" id="2" flags="8606711824" default="1" value="0"/>
+						<parameter name="Blau" id="3" flags="8606711824" default="1" value="0"/>
+					</parameter>
+					<parameter name="Struktur" id="18" flags="77313609744">
+						<parameter name="Bild" id="1" flags="77326254096" default="0" value="0"/>
+						<parameter name="Randmodus" id="5" flags="8606777360" default="0" value="1"/>
+					</parameter>
+					<parameter name="Ausgangsmedien" id="85" flags="8590000146"/>
+				</parameter>
+				<parameter name="Schattenwurf" id="21" flags="8589971472">
+					<foldFlags>131072</foldFlags>
+					<parameter name="Struktur" id="25" flags="77313609744">
+						<parameter name="Bild" id="1" flags="77326254096" default="0" value="0"/>
+						<parameter name="Randmodus" id="5" flags="8606777360" default="0" value="1"/>
+					</parameter>
+					<parameter name="Ausgangsmedien" id="88" flags="8590000146"/>
+				</parameter>
+				<parameter name="Kontur" id="30" flags="8589971472">
+					<foldFlags>131072</foldFlags>
+					<parameter name="Struktur" id="34" flags="77313609744">
+						<parameter name="Bild" id="1" flags="77326254096" default="0" value="0"/>
+						<parameter name="Randmodus" id="5" flags="8606777360" default="0" value="1"/>
+					</parameter>
+					<parameter name="Ausgangsmedien" id="86" flags="8590000146"/>
+				</parameter>
+				<parameter name="Glühen" id="38" flags="8589973520">
+					<foldFlags>131072</foldFlags>
+					<parameter name="Farbe" id="40" flags="8589938704">
+						<foldFlags>15</foldFlags>
+						<parameter name="Rot" id="1" flags="8606711824" default="1" value="0.31799882650375366"/>
+						<parameter name="Grün" id="2" flags="8606711824" default="0.8784313725490196" value="0.31799882650375366"/>
+						<parameter name="Blau" id="3" flags="8606711824" default="0.2627450980392157" value="0.31799882650375366"/>
+					</parameter>
+					<parameter name="Struktur" id="42" flags="77313609744">
+						<parameter name="Bild" id="1" flags="77326254096" default="0" value="0"/>
+						<parameter name="Randmodus" id="5" flags="8606777360" default="0" value="1"/>
+					</parameter>
+					<parameter name="Ausgangsmedien" id="87" flags="8590000146"/>
+				</parameter>
+				<parameter name="3D-Text" id="89" flags="8589971472">
+					<foldFlags>131072</foldFlags>
+					<parameter name="Beleuchtung" id="527" flags="8594133008">
+						<foldFlags>8388608</foldFlags>
+						<parameter name="Umgebung" id="512" flags="12884906000">
+							<foldFlags>131076</foldFlags>
+						</parameter>
+					</parameter>
+				</parameter>
+			</style>
+			<style name="Stil" id="1999738801" factoryID="2">
+				<copyFlags>65535</copyFlags>
+				<previewWidth>0</previewWidth>
+				<previewHeight>0</previewHeight>
+				<presetName>Normal</presetName>
+				<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
+				<baseFlags>8657043504</baseFlags>
+				<foldFlags>786432</foldFlags>
+				<parameter name="Schrift" id="83" flags="12884906000">
+					<font>RussoOne</font>
+					<defaultFont>Helvetica</defaultFont>
+				</parameter>
+				<parameter name="Größe" id="3" flags="8606711824" default="48" value="54"/>
+				<parameter name="Stil" id="14" flags="8589938704">
+					<foldFlags>131072</foldFlags>
+					<parameter name="Farbe" id="16" flags="8589938704">
+						<foldFlags>15</foldFlags>
+						<parameter name="Rot" id="1" flags="8606711824" default="1" value="0"/>
+						<parameter name="Grün" id="2" flags="8606711824" default="1" value="0"/>
+						<parameter name="Blau" id="3" flags="8606711824" default="1" value="0"/>
+					</parameter>
+					<parameter name="Struktur" id="18" flags="77313609744">
+						<parameter name="Bild" id="1" flags="77326254096" default="0" value="0"/>
+						<parameter name="Randmodus" id="5" flags="8606777360" default="0" value="1"/>
+					</parameter>
+					<parameter name="Ausgangsmedien" id="85" flags="8590000146"/>
+				</parameter>
+				<parameter name="Schattenwurf" id="21" flags="8589971472">
+					<foldFlags>131072</foldFlags>
+					<parameter name="Struktur" id="25" flags="77313609744">
+						<parameter name="Bild" id="1" flags="77326254096" default="0" value="0"/>
+						<parameter name="Randmodus" id="5" flags="8606777360" default="0" value="1"/>
+					</parameter>
+					<parameter name="Ausgangsmedien" id="88" flags="8590000146"/>
+				</parameter>
+				<parameter name="Kontur" id="30" flags="8589971472">
+					<foldFlags>131072</foldFlags>
+					<parameter name="Struktur" id="34" flags="77313609744">
+						<parameter name="Bild" id="1" flags="77326254096" default="0" value="0"/>
+						<parameter name="Randmodus" id="5" flags="8606777360" default="0" value="1"/>
+					</parameter>
+					<parameter name="Ausgangsmedien" id="86" flags="8590000146"/>
+				</parameter>
+				<parameter name="Glühen" id="38" flags="8589973520">
+					<foldFlags>131072</foldFlags>
+					<parameter name="Farbe" id="40" flags="8589938704">
+						<foldFlags>15</foldFlags>
+						<parameter name="Rot" id="1" flags="8606711824" default="1" value="0.31799882650375366"/>
+						<parameter name="Grün" id="2" flags="8606711824" default="0.8784313725490196" value="0.31799882650375366"/>
+						<parameter name="Blau" id="3" flags="8606711824" default="0.2627450980392157" value="0.31799882650375366"/>
+					</parameter>
+					<parameter name="Struktur" id="42" flags="77313609744">
+						<parameter name="Bild" id="1" flags="77326254096" default="0" value="0"/>
+						<parameter name="Randmodus" id="5" flags="8606777360" default="0" value="1"/>
+					</parameter>
+					<parameter name="Ausgangsmedien" id="87" flags="8590000146"/>
+				</parameter>
+				<parameter name="3D-Text" id="89" flags="8589971472">
+					<foldFlags>131072</foldFlags>
+					<parameter name="Beleuchtung" id="527" flags="8594133008">
+						<foldFlags>8388608</foldFlags>
+						<parameter name="Umgebung" id="512" flags="12884906000">
+							<foldFlags>131076</foldFlags>
+						</parameter>
+					</parameter>
+				</parameter>
+			</style>
+			<styleRun style="1999737325" offset="0" length="1"/>
+			<styleRun style="1999738801" offset="1" length="11"/>
 			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
 			<timing in="680680 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
 			<foldFlags>1</foldFlags>
-			<baseFlags>34078736</baseFlags>
+			<baseFlags>34078737</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
 				<parameter name="Transformieren" id="100" flags="8589938704">
 					<parameter name="Position" id="101" flags="8589938704">
@@ -1590,7 +1725,7 @@
 			</parameter>
 			<parameter name="Objekt" id="2" flags="8589938704">
 				<parameter name="Text" id="369" flags="8606777344">
-					<text>$persons</text>
+					<text>$personnames</text>
 				</parameter>
 				<parameter name="Text rendern" id="360" flags="8590000146" default="0" value="0"/>
 				<parameter name="Zur Kamera" id="352" flags="8589934610" default="0" value="0"/>
@@ -1604,7 +1739,7 @@
 				</parameter>
 				<parameter name="An Schnittmarken beschneiden" id="372" flags="8606744592" default="0" value="0"/>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738634" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999738689" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -1727,7 +1862,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738634" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999738689" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -1849,7 +1984,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738634" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999738689" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -2377,7 +2512,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738634" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999738689" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -2489,7 +2624,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738634" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999738689" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -2973,7 +3108,7 @@
 			<flags>0</flags>
 			<timing in="792792 120000 1 0" out="1877876 120000 1 0" offset="680680 120000 1 0"/>
 			<foldFlags>0</foldFlags>
-			<baseFlags>34078801</baseFlags>
+			<baseFlags>34078800</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
 				<parameter name="Transformieren" id="100" flags="8589938704">
 					<parameter name="Position" id="101" flags="8589938704">
@@ -3017,7 +3152,7 @@
 				</parameter>
 				<parameter name="An Schnittmarken beschneiden" id="372" flags="8606744592" default="0" value="0"/>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738684" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999738739" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3140,7 +3275,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738684" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999738739" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3263,7 +3398,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738684" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999738739" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3765,7 +3900,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738684" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999738739" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3869,7 +4004,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738684" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999738739" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
