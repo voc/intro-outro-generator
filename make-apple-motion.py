@@ -40,11 +40,14 @@ parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, hel
 
 args = parser.parse_args()
 
-def error(str):
+def headline(str):
 	print("##################################################")
 	print(str)
 	print("##################################################")
 	print()
+
+def error(str):
+	headline(str)
 	parser.print_help()
 	sys.exit(1)
 
@@ -66,7 +69,7 @@ if args.debug:
 	}]
 
 else:
-	events = renderlib.events(args.schedule)
+	events = list(renderlib.events(args.schedule))
 
 def run_check(command, **kwargs):
 	args = {}
@@ -120,10 +123,16 @@ def render(event):
 
 
 
+n = len(events)
+i = 0
 for event in events:
+	i = i + 1
 	if args.ids and event['id'] not in args.ids:
 		continue
 
-	print("rendering", event)
+	headline("rendering {i}/{n}: #{id}: {title}".format(
+		i=i, n=n,
+		id=event['id'],
+		title=event['title']))
 	render(event)
 
