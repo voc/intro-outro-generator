@@ -184,7 +184,7 @@ def finalize_job(job_id, event):
 
 active_jobs = []
 
-print("enqueuing jobs into compressor")
+print("enqueuing {} jobs into compressor", len(events))
 for event in events:
 	if args.ids and event['id'] not in args.ids:
 		continue

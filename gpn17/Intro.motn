@@ -202,7 +202,7 @@
 	<oscOptions>30</oscOptions>
 	<compensateAspectRatio>1</compensateAspectRatio>
 	<renderFields>0</renderFields>
-	<showMotionBlur>0</showMotionBlur>
+	<showMotionBlur>1</showMotionBlur>
 	<showFrameBlending>1</showFrameBlending>
 	<showLighting>1</showLighting>
 	<showShadows>1</showShadows>
@@ -253,7 +253,7 @@
 	<displayEffects>1</displayEffects>
 	<videoVerticalZoom>1.1111111111111112</videoVerticalZoom>
 	<audioVerticalZoom>1</audioVerticalZoom>
-	<displayRange in="-167566399 191679000 1 0" out="3359121766 191679000 1 0"/>
+	<displayRange in="-8041 9000 3 0" out="161194 9000 3 0"/>
 </timeline>
 
 <curveeditor>
@@ -261,8 +261,8 @@
 	<snapping>0</snapping>
 	<displayAudioWaveform>0</displayAudioWaveform>
 	<lockKeyframesInTime>0</lockKeyframesInTime>
-	<displayRange in="-167566399 191679000 1 0" out="3359121766 191679000 1 0"/>
-	<currentviewvolume originx="-0.87420321996671524" originy="-62.5" width="18.398928234183192" height="125"/>
+	<displayRange in="-8041 9000 3 0" out="161194 9000 3 0"/>
+	<currentviewvolume originx="-0.89344444444444449" originy="-62.5" width="18.803888888888888" height="125"/>
 	<snapshotChannels>0</snapshotChannels>
 </curveeditor>
 
@@ -290,7 +290,7 @@
 		<audioBitsPerSample>32</audioBitsPerSample>
 		<fieldRenderingMode>0</fieldRenderingMode>
 		<motionBlurSamples>8</motionBlurSamples>
-		<motionBlurDuration>1</motionBlurDuration>
+		<motionBlurDuration>0.5</motionBlurDuration>
 		<sharpScaling>0</sharpScaling>
 		<startTimecode>0</startTimecode>
 		<presetPath>/Applications/Motion.app/Contents/Resources/German.lproj/Presets/Project/Broadcast HD 1080.preset</presetPath>
@@ -326,7 +326,7 @@
 	<publishSettings>
 		<version>2</version>
 	</publishSettings>
-	<currentFrame>1499136 153600 1 0</currentFrame>
+	<currentFrame>417792 153600 1 0</currentFrame>
 	<currentObject>1825768938</currentObject>
 	<activeLayer>1999734643</activeLayer>
 	<timeRange offset="0 1 1 0" duration="2042040 120000 1 0"/>
@@ -1220,7 +1220,7 @@
 				</parameter>
 			</style>
 			<styleRun style="1999739346" offset="0" length="5"/>
-			<aspectRatio>0</aspectRatio>
+			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
 			<timing in="878592 153600 1 0" out="59815680 3840000 1 0" offset="878592 153600 1 0"/>
 			<foldFlags>0</foldFlags>
@@ -1269,7 +1269,7 @@
 				<parameter name="Autom. verkleinern" id="370" flags="8590032912" default="0" value="0"/>
 				<parameter name="An Schnittmarken beschneiden" id="372" flags="8589967376" default="0" value="0"/>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999738597" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739654" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -1390,8 +1390,8 @@
 					<parameter name="" id="228" flags="8589934610" default="1" value="0"/>
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
-				<parameter name="Standard" id="2000" flags="12884938774" factoryID="1">
-					<parameter name="Substanz" id="1999738597" flags="12884906002" factoryID="27">
+				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
+					<parameter name="Substanz" id="1999739654" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -1987,7 +1987,7 @@
 				</parameter>
 				<parameter name="An Schnittmarken beschneiden" id="372" flags="8606744592" default="0" value="0"/>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999739220" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739664" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -2110,7 +2110,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999739220" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739664" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -2232,7 +2232,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999739220" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739664" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -2760,7 +2760,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999739220" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739664" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -2872,7 +2872,7 @@
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999739220" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739664" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3400,7 +3400,7 @@
 				</parameter>
 				<parameter name="An Schnittmarken beschneiden" id="372" flags="8606744592" default="0" value="0"/>
 				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
-					<parameter name="Substanz" id="1999739286" flags="12884906002" factoryID="27">
+					<parameter name="Substanz" id="1999739730" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3522,8 +3522,8 @@
 					<parameter name="" id="228" flags="8589934610" default="1" value="0"/>
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
-				<parameter name="Standard" id="2000" flags="12884938774" factoryID="1">
-					<parameter name="Substanz" id="1999739286" flags="12884906002" factoryID="27">
+				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
+					<parameter name="Substanz" id="1999739730" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -3644,8 +3644,8 @@
 					<parameter name="" id="228" flags="8589934610" default="1" value="0"/>
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
-				<parameter name="Standard" id="2000" flags="12884938774" factoryID="1">
-					<parameter name="Substanz" id="1999739286" flags="12884906002" factoryID="27">
+				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
+					<parameter name="Substanz" id="1999739730" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -4146,8 +4146,8 @@
 					<parameter name="" id="228" flags="8589934610" default="1" value="0"/>
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
-				<parameter name="Standard" id="2000" flags="12884938774" factoryID="1">
-					<parameter name="Substanz" id="1999739286" flags="12884906002" factoryID="27">
+				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
+					<parameter name="Substanz" id="1999739730" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
@@ -4204,6 +4204,8 @@
 						</parameter>
 					</parameter>
 				</parameter>
+				<parameter name="Stil" id="1007" flags="8589971474"/>
+				<parameter name="Kontur" id="1011" flags="8589971474"/>
 				<parameter name="Glühen" id="1016" flags="8589971474"/>
 				<parameter name="Schattenwurf" id="1020" flags="8589971474"/>
 				<parameter name="Steuerung" id="201" flags="8589938705">
@@ -4248,8 +4250,8 @@
 					<parameter name="" id="228" flags="8589934610" default="1" value="0"/>
 					<parameter name="" id="236" flags="8589934610" default="1" value="0"/>
 				</parameter>
-				<parameter name="Standard" id="2000" flags="12884938774" factoryID="1">
-					<parameter name="Substanz" id="1999739286" flags="12884906002" factoryID="27">
+				<parameter name="Standard" id="2000" flags="12884938770" factoryID="1">
+					<parameter name="Substanz" id="1999739730" flags="12884906002" factoryID="27">
 						<parameter name="Farbe" id="1" flags="4295004162">
 							<foldFlags>15</foldFlags>
 						</parameter>
