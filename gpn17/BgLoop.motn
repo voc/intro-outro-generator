@@ -114,7 +114,7 @@
 	<show3DIntersectionAntialiasing>1</show3DIntersectionAntialiasing>
 	<cameraType>0</cameraType>
 	<cameraName>Aktive Kamera</cameraName>
-	<panZoom camera="0" zoom="0.4453703761100769" panX="152" panY="5.0445397559360572" mode="2" centered="0"/>
+	<panZoom camera="0" zoom="0.86296296119689941" panX="148" panY="5" mode="2" centered="1"/>
 </viewer>
 
 <projectPanel>
@@ -151,7 +151,7 @@
 	<displayEffects>1</displayEffects>
 	<videoVerticalZoom>1.1666666666666667</videoVerticalZoom>
 	<audioVerticalZoom>1</audioVerticalZoom>
-	<displayRange in="-908046351 1118164062 3 0" out="20812086868 1000000000 3 0"/>
+	<displayRange in="-860 819 3 0" out="17240 819 3 0"/>
 </timeline>
 
 <curveeditor>
@@ -159,8 +159,8 @@
 	<snapping>0</snapping>
 	<displayAudioWaveform>0</displayAudioWaveform>
 	<lockKeyframesInTime>0</lockKeyframesInTime>
-	<displayRange in="-908046351 1118164062 3 0" out="20812086868 1000000000 3 0"/>
-	<currentviewvolume originx="-0.81208686798234797" originy="-62.5" width="21.624173735999999" height="125"/>
+	<displayRange in="-860 819 3 0" out="17240 819 3 0"/>
+	<currentviewvolume originx="-1.0500610500610501" originy="-62.5" width="22.1001221001221" height="125"/>
 	<snapshotChannels>0</snapshotChannels>
 </curveeditor>
 
@@ -224,9 +224,9 @@
 	<publishSettings>
 		<version>2</version>
 	</publishSettings>
-	<currentFrame>116736 153600 1 0</currentFrame>
-	<currentObject>3000001099</currentObject>
-	<activeLayer>1998662577</activeLayer>
+	<currentFrame>405504 153600 1 0</currentFrame>
+	<currentObject>3000001113</currentObject>
+	<activeLayer>3000001113</activeLayer>
 	<timeRange offset="0 1 1 0" duration="3072000 153600 1 0"/>
 	<playRange offset="0 1 1 0" duration="76800000 3840000 1 0"/>
 	<flags>1</flags>
@@ -261,6 +261,116 @@
 		<parameter name="Eigenschaften" id="1" flags="8589938704"/>
 		<parameter name="Objekt" id="2" flags="8589938704"/>
 	</scenenode>
+	<layer name="Gruppe 1" id="3000001113">
+		<scenenode name="plane" id="3000001116" factoryID="8" version="5">
+			<numberOfPages>1</numberOfPages>
+			<validTracks>1</validTracks>
+			<aspectRatio>0</aspectRatio>
+			<flags>0</flags>
+			<timing in="0 153600 1 0" out="3072000 153600 1 0" offset="-12288 153600 1 0"/>
+			<foldFlags>16384</foldFlags>
+			<baseFlags>524304</baseFlags>
+			<parameter name="Eigenschaften" id="1" flags="8589938704">
+				<parameter name="Transformieren" id="100" flags="8589938704">
+					<parameter name="Position" id="101" flags="8589938704">
+						<foldFlags>15</foldFlags>
+						<parameter name="Y" id="2" flags="8589934608" default="0" value="211.28151702878264"/>
+					</parameter>
+					<parameter name="Ankerpunkt" id="107" flags="8589938704">
+						<foldFlags>15</foldFlags>
+						<parameter name="X" id="1" flags="12884901904" default="0.5" value="0.5"/>
+						<parameter name="Y" id="2" flags="12884901904" default="0.5" value="0.5"/>
+					</parameter>
+				</parameter>
+				<parameter name="Beleuchtung" id="230" flags="8589938706">
+					<foldFlags>15</foldFlags>
+				</parameter>
+				<parameter name="Schatten" id="234" flags="8589938706">
+					<foldFlags>15</foldFlags>
+				</parameter>
+				<parameter name="Reflexion" id="223" flags="8589971474">
+					<foldFlags>131087</foldFlags>
+				</parameter>
+				<parameter name="Medien" id="324" flags="8589938704">
+					<foldFlags>4</foldFlags>
+					<parameter name="Ausgangsmedien" id="300" flags="81604444176" default="3000001115" value="3000001115"/>
+					<parameter name="Ausgangsmedien" id="325" flags="8590000146"/>
+				</parameter>
+				<parameter name="Retime-Wert" id="304" flags="8590066066" default="1" value="1"/>
+				<parameter name="Retime-Wert-Cache" id="319" flags="8590065810" default="1" value="1"/>
+			</parameter>
+			<parameter name="Objekt" id="2" flags="8589938704">
+				<parameter name="Breite" id="313" flags="8589934610" default="1" value="369"/>
+				<parameter name="Höhe" id="314" flags="8589934610" default="1" value="241"/>
+			</parameter>
+		</scenenode>
+		<scenenode name="plane-shadow" id="3000001114" factoryID="8" version="5">
+			<numberOfPages>1</numberOfPages>
+			<validTracks>1</validTracks>
+			<aspectRatio>0</aspectRatio>
+			<flags>0</flags>
+			<timing in="0 153600 1 0" out="3072000 153600 1 0" offset="-12288 153600 1 0"/>
+			<foldFlags>16384</foldFlags>
+			<baseFlags>524304</baseFlags>
+			<parameter name="Eigenschaften" id="1" flags="8589938704">
+				<parameter name="Beleuchtung" id="230" flags="8589938706">
+					<foldFlags>15</foldFlags>
+				</parameter>
+				<parameter name="Schatten" id="234" flags="8589938706">
+					<foldFlags>15</foldFlags>
+				</parameter>
+				<parameter name="Reflexion" id="223" flags="8589971474">
+					<foldFlags>131087</foldFlags>
+				</parameter>
+				<parameter name="Medien" id="324" flags="8589938704">
+					<parameter name="Ausgangsmedien" id="300" flags="81604444176" default="3000001112" value="3000001112"/>
+					<parameter name="Ausgangsmedien" id="325" flags="8590000146"/>
+				</parameter>
+				<parameter name="Retime-Wert" id="304" flags="8590066066" default="1" value="1"/>
+				<parameter name="Retime-Wert-Cache" id="319" flags="8590065810" default="1" value="1"/>
+			</parameter>
+			<parameter name="Objekt" id="2" flags="8589938704">
+				<parameter name="Breite" id="313" flags="8589934610" default="1" value="416"/>
+				<parameter name="Höhe" id="314" flags="8589934610" default="1" value="240"/>
+			</parameter>
+		</scenenode>
+		<aspectRatio>1</aspectRatio>
+		<flags>0</flags>
+		<timing in="0 153600 1 0" out="3072000 153600 1 0" offset="-12288 153600 1 0"/>
+		<foldFlags>0</foldFlags>
+		<baseFlags>268959761</baseFlags>
+		<parameter name="Eigenschaften" id="1" flags="8589938704">
+			<parameter name="Transformieren" id="100" flags="8589938704">
+				<parameter name="Position" id="101" flags="8589938704">
+					<foldFlags>15</foldFlags>
+					<parameter name="X" id="1" flags="8589934608" default="0" value="848.57532262802147"/>
+					<parameter name="Y" id="2" flags="8589934608" default="0" value="392.97746276855503"/>
+				</parameter>
+				<parameter name="Skalieren" id="105" flags="8589938704">
+					<foldFlags>15</foldFlags>
+					<parameter name="X" id="1" flags="8589934608" default="1" value="0.36559279499938052"/>
+					<parameter name="Y" id="2" flags="8589934608" default="1" value="0.36559279499938052"/>
+				</parameter>
+			</parameter>
+			<parameter name="Beleuchtung" id="230" flags="8589938706">
+				<foldFlags>15</foldFlags>
+			</parameter>
+			<parameter name="Schatten" id="234" flags="8589938706">
+				<foldFlags>15</foldFlags>
+			</parameter>
+			<parameter name="Reflexion" id="223" flags="8589971474">
+				<foldFlags>131087</foldFlags>
+			</parameter>
+		</parameter>
+		<parameter name="Objekt" id="2" flags="8589938704">
+			<parameter name="Feste Breite" id="302" flags="12884901908" default="1920" value="1920"/>
+			<parameter name="Feste Höhe" id="303" flags="12884901908" default="1080" value="1080"/>
+			<parameter name="Reduzieren" id="311" flags="8589934610" default="0" value="0"/>
+			<parameter name="Reihenfolge der Ebenen" id="305" flags="8589934610" default="0" value="0"/>
+			<parameter name="Aperture Breite" id="312" flags="12884901906" default="1920" value="1920"/>
+			<parameter name="Aperture Höhe" id="313" flags="12884901906" default="1080" value="1080"/>
+		</parameter>
+	</layer>
 	<layer name="Gruppe" id="3000001098">
 		<aspectRatio>1</aspectRatio>
 		<flags>0</flags>
@@ -290,14 +400,14 @@
 	<layer name="Hintergrund" id="1998662577">
 		<scenenode name="BgLoop-Inframe" id="3000001099" factoryID="8" version="5">
 			<validTracks>1</validTracks>
-			<aspectRatio>0</aspectRatio>
+			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
 			<timing in="2304000 153600 1 0" out="3065856 153600 1 0" offset="1843200 153600 1 0"/>
 			<foldFlags>16384</foldFlags>
-			<baseFlags>268959761</baseFlags>
+			<baseFlags>524304</baseFlags>
 			<parameter name="Eigenschaften" id="1" flags="8589938704">
 				<parameter name="Füllmethode" id="200" flags="8589938704">
-					<parameter name="Deckkraft" id="202" flags="8589934608">
+					<parameter name="Deckkraft" id="202" flags="8606711824">
 						<curve type="1" default="1" value="1">
 							<numberOfKeypoints>2</numberOfKeypoints>
 							<min>0</min>
@@ -330,7 +440,7 @@
 				</parameter>
 				<parameter name="Medien" id="324" flags="8589938704">
 					<foldFlags>4</foldFlags>
-					<parameter name="Ausgangsmedien" id="300" flags="81604444176" default="3000001097" value="3000001097"/>
+					<parameter name="Ausgangsmedien" id="300" flags="81621221392" default="3000001097" value="3000001097"/>
 					<parameter name="Ausgangsmedien" id="325" flags="8590000146"/>
 				</parameter>
 				<parameter name="Seitennummer" id="301" flags="8589934610" default="1" value="1"/>
@@ -572,6 +682,84 @@
 	</layer>
 
 	<footage name="Medienebene" id="1825769355">
+		<clip name="plane" id="3000001115">
+			<pathURL>file:///Users/pkoerner/VOC/intro-outro-generator/gpn17/plane.pdf</pathURL>
+			<relativeURL>plane.pdf</relativeURL>
+			<missingWidth>369</missingWidth>
+			<missingHeight>241</missingHeight>
+			<missingDuration>0.033333333333333333</missingDuration>
+			<creationDuration>1</creationDuration>
+			<mediaID></mediaID>
+			<flags>0</flags>
+			<timing in="0 1 1 0" out="0 153600 1 0" offset="0 1 1 0"/>
+			<foldFlags>0</foldFlags>
+			<baseFlags>524304</baseFlags>
+			<parameter name="Eigenschaften" id="1" flags="8589938704"/>
+			<parameter name="Objekt" id="2" flags="8589938704">
+				<parameter name="Alpha-Typ" id="100" flags="8589938706">
+					<parameter name="Alpha-Typ" id="101" flags="8590000130" default="0" value="2"/>
+					<parameter name="Alpha-Farbe" id="102" flags="8589938690">
+						<foldFlags>15</foldFlags>
+					</parameter>
+				</parameter>
+				<parameter name="Alpha invertieren" id="103" flags="8589934594" default="0" value="0"/>
+				<parameter name="Pixelformat" id="104" flags="12884901888" default="1" value="1"/>
+				<parameter name="Halbbilddominanz" id="105" flags="8590000130" default="0" value="0"/>
+				<parameter name="3:2-Pulldown" id="106" flags="8590000130" default="0" value="0"/>
+				<parameter name="Bildrate" id="107" flags="8589934594" default="0" value="30"/>
+				<parameter name="Feste Auflösung" id="113" flags="8589934592" default="1" value="1"/>
+				<parameter name="Feste Breite" id="114" flags="12884901888" default="369" value="369"/>
+				<parameter name="Feste Höhe" id="115" flags="12884901888" default="241" value="241"/>
+				<parameter name="Hintergrundfarbe" id="117" flags="8589971456">
+					<foldFlags>15</foldFlags>
+					<parameter name="Rot" id="1" flags="8589967376" default="1" value="1"/>
+					<parameter name="Grün" id="2" flags="8589967376" default="1" value="1"/>
+					<parameter name="Blau" id="3" flags="8589967376" default="1" value="1"/>
+				</parameter>
+				<parameter name="Gamma" id="124" flags="8589934594" default="1" value="1"/>
+				<parameter name="Farbraum überschreiben" id="101" flags="8590000130" default="0" value="0"/>
+				<parameter name="Missing Is Still" id="128" flags="8589934610" default="0" value="1"/>
+			</parameter>
+		</clip>
+		<clip name="plane-shadow" id="3000001112">
+			<pathURL>file:///Users/pkoerner/VOC/intro-outro-generator/gpn17/plane-shadow.pdf</pathURL>
+			<relativeURL>plane-shadow.pdf</relativeURL>
+			<missingWidth>416</missingWidth>
+			<missingHeight>240</missingHeight>
+			<missingDuration>0.033333333333333333</missingDuration>
+			<creationDuration>1</creationDuration>
+			<mediaID></mediaID>
+			<flags>0</flags>
+			<timing in="0 1 1 0" out="0 153600 1 0" offset="0 1 1 0"/>
+			<foldFlags>0</foldFlags>
+			<baseFlags>524304</baseFlags>
+			<parameter name="Eigenschaften" id="1" flags="8589938704"/>
+			<parameter name="Objekt" id="2" flags="8589938704">
+				<parameter name="Alpha-Typ" id="100" flags="8589938706">
+					<parameter name="Alpha-Typ" id="101" flags="8590000130" default="0" value="2"/>
+					<parameter name="Alpha-Farbe" id="102" flags="8589938690">
+						<foldFlags>15</foldFlags>
+					</parameter>
+				</parameter>
+				<parameter name="Alpha invertieren" id="103" flags="8589934594" default="0" value="0"/>
+				<parameter name="Pixelformat" id="104" flags="12884901888" default="1" value="1"/>
+				<parameter name="Halbbilddominanz" id="105" flags="8590000130" default="0" value="0"/>
+				<parameter name="3:2-Pulldown" id="106" flags="8590000130" default="0" value="0"/>
+				<parameter name="Bildrate" id="107" flags="8589934594" default="0" value="30"/>
+				<parameter name="Feste Auflösung" id="113" flags="8589934592" default="1" value="1"/>
+				<parameter name="Feste Breite" id="114" flags="12884901888" default="416" value="416"/>
+				<parameter name="Feste Höhe" id="115" flags="12884901888" default="240" value="240"/>
+				<parameter name="Hintergrundfarbe" id="117" flags="8589971456">
+					<foldFlags>15</foldFlags>
+					<parameter name="Rot" id="1" flags="8589967376" default="1" value="1"/>
+					<parameter name="Grün" id="2" flags="8589967376" default="1" value="1"/>
+					<parameter name="Blau" id="3" flags="8589967376" default="1" value="1"/>
+				</parameter>
+				<parameter name="Gamma" id="124" flags="8589934594" default="1" value="1"/>
+				<parameter name="Farbraum überschreiben" id="101" flags="8590000130" default="0" value="0"/>
+				<parameter name="Missing Is Still" id="128" flags="8589934610" default="0" value="1"/>
+			</parameter>
+		</clip>
 		<clip name="BgLoop-Inframe" id="3000001097">
 			<pathURL>file:///Users/pkoerner/VOC/intro-outro-generator/gpn17/BgLoop-Inframe.png</pathURL>
 			<relativeURL>BgLoop-Inframe.png</relativeURL>
