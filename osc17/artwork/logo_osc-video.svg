@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="logo_osc-video.svg"
-   inkscape:export-filename="/home/tbro/git/osc-video/artwork/logo_osc-video_preview.png"
+   inkscape:export-filename="/home/tbro/git/voc/intro-outro-generator/osc17/artwork/logo_osc-video_preview.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="607.42465"
-     inkscape:cy="900.36414"
+     inkscape:zoom="0.49497474"
+     inkscape:cx="545.03463"
+     inkscape:cy="432.91305"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -129,19 +129,6 @@
          id="flowPara6152">recording by: younameit</flowPara><flowPara
          id="flowPara6150"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:'Arial MT';-inkscape-font-specification:'Arial MT Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1">postprocessing by: eventuallyhere</flowPara></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="confidential"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:850%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#de0080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(791.26709,153.438)"><flowRegion
-         id="flowRegion4815"><rect
-           id="rect4817"
-           width="960"
-           height="59.999939"
-           x="-312.51953"
-           y="824.38727"
-           style="line-height:850%;text-align:center;text-anchor:middle;fill:#de0080;fill-opacity:1" /></flowRegion><flowPara
-         id="flowPara4819"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.5px;line-height:150%;font-family:'Arial MT';-inkscape-font-specification:'Arial MT Bold';text-align:center;text-anchor:middle;fill:#de0080;fill-opacity:1">for internal use only</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="susetext"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
