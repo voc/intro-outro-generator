@@ -816,7 +816,7 @@
 					<text>Recorded by Team:Productiehuis
 with support from C3VOC
 
-Find more SHA2017 at https://media.ccc.de/SHA2017</text>
+Find more SHA2017 at https://media.ccc.de/c/SHA2017</text>
 				</parameter>
 				<parameter name="Render Text" id="360" flags="8590000146" default="0" value="0"/>
 				<parameter name="Face Camera" id="352" flags="8589934610" default="0" value="0"/>
