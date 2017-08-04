@@ -174,7 +174,7 @@ def finalize_job(job_id, event):
 	intermediate_clip = os.path.join(tempdir.name, event_id+'.mov')
 	final_clip = os.path.join(os.path.dirname(args.motn), event_id+'.ts')
 
-	run('ffmpeg -y -hide_banner -loglevel error -i "{input}" -ar 48000 -ac 1 -f s16le -i /dev/zero -map 0:0 -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:0 -map 1:0 -map 1:0 -map 1:0 -shortest -f mpegts "{output}"',
+	run('ffmpeg -y -hide_banner -loglevel error -i "{input}" -ar 48000 -ac 1 -f s16le -i /dev/zero -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:0 -map 1:0 -map 1:0 -map 1:0 -shortest -f mpegts "{output}"',
 		input=intermediate_clip,
 		output=final_clip)
 
