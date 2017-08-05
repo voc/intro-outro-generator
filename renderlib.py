@@ -177,7 +177,7 @@ def rendertask(task):
 
 # Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event
 def events(scheduleUrl, titlemap={}):
-	print("downloading pentabarf schedule")
+	print("downloading schedule")
 
 	# download the schedule
 	response = urlopen(scheduleUrl)
