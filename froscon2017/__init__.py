@@ -7,7 +7,7 @@ from easing import *
 import svg.path
 
 # URL to Schedule-XML
-scheduleUrl = 'https://programm.froscon.de/2016/schedule.xml'
+scheduleUrl = 'https://programm.froscon.de/2017/schedule.xml'
 
 # For (really) too long titles
 titlemap = {
@@ -16,7 +16,7 @@ titlemap = {
 
 
 def introFrames(args):
-	xml = etree.parse('froscon2016/artwork/intro.svg').getroot()
+	xml = etree.parse('froscon2017/artwork/intro.svg').getroot()
 	pathstr = xml.find(".//*[@id='animatePath']").get('d')
 	frog = xml.find(".//*[@id='animatePath']").get('d')
 	path = svg.path.parse_path(pathstr)
@@ -72,7 +72,7 @@ def introFrames(args):
 		)
 
 def outroFrames(args):
-	xml = etree.parse('froscon2016/artwork/outro.svg').getroot()
+	xml = etree.parse('froscon2017/artwork/outro.svg').getroot()
 	pathstr = xml.find(".//*[@id='animatePath']").get('d')
 	frog = xml.find(".//*[@id='animatePath']").get('d')
 	path = svg.path.parse_path(pathstr)
