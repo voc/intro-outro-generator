@@ -116,10 +116,9 @@ def enqueue_job(event):
 		fp.write(xmlstr)
 
 	compressor_info = run_output(
-		'/Applications/Compressor.app/Contents/MacOS/Compressor -batchname {batchname} -jobpath {jobpath} -settingpath {home}/Library/Application\ Support/Compressor/Settings/Apple\ ProRes\ 4444.cmprstng -locationpath {locationpath}',
+		'/Applications/Compressor.app/Contents/MacOS/Compressor -batchname {batchname} -jobpath {jobpath} -settingpath apple-prores-4444.cmprstng -locationpath {locationpath}',
 			batchname=describe_event(event),
 			jobpath=work_doc,
-			home=os.getenv('HOME'),
 			locationpath=intermediate_clip)
 
 	match = re.search("<jobID ([A-Z0-9\-]+) ?\/>", compressor_info)
