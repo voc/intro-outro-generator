@@ -6,7 +6,7 @@ from renderlib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'https://3st.be/~meise/downloads/16c3_schedule.xml'
+scheduleUrl = 'http://live.ber.c3voc.de/releases/schedules/16c3_schedule.xml'
 
 # For (really) too long titles
 titlemap = {
