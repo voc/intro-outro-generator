@@ -13,15 +13,6 @@ titlemap = {
     #
 }
 
-def bounce(i, min, max, frames):
-    if i == frames - 1:
-        return 0
-
-    if i <= frames/2:
-        return easeInOutQuad(i, min, max, frames/2)
-    else:
-        return max - easeInOutQuad(i - frames/2, min, max, frames/2)
-
 def introFrames(parameters):
     move=50
 
@@ -29,8 +20,9 @@ def introFrames(parameters):
     frames = 3*fps
     for i in range(0, frames):
         yield (
+            ('logo', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
             ('textblock', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
-            ('textblock', 'attr',     'transform', 'translate(%.4f, 0)' % easeOutQuad(i, -move, move, frames)),
+            ('textblock', 'attr',     'transform', 'translate(%.4f, 0)' % easeOutQuad(i, -move/2, move/2, frames)),
         )
 
     # 2 Sekunden stehen lassen
@@ -47,18 +39,7 @@ def introFrames(parameters):
         )
 
 def pauseFrames(parameters):
-    frames = 25*3
-    for i in range(0, frames):
-        yield (
-            ('pause', 'attr', 'flood-opacity', '%.4f' % bounce(i, 0.0, 1.0, frames)),
-        )
-
-    frames = 25*1
-    for i in range(0, frames):
-        yield (
-            ('glowFlood', 'attr', 'flood-opacity', '%.4f' % 0),
-        )
-
+    pass
 
 def outroFrames(p):
     # 5 Sekunden stehen bleiben
@@ -94,10 +75,9 @@ def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
 
-        if len(args) > 0:
-            if not str(event['id']) in args:
-                continue
-
+#        if len(args) > 0:
+#            if not str(event['id']) in args:
+#                continue
         # generate a task description and put it into the queue
         queue.put(Rendertask(
             infile = 'intro.svg',

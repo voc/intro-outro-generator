@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="411.85731"
-     inkscape:cy="310.25482"
+     inkscape:zoom="0.7"
+     inkscape:cx="625.98717"
+     inkscape:cy="489.17927"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -67,29 +67,37 @@
      id="layer1"
      transform="translate(0,-476.36216)">
     <rect
-       style="opacity:1;fill:#101077;fill-opacity:1;stroke:#ffdab9;stroke-width:0.20014016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#101077;fill-opacity:1;stroke:#ffdab9;stroke-width:0.2002279;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="title"
-       width="721.24878"
-       height="575.7868"
-       x="7.0111157e-05"
-       y="476.57526" />
+       width="721.24872"
+       height="576.29181"
+       x="0.00011397823"
+       y="476.07022" />
     <g
-       id="g4369"
-       transform="translate(-79.671342,81.766339)">
+       id="logo"
+       transform="translate(-79.671342,81.766339)"
+       style="opacity:1">
       <g
-         id="g4360">
+         id="g4360"
+         style="">
         <g
-           id="g4352">
+           id="g4352"
+           style="">
           <g
-             id="g4345">
+             id="g4345"
+             style="">
             <g
-               id="g4339">
+               id="g4339"
+               style="">
               <g
-                 id="g4334">
+                 id="g4334"
+                 style="">
                 <g
-                   id="g4330">
+                   id="g4330"
+                   style="">
                   <g
-                     id="g4327">
+                     id="g4327"
+                     style="">
                     <image
                        y="809.67682"
                        x="97.233551"
@@ -225,7 +233,8 @@ nUIJAVToFEoIoEKnUEIAFTqFEgL+H0t9h22HcyP2AAAAAElFTkSuQmCC
 "
                        preserveAspectRatio="none"
                        height="150"
-                       width="250" />
+                       width="250"
+                       style="" />
                   </g>
                 </g>
               </g>
@@ -256,20 +265,7 @@ nUIJAVToFEoIoEKnUEIAFTqFEgL+H0t9h22HcyP2AAAAAElFTkSuQmCC
            height="44.446712"
            x="569.72601"
            y="521.45178" /></flowRegion><flowPara
-         id="flowPara4407">C#</flowPara></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot4409"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffe600;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(-5.0507627,500.60582)"><flowRegion
-         id="flowRegion4411"><rect
-           id="rect4413"
-           width="191.92902"
-           height="25.253798"
-           x="512.14734"
-           y="513.37061"
-           style="text-align:end;text-anchor:end;fill:#ffe600;fill-opacity:1" /></flowRegion><flowPara
-         id="flowPara4415"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;line-height:125%;font-family:Umpush;-inkscape-font-specification:'Umpush, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end">#$id</flowPara></flowRoot>    <g
+         id="flowPara4407">C#</flowPara></flowRoot>    <g
        id="textblock">
       <flowRoot
          transform="translate(9.7654088,499.79696)"
