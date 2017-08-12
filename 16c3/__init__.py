@@ -20,7 +20,7 @@ def introFrames(parameters):
     frames = 3*fps
     for i in range(0, frames):
         yield (
-            ('logo', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
+            ('logo', 'style',    'opacity', "%.4f" % easeInQuad(min(i*2,frames), 0, 1, frames)),
             ('textblock', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
             ('textblock', 'attr',     'transform', 'translate(%.4f, 0)' % easeOutQuad(i, -move/2, move/2, frames)),
         )
@@ -34,8 +34,9 @@ def introFrames(parameters):
     frames = 3*fps
     for i in range(0, frames):
         yield (
-            ('textblock', 'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
-            ('textblock', 'attr',     'transform', 'translate(%.4f, 0)' % easeInQuad(i, 0, move, frames)),
+#            ('textblock', 'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
+#            ('textblock', 'attr',     'transform', 'translate(%.4f, 0)' % easeInQuad(i, 0, move, frames)),
+            ('fadebg', 'style',    'opacity', "%.4f" % easeInOutQuad(min(i*2,frames), 0, 1, frames)),
         )
 
 def pauseFrames(parameters):

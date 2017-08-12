@@ -67,12 +67,12 @@
      id="layer1"
      transform="translate(0,-476.36216)">
     <rect
-       style="opacity:1;fill:#101077;fill-opacity:1;stroke:#ffdab9;stroke-width:0.2002279;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="title"
-       width="721.24872"
-       height="576.29181"
-       x="0.00011397823"
-       y="476.07022" />
+       style="opacity:0.95999995;fill:#101077;fill-opacity:1;stroke:#ffdab9;stroke-width:0.20250821;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="background"
+       width="726.96075"
+       height="584.8609"
+       x="-2.8558888"
+       y="473.21423" />
     <g
        id="logo"
        transform="translate(-79.671342,81.766339)"
@@ -295,5 +295,12 @@ nUIJAVToFEoIoEKnUEIAFTqFEgL+H0t9h22HcyP2AAAAAElFTkSuQmCC
              id="rect4421" /></flowRegion><flowPara
            id="flowPara4429"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">$title</flowPara></flowRoot>    </g>
+    <rect
+       style="opacity:0;fill:#000000;fill-opacity:1;stroke:#ffdab9;stroke-width:0.20171465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="fadebg"
+       width="728.39008"
+       height="579.14746"
+       x="-6.3379002"
+       y="474.21701" />
   </g>
 </svg>
