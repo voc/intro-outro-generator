@@ -25,13 +25,13 @@ def introFrames(parameters):
             ('textblock', 'attr',     'transform', 'translate(%.4f, 0)' % easeOutQuad(i, -move/2, move/2, frames)),
         )
 
-    # 2 Sekunden stehen lassen
-    frames = 2*fps
+    # 3 Sekunden stehen lassen
+    frames = 3*fps
     for i in range(0, frames):
         yield ()
 
-    # 3 Sekunde Text Fadeout
-    frames = 3*fps
+    # 2 Sekunde Schwarzblende
+    frames = 2*fps
     for i in range(0, frames):
         yield (
 #            ('textblock', 'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
