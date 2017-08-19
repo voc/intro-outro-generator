@@ -84,7 +84,7 @@ def outroFrames(args):
 		p = path.point(i / frames) - init
 		yield (
 			('animatePath', 'style', 'opacity', 0),
-			('license', 'style', 'opacity', 0),
+			('recordingby', 'style', 'opacity', 0),
 		)
 
 	frames = 3*fps
@@ -108,28 +108,28 @@ def outroFrames(args):
 	for i in range(0, frames):
 		yield (
 			('logo',   'style', 'opacity', 0),
-			('license',   'style', 'opacity', easeLinear(i, 0, 1, frames)),
+			('recordingby',   'style', 'opacity', easeLinear(i, 0, 1, frames)),
 		)
 
 	frames = 2*fps
 	for i in range(0, frames):
 		yield (
 			('logo',   'style', 'opacity', 0),
-			('license',   'style', 'opacity', 1),
+			('recordingby',   'style', 'opacity', 1),
 		)
 
 	frames = 1*fps
 	for i in range(0, frames):
 		yield (
 			('logo',   'style', 'opacity', 0),
-			('license',   'style', 'opacity', easeLinear(i, 1, -1, frames)),
+			('recordingby',   'style', 'opacity', easeLinear(i, 1, -1, frames)),
 		)
 
 	frames = 1*fps
 	for i in range(0, frames):
 		yield (
 			('logo',   'style', 'opacity', 0),
-			('license',   'style', 'opacity', 0),
+			('recordingby',   'style', 'opacity', 0),
 		)
 
 def pauseFrames(args):
@@ -176,27 +176,27 @@ def pauseFrames(args):
 		)
 
 def debug():
-	render('intro.svg',
-		'../intro.ts',
-		introFrames,
-		{
-			'$id': 1302,
-			'$title': 'VlizedLab - Eine Open Source-Virtualisierungslösung für PC-Räume',
-			'$subtitle': 'IT Automatisierung und zentrales Management mit SALT',
-			'$personnames': 'Thorsten Kramm'
-		}
-	)
-
+#	render('intro.svg',
+#		'../intro.ts',
+#		introFrames,
+#		{
+#			'$id': 1302,
+#			'$title': 'VlizedLab - Eine Open Source-Virtualisierungslösung für PC-Räume',
+#			'$subtitle': 'IT Automatisierung und zentrales Management mit SALT',
+#			'$personnames': 'Thorsten Kramm'
+#		}
+#	)
+#
 	render('outro.svg',
 		'../outro.ts',
 		outroFrames
 	)
 
-	render('pause.svg',
-		'../pause.ts',
-		pauseFrames
-	)
-
+#	render('pause.svg',
+#		'../pause.ts',
+#		pauseFrames
+#	)
+#
 
 def tasks(queue, args, idlist, skiplist):
 	# iterate over all events extracted from the schedule xml-export
