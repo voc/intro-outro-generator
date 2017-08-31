@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import subprocess
 from renderlib import *
 from easing import *
 
@@ -95,9 +96,12 @@ def debug():
 		}
 	)
 
-def tasks(queue, params):
+def tasks(queue, args, idlist, skiplist):
 	# iterate over all events extracted from the schedule xml-export
-	for event in events(scheduleUrl, titlemap):
+	for event in events(scheduleUrl):
+		if event['room'] not in ('Prachtgarten', 'Ziergarten'):
+			print("skipping room %s (%s)" % (event['room'], event['title']))
+			continue
 
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
@@ -112,9 +116,16 @@ def tasks(queue, params):
 			}
 		))
 
-	# place a task for the outro into the queue
-	queue.put(Rendertask(
-		infile = 'outro.svg',
-		outfile = 'outro.ts',
-		sequence = outroFrames
-	))
+	# # place a task for the outro into the queue
+	# queue.put(Rendertask(
+	# 	infile = 'outro.svg',
+	# 	outfile = 'outro.ts',
+	# 	sequence = outroFrames
+	# ))
+	#
+	# # place the pause-sequence into the queue
+	# queue.put(Rendertask(
+	# 	infile = 'pause.svg',
+	# 	outfile = 'pause.ts',
+	# 	sequence = pauseFrames
+	# ))
