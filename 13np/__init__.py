@@ -4,7 +4,7 @@ from renderlib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'https://live.ber.c3voc.de/releases/public/13np.xml'
+scheduleUrl = 'http://live.ber.c3voc.de/releases/public/13np.xml'
 
 def introFrames(args):
     #fade in title
