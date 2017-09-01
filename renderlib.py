@@ -81,7 +81,8 @@ def rendertask(task):
 		for key in task.parameters.keys():
 			svgstr = svgstr.replace(key, xmlescape(str(task.parameters[key])))
 
-		svg = etree.fromstring(svgstr.encode('utf-8'))
+		parser = etree.XMLParser(huge_tree=True)
+		svg = etree.fromstring(svgstr.encode('utf-8'), parser)
 
 	# frame-number counter
 	frameNr = 0
@@ -186,7 +187,8 @@ def events(scheduleUrl, titlemap={}):
 	xml = response.read()
 
 	# parse into ElementTree
-	schedule = etree.fromstring(xml)
+	parser = etree.XMLParser(huge_tree=True)
+	schedule = etree.fromstring(xml, parser)
 
 	# iterate all days
 	for day in schedule.iter('day'):
