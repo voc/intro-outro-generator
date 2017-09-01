@@ -8,9 +8,10 @@ scheduleUrl = 'http://live.ber.c3voc.de/releases/public/13np.xml'
 
 def introFrames(args):
     #fade in title
-    frames = 3*fps
+    frames = 2*fps
     for i in range(0, frames):
         yield(
+            ('personnames', 'style', 'opacity', 0),
             ('title', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
         )
     # fade in subtitle and names
@@ -18,16 +19,14 @@ def introFrames(args):
     for i in range(0, frames):
         yield(
             ('title', 'style', 'opacity', 1),
-            ('subtitle',    'style', 'opacity', easeInQuad(i, 0, 1, frames)),
             ('personnames', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
         )
-    #show whole image for 2 seconds
-    frames = 2*fps
+    #show whole image for 3 seconds
+    frames = 3*fps
     for i in range(0, frames):
         yield(
             ('title', 'style', 'opacity', 1),
             ('personnames', 'style', 'opacity', 1),
-            ('subtitle', 'style', 'opacity', 1),
         )
 
 def backgroundFrames(parameters):
@@ -81,21 +80,21 @@ def debug():
         }
     )
 
-    render('outro.svg',
-        '../outro.ts',
-        outroFrames
-    )
-
-    render(
-        'background.svg',
-        '../background.ts',
-        backgroundFrames
-    )
-
-    render('pause.svg',
-        '../pause.ts',
-        pauseFrames
-    )
+#    render('outro.svg',
+#        '../outro.ts',
+#        outroFrames
+#    )
+#
+#    render(
+#        'background.svg',
+#        '../background.ts',
+#        backgroundFrames
+#    )
+#
+#    render('pause.svg',
+#        '../pause.ts',
+#        pauseFrames
+#    )
 
 
 def tasks(queue, args, idlist, skiplist):
