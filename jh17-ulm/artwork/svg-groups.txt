@@ -1,0 +1,18 @@
+#intro - Ablaufreihenfolge
+#Variablen: 
+ - #background zu sehen
+ - #logo + #icongroup einblenden (2 Sek)
+ - #alpaca + #text-bg einblenden (2 Sek)
+ - Sofort #projectname + #prenames zeigen und stehen lassen (Problem beim FadeIn da LED-Schriftart = nichtmehrmeinfreund!) (5 Sek)
+
+------------------------------------------
+=> 8 Sekunden
+
+#outro - Ablaufreihenfolge
+ - #background zu sehen
+ - #logo einblenden (1 Sek)
+ - #licensegroup einblenden (1 Sek)
+ - #logogroup einblenden (1 Sek)
+ - alles zeigen (2 Sek)
+------------------------------------------
+=> 5 Sekunden
