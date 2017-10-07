@@ -14,7 +14,7 @@
    viewBox="0 0 1920 1080"
    id="svg3532"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.1 r15371"
    inkscape:export-filename="/home/derpeter/projects/VOC/events/vcfb16/background.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
@@ -43,17 +43,18 @@
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1004"
+     inkscape:window-width="1366"
+     inkscape:window-height="704"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true">
     <sodipodi:guide
        position="84.852814,376.18081"
        orientation="1,0"
-       id="guide5769" />
+       id="guide5769"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
      id="metadata3537">
@@ -15524,43 +15525,41 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#dcdcdc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#dcdcdc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="76.367538"
        y="217.97614"
-       id="text5761"
-       sodipodi:linespacing="125%"><tspan
+       id="text5761"><tspan
          sodipodi:role="line"
          id="tspan5763"
          x="76.367538"
          y="217.97614"
-         style="font-size:180px;fill:#dcdcdc" /></text>
+         style="font-size:180px;line-height:1.25;fill:#dcdcdc"> </tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="88.166519"
        y="961.85254"
-       id="personnames"
-       sodipodi:linespacing="125%"><tspan
+       id="persons"><tspan
          sodipodi:role="line"
          id="tspan5767"
          x="88.166519"
          y="961.85254"
-         style="font-size:60px;fill:#dcdcdc;-inkscape-font-specification:'TeX Gyre Adventor';font-family:'TeX Gyre Adventor';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">$personnames</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60px;line-height:1.25;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor';fill:#dcdcdc">$persons</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="subtitle"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
          id="flowRegion5773"><rect
            id="rect5775"
            width="1368.9586"
            height="463.86206"
            x="84.852814"
            y="443.5257" /></flowRegion><flowPara
-         style="font-size:80px;fill:#dcdcdc"
+         style="font-size:80px;line-height:1.25;fill:#dcdcdc"
          id="flowPara7388">$subtitle</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="title"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
          id="flowRegion5781"><rect
            id="rect5783"
            width="1801.708"
@@ -15568,8 +15567,8 @@
            x="84.852814"
            y="115.50635"
            style="font-size:90px" /></flowRegion><flowPara
-         style="font-size:125px;fill:#d3d3d3;-inkscape-font-specification:'TeX Gyre Adventor';font-family:'TeX Gyre Adventor';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:125px;line-height:1.25;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor';fill:#d3d3d3"
          id="flowPara27326">$title</flowPara><flowPara
-         style="font-size:125px;fill:#d3d3d3"
-         id="flowPara7385" /></flowRoot>  </g>
+         style="font-size:125px;line-height:1.25;fill:#d3d3d3"
+         id="flowPara7385"> </flowPara></flowRoot>  </g>
 </svg>
