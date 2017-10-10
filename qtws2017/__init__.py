@@ -10,7 +10,7 @@ scheduleUrl = 'https://pub.sft.mx/fahrplan-qtws2017.xml'
 
 # For (really) too long titles
 titlemap = {
-    #
+    72: "Maximize your creativity and quality of use of HMI for automotive. TRITO Linkage, a compre-hensive HMI tool chain for Qt."
 }
 
 def bounce(i, min, max, frames):
