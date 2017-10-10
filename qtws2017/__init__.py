@@ -6,7 +6,7 @@ from renderlib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'schedule.xml'
+scheduleUrl = 'https://pub.sft.mx/fahrplan-qtws2017.xml'
 
 # For (really) too long titles
 titlemap = {
