@@ -83,12 +83,13 @@ def outroFrames(p):
             ('timelocation',   'style',    'opacity', "%.4f" % 0),
             ('videoby',   'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
         )
-    frames = 1*fps
+    frames = 2*fps
     for i in range(0, frames):
-        yield [] 
+        yield []
 
 
 def backgroundFrames(parameters):
+    return
     frames = 25*3
     for i in range(0, frames):
         yield (
@@ -156,7 +157,7 @@ def tasks(queue, args, idlist, skiplist):
             parameters = {
                 '$ID': event['id'],
                 '$TITLE': event['title'],
-                '$SUBTITLE': event['subtitle'],
+                '$COMPANY': event['subtitle'],
                 '$SPEAKER': event['personnames']
                 }
             ))
