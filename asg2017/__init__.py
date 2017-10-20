@@ -45,43 +45,68 @@ def introFrames(parameters):
         yield []
 
 def pauseFrames(parameters):
-    frames = 25*3
+    frames = 1*fps
     for i in range(0, frames):
         yield (
-            ('pause', 'attr', 'flood-opacity', '%.4f' % bounce(i, 0.0, 1.0, frames)),
+            ('pause',   'attr', 'opacity', '%.4f' % easeLinear(i, 0, 1, frames)),
+            ('details', 'attr', 'opacity', '%.4f' % easeLinear(i, 1, -1, frames)),
         )
-
-    frames = 25*1
+    frames = 2*fps
     for i in range(0, frames):
         yield (
-            ('glowFlood', 'attr', 'flood-opacity', '%.4f' % 0),
+            ('pause',   'attr', 'opacity', '1'),
+            ('details', 'attr', 'opacity', '0'),
         )
-
+    frames = 1*fps
+    for i in range(0, frames):
+        yield (
+            ('pause',   'attr', 'opacity', '%.4f' % easeLinear(i, 1, -1, frames)),
+            ('details', 'attr', 'opacity', '%.4f' % easeLinear(i, 0, 1, frames)),
+        )
+    frames = 2*fps
+    for i in range(0, frames):
+        yield (
+            ('pause',   'attr', 'opacity', '0'),
+            ('details', 'attr', 'opacity', '1'),
+        )
 
 def outroFrames(p):
     # 2 Sekunden stehen bleiben
     frames = 2*fps
     for i in range(0, frames):
         yield (
-            ('sponsoredby',   'style',    'opacity', "%.4f" % 1),
-            ('recordedby',    'style',    'opacity', "%.4f" % 0),
+            ('sponsoredby',   'style',    'opacity', "1"),
+            ('recordedby',    'style',    'opacity', "0"),
+            ('cc',            'style',    'opacity', "0"),
         )
     frames = 1*fps
     for i in range(0, frames):
         yield (
-            ('sponsoredby',   'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
-            ('recordedby',   'style',    'opacity', "%.4f" % 0),
+            ('sponsoredby',   'style',    'opacity', "%.4f" % easeInOutQuad(i, 1, -1, frames)),
+            ('recordedby',    'style',    'opacity', "%.4f" % easeInOutQuad(i, 0, 1, frames)),
+            ('cc',            'style',    'opacity', "0"),
         )
     frames = 1*fps
     for i in range(0, frames):
         yield (
-            ('sponsoredby',   'style',    'opacity', "%.4f" % 0),
-            ('recoededby',   'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
+            ('sponsoredby',   'style',    'opacity', "0"),
+            ('recordedby',    'style',    'opacity', "1"),
+            ('cc',            'style',    'opacity', "0"),
         )
-    frames = 2*fps
+    frames = 1*fps
     for i in range(0, frames):
-        yield []
-
+        yield (
+            ('sponsoredby',   'style',    'opacity', "0"),
+            ('recordedby',   'style',    'opacity', "%.4f" % easeInOutQuad(i, 1, -1, frames)),
+            ('cc',           'style',    'opacity', "%.4f" % easeInOutQuad(i, 0, 1, frames)),
+        )
+    frames = 1*fps
+    for i in range(0, frames):
+        yield (
+            ('sponsoredby',   'style',    'opacity', "0"),
+            ('recordedby',    'style',    'opacity', "0"),
+            ('cc',            'style',    'opacity', "1"),
+        )
 
 def backgroundFrames(parameters):
     return
@@ -106,24 +131,24 @@ def backgroundFrames(parameters):
             )
 
 def debug():
-    render(
-      'intro.svg',
-      '../intro.ts',
-      introFrames,
-      {
-          '$ID': 4711,
-          '$TITLE': "Long Long Long title is LONG",
-          '$COMPANY': 'Long Running Co',
-          '$SPEAKER': 'Dr. Dr. Prof. Dr. Long Long'
-      }
-    )
+#    render(
+#      'intro.svg',
+#      '../intro.ts',
+#      introFrames,
+#      {
+#          '$ID': 4711,
+#          '$TITLE': "Long Long Long title is LONG",
+#          '$COMPANY': 'Long Running Co',
+#          '$SPEAKER': 'Dr. Dr. Prof. Dr. Long Long'
+#      }
+#    )
 
 #    render(
 #        'pause.svg',
 #        '../pause.ts',
 #        pauseFrames
 #    )
-#
+
     render(
       'outro.svg',
       '../outro.ts',
