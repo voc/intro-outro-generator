@@ -37,7 +37,12 @@ def easeDelay(easer, delay, t, b, c, d, *args):
 
 class Rendertask:
 	def __init__(self, infile, sequence, parameters={}, outfile=None, workdir='.'):
-		self.infile =  infile
+		if isinstance(infile, list):
+			self.infile =  infile[0]
+			self.audiofile = infile[1]
+		else:
+			self.infile =  infile
+			self.audiofile = None
 		self.sequence = sequence
 		self.parameters = parameters
 		self.outfile = outfile
@@ -153,7 +158,18 @@ def rendertask(task):
 	# invoke avconv aka ffmpeg and renerate a lossles-dv from the frames
 	#  if we're not in debug-mode, suppress all output
 	if task.outfile.endswith('.ts'):
-		cmd = 'cd {0} && ffmpeg -f image2 -i .frames/%04d.png -ar 48000 -ac 1 -f s16le -i /dev/zero -ar 48000 -ac 1 -f s16le -i /dev/zero -map 0:0 -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:0 -map 2:0 -shortest -f mpegts "{1}"'.format(task.workdir, task.outfile)
+		cmd = 'cd {0} && '.format(task.workdir)
+		cmd += 'ffmpeg -f image2 -i .frames/%04d.png '
+		if task.audiofile is None:
+			cmd += '-ar 48000 -ac 1 -f s16le -i /dev/zero -ar 48000 -ac 1 -f s16le -i /dev/zero '
+		else:
+			cmd += '-i {0} -i {0} '.format(task.audiofile)
+		cmd += '-map 0:0 -c:v mpeg2video -q:v 0 -aspect 16:9'
+		if task.audiofile is None:
+			cmd += '-map 1:0 -map 2:0 '
+		else:
+			cmd += '-map 1:0 -c:a copy -map 2:0 -c:a copy '
+		cmd += '-shortest -f mpegts "{0}"'.format(task.outfile)
 	else:
 		cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
 

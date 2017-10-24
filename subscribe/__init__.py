@@ -98,7 +98,7 @@ def pauseFrames(p):
 
 def debug():
 	render(
-		'intro.svg',
+		['intro.svg', 'intro_audio.ts'],
 		'../intro.ts',
 		 introFrames,
 		{
@@ -127,8 +127,8 @@ def tasks(queue, args):
 
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
-			infile = 'intro.svg',
-			outfile = str(event['id'])+".ts",
+			infile = ['intro.svg', 'intro_audio.ts'],
+			outfile = str(event['id']) + ".ts",
 			sequence = introFrames,
 			parameters = {
 				'$id': event['id'],
