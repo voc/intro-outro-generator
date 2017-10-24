@@ -39,6 +39,10 @@ parser.add_argument('--skip', nargs='+', action="store", type=str, help='''
     Example - only generate outro: ./make.py yourproject/ --skip pause bg
     Example - only generate pause and background: ./make.py yourproject/ --skip out
 	''')
+parser.add_argument('--skip-frames', action="store", default=None, type=int, help='''
+    Skip first n frames e.g. to quickly rerender during debugging.
+    Usage: ./make.py yourproject/ --debug --skip-frames 300
+	''')
 
 if len(sys.argv) < 2:
 	parser.print_help()
@@ -76,6 +80,7 @@ except ImportError:
 # using --debug skips the threading, the network fetching of the schedule and
 # just renders one type of video
 renderlib.debug = args.debug
+renderlib.args = args
 #sys.exit(1)
 
 def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projectname, 'artwork')):

@@ -18,6 +18,7 @@ from urllib.request import urlopen
 # Frames per second. Increasing this renders more frames, the avconf-statements would still need modifications
 fps = 25
 debug = False
+args = None
 
 cssutils.ser.prefs.lineSeparator = ' '
 cssutils.log.setLevel(logging.FATAL)
@@ -73,6 +74,7 @@ def ensureFilesRemoved(pattern):
 		os.unlink(f)
 
 def rendertask(task):
+	global args
 	# in debug mode we have no thread-worker which prints its progress
 	if debug:
 		print("generating {0} from {1}".format(task.outfile, task.infile))
@@ -96,8 +98,11 @@ def rendertask(task):
 	# frame is a ... tbd
 	cache = {}
 	for frame in task.sequence(task.parameters):
+		skip_rendering = False
+		if args.skip_frames:
+			skip_rendering = (frameNr <= args.skip_frames)
 		# print a line for each and every frame generated
-		if debug:
+		if debug and not skip_rendering:
 			print("frameNr {0:3d} => {1}".format(frameNr, frame))
 
 		frame = tuple(frame)
@@ -113,39 +118,41 @@ def rendertask(task):
 		else:
 			cache[frame] = frameNr
 
-		# open the output-file (named ".gen.svg" in the workdir)
-		with open(os.path.join(task.workdir, '.gen.svg'), 'w') as fp:
-			# apply the replace-pairs to the input text, by finding the specified xml-elements by thier id and modify thier css-parameter the correct value
-			for replaceinfo in frame:
-				(id, type, key, value) = replaceinfo
+		# apply the replace-pairs to the input text, by finding the specified xml-elements by thier id and modify thier css-parameter the correct value
+		for replaceinfo in frame:
+			(id, type, key, value) = replaceinfo
 
-				for el in svg.findall(".//*[@id='"+id.replace("'", "\\'")+"']"):
-					if type == 'style':
-						style = cssutils.parseStyle( el.attrib['style'] if 'style' in el.attrib else '' )
-						style[key] = str(value)
-						el.attrib['style'] = style.cssText
+			for el in svg.findall(".//*[@id='"+id.replace("'", "\\'")+"']"):
+				if type == 'style':
+					style = cssutils.parseStyle( el.attrib['style'] if 'style' in el.attrib else '' )
+					style[key] = str(value)
+					el.attrib['style'] = style.cssText
 
-					elif type == 'attr':
-						el.attrib[key] = str(value)
+				elif type == 'attr':
+					el.attrib[key] = str(value)
 
-					elif type == 'text':
-						el.text = str(value)
+				elif type == 'text':
+					el.text = str(value)
 
-			# write the generated svg-text into the output-file
-			fp.write( etree.tostring(svg, encoding='unicode') )
-
-		if task.outfile.endswith('.ts'):
-			width = 1920
-			height = 1080
-		else:
-			width = 1024
-			height = 576
-
-		# invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-		errorReturn = subprocess.check_output('cd {0} && inkscape --export-background=white --export-width={2} --export-height={3} --export-png=$(pwd)/.frames/{1:04d}.png $(pwd)/.gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr, width, height), shell=True, universal_newlines=True)
-		if errorReturn != '':
-			print("inkscape exitted with error\n"+errorReturn)
-			sys.exit(42)
+		if not skip_rendering:
+			# open the output-file (named ".gen.svg" in the workdir)
+			with open(os.path.join(task.workdir, '.gen.svg'), 'w') as fp:
+				# write the generated svg-text into the output-file
+				fp.write( etree.tostring(svg, encoding='unicode') )
+	
+			if task.outfile.endswith('.ts'):
+				width = 1920
+				height = 1080
+			else:
+				width = 1024
+				height = 576
+	
+			# invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
+			cmd = 'cd {0} && inkscape --export-background=white --export-width={2} --export-height={3} --export-png=$(pwd)/.frames/{1:04d}.png $(pwd)/.gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr, width, height)
+			errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
+			if errorReturn != '':
+				print("inkscape exitted with error\n"+errorReturn)
+				sys.exit(42)
 
 		# increment frame-number
 		frameNr += 1
@@ -186,7 +193,8 @@ def rendertask(task):
 		print("cleanup")
 
 	# remove the .frames-dir with all frames in it
-	shutil.rmtree(os.path.join(task.workdir, '.frames'))
+	if not debug:
+		shutil.rmtree(os.path.join(task.workdir, '.frames'))
 
 	# remove the generated svg
 	ensureFilesRemoved(os.path.join(task.workdir, '.gen.svg'))
