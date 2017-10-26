@@ -4,7 +4,7 @@ from renderlib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'https://frab.das-sendezentrum.de/de/subscribe8/public/schedule.xml'
+scheduleUrl = 'https://frab.das-sendezentrum.de/de/subscribe9/public/schedule.xml'
 
 titlemap = {
 
@@ -35,7 +35,7 @@ def introFrames(p):
 			# ('text', 'attr',     'transform', 'translate(%.4f, 0)' % easeOutQuad(i, move, -move, frames)),
 		)
 
-	# 5 Sekunde Text
+	# 5 Sekunden Text
 	frames = 5*fps
 	for i in range(0, frames):
 		givenFrame += 1
@@ -98,14 +98,15 @@ def pauseFrames(p):
 
 def debug():
 	render(
-		['intro.svg', 'intro_audio.ts'],
+		['intro.svg', '../intro_audio.ts'],
 		'../intro.ts',
 		 introFrames,
 		{
 			'$id': 65,
-			'$title': 'Passwort, Karte oder Gesicht'.upper(),
-			'$subtitle': 'zur Sicherheit von Authentifizierungssystemen',
-			'$personnames': 'starbug'
+			'$title': 'Das Parallele Podcastuniversum'.upper(),
+			'$subtitle': 'Ein Einblick in die Podcast-Szene der DIY- und Kreativ-Ecke',
+			'$personnames': 'Monika Andrae'.upper(),
+			#'only_render_frame': 353
 		}
 	)
 
@@ -121,19 +122,29 @@ def debug():
 	#	pauseFrames
 	# )
 
-def tasks(queue, args):
+def tasks(queue, args, id_list, skip_list):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl, titlemap):
 
+		# skip events which will not be recorded
+		if event['room'] not in ('Großer Sitzungssaal', 'Kleiner Sitzungssaal'):
+			print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
+			continue
+
+		# when id_list is not empty, only render events which are in id_list
+		if id_list and int(event['id']) not in id_list:
+			print("skipping id (%s [%s])" % (event['title'], event['id']))
+			continue
+
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
-			infile = ['intro.svg', 'intro_audio.ts'],
+			infile = ['intro.svg', '../intro_audio.ts'],
 			outfile = str(event['id']) + ".ts",
 			sequence = introFrames,
 			parameters = {
 				'$id': event['id'],
 				'$title': event['title'].upper(),
 				'$subtitle': event['subtitle'],
-				'$personnames': event['personnames']
+				'$personnames': event['personnames'].upper(),
 			}
 		))
