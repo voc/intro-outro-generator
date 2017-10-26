@@ -101,6 +101,10 @@ def rendertask(task):
 		skip_rendering = False
 		if args.skip_frames:
 			skip_rendering = (frameNr <= args.skip_frames)
+		
+		if args.only_frame:
+			skip_rendering = (frameNr != args.only_frame)
+		
 		# print a line for each and every frame generated
 		if debug and not skip_rendering:
 			print("frameNr {0:3d} => {1}".format(frameNr, frame))
@@ -159,19 +163,28 @@ def rendertask(task):
 
 
 
+	if args.only_frame:
+		task.outfile = '{0}.frame{1:04d}.png'.format(task.outfile, args.only_frame)
+
+
 	# remove the dv/ts we are about to (re-)generate
 	ensureFilesRemoved(os.path.join(task.workdir, task.outfile))
 
+	if task.outfile.endswith('.png'):
+		cmd = 'cd {0} && cp ".frames/{1:04d}.png" "{2}"'.format(task.workdir, args.only_frame, task.outfile)
+
 	# invoke avconv aka ffmpeg and renerate a lossles-dv from the frames
 	#  if we're not in debug-mode, suppress all output
-	if task.outfile.endswith('.ts'):
+	elif task.outfile.endswith('.ts'):
 		cmd = 'cd {0} && '.format(task.workdir)
 		cmd += 'ffmpeg -f image2 -i .frames/%04d.png '
 		if task.audiofile is None:
 			cmd += '-ar 48000 -ac 1 -f s16le -i /dev/zero -ar 48000 -ac 1 -f s16le -i /dev/zero '
 		else:
 			cmd += '-i {0} -i {0} '.format(task.audiofile)
-		cmd += '-map 0:0 -c:v mpeg2video -q:v 0 -aspect 16:9'
+
+		cmd += '-map 0:0 -c:v mpeg2video -q:v 5 -aspect 16:9 '
+
 		if task.audiofile is None:
 			cmd += '-map 1:0 -map 2:0 '
 		else:
@@ -190,14 +203,12 @@ def rendertask(task):
 		if r != 0:
 			sys.exit()
 
+	if not debug:
 		print("cleanup")
 
-	# remove the .frames-dir with all frames in it
-	if not debug:
-		shutil.rmtree(os.path.join(task.workdir, '.frames'))
 
-	# remove the generated svg
-	ensureFilesRemoved(os.path.join(task.workdir, '.gen.svg'))
+		# remove the generated svg
+		ensureFilesRemoved(os.path.join(task.workdir, '.gen.svg'))
 
 
 # Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event

@@ -26,6 +26,11 @@ parser.add_argument('--debug', action="store_true", default=False, help='''
     This argument must not be used together with --id
     Usage: ./make.py yourproject/ --debug
 	''')
+parser.add_argument('--only-frame', action="store", default=None, type=int, help='''
+    Only render the given frames (of the intro), e.g. to quickly render snapshots of the tiles frame.
+    Usage: ./make.py yourproject/ --debug --only-frame 300
+           ./make.py yourproject/ --only-frame 300
+	''')
 parser.add_argument('--id', nargs='+', action="store", type=int, help='''
     Only render the given ID(s) from your projects schedule.
     This argument must not be used together with --debug
