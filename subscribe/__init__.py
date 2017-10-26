@@ -107,6 +107,7 @@ def debug():
 			'$subtitle': 'Ein Einblick in die Podcast-Szene der DIY- und Kreativ-Ecke',
 			'$personnames': 'Monika Andrae'.upper(),
 			#'only_render_frame': 353
+			'only_rerender_frames_after': 225
 		}
 	)
 
@@ -146,5 +147,6 @@ def tasks(queue, args, id_list, skip_list):
 				'$title': event['title'].upper(),
 				'$subtitle': event['subtitle'],
 				'$personnames': event['personnames'].upper(),
+				'only_rerender_frames_after': 225
 			}
 		))

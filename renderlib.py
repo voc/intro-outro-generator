@@ -99,6 +99,10 @@ def rendertask(task):
 	cache = {}
 	for frame in task.sequence(task.parameters):
 		skip_rendering = False
+		# skip first n frames, to speed up rerendering during debugging
+		if 'only_rerender_frames_after' in task.parameters:
+			skip_rendering = (frameNr <= task.parameters['only_rerender_frames_after'])
+		
 		if args.skip_frames:
 			skip_rendering = (frameNr <= args.skip_frames)
 		
