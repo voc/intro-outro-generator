@@ -128,7 +128,7 @@ def tasks(queue, args, id_list, skip_list):
 	for event in events(scheduleUrl, titlemap):
 
 		# skip events which will not be recorded
-		if event['room'] not in ('Großer Sitzungssaal', 'Kleiner Sitzungssaal'):
+		if event['room'] not in ('Großer Sitzungssaal', 'Kleiner Sitzungssaal') or event['track'] == 'Nomnom':
 			print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
 			continue
 
@@ -139,7 +139,7 @@ def tasks(queue, args, id_list, skip_list):
 
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
-			infile = ['intro.svg', '../intro_audio.ts'],
+			infile = ['intro.svg', 'intro_audio.ts'],
 			outfile = str(event['id']) + ".ts",
 			sequence = introFrames,
 			parameters = {
