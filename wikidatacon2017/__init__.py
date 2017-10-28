@@ -8,7 +8,7 @@ scheduleUrl = 'http://live.ber.c3voc.de/releases/public/wikidatacon2017.xml'
 
 
 def introFrames(args):
-    # fade in title, subtitle, persons and id
+    # fade in title, persons and id
     frames = 2 * fps
     for i in range(0, frames):
         yield (
@@ -55,7 +55,6 @@ def debug():
            {
                '$id': 7776,
                '$title': 'StageWar live!',
-               '$subtitle': 'Metal Konzert',
                '$persons': 'www.stagewar.de'
            }
            )
@@ -84,7 +83,6 @@ def tasks(queue, args, idlist, skiplist):
             parameters={
                 '$id': event['id'],
                 '$title': event['title'],
-                '$subtitle': event['subtitle'],
                 '$persons': event['personnames']
             }
         ))
