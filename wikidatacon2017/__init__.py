@@ -55,7 +55,7 @@ def debug():
            {
                '$id': 7776,
                '$title': 'StageWar live!',
-               '$subtitle': ''
+               '$subtitle': '',
                '$persons': 'www.stagewar.de'
            }
            )
