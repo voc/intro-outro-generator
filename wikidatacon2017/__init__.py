@@ -55,6 +55,7 @@ def debug():
            {
                '$id': 7776,
                '$title': 'StageWar live!',
+               '$subtitle': ''
                '$persons': 'www.stagewar.de'
            }
            )
@@ -83,6 +84,7 @@ def tasks(queue, args, idlist, skiplist):
             parameters={
                 '$id': event['id'],
                 '$title': event['title'],
+                '$subtitle': '',
                 '$persons': event['personnames']
             }
         ))
