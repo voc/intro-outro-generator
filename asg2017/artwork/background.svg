@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="background.svg"
-   inkscape:export-filename="/home/danimo/dev/git/intro-outro-generator/asg2017/artwork/background.png"
+   inkscape:export-filename="/home/danimo/scratch/VOC/intro-outro-generator/asg2017/artwork/background.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -78,10 +78,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="651.31316"
-     inkscape:cy="158.0352"
+     inkscape:cx="168.45602"
+     inkscape:cy="139.46377"
      inkscape:document-units="px"
-     inkscape:current-layer="g5791"
+     inkscape:current-layer="g5787"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
@@ -104,7 +104,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -131,7 +131,7 @@
       </g>
       <g
          id="g3531"
-         transform="matrix(0.48435248,0,0,0.48435248,1306.0677,626.32749)">
+         transform="matrix(0.7848019,0,0,0.7848019,930.30364,200.81592)">
         <g
            id="g5813"
            transform="translate(993.8462,774.4478)">
@@ -304,40 +304,40 @@
       </g>
       <text
          id="text5897"
-         style="font-variant:normal;font-weight:800;font-stretch:normal;font-size:20.92133904px;font-family:'Open Sans Extrabold';-inkscape-font-specification:OpenSans-Extrabold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="font-variant:normal;font-weight:800;font-stretch:normal;font-size:33.899086px;font-family:'Open Sans Extrabold';-inkscape-font-specification:OpenSans-Extrabold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          transform="scale(1.0014684,-0.99853376)"
-         x="1665.3069"
-         y="-766.52795">
+         x="1514.1223"
+         y="-454.79904">
         <tspan
            id="tspan5899"
            sodipodi:role="line"
-           y="-766.52795"
-           x="1665.3069 1681.4583 1692.2119 1701.3126 1714.1165 1727.0458 1739.4521 1748.7412 1753.6577 1765.3945 1777.1315 1783.2616 1794.9983 1806.7352 1811.6517 1817.1749 1822.0914 1833.8282 1845.5652 1857.3021"
+           y="-454.79904"
+           x="1514.1223 1540.2926 1557.7169 1572.4629 1593.2091 1614.1586 1634.2607 1649.312 1657.2782 1676.2955 1695.313 1705.2457 1724.2628 1743.2803 1751.2466 1760.1959 1768.1621 1787.1794 1806.1969 1825.2145"
            style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Ultra-Bold'">October 21-22 . 2017</tspan>
       </text>
       <text
          id="text5901"
-         style="font-variant:normal;font-weight:600;font-stretch:normal;font-size:11.14807987px;font-family:'Open Sans Semibold';-inkscape-font-specification:OpenSans-Semibold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="font-variant:normal;font-weight:600;font-stretch:normal;font-size:18.06336212px;font-family:'Open Sans Semibold';-inkscape-font-specification:OpenSans-Semibold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          transform="scale(1.0014684,-0.99853376)"
-         x="1665.3069"
-         y="-751.2572">
+         x="1514.1223"
+         y="-430.05566">
         <tspan
            id="tspan5903"
            sodipodi:role="line"
-           y="-751.2572"
-           x="1665.3069 1673.7793 1681.1149 1689.3533 1696.5104 1701.0254 1710.8691 1714.9604">BERLIN,</tspan>
+           y="-430.05566"
+           x="1514.1223 1527.8503 1539.7362 1553.085 1564.6818 1571.9974 1587.9474 1594.5767">BERLIN,</tspan>
       </text>
       <text
          id="text5909"
-         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.082304px;font-family:'Open Sans';-inkscape-font-specification:OpenSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.05834198px;font-family:'Open Sans';-inkscape-font-specification:OpenSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          transform="scale(1.0014684,-0.99853376)"
-         x="1665.1013"
-         y="-725.52411">
+         x="1513.7893"
+         y="-388.36069">
         <tspan
            id="tspan5911"
            sodipodi:role="line"
-           y="-725.52411"
-           x="1665.1013 1675.6675 1682.6473 1689.627 1699.807 1707.7999 1712.3835 1719.0254 1725.6674 1735.3811 1740.2864 1745.1915 1750.37 1758.3629 1767.5135 1775.5067 1782.4863 1791.9908 1807.7836 1815.7766 1820.9552 1830.0416 1839.9966 1844.5801 1849.4851">https://all-systems-go.io</tspan>
+           y="-388.36069"
+           x="1513.7893 1530.9098 1542.2192 1553.5284 1570.0233 1582.9744 1590.4012 1601.1631 1611.9252 1627.6644 1635.6125 1643.5604 1651.951 1664.9021 1679.729 1692.6804 1703.9895 1719.3899 1744.979 1757.9302 1766.3212 1781.0439 1797.1741 1804.6008 1812.5485">https://all-systems-go.io</tspan>
       </text>
     </g>
   </g>
