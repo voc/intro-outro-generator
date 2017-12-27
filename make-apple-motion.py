@@ -33,7 +33,7 @@ parser.add_argument('--debug', action="store_true", default=False, help='''
 	Usage: ./make.py yourproject/ --debug
 	''')
 
-parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, help='''
+parser.add_argument('--id', dest='ids', nargs='*', action="store", type=int, help='''
 	Only render the given ID(s) from your projects schedule.
 	This argument must not be used together with --debug
 	Usage: ./make.py yourproject/ --id 4711 0815 4223 1337
