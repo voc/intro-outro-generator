@@ -223,6 +223,7 @@ def events(scheduleUrl, titlemap={}):
 					'persons': personnames,
 					'personnames': ', '.join(personnames),
 					'room': room.attrib['name'],
+					'track': event.find('track').text.split(', '),
 				}
 
 try:

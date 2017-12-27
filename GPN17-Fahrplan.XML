@@ -1,0 +1,2536 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<schedule>
+<conference>
+<acronym>gpn17</acronym>
+<title>GPN17</title>
+<start>2017-05-25</start>
+<end>2017-05-28</end>
+<days>4</days>
+<timeslot_duration>00:15</timeslot_duration>
+</conference>
+<day date='2017-05-25' end='2017-05-26T02:00:00+02:00' index='1' start='2017-05-25T16:00:00+02:00'>
+<room name='Medientheater'>
+<event guid='ed3285e0-9140-4a8b-9ee3-3c083f7babce' id='8548'>
+<date>2017-05-25T16:00:00+02:00</date>
+<start>16:00</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8548-what_to_hack</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>What to hack</title>
+<subtitle>Opening event GPN</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Was auf der GPN17 passieren wird und was ihr wissen müsst.</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='4508'>obelix</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='39d3b2d0-6f82-4aa6-b0c0-6ae18caa2c3c' id='8512'>
+<date>2017-05-25T17:30:00+02:00</date>
+<start>17:30</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8512-how_we_bodged_the_badge</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>How we bodged the Badge</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>TechTalk über die Entwicklung des GulaschPushNotifier.</abstract>
+<description>TBD</description>
+<logo></logo>
+<persons>
+<person id='7343'>Niklas</person>
+<person id='7426'>Jan Henrik</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='868c1ce8-2592-4d61-8de9-e19e36e48fee' id='8618'>
+<date>2017-05-25T19:00:00+02:00</date>
+<start>19:00</start>
+<duration>00:30</duration>
+<room>Medientheater</room>
+<slug>gpn17-8618-hacking_galaxy_s8_iris_recognition</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>hacking galaxy S8 iris recognition</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Die Iriserkennung verdraengt den Fingerabdruck bei mobilen Endgeraeten. Sicherer ist diese aber auch nicht. Dieser Vortrag zeigt, wie man die Iriserkennung des neuen Samsung Galaxy S8 ueberwinden kann.</abstract>
+<description>Fingerabdruckerkennung scheint auf dem Rueckzug, zumindest bei mobilen Endgeraeten. Der neue Stern am biometrischen Himmel ist die Iriserkennung. Eingefuehrt von Microsoft im Windows Mobile Phone brachte Samsung die Iriserkennung als Hauptmerkmal ins Galaxy S8. Und auch fuer das neue iPhone steht die Iriserkennung ganz oben. In dem Vortrag zeige ich, dass dieser Trend aus Sicherheitsaspekten ehr fragwuerdig ist. Wiedereinmal mit einfachsten Mitteln laesst sich naemlich auch die Iriserkennung ueberwinden.</description>
+<logo></logo>
+<persons>
+<person id='1623'>starbug</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='03059218-e5f8-4404-9d6b-f41e7f26ef55' id='8532'>
+<date>2017-05-25T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8532-build_yourself_a_snmp_replacement</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Build yourself a SNMP replacement</title>
+<subtitle>And make SSH pay for it</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Ein Vortrag über allgemeines Wireless Networkmanagement/Monitoring und wie man Unzulänglichkeiten der Hardware umgehen kann. Zum Einsatz kommen neben Python und SSH auch splunk und Observium.</abstract>
+<description>Von einfachem Monitoring zu komplexere Themen wie das erstellen eigener Abfragen die SNMP nicht unterstützt soll dieser Vortrag die Grundlagen des Managements und Monitorings von 802.11.* in größeren Umgebungen abdecken. Auch werden Tools vorgestellt, die dem Netzwerk Admin die Arbeit  erleichtern können. Bei der Vorstellung der Tools werden auch auf die gewonnenen Erkenntisse erklärt, wo es hakt, was noch verbessert werden kann und wo Probleme gelöst wurden.</description>
+<logo></logo>
+<persons>
+<person id='6833'>Heiko Borchers</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='63dd83b9-27e4-4122-8a45-48ca7c92e13e' id='8574'>
+<date>2017-05-25T22:30:00+02:00</date>
+<start>22:30</start>
+<duration>00:45</duration>
+<room>Medientheater</room>
+<slug>gpn17-8574-cybern</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Cybern</title>
+<subtitle>Zurechtfinden im Zeitalter des Cyber</subtitle>
+<track>GPN</track>
+<type>performance</type>
+<language>de</language>
+<abstract>Cyberstract</abstract>
+<description>Cyberscription</description>
+<logo>/system/events/logos/000/008/574/large/cyber_sticker_export.png?1492684912</logo>
+<persons>
+<person id='7401'>Cyberdonius</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Studio'>
+<event guid='7920bbee-a683-4fdd-863d-fa77062a39b2' id='8484'>
+<date>2017-05-25T17:30:00+02:00</date>
+<start>17:30</start>
+<duration>01:00</duration>
+<room>Studio</room>
+<slug>gpn17-8484-towards_a_more_secure_operating_system_without_sacrificing_usability</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Towards a more secure operating system without sacrificing usability</title>
+<subtitle>aka the GNOME challenge</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>en</language>
+<abstract>GNOME is a desktop that cares about its users and their freedom. To be free also includes to have the freedom to use your computer without having to fear of getting compromised or anyone listening to your communication. GNOME takes tries hard to put the user back into the control seat regarding security and privacy. We will see two examples of how GNOME gives you back that control. The first is a classic: The problem of signing OpenPGP keys. The second is the protection against malicious USB devices.</abstract>
+<description>The new GNOME 3.24 brings many visible improvements will be delivered to users around the world.    While many people already excitedly use GNOME 3 with the new user experience, some features of the new and elegant desktop like LibreOffice integration or editing photos with non-destructive GEGL operations are not yet wildly known. We also did many things on the plumbing layer such as containerisation of apps using Flatpak.
+
+In this talk, you will see examples of how GNOME tries to give you back control over your computing. Firstly, we have Flatpak, the containerisation of desktop apps. With Flatpak, users can sandbox their applications while still having them integrated into their desktop, e.g. have them started like native apps, have them print documents, or open and save files. This level of integration make it arguably more complex than, say, using Docker or rkt to run your applications. Secondly, GNOME tries to address the problem of signing OpenPGP keys. Currently, that is a tedious process with many things that can (and will) go wrong. Finally, a prototypical protection against malicious USB devices is shown. Do you know when you use your USB? And when you don't? And, more importantly, when someone uses your USB? We present an approach which may be well suited for preventing abuse of your computing.
+
+</description>
+<logo>/system/events/logos/000/008/484/large/GnomeLogoVertical.png?1495702952</logo>
+<persons>
+<person id='83'>Muelli</person>
+</persons>
+<links>
+<link href='GNOME'>http://www.gnome.org</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='888b1e61-3ac0-4681-8db6-47bb0614f16c' id='8589'>
+<date>2017-05-25T19:00:00+02:00</date>
+<start>19:00</start>
+<duration>01:00</duration>
+<room>Studio</room>
+<slug>gpn17-8589-qr-codes</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>QR-Codes</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Eine Einführung in QR-Codes.</abstract>
+<description>Ausführliche Beschreibung folgt...</description>
+<logo></logo>
+<persons>
+<person id='7349'>Sebastian Buchwald</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='7f97fb44-f121-4f16-8bf7-05800fb37bdf' id='8599'>
+<date>2017-05-25T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>01:15</duration>
+<room>Studio</room>
+<slug>gpn17-8599-http_security_header</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>HTTP Security Header</title>
+<subtitle>Edition 2017 - Latest &amp; Greatest</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Überblick über HTTP Security Header
+- welche gibt es, welche sind sinnvoll, wie benutzt man sie, worauf sollte man achten!</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='6486'>Ives Laaf</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='ZKM-Vortragssaal'>
+<event guid='880588ea-3e65-4eee-a4b9-e240c4c187e8' id='8581'>
+<date>2017-05-25T17:30:00+02:00</date>
+<start>17:30</start>
+<duration>01:00</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8581-menstruation_matters</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Menstruation Matters</title>
+<subtitle>queer_lectures des AStA am KIT</subtitle>
+<track></track>
+<type>lecture</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='7411'>Nadja</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='80d7750a-3951-462f-8513-715571c31738' id='8583'>
+<date>2017-05-25T19:00:00+02:00</date>
+<start>19:00</start>
+<duration>00:45</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8583-building_a_photobooth</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Building a Photobooth</title>
+<subtitle>An exemplary multi-disciplinary project</subtitle>
+<track></track>
+<type>lecture</type>
+<language>en</language>
+<abstract>A Photobooth is an automatic unit that takes photos with a DSLR camera, shows a preview on a touchscreen and allows users to print them. The Schaffenburg Hackerspace designed and built such a machine from scratch.</abstract>
+<description>In this presentation, I will talk about our motivation for starting such a big project. Covered topics include:
+* evaluation + selection of the used hardware and software components
+* building the wooden case and 3d-printing parts
+* using Arduino for effect lighting
+* setting up the camera and external flash
+* introduction of the gstreamer- / gtk-based software
+* demonstration
+* problems and prospects
+</description>
+<logo>/system/events/logos/000/008/583/large/building_a_photobooth.jpg?1493889995</logo>
+<persons>
+<person id='7323'>Fraxinas</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='9d73617c-83e1-4457-ab0f-13a99ea57d0d' id='8585'>
+<date>2017-05-25T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>01:00</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8585-introduction_to_automated_binary_analysis</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Introduction to Automated Binary Analysis </title>
+<subtitle></subtitle>
+<track></track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Mit dem Finale der DARPA Cyber Grand Challenge auf der DEFCON 2016 hat automatische Programmanalyse große Aufmerksamkeit auch außerhalb der akademischen und IT-Sicherheitswelt erlangt. Aber wie funktioniert eigentlich ein Programm das andere Programme analysiert? Sagt die theoretische Informatik nicht dass dies allgemein unmöglich ist (siehe Halte-Problem, Rice's Theorem)? </abstract>
+<description>Eventuell haben manche schon von &quot;Symbolic Execution&quot;, &quot;Taint Analysis&quot;, &quot;SMT-Solving&quot; oder ähnlichem gehört.
+Im Vortrag werden diese und andere Techniken die bei automatischer Analyse von Programmen, ob Sourcecode basiert oder direkt Binaries, verwendet werden können vorgestellt.
+Es wird eine kleine Übersicht über existierende Frameworks geben, welche man davon aus welchen Gründen benutzen will und wie man kompliziert aussehende Probleme plötzlich in wenigen Zeilen Python lösen kann.</description>
+<logo></logo>
+<persons>
+<person id='7402'>Florian Magin</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Workshopraum'>
+<event guid='bd7c2ab0-0201-4897-b849-c856c34ced05' id='8629'>
+<date>2017-05-25T17:30:00+02:00</date>
+<start>17:30</start>
+<duration>00:30</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8629-einfuhrung_infotresen</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Einführung Infotresen</title>
+<subtitle></subtitle>
+<track></track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Einführung für die Infotrolle</abstract>
+<description>Wer Infotresen machen möchte, muss die Einführung gemacht haben.
+Ein zweiter Termin findet am Freitag statt.</description>
+<logo></logo>
+<persons>
+<person id='4642'>Sarah</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='9803e390-7c6b-4bc8-b645-39f02fca030a' id='8577'>
+<date>2017-05-25T18:30:00+02:00</date>
+<start>18:30</start>
+<duration>01:30</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8577-small_modifications_and_embodied_connectivity</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>small modifications and embodied connectivity</title>
+<subtitle>improvising games and ways of relating between the digital and physical</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>en</language>
+<abstract>What can we learn from small modifications and everyday resourcefulness around us?
+What parallels could we draw between hacking in the digital and physical spaces?
+How could the makeshift creations from others be inspiring for our own lives? </abstract>
+<description>A hands-on, generative workshop that invites your participation on finding answers to these questions. We will draw inspiration from a resource of lo-tech hacking/making-doing gathered from Asia-Pacific, Europe and Mexico. We will experiment with using them as tactics and tools in our daily lives; share our improvisations and try out some 3D-mapping-kinetic techniques. 
+
+Through all the doing and sharing, could we gain new ways of seeing and being with the worlds around us, virtual and physical? </description>
+<logo></logo>
+<persons>
+<person id='7407'>xin</person>
+</persons>
+<links>
+<link href='http://small-workshop.info/'>related workshops</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='1a43f764-43cc-42f9-8b15-2114685b82ee' id='8628'>
+<date>2017-05-25T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>01:00</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8628-improving_the_web_of_trust_with_gnome_keysign</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title> Improving the Web of Trust with GNOME Keysign</title>
+<subtitle>Making signing OpenPGP keys suck less</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language></language>
+<abstract>The keysigning problem helps to strengthen the Web of Trust which is the decentralised PKI in the OpenPGP world.
+It depends on people participating by signing other people's keys.
+However, when following best practises, the act of signing a key involves secure transfer of the OpenPGP key which contemporary casual key signing protocols for small groups address by exchanging the fingerprint of the key to be signed.
+The key will then be downloaded over an untrusted channel and the key obtained needs to be manually verified.
+
+</abstract>
+<description>We will see a less stressful approach to signing keys which makes it easy to sign a person's key.
+It enables very small groups of people to casually hold very small key signing parties.
+The key idea is to automatically authenticate the key material before the transfer via a secure audible or visual channel.
+A Free Software implementation of the protocol will be shown and people are invited to sign their keys :-) </description>
+<logo>/system/events/logos/000/008/628/large/gnome-keysign.png?1495703025</logo>
+<persons>
+<person id='83'>Muelli</person>
+</persons>
+<links>
+<link href='https://github.com/gnome-keysign/gnome-keysign'>GNOME Keysign</link>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='FFBW:Con'>
+</room>
+<room name='Anderswo'>
+<event guid='ddccbf8d-336e-4654-9344-1e4ec1608a82' id='8579'>
+<date>2017-05-25T19:00:00+02:00</date>
+<start>19:00</start>
+<duration>00:30</duration>
+<room>Anderswo</room>
+<slug>gpn17-8579-mcfly_mcfly</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>McFly McFly</title>
+<subtitle>by Gabriel S. Moses [Blauer Salon]</subtitle>
+<track>GPN</track>
+<type>performance</type>
+<language>en</language>
+<abstract>In this animated lecture performance, two derailed scholars engage in a desperate attempt to salvage the Internet: one claims interfaces such as Facebook are actually gamified hyper meta-fictions, programmed to enslave users by creating an illusion that they are living purposeful ‘cyberdramas’. The other will demonstrate how to break this immersive control system by literally time traveling inside the interface
+and changing its history, thereby unleashing an unexpected radical butterfly effect.</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='7342'>HfG</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='3f781c4f-4340-4037-9e6e-ec1aa1bf28e2' id='8639'>
+<date>2017-05-25T20:00:00+02:00</date>
+<start>20:00</start>
+<duration>01:00</duration>
+<room>Anderswo</room>
+<slug>gpn17-8639-gulaschausgabe</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Gulaschausgabe</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>performance</type>
+<language></language>
+<abstract></abstract>
+<description>Do: Gulasch
+Fr: Soljanka
+Sa: Gulasch</description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='ae047d26-3b45-47b3-a8aa-75b2567fa535' id='8587'>
+<date>2017-05-25T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>01:00</duration>
+<room>Anderswo</room>
+<slug>gpn17-8587-einfuhrung_in_die_chaosvermittlung</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Einführung in die Chaosvermittlung</title>
+<subtitle>2 Draht Technik nicht nur als Backupkommunikation [Chaosvermittlung]</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>de</language>
+<abstract>Die Chaosvermittlung wurde aus der Intention geboren, allen CCC nahen Leuten die Lust haben mit Feldtelefonen zu spielen eine Anlaufstelle zu bieten. Wir stellen euch in diesem Workshop unsere Technik vor und wie diese funktioniert.</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='6435'>PhilmacFLy</person>
+</persons>
+<links>
+<link href='https://www.chaosvermittlung.de'>Homepage</link>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Lounge'>
+<event guid='39d1eafb-c7ef-4b63-ac98-5c515d8d1fd5' id='8608'>
+<date>2017-05-25T18:00:00+02:00</date>
+<start>18:00</start>
+<duration>02:00</duration>
+<room>Lounge</room>
+<slug>gpn17-8608-dj-set_faheus</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>DJ-Set: faheus</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract>@faheus</abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='30addb4a-9ed1-413b-a014-2cbf779d98af' id='8609'>
+<date>2017-05-25T20:00:00+02:00</date>
+<start>20:00</start>
+<duration>01:00</duration>
+<room>Lounge</room>
+<slug>gpn17-8609-liveset_flemming</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>LiveSet: Flemming</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract>@iamflemming</abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='2319f0bf-3673-44e4-b0c3-88335146827b' id='8610'>
+<date>2017-05-25T22:00:00+02:00</date>
+<start>22:00</start>
+<duration>02:00</duration>
+<room>Lounge</room>
+<slug>gpn17-8610-dj-set_tasmo</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>DJ-Set: _Tasmo</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract>@_Tasmo</abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='a92f0d4c-8613-4ab6-995f-3cad2fb45c6e' id='8623'>
+<date>2017-05-26T00:00:00+02:00</date>
+<start>00:00</start>
+<duration>02:00</duration>
+<room>Lounge</room>
+<slug>gpn17-8623-dj-set_bam</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>DJ-Set: bam</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract>@bheisig</abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+</day>
+<day date='2017-05-26' end='2017-05-27T02:00:00+02:00' index='2' start='2017-05-26T10:00:00+02:00'>
+<room name='Medientheater'>
+<event guid='da554088-7556-43ca-81f0-1de27299973a' id='8598'>
+<date>2017-05-26T14:00:00+02:00</date>
+<start>14:00</start>
+<duration>01:15</duration>
+<room>Medientheater</room>
+<slug>gpn17-8598-owasp_top_10</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>OWASP TOP 10</title>
+<subtitle>Edition 2017 - Latest &amp; Greatest</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Die OWASP Top 10 sind in einer neuen Version verfügbar. Was hat sich geändert? Wo gibt es Diskussionen und was ist das überhaupt?
+
+Top 10 Risiken in Web-Anwendungen</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='6486'>Ives Laaf</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='3cf7b135-9ebb-45a5-8870-d3a5550198de' id='8511'>
+<date>2017-05-26T15:30:00+02:00</date>
+<start>15:30</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8511-gokrazy_ein_go_userland_fur_raspberry_pi_3_appliances</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>gokrazy: ein Go userland für Raspberry Pi 3 appliances</title>
+<subtitle></subtitle>
+<track></track>
+<type>lecture</type>
+<language>de</language>
+<abstract>gokrazy erstellt aus deiner Anwendung ein SD card image für den Raspberry Pi 3, welches — abgesehen vom Linux-Kernel und dem proprietären Raspberry Pi bootloader — ausschließlich Go software enthält.</abstract>
+<description>Bist du es Leid, deine selbstgebauten Internet of Things (IoT)-Geräte wie dein Raspberry Pi 3 zu aktualisieren? Vielen Leuten ist nicht bewusst, dass auch Linux-Installationen oftmals anfällig für Sicherheitslücken sind, oder ignorieren das Problem einfach. Anderen sind Updates einfach zu nervig.
+
+Mir ging es genauso. Auf meinem Raspberry Pi lief ein 4 Jahre altes Image, bevor es mir reichte. Statt dass ich jedoch mir wöchentlich wertvolle Zeit für Updates abzweige, habe ich mir überlegt, wie ich (1) die Angriffsfläche reduzieren kann und (2) Updates einfacher machen kann.
+
+In diesem Vortrag erzähle ich über meine Implementation eines minimalen Init-Systems, DHCP-Clients und FAT16B Dateisystem-programm, sowie über die Software-Architektur und Infrastruktur.</description>
+<logo>/system/events/logos/000/008/511/large/logo.png?1488627434</logo>
+<persons>
+<person id='7321'>Michael Stapelberg</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='f42269d1-0c07-4bac-8251-de779d65cde8' id='8575'>
+<date>2017-05-26T16:45:00+02:00</date>
+<start>16:45</start>
+<duration>00:30</duration>
+<room>Medientheater</room>
+<slug>gpn17-8575-mammut_statt_vogel</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Mammut statt Vogel</title>
+<subtitle>Das verteilte soziale Netzwerk Mastodon</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Mastodon ist ein neues soziales Netzwerk, das dezentral funktioniert und OStatus implementiert (wie auch zB GNUSocial). Hier soll erklärt werden, wie Mastodon funktioniert, welche Eigendynamik sich auf Instanzen entwickelt und Statistiken über die Nutzung der ersten Monate nach dem Abheben vorgestellt werden.</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='5638'>rixx</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='b54fc618-f047-4465-bcc0-bd9c71401e30' id='8556'>
+<date>2017-05-26T17:45:00+02:00</date>
+<start>17:45</start>
+<duration>00:45</duration>
+<room>Medientheater</room>
+<slug>gpn17-8556-vertrauen_ist_gut_kontrolle_ist_besser</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Vertrauen ist gut, Kontrolle ist besser.</title>
+<subtitle>Warum vertrauen wir eigentlich Zertifizierungsstellen?</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Jeder kennt in seinem Browser das Schloss links oben neben der URL: ist es grün, ist die Verbindung verschlüsselt und niemand kann die Kommunikation zwischen Browser und Server abhören, oder?
+
+Unsere Browser stellen das grüne Schloss dar, wenn sie für die aufgerufene URL ein gültiges Zertifikat erhalten. Diese Zertifikate werden von Zertifizierungsstellen ausgestellt, und unsere Browser vertrauen diesen Stellen.
+
+Was passiert aber, wenn ein Zertifikat für jemanden ausgestellt wird, der es gar nicht bekommen dürfte? Ist dies bereits passiert?
+
+Der Vortrag geht auf diese Fragestellungen ein und diskutiert, was getan werden kann, um solche Situationen zu verhindern.</abstract>
+<description>Im August 2011 berich­tet ein irani­scher In­ternetnutzer von ei­ner Brow­ser-War­nung, wenn er sich zu sei­nem Gmail-Konto einloggen will. Der Nutzer des Chro­me-Browsers wendet sich damit in ei­nem Forum direkt an Goog­le und fragt, ob es sich um ei­nen Man-in-the-Middle-Angriff auf die Verschlüsselung handeln könnte. Goog­le un­tersucht dar­aufhin die Si­tuati­on und bestätigt sei­ne Vermu­tung: es gab Angriffe auf die Verschlüsselung der Kommunikati­on, wovon primär In­ternetnutzer im Iran betroffen wa­ren. Die Zertifizierungs­stel­le DigiNo­tar habe un­ter an­de­rem für goog­le.com nicht autorisier­te Zertifikate aus­ge­stellt, die von Browsern an­stands­los akzep­tiert wur­den. Allein der kurz vor dem Vorfall veröff­entlich­ten Si­cherheits­funkti­on des Chro­me-Browsers sei es zu ver­danken, dass das missbräuch­lich verwende­te Zertifikat bemerkt wurde. Die neue Si­cherheits­funkti­on prüfe für den Goog­le E-Mail-Dienst Gmail nicht nur, ob das Zertifikat gültig ist, sondern auch ob es von ei­ner autorisier­ten Zertifizierungs­stel­le aus­ge­stellt wurde.
+In Chro­me und an­de­ren Browsern wur­den sofort alle Zertifikate ge­sperrt, die von DigiNo­tar aus­ge­stellt wur­den. Die Zertifizierungs­stel­le, die seit Juli 2011 von den nicht autorisier­ten Zertifika­ten für Domains von Goog­le, dem CIA, dem Mossad, dem MI6 und an­de­ren wusste, wurde unter die Aufsicht nieder­ländi­scher Behörden gestellt und es wurde ein Ermittlungs­verfah­ren ein­ge­leitet. 
+
+Kommt ein Angreifer in den Besitz ei­nes nicht autorisier­ten aber gültigen Zertifikats, sind verschlüsselte Ver­bindun­gen nicht mehr si­cher. Der Angreifer würde sich mit ei­nem Man-in-the-Middle-Angriff zwi­schen zwei Kommunikati­ons­partner set­zen und das gültige Zertifikat präsentie­ren. Dieses wird akzep­tiert, da der Client Zertifika­ten der nicht mehr vertrau­enswürdigen Zertifizierungs­stel­le vertraut. Die Kommunikati­on wird abgehört.
+
+Das Pro­blem mit Zertifika­ten ist nicht neu. Aus diesem Grund wur­den in der Vergan­genheit meh­re­re Möglichkei­ten zur Ab­si­cherung gegen fal­sche Zertifikate vor­ge­schla­gen. Beispiele sind Certificate Transparency, DNS-based Authentication of Named Entities oder auch HTTP Public Key Pinning. Certificate Transparency ist zudem topaktuell, da der Internetgigant Google dieses Verfahren für https-Verbindungen in seinem Chrome Browser im Oktober 2017 verpflichtend einführen wird.
+
+Der Vortrag gibt einen kurzen Überblick über Public Key Infrastrukturen und Zertifikate und stellt Lösungsansätze für das beschriebene Vertrauensproblem vor.</description>
+<logo>/system/events/logos/000/008/556/large/keys-525732.jpg?1490972372</logo>
+<persons>
+<person id='6465'>Andreas Sperber</person>
+</persons>
+<links>
+<link href='https://aramido.de/blog/kommunikationssicherheit/warum-vertrauen-wir-zertifizierungsstellen'>Warum vertrauen wir Zertifizierungsstellen?</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='d7c3b762-a657-4670-a41b-3a8829a6bb13' id='8524'>
+<date>2017-05-26T19:00:00+02:00</date>
+<start>19:00</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8524-wie_kommt_eigentlich_das_internet_von_hamburg_nach_stuttgart</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Wie kommt eigentlich das Internet von Hamburg nach Stuttgart?</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Wie transportiert man viele Signale in einer Glasfaser von A nach B? Wie verstärkt man eigentlich Licht? Was ist DWDM? Was macht ein EDFA? Und was passiert eigentlich in den kleinen Hütten an der Autobahn? </abstract>
+<description>Ein kleiner Einblick in die Übertragungstechnik und hinter die verschlossenen Türen diverser Verstärkerstandorte.</description>
+<logo></logo>
+<persons>
+<person id='7350'>Moritz Frenzel</person>
+<person id='7428'>Marc Helmus</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='8b54f7fa-012e-4a13-a0cf-a07408e767bf' id='8480'>
+<date>2017-05-26T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8480-the_dark_side_of_the_wifi</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>the dark side of the wifi</title>
+<subtitle>Warum 802.11ac nicht genug ist und warum es mit 802.11ax besser wird.</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Im laufe der Jahre gab es immer wieder Erweiterungen zum 802.11-Standard, aber es gibt immernoch Relikte aus alten Erweiterungen, die WLAN-Netzwerke massiv beeinträchtigen. Der Talk handelt von diesen Relikten und wie Sie in Zukunft gelöst werden.</abstract>
+<description>Schon seit längerem wird versucht den WLAN-Standard immer weiter zu verbessern. Dieser Talk handelt von den Neuerungen, welche mit 802.11ax kommen werden. Hierbei fokusierte sich die Arbeit der IEEE nicht auf eine Steigerung des Datendurchsatzes, sondern auf eine erhöhte Effizienz des Standards. Hiermit verbunden sind Änderunen im MAC-Layer oder die Einführung anderer Techniken wie OFDMA, die auch schon bei LTE verwendet werden. Der Talk bespricht alle neuen Themen und erklärt diese auf eine verständliche Art und Weise, damit für die meisten &quot;dieser neue WLAN-Standard&quot; verständlich ist.</description>
+<logo></logo>
+<persons>
+<person id='6468'>Hendrik Lüth</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='cb9e50fc-e1a5-4b95-919f-f4b8d0b31d6c' id='8521'>
+<date>2017-05-26T22:30:00+02:00</date>
+<start>22:30</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8521-sysadmin_nightmares</slug>
+<recording>
+<license></license>
+<optout>true</optout>
+</recording>
+<title>Sysadmin Nightmares</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>meeting</type>
+<language>de</language>
+<abstract>Die Therapiegruppe &quot;Gewachsene Systeme&quot; bietet Sysadmins ein Forum, um über die bizarrsten Erlebnisse in ihrer Laufbahn zu sprechen.</abstract>
+<description>Packt die besten Geschichten eurer Laufbahn in einen kurzen, auch gerne audiovisuell unterstützen Vortrag und teilt das Elend dem ihr Herr werden musstet mit der Welt.</description>
+<logo></logo>
+<persons>
+<person id='4603'>rem0te</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Studio'>
+<event guid='3c930882-c4ad-4b8d-985d-0157d33986df' id='8562'>
+<date>2017-05-26T12:00:00+02:00</date>
+<start>12:00</start>
+<duration>01:00</duration>
+<room>Studio</room>
+<slug>gpn17-8562-virtual_reality_mit_freier_software</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Virtual Reality mit Freier Software</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Kann man VR-Brillen wie Rift, Vive und PSVR ohne proprietäre Software unter Linux betreiben? Wie funktioniert die 3D-Positionsbestimmung bei den drei Systemen genau? Und wie findet man das heraus?</abstract>
+<description>Mit Oculus Rift, HTC/Valve Vive, und Sony PlayStation VR ist 2016 die erste Generation VR-Brillen mit Positionsbestimmung und 3D-Controllern auf den Markt gekommen. Alle drei Systeme lassen sich prinzipiell unter Linux betreiben, nur eines davon hat (Stand April 2017) offizielle Unterstützung mit proprietären Treibern dafür in Sicht.
+Dieser Vortrag erläutert die Funktionsweise der drei Systeme zum Positions-Tracking, gibt einen Überblick über die unterschiedlich weit fortgeschrittenen Bestrebungen, diese Geräte mit komplett freier Software zu betreiben, und die dazu notwendigen Reverse-Engineering Aktivitäten.</description>
+<logo></logo>
+<persons>
+<person id='7385'>Philipp Zabel</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='0134fe5e-500b-4595-93e4-2c8e5ba3ddca' id='8533'>
+<date>2017-05-26T13:30:00+02:00</date>
+<start>13:30</start>
+<duration>01:30</duration>
+<room>Studio</room>
+<slug>gpn17-8533-network_flow_analysis_using_netflow_protocols_and_tflow2</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Network Flow Analysis using Netflow protocols and tflow2</title>
+<subtitle>How to know what your network does</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>en</language>
+<abstract>Introduction into network flow analysis and implementation of tflow2</abstract>
+<description>Why network flow analysis?
+Short introduction to protocols Netflow v9, IPFIX and sFlow.
+Example of a flow emitter: ipt-NETFLOW
+Deep dive into tflow2 usage, architecture and implementation.</description>
+<logo></logo>
+<persons>
+<person id='7359'>takt</person>
+</persons>
+<links>
+<link href='http://github.com/google/tflow2'>tflow2</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='babc79ad-5fde-44e6-89de-7a89869577b5' id='8602'>
+<date>2017-05-26T15:30:00+02:00</date>
+<start>15:30</start>
+<duration>02:00</duration>
+<room>Studio</room>
+<slug>gpn17-8602-lightning_talks_1</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Lightning Talks 1</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='4490'>Eve Entropia</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='3dd64605-0402-4a89-955c-3a48a4dc1ff8' id='8592'>
+<date>2017-05-26T17:45:00+02:00</date>
+<start>17:45</start>
+<duration>00:45</duration>
+<room>Studio</room>
+<slug>gpn17-8592-neues_ecad-programm_horizon</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Neues ECAD-Programm horizon</title>
+<subtitle>Warum ECAD in Zukunft Spaß machen wird.</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>horizon ist ein neues Elektronik-CAD-Programm, an dem ich seit einigen Monaten entwickele.</abstract>
+<description>Keines der existierenden (freien) ECAD-Programme entspricht derzeit meiner Vorstellung von einem modernen ECAD-Programm. Daher begann ich mit der Entwicklung von horizon.
+
+Neben den Ideen hinter horizon und Implementierungsaspekten geht es in diesem Vortrag darum, wo das Projekt derzeit steht und wie es in Zukunft damit weiter gehen könnte.</description>
+<logo></logo>
+<persons>
+<person id='7400'>lukas</person>
+</persons>
+<links>
+<link href='http://github.com/carrotIndustries/horizon'>Projektseite auf github</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='0a3ac728-e175-4746-98e2-5f0c0e028f29' id='8536'>
+<date>2017-05-26T19:00:00+02:00</date>
+<start>19:00</start>
+<duration>01:00</duration>
+<room>Studio</room>
+<slug>gpn17-8536-smarthome_mit_iobroker</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Smarthome mit ioBroker</title>
+<subtitle>Über Home-Automation und wie man das mit ioBroker machen kann.</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>ioBroker ist eine Open Source Integrationsplattform für das Internet der Dinge (IoT) und kann als zentraler Server für Building Automation, Anwendungen für Ambient Assisted Living und das Smart Home genutzt werden. </abstract>
+<description>Ich werde sehr kurz über aktuellen Stand von Open Source - Home Automation Projekte erzählen und ein bisschen länger über die Möglichkeiten von ioBroker beschreiben.
+Momentan gibt es openHAB, pimatic, home-assistant, ioBroker, FHEM, domoticz... 
+
+Dabei ioBroker ist relativ junges, aber sehr dynamisches und viel versprechendes Projekt.
+</description>
+<logo>/system/events/logos/000/008/536/large/logo.png?1490016953</logo>
+<persons>
+<person id='7363'>Bluefox</person>
+</persons>
+<links>
+<link href='http://iobroker.net'>Web Site</link>
+<link href='http://forum.iobroker.net'>Forum</link>
+</links>
+<attachments>
+<attachment href='/system/event_attachments/attachments/000/003/171/original/ioBroker_presentation.pdf?1490016953'>Presentation</attachment>
+</attachments>
+</event>
+<event guid='567b415b-22c0-4371-86e8-454ad43734f8' id='8518'>
+<date>2017-05-26T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>01:00</duration>
+<room>Studio</room>
+<slug>gpn17-8518-webserversecurity_101</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Webserversecurity 101</title>
+<subtitle>Ich habe da diese Kiste gemietet...und jetzt?</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>In diesem Talk thematisiert die Irrungen und Wirrungen um die Sicherheit des ersten eigenen, am Internet hängen Webservers.</abstract>
+<description>Ich habe mir diesen Rootserver gemietet. Und nun?
+
+Der Talk gibt einen Abriss über die Fallstricke im Bereich Serversicherheit und klärt über die kleinen Feinheiten bei SSH/SFTP, Apache2, der TLS Konfigurationen und im Umgang mit Let's Encrypt.</description>
+<logo></logo>
+<persons>
+<person id='4603'>rem0te</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='ZKM-Vortragssaal'>
+<event guid='da855d30-e440-49f1-b811-afac8cd3ed43' id='8554'>
+<date>2017-05-26T14:00:00+02:00</date>
+<start>14:00</start>
+<duration>01:00</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8554-digitalisierte_stromnetze_und_smart_meter_in_deutschland</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Digitalisierte Stromnetze und Smart Meter in Deutschland</title>
+<subtitle>Ein Überblick</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract></abstract>
+<description>Dieser Talk erklärt, was es mit digitalen Stromzählern und Smart-Meter-Gateways auf sich hat, welche Kommunikationskanäle es in „intelligenten“ Stromnetzen gibt, was für Daten manche Stromzähler künftig automatisiert herausgeben müssen, und wie genau diese Daten wem einen Mehrwert bringen sollen.
+
+Dazu wird einleitend ein Überblick gegeben über verschiedene an der Strombereitstellung beteiligte Akteure – von Übertragungsnetzbetreibern, Verteilnetzbetreibern, Messstellenbetreibern, Stromlieferanten und -verbrauchern bis hin zu Flexibilitätsaggregatoren – sowie den Aufbau unseres Stromnetzes mit verschiedenen Netzebenen und Bilanzkreisen. Darauf basierend werden (informations)technische Herausforderungen zur Integration eines hohen Anteils erneuerbarer, fluktuierender Energiequellen erläutert. Hervorzuheben sind dabei insbesondere der Bedarf eines ständigen Ausgleichs von Erzeugung und Verbrauch (ökonomisches Gleichgewicht durch Strommärkte, technische Frequenzhaltung durch Übertragungsnetzbetreiber) sowie die Lastflussumkehr durch vermehrt dezentrale Einspeisung in Verteilnetzen (erschwerte Spannungshaltung für Verteilnetzbetreiber).
+
+In diesem Kontext wird insbesondere auf Smart-Meter-Gateways eingegangen, welche gemäß dem neuen „Gesetz zur Digitalisierung der Energiewende“ in den kommenden Jahren bei Stromverbrauchern teilweise verpflichtend verbaut werden müssen. Digitale Stromzähler sowie Steuerboxen im Haus (Photovoltaik- und Kraft-Wärme-Kopplungsanlagen, Elektrofahrzeuge) werden über diese Gateways in Zukunft automatisiert mit Netzbetreibern und externen Strommarktteilnehmern kommunizieren können – und abhängig von deren Jahresverbrauch sogar müssen. Durch das Aufzeigen entsprechender Konzepte und Hintergründe sollen die mit dieser Digitalisierung einhergehenden Risiken und Potentiale besser verstanden werden.</description>
+<logo></logo>
+<persons>
+<person id='7372'>Manuel Lösch</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='09528c03-ddb7-4bcb-9d83-322c500918d5' id='8528'>
+<date>2017-05-26T15:30:00+02:00</date>
+<start>15:30</start>
+<duration>01:00</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8528-from_mirai_to_apple</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>From Mirai to Apple</title>
+<subtitle>How IoT devices bypass Routers</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>en</language>
+<abstract>In my talk I will show how the Mirai bot net abused a common implementation flaw in many IoT devices, which opens home firewalls to the internet. This allows anyone looking to find those devices using tools as simple as Shodan.io .</abstract>
+<description>While reading about the Mirai botnet I was confronted with a simple and yet profound question: How the hell could this even work? Shouldn't there be firewalls built into every router to prevent such an attack? And (almost) no one who buys an IoT device knows how to manually open the ports on their routers. So how could Millions of these things become a botnet?
+&lt;br&gt;
+This question send me on a scavenger hunt searching for a way to find the smartest device in my home network. A multi-function printer.
+To get my answers I had to look into how UPnP ,and Apples alternative Bonjour, work.</description>
+<logo></logo>
+<persons>
+<person id='7356'>Puck</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='6ae836a0-0b7d-4a55-bc1d-55ba4da11ec7' id='8514'>
+<date>2017-05-26T16:45:00+02:00</date>
+<start>16:45</start>
+<duration>01:30</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8514-salt-orchestrated_software_defined_freifunk_backbone_im_hochstift</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Salt-Orchestrated Software Defined Freifunk Backbone im Hochstift</title>
+<subtitle>Ideen, Neues, OPS Experience und Lessons Learned</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Konzepte, Ideen, Schmerzen, und Erfahrungen mit dem letzten Level des Netzdesigns/der Ausbaustufen der Freifunk Hochstift Infrastruktur, Richtfunk-Backbone und Zeugs.
+
+Optimalerweise sind bis zur GPN viele[tm] neue POPs in der City und Umgebung online und es kommt eine dicke Portion OPS Experience und Lessons Learned Kapitel #7511 mit dem ganzen Richtfunk-basierten Teil dazu.</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='7345'>BarbarossaTM</person>
+</persons>
+<links>
+<link href='https://events.ccc.de/congress/2016/wiki/Session:SOSDF%28H%29B:_Salt-Orchestrated_Software_Defined_Freifunk_%28Hochstift%29_Backbone:_DataCenter_und_Carrier_Techniken_f%C3%BCr_Freifunk_abgucken'>SOSDF(H)B: Salt-Orchestrated Software Defined Freifunk (Hochstift) Backbone: DataCenter und Carrier Techniken für Freifunk abgucken (Talk vom #33c3)</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='3ba8d1a1-f291-473d-9c1f-87f615394123' id='8593'>
+<date>2017-05-26T18:30:00+02:00</date>
+<start>18:30</start>
+<duration>01:30</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8593-sha2017_orga_meet_gpn17</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>SHA2017 Orga Meet @ GPN17</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>other</type>
+<language>de</language>
+<abstract>SHA2017 Orga Meet @ GPN17</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='6499'>Twi</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='59d17bd3-742d-420e-a60e-50d6eb53ce36' id='8596'>
+<date>2017-05-26T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>00:45</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8596-the_elektr0nic_window</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>The Elektr0nic Window</title>
+<subtitle>Building a new real-time video communication paradigm</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language></language>
+<abstract>The Elektronic Window is a new concept to increase collboration between Hackspaces and like-minded quartiers.
+As a video-chat communication tool, it separates itself from Skype and the likes by 1) being 100% Free Software, and 2) basing identity on spaces instead of individuals and 3) running on a Raspberry Pi, without the any WebRTC/Browser-overhead inbetween.</abstract>
+<description></description>
+<logo>/system/events/logos/000/008/596/large/photo_2017-05-10_13-27-06.jpg?1494696274</logo>
+<persons>
+<person id='5762'>strfry</person>
+</persons>
+<links>
+<link href='http://ewindow.org'>Projektseite</link>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Workshopraum'>
+<event guid='45a50f00-d827-4ec8-a797-324224861cc8' id='8594'>
+<date>2017-05-26T11:45:00+02:00</date>
+<start>11:45</start>
+<duration>01:00</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8594-einfuhrung_in_onshape</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Einführung in Onshape</title>
+<subtitle>Online CAD fuer 3D-Drucker und Lasercutter</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>de</language>
+<abstract>Einfuehrung in Onshape
+
+Ich wuerde auf der GPN gerne einen Workshop zum Thema Onshape veranstalten. 
+Onshape ist ein webbasiertes CAD Programm mit dem man kostenlos Objekte gestalten kann. 
+(Solange man nicht zahlt, sind alle Projekte oeffentlich sichtbar aber dafuer hat man alle Funktionen, 
+also das gleiche Modell wie bei github). 
+
+Onshape benutze ich seit ein paar Monaten um Objekte fuer den 3d-Drucker aber auch fuer den Lasercutter
+zu bauen. (Da ich keinen bezahlten Account habe, kann man meine Dokumente auch unter meinem Namen finden). 
+
+Die Grundideen von Onshape sind in 30min erklaert, danach ist jeder in der Lage, kleinere Modelle zu bauen und
+ab dann ist es Uebungssache. 
+
+Da Onshape im Browser laueft, kann jeder direkt im Workshop anfangen zu bauen, vielleicht kann ich auch noch einen Drucker mitbringen. 
+
+Bei Bedarf kann ich die Veranstaltung auch auf englisch machen. </abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='7347'>Nikolas Engelhard</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='4ac4a40e-41ec-474e-9015-2d17a55992a3' id='8582'>
+<date>2017-05-26T13:00:00+02:00</date>
+<start>13:00</start>
+<duration>02:30</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8582-zfs_replication_with_zrepl</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>ZFS replication with zrepl</title>
+<subtitle>It's not a shell script.</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>en</language>
+<abstract>ZFS replication is commonly implemented through shell scripts with lots of pipes.
+
+&lt;a href=&quot;https://github.com/zrepl/zrepl&quot;&gt;zrepl&lt;/a&gt; is a Go application that aims at providing a safer, faster and more flexible alternative.
+</abstract>
+<description>The primary developer will give a quick walk through the code &amp; basic concepts.
+
+The remaining time will be open for
+
+&lt;ul&gt;
+&lt;li&gt; discussions about ZFS and replication&lt;/li&gt;
+&lt;li&gt; zrepl codebase itself&lt;/li&gt;
+&lt;li&gt; trying zrepl and getting it running on your setup&lt;/li&gt;
+&lt;li&gt; welcoming new contributors&lt;/li&gt;
+&lt;/ul&gt;
+
+Attendees should be reasonably familiar with the ZFS command line.
+Please bring your own device. And possibly SSH keys to a ZFS test system :)
+
+&lt;b&gt;Note:&lt;/b&gt; At the time of submission, zrepl is still under active development and not finished. The meetup aims at spreading the word about the project and attracting potential users.
+</description>
+<logo></logo>
+<persons>
+<person id='5554'>problame</person>
+</persons>
+<links>
+<link href='https://github.com/zrepl/zrepl'>zrepl on GitHub</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='2a0aa04d-e42c-4ffe-aef4-6316402da3f3' id='8559'>
+<date>2017-05-26T15:45:00+02:00</date>
+<start>15:45</start>
+<duration>01:00</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8559-mate_making_diy</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Mate Making DIY</title>
+<subtitle>Mate as a Hacker Tool &amp; Fuel</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>de</language>
+<abstract>Want to know more about the Mate that energizes you throughout the day?  Or have you always wondered what Mate was or how it was made?  AMA session about mate making and drinking.</abstract>
+<description>Workshop for drinking mate along with a talk about mate hacking and mate sustainability.  </description>
+<logo>/system/events/logos/000/008/559/large/rainbowhands.jpeg?1491316579</logo>
+<persons>
+<person id='4172'>@metamateberlin</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='08a959a6-7369-4a2a-8582-097a8583a801' id='8550'>
+<date>2017-05-26T17:00:00+02:00</date>
+<start>17:00</start>
+<duration>03:00</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8550-guerilla_stricken</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Guerilla Stricken</title>
+<subtitle>Kunst aus Wolle</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>de</language>
+<abstract>Guerilla Stricken ist eine Form der Streetart</abstract>
+<description>Guerilla Stricken st eine Form der Streetart, bei der Gegenstände im öffentlichen Raum durch Stricken verändert werden. Dies kann vom Anbringen von gestrickten Accessoires bis zum Einstricken ganzer Stadtmöbel reichen. Die Knittings können lediglich der Verschönerung dienen oder auch eine symbolische Bedeutung haben.
+
+In diesem workshop wird das Prinzip erklärt, stricken und häkeln beigebracht und ein kleineres Projekt gemeinsam gestrickt oder gehäkelt.</description>
+<logo>/system/events/logos/000/008/550/large/Ffm_traxler_statue_elche_mit_guerilla-knitting.jpg?1490806800</logo>
+<persons>
+<person id='7377'>minituex</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='81a08fed-19dc-416b-ad0f-4ae82410dc1d' id='8546'>
+<date>2017-05-26T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>02:00</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8546-pixel-art_workshop</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Pixel-Art Workshop</title>
+<subtitle>Wir malen sehr, sehr kleine Bilder</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>de</language>
+<abstract>Ihr erhaltet eine kurze Einführung in die Techniken und Prinzipien der Pixel-Art, sowie praktische Tipps, Lernressourcen und Softwareempfehlungen. Anschließend malen wir zusammen ein paar 16x16 Pixel große Bilder. Wenn ihr Twitter benutzt, werdet ihr auch dieses Format mögen! :)</abstract>
+<description>Am besten installiert ihr euch zur Vorbereitung schon mal ein geeignetes Programm. Gegen GIMP ist nichts einzuwenden, meine Empfehlung ist jedoch das auf Pixel-Art spezialisierte &lt;a href=&quot;http://www.aseprite.org/&quot;&gt;Aseprite&lt;/a&gt;. Das ist leider seit September letzten Jahres keine freie Software mehr, aber ihr solltet die GPL-Version (v1.1.7) noch in euren Repositories finden. Oder ihr baut euch die aktuelle Version selbst, denn quelloffen ist es nach wie vor. Für Windows &lt;a href=&quot;https://www.reddit.com/r/PixelArt/comments/546t7g/metaaseprite_builtcompiled_by_me/&quot;&gt;findet ihr auch Binärpakete&lt;/a&gt;.</description>
+<logo>/system/events/logos/000/008/546/large/littledory-large.png?1490365333</logo>
+<persons>
+<person id='6697'>blinry</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='130b566e-d13f-4118-9c45-542b4dbd840a' id='8517'>
+<date>2017-05-26T23:45:00+02:00</date>
+<start>23:45</start>
+<duration>03:00</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8517-werwolfe_von_dusterwald</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Werwölfe von Düsterwald</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>other</type>
+<language>de</language>
+<abstract>Wir spielen Werwölfe von Düsterwald</abstract>
+<description>Wir spielen Werwölfe von Düsterwald</description>
+<logo></logo>
+<persons>
+<person id='4603'>rem0te</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='FFBW:Con'>
+</room>
+<room name='Anderswo'>
+<event guid='63ab7b9a-8727-4e51-90d7-46a6acff6d45' id='8625'>
+<date>2017-05-26T11:30:00+02:00</date>
+<start>11:30</start>
+<duration>01:30</duration>
+<room>Anderswo</room>
+<slug>gpn17-8625-hackertours</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Hackertours</title>
+<subtitle>Besichtigung der U-Bahn Baustelle</subtitle>
+<track>GPN</track>
+<type>other</type>
+<language>de</language>
+<abstract>Besichtigung der gerade entstehenden Haltestellen und Tunnel. </abstract>
+<description>Treffpunkt ist das K-Punkt (Ettlinger-Tor-Platz 1a )
+Hier werden alle Teilnehmer mit Helm, Weste und Sicherheitsschuhen ausgestattet. Von hier beginnt die Tour durch einige Haltestellen und die Tunnel in unterschiedlichen Bauweisen.
+
+Anmeldung unter https://entropia.de/GPN17:hackertours</description>
+<logo>/system/events/logos/000/008/625/large/IMG_20161011_110242.jpg?1495136507</logo>
+<persons>
+<person id='7429'>Nyx</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='9f2e3202-ffaf-4a22-9255-1d61922ff383' id='8627'>
+<date>2017-05-26T18:00:00+02:00</date>
+<start>18:00</start>
+<duration>02:00</duration>
+<room>Anderswo</room>
+<slug>gpn17-8627-critical_mass</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Critical Mass</title>
+<subtitle>Abfahrt Kronenplatz</subtitle>
+<track></track>
+<type>other</type>
+<language></language>
+<abstract>Die Critical Mass ist eine weltweite Bewegung, die auch in Karlsruhe stattfindet. Wir treffen uns jeden letzten Freitag im Monat um 18 Uhr am Kronenplatz!</abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+<link href='https://www.facebook.com/CriticalMassKarlsruhe/'>CriticalMass Facebook page</link>
+<link href='https://www.facebook.com/events/1304563232996201/?acontext=%7B%22action_history%22%3A%22null%22%7D'>CriticalMass Facebook event</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='34537e1a-ee05-4711-b223-31a2c0627a0d' id='8640'>
+<date>2017-05-26T20:00:00+02:00</date>
+<start>20:00</start>
+<duration>01:00</duration>
+<room>Anderswo</room>
+<slug>gpn17-8640-gulaschausgabe</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Gulaschausgabe</title>
+<subtitle></subtitle>
+<track></track>
+<type></type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='e2c9ce85-8123-4315-ac6b-ca898dca9717' id='8631'>
+<date>2017-05-26T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>00:45</duration>
+<room>Anderswo</room>
+<slug>gpn17-8631-2_stars_in_the_sky</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>2³² Stars In The Sky</title>
+<subtitle>A Guided Tour Of The Internet [Blauer Salon]</subtitle>
+<track>GPN</track>
+<type>performance</type>
+<language></language>
+<abstract></abstract>
+<description>Die Seiten im Internet sind die Sterne an unserem digitalen Himmel. Wir gehen stargazen. Wir gehen auf eine geruhsame Tiefensuche durch das Internet und suchen nach nichts bestimmtem. Willkommen an Bord, ich bin heute Abend ihr Führer. Jede Reise ist anders, aber heute Abend fangen wir an bei dem Autor William Gibson und landen tief in der Cyberpunk Kultur der späten 80er und 90er. Das Internet ist ein zu schöner und wundersamer Ort, als das es nur unbetrachtet auf Servern liegen sollte. Du wirst auf diesem Vortrag wahrscheinlich nicht schlauer, aber vielleicht siehst du nachher das Internet auf eine andere Art. Oder fühlst dich inspiriert, selbst so eine Reise zu machen.
+//
+Pages on the web are the stars of our digital sky. We are going stargazing. A relaxing depth-first-search for nothing in particular. Welcome on board, I will be your guide for the evening. Every journey is unique, but tonight we begin at author William Gibson and end up deep in the cyberpunk culture of the late 80s and 90s. The internet is way too beautiful and weird to lie unobserved on some dusty servers somewhere. You are probably won't learn much in this presentation, but maybe you will see the internet in a different way. Or feel inspired to go on a journey of your own.
+</description>
+<logo></logo>
+<persons>
+<person id='5666'>stetsVerneint</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Lounge'>
+<event guid='a01a9f27-42c9-4eef-99cf-d54269e8c7a6' id='8612'>
+<date>2017-05-26T18:00:00+02:00</date>
+<start>18:00</start>
+<duration>02:00</duration>
+<room>Lounge</room>
+<slug>gpn17-8612-liveset_halfur</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>LiveSet: Halfur</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract>@RC1342</abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='f7b4450b-0a38-4812-9c07-5c9ed56c6415' id='8613'>
+<date>2017-05-26T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>02:00</duration>
+<room>Lounge</room>
+<slug>gpn17-8613-dj-set_lino</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>DJ-Set: Lino</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract>@iamflemming
+@apexys</abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='c0ee5562-9d0d-4196-a659-4a50f4aa9df5' id='8614'>
+<date>2017-05-26T23:00:00+02:00</date>
+<start>23:00</start>
+<duration>03:30</duration>
+<room>Lounge</room>
+<slug>gpn17-8614-liveset_couchsofa</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>LiveSet: Couchsofa</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract>@couchsofa</abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+</day>
+<day date='2017-05-27' end='2017-05-28T02:00:00+02:00' index='3' start='2017-05-27T10:00:00+02:00'>
+<room name='Medientheater'>
+<event guid='c341f69d-a163-4a8e-a121-7961ee355791' id='8576'>
+<date>2017-05-27T14:30:00+02:00</date>
+<start>14:30</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8576-freebsd_the_power_to_serve_a_community</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>FreeBSD: The Power to Serve a Community</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>In diesem Vortrag wird das FreeBSD Projekt vorgestellt. FreeBSD ist ein direkter Abkömmling des an der Universität von Kalifornien in Berkeley entwickelten freien 4.4-BSD Betriebssystems. Seit 1993 ist dieses Open Source-Projekt mit über 100 weltweiten Entwicklern (sog. Committern) eines der am längsten existierenden Unix-Derivate. Innovationen wie BSD Sockets, der original TCP/IP-Stack, Jails zur Kompartmentalisierung von Anwendungen und viele weitere sind dank der unternehmensfreundlichen BSD-Lizenz für alle zugänglich. FreeBSD ist ein komplettes Betriebssystem, dass sowohl Kernel als auch Bibliotheken und Anwendungsprogramme (Userland) grösstenteils selbst entwickelt. Dabei wird grosser Wert auf Kompatibilität zu anderen Unix-Systemen gelegt.</abstract>
+<description>Der Vortrag gewährt einen Blick hinter die Kulissen des Projekts. Besonderer Fokus gilt der Struktur des Projekts und dessen Organisation. FreeBSD ist eines der ältesten Projekte mit einer demokratisch gewählten Leitung (Core Team). Die einzelnen Teams wie src, ports und doc werden vorgestellt und deren Verantwortlichkeiten geschildert. Ebenso wird auf Maßnahmen eingegangen, die das Projekt getroffen hat, um einerseits Burnout bei Langzeitteilnehmern zu vermeiden und andererseits Nachrücker zu ermutigen, sich selbst und neue Ideen einzubringen. Erfahrene Committer führen durch das Mentoringkonzept Neulinge in das Projekt ein, bis diese selbstständig und ohne Aufsicht Änderungen vornehmen können.
+Im Vortrag werden auch die Tools vorgestellt, mit denen das Projekt seine bewährte Qualität, Stabilität und Sicherheit gewährleistet. Dazu zählen u.a. Code-Reviews, Continuous Integration und Coverity Scans. Das Projekt arbeitet dabei Hand in Hand mit der Community, bestehend aus Einzelpersonen, Unternehmen, als auch anderen Open Source-Projekten. Beispielsweise lässt sich FreeBSD komplett mit LLVM/Clang übersetzen und integriert DTrace und OpenZFS.
+Zum Schluss des Vortrags wird die FreeBSD Foundation vorgestellt. Diese kümmert sich um die finanzielle und rechtliche Seite des Projekts. Viele Dinge wie die Vereinbarung von Non-Disclosure Agreements mit Entwicklern, Sponsoring von Konferenzen, das Sammeln von Spenden, Hardwarekäufe für Projektserver und der Schutz der Marke FreeBSD sind nur einige der Aufgaben dieser in den USA als gemeinnützig aner- kannten Stiftung.
+Mit diesem Vortrag soll das Projekt interessierten Zuhörern (mit und ohne Vorwissen) näher gebracht werden. Es sollen auch die Erfahrungen, welche das Projekt über viele Jahre im Open Source Bereich gemacht hat, weitergegeben werden.</description>
+<logo></logo>
+<persons>
+<person id='7406'>Benedict Reuschling</person>
+</persons>
+<links>
+<link href='https://www.freebsd.org'>FreeBSD Homepage</link>
+<link href='https://www.freebsdfoundation.org'>FreeBSD Foundation</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='1281cbca-b4f1-45f5-b385-75fd69d7879e' id='8535'>
+<date>2017-05-27T16:00:00+02:00</date>
+<start>16:00</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8535-lossless_data_compression</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Lossless Data Compression</title>
+<subtitle>Modern Scope and Applications</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Der Vortrag gibt einen Überblick über den Wirkungsbereich und aktuelle Anwendungen der verlustfreien Datenkompression. Er stellt die wesentlichen Eigenschaften der Basisalgorithmen und einiger moderner Verfahren sowie deren Beziehungen zueinander dar. Technische Details zu den Methoden und ihren Implementierungen werden ausgelassen. Zielgruppe dieses Vortrags sind am Thema Interessierte, die insbesondere verstehen wollen, warum die verlustfreie Datenkompression nach wie vor und gerade in Zeiten enorm wachsender Datenmengen wie auch Speicherkapazitäten eine wichtige Technologie und ein aktives Forschungsfeld ist.</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='7348'>Kai Sandfort</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='d8e3c106-4f42-4a68-8d55-62f708f5bf89' id='8545'>
+<date>2017-05-27T17:30:00+02:00</date>
+<start>17:30</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8545-esoterische_programmiersprachen</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Esoterische Programmiersprachen</title>
+<subtitle>Eine Einführung in Brainfuck, INTERCAL, Befunge, Malbolge und Shakespeare</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Es gibt eine Gruppe von Programmiersprachen, die nicht dafür entwickelt wurden, tatsächlich zum praktischen Programmieren verwendet zu werden. Diese sogenannten &quot;esoterischen&quot; Programmiersprachen haben andere Zwecke: Sie sollen unterhalten, hübsch sein, oder ein Konzept demonstrieren. Dieser Vortrag stellt fünf einflussreiche, stereotypische und grundverschiedene esoterische Programmiersprachen vor: Das minimalistische Brainfuck, das merkwürdige INTERCAL, das mehrdimensionale Befunge, das schwere Malbolge, und das poetische Shakespeare.</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='6697'>blinry</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='05c1739a-5802-4e84-afce-a71acba67e67' id='8590'>
+<date>2017-05-27T19:00:00+02:00</date>
+<start>19:00</start>
+<duration>01:00</duration>
+<room>Medientheater</room>
+<slug>gpn17-8590-alice_explodiert</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Alice explodiert!</title>
+<subtitle>... und woher weiß Bob das?</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Wie können wir mithilfe von kosmischer Strahlung, Gammasignalen und Neutrinos mehr über hochenergetische Objekte im Universum herausfinden? Eine Einführung in die Multimessenger- Astroteilchenphysik. </abstract>
+<description>Über die Natur von astrophysikalischen Objekten gibt es viele Ideen und Theorien. Aber wie können wir herausfinden, ob schwarze Löcher, Supernovaexplosionen und Pulsare wirklich so aussehen, wie wir sie uns vorstellen? Neutrino-Observatorien wie IceCube, Teleskope und Satelliten messen heutzutage weit mehr als nur das sichtbare Lichtsignal. Aber welche Teilchen kommen überhaupt aus dem Universum zu uns? Wie können sie entstehen, und wie weisen wir sie nach?</description>
+<logo></logo>
+<persons>
+<person id='7409'>Anni</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='e13686d9-2d53-4305-ba3d-57065b3db383' id='8605'>
+<date>2017-05-27T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>01:30</duration>
+<room>Medientheater</room>
+<slug>gpn17-8605-how_to_fly_to_the_moon</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>How to fly to the Moon</title>
+<subtitle>The story of Apollo</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>en</language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='7329'>Nabla</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Studio'>
+<event guid='fa13b9e8-1f6e-4a64-8398-c4c717074551' id='8481'>
+<date>2017-05-27T13:00:00+02:00</date>
+<start>13:00</start>
+<duration>01:00</duration>
+<room>Studio</room>
+<slug>gpn17-8481-git-dit</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>git-dit</title>
+<subtitle>Distributed issue tracking with git</subtitle>
+<track></track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Wir stellen ein Werkzeug zum verteilten Issue-Tracking mit git vor, welches wir in einem Semesterprojekt an unserer Hochschule entwickelt haben.</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='7327'>Matthias</person>
+<person id='7328'>Julian Ganz</person>
+</persons>
+<links>
+<link href='github.com/neithernut/git-dit'>github Projekt</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='c3354504-09b1-44f4-93de-a26181b54408' id='8513'>
+<date>2017-05-27T16:00:00+02:00</date>
+<start>16:00</start>
+<duration>01:00</duration>
+<room>Studio</room>
+<slug>gpn17-8513-playing_studio_sets_live_with_ableton</slug>
+<recording>
+<license></license>
+<optout>true</optout>
+</recording>
+<title>Playing Studio Sets Live with Ableton</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='5430'>couchsofa</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='10c12f08-09ce-4000-ba2e-a65c6b40b402' id='8603'>
+<date>2017-05-27T17:30:00+02:00</date>
+<start>17:30</start>
+<duration>02:00</duration>
+<room>Studio</room>
+<slug>gpn17-8603-lightning_talks_2</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Lightning Talks 2</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='4490'>Eve Entropia</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='7dc6f456-31bb-4efd-b63a-4cc345d1a614' id='8510'>
+<date>2017-05-27T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>01:00</duration>
+<room>Studio</room>
+<slug>gpn17-8510-die_manpages_debian_org-modernisierung</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Die manpages.debian.org-Modernisierung</title>
+<subtitle>über die modernste (mir bekannte) Web 1.0-Anwendung</subtitle>
+<track></track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Mit manpages.debian.org haben wir kürzlich die vollständigste Manpage-Seite im Netz geschaffen. In diesem Vortrag geht es um die dahinterstehende Motivation, Ziele, Implementation, Überraschungen und Zukunftspläne des Projekts.</abstract>
+<description>Ein paar statische Seiten ausliefern klingt einfach. Manpages von einem Betriebssystem auszuliefern klingt wie etwas, was schon etliche Male erledigt wurde. Wenn man jedoch ein bisschen genauer hinschaut, stellt man schnell fest, dass man einige Wochen darauf aufwenden kann, wenn einem die Details wichtig sind.
+
+Als einfaches Beispiel: man kann nicht einfach alle Dateien unter /usr/share/man/ extrahieren. Schließlich enthalten unterschiedliche Debian-Binärpakete Manpages mit dem selben Namen: mysqld(8) ist beispielsweise sowohl in mariadb-server-core-10.0 als auch in mysql-server-core-5.5 enthalten.
+
+Generell, wenn man lediglich Manpages aus Paketen extrahiert, macht man es sich zu einfach. Beliebte Pakete wie vi(m) oder ganeti benutzen das Konzept der „slave alternative“-Symlinks, damit die Manpage /usr/share/man/man1/vi.1 auch auf genau die derzeit bevorzugte/installierte Variante von vi (oder Version von ganeti) zeigt. Diese Indirektion wird zur Installationszeit (!) von einem shell-Script (!) aufgesetzt.
+
+Zu diesem inhärent schwierigen Datensatz kommen hohe Ansprüche an moderne Websites und betagte Hardware als Laufzeitumgebung hinzu, und schon steht man vor einem interessanten Problem.
+
+Kommt zu meinem Vortrag für haufenweise interessante Details und Fun-Facts!</description>
+<logo></logo>
+<persons>
+<person id='7321'>Michael Stapelberg</person>
+</persons>
+<links>
+<link href='https://manpages.debian.org'>manpages.debian.org</link>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='ZKM-Vortragssaal'>
+<event guid='ec1c7660-cf4a-46be-b0d7-7e0c2a956c0a' id='8578'>
+<date>2017-05-27T13:00:00+02:00</date>
+<start>13:00</start>
+<duration>02:00</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8578-borgbackup_treffen</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>BorgBackup Treffen</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>meeting</type>
+<language>de</language>
+<abstract>Kurze Einführung für Interessierte, Erfahrungsaustausch für Benutzer, Frage-Runde, aktuelle Entwicklungen, Projekt-Status, Code-Rundgang.
+
+Flexibel - was gewünscht wird.</abstract>
+<description></description>
+<logo>/system/events/logos/000/008/578/large/logo.png?1493159121</logo>
+<persons>
+<person id='4463'>Thomas Waldmann</person>
+</persons>
+<links>
+<link href='http://borgbackup.readthedocs.io/'>BorgBackup</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='c6af1050-4194-4ce9-a54f-8c19c6e13b88' id='8586'>
+<date>2017-05-27T16:00:00+02:00</date>
+<start>16:00</start>
+<duration>01:00</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8586-panik_uberall</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Panik überall</title>
+<subtitle>Das Leben und Überleben mit Panikattacken</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Ich möchte aus der Sicht einer persönlich betroffenen Person über das Thema Panikattacken aufklären und auch von den Erfahrungen anderer Leute darüber berichten</abstract>
+<description>Dadurch das ich selbst davon betroffen bin ist es ein für mich wichtiges Thema über das ich erzählen und aufklären will. Viele haben vielleicht schon davon gehört aber es hat sie nie richtig bewusst gemacht was es tun kann mit Menschen die daran leiden und täglich damit leben müssen. </description>
+<logo></logo>
+<persons>
+<person id='7408'>@VeroRegenbogen</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='c4b64657-4468-4214-8a90-fcaf6f1ce2a0' id='8600'>
+<date>2017-05-27T17:30:00+02:00</date>
+<start>17:30</start>
+<duration>01:30</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8600-owasp_top_10_privacy_risks_project</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>OWASP Top 10 Privacy Risks Project</title>
+<subtitle>Und die neue GDPR / EU-DSGVO</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Datenschutz und technisch organisatorische Risiken, sowie mögliche Maßnahmen und ein bisschen neue DSGVO... </abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='6486'>Ives Laaf</person>
+</persons>
+<links>
+<link href='https://www.owasp.org/index.php/OWASP_Top_10_Privacy_Risks_Project'>https://www.owasp.org/index.php/OWASP_Top_10_Privacy_Risks_Project</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='d178ebda-e0e0-4831-82e5-a38c7f09b024' id='8522'>
+<date>2017-05-27T19:30:00+02:00</date>
+<start>19:30</start>
+<duration>00:30</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8522-combining_the_intertubes_using_multipath_tcp</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Combining the Intertubes using Multipath TCP</title>
+<subtitle></subtitle>
+<track></track>
+<type>lecture</type>
+<language>de</language>
+<abstract>Was Passiert wenn ein Hackerspace mehr Bandbreite braucht, und deswegen auf einmal zwei Internetanschlüsse hat?
+
+Ein (erfolrgreicher?) Versuch zwei Internetverbindung mit Hilfe von Multipath TCP zwei DSL-Anschlüsse gleichzeitig nutzbar zu machen.</abstract>
+<description>Was Passiert wenn ein Hackerspace mehr Bandbreite braucht, und deswegen auf einmal zwei Internetanschlüsse hat?
+
+Ein (erfolrgreicher?) Versuch zwei Internetverbindung mit Hilfe von Multipath TCP zwei DSL-Anschlüsse gleichzeitig nutzbar zu machen.
+
+Im Vortrag möchte ich durch die Eingesetzen Technologieren führen, die Hürden aufzeigen und eine kleine Technologie Demo geben.</description>
+<logo></logo>
+<persons>
+<person id='6457'>herrbett</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='4fbff190-96b5-4c77-a0b3-cb377427cbb1' id='8633'>
+<date>2017-05-27T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>01:00</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8633-wie_gruende_ich_ein_hardwarestartup</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Wie gruende ich ein Hardwarestartup</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language></language>
+<abstract>Vor etwa fuenf Jahren habe ich mit zwei Kollegen ein Startup gegruendet, aktuell sind wir 70 Leute und bauen Roboter (magazino.eu).
+
+ Ich hatte nie geplant zu gruenden und bin da eher versehentlich reingelaufen : )
+
+Den Workshop sollte vll eine Stunde dauern, im ersten Teil Frontalvortrag zu Themen wie
+ 
+ 
+ - Was brauche ich alles fuer ein Startup (&quot;Ich habe eine geniale Technologie, aber wie finde ich Kunden?)
+ 
+- Stealthmode oder nicht?
+ 
+ - wo gibt's Geld?
+ 
+ - was haette ich vor fuenf Jahren gerne gewusst
+ 
+ - wie sehen Tests fuer Hardware aus?
+ 
+ 
+Der zweite Teil sollte dann freie Fragerunde werden (da muss ich dann auf Fragen hoffen :)</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='7347'>Nikolas Engelhard</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Workshopraum'>
+<event guid='c89b97b3-532b-45d4-9668-0bcd67c3c6d8' id='8607'>
+<date>2017-05-27T11:00:00+02:00</date>
+<start>11:00</start>
+<duration>01:00</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8607-haecksenfryhstyck</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Haecksenfryhstyck</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>meeting</type>
+<language></language>
+<abstract>Meet n Greet aller Haecksen und -interessierten (vgl. http://www.haecksen.org)</abstract>
+<description></description>
+<logo>/system/events/logos/000/008/607/large/logo-haecks.png?1494788299</logo>
+<persons>
+<person id='7425'>inderkuerze</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='16b531ea-698f-4e7d-902d-c6f38ca1620e' id='8595'>
+<date>2017-05-27T12:15:00+02:00</date>
+<start>12:15</start>
+<duration>04:00</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8595-ae-dir_installation_workshop</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Æ-DIR Installation Workshop</title>
+<subtitle>Start your paranoid infrastructure!</subtitle>
+<track></track>
+<type>workshop</type>
+<language>de</language>
+<abstract>Æ-DIR dient zunächst als Grundlage für eine sichere Benutzerverwaltung, die sich automatisiert mit ansible installieren lässt. Das wollen wir zusammen üben. Im Detail werden danach die Sicherheitseinstellungen für OpenLDAP und die Kommunikationsbeziehungen der Komponenten erklärt. Wenn noch Zeit bleibt aktivieren wir auch die Zwei-Faktor-Authentifizierung. Und wenn dann noch Zeit übrig ist, können Interessierte diskutieren was man damit noch anstellen könnte.</abstract>
+<description>1. Kleine Einführung:
+Warum? Wofür? Wie? Was nicht?
+
+2. Testinstallation (Test-PKI, ansible, etc.):
+Teilnehmer, die selbst sich eine Æ-DIR-Testinstallation hochziehen wollen, sollten auf Ihrem Laptop vier virtuelle Maschinen vorbereiten (DNS, SSH-Zugang, etc.).
+
+3. Zwei-Faktor-Authentifizierung mit yubikey direkt via LDAP.
+
+4. Von der paranoiden Benutzerverwaltung zur delegierten Systemverwaltung? Vielleicht...</description>
+<logo></logo>
+<persons>
+<person id='5447'>Michael Ströder</person>
+</persons>
+<links>
+<link href='https://ae-dir.com/install.html'>Æ-DIR Installationsvorbereitungen</link>
+<link href='https://www.ae-dir.com/docs.html#sys-arch'>Æ-DIR Systemarchitektur</link>
+<link href='https://stroeder.com/publications.html#gpn15'>Æ-DIR-Vortrag GPN 2015</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='a8f1c3cb-4581-4f91-87a6-bd767d3f9a00' id='8534'>
+<date>2017-05-27T16:15:00+02:00</date>
+<start>16:15</start>
+<duration>04:15</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8534-electronic_geekbag</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Electronic GeekBag</title>
+<subtitle>- a workshop for electronic sewing - </subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>de</language>
+<abstract>&lt;p&gt;Make your own geeky bag with blinking LEDs and sensors!&lt;/p&gt;
+&lt;p&gt;We will show you how to make your own geeky bag with a cat, ghost or self designed motive and blinky LED-eyes (even programmable if you like). No experience with sewing or electronics necessary – just bring some curiosity and a bit of time. You can buy all the material that is needed directly on place. &lt;/p&gt;</abstract>
+<description>&lt;h2&gt;What?&lt;/h2&gt;
+&lt;p&gt;We like to get you interested in sewable electronics. Therefore we put together a project we call &lt;b&gt;&quot;GeekBag&quot;&lt;/b&gt; to give you a project to try this out for yourself.&lt;/p&gt;
+&lt;p&gt;We have kits (a limited amount), support, all the tools you need.&lt;/p&gt;
+&lt;p&gt;So just drop by and if you like, build yourself a bag.&lt;/p&gt;
+
+&lt;h2&gt;Bag?&lt;/h2&gt;
+The &lt;b&gt;&quot;easy&quot;&lt;/b&gt; kit is ~15€ and contains:
+&lt;ul&gt;
+	&lt;li&gt;the bag&lt;/li&gt;
+	&lt;li&gt;a motive&lt;/li&gt;
+	&lt;li&gt;a coin-cell holder&lt;/li&gt;
+	&lt;li&gt;2 LEDs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;b&gt;&quot;smart&quot;&lt;/b&gt; one is ~30€ and contains:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;the bag&lt;/li&gt;
+	&lt;li&gt;a motive&lt;/li&gt;
+	&lt;li&gt;a Microcontroller-Board (Adafrutit-Gemma)&lt;/li&gt;
+	&lt;li&gt;a brightness sensor&lt;/li&gt;
+	&lt;li&gt;a LiPo-Battery&lt;/li&gt;
+	&lt;li&gt;either 2 normal LEDs or 2 NeoPixels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;a &lt;b&gt;LiPo charger&lt;/b&gt; is sold separately for 10€ if you need one&lt;/p&gt;
+&lt;p&gt;The &quot;smart&quot; bag can be programmed by Arduino and we have example code that:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;turns off the eyes when the sensor gets bright&lt;/li&gt;
+	&lt;li&gt;occasionally blinks, winks and some 'hypno'-animation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Resources?&lt;/h2&gt;
+&lt;p&gt;All workshop material is free (CC-BY) and can be found on GitHub:&lt;/p&gt;
+&lt;a rel=&quot;nofollow&quot; class=&quot;external free&quot; href=&quot;https://github.com/Mariemurasaki/Electronic-Geek-Bag&quot;&gt;https://github.com/Mariemurasaki/Electronic-Geek-Bag&lt;/a&gt;
+&lt;p&gt;which includes:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt; Documentation (including examples where you can bay the parts yourself)&lt;/li&gt;
+    &lt;li&gt; Shapes&lt;/li&gt;
+    &lt;li&gt; Source Code&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+<logo></logo>
+<persons>
+<person id='7360'>shinnamon</person>
+</persons>
+<links>
+<link href='https://github.com/Mariemurasaki/Electronic-Geek-Bag'>GeekBag on Github</link>
+</links>
+<attachments>
+<attachment href='/system/event_attachments/attachments/000/003/167/original/IMG_3107.JPG?1489802177'>Space Invader</attachment>
+<attachment href='/system/event_attachments/attachments/000/003/168/original/IMG_3113.JPG?1489802178'>Ghost</attachment>
+<attachment href='/system/event_attachments/attachments/000/003/169/original/Geekbag_Plant.jpg?1489802178'>Self designed: Flower</attachment>
+<attachment href='/system/event_attachments/attachments/000/003/170/original/Geekbag_Unicorn.jpg?1489802178'>Self designed: Unicorn</attachment>
+</attachments>
+</event>
+<event guid='1d0f0f11-0daf-4fa8-97c0-7c2c774c58d9' id='8597'>
+<date>2017-05-27T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>02:00</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8597-mitgliederverwaltung_fur_erfas</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Mitgliederverwaltung für Erfas</title>
+<subtitle>Sammlung von Anforderungen, Diskussion</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>de</language>
+<abstract>Software zum Verwalten von Mitgliedern und anderen Vereinsangelegenheiten in Erfas ist ein noch nicht befriedigend gelöstes Problem. In diesem Workshop soll es darum gehen wie so eine Lösung aussehen könnte.</abstract>
+<description>Mit der neuen Mitgliederverwaltung des Offices (dar Association Administration) steht die Frage im Raum, ob man diese jetzt übernehmen und modifizieren kann um sie für Erfas zu benutzen. Vielleicht ist auch ein Neubau besser, einfacher und schneller. In jedem Falle muss zuerst mal gesammelt werden welche Anforderungen und Wünsche es in den Erfas gibt. Das zweite Ziel des Workshops ist es ein Geekend anzusetzen, an dem die nötigen Arbeiten auch umgesetzt werden können.</description>
+<logo>/system/events/logos/000/008/597/large/AA.png?1494446583</logo>
+<persons>
+<person id='2968'>vollkorn</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='6d236a40-bdb1-42ff-ae92-00b90b025b0e' id='8606'>
+<date>2017-05-27T23:15:00+02:00</date>
+<start>23:15</start>
+<duration>03:00</duration>
+<room>Workshopraum</room>
+<slug>gpn17-8606-werwolfe_von_dusterwald</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Werwölfe von Düsterwald</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>other</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='4603'>rem0te</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='FFBW:Con'>
+<event guid='9fa8d501-a1fe-42f1-8aa8-f98154b84d2d' id='8634'>
+<date>2017-05-27T11:00:00+02:00</date>
+<start>11:00</start>
+<duration>01:00</duration>
+<room>FFBW:Con</room>
+<slug>gpn17-8634-begrussung_und_einleitung</slug>
+<recording>
+<license></license>
+<optout>true</optout>
+</recording>
+<title>Begrüßung und Einleitung</title>
+<subtitle></subtitle>
+<track>FFBW:Con</track>
+<type>workshop</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='6503'>Mart (ffbsee)</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='b7b8f0ca-b161-42a0-b19b-f65691ee74fe' id='8635'>
+<date>2017-05-27T12:30:00+02:00</date>
+<start>12:30</start>
+<duration>01:00</duration>
+<room>FFBW:Con</room>
+<slug>gpn17-8635-freifunk_interconnectivity</slug>
+<recording>
+<license></license>
+<optout>true</optout>
+</recording>
+<title>Freifunk Interconnectivity</title>
+<subtitle>Ein Workshop zum Thema Interconnectivity (ICVPN, DN42 etc.)</subtitle>
+<track>FFBW:Con</track>
+<type>workshop</type>
+<language>de</language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='6503'>Mart (ffbsee)</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Anderswo'>
+<event guid='1726ec6b-63a7-4c29-acc7-c23f7f55fb5e' id='8636'>
+<date>2017-05-27T12:30:00+02:00</date>
+<start>12:30</start>
+<duration>01:30</duration>
+<room>Anderswo</room>
+<slug>gpn17-8636-ffbw_de_workshop</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>ffbw.de Workshop</title>
+<subtitle>ffbw.de - Weiterkommen mit dem gemeinsamen Auftritt im Netz, am besten direkt dran arbeiten.</subtitle>
+<track>FFBW:Con</track>
+<type>workshop</type>
+<language>de</language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='6503'>Mart (ffbsee)</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='1d4d0c41-d9f8-4296-8e9d-99308434d0f1' id='8632'>
+<date>2017-05-27T14:15:00+02:00</date>
+<start>14:15</start>
+<duration>01:30</duration>
+<room>Anderswo</room>
+<slug>gpn17-8632-jonglier-workshop</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Jonglier-Workshop</title>
+<subtitle>(╯°□°)╯⚬°⚬ [Wiese]</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>de</language>
+<abstract>Jonglier-Workshop für Einsteiger. Wir basteln zusammen Russian-style balls (die ihr mit nach Hause nehmen könnt) und üben dann das einfachste Wurfmuster mit drei Bällen, die Kaskade.
+
+Wenn ihr schon jonglieren könnt, kommt gerne trotzdem vorbei! :)</abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='6697'>blinry</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='d7ddee96-d6af-4363-af82-cf1fcfdbff25' id='8591'>
+<date>2017-05-27T17:00:00+02:00</date>
+<start>17:00</start>
+<duration>03:00</duration>
+<room>Anderswo</room>
+<slug>gpn17-8591-podcasten</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Podcasten</title>
+<subtitle>@damalsTM [Blauer Salon]</subtitle>
+<track>GPN</track>
+<type>other</type>
+<language>de</language>
+<abstract>Du hast was von damals (tm) zu erzählen? Das kann vom Krieg sein oder von vor 10 Jahren, als wir noch $vergesseneDinge taten oder hatten. Mach mit bei einer Folge von @damalsTM !</abstract>
+<description>Ort: Blauer Salon
+
+Wer sich an Tag 1 oder 2 der gpn über DECT 3370 oder Twitter @damalsTM meldet, darf gern mitpodcasten. Es gibt nicht nur Inhalt, sondern auch Tipps und Hands-On-Vorführung eines Podcasting-Workflows. Das ganze dauert ca. 3 Stunden.
+
+Anmeldung gern gesehen, wie gesagt. Twitter @damalstm oder mail info (ad) damals-tm-podcast.de </description>
+<logo>/system/events/logos/000/008/591/large/damals-tm-podcast_original.png?1493986421</logo>
+<persons>
+<person id='5812'>ajuvo</person>
+</persons>
+<links>
+<link href='http://www.damals-tm-podcast.de'>damals(tm)</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='d267e0cf-2b71-4f30-a53c-64e91f1c9f3e' id='8641'>
+<date>2017-05-27T20:00:00+02:00</date>
+<start>20:00</start>
+<duration>01:00</duration>
+<room>Anderswo</room>
+<slug>gpn17-8641-gulaschausgabe</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Gulaschausgabe</title>
+<subtitle></subtitle>
+<track></track>
+<type>performance</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='1483812a-ccec-4ae6-a96b-19f60f160d79' id='8529'>
+<date>2017-05-27T21:00:00+02:00</date>
+<start>21:00</start>
+<duration>00:45</duration>
+<room>Anderswo</room>
+<slug>gpn17-8529-my_little_pony_-_videoanalyse_ist_magie</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>My Little Pony - Videoanalyse ist Magie</title>
+<subtitle>[Blauer Salon]</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language>en</language>
+<abstract>Analyse von Videos rund um das Thema My Little Pony - Friendship is Magic!</abstract>
+<description>Ort: Blauer Salon</description>
+<logo></logo>
+<persons>
+<person id='7324'>basisbit</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='564f1a40-774a-4ccc-86e8-d5fbc0c8632f' id='8479'>
+<date>2017-05-27T22:00:00+02:00</date>
+<start>22:00</start>
+<duration>02:00</duration>
+<room>Anderswo</room>
+<slug>gpn17-8479-gulasch_karaoke</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Gulasch Karaoke</title>
+<subtitle>[Blauer Salon]</subtitle>
+<track>GPN</track>
+<type>workshop</type>
+<language></language>
+<abstract>SingStar-ähnliches sing along Karaoke mit bis zu 6 gleichzeitigen Sängern zu diverser Musik</abstract>
+<description>Ort: Blauer Salon</description>
+<logo>/system/events/logos/000/008/479/large/ultrastardx-icon_512.png?1485381697</logo>
+<persons>
+<person id='7324'>basisbit</person>
+</persons>
+<links>
+<link href='https://github.com/UltraStar-Deluxe/USDX'>UltraStar Deluxe auf GitHub</link>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Lounge'>
+<event guid='64ee2aba-6c97-49d1-ad47-5a16b8df34e9' id='8624'>
+<date>2017-05-27T18:00:00+02:00</date>
+<start>18:00</start>
+<duration>02:00</duration>
+<room>Lounge</room>
+<slug>gpn17-8624-dj-set_bam</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>DJ-Set: bam</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract>@bheisig</abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='eb4ebb55-e1f3-476e-b238-9c6a9803d5cc' id='8615'>
+<date>2017-05-27T20:00:00+02:00</date>
+<start>20:00</start>
+<duration>03:00</duration>
+<room>Lounge</room>
+<slug>gpn17-8615-dj-set_project_poltergeist</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>DJ-Set: Project Poltergeist</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract>@lino</abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='c95d2c3f-15b2-4049-bf58-8b3b79af38d5' id='8616'>
+<date>2017-05-27T23:00:00+02:00</date>
+<start>23:00</start>
+<duration>02:00</duration>
+<room>Lounge</room>
+<slug>gpn17-8616-dj-set_dj-spock</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>DJ-Set: dj-spock</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='f96ce84f-6679-42dd-9266-9a09ded91871' id='8617'>
+<date>2017-05-28T01:00:00+02:00</date>
+<start>01:00</start>
+<duration>01:00</duration>
+<room>Lounge</room>
+<slug>gpn17-8617-dj-set_morelle</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>DJ-Set: Morelle</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>djset</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+</day>
+<day date='2017-05-28' end='2017-05-28T16:00:00+02:00' index='4' start='2017-05-28T10:00:00+02:00'>
+<room name='Medientheater'>
+</room>
+<room name='Studio'>
+<event guid='6033c592-f777-4e83-84ee-94cef2e89338' id='8580'>
+<date>2017-05-28T12:00:00+02:00</date>
+<start>12:00</start>
+<duration>02:00</duration>
+<room>Studio</room>
+<slug>gpn17-8580-cybermorning_show</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>CyberMorning Show</title>
+<subtitle>Cyber Gulasch</subtitle>
+<track>GPN</track>
+<type>other</type>
+<language>de</language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='7369'>Thies Mueller (td00)</person>
+</persons>
+<links>
+<link href='https://cybermorning.show'>Cybermorningshow</link>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='a57914e1-cd19-4fc6-9d8d-8fdc67c9a651' id='8588'>
+<date>2017-05-28T14:15:00+02:00</date>
+<start>14:15</start>
+<duration>01:00</duration>
+<room>Studio</room>
+<slug>gpn17-8588-closing_und_review</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Closing und Review</title>
+<subtitle>GPN17 is over. How much gulash and how many bytes did we consume?</subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='4508'>obelix</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='ZKM-Vortragssaal'>
+<event guid='c6b1fc76-2f70-4051-9767-46487ab457b3' id='8619'>
+<date>2017-05-28T13:00:00+02:00</date>
+<start>13:00</start>
+<duration>01:00</duration>
+<room>ZKM-Vortragssaal</room>
+<slug>gpn17-8619-hack_the_badge_-_preisverleihung</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Hack the Badge - Preisverleihung</title>
+<subtitle></subtitle>
+<track>GPN</track>
+<type>lecture</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
+<person id='7343'>Niklas</person>
+<person id='7426'>Jan Henrik</person>
+</persons>
+<links>
+<link href='https://entropia.de/GPN17:Hack_the_Badge'>https://entropia.de/GPN17:Hack_the_Badge</link>
+</links>
+<attachments>
+</attachments>
+</event>
+</room>
+<room name='Workshopraum'>
+</room>
+<room name='FFBW:Con'>
+</room>
+<room name='Anderswo'>
+</room>
+<room name='Lounge'>
+</room>
+</day>
+</schedule>
