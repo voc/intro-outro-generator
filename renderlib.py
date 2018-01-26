@@ -191,7 +191,7 @@ def rendertask(task):
 		else:
 			cmd += '-i {0} -i {0} '.format(task.audiofile)
 
-		cmd += '-map 0:0 -c:v mpeg2video -q:v 5 -aspect 16:9 '
+		cmd += '-map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 '
 
 		if task.audiofile is None:
 			cmd += '-map 1:0 -map 2:0 '
