@@ -55,21 +55,28 @@ def debug():
 
 	s1 = 'Lorem, Ipsum, Ad Dolor... '
 	s2 = 'Lorem, Ipsum, Ad Dolor, Sit, Nomen, Est, Omen, Urbi et Orbi... '
-	render(
-		'intro.svg',
-		'../intro.ts',
-		introFrames,
-		{
-                    '$title': s1,
-                    '$personnames': s2
+#	render(
+#		'intro.svg',
+#		'../intro.ts',
+#		introFrames,
+#		{
+#                    '$title': s1,
+#                    '$personnames': s2
+#
+#		}
+#	)
+#
 
-		}
-	)
-
-
-def tasks(queue, args, _id, skip):
+def tasks(queue, args, idlist, skip):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl):
+		if not (idlist==[]):
+			if 000000 in idlist:
+				print("skipping id (%s [%s])" % (event['title'], event['id']))
+				continue
+			if int(event['id']) not in idlist:
+				print("skipping id (%s [%s])" % (event['title'], event['id']))
+				continue
 		# generate a task description and put them into the queue
 		projectname = event['title']
 		queue.put(Rendertask(
