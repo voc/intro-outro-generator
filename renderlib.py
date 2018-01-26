@@ -91,7 +91,7 @@ def rendertask(task):
 		parser = etree.XMLParser(huge_tree=True)
 		svg = etree.fromstring(svgstr.encode('utf-8'), parser)
 
-	if task.parameters['$subtitle'] == '':
+	if '$subtitle' in task.parameters and task.parameters['$subtitle'] == '':
 		child = svg.findall(".//*[@id='subtitle']")[0]
 		child.getparent().remove(child)
 
