@@ -166,7 +166,7 @@ def tasks(queue, args, idlist, skiplist):
 			continue
 
 
-		if event['id'] in idlist or not idlist:
+		if (event['id'] in idlist or not idlist) and not 'intro' in skiplist:
 		# generate a task description and put them into the queue
 			queue.put(Rendertask(
 				infile = 'intro.svg',

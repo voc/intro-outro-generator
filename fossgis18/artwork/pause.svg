@@ -130,10 +130,10 @@
        transform="translate(-162.78572,1251.3215)">
       <image
          xlink:href="bonn_beschnitt.png"
-         y="-1135.3215"
          x="162.78572"
+         y="-775.32147"
          id="image_background"
-         height="1440"
+         height="1080"
          width="1920" />
       <image
          xlink:href="logo_ohne_rand.png"
@@ -169,7 +169,7 @@
              x="16.542841"
              y="752.40576"
              id="url-6"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.66932869px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';text-align:start;text-anchor:start;fill:#f2f4f5;fill-opacity:1;stroke:none">Bild © GG</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.66932869px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';text-align:start;text-anchor:start;fill:#f2f4f5;fill-opacity:1;stroke:none">Photo: Michael Sondermann (CC-BY-SA)</tspan></text>
       </g>
       <g
          transform="translate(-8.2519531e-7,504.00003)"
