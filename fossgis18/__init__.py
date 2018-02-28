@@ -175,7 +175,7 @@ def tasks(queue, args, idlist, skiplist):
 				parameters = {
 					'$id': event['id'],
 					'$title': event['title'],
-					'$subtitle': event['subtitle'],
+					#'$subtitle': event['subtitle'],
 					'$personnames': event['personnames']
 				}
 			))
