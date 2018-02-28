@@ -165,31 +165,35 @@ def tasks(queue, args, idlist, skiplist):
 			print("skipping room %s (%s)" % (event['room'], event['title']))
 			continue
 
+
+		if event['id'] in idlist or not idlist:
 		# generate a task description and put them into the queue
+			queue.put(Rendertask(
+				infile = 'intro.svg',
+				outfile = str(event['id'])+".ts",
+				sequence = introFrames,
+				parameters = {
+					'$id': event['id'],
+					'$title': event['title'],
+					'$subtitle': event['subtitle'],
+					'$personnames': event['personnames']
+				}
+			))
+
+	if not 'outro' in skiplist:
+		# place a task for the outro into the queue
 		queue.put(Rendertask(
-			infile = 'intro.svg',
-			outfile = str(event['id'])+".ts",
-			sequence = introFrames,
-			parameters = {
-				'$id': event['id'],
-				'$title': event['title'],
-				'$subtitle': event['subtitle'],
-				'$personnames': event['personnames']
-			}
+			infile = 'outro.svg',
+			outfile = 'outro.ts',
+			sequence = outroFrames
 		))
 
-	# place a task for the outro into the queue
-	queue.put(Rendertask(
-		infile = 'outro.svg',
-		outfile = 'outro.ts',
-		sequence = outroFrames
-	))
-
-	# place the pause-sequence into the queue
-	queue.put(Rendertask(
-		infile = 'pause.svg',
-		outfile = 'pause.ts',
-		sequence = pauseFrames
-	))
+	if not 'pause' in skiplist:
+		# place the pause-sequence into the queue
+		queue.put(Rendertask(
+			infile = 'pause.svg',
+			outfile = 'pause.ts',
+			sequence = pauseFrames
+		))
 
 
