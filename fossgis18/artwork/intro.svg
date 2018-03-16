@@ -166,7 +166,7 @@
        inkscape:label="#g4270"
        style="opacity:1">
       <rect
-         style="fill:#ffffff;fill-opacity:0.50196078"
+         style="fill:#333333;fill-opacity:0.50196078"
          ry="0.0084510781"
          y="697"
          x="0"
@@ -179,38 +179,38 @@
          id="text1">
         <text
            xml:space="preserve"
-           style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3772)"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
            x="75.964493"
-           y="876.83752"
+           y="879.83752"
            id="text2992"
-           sodipodi:linespacing="80.000001%"><tspan
+           sodipodi:linespacing="90.000001%"><tspan
              sodipodi:role="line"
              x="75.964493"
-             y="876.83752"
+             y="879.83752"
              id="tspan2996"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none">         Bonn</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;stroke:none;fill-opacity:1">         Bonn</tspan><tspan
              sodipodi:role="line"
              x="75.964493"
              y="915.23755"
              id="tspan3002"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;stroke:none">21. - 24. März 2018</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;stroke:none;fill-opacity:1">21. - 24. März 2018</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
            x="77.218193"
            y="837.2262"
            id="text2992-5"
-           sodipodi:linespacing="80.000001%"><tspan
+           sodipodi:linespacing="90.000001%"><tspan
              sodipodi:role="line"
              id="tspan2994-9"
              x="77.218193"
              y="837.2262"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1">FOSSGIS Konferenz</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;stroke:none;fill-opacity:1">FOSSGIS Konferenz</tspan><tspan
              sodipodi:role="line"
              x="77.218193"
              y="875.62622"
              id="tspan2998-1"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none">2018</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;stroke:none;fill-opacity:1">2018</tspan></text>
       </g>
     </g>
     <flowRoot
@@ -224,10 +224,10 @@
            height="248.00835"
            x="105.51553"
            y="738.59009" /></flowRegion><flowPara
-         style="font-weight:bold;font-size:64.69565582px;line-height:89.99999762%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;fill-opacity:1;filter:url(#filter3772)"
+         style="font-weight:bold;font-size:64.69565582px;line-height:94.99999762%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#7b9199;stroke:none;fill-opacity:1"
          id="flowPara3025">$personnames</flowPara><flowPara
          id="flowPara3048"
-         style="font-weight:bold;font-size:64.69565582px;line-height:89.99999762%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1">$title</flowPara></flowRoot>    <text
+         style="font-weight:bold;font-size:64.69565582px;line-height:98.99999762%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;stroke:none;fill-opacity:1">$title</flowPara></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
        x="30.53125"
