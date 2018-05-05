@@ -152,12 +152,12 @@ for event in events:
         if args.ids and event['id'] not in args.ids:
                 continue
 
+        event_print(event, "enqueued as "+str(event['id']))
+
         job_id = enqueue_job(event)
         if not job_id:
                 event_print(event, "job was not enqueued successfully, skipping postprocessing")
                 continue
-
-        event_print(event, "enqueued as "+job_id)
 
         event_print(event, "finalizing job")
         finalize_job(job_id, event)
