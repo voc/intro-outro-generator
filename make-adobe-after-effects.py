@@ -48,6 +48,10 @@ parser.add_argument('--outro', action="store_true", default=False, help='''
         Render outro from the outro.aep file in the project folder.
         ''')
 
+parser.add_argument('--bgloop', action="store_true", default=False, help='''
+         Render background loop from the bgloop.aep file in the project folder.
+         ''')
+
 args = parser.parse_args()
 
 def headline(str):
@@ -64,7 +68,7 @@ def error(str):
 if not args.project:
         error("The Path to your project with After Effect Files is a required argument")
 
-if not args.debug and not args.pause and not args.outro and not args.schedule:
+if not args.debug and not args.pause and not args.outro and not args.bgloop and not args.schedule:
         error("Either specify --debug, --pause, --outro or supply a schedule")
 
 if args.debug:
@@ -89,6 +93,12 @@ elif args.outro:
                  'id': 'outro',
                  'title': 'Outro',
                  }]
+
+elif args.bgloop:
+          events = [{
+                  'id': 'bgloop',
+                  'title': 'Background Loop',
+                  }]
 
 else:
         events = list(renderlib.events(args.schedule))
@@ -128,7 +138,7 @@ def enqueue_job(event):
         ascript_doc = os.path.join(tempdir.name, event_id+'.scpt')
         intermediate_clip = os.path.join(tempdir.name, event_id+'.mov')
 
-        if event_id == 'pause' or event_id =='outro':
+        if event_id == 'pause' or event_id == 'outro' or event_id == 'bgloop':
             copyfile(args.project+event_id+'.aep',work_doc)
             run('/Applications/Adobe\ After\ Effects\ CC\ 2018/aerender -project {jobpath} -comp {comp} -output {locationpath}',
                          jobpath=work_doc,
@@ -168,7 +178,7 @@ def finalize_job(job_id, event):
                 input=intermediate_clip,
                 output=final_clip)
 
-        if event_id == 'pause' or event_id == 'outro':
+        if event_id == 'pause' or event_id == 'outro' or event_id == 'bgloop':
             event_print(event, "finalized "+str(event_id)+" to "+final_clip)
         else:
             event_print(event, "finalized intro to "+final_clip)
