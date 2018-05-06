@@ -40,6 +40,14 @@ parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, hel
         Usage: ./make-adobe-after-effects.py yourproject/ --id 4711 0815 4223 1337
         ''')
 
+parser.add_argument('--pause', action="store_true", default=False, help='''
+        Render a pause loop from the pause.aep file in the project folder.
+        ''')
+
+parser.add_argument('--outro', action="store_true", default=False, help='''
+        Render outro from the outro.aep file in the project folder.
+        ''')
+
 args = parser.parse_args()
 
 def headline(str):
@@ -56,8 +64,8 @@ def error(str):
 if not args.project:
         error("The Path to your project with After Effect Files is a required argument")
 
-if not args.debug and not args.schedule:
-        error("Either specify --debug or supply a schedule")
+if not args.debug and not args.pause and not args.outro and not args.schedule:
+        error("Either specify --debug, --pause, --outro or supply a schedule")
 
 if args.debug:
         persons = ['watz']
@@ -69,6 +77,18 @@ if args.debug:
                 'personnames': ', '.join(persons),
                 'room': 'Heisenberg 1',
         }]
+
+elif args.pause:
+        events = [{
+                'id': 'pause',
+                'title': 'Pause Loop',
+                }]
+
+elif args.outro:
+         events = [{
+                 'id': 'outro',
+                 'title': 'Outro',
+                 }]
 
 else:
         events = list(renderlib.events(args.schedule))
@@ -108,26 +128,33 @@ def enqueue_job(event):
         ascript_doc = os.path.join(tempdir.name, event_id+'.scpt')
         intermediate_clip = os.path.join(tempdir.name, event_id+'.mov')
 
-        with open(args.project+'intro.jsx', 'r') as fp:
-                scriptstr = fp.read()
+        if event_id == 'pause' or event_id =='outro':
+            copyfile(args.project+event_id+'.aep',work_doc)
+            run('/Applications/Adobe\ After\ Effects\ CC\ 2018/aerender -project {jobpath} -comp {comp} -output {locationpath}',
+                         jobpath=work_doc,
+                         comp=event_id,
+                         locationpath=intermediate_clip)
+        else:
+            with open(args.project+'intro.jsx', 'r') as fp:
+                    scriptstr = fp.read()
 
-        for key, value in event.items():
-                scriptstr = scriptstr.replace("$"+str(key), xmlescape(str(value)))
+            for key, value in event.items():
+                    scriptstr = scriptstr.replace("$"+str(key), xmlescape(str(value)))
 
-        with open(script_doc, 'w') as fp:
-                fp.write(scriptstr)
+            with open(script_doc, 'w') as fp:
+                    fp.write(scriptstr)
 
-        copyfile(args.project+'intro.aep',work_doc)
-        copyfile(args.project+'intro.scpt',ascript_doc)
+            copyfile(args.project+'intro.aep',work_doc)
+            copyfile(args.project+'intro.scpt',ascript_doc)
 
-        run('osascript {ascript_path} {jobpath} {scriptpath}',
-                        jobpath=work_doc,
-                        scriptpath=script_doc,
-                        ascript_path=ascript_doc)
+            run('osascript {ascript_path} {jobpath} {scriptpath}',
+                            jobpath=work_doc,
+                            scriptpath=script_doc,
+                            ascript_path=ascript_doc)
 
-        run('/Applications/Adobe\ After\ Effects\ CC\ 2018/aerender -project {jobpath} -comp "intro" -output {locationpath}',
-                        jobpath=work_doc,
-                        locationpath=intermediate_clip)
+            run('/Applications/Adobe\ After\ Effects\ CC\ 2018/aerender -project {jobpath} -comp "intro" -output {locationpath}',
+                            jobpath=work_doc,
+                            locationpath=intermediate_clip)
 
         return event_id
 
@@ -141,13 +168,23 @@ def finalize_job(job_id, event):
                 input=intermediate_clip,
                 output=final_clip)
 
-        event_print(event, "finalized intro to "+final_clip)
+        if event_id == 'pause' or event_id == 'outro':
+            event_print(event, "finalized "+str(event_id)+" to "+final_clip)
+        else:
+            event_print(event, "finalized intro to "+final_clip)
 
 
 if args.ids:
-    print("enqueuing {} jobs into aerender".format(len(args.ids)))
+    if len(args.ids) == 1:
+        print("enqueuing {} job into aerender".format(len(args.ids)))
+    else:
+        print("enqueuing {} jobs into aerender".format(len(args.ids)))
 else:
-    print("enqueuing {} jobs into aerender".format(len(events)))
+    if len(events) == 1:
+        print("enqueuing {} job into aerender".format(len(events)))
+    else:
+        print("enqueuing {} jobs into aerender".format(len(events)))
+
 for event in events:
         if args.ids and event['id'] not in args.ids:
                 continue
