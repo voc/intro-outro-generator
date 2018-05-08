@@ -1,4 +1,4 @@
-var comp = app.project.item(3);
+var comp = app.project.item(4);
 
 var layer_title = comp.layer('intro_title');
 var textProp_title = layer_title.property("Source Text");
