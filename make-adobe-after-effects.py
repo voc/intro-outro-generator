@@ -40,6 +40,12 @@ parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, hel
         Usage: ./make-adobe-after-effects.py yourproject/ --id 4711 0815 4223 1337
         ''')
 
+parser.add_argument('--room', dest='rooms', nargs='+', action="store", type=str, help='''
+        Only render the given room(s) from your projects schedule.
+        This argument must not be used together with --debug
+        Usage: ./make-adobe-after-effects.py yourproject/ --room "HfG_Studio" "ZKM_Vortragssaal"
+        ''')
+
 parser.add_argument('--pause', action="store_true", default=False, help='''
         Render a pause loop from the pause.aep file in the project folder.
         ''')
@@ -198,7 +204,12 @@ else:
 
 for event in events:
         if args.ids and event['id'] not in args.ids:
-                continue
+            continue
+
+        if args.rooms and event['room'] not in args.rooms:
+            #if event['room'] not in ('ZKM_Medientheater', 'ZKM_OpenHUB', 'ZKM_Vortragssaal', 'HfG_Studio'):
+            print("skipping room %s (%s)" % (event['room'], event['title']))
+            continue
 
         event_print(event, "enqueued as "+str(event['id']))
 
