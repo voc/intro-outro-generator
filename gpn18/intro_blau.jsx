@@ -1,4 +1,10 @@
-var comp = app.project.item(3);
+var comp;
+for (var i = 1; i <= app.project.numItems; i ++) {
+    if ((app.project.item(i) instanceof CompItem) && (app.project.item(i).name === 'text')) {
+        comp = app.project.item(i);
+        break;
+    }
+}
 
 var layer_title = comp.layer('intro_title');
 var textProp_title = layer_title.property("Source Text");
