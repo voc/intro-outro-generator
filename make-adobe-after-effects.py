@@ -139,6 +139,8 @@ def run(command, **kwargs):
 
 def enqueue_job(event):
         event_id = str(event['id'])
+        if os.path.exists(os.path.join(args.project, event_id+'.ts')):
+            return
         work_doc = os.path.join(tempdir.name, event_id+'.aep')
         script_doc = os.path.join(tempdir.name, event_id+'.jsx')
         ascript_doc = os.path.join(tempdir.name, event_id+'.scpt')
@@ -155,6 +157,7 @@ def enqueue_job(event):
                     scriptstr = fp.read()
 
             for key, value in event.items():
+                    value = str(value).replace('"', '\\"')
                     scriptstr = scriptstr.replace("$"+str(key), xmlescape(str(value)))
 
             with open(script_doc, 'w') as fp:
