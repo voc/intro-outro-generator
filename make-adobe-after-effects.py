@@ -50,6 +50,10 @@ parser.add_argument('--pause', action="store_true", default=False, help='''
         Render a pause loop from the pause.aep file in the project folder.
         ''')
 
+parser.add_argument('--force', action="store_true", default=False, help='''
+         Force render if file exists.
+         ''')
+
 parser.add_argument('--outro', action="store_true", default=False, help='''
         Render outro from the outro.aep file in the project folder.
         ''')
@@ -139,7 +143,7 @@ def run(command, **kwargs):
 
 def enqueue_job(event):
         event_id = str(event['id'])
-        if os.path.exists(os.path.join(args.project, event_id+'.ts')):
+        if os.path.exists(os.path.join(args.project, event_id+'.ts')) and not args.force:
             return
         work_doc = os.path.join(tempdir.name, event_id+'.aep')
         script_doc = os.path.join(tempdir.name, event_id+'.jsx')
@@ -158,7 +162,7 @@ def enqueue_job(event):
 
             for key, value in event.items():
                     value = str(value).replace('"', '\\"')
-                    scriptstr = scriptstr.replace("$"+str(key), xmlescape(str(value)))
+                    scriptstr = scriptstr.replace("$"+str(key), value)
 
             with open(script_doc, 'w') as fp:
                     fp.write(scriptstr)
