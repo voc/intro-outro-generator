@@ -199,7 +199,7 @@ for event in events:
 print("waiting for rendering to complete")
 
 while len(active_jobs) > 0:
-	time.sleep(60)
+	time.sleep(15)
 	active_jobs, finished_jobs = filter_finished_jobs(active_jobs)
 
 	print("{} jobs in queue, {} ready to finalize".format(len(active_jobs), len(finished_jobs)))
