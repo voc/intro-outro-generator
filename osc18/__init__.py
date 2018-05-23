@@ -16,42 +16,43 @@ def bounce(i, min, max, frames):
         return max - easeInOutQuad(i - frames/2, min, max, frames/2)
 
 def introFrames(parameters):
-    move=50
-
     # 3 Sekunde Text Fadein
-    frames = 3*fps
+    frames = 1*fps
     for i in range(0, frames):
         yield (
             ('textblock', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
-            ('textblock', 'attr',     'transform', 'translate(%.4f, 0)' % easeOutQuad(i, -move, move, frames)),
         )
 
-    # 2 Sekunden stehen lassen
-    frames = 2*fps
+    # 4 Sekunden stehen lassen
+    frames = 4*fps
     for i in range(0, frames):
         yield ()
 
-    # 3 Sekunde Text Fadeout
-    frames = 3*fps
+    # 1 Sekunde Fade to black layer
+    frames = 1*fps
     for i in range(0, frames):
         yield (
-            ('textblock', 'style',    'opacity', "%.4f" % easeLinear(i, 1, -1, frames)),
-            ('textblock', 'attr',     'transform', 'translate(%.4f, 0)' % easeInQuad(i, 0, move, frames)),
+            ('fadeout', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
         )
 
 def pauseFrames(parameters):
-    frames = 25*3
-    for i in range(0, frames):
+    frames = 3*fps
+    colors = ['#21A4D4', '#73BA25', '#6DA741', '#35B9AB', '#00A489', '#173F4F']
+    yield (
+        ('pause_bg', 'style', 'fill', "%s" % '#173F4F'),
+        ('pause_bg', 'attr', 'opacity', '%.4f' % 1.0),
+    )
+    for i in range(0, len(colors)):
+        z = 0
+        for z in range(0,frames):
+            yield (
+                ('pause_bg_alt', 'style', 'fill', "%s" % colors[i]),
+                ('pause_bg_alt', 'attr', 'opacity', '%.4f' % easeLinear(z, 0.0, 1.0, frames)),
+            )
         yield (
-            ('pause', 'attr', 'flood-opacity', '%.4f' % bounce(i, 0.0, 1.0, frames)),
+            ('pause_bg', 'style', 'fill', "%s" % colors[i]),
+            ('pause_bg', 'attr', 'opacity', '%.4f' % 1.0),
         )
-
-    frames = 25*1
-    for i in range(0, frames):
-        yield (
-            ('glowFlood', 'attr', 'flood-opacity', '%.4f' % 0),
-        )
-
 
 def outroFrames(p):
     # 5 Sekunden stehen bleiben
@@ -59,56 +60,35 @@ def outroFrames(p):
     for i in range(0, frames):
         yield []
 
-def backgroundFrames(parameters):
-    frames = 25*3
-    for i in range(0, frames):
-        yield (
-            ('pause', 'attr', 'flood-opacity', '%.4f' % bounce(i, 0.0, 1.0, frames)),
-        )
-
-    frames = 25*1
-    for i in range(0, frames):
-        yield (
-            ('glowFlood', 'attr', 'flood-opacity', '%.4f' % 0),
-            )
-
-        frames = 20*fps
-        for i in range(0, frames):
-            xshift = 300 - ((i+1) * (300/frames))
-            yshift = 150 - ((i+1) * (150/frames))
-            yield(
-                        ('pillgroup', 'attr', 'transform', 'translate(%.4f, %.4f)' % (xshift, yshift)),
-            )
-
 def debug():
-    render(
-      'intro.svg',
-      '../intro.ts',
-      introFrames,
-      {
-          '$ID': 4711,
-          '$TITLE': "Long Long Long title is LONG",
-          '$SUBTITLE': 'Long Long Long Long subtitle is LONGER',
-          '$SPEAKER': 'Long Name of Dr. Dr. Prof. Dr. Long Long'
-      }
-    )
-
+#    render(
+#      'intro.svg',
+#      '../intro.ts',
+#      introFrames,
+#      {
+#          '$ID': 4711,
+#          '$TITLE': "Long Long Long title is LONG",
+#          '$SUBTITLE': 'Long Long Long Long subtitle is LONGER',
+#          '$SPEAKER': 'Long Name of Dr. Dr. Prof. Dr. Long Long'
+#      }
+#    )
+#
     render(
         'pause.svg',
         '../pause.ts',
         pauseFrames
     )
 
-    render(
-      'outro.svg',
-      '../outro.ts',
-      outroFrames
-    )
-
+#    render(
+#      'outro.svg',
+#      '../outro.ts',
+#      outroFrames
+#    )
+#
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if event['room'] not in ('Galerie', 'Saal (Main Hall)'):
+        if event['room'] not in ('105 (Main)', '155 (Medium)', '107 (Small)'):
             print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
             continue
         if not (idlist==[]):
@@ -146,12 +126,4 @@ def tasks(queue, args, idlist, skiplist):
             infile = 'pause.svg',
             outfile = 'pause.ts',
             sequence = pauseFrames
-        ))
-
-    # place the background-sequence into the queue
-    if not "bg" in skiplist:
-        queue.put(Rendertask(
-            infile = 'background.svg',
-            outfile = 'background.ts',
-            sequence = backgroundFrames
         ))
