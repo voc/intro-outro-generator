@@ -13,7 +13,6 @@ def introFrames(args):
         yield (
             ('logotext', 'style', 'opacity', 0),
             ('title', 'style', 'opacity', 0),
-            ('subtitle', 'style', 'opacity', 0),
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
@@ -22,7 +21,6 @@ def introFrames(args):
     for i in range(0, frames):
         yield(
             ('title', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('subtitle', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
             ('persons', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
             ('id', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
         )
@@ -31,7 +29,6 @@ def introFrames(args):
     for i in range(0, frames):
         yield(
             ('title', 'style', 'opacity', 1),
-            ('subtitle', 'style', 'opacity', 1),
             ('persons', 'style', 'opacity', 1),
             ('id', 'style', 'opacity', 1),
         )
@@ -81,7 +78,6 @@ def tasks(queue, args, idlist, skiplist):
             parameters = {
                 '$id': event['id'],
                 '$title': event['title'],
-                '$subtitle': event['subtitle'],
                 '$persons': event['personnames']
             }
         ))
