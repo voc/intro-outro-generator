@@ -9,3 +9,4 @@ schedule.de.xml
 .gen.svg
 snapshot-*.png
 env
+.DS_Store
