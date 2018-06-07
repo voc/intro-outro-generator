@@ -16,11 +16,11 @@ def bounce(i, min, max, frames):
         return max - easeInOutQuad(i - frames/2, min, max, frames/2)
 
 def introFrames(parameters):
-    # 3 Sekunde Text Fadein
+    # 1 Sekunde Text Fadein
     frames = 1*fps
     for i in range(0, frames):
         yield (
-            ('textblock', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
+            ('text', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
         )
 
     # 4 Sekunden stehen lassen
@@ -28,31 +28,6 @@ def introFrames(parameters):
     for i in range(0, frames):
         yield ()
 
-    # 1 Sekunde Fade to black layer
-    frames = 1*fps
-    for i in range(0, frames):
-        yield (
-            ('fadeout', 'style',    'opacity', "%.4f" % easeLinear(i, 0, 1, frames)),
-        )
-
-def pauseFrames(parameters):
-    frames = 3*fps
-    colors = ['#21A4D4', '#73BA25', '#6DA741', '#35B9AB', '#00A489', '#173F4F']
-    yield (
-        ('pause_bg', 'style', 'fill', "%s" % '#173F4F'),
-        ('pause_bg', 'attr', 'opacity', '%.4f' % 1.0),
-    )
-    for i in range(0, len(colors)):
-        z = 0
-        for z in range(0,frames):
-            yield (
-                ('pause_bg_alt', 'style', 'fill', "%s" % colors[i]),
-                ('pause_bg_alt', 'attr', 'opacity', '%.4f' % easeLinear(z, 0.0, 1.0, frames)),
-            )
-        yield (
-            ('pause_bg', 'style', 'fill', "%s" % colors[i]),
-            ('pause_bg', 'attr', 'opacity', '%.4f' % 1.0),
-        )
 
 def outroFrames(p):
     # 5 Sekunden stehen bleiben
@@ -61,30 +36,30 @@ def outroFrames(p):
         yield []
 
 def debug():
-#    render(
-#      'intro.svg',
-#      '../intro.ts',
-#      introFrames,
-#      {
-#          '$ID': 4711,
-#          '$TITLE': "Long Long Long title is LONG",
-#          '$SUBTITLE': 'Long Long Long Long subtitle is LONGER',
-#          '$SPEAKER': 'Long Name of Dr. Dr. Prof. Dr. Long Long'
-#      }
-#    )
-#
     render(
-        'pause.svg',
-        '../pause.ts',
-        pauseFrames
+      'intro.svg',
+      '../intro.ts',
+      introFrames,
+      {
+          '$ID': 4711,
+          '$TITLE': "Long Long Long title is LONG",
+          '$SUBTITLE': 'Long Long Long Long subtitle is LONGER',
+          '$SPEAKER': 'Long Name of Dr. Dr. Prof. Dr. Long Long'
+      }
     )
 
 #    render(
-#      'outro.svg',
-#      '../outro.ts',
-#      outroFrames
+#        'pause.svg',
+#        '../pause.ts',
+#        pauseFrames
 #    )
 #
+    render(
+      'outro.svg',
+      '../outro.ts',
+      outroFrames
+    )
+
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
