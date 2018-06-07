@@ -88,7 +88,7 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if event['room'] not in ('105 (Main)', '155 (Medium)', '107 (Small)'):
+        if event['room'] not in ('mainhall', 'ceminar'):
             print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
             continue
         if not (idlist==[]):

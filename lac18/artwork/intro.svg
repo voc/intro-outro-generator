@@ -181,15 +181,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="700.99831"
+     inkscape:cx="-365.72277"
      inkscape:cy="626.11187"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1916"
-     inkscape:window-height="987"
+     inkscape:window-height="1023"
      inkscape:window-x="0"
-     inkscape:window-y="72"
+     inkscape:window-y="36"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -200,7 +200,8 @@
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:snap-bbox-midpoints="true"
      inkscape:object-paths="false"
-     inkscape:snap-to-guides="true">
+     inkscape:snap-to-guides="true"
+     inkscape:snap-text-baseline="true">
     <sodipodi:guide
        orientation="0,1"
        position="0,0"
@@ -283,11 +284,13 @@
            y="540"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:125%;font-family:'Courier 10 Pitch';-inkscape-font-specification:'Courier 10 Pitch';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:32px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato Heavy';text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="flowPara4714">$id</flowPara><flowPara
+         id="flowPara4714" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:72px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato Heavy';text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="flowPara4718">$title</flowPara><flowPara
+         id="flowPara4718">$TITLE</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:48px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="flowPara64">$SUBTITLE</flowPara><flowPara
          id="flowPara3039"
-         style="font-style:italic;font-variant:normal;font-weight:900;font-stretch:normal;font-size:48px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato Heavy Italic';text-align:start;writing-mode:lr-tb;text-anchor:start">$person</flowPara><flowPara
+         style="font-style:italic;font-variant:normal;font-weight:900;font-stretch:normal;font-size:48px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato Heavy Italic';text-align:start;writing-mode:lr-tb;text-anchor:start">$SPEAKER</flowPara><flowPara
          id="flowPara4762"
          style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:48px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato Heavy';text-align:start;writing-mode:lr-tb;text-anchor:start"> </flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:48px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato Heavy';text-align:start;writing-mode:lr-tb;text-anchor:start"
