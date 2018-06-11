@@ -251,11 +251,11 @@
          x="959.94507"
          y="639.08167"
          id="tspan3833"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L'">CR217</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L'">CR$id</tspan><tspan
          sodipodi:role="line"
          x="959.94507"
          y="730.83075"
          id="tspan3842"
-         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L Italic'">Professional Hackers</tspan></text>
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L Italic'">$title</tspan></text>
   </g>
 </svg>
