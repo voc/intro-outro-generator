@@ -405,9 +405,26 @@
          x="19.25972"
          y="1016.6071"
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:44.7326355px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">25.- 26. August 2018</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:0%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+       x="702.03717"
+       y="1032.5555"
+       id="text3062-4"><tspan
+         sodipodi:role="line"
+         id="tspan3064-8"
+         x="702.03717"
+         y="1032.5555"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">Creative Commons Attribution 4.0 International </tspan><tspan
+         sodipodi:role="line"
+         x="702.03717"
+         y="1049.2222"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1"
+         id="tspan492">  http://creativecommons.org/licenses/by/4.0/</tspan></text>
+
     <g
        id="license"
-       transform="matrix(0.61454795,0,0,0.61454795,600.92759,534.35751)">
+       transform="matrix(0.61454795,0,0,0.61454795,550.92759,518.35751)">
       <g
          transform="matrix(2.404762,0,0,2.404762,-253.42861,-1037.1755)"
          id="g3607">
@@ -417,7 +434,7 @@
           <path
              inkscape:connector-curvature="0"
              style="fill:#a8b0ab;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             d="m 3.40625,0.476563 113.35547,0.203125 c 1.58594,0 3,-0.238282 3,3.160156 l -0.14063,37.328125 -119.074215,0 0,-37.46875 c 0,-1.671875 0.164063,-3.222656 2.859375,-3.222656 z"
+             d="m 3.40625,0.476563 113.35547,0.203125 c 1.58594,0 3,-0.238282 3,3.160156 l -0.14063,37.328125 H 0.546875 V 3.699219 c 0,-1.671875 0.164063,-3.222656 2.859375,-3.222656 z"
              id="path3511" />
           <path
              inkscape:connector-curvature="0"
@@ -432,7 +449,7 @@
           <path
              inkscape:connector-curvature="0"
              style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             d="M 117.75391,0 2.246094,0 C 1.007813,0 0,1.007813 0,2.246094 L 0,41.492188 C 0,41.773438 0.226563,42 0.507813,42 L 119.49219,42 C 119.77344,42 120,41.773438 120,41.492188 L 120,2.246094 C 120,1.007813 118.99219,0 117.75391,0 Z M 2.246094,1.015625 l 115.507816,0 c 0.67968,0 1.23047,0.550781 1.23047,1.230469 0,0 0,15.820312 0,27.246094 l -82.554692,0 c -3.027344,5.46875 -8.859375,9.183593 -15.546875,9.183593 -6.695313,0 -12.523438,-3.710937 -15.546875,-9.183593 l -4.320313,0 c 0,-11.425782 0,-27.246094 0,-27.246094 0,-0.679688 0.550781,-1.230469 1.230469,-1.230469 z"
+             d="M 117.75391,0 H 2.246094 C 1.007813,0 0,1.007813 0,2.246094 V 41.492188 C 0,41.773438 0.226563,42 0.507813,42 H 119.49219 C 119.77344,42 120,41.773438 120,41.492188 V 2.246094 C 120,1.007813 118.99219,0 117.75391,0 Z M 2.246094,1.015625 H 117.75391 c 0.67968,0 1.23047,0.550781 1.23047,1.230469 0,0 0,15.820312 0,27.246094 H 36.429688 c -3.027344,5.46875 -8.859375,9.183593 -15.546875,9.183593 -6.695313,0 -12.523438,-3.710937 -15.546875,-9.183593 H 1.015625 c 0,-11.425782 0,-27.246094 0,-27.246094 0,-0.679688 0.550781,-1.230469 1.230469,-1.230469 z"
              id="path3517" />
           <path
              inkscape:connector-curvature="0"
