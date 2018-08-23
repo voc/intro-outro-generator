@@ -9,6 +9,7 @@ import time
 import sys
 import os
 import re
+import platform
 
 from xml.sax.saxutils import escape as xmlescape
 from shutil import copyfile
@@ -52,6 +53,10 @@ parser.add_argument('--pause', action="store_true", default=False, help='''
 
 parser.add_argument('--force', action="store_true", default=False, help='''
          Force render if file exists.
+         ''')
+
+parser.add_argument('--no-finalize', dest='nof', action="store_true", default=False, help='''
+         Skip finalize job.
          ''')
 
 parser.add_argument('--outro', action="store_true", default=False, help='''
@@ -116,14 +121,11 @@ else:
 def describe_event(event):
         return "#{}: {}".format(event['id'], event['title'])
 
-
 def event_print(event, message):
         print("{} – {}".format(describe_event(event), message))
 
-
 tempdir = tempfile.TemporaryDirectory()
 print('working in '+tempdir.name)
-
 
 def fmt_command(command, **kwargs):
         args = {}
@@ -133,13 +135,22 @@ def fmt_command(command, **kwargs):
         command = command.format(**args)
         return shlex.split(command)
 
+def run_once(command, **kwargs):
+        DETACHED_PROCESS = 0x00000008
+        return subprocess.Popen(
+                fmt_command(command, **kwargs),
+                shell=False,
+                stdin=None,
+                stdout=None,
+                stderr=None,
+                close_fds=True,
+                creationflags=DETACHED_PROCESS)
 
 def run(command, **kwargs):
         return subprocess.check_call(
                 fmt_command(command, **kwargs),
                 stderr=subprocess.STDOUT,
                 stdout=subprocess.DEVNULL)
-
 
 def enqueue_job(event):
         event_id = str(event['id'])
@@ -152,10 +163,18 @@ def enqueue_job(event):
 
         if event_id == 'pause' or event_id == 'outro' or event_id == 'bgloop':
             copyfile(args.project+event_id+'.aep',work_doc)
-            run('/Applications/Adobe\ After\ Effects\ CC\ 2018/aerender -project {jobpath} -comp {comp} -output {locationpath}',
-                         jobpath=work_doc,
-                         comp=event_id,
-                         locationpath=intermediate_clip)
+            if platform.system() == 'Darwin':
+                run('/Applications/Adobe\ After\ Effects\ CC\ 2018/aerender -project {jobpath} -comp {comp} -output {locationpath}',
+                                jobpath=work_doc,
+                                comp=event_id,
+                                locationpath=intermediate_clip)
+            
+            if platform.system() == 'Windows':
+                run('C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2018/Support\ Files/aerender.exe -project {jobpath} -comp {comp} -output {locationpath}',
+                                jobpath=work_doc,
+                                comp=event_id,
+                                locationpath=intermediate_clip)
+        
         else:
             with open(args.project+'intro.jsx', 'r') as fp:
                     scriptstr = fp.read()
@@ -164,30 +183,43 @@ def enqueue_job(event):
                     value = str(value).replace('"', '\\"')
                     scriptstr = scriptstr.replace("$"+str(key), value)
 
-            with open(script_doc, 'w') as fp:
+            with open(script_doc, 'w', encoding='utf-8') as fp:
                     fp.write(scriptstr)
 
             copyfile(args.project+'intro.aep',work_doc)
-            copyfile(args.project+'intro.scpt',ascript_doc)
+            
+            if platform.system() == 'Darwin':
+                copyfile(args.project+'intro.scpt',ascript_doc)
+                run('osascript {ascript_path} {jobpath} {scriptpath}',
+                                jobpath=work_doc,
+                                scriptpath=script_doc,
+                                ascript_path=ascript_doc)
 
-            run('osascript {ascript_path} {jobpath} {scriptpath}',
-                            jobpath=work_doc,
-                            scriptpath=script_doc,
-                            ascript_path=ascript_doc)
+                run('/Applications/Adobe\ After\ Effects\ CC\ 2018/aerender -project {jobpath} -comp "intro" -output {locationpath}',
+                                jobpath=work_doc,
+                                locationpath=intermediate_clip)
 
-            run('/Applications/Adobe\ After\ Effects\ CC\ 2018/aerender -project {jobpath} -comp "intro" -output {locationpath}',
-                            jobpath=work_doc,
-                            locationpath=intermediate_clip)
+            if platform.system() == 'Windows':
+                run_once('C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2018/Support\ Files/AfterFX.exe -noui {jobpath}', 
+                                jobpath=work_doc)
+                time.sleep(15)
+
+                run_once('C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2018/Support\ Files/AfterFX.exe -noui -r {scriptpath}',
+                                scriptpath=script_doc)
+                time.sleep(5)
+                
+                run('C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2018/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -output {locationpath}',
+                                jobpath=work_doc,
+                                locationpath=intermediate_clip)
 
         return event_id
-
 
 def finalize_job(job_id, event):
         event_id = str(event['id'])
         intermediate_clip = os.path.join(tempdir.name, event_id+'.mov')
         final_clip = os.path.join(os.path.dirname(args.project), event_id+'.ts')
 
-        run('ffmpeg -y -hide_banner -loglevel error -i "{input}" -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 0:1 -shortest -f mpegts "{output}"',
+        run('ffmpeg -y -hide_banner -loglevel error -i {input} -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 0:1 -shortest -f mpegts {output}',
         #run('ffmpeg -y -hide_banner -loglevel error -i "{input}" -ar 48000 -ac 1 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:0 -c:a copy -map 2:0 -c:a copy -shortest -f mpegts "{output}"',
                 input=intermediate_clip,
                 output=final_clip)
@@ -214,7 +246,6 @@ for event in events:
             continue
 
         if args.rooms and event['room'] not in args.rooms:
-            #if event['room'] not in ('ZKM_Medientheater', 'ZKM_OpenHUB', 'ZKM_Vortragssaal', 'HfG_Studio'):
             print("skipping room %s (%s)" % (event['room'], event['title']))
             continue
 
@@ -225,8 +256,16 @@ for event in events:
                 event_print(event, "job was not enqueued successfully, skipping postprocessing")
                 continue
 
-        event_print(event, "finalizing job")
-        finalize_job(job_id, event)
+        if not args.nof:
+                event_print(event, "finalizing job")
+                finalize_job(job_id, event)
+        else:
+                event_id = str(event['id'])
+                event_print(event, "skipping finalizing job")
+                intermediate_clip = os.path.join(tempdir.name, event_id+'.mov')
+                final_clip = os.path.join(os.path.dirname(args.project), event_id+'.mov')
+                copyfile(intermediate_clip, final_clip)
+                event_print(event, "copied intermediate clip to "+final_clip)      
 
 print('all done, cleaning up '+tempdir.name)
 tempdir.cleanup()
