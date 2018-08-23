@@ -160,7 +160,7 @@ def rendertask(task):
 				height = 576
 	
 			# invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-			cmd = 'cd {0} && inkscape --export-background=white --export-width={2} --export-height={3} --export-png=$(pwd)/.frames/{1:04d}.png $(pwd)/.gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr, width, height)
+			cmd = 'cd {0} && inkscape --export-background=white --export-background-opacity=0 --export-width={2} --export-height={3} --export-png=$(pwd)/.frames/{1:04d}.png $(pwd)/.gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr, width, height)
 			errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
 			if errorReturn != '':
 				print("inkscape exitted with error\n"+errorReturn)
@@ -198,6 +198,9 @@ def rendertask(task):
 		else:
 			cmd += '-map 1:0 -c:a copy -map 2:0 -c:a copy '
 		cmd += '-shortest -f mpegts "{0}"'.format(task.outfile)
+	elif task.outfile.endswith('.mov'):
+		cmd = 'cd {0} && '.format(task.workdir)
+		cmd += 'ffmpeg -f image2 -i .frames/%04d.png -r 25 -c:v qtrle -f mov "{0}"'.format(task.outfile)
 	else:
 		cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
 
