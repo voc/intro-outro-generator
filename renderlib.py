@@ -40,7 +40,7 @@ class Rendertask:
 	def __init__(self, infile, sequence, parameters={}, outfile=None, workdir='.'):
 		if isinstance(infile, list):
 			self.infile =  infile[0]
-			self.audiofile = infile[1]
+			#self.audiofile = infile[1]
 		else:
 			self.infile =  infile
 			self.audiofile = None
@@ -91,9 +91,9 @@ def rendertask(task):
 		parser = etree.XMLParser(huge_tree=True)
 		svg = etree.fromstring(svgstr.encode('utf-8'), parser)
 
-	if '$subtitle' in task.parameters and task.parameters['$subtitle'] == '':
-		child = svg.findall(".//*[@id='subtitle']")[0]
-		child.getparent().remove(child)
+	#if '$subtitle' in task.parameters and task.parameters['$subtitle'] == '':
+	#	child = svg.findall(".//*[@id='subtitle']")[0]
+	#	child.getparent().remove(child)
 
 	# frame-number counter
 	frameNr = 0
