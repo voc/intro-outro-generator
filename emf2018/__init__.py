@@ -4,7 +4,7 @@ from renderlib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'https://frab.das-sendezentrum.de/de/subscribe9/public/schedule.xml'
+scheduleUrl = 'http://www.emfcamp.org/schedule.frab'
 
 titlemap = {
 
@@ -148,9 +148,9 @@ def tasks(queue, args, id_list, skip_list):
 	for event in events(scheduleUrl, titlemap):
 
 		# skip events which will not be recorded
-		if event['room'] not in ('Großer Sitzungssaal', 'Kleiner Sitzungssaal') or event['track'] == 'Nomnom':
-			print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
-			continue
+		#if event['room'] not in ('Saal A', 'Saal B') or event['track'] == 'Nomnom':
+		#	print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
+		#	continue
 
 		# when id_list is not empty, only render events which are in id_list
 		if id_list and int(event['id']) not in id_list:
@@ -160,7 +160,7 @@ def tasks(queue, args, id_list, skip_list):
 		# generate a task description and put them into the queue
 		queue.put(Rendertask(
 			infile = ['intro.svg'],
-			outfile = str(event['id']) + ".ts",
+			outfile = str(event['id']) + ".mov",
 			sequence = introFrames,
 			parameters = {
 				'$id': event['id'],
