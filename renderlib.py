@@ -152,7 +152,7 @@ def rendertask(task):
 				# write the generated svg-text into the output-file
 				fp.write( etree.tostring(svg, encoding='unicode') )
 	
-			if task.outfile.endswith('.ts'):
+			if task.outfile.endswith('.ts') or task.outfile.endswith('.mov'):
 				width = 1920
 				height = 1080
 			else:
