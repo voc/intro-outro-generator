@@ -200,7 +200,7 @@ def rendertask(task):
 		cmd += '-shortest -f mpegts "{0}"'.format(task.outfile)
 	elif task.outfile.endswith('.mov'):
 		cmd = 'cd {0} && '.format(task.workdir)
-		cmd += 'ffmpeg -f image2 -i .frames/%04d.png -r 25 -c:v qtrle -f mov "{0}"'.format(task.outfile)
+		cmd += 'ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -f image2 -i .frames/%04d.png -r 25 -shortest -c:v qtrle -f mov "{0}"'.format(task.outfile)
 	else:
 		cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
 
