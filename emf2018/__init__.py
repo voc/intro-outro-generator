@@ -164,8 +164,8 @@ def tasks(queue, args, id_list, skip_list):
 			sequence = introFrames,
 			parameters = {
 				'$id': event['id'],
-				'$title': event['title'].upper(),
+				'$title': event['title'],
 				'$subtitle': event['subtitle'],
-				'$personnames': event['personnames'].upper(),
+				'$personnames': event['personnames'],
 			}
 		))
