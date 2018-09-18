@@ -65,22 +65,16 @@ def outroFrames(args):
     frames = 3*fps
     for i in range(0, frames):
         yield(
-            ('pillgroup', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('logotext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('c3voclogo', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('c3voctext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('bysalogo', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('bysatext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
+            ('conflogo', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
+            ('license', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
+            ('credits', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
         )
     frames = 3*fps
     for i in range(0, frames):
         yield(
-            ('pillgroup', 'style', 'opacity', 1),
-            ('logotext', 'style', 'opacity', 1),
-            ('c3voclogo', 'style', 'opacity', 1),
-            ('c3voctext', 'style', 'opacity', 1),
-            ('bysalogo', 'style', 'opacity', 1),
-            ('bysatext', 'style', 'opacity', 1),
+            ('conflogo', 'style', 'opacity', 1),
+            ('license', 'style', 'opacity', 1),
+            ('credits', 'style', 'opacity', 1),
         )
 
 def pauseFrames(args):
