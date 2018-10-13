@@ -37,7 +37,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35355339"
-     inkscape:cx="373.74889"
+     inkscape:cx="1249.7196"
      inkscape:cy="560.74794"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -15534,17 +15534,6 @@
          x="76.367538"
          y="217.97614"
          style="font-size:180px;line-height:1.25;fill:#dcdcdc"> </tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Umpush;-inkscape-font-specification:Umpush;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="88.166519"
-       y="961.85254"
-       id="persons"><tspan
-         sodipodi:role="line"
-         id="tspan5767"
-         x="88.166519"
-         y="961.85254"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60px;line-height:1.25;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor';fill:#dcdcdc">$personsnames</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="subtitle"
@@ -15570,5 +15559,26 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:125px;line-height:1.25;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor';fill:#d3d3d3"
          id="flowPara27326">$title</flowPara><flowPara
          style="font-size:125px;line-height:1.25;fill:#d3d3d3"
-         id="flowPara7385"> </flowPara></flowRoot>  </g>
+         id="flowPara7385"> </flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3268"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3270"><rect
+           id="rect3272"
+           width="1406.3438"
+           height="209.48213"
+           x="106.20633"
+           y="852.9718" /></flowRegion><flowPara
+         id="flowPara3274"></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3276"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion3278"><rect
+           id="rect3280"
+           width="1388.7821"
+           height="169.09293"
+           x="132.96576"
+           y="868.96069" /></flowRegion><flowPara
+         id="flowPara3282"
+         style="fill:#ffffff;-inkscape-font-specification:Umpush;font-family:Umpush;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:64px">$personnames</flowPara></flowRoot>  </g>
 </svg>
