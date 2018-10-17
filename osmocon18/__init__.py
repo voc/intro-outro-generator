@@ -72,7 +72,13 @@ def pauseFrames(args):
 def debug():
     render('intro.svg',
         '../intro.ts',
-        introFrames
+        introFrames,
+        {
+            '$id': 7776,
+            '$title': 'Configuring + running GPRS/EDGE data services with OsmoPCU, OsmoSGSN and OpenGGSN',
+            '$subtitle': 'With some subtitle!',
+            '$personnames':  'Alexander Chemeris + Harald Welte'
+        }
     )
 
     render('outro.svg',

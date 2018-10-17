@@ -164,7 +164,7 @@ def rendertask(task):
 			errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
 			if errorReturn != '':
 				print("inkscape exitted with error\n"+errorReturn)
-				sys.exit(42)
+				#sys.exit(42)
 
 		# increment frame-number
 		frameNr += 1
