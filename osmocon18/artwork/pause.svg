@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1920"
+   height="1080"
+   viewBox="0 0 1800 1012.5"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   sodipodi:docname="pause.svg"
+   inkscape:export-filename="pause.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3374-5-7-7-0">
+      <stop
+         id="stop3376-8-6-4-2"
+         style="stop-color:#729fcf;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3378-6-7-4-9"
+         style="stop-color:#729fcf;stop-opacity:0"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3362-8-6-0-9">
+      <stop
+         id="stop3364-4-5-78-9"
+         style="stop-color:#3465a4;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3366-7-6-6-4"
+         style="stop-color:#3465a4;stop-opacity:0"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="24.837126"
+       y1="44.528019"
+       x2="21.036427"
+       y2="21.041553"
+       id="linearGradient3991-3-88-5"
+       xlink:href="#linearGradient7101-4-9-4-1"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient7101-4-9-4-1">
+      <stop
+         id="stop7103-0-4-31-0"
+         style="stop-color:#babdb6;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop7105-6-8-4-3"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="39.06765"
+       y1="28.5"
+       x2="39.421204"
+       y2="10.934953"
+       id="linearGradient3993-1-9-7"
+       xlink:href="#linearGradient6979-9-2-2-8"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient6979-9-2-2-8">
+      <stop
+         id="stop6981-9-9-0-8"
+         style="stop-color:#888a85;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop6983-0-3-6-6"
+         style="stop-color:#555753;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <radialGradient
+       cx="10.28125"
+       cy="7.8249326"
+       r="4.5250292"
+       fx="10.28125"
+       fy="7.8249326"
+       id="radialGradient3995-7-4-0"
+       xlink:href="#linearGradient3374-5-7-7-0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.2651111,0,0,2.2923498,16.215361,52.593597)" />
+    <radialGradient
+       cx="10.28125"
+       cy="9.8424416"
+       r="4.5250292"
+       fx="10.28125"
+       fy="9.8424416"
+       id="radialGradient3997-3-3-4"
+       xlink:href="#linearGradient3362-8-6-0-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(15.1803,0,0,5.0647752,-116.56897,28.614297)" />
+    <radialGradient
+       cx="8.9057236"
+       cy="1.7286602"
+       r="1.9952321"
+       fx="8.9057236"
+       fy="1.7286602"
+       id="radialGradient3999-1-4-6"
+       xlink:href="#linearGradient7131-6-1-5-7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7375073,0,0,0.7201806,2.4345312,0.6617371)" />
+    <linearGradient
+       id="linearGradient7131-6-1-5-7">
+      <stop
+         id="stop7133-4-5-2-6"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop7135-6-9-5-0"
+         style="stop-color:#d3d7cf;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <radialGradient
+       cx="8.3046875"
+       cy="1.1256332"
+       r="2.0507698"
+       fx="8.3046875"
+       fy="1.1256332"
+       id="radialGradient4001-9-6-9"
+       xlink:href="#linearGradient7153-0-1-9-75"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.2943491,0,0,5.2881329,-7.02204,58.291497)" />
+    <linearGradient
+       id="linearGradient7153-0-1-9-75">
+      <stop
+         id="stop7155-8-7-3-9"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop7157-5-7-7-7"
+         style="stop-color:#ffffff;stop-opacity:0"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="24.837126"
+       y1="44.528019"
+       x2="21.036427"
+       y2="21.041553"
+       id="linearGradient3991-3-88-5-3"
+       xlink:href="#linearGradient7101-4-9-4-1"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="39.06765"
+       y1="28.5"
+       x2="39.421204"
+       y2="10.934953"
+       id="linearGradient3993-1-9-7-2"
+       xlink:href="#linearGradient6979-9-2-2-8"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       cx="10.28125"
+       cy="7.8249326"
+       r="4.5250292"
+       fx="10.28125"
+       fy="7.8249326"
+       id="radialGradient3995-7-4-0-2"
+       xlink:href="#linearGradient3374-5-7-7-0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.2651111,0,0,2.2923498,16.215361,52.593597)" />
+    <radialGradient
+       cx="10.28125"
+       cy="9.8424416"
+       r="4.5250292"
+       fx="10.28125"
+       fy="9.8424416"
+       id="radialGradient3997-3-3-4-7"
+       xlink:href="#linearGradient3362-8-6-0-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(15.1803,0,0,5.0647752,-116.56897,28.614297)" />
+    <radialGradient
+       cx="8.9057236"
+       cy="1.7286602"
+       r="1.9952321"
+       fx="8.9057236"
+       fy="1.7286602"
+       id="radialGradient3999-1-4-6-0"
+       xlink:href="#linearGradient7131-6-1-5-7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7375073,0,0,0.7201806,2.4345312,0.6617371)" />
+    <radialGradient
+       cx="8.3046875"
+       cy="1.1256332"
+       r="2.0507698"
+       fx="8.3046875"
+       fy="1.1256332"
+       id="radialGradient4001-9-6-9-6"
+       xlink:href="#linearGradient7153-0-1-9-75"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.2943491,0,0,5.2881329,-7.02204,58.291497)" />
+    <linearGradient
+       x1="24.837126"
+       y1="44.528019"
+       x2="21.036427"
+       y2="21.041553"
+       id="linearGradient3991-3-88-5-3-4"
+       xlink:href="#linearGradient7101-4-9-4-1"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="39.06765"
+       y1="28.5"
+       x2="39.421204"
+       y2="10.934953"
+       id="linearGradient3993-1-9-7-2-4"
+       xlink:href="#linearGradient6979-9-2-2-8"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       cx="10.28125"
+       cy="7.8249326"
+       r="4.5250292"
+       fx="10.28125"
+       fy="7.8249326"
+       id="radialGradient3995-7-4-0-2-3"
+       xlink:href="#linearGradient3374-5-7-7-0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.2651111,0,0,2.2923498,16.215361,52.593597)" />
+    <radialGradient
+       cx="10.28125"
+       cy="9.8424416"
+       r="4.5250292"
+       fx="10.28125"
+       fy="9.8424416"
+       id="radialGradient3997-3-3-4-7-1"
+       xlink:href="#linearGradient3362-8-6-0-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(15.1803,0,0,5.0647752,-116.56897,28.614297)" />
+    <radialGradient
+       cx="8.9057236"
+       cy="1.7286602"
+       r="1.9952321"
+       fx="8.9057236"
+       fy="1.7286602"
+       id="radialGradient3999-1-4-6-0-7"
+       xlink:href="#linearGradient7131-6-1-5-7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7375073,0,0,0.7201806,2.4345312,0.6617371)" />
+    <radialGradient
+       cx="8.3046875"
+       cy="1.1256332"
+       r="2.0507698"
+       fx="8.3046875"
+       fy="1.1256332"
+       id="radialGradient4001-9-6-9-6-6"
+       xlink:href="#linearGradient7153-0-1-9-75"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.2943491,0,0,5.2881329,-7.02204,58.291497)" />
+    <radialGradient
+       cx="10.28125"
+       cy="7.8249326"
+       r="4.5250292"
+       fx="10.28125"
+       fy="7.8249326"
+       id="radialGradient3995-7-4-0-2-2"
+       xlink:href="#linearGradient3374-5-7-7-0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.2651111,0,0,2.2923498,16.215361,52.593597)" />
+    <radialGradient
+       cx="10.28125"
+       cy="9.8424416"
+       r="4.5250292"
+       fx="10.28125"
+       fy="9.8424416"
+       id="radialGradient3997-3-3-4-7-7"
+       xlink:href="#linearGradient3362-8-6-0-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(15.1803,0,0,5.0647752,-116.56897,28.614297)" />
+    <radialGradient
+       cx="8.9057236"
+       cy="1.7286602"
+       r="1.9952321"
+       fx="8.9057236"
+       fy="1.7286602"
+       id="radialGradient3999-1-4-6-0-0"
+       xlink:href="#linearGradient7131-6-1-5-7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7375073,0,0,0.7201806,2.4345312,0.6617371)" />
+    <radialGradient
+       cx="8.3046875"
+       cy="1.1256332"
+       r="2.0507698"
+       fx="8.3046875"
+       fy="1.1256332"
+       id="radialGradient4001-9-6-9-6-60"
+       xlink:href="#linearGradient7153-0-1-9-75"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.2943491,0,0,5.2881329,-7.02204,58.291497)" />
+    <radialGradient
+       r="4.5250292"
+       fy="8.0709476"
+       fx="10.28125"
+       cy="8.0709476"
+       cx="10.28125"
+       gradientTransform="matrix(4.9499444,0,0,4.9510321,-11.38809,35.312197)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3637-3"
+       xlink:href="#linearGradient3374-5-7-7-0"
+       inkscape:collect="always" />
+    <radialGradient
+       r="4.5250292"
+       fy="9.8424416"
+       fx="10.28125"
+       cy="9.8424416"
+       cx="10.28125"
+       gradientTransform="matrix(23.169932,0,0,7.6402677,-198.71238,8.843597)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3639-5"
+       xlink:href="#linearGradient3362-8-6-0-9"
+       inkscape:collect="always" />
+    <radialGradient
+       cx="10.28125"
+       cy="7.8249326"
+       r="4.5250292"
+       fx="10.28125"
+       fy="7.8249326"
+       id="radialGradient3995-7-4-0-2-2-0"
+       xlink:href="#linearGradient3374-5-7-7-0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.2651111,0,0,2.2923498,16.215361,52.593597)" />
+    <radialGradient
+       cx="10.28125"
+       cy="9.8424416"
+       r="4.5250292"
+       fx="10.28125"
+       fy="9.8424416"
+       id="radialGradient3997-3-3-4-7-7-6"
+       xlink:href="#linearGradient3362-8-6-0-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(15.1803,0,0,5.0647752,-116.56897,28.614297)" />
+    <radialGradient
+       cx="8.9057236"
+       cy="1.7286602"
+       r="1.9952321"
+       fx="8.9057236"
+       fy="1.7286602"
+       id="radialGradient3999-1-4-6-0-0-3"
+       xlink:href="#linearGradient7131-6-1-5-7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7375073,0,0,0.7201806,2.4345312,0.6617371)" />
+    <radialGradient
+       cx="8.3046875"
+       cy="1.1256332"
+       r="2.0507698"
+       fx="8.3046875"
+       fy="1.1256332"
+       id="radialGradient4001-9-6-9-6-60-6"
+       xlink:href="#linearGradient7153-0-1-9-75"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.2943491,0,0,5.2881329,-7.02204,58.291497)" />
+    <radialGradient
+       r="4.5250292"
+       fy="8.0709476"
+       fx="10.28125"
+       cy="8.0709476"
+       cx="10.28125"
+       gradientTransform="matrix(4.9499444,0,0,4.9510321,-11.38809,35.312197)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3637-3-5"
+       xlink:href="#linearGradient3374-5-7-7-0"
+       inkscape:collect="always" />
+    <radialGradient
+       r="4.5250292"
+       fy="9.8424416"
+       fx="10.28125"
+       cy="9.8424416"
+       cx="10.28125"
+       gradientTransform="matrix(23.169932,0,0,7.6402677,-198.71238,8.843597)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3639-5-6"
+       xlink:href="#linearGradient3362-8-6-0-9"
+       inkscape:collect="always" />
+    <radialGradient
+       cx="10.28125"
+       cy="7.8249326"
+       r="4.5250292"
+       fx="10.28125"
+       fy="7.8249326"
+       id="radialGradient3995-7-4-0-2-2-0-4"
+       xlink:href="#linearGradient3374-5-7-7-0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.2651111,0,0,2.2923498,16.215361,52.593597)" />
+    <radialGradient
+       cx="10.28125"
+       cy="9.8424416"
+       r="4.5250292"
+       fx="10.28125"
+       fy="9.8424416"
+       id="radialGradient3997-3-3-4-7-7-6-7"
+       xlink:href="#linearGradient3362-8-6-0-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(15.1803,0,0,5.0647752,-116.56897,28.614297)" />
+    <radialGradient
+       cx="8.9057236"
+       cy="1.7286602"
+       r="1.9952321"
+       fx="8.9057236"
+       fy="1.7286602"
+       id="radialGradient3999-1-4-6-0-0-3-4"
+       xlink:href="#linearGradient7131-6-1-5-7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7375073,0,0,0.7201806,2.4345312,0.6617371)" />
+    <radialGradient
+       cx="8.3046875"
+       cy="1.1256332"
+       r="2.0507698"
+       fx="8.3046875"
+       fy="1.1256332"
+       id="radialGradient4001-9-6-9-6-60-6-0"
+       xlink:href="#linearGradient7153-0-1-9-75"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.2943491,0,0,5.2881329,-7.02204,58.291497)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70260417"
+     inkscape:cx="960"
+     inkscape:cy="509.59265"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer7"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:measure-start="63.3968,-113.628"
+     inkscape:measure-end="34.3452,-129.3"
+     inkscape:snap-page="true"
+     inkscape:pagecheckerboard="true"
+     gridtolerance="5"
+     objecttolerance="10"
+     guidetolerance="10"
+     inkscape:lockguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid20483" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Background"
+     transform="translate(0,-67.5)"
+     sodipodi:insensitive="true">
+    <rect
+       style="opacity:1;fill:#fffff3;fill-opacity:1;stroke:none;stroke-width:1.00031257;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect20497"
+       width="1800"
+       height="1012.4999"
+       x="0"
+       y="67.5"
+       inkscape:label="bg color" />
+    <rect
+       style="display:inline;opacity:1;fill:#7ba4d9;fill-opacity:1;stroke:none;stroke-width:0.96588516;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect20265"
+       width="1800"
+       height="339.50528"
+       x="1.1368684e-13"
+       y="740.49463"
+       inkscape:label="Bande Blau Unten" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Text"
+     style="display:none"
+     transform="translate(0,-67.5)">
+    <flowRoot
+       xml:space="preserve"
+       id="title"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0;fill:#555555;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.9375,0,0,0.9375,596.82417,403.33401)"
+       inkscape:label="title"
+       inkscape:transform-center-x="4.0178571"
+       inkscape:transform-center-y="-24.107143"><flowRegion
+         id="flowRegion20435"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#555555;fill-opacity:1"><rect
+           id="rect20437"
+           width="604.28571"
+           height="189.99998"
+           x="61.42857"
+           y="67.714287"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#555555;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara24792"
+         style="font-size:192px">Pause</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot25337"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion25339"><rect
+           id="rect25341"
+           width="14.285714"
+           height="90"
+           x="902.85712"
+           y="472.85715" /></flowRegion><flowPara
+         id="flowPara25343" /></flowRoot>    <flowRoot
+       inkscape:transform-center-y="-24.107143"
+       inkscape:transform-center-x="4.0178571"
+       inkscape:label="title"
+       transform="matrix(0.9375,0,0,0.9375,604.85988,449.04839)"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0;fill:#555555;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="pause"
+       xml:space="preserve"><flowRegion
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#555555;fill-opacity:1"
+         id="flowRegion25395"><rect
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#555555;fill-opacity:1"
+           y="67.714287"
+           x="61.42857"
+           height="189.99998"
+           width="604.28571"
+           id="rect25393" /></flowRegion><flowPara
+         style="font-size:192px"
+         id="flowPara25397">Pause</flowPara></flowRoot>  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="title">
+    <g
+       inkscape:groupmode="layer"
+       id="layer5"
+       inkscape:label="title_path"
+       style="display:inline">
+      <g
+         style="display:inline"
+         id="g3732-6-6"
+         transform="matrix(2.0475567,0,0,2.0475567,1088.9332,-71.674635)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 60.69548,67.493897 c 0,11.5675 -9.48796,20.9448 -21.19195,20.9448 -11.703989,0 -21.191949,-9.3773 -21.191949,-20.9448 0,-11.5674 9.48796,-20.9447 21.191949,-20.9447 11.70399,0 21.19195,9.3773 21.19195,20.9447 z"
+           id="path3544-1-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;opacity:0.8;fill:url(#radialGradient3637-3-5);fill-opacity:1;stroke:url(#radialGradient3639-5-6);stroke-width:1.46151388;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+        <g
+           transform="matrix(1.4615138,0,0,2.5218672,4.4272,31.547917)"
+           id="g3546-8-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:#000000;fill-opacity:1;stroke:none">
+          <path
+             inkscape:connector-curvature="0"
+             d="m 24,13 -8.1875,15.225744 c 11.445471,0 5.976697,0 16.34375,0 z m 0,4.96875 4,7.421875 h -7.953125 z"
+             id="path3548-79-4"
+             style="fill:url(#linearGradient3991-3-88-5-3-4);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3993-1-9-7-2-4);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+          <path
+             inkscape:connector-curvature="0"
+             d="M 26.355979,42.522608 20,21.277828 13.644021,42.522609"
+             transform="matrix(1,0,0,0.57953638,4,2.7937247)"
+             id="path3550-2-3"
+             style="fill:none;stroke:#ffffff;stroke-width:1.31358945px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" />
+        </g>
+        <path
+           inkscape:connector-curvature="0"
+           d="m 53.38791,67.493897 c 0,7.6681 -6.21625,13.8844 -13.88438,13.8844 -7.66813,0 -13.884379,-6.2163 -13.884379,-13.8844 0,-7.6681 6.216249,-13.8844 13.884379,-13.8844 7.66813,0 13.88438,6.2163 13.88438,13.8844 z"
+           id="path3552-0-1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:url(#radialGradient3995-7-4-0-2-2-0-4);fill-opacity:1;stroke:url(#radialGradient3997-3-3-4-7-7-6-7);stroke-width:1.46151388;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+        <g
+           transform="matrix(3.2735609,0,0,3.2593101,-24.33091,59.292917)"
+           id="g3554-2-4"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:#000000;fill-opacity:1;stroke:none">
+          <path
+             inkscape:connector-curvature="0"
+             d="M 11,2.25 C 11,3.2164983 10.195512,4 9.203125,4 8.2107383,4 7.40625,3.2164983 7.40625,2.25 7.40625,1.2835017 8.2107383,0.5 9.203125,0.5 10.195512,0.5 11,1.2835017 11,2.25 Z"
+             transform="matrix(1.1130433,0,0,1.1428572,9.2565233,-0.07142864)"
+             id="path3556-3-9"
+             style="fill:url(#radialGradient3999-1-4-6-0-0-3-4);fill-opacity:1;stroke:#555753;stroke-width:0.39671427;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+          <path
+             inkscape:connector-curvature="0"
+             d="M 20,1.5 C 20,1.7761424 19.776142,2 19.5,2 19.223858,2 19,1.7761424 19,1.5 19,1.2238576 19.223858,1 19.5,1 19.776142,1 20,1.2238576 20,1.5 Z"
+             transform="matrix(1.8125,0,0,1.8125,-16.465404,-0.9288198)"
+             id="path3558-7-2"
+             style="fill:#ffffff;fill-opacity:1;stroke:none" />
+        </g>
+        <path
+           inkscape:connector-curvature="0"
+           d="m 44.61882,67.441097 c 0,2.8124 -2.2902,5.0924 -5.1153,5.0924 -2.8251,0 -5.1153,-2.28 -5.1153,-5.0924 0,-2.8125 2.2902,-5.0924 5.1153,-5.0924 2.8251,0 5.1153,2.2799 5.1153,5.0924 z"
+           id="path3560-5-0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:url(#radialGradient4001-9-6-9-6-60-6-0);stroke-width:1.46151364;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+      <g
+         aria-label="Os"
+         style="font-style:normal;font-weight:normal;font-size:131.04367065px;line-height:125%;font-family:Sans;letter-spacing:0.28665793px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755735"
+         id="text3743-6-9-6">
+        <path
+           d="m 1218.6527,89.895193 c 0,37.740577 6.6833,47.568857 23.5879,47.568857 17.2978,0 24.7673,-11.92498 24.7673,-47.961988 0,-35.381791 -6.2901,-46.127372 -23.3258,-46.127372 -16.9046,0 -25.0294,11.662887 -25.0294,46.520503 z m 11.925,2.620874 c 0,-28.305433 3.6692,-38.264752 12.8423,-38.264752 9.4351,0 12.056,9.3041 12.056,35.512835 0,26.73291 -3.2761,36.82327 -12.7112,36.82327 -9.3041,0 -12.1871,-9.69723 -12.1871,-34.071353 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:131.04367065px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';letter-spacing:0.28665793px;fill:#a00000;fill-opacity:1;stroke-width:2.04755735"
+           id="path1380" />
+        <path
+           d="m 1296.4825,69.452381 c -14.6769,0 -21.3602,6.290096 -21.3602,15.463153 0,4.324441 1.5726,9.042013 7.4695,13.890629 l 12.7113,10.876627 c 3.9313,3.53818 5.2417,6.68322 5.2417,10.2214 0,5.24175 -3.9313,8.12471 -10.6145,8.12471 -5.1107,0 -9.3041,-1.04835 -13.1044,-3.27609 -1.4415,2.35879 -1.8346,4.58653 -1.8346,6.15905 0,4.58653 6.6832,6.68323 15.9873,6.68323 13.3665,0 21.6222,-6.55218 21.6222,-18.21507 0,-6.55218 -2.0967,-10.87663 -7.7316,-16.38046 l -12.187,-9.828275 c -4.4555,-3.669223 -5.2418,-5.765921 -5.2418,-8.124708 0,-4.062353 4.1934,-6.290096 10.3525,-6.290096 4.9796,0 8.911,1.04835 12.8423,3.407136 1.4414,-1.572524 2.3588,-3.669223 2.3588,-5.372791 0,-2.620873 -3.0141,-7.338445 -16.5115,-7.338445 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:131.04367065px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';letter-spacing:0.28665793px;fill:#a00000;fill-opacity:1;stroke-width:2.04755735"
+           id="path1382" />
+      </g>
+      <g
+         aria-label="o"
+         style="font-style:normal;font-weight:normal;font-size:81.90226746px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755735"
+         id="text3760-7-2-9">
+        <path
+           d="m 1401.423,103.52374 c 0,29.48482 7.0764,34.07135 20.5739,34.07135 14.0216,0 21.4911,-10.09036 21.4911,-34.46449 0,-26.601861 -6.5522,-33.678219 -20.3117,-33.678219 -13.7596,0 -21.7533,10.090362 -21.7533,34.071359 z m 11.5318,0.26208 c 0,-20.44281 4.0624,-25.029339 9.8283,-25.029339 6.1591,0 9.1731,3.669223 9.1731,24.505169 0,20.44281 -4.0624,25.29143 -9.6973,25.29143 -6.028,0 -9.3041,-3.14505 -9.3041,-24.76726 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:131.04367065px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';fill:#a00000;fill-opacity:1;stroke-width:2.04755735"
+           id="path1385" />
+      </g>
+      <g
+         aria-label="Con"
+         style="font-style:normal;font-weight:bold;font-size:131.04367065px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Yanone Kaffeesatz Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755735"
+         id="text4707-97-6">
+        <path
+           d="m 1477.7892,43.898792 c -11.7939,0 -26.2087,7.86262 -26.2087,50.844944 0,36.692224 7.0763,44.816934 21.8843,44.816934 9.9593,0 15.9873,-3.53818 15.9873,-9.69723 0,-3.14505 -0.9173,-6.42114 -1.9657,-8.64888 -2.4898,1.31043 -6.159,1.96565 -10.2214,1.96565 -7.3384,0 -10.2214,-6.81427 -10.2214,-29.615867 0,-28.56752 6.8143,-35.381791 14.2838,-35.381791 2.8829,0 5.2417,1.048349 6.8143,2.227742 1.0483,-2.227742 2.0967,-5.241746 2.0967,-8.779925 0,-3.931311 -1.3105,-7.731577 -12.4492,-7.731577 z"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:131.04367065px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#a00000;fill-opacity:1;stroke-width:2.04755735"
+           id="path1388" />
+        <path
+           d="m 1491.8703,104.70306 c 0,29.35378 6.5521,34.20239 20.7049,34.20239 14.1527,0 21.4911,-9.43514 21.4911,-34.72657 0,-26.470821 -6.4211,-33.416136 -20.4428,-33.416136 -13.8906,0 -21.7532,10.221407 -21.7532,33.940316 z m 16.1183,-0.13105 c 0,-18.6082 2.2278,-21.229073 5.1107,-21.229073 3.8003,0 4.8486,2.358786 4.8486,21.229073 0,20.18073 -2.4898,22.14638 -4.9796,22.14638 -3.2761,0 -4.9797,-1.70357 -4.9797,-22.14638 z"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:131.04367065px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#a00000;fill-opacity:1;stroke-width:2.04755735"
+           id="path1390" />
+        <path
+           d="m 1540.2991,137.59502 c 14.4148,0 14.6769,0 14.6769,-2.62088 V 84.915461 c 1.4415,-1.048349 3.2761,-1.572524 4.9796,-1.572524 3.6693,0 4.3245,2.096699 4.3245,8.910969 v 45.341114 c 14.8079,0 15.201,0 15.201,-2.62088 V 87.667378 c 0,-13.104367 -5.6348,-16.904634 -18.8703,-16.904634 -6.5521,0 -16.2494,2.358787 -20.3117,4.324442 z"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:131.04367065px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#a00000;fill-opacity:1;stroke-width:2.04755735"
+           id="path1392" />
+      </g>
+      <path
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Andale Mono';writing-mode:lr-tb;display:inline;fill:#a00000;fill-opacity:1;stroke:#a00000;stroke-width:2.04755735;stroke-opacity:1"
+         d="m 1342.0244,70.382814 -8.8741,15.272702 -4.0593,-6.9865 1.2039,55.028084 c 3.887,-2.71488 5.3164,1.47605 5.3748,-0.61985 l 1.4237,-51.004974 c 3.0141,-1.57252 6.0272,-2.227521 8.9101,-2.227521 5.2418,0 7.3232,1.833021 7.4545,6.550591 l 0.5798,47.161764 c 3.6356,-1.03422 6.9193,0.79411 6.9344,-0.35191 l 0.6478,-49.061364 c 2.883,-1.834611 7.188,-4.171091 10.202,-4.171091 5.2417,0 6.3099,2.625001 6.4185,8.914071 l 0.7878,45.610104 c 2.4651,-0.38781 5.9664,1.24339 5.9987,-0.39591 l 0.9038,-45.998034 c 0.2319,-11.791681 1.3508,-17.564192 -11.7533,-17.564192 -5.3728,0 -11.6612,1.57328 -16.1166,4.063111 -2.4899,-2.620651 -6.1586,-4.063111 -11.7935,-4.063111 -1.5361,0 -2.9245,-0.0721 -4.243,-0.15595 z"
+         id="path3959-9-26-3-1-4"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 1333.1493,85.655406 -9.2281,-15.875942 -9.2281,-15.876132 h 18.4562 18.4561 l -9.2281,15.876132 z"
+         id="path3981-0-4-1-2-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;fill-opacity:1;stroke:#e19c9c;stroke-width:10.23778343;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 1381.984,132.44473 V 75.679295"
+         id="path3983-4-9-2-9-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:10.28292942;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 1357.464,132.4208 V 91.835136"
+         id="path3985-4-0-9-3-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:10.23778343;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 1333.1479,132.77645 -0.022,-24.06433"
+         id="path3951-0-4-91-2-1-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:9.56036377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <g
+         aria-label="18"
+         style="font-style:normal;font-weight:bold;font-size:131.04367065px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Yanone Kaffeesatz Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#3566a5;fill-opacity:1;stroke:none;stroke-width:2.04755735"
+         id="text4707-9-8">
+        <path
+           d="m 1603.1461,76.528687 c 0,0 5.6348,-1.310437 12.4491,-1.572524 l -1.1794,49.927637 c -12.187,0 -16.6425,0.78626 -16.6425,4.06236 0,3.40713 0.131,6.42114 0.3931,9.69723 h 43.6376 c 3.276,0 3.276,-3.14505 3.276,-14.28376 0,0 -3.9313,0.52417 -7.9936,0.52417 h -7.3385 l 1.5726,-64.080354 c -0.6553,-0.524174 -2.6209,-0.786262 -3.8003,-0.786262 -6.9453,0 -26.6019,4.455485 -26.6019,7.46949 0,3.538179 0.6552,6.290096 2.2278,9.042013 z"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:131.04367065px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#3566a5;fill-opacity:1;stroke-width:2.04755735"
+           id="path1395" />
+        <path
+           d="m 1673.6988,46.126555 c -12.3182,0 -22.1464,7.862621 -22.1464,23.063686 0,4.586529 1.3104,8.91097 3.4071,11.924974 1.9657,3.014005 4.9797,5.765922 8.3868,8.517839 -7.6005,5.503834 -12.7112,13.890626 -12.7112,24.636206 0,13.36646 6.159,25.29143 24.3741,25.29143 15.3321,0 22.8016,-12.3181 22.8016,-24.89829 0,-6.55219 -2.0967,-12.31811 -6.8143,-17.821944 -1.7036,-1.965655 -3.8002,-3.93131 -5.8969,-6.028009 6.6832,-5.241747 12.5801,-11.924974 12.5801,-23.456817 0,-15.987328 -10.0903,-21.229075 -23.9809,-21.229075 z m 5.8969,57.528175 c 1.8346,2.0967 3.8003,4.58653 3.8003,10.61453 0,7.33845 -4.1934,11.26976 -9.4352,11.26976 -5.3728,0 -9.6972,-4.1934 -9.6972,-12.31811 0,-6.81427 3.9313,-11.13871 9.3041,-15.201061 2.2278,1.834611 4.3244,3.669221 6.028,5.634881 z m -3.8002,-43.768589 c 5.3727,0 8.2557,4.324441 8.2557,7.993664 0,6.028009 -3.4071,10.614537 -8.3868,14.807934 -2.6209,-2.358786 -5.1107,-4.586528 -6.5522,-6.421139 -1.4415,-1.834612 -2.7519,-4.193398 -2.7519,-7.993664 0,-5.765922 4.0624,-8.386795 9.4352,-8.386795 z"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:131.04367065px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#3566a5;fill-opacity:1;stroke-width:2.04755735"
+           id="path1397" />
+      </g>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer4"
+       inkscape:label="title_font"
+       style="display:none">
+      <g
+         style="display:inline"
+         id="g3732-6"
+         transform="matrix(2.0475567,0,0,2.0475567,1088.9332,-71.674635)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 60.69548,67.493897 c 0,11.5675 -9.48796,20.9448 -21.19195,20.9448 -11.703989,0 -21.191949,-9.3773 -21.191949,-20.9448 0,-11.5674 9.48796,-20.9447 21.191949,-20.9447 11.70399,0 21.19195,9.3773 21.19195,20.9447 z"
+           id="path3544-1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;opacity:0.8;fill:url(#radialGradient3637-3);fill-opacity:1;stroke:url(#radialGradient3639-5);stroke-width:1.46151388;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+        <g
+           transform="matrix(1.4615138,0,0,2.5218672,4.4272,31.547917)"
+           id="g3546-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:#000000;fill-opacity:1;stroke:none">
+          <path
+             inkscape:connector-curvature="0"
+             d="m 24,13 -8.1875,15.225744 c 11.445471,0 5.976697,0 16.34375,0 z m 0,4.96875 4,7.421875 h -7.953125 z"
+             id="path3548-79"
+             style="fill:url(#linearGradient3991-3-88-5-3);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3993-1-9-7-2);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+          <path
+             inkscape:connector-curvature="0"
+             d="M 26.355979,42.522608 20,21.277828 13.644021,42.522609"
+             transform="matrix(1,0,0,0.57953638,4,2.7937247)"
+             id="path3550-2"
+             style="fill:none;stroke:#ffffff;stroke-width:1.31358945px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" />
+        </g>
+        <path
+           inkscape:connector-curvature="0"
+           d="m 53.38791,67.493897 c 0,7.6681 -6.21625,13.8844 -13.88438,13.8844 -7.66813,0 -13.884379,-6.2163 -13.884379,-13.8844 0,-7.6681 6.216249,-13.8844 13.884379,-13.8844 7.66813,0 13.88438,6.2163 13.88438,13.8844 z"
+           id="path3552-0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:url(#radialGradient3995-7-4-0-2-2-0);fill-opacity:1;stroke:url(#radialGradient3997-3-3-4-7-7-6);stroke-width:1.46151388;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+        <g
+           transform="matrix(3.2735609,0,0,3.2593101,-24.33091,59.292917)"
+           id="g3554-2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:#000000;fill-opacity:1;stroke:none">
+          <path
+             inkscape:connector-curvature="0"
+             d="M 11,2.25 C 11,3.2164983 10.195512,4 9.203125,4 8.2107383,4 7.40625,3.2164983 7.40625,2.25 7.40625,1.2835017 8.2107383,0.5 9.203125,0.5 10.195512,0.5 11,1.2835017 11,2.25 Z"
+             transform="matrix(1.1130433,0,0,1.1428572,9.2565233,-0.07142864)"
+             id="path3556-3"
+             style="fill:url(#radialGradient3999-1-4-6-0-0-3);fill-opacity:1;stroke:#555753;stroke-width:0.39671427;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+          <path
+             inkscape:connector-curvature="0"
+             d="M 20,1.5 C 20,1.7761424 19.776142,2 19.5,2 19.223858,2 19,1.7761424 19,1.5 19,1.2238576 19.223858,1 19.5,1 19.776142,1 20,1.2238576 20,1.5 Z"
+             transform="matrix(1.8125,0,0,1.8125,-16.465404,-0.9288198)"
+             id="path3558-7"
+             style="fill:#ffffff;fill-opacity:1;stroke:none" />
+        </g>
+        <path
+           inkscape:connector-curvature="0"
+           d="m 44.61882,67.441097 c 0,2.8124 -2.2902,5.0924 -5.1153,5.0924 -2.8251,0 -5.1153,-2.28 -5.1153,-5.0924 0,-2.8125 2.2902,-5.0924 5.1153,-5.0924 2.8251,0 5.1153,2.2799 5.1153,5.0924 z"
+           id="path3560-5"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:url(#radialGradient4001-9-6-9-6-60-6);stroke-width:1.46151364;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:131.0436554px;line-height:125%;font-family:Sans;letter-spacing:0.28665793px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755712"
+         x="1214.7214"
+         y="136.28465"
+         id="text3743-6-9"><tspan
+           sodipodi:role="line"
+           id="tspan3745-0-2"
+           x="1214.7214"
+           y="136.28465"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:131.0436554px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';letter-spacing:0.28665793px;fill:#a00000;fill-opacity:1;stroke-width:2.04755712"
+           dx="0 0">Os</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:81.90226746px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755712"
+         x="1398.278"
+         y="136.28465"
+         id="text3760-7-2"><tspan
+           sodipodi:role="line"
+           id="tspan3762-0-8"
+           x="1398.278"
+           y="136.28465"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:131.0436554px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';fill:#a00000;fill-opacity:1;stroke-width:2.04755712">o</tspan></text>
+      <text
+         id="text4707-97"
+         y="137.59502"
+         x="1448.6975"
+         style="font-style:normal;font-weight:bold;font-size:131.0436554px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Yanone Kaffeesatz Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755712"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:131.0436554px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#a00000;fill-opacity:1;stroke-width:2.04755712"
+           y="137.59502"
+           x="1448.6975"
+           id="tspan4705-36"
+           sodipodi:role="line">Con</tspan></text>
+      <path
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Andale Mono';writing-mode:lr-tb;display:inline;fill:#a00000;fill-opacity:1;stroke:#a00000;stroke-width:2.04755712;stroke-opacity:1"
+         d="m 1342.0243,70.382808 -8.8741,15.272701 -4.0593,-6.9865 1.2039,55.028091 c 3.887,-2.71488 5.3164,1.47604 5.3748,-0.61985 l 1.4237,-51.004981 c 3.0141,-1.57252 6.0272,-2.227521 8.9101,-2.227521 5.2418,0 7.3232,1.833021 7.4545,6.550591 l 0.5798,47.161771 c 3.6356,-1.03422 6.9193,0.79411 6.9344,-0.35191 l 0.6478,-49.061371 c 2.883,-1.834611 7.188,-4.17109 10.202,-4.17109 5.2417,0 6.3099,2.625 6.4185,8.91407 l 0.7878,45.610111 c 2.4651,-0.38781 5.9664,1.24338 5.9987,-0.39591 l 0.9038,-45.998041 c 0.2319,-11.791681 1.3508,-17.564191 -11.7533,-17.564191 -5.3728,0 -11.6612,1.573279 -16.1166,4.06311 -2.4899,-2.62065 -6.1586,-4.06311 -11.7935,-4.06311 -1.5361,0 -2.9245,-0.0721 -4.243,-0.155951 z"
+         id="path3959-9-26-3-1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 1333.1492,85.655399 -9.2281,-15.875941 -9.2281,-15.876132 h 18.4562 18.4561 l -9.2281,15.876132 z"
+         id="path3981-0-4-1-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;fill-opacity:1;stroke:#e19c9c;stroke-width:10.23778343;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 1381.9839,132.44473 V 75.679289"
+         id="path3983-4-9-2-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:10.28292942;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 1357.4639,132.42079 V 91.835129"
+         id="path3985-4-0-9-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:10.23778343;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 1333.1478,132.77644 -0.022,-24.06433"
+         id="path3951-0-4-91-2-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:9.56036377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <text
+         id="text4707-9"
+         y="138.64339"
+         x="1595.2834"
+         style="font-style:normal;font-weight:bold;font-size:131.04367065px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Yanone Kaffeesatz Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#3566a5;fill-opacity:1;stroke:none;stroke-width:2.04755735"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:131.04367065px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#3566a5;fill-opacity:1;stroke-width:2.04755735"
+           y="138.64339"
+           x="1595.2834"
+           id="tspan4705-3"
+           sodipodi:role="line">18</tspan></text>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="subtitle">
+    <g
+       inkscape:groupmode="layer"
+       id="layer7"
+       inkscape:label="subtitle_path"
+       style="display:inline">
+      <g
+         aria-label="0x2B || !0x2B"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:61.98275375px;line-height:100%;font-family:Galette;-inkscape-font-specification:'Galette Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#3465a4;fill-opacity:1;stroke:none;stroke-width:0.46487072px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="text1124-3">
+        <path
+           d="m 1428.6525,187.81921 c 0,12.27259 2.4174,18.90474 10.971,18.90474 8.6156,0 11.3428,-6.94207 11.3428,-20.39232 0,-11.59078 -3.0371,-17.35518 -11.0329,-17.35518 -7.9958,0 -11.2809,6.57018 -11.2809,18.84276 z m 5.3925,0.3719 c 0,-9.23543 1.4256,-14.7519 6.1363,-14.7519 4.2768,0 5.5165,4.40078 5.5165,12.83043 0,11.1569 -1.7355,15.86759 -5.9504,15.86759 -4.2768,0 -5.7024,-3.71897 -5.7024,-13.94612 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1102" />
+        <path
+           d="m 1476.6872,175.17473 c -5.2065,0 -5.2065,0 -5.6404,0.86776 l -1.8595,3.34707 c -1.3016,2.41732 -2.7892,5.64043 -3.409,7.06603 -0.6199,-1.48758 -2.1074,-4.71069 -3.2851,-7.06603 l -2.2934,-4.21483 c -5.6404,0 -5.7024,0 -5.2685,0.80578 l 7.4999,14.0081 -8.7396,16.1775 c 4.6487,0 5.3305,0 5.7644,-0.99173 l 1.7355,-3.03715 c 1.4256,-2.72724 3.0372,-6.32224 3.905,-8.30569 0.8677,1.98345 2.6032,5.70241 4.0288,8.30569 l 2.2934,4.02888 c 6.0743,0 6.1363,0.062 5.5784,-1.17768 l -8.2437,-15.30974 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1104" />
+        <path
+           d="m 1481.8415,175.98051 c 2.0454,-1.23966 5.8264,-2.1694 9.0495,-2.1694 3.471,0 4.7726,1.67353 4.7726,4.27681 0,6.88009 -8.7395,13.01638 -14.194,22.12784 -1.1777,2.04543 -1.4876,2.66526 -1.4876,4.40078 0,0.30991 0.062,1.05371 0.1859,1.54957 h 21.0122 c 1.0537,0 1.0537,-1.42561 1.0537,-5.20655 0,0 -3.9669,0.43388 -7.314,0.43388 h -8.3056 c 6.0123,-9.3594 14.7518,-15.37173 14.7518,-23.98733 0,-5.3925 -2.0454,-8.42966 -9.1734,-8.42966 -6.0123,0 -10.9709,1.7975 -10.9709,3.28509 0,0.86776 0.062,2.41733 0.6198,3.71897 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1106" />
+        <path
+           d="m 1506.7566,206.16611 h 7.8098 c 6.4462,0 11.7768,-4.3388 11.7768,-14.7519 0,-7.43793 -4.4628,-8.86353 -7.314,-9.04948 2.6653,-0.3719 5.9503,-3.16112 5.9503,-9.97922 0,-7.99578 -5.4544,-9.60733 -10.4131,-9.60733 h -6.1363 c -1.3016,0 -1.6735,0.43388 -1.6735,1.17767 z m 5.1446,-38.92517 h 2.9752 c 2.3553,0 4.5867,1.0537 4.5867,6.13629 0,4.89664 -1.9215,7.12802 -4.5248,7.12802 h -3.0371 z m 0,17.6031 h 2.8512 c 3.3471,0 5.7024,0.61983 5.7024,7.00405 0,7.06603 -2.6653,9.91724 -5.7644,9.91724 h -2.7892 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1108" />
+        <path
+           d="m 1549.7233,155.65016 c -5.0207,0 -5.0826,0.062 -5.0826,1.36362 v 61.54888 c 4.8966,0 5.0826,0 5.0826,-1.23966 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1110" />
+        <path
+           d="m 1569.6982,155.65016 c -5.0206,0 -5.0826,0.062 -5.0826,1.36362 v 61.54888 c 4.8966,0 5.0826,0 5.0826,-1.23966 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1112" />
+        <path
+           d="m 1589.3787,203.06697 c 0,2.1694 0.8057,3.53302 3.409,3.53302 2.1694,0 3.471,-1.61156 3.471,-3.53302 0,-2.1694 -0.9297,-3.595 -3.471,-3.595 -2.1694,0 -3.409,1.67353 -3.409,3.595 z m 1.0537,-10.16517 c 3.7809,0 4.8966,-0.12397 5.0206,-2.35535 l 0.9917,-28.14017 c -5.8264,0 -6.9421,0.062 -6.8801,1.48759 z"
+           style="letter-spacing:0px;fill:#a00000;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1114" />
+        <path
+           d="m 1600.6789,187.81921 c 0,12.27259 2.4173,18.90474 10.9709,18.90474 8.6156,0 11.3429,-6.94207 11.3429,-20.39232 0,-11.59078 -3.0372,-17.35518 -11.033,-17.35518 -7.9957,0 -11.2808,6.57018 -11.2808,18.84276 z m 5.3925,0.3719 c 0,-9.23543 1.4256,-14.7519 6.1363,-14.7519 4.2768,0 5.5164,4.40078 5.5164,12.83043 0,11.1569 -1.7355,15.86759 -5.9503,15.86759 -4.2768,0 -5.7024,-3.71897 -5.7024,-13.94612 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1116" />
+        <path
+           d="m 1648.7136,175.17473 c -5.2066,0 -5.2066,0 -5.6404,0.86776 l -1.8595,3.34707 c -1.3017,2.41732 -2.7893,5.64043 -3.4091,7.06603 -0.6198,-1.48758 -2.1074,-4.71069 -3.2851,-7.06603 l -2.2933,-4.21483 c -5.6405,0 -5.7024,0 -5.2686,0.80578 l 7.5,14.0081 -8.7396,16.1775 c 4.6487,0 5.3305,0 5.7644,-0.99173 l 1.7355,-3.03715 c 1.4256,-2.72724 3.0372,-6.32224 3.9049,-8.30569 0.8678,1.98345 2.6033,5.70241 4.0289,8.30569 l 2.2934,4.02888 c 6.0743,0 6.1362,0.062 5.5784,-1.17768 l -8.2437,-15.30974 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1118" />
+        <path
+           d="m 1653.8678,175.98051 c 2.0455,-1.23966 5.8264,-2.1694 9.0495,-2.1694 3.471,0 4.7727,1.67353 4.7727,4.27681 0,6.88009 -8.7396,13.01638 -14.1941,22.12784 -1.1776,2.04543 -1.4875,2.66526 -1.4875,4.40078 0,0.30991 0.062,1.05371 0.1859,1.54957 h 21.0122 c 1.0537,0 1.0537,-1.42561 1.0537,-5.20655 0,0 -3.9669,0.43388 -7.314,0.43388 h -8.3057 c 6.0123,-9.3594 14.7519,-15.37173 14.7519,-23.98733 0,-5.3925 -2.0454,-8.42966 -9.1734,-8.42966 -6.0124,0 -10.971,1.7975 -10.971,3.28509 0,0.86776 0.062,2.41733 0.6198,3.71897 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1120" />
+        <path
+           d="m 1678.783,206.16611 h 7.8098 c 6.4462,0 11.7767,-4.3388 11.7767,-14.7519 0,-7.43793 -4.4627,-8.86353 -7.3139,-9.04948 2.6652,-0.3719 5.9503,-3.16112 5.9503,-9.97922 0,-7.99578 -5.4545,-9.60733 -10.4131,-9.60733 h -6.1363 c -1.3016,0 -1.6735,0.43388 -1.6735,1.17767 z m 5.1445,-38.92517 h 2.9752 c 2.3554,0 4.5867,1.0537 4.5867,6.13629 0,4.89664 -1.9214,7.12802 -4.5247,7.12802 h -3.0372 z m 0,17.6031 h 2.8512 c 3.3471,0 5.7025,0.61983 5.7025,7.00405 0,7.06603 -2.6653,9.91724 -5.7644,9.91724 h -2.7893 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487072px"
+           id="path1122" />
+      </g>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer8"
+       inkscape:label="subtitle_font"
+       style="display:none">
+      <text
+         id="text1124"
+         y="206.16611"
+         x="1699.4823"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:61.98275375px;line-height:100%;font-family:Galette;-inkscape-font-specification:'Galette Bold';letter-spacing:0px;word-spacing:0px;fill:#3465a4;fill-opacity:1;stroke:none;stroke-width:0.46487069px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan1128"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.46487069px"
+           y="206.16611"
+           x="1699.4823"
+           sodipodi:role="line">0x2B || <tspan
+   id="tspan1454"
+   style="letter-spacing:0px;fill:#a00000;fill-opacity:1;stroke-width:0.46487069px">!</tspan>0x2B</tspan></text>
+    </g>
+  </g>
+</svg>
