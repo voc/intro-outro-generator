@@ -405,10 +405,10 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="410.88008"
-     inkscape:cy="464.8246"
+     inkscape:cx="872.97396"
+     inkscape:cy="537.55558"
      inkscape:document-units="px"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="layer9"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
@@ -527,142 +527,8 @@
        inkscape:label="title_path"
        style="display:inline">
       <g
-         style="display:inline;stroke-width:0.90577996"
-         id="g3732-7"
-         transform="matrix(2.258982,0,0,2.2621097,544.19048,52.078512)">
-        <path
-           inkscape:connector-curvature="0"
-           d="m 60.69548,67.493897 c 0,11.5675 -9.48796,20.9448 -21.19195,20.9448 -11.703989,0 -21.191949,-9.3773 -21.191949,-20.9448 0,-11.5674 9.48796,-20.9447 21.191949,-20.9447 11.70399,0 21.19195,9.3773 21.19195,20.9447 z"
-           id="path3544-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;opacity:0.8;fill:url(#radialGradient3637-9);fill-opacity:1;stroke:url(#radialGradient3639-0);stroke-width:1.32380998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
-        <g
-           transform="matrix(1.4615138,0,0,2.5218672,4.4272,31.547917)"
-           id="g3546-6"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.90577996">
-          <path
-             inkscape:connector-curvature="0"
-             d="m 24,13 -8.1875,15.225744 c 11.445471,0 5.976697,0 16.34375,0 z m 0,4.96875 4,7.421875 h -7.953125 z"
-             id="path3548-1"
-             style="fill:url(#linearGradient3991-3-88-5);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3993-1-9-7);stroke-width:0.90577996px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-          <path
-             inkscape:connector-curvature="0"
-             d="M 26.355979,42.522608 20,21.277828 13.644021,42.522609"
-             transform="matrix(1,0,0,0.57953638,4,2.7937247)"
-             id="path3550-2"
-             style="fill:none;stroke:#ffffff;stroke-width:1.18982303px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" />
-        </g>
-        <path
-           inkscape:connector-curvature="0"
-           d="m 53.38791,67.493897 c 0,7.6681 -6.21625,13.8844 -13.88438,13.8844 -7.66813,0 -13.884379,-6.2163 -13.884379,-13.8844 0,-7.6681 6.216249,-13.8844 13.884379,-13.8844 7.66813,0 13.88438,6.2163 13.88438,13.8844 z"
-           id="path3552-9"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:url(#radialGradient3995-7-4-0-2-02);fill-opacity:1;stroke:url(#radialGradient3997-3-3-4-7-3);stroke-width:1.32380998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
-        <g
-           transform="matrix(3.2735609,0,0,3.2593101,-24.33091,59.292917)"
-           id="g3554-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.90577996">
-          <path
-             inkscape:connector-curvature="0"
-             d="M 11,2.25 C 11,3.2164983 10.195512,4 9.203125,4 8.2107383,4 7.40625,3.2164983 7.40625,2.25 7.40625,1.2835017 8.2107383,0.5 9.203125,0.5 10.195512,0.5 11,1.2835017 11,2.25 Z"
-             transform="matrix(1.1130433,0,0,1.1428572,9.2565233,-0.07142864)"
-             id="path3556-19"
-             style="fill:url(#radialGradient3999-1-4-6-0-75);fill-opacity:1;stroke:#555753;stroke-width:0.35933584;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
-          <path
-             inkscape:connector-curvature="0"
-             d="M 20,1.5 C 20,1.7761424 19.776142,2 19.5,2 19.223858,2 19,1.7761424 19,1.5 19,1.2238576 19.223858,1 19.5,1 19.776142,1 20,1.2238576 20,1.5 Z"
-             transform="matrix(1.8125,0,0,1.8125,-16.465404,-0.9288198)"
-             id="path3558-4"
-             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.90577996" />
-        </g>
-        <path
-           inkscape:connector-curvature="0"
-           d="m 44.61882,67.441097 c 0,2.8124 -2.2902,5.0924 -5.1153,5.0924 -2.8251,0 -5.1153,-2.28 -5.1153,-5.0924 0,-2.8125 2.2902,-5.0924 5.1153,-5.0924 2.8251,0 5.1153,2.2799 5.1153,5.0924 z"
-           id="path3560-7"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:url(#radialGradient4001-9-6-9-6-2);stroke-width:1.32380974;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
-      </g>
-      <g
-         aria-label="Os"
-         transform="scale(0.99930847,1.000692)"
-         style="font-style:normal;font-weight:normal;font-size:144.67489624px;line-height:125%;font-family:Sans;letter-spacing:0.31647632px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755664"
-         id="text3743-6-8">
-        <path
-           d="m 687.78013,230.41897 c 0,41.66637 7.37842,52.51698 26.04148,52.51698 19.09708,0 27.34355,-13.16541 27.34355,-52.95101 0,-39.06222 -6.94439,-50.92556 -25.75213,-50.92556 -18.66306,0 -27.6329,12.87606 -27.6329,51.35959 z m 13.16541,2.8935 c 0,-31.24978 4.0509,-42.24507 14.17814,-42.24507 10.4166,0 13.31009,10.27191 13.31009,39.20689 0,29.51368 -3.61687,40.65365 -14.03346,40.65365 -10.27192,0 -13.45477,-10.70594 -13.45477,-37.61547 z"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';letter-spacing:0.31647632px;fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
-           id="path1311" />
-        <path
-           d="m 773.70571,207.84968 c -16.20359,0 -23.58201,6.9444 -23.58201,17.07164 0,4.77427 1.7361,9.98257 8.24647,15.33554 l 14.03347,12.00802 c 4.34025,3.90622 5.78699,7.37842 5.78699,11.28464 0,5.78699 -4.34024,8.96984 -11.71866,8.96984 -5.64232,0 -10.27192,-1.1574 -14.46749,-3.61687 -1.59143,2.60415 -2.02545,5.06362 -2.02545,6.79972 0,5.06362 7.37842,7.37842 17.65034,7.37842 14.75684,0 23.87135,-7.23375 23.87135,-20.10981 0,-7.23375 -2.31479,-12.00802 -8.53581,-18.08436 l -13.45477,-10.85062 c -4.91895,-4.0509 -5.787,-6.3657 -5.787,-8.96984 0,-4.48493 4.6296,-6.9444 11.42932,-6.9444 5.49765,0 9.83789,1.1574 14.17814,3.76155 1.59143,-1.7361 2.60415,-4.0509 2.60415,-5.93167 0,-2.8935 -3.32752,-8.1018 -18.22904,-8.1018 z"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';letter-spacing:0.31647632px;fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
-           id="path1313" />
-      </g>
-      <g
-         aria-label="o"
-         transform="scale(0.99930847,1.000692)"
-         style="font-style:normal;font-weight:normal;font-size:90.42181396px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755664"
-         id="text3760-7-5">
-        <path
-           d="m 889.56235,245.46516 c 0,32.55185 7.81244,37.61547 22.71396,37.61547 15.48021,0 23.72668,-11.13997 23.72668,-38.0495 0,-29.369 -7.23375,-37.18145 -22.42461,-37.18145 -15.19086,0 -24.01603,11.13997 -24.01603,37.61548 z m 12.73139,0.28935 c 0,-22.56929 4.48492,-27.63291 10.85061,-27.63291 6.79972,0 10.12725,4.0509 10.12725,27.05421 0,22.56928 -4.48492,27.92225 -10.70595,27.92225 -6.65504,0 -10.27191,-3.4722 -10.27191,-27.34355 z"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
-           id="path1316" />
-      </g>
-      <g
-         aria-label="Con"
-         transform="scale(0.99930847,1.000692)"
-         style="font-style:normal;font-weight:bold;font-size:144.67489624px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Yanone Kaffeesatz Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755664"
-         id="text4707-3">
-        <path
-           d="m 973.8721,179.63802 c -13.02074,0 -28.93498,8.68049 -28.93498,56.13386 0,40.50897 7.81244,49.47881 24.16071,49.47881 10.99529,0 17.65034,-3.90622 17.65034,-10.70594 0,-3.4722 -1.01273,-7.08907 -2.17013,-9.54855 -2.74882,1.44675 -6.79972,2.17013 -11.28464,2.17013 -8.10179,0 -11.28464,-7.5231 -11.28464,-32.69653 0,-31.53913 7.52309,-39.06222 15.76956,-39.06222 3.18285,0 5.787,1.1574 7.5231,2.45947 1.1574,-2.45947 2.31479,-5.78699 2.31479,-9.69322 0,-4.34024 -1.44674,-8.53581 -13.74411,-8.53581 z"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
-           id="path1319" />
-        <path
-           d="m 989.41787,246.76717 c 0,32.40717 7.23374,37.76015 22.85863,37.76015 15.6249,0 23.7267,-10.4166 23.7267,-38.33885 0,-29.22433 -7.0891,-36.8921 -22.5693,-36.8921 -15.33554,0 -24.01603,11.28464 -24.01603,37.4708 z m 17.79503,-0.14468 c 0,-20.54383 2.4595,-23.43733 5.6423,-23.43733 4.1956,0 5.353,2.60415 5.353,23.43733 0,22.27994 -2.7488,24.45006 -5.4977,24.45006 -3.6168,0 -5.4976,-1.88077 -5.4976,-24.45006 z"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
-           id="path1321" />
-        <path
-           d="m 1042.8843,283.08057 c 15.9142,0 16.2036,0 16.2036,-2.8935 v -55.26581 c 1.5914,-1.1574 3.6168,-1.7361 5.4976,-1.7361 4.0509,0 4.7743,2.3148 4.7743,9.83789 v 50.05752 c 16.3483,0 16.7823,0 16.7823,-2.8935 v -52.22764 c 0,-14.46749 -6.221,-18.66306 -20.8332,-18.66306 -7.2337,0 -17.9397,2.60415 -22.4246,4.77427 z"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
-           id="path1323" />
-      </g>
-      <path
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Andale Mono';writing-mode:lr-tb;display:inline;fill:#a00000;fill-opacity:1;stroke:#a00000;stroke-width:2.04755688;stroke-opacity:1"
-         d="m 823.41493,209.02142 -9.79042,16.87305 -4.47845,-7.71858 1.32821,60.79421 c 4.28836,-2.99934 5.86536,1.6307 5.92979,-0.68481 l 1.57071,-56.34953 c 3.32532,-1.7373 6.64955,-2.46093 9.83013,-2.46093 5.78306,0 8.07937,2.02509 8.22423,7.23699 l 0.63968,52.10363 c 4.011,-1.14259 7.63376,0.87733 7.65043,-0.38878 l 0.71468,-54.20228 c 3.18069,-2.02685 7.93021,-4.60816 11.25543,-4.60816 5.78294,0 6.96144,2.90006 7.08126,9.84813 l 0.86914,50.38937 c 2.71964,-0.42843 6.58248,1.37366 6.61811,-0.43738 l 0.99713,-50.81796 c 0.25584,-13.02727 1.49029,-19.40466 -12.96692,-19.40466 -5.92758,0 -12.8653,1.73814 -17.78076,4.48887 -2.747,-2.89526 -6.79452,-4.48887 -13.01126,-4.48887 -1.69471,0 -3.22648,-0.0797 -4.68112,-0.17229 z"
-         id="path3959-9-26-3-1"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 813.62341,225.89435 -10.18097,-17.5395 -10.18097,-17.53971 h 20.36194 20.36183 l -10.18097,17.53971 z"
-         id="path3981-0-4-1-0"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;fill-opacity:1;stroke:#e19c9c;stroke-width:10.23778343;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
-         inkscape:connector-curvature="0" />
-      <path
-         d="M 867.50065,277.58651 V 214.87289"
-         id="path3983-4-9-2-6"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:10.28292942;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:connector-curvature="0" />
-      <path
-         d="M 840.44878,277.56004 V 232.72162"
-         id="path3985-4-0-9-3"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:10.23778343;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 813.62186,277.95296 -0.0243,-26.58591"
-         id="path3951-0-4-91-2-2"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:9.56036377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:connector-curvature="0" />
-      <g
-         aria-label="18"
-         transform="scale(0.99930847,1.000692)"
-         style="font-style:normal;font-weight:bold;font-size:144.6749115px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Yanone Kaffeesatz Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#3566a5;fill-opacity:1;stroke:none;stroke-width:2.04755688"
-         id="text4707-9-0">
-        <path
-           d="m 1112.2689,215.66204 c 0,0 6.221,-1.44675 13.7441,-1.7361 l -1.3021,55.12114 c -13.4548,0 -18.3737,0.86805 -18.3737,4.48492 0,3.76155 0.1447,7.08907 0.434,10.70595 h 48.1768 c 3.6168,0 3.6168,-3.4722 3.6168,-15.76957 0,0 -4.3402,0.5787 -8.8251,0.5787 h -8.1018 l 1.7361,-70.74603 c -0.7234,-0.5787 -2.8935,-0.86805 -4.1956,-0.86805 -7.6678,0 -29.369,4.91895 -29.369,8.24647 0,3.90622 0.7234,6.94439 2.4595,9.98257 z"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144.6749115px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#3566a5;fill-opacity:1;stroke-width:2.04755688"
-           id="path1326" />
-        <path
-           d="m 1190.1605,182.09746 c -13.5995,0 -24.4501,8.68049 -24.4501,25.46278 0,5.06362 1.4468,9.8379 3.7616,13.16542 2.1701,3.32752 5.4976,6.3657 9.2592,9.40387 -8.3912,6.07634 -14.0335,15.33554 -14.0335,27.19888 0,14.75684 6.7997,27.92226 26.9095,27.92226 16.927,0 25.1735,-13.59944 25.1735,-27.48823 0,-7.23375 -2.3148,-13.59944 -7.5231,-19.67579 -1.8808,-2.17012 -4.1956,-4.34025 -6.5104,-6.65505 7.3784,-5.78699 13.8888,-13.16541 13.8888,-25.89681 0,-17.65034 -11.14,-23.43733 -26.4755,-23.43733 z m 6.5104,63.51228 c 2.0254,2.3148 4.1955,5.06363 4.1955,11.71867 0,8.1018 -4.6296,12.44204 -10.4166,12.44204 -5.9316,0 -10.7059,-4.62959 -10.7059,-13.59944 0,-7.52309 4.3402,-12.29736 10.2719,-16.78229 2.4595,2.02545 4.7743,4.0509 6.6551,6.22102 z m -4.1956,-48.32142 c 5.9317,0 9.1145,4.77428 9.1145,8.82517 0,6.65505 -3.7615,11.71867 -9.2592,16.34827 -2.8935,-2.60415 -5.6423,-5.06362 -7.2337,-7.08907 -1.5915,-2.02545 -3.0382,-4.6296 -3.0382,-8.82517 0,-6.3657 4.4849,-9.2592 10.4166,-9.2592 z"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144.6749115px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#3566a5;fill-opacity:1;stroke-width:2.04755688"
-           id="path1328" />
-      </g>
-      <g
          style="display:inline"
-         id="g1750-6-1"
+         id="sublogo"
          transform="matrix(19.592171,0,0,19.592171,-1971.2454,-2194.8128)">
         <g
            aria-label="0x2B || !0x2B"
@@ -671,47 +537,58 @@
           <path
              d="m 137.06975,130.62009 c 0,0.8628 0.16994,1.32906 0.77128,1.32906 0.6057,0 0.79743,-0.48805 0.79743,-1.43364 0,-0.81486 -0.21352,-1.22011 -0.77564,-1.22011 -0.56212,0 -0.79307,0.4619 -0.79307,1.32469 z m 0.3791,0.0262 c 0,-0.64928 0.10023,-1.0371 0.4314,-1.0371 0.30067,0 0.38782,0.30939 0.38782,0.90202 0,0.78435 -0.12201,1.11553 -0.41832,1.11553 -0.30067,0 -0.4009,-0.26146 -0.4009,-0.98045 z"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1331" />
+             id="path1331"
+             inkscape:connector-curvature="0" />
           <path
              d="m 140.44671,129.73115 c -0.36603,0 -0.36603,0 -0.39654,0.061 l -0.13072,0.23531 c -0.0915,0.16994 -0.19609,0.39653 -0.23967,0.49676 -0.0436,-0.10458 -0.14816,-0.33118 -0.23095,-0.49676 l -0.16123,-0.29632 c -0.39653,0 -0.40089,0 -0.37039,0.0566 l 0.52726,0.98481 -0.61441,1.13732 c 0.32682,0 0.37475,0 0.40525,-0.0697 l 0.12201,-0.21352 c 0.10023,-0.19174 0.21352,-0.44447 0.27453,-0.58391 0.061,0.13944 0.18302,0.40089 0.28324,0.58391 l 0.16123,0.28324 c 0.42704,0 0.4314,0.004 0.39218,-0.0828 l -0.57956,-1.07631 z"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1333" />
+             id="path1333"
+             inkscape:connector-curvature="0" />
           <path
              d="m 140.80907,129.7878 c 0.1438,-0.0872 0.40961,-0.15251 0.6362,-0.15251 0.24402,0 0.33553,0.11765 0.33553,0.30067 0,0.48369 -0.61441,0.91508 -0.99788,1.55564 -0.0828,0.1438 -0.10458,0.18738 -0.10458,0.30939 0,0.0218 0.004,0.0741 0.0131,0.10894 h 1.47721 c 0.0741,0 0.0741,-0.10023 0.0741,-0.36604 0,0 -0.27888,0.0305 -0.51419,0.0305 h -0.58391 c 0.42268,-0.65799 1.03709,-1.08068 1.03709,-1.68637 0,-0.37911 -0.1438,-0.59263 -0.64491,-0.59263 -0.42269,0 -0.77129,0.12637 -0.77129,0.23095 0,0.061 0.004,0.16994 0.0436,0.26145 z"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1335" />
+             id="path1335"
+             inkscape:connector-curvature="0" />
           <path
              d="m 142.56066,131.90993 h 0.54905 c 0.45319,0 0.82794,-0.30503 0.82794,-1.0371 0,-0.5229 -0.31375,-0.62313 -0.51419,-0.6362 0.18737,-0.0262 0.41832,-0.22224 0.41832,-0.70157 0,-0.56212 -0.38346,-0.67541 -0.73207,-0.67541 h -0.43139 c -0.0915,0 -0.11766,0.0305 -0.11766,0.0828 z m 0.36168,-2.73654 h 0.20916 c 0.16559,0 0.32246,0.0741 0.32246,0.4314 0,0.34424 -0.13508,0.50111 -0.3181,0.50111 h -0.21352 z m 0,1.23754 h 0.20045 c 0.2353,0 0.40089,0.0436 0.40089,0.4924 0,0.49676 -0.18737,0.69721 -0.40525,0.69721 h -0.19609 z"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1337" />
+             id="path1337"
+             inkscape:connector-curvature="0" />
           <path
              d="m 145.58133,128.35853 c -0.35296,0 -0.35732,0.004 -0.35732,0.0959 v 4.32705 c 0.34425,0 0.35732,0 0.35732,-0.0872 z"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1339" />
+             id="path1339"
+             inkscape:connector-curvature="0" />
           <path
              d="m 146.98562,128.35853 c -0.35297,0 -0.35732,0.004 -0.35732,0.0959 v 4.32705 c 0.34424,0 0.35732,0 0.35732,-0.0872 z"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1341" />
+             id="path1341"
+             inkscape:connector-curvature="0" />
           <path
              d="m 148.3692,131.69205 c 0,0.15251 0.0566,0.24838 0.23967,0.24838 0.15251,0 0.24402,-0.1133 0.24402,-0.24838 0,-0.15251 -0.0654,-0.25274 -0.24402,-0.25274 -0.15251,0 -0.23967,0.11766 -0.23967,0.25274 z m 0.0741,-0.71464 c 0.26581,0 0.34425,-0.009 0.35296,-0.16558 l 0.0697,-1.97833 c -0.40961,0 -0.48805,0.004 -0.48369,0.10458 z"
              style="letter-spacing:0px;fill:#a00000;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1343" />
+             id="path1343"
+             inkscape:connector-curvature="0" />
           <path
              d="m 149.16364,130.62009 c 0,0.8628 0.16994,1.32906 0.77129,1.32906 0.60569,0 0.79743,-0.48805 0.79743,-1.43364 0,-0.81486 -0.21352,-1.22011 -0.77565,-1.22011 -0.56212,0 -0.79307,0.4619 -0.79307,1.32469 z m 0.37911,0.0262 c 0,-0.64928 0.10022,-1.0371 0.43139,-1.0371 0.30067,0 0.38782,0.30939 0.38782,0.90202 0,0.78435 -0.12201,1.11553 -0.41832,1.11553 -0.30067,0 -0.40089,-0.26146 -0.40089,-0.98045 z"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1345" />
+             id="path1345"
+             inkscape:connector-curvature="0" />
           <path
              d="m 152.5406,129.73115 c -0.36603,0 -0.36603,0 -0.39654,0.061 l -0.13072,0.23531 c -0.0915,0.16994 -0.19609,0.39653 -0.23967,0.49676 -0.0436,-0.10458 -0.14815,-0.33118 -0.23095,-0.49676 l -0.16123,-0.29632 c -0.39653,0 -0.40089,0 -0.37039,0.0566 l 0.52727,0.98481 -0.61442,1.13732 c 0.32682,0 0.37475,0 0.40525,-0.0697 l 0.12201,-0.21352 c 0.10023,-0.19174 0.21352,-0.44447 0.27453,-0.58391 0.061,0.13944 0.18302,0.40089 0.28324,0.58391 l 0.16123,0.28324 c 0.42704,0 0.4314,0.004 0.39218,-0.0828 l -0.57955,-1.07631 z"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1347" />
+             id="path1347"
+             inkscape:connector-curvature="0" />
           <path
              d="m 152.90296,129.7878 c 0.1438,-0.0872 0.40961,-0.15251 0.6362,-0.15251 0.24402,0 0.33553,0.11765 0.33553,0.30067 0,0.48369 -0.61441,0.91508 -0.99788,1.55564 -0.0828,0.1438 -0.10458,0.18738 -0.10458,0.30939 0,0.0218 0.004,0.0741 0.0131,0.10894 h 1.4772 c 0.0741,0 0.0741,-0.10023 0.0741,-0.36604 0,0 -0.27888,0.0305 -0.51419,0.0305 h -0.58391 c 0.42268,-0.65799 1.0371,-1.08068 1.0371,-1.68637 0,-0.37911 -0.1438,-0.59263 -0.64492,-0.59263 -0.42268,0 -0.77129,0.12637 -0.77129,0.23095 0,0.061 0.004,0.16994 0.0436,0.26145 z"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1349" />
+             id="path1349"
+             inkscape:connector-curvature="0" />
           <path
              d="m 154.65456,131.90993 h 0.54905 c 0.45318,0 0.82793,-0.30503 0.82793,-1.0371 0,-0.5229 -0.31374,-0.62313 -0.51419,-0.6362 0.18738,-0.0262 0.41833,-0.22224 0.41833,-0.70157 0,-0.56212 -0.38347,-0.67541 -0.73207,-0.67541 h -0.4314 c -0.0915,0 -0.11765,0.0305 -0.11765,0.0828 z m 0.36167,-2.73654 h 0.20917 c 0.16558,0 0.32245,0.0741 0.32245,0.4314 0,0.34424 -0.13508,0.50111 -0.3181,0.50111 h -0.21352 z m 0,1.23754 h 0.20045 c 0.23531,0 0.40089,0.0436 0.40089,0.4924 0,0.49676 -0.18737,0.69721 -0.40525,0.69721 h -0.19609 z"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372738px"
-             id="path1351" />
+             id="path1351"
+             inkscape:connector-curvature="0" />
         </g>
       </g>
     </g>
@@ -877,263 +754,408 @@
        inkscape:label="subtitle_path"
        style="display:inline">
       <g
-         style="display:inline"
-         id="g1750-4"
-         transform="matrix(19.592171,0,0,19.592171,-2611.4376,-2143.7586)">
+         id="logo">
         <g
-           aria-label="Osmocom Conference 2018, 18-19 October 2018, Berl   n"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.16364908px;line-height:100%;font-family:Galette;-inkscape-font-specification:'Galette Bold';letter-spacing:0px;word-spacing:0px;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:0.02372737px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           id="text1124-7">
+           transform="matrix(2.258982,0,0,2.2621097,544.19048,52.078512)"
+           id="g3732-7"
+           style="display:inline;stroke-width:0.90577996">
           <path
-             d="m 134.68756,158.51123 c 0,0.91113 0.16134,1.14841 0.56945,1.14841 0.41761,0 0.59793,-0.28789 0.59793,-1.1579 0,-0.85418 -0.15185,-1.1136 -0.56313,-1.1136 -0.40811,0 -0.60425,0.28156 -0.60425,1.12309 z m 0.28789,0.0633 c 0,-0.68335 0.0886,-0.92379 0.31004,-0.92379 0.22778,0 0.29105,0.22462 0.29105,0.85735 0,0.64538 -0.0791,0.88898 -0.30687,0.88898 -0.22462,0 -0.29422,-0.23411 -0.29422,-0.82254 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1893"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;opacity:0.8;fill:url(#radialGradient3637-9);fill-opacity:1;stroke:url(#radialGradient3639-0);stroke-width:1.32380998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+             id="path3544-3"
+             d="m 60.69548,67.493897 c 0,11.5675 -9.48796,20.9448 -21.19195,20.9448 -11.703989,0 -21.191949,-9.3773 -21.191949,-20.9448 0,-11.5674 9.48796,-20.9447 21.191949,-20.9447 11.70399,0 21.19195,9.3773 21.19195,20.9447 z"
              inkscape:connector-curvature="0" />
-          <path
-             d="m 136.5596,158.0177 c -0.35433,0 -0.51568,0.15186 -0.51568,0.37331 0,0.1044 0.038,0.2183 0.18033,0.33535 l 0.30687,0.26258 c 0.0949,0.0854 0.12655,0.16135 0.12655,0.24677 0,0.12654 -0.0949,0.19614 -0.25626,0.19614 -0.12338,0 -0.22461,-0.0253 -0.31636,-0.0791 -0.0348,0.057 -0.0443,0.11073 -0.0443,0.14869 0,0.11073 0.16134,0.16135 0.38596,0.16135 0.3227,0 0.52201,-0.15818 0.52201,-0.43975 0,-0.15818 -0.0506,-0.26258 -0.18666,-0.39545 l -0.29422,-0.23728 c -0.10756,-0.0886 -0.12654,-0.1392 -0.12654,-0.19614 0,-0.0981 0.10123,-0.15186 0.24992,-0.15186 0.12022,0 0.21513,0.0253 0.31004,0.0823 0.0348,-0.038 0.057,-0.0886 0.057,-0.12971 0,-0.0633 -0.0728,-0.17717 -0.39862,-0.17717 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1895"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 137.81146,159.63116 c 0.25942,0 0.25626,0 0.25626,-0.0506 v -1.27495 c 0.0696,-0.0443 0.1392,-0.0601 0.21196,-0.0601 0.12655,0 0.15502,0.0633 0.15502,0.21512 v 1.17055 c 0.24677,0 0.25626,0 0.25626,-0.0506 v -1.11677 c 0,-0.28473 -0.038,-0.44608 -0.35433,-0.44608 -0.12971,0 -0.28157,0.038 -0.38913,0.0981 -0.0601,-0.0633 -0.14869,-0.0981 -0.28473,-0.0981 -0.174,0 -0.33851,0.0411 -0.47771,0.1044 v 1.50906 c 0.24676,0 0.25626,0 0.25626,-0.0506 v -1.28445 c 0.0728,-0.038 0.14552,-0.0538 0.21512,-0.0538 0.12655,0 0.15186,0.0443 0.15502,0.15819 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1897"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 138.89501,158.84025 c 0,0.71182 0.17084,0.82255 0.4967,0.82255 0.33851,0 0.51883,-0.2436 0.51883,-0.83204 0,-0.64222 -0.15818,-0.81306 -0.49036,-0.81306 -0.33218,0 -0.52517,0.2436 -0.52517,0.82255 z m 0.2784,0.006 c 0,-0.49353 0.0981,-0.60426 0.23728,-0.60426 0.14869,0 0.22145,0.0886 0.22145,0.5916 0,0.49353 -0.0981,0.61059 -0.23411,0.61059 -0.14553,0 -0.22462,-0.0759 -0.22462,-0.59793 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1899"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 140.91085,158.16007 c 0,-0.0823 -0.11705,-0.14237 -0.26258,-0.14237 -0.26259,0 -0.56946,0.0981 -0.56946,0.85735 0,0.66753 0.17084,0.78775 0.47138,0.78775 0.20881,0 0.35433,-0.0759 0.35433,-0.16135 0,-0.0411 -0.009,-0.0823 -0.0253,-0.1392 -0.0538,0.0348 -0.14869,0.0728 -0.24992,0.0728 -0.19299,0 -0.28157,-0.11389 -0.28157,-0.55997 0,-0.56313 0.16451,-0.62956 0.3132,-0.62956 0.0854,0 0.17084,0.0285 0.22146,0.0569 0.0221,-0.0538 0.0285,-0.10756 0.0285,-0.14236 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1901"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 141.00823,158.84025 c 0,0.71182 0.17084,0.82255 0.49669,0.82255 0.33851,0 0.51884,-0.2436 0.51884,-0.83204 0,-0.64222 -0.15818,-0.81306 -0.49036,-0.81306 -0.33219,0 -0.52517,0.2436 -0.52517,0.82255 z m 0.2784,0.006 c 0,-0.49353 0.0981,-0.60426 0.23728,-0.60426 0.14869,0 0.22145,0.0886 0.22145,0.5916 0,0.49353 -0.0981,0.61059 -0.23411,0.61059 -0.14553,0 -0.22462,-0.0759 -0.22462,-0.59793 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1903"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 142.86589,159.63116 c 0.25942,0 0.25625,0 0.25625,-0.0506 v -1.27495 c 0.0696,-0.0443 0.1392,-0.0601 0.21197,-0.0601 0.12654,0 0.15502,0.0633 0.15502,0.21512 v 1.17055 c 0.24676,0 0.25625,0 0.25625,-0.0506 v -1.11677 c 0,-0.28473 -0.038,-0.44608 -0.35433,-0.44608 -0.12971,0 -0.28156,0.038 -0.38913,0.0981 -0.0601,-0.0633 -0.14869,-0.0981 -0.28473,-0.0981 -0.174,0 -0.33851,0.0411 -0.47771,0.1044 v 1.50906 c 0.24677,0 0.25626,0 0.25626,-0.0506 v -1.28445 c 0.0728,-0.038 0.14553,-0.0538 0.21513,-0.0538 0.12654,0 0.15185,0.0443 0.15502,0.15819 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1905"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 145.08914,157.37548 c -0.28156,0 -0.62324,0.15819 -0.62324,1.24015 0,0.92063 0.22462,1.05666 0.52517,1.05666 0.23411,0 0.39229,-0.1044 0.39229,-0.22778 0,-0.0538 -0.019,-0.11389 -0.038,-0.15502 -0.057,0.0475 -0.17084,0.0981 -0.29106,0.0981 -0.18665,0 -0.31636,-0.14236 -0.31636,-0.78458 0,-0.8352 0.20247,-0.97757 0.40178,-0.97757 0.0981,0 0.174,0.0506 0.20564,0.0791 0.0221,-0.038 0.0411,-0.0949 0.0411,-0.15502 0,-0.0822 -0.0633,-0.174 -0.29738,-0.174 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1907"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 145.46947,158.84025 c 0,0.71182 0.17084,0.82255 0.49669,0.82255 0.33851,0 0.51884,-0.2436 0.51884,-0.83204 0,-0.64222 -0.15818,-0.81306 -0.49036,-0.81306 -0.33219,0 -0.52517,0.2436 -0.52517,0.82255 z m 0.2784,0.006 c 0,-0.49353 0.0981,-0.60426 0.23728,-0.60426 0.14869,0 0.22145,0.0886 0.22145,0.5916 0,0.49353 -0.0981,0.61059 -0.23411,0.61059 -0.14553,0 -0.22462,-0.0759 -0.22462,-0.59793 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1909"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 146.69756,159.63116 c 0.24993,0 0.25626,0 0.25626,-0.0506 v -1.28128 c 0.0696,-0.038 0.16767,-0.057 0.23411,-0.057 0.15818,0 0.18981,0.0759 0.18981,0.27524 v 1.1136 c 0.25942,0 0.26575,0 0.26575,-0.0506 v -1.13892 c 0,-0.30687 -0.11389,-0.42393 -0.44607,-0.42393 -0.16768,0 -0.37648,0.0538 -0.49986,0.10757 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1911"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 148.02254,158.26763 v 1.36353 h 0.20563 c 0.0475,0 0.0506,-0.0443 0.0506,-0.0506 v -1.31292 h 0.23095 c 0.0506,0 0.0538,-0.0158 0.0538,-0.21829 h -0.28473 v -0.21196 c 0,-0.27208 0.15186,-0.31004 0.31637,-0.31004 0.0696,0 0.14869,0.006 0.22462,0.038 0.019,-0.0443 0.0285,-0.0981 0.0285,-0.14236 0,-0.0791 -0.10124,-0.12971 -0.29422,-0.12971 -0.24044,0 -0.53149,0.0759 -0.53149,0.56629 v 0.18982 h -0.15186 c -0.0664,0 -0.0664,0.0158 -0.0664,0.21829 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1913"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 149.17198,158.0177 c -0.2784,0 -0.55997,0.11389 -0.55997,0.90481 0,0.61691 0.21197,0.74029 0.50619,0.74029 0.23727,0 0.43658,-0.0759 0.43658,-0.174 0,-0.0506 -0.006,-0.12655 -0.0221,-0.174 -0.10756,0.0601 -0.23411,0.0981 -0.36065,0.0981 -0.19298,0 -0.28157,-0.0886 -0.29422,-0.42393 0.15185,0 0.44291,-0.009 0.6612,-0.0506 0.0253,-0.1139 0.0348,-0.27208 0.0348,-0.41128 0,-0.34167 -0.13603,-0.50935 -0.40178,-0.50935 z m -0.0285,0.22462 c 0.13603,0 0.17716,0.0854 0.18032,0.3132 0,0.0601 -0.003,0.13288 -0.0158,0.18982 -0.11073,0.0316 -0.30688,0.038 -0.4271,0.0348 0.019,-0.42709 0.13288,-0.53782 0.26259,-0.53782 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1915"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 149.79942,159.63116 c 0.25625,0 0.25942,0 0.25942,-0.0506 l 0.003,-1.24332 c 0.0601,-0.0506 0.1392,-0.0728 0.2088,-0.0728 0.0538,0 0.1044,0.0127 0.15186,0.038 0.0221,-0.0538 0.0285,-0.11705 0.0285,-0.15185 0,-0.0854 -0.0601,-0.13288 -0.22145,-0.13288 -0.15502,0 -0.30688,0.057 -0.43026,0.14237 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1917"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 151.08129,158.0177 c -0.2784,0 -0.55997,0.11389 -0.55997,0.90481 0,0.61691 0.21197,0.74029 0.50619,0.74029 0.23727,0 0.43658,-0.0759 0.43658,-0.174 0,-0.0506 -0.006,-0.12655 -0.0221,-0.174 -0.10757,0.0601 -0.23411,0.0981 -0.36066,0.0981 -0.19298,0 -0.28156,-0.0886 -0.29422,-0.42393 0.15186,0 0.44291,-0.009 0.6612,-0.0506 0.0253,-0.1139 0.0348,-0.27208 0.0348,-0.41128 0,-0.34167 -0.13603,-0.50935 -0.40178,-0.50935 z m -0.0285,0.22462 c 0.13603,0 0.17716,0.0854 0.18033,0.3132 0,0.0601 -0.003,0.13288 -0.0158,0.18982 -0.11073,0.0316 -0.30688,0.038 -0.4271,0.0348 0.019,-0.42709 0.13288,-0.53782 0.26259,-0.53782 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1919"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 151.70873,159.63116 c 0.24993,0 0.25626,0 0.25626,-0.0506 v -1.28128 c 0.0696,-0.038 0.16767,-0.057 0.23411,-0.057 0.15818,0 0.18981,0.0759 0.18981,0.27524 v 1.1136 c 0.25942,0 0.26575,0 0.26575,-0.0506 v -1.13892 c 0,-0.30687 -0.11389,-0.42393 -0.44607,-0.42393 -0.16768,0 -0.37648,0.0538 -0.49986,0.10757 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1921"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 153.70756,158.16007 c 0,-0.0823 -0.11705,-0.14237 -0.26258,-0.14237 -0.26258,0 -0.56946,0.0981 -0.56946,0.85735 0,0.66753 0.17084,0.78775 0.47139,0.78775 0.2088,0 0.35433,-0.0759 0.35433,-0.16135 0,-0.0411 -0.01,-0.0823 -0.0253,-0.1392 -0.0538,0.0348 -0.14869,0.0728 -0.24993,0.0728 -0.19298,0 -0.28157,-0.11389 -0.28157,-0.55997 0,-0.56313 0.16451,-0.62956 0.3132,-0.62956 0.0854,0 0.17084,0.0285 0.22146,0.0569 0.0222,-0.0538 0.0285,-0.10756 0.0285,-0.14236 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1923"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 154.3747,158.0177 c -0.2784,0 -0.55997,0.11389 -0.55997,0.90481 0,0.61691 0.21197,0.74029 0.50619,0.74029 0.23727,0 0.43658,-0.0759 0.43658,-0.174 0,-0.0506 -0.006,-0.12655 -0.0221,-0.174 -0.10756,0.0601 -0.23411,0.0981 -0.36065,0.0981 -0.19298,0 -0.28157,-0.0886 -0.29422,-0.42393 0.15185,0 0.44291,-0.009 0.6612,-0.0506 0.0253,-0.1139 0.0348,-0.27208 0.0348,-0.41128 0,-0.34167 -0.13604,-0.50935 -0.40178,-0.50935 z m -0.0285,0.22462 c 0.13603,0 0.17716,0.0854 0.18032,0.3132 0,0.0601 -0.003,0.13288 -0.0158,0.18982 -0.11073,0.0316 -0.30688,0.038 -0.4271,0.0348 0.019,-0.42709 0.13288,-0.53782 0.26259,-0.53782 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1925"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 155.54075,158.09047 c 0.1044,-0.0633 0.29738,-0.11073 0.46189,-0.11073 0.17717,0 0.2436,0.0854 0.2436,0.21829 0,0.35117 -0.44607,0.66437 -0.72447,1.12942 -0.0601,0.1044 -0.0759,0.13604 -0.0759,0.22462 0,0.0158 0.003,0.0538 0.009,0.0791 h 1.07248 c 0.0538,0 0.0538,-0.0728 0.0538,-0.26574 0,0 -0.20247,0.0221 -0.37331,0.0221 h -0.42393 c 0.30688,-0.47771 0.75295,-0.78458 0.75295,-1.22433 0,-0.27524 -0.1044,-0.43025 -0.46822,-0.43025 -0.30687,0 -0.55997,0.0917 -0.55997,0.16767 0,0.0443 0.003,0.12338 0.0316,0.18982 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1927"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 156.76815,158.69472 c 0,0.62641 0.12338,0.96492 0.55996,0.96492 0.43975,0 0.57895,-0.35433 0.57895,-1.04084 0,-0.59161 -0.15502,-0.88582 -0.56313,-0.88582 -0.40811,0 -0.57578,0.33534 -0.57578,0.96174 z m 0.27523,0.019 c 0,-0.47139 0.0728,-0.75295 0.31321,-0.75295 0.21829,0 0.28156,0.22462 0.28156,0.65487 0,0.56946 -0.0886,0.8099 -0.30371,0.8099 -0.21829,0 -0.29106,-0.18982 -0.29106,-0.71182 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1929"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 158.217,158.05567 c 0,0 0.25625,-0.0538 0.36065,-0.057 l -0.0348,1.38884 c -0.19298,0 -0.45556,0.0127 -0.45556,0.0664 0,0.0506 0.003,0.12655 0.006,0.17716 h 1.08196 c 0.0538,0 0.0538,-0.0791 0.0538,-0.25309 0,0 -0.0854,0.009 -0.1835,0.009 h -0.23411 l 0.0411,-1.63877 c -0.0127,-0.009 -0.0474,-0.0158 -0.0728,-0.0158 -0.10757,0 -0.6011,0.10756 -0.6011,0.15501 0,0.0633 0.0158,0.12339 0.038,0.16768 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1931"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 159.98222,157.39763 c -0.29106,0 -0.54099,0.18033 -0.54099,0.54415 0,0.12654 0.0475,0.24992 0.13288,0.33218 0.0506,0.0601 0.12654,0.11389 0.20563,0.16767 -0.20247,0.12022 -0.36065,0.33535 -0.36065,0.60742 0,0.33535 0.16767,0.60742 0.58844,0.60742 0.37014,0 0.55047,-0.26891 0.55047,-0.60109 0,-0.18665 -0.0664,-0.32269 -0.18665,-0.44607 -0.0475,-0.0506 -0.10757,-0.0981 -0.16768,-0.14553 0.17084,-0.11706 0.34168,-0.2784 0.34168,-0.55364 0,-0.40811 -0.27208,-0.51251 -0.56313,-0.51251 z m 0.18349,1.33189 c 0.0759,0.0664 0.14236,0.1487 0.14236,0.31953 0,0.22462 -0.12338,0.36066 -0.31636,0.36066 -0.20564,0 -0.33219,-0.14553 -0.33219,-0.37331 0,-0.2088 0.14553,-0.36066 0.32586,-0.4524 0.0664,0.0474 0.12971,0.0949 0.18033,0.14552 z m -0.14869,-1.08829 c 0.14869,0 0.29105,0.0822 0.29105,0.2784 0,0.174 -0.13287,0.30687 -0.29422,0.41127 -0.0791,-0.0538 -0.14869,-0.1044 -0.18982,-0.14869 -0.0822,-0.0664 -0.12338,-0.14552 -0.12338,-0.25625 0,-0.19931 0.14553,-0.28473 0.31637,-0.28473 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1933"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 160.77936,159.45716 c 0,0.0696 0.019,0.12339 0.0728,0.15502 -0.006,0.0918 -0.0158,0.14869 -0.0886,0.27208 0.0127,0.0538 0.0538,0.0728 0.10124,0.0728 0.0569,0 0.24992,-0.2436 0.24992,-0.47455 0,-0.12971 -0.0633,-0.18982 -0.174,-0.18982 -0.0949,0 -0.16134,0.0728 -0.16134,0.16451 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1935"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 161.93676,158.05567 c 0,0 0.25625,-0.0538 0.36065,-0.057 l -0.0348,1.38884 c -0.19298,0 -0.45556,0.0127 -0.45556,0.0664 0,0.0506 0.003,0.12655 0.006,0.17716 h 1.08196 c 0.0538,0 0.0538,-0.0791 0.0538,-0.25309 0,0 -0.0854,0.009 -0.1835,0.009 h -0.23411 l 0.0411,-1.63877 c -0.0127,-0.009 -0.0474,-0.0158 -0.0728,-0.0158 -0.10757,0 -0.6011,0.10756 -0.6011,0.15501 0,0.0633 0.0158,0.12339 0.038,0.16768 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1937"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 163.70198,157.39763 c -0.29106,0 -0.54099,0.18033 -0.54099,0.54415 0,0.12654 0.0475,0.24992 0.13288,0.33218 0.0506,0.0601 0.12654,0.11389 0.20563,0.16767 -0.20247,0.12022 -0.36065,0.33535 -0.36065,0.60742 0,0.33535 0.16767,0.60742 0.58844,0.60742 0.37014,0 0.55047,-0.26891 0.55047,-0.60109 0,-0.18665 -0.0664,-0.32269 -0.18666,-0.44607 -0.0474,-0.0506 -0.10756,-0.0981 -0.16767,-0.14553 0.17084,-0.11706 0.34168,-0.2784 0.34168,-0.55364 0,-0.40811 -0.27208,-0.51251 -0.56313,-0.51251 z m 0.18349,1.33189 c 0.0759,0.0664 0.14236,0.1487 0.14236,0.31953 0,0.22462 -0.12338,0.36066 -0.31636,0.36066 -0.20564,0 -0.33219,-0.14553 -0.33219,-0.37331 0,-0.2088 0.14553,-0.36066 0.32586,-0.4524 0.0664,0.0474 0.12971,0.0949 0.18033,0.14552 z m -0.14869,-1.08829 c 0.14869,0 0.29105,0.0822 0.29105,0.2784 0,0.174 -0.13287,0.30687 -0.29422,0.41127 -0.0791,-0.0538 -0.14869,-0.1044 -0.18982,-0.14869 -0.0822,-0.0664 -0.12338,-0.14552 -0.12338,-0.25625 0,-0.19931 0.14553,-0.28473 0.31637,-0.28473 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1939"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 165.07174,158.85291 c 0.0538,0 0.0538,-0.0664 0.0538,-0.22462 h -0.59477 c -0.0506,0 -0.0506,0.0633 -0.0506,0.22462 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1941"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 165.45879,158.05567 c 0,0 0.25625,-0.0538 0.36066,-0.057 l -0.0348,1.38884 c -0.19299,0 -0.45557,0.0127 -0.45557,0.0664 0,0.0506 0.003,0.12655 0.006,0.17716 h 1.08196 c 0.0538,0 0.0538,-0.0791 0.0538,-0.25309 0,0 -0.0854,0.009 -0.18349,0.009 h -0.23411 l 0.0411,-1.63877 c -0.0127,-0.009 -0.0474,-0.0158 -0.0728,-0.0158 -0.10757,0 -0.60109,0.10756 -0.60109,0.15501 0,0.0633 0.0158,0.12339 0.038,0.16768 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1943"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 166.96775,159.71342 c -0.0791,0 -0.15502,-0.009 -0.23095,-0.0316 -0.009,0.0443 -0.0221,0.12339 -0.0221,0.174 0,0.0759 0.12971,0.1044 0.28473,0.1044 0.54731,0 0.78775,-0.40811 0.79407,-1.26862 -0.0127,-0.73713 -0.0917,-0.98706 -0.54415,-0.98706 -0.39545,0 -0.60109,0.25309 -0.60109,0.79408 0,0.41444 0.19931,0.63589 0.46189,0.63589 0.20248,0 0.32902,-0.0759 0.4271,-0.22145 -0.0316,0.46822 -0.16451,0.8004 -0.56946,0.8004 z m 0.21829,-0.81622 c -0.174,0 -0.28473,-0.15186 -0.28473,-0.43026 0,-0.35749 0.13604,-0.53466 0.35117,-0.53466 0.24993,0 0.29422,0.24677 0.29422,0.71815 v 0.019 c -0.1044,0.15818 -0.22778,0.22778 -0.36066,0.22778 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1945"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 168.47434,158.51123 c 0,0.91113 0.16134,1.14841 0.56945,1.14841 0.41761,0 0.59793,-0.28789 0.59793,-1.1579 0,-0.85418 -0.15185,-1.1136 -0.56312,-1.1136 -0.40812,0 -0.60426,0.28156 -0.60426,1.12309 z m 0.28789,0.0633 c 0,-0.68335 0.0886,-0.92379 0.31004,-0.92379 0.22778,0 0.29105,0.22462 0.29105,0.85735 0,0.64538 -0.0791,0.88898 -0.30687,0.88898 -0.22462,0 -0.29422,-0.23411 -0.29422,-0.82254 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1947"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 170.64421,158.16007 c 0,-0.0823 -0.11706,-0.14237 -0.26258,-0.14237 -0.26259,0 -0.56946,0.0981 -0.56946,0.85735 0,0.66753 0.17084,0.78775 0.47138,0.78775 0.2088,0 0.35433,-0.0759 0.35433,-0.16135 0,-0.0411 -0.009,-0.0823 -0.0253,-0.1392 -0.0538,0.0348 -0.14869,0.0728 -0.24993,0.0728 -0.19298,0 -0.28156,-0.11389 -0.28156,-0.55997 0,-0.56313 0.16451,-0.62956 0.3132,-0.62956 0.0854,0 0.17084,0.0285 0.22146,0.0569 0.0221,-0.0538 0.0285,-0.10756 0.0285,-0.14236 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1949"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 170.99335,159.19142 c 0,0.28473 0.0348,0.47138 0.30371,0.47138 0.12338,0 0.27207,-0.0253 0.27207,-0.14236 0,-0.0506 -0.009,-0.0918 -0.019,-0.12655 -0.0633,0.0316 -0.11073,0.0475 -0.18349,0.0475 -0.1139,0 -0.1139,-0.1139 -0.1139,-0.24993 v -0.92062 h 0.27208 c 0.0506,0 0.0506,-0.0222 0.0506,-0.22146 h -0.3227 v -0.56946 c -0.21196,0 -0.25941,0 -0.25941,0.0886 v 0.48087 h -0.15819 c -0.0538,0 -0.0569,0.0253 -0.0569,0.22146 h 0.21513 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1951"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 171.66226,158.84025 c 0,0.71182 0.17084,0.82255 0.49669,0.82255 0.33851,0 0.51884,-0.2436 0.51884,-0.83204 0,-0.64222 -0.15818,-0.81306 -0.49036,-0.81306 -0.33219,0 -0.52517,0.2436 -0.52517,0.82255 z m 0.2784,0.006 c 0,-0.49353 0.0981,-0.60426 0.23728,-0.60426 0.14869,0 0.22145,0.0886 0.22145,0.5916 0,0.49353 -0.0981,0.61059 -0.23411,0.61059 -0.14553,0 -0.22462,-0.0759 -0.22462,-0.59793 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1953"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 172.89668,159.56789 c 0.0759,0.0601 0.20247,0.0949 0.37014,0.0949 0.26259,0 0.61059,-0.10756 0.61059,-1.02186 0,-0.46189 -0.13287,-0.62324 -0.38597,-0.62324 -0.14552,0 -0.25309,0.0411 -0.33851,0.11073 v -0.82255 c -0.21196,0 -0.25625,0 -0.25625,0.12022 z m 0.25625,-1.23066 c 0.0664,-0.0601 0.1392,-0.0886 0.22146,-0.0886 0.14553,0 0.21513,0.11073 0.21513,0.44924 0,0.64222 -0.17717,0.73713 -0.2879,0.73713 -0.0728,0 -0.12021,-0.019 -0.14869,-0.0411 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1955"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 174.61711,158.0177 c -0.2784,0 -0.55997,0.11389 -0.55997,0.90481 0,0.61691 0.21197,0.74029 0.50619,0.74029 0.23727,0 0.43658,-0.0759 0.43658,-0.174 0,-0.0506 -0.006,-0.12655 -0.0222,-0.174 -0.10756,0.0601 -0.23411,0.0981 -0.36065,0.0981 -0.19299,0 -0.28157,-0.0886 -0.29422,-0.42393 0.15185,0 0.44291,-0.009 0.6612,-0.0506 0.0253,-0.1139 0.0348,-0.27208 0.0348,-0.41128 0,-0.34167 -0.13604,-0.50935 -0.40178,-0.50935 z m -0.0285,0.22462 c 0.13604,0 0.17717,0.0854 0.18033,0.3132 0,0.0601 -0.003,0.13288 -0.0158,0.18982 -0.11072,0.0316 -0.30687,0.038 -0.42709,0.0348 0.019,-0.42709 0.13287,-0.53782 0.26258,-0.53782 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1957"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 175.24455,159.63116 c 0.25625,0 0.25942,0 0.25942,-0.0506 l 0.003,-1.24332 c 0.0601,-0.0506 0.1392,-0.0728 0.2088,-0.0728 0.0538,0 0.1044,0.0127 0.15186,0.038 0.0221,-0.0538 0.0285,-0.11705 0.0285,-0.15185 0,-0.0854 -0.0601,-0.13288 -0.22146,-0.13288 -0.15501,0 -0.30687,0.057 -0.43025,0.14237 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1959"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 176.61733,158.09047 c 0.1044,-0.0633 0.29738,-0.11073 0.46189,-0.11073 0.17716,0 0.2436,0.0854 0.2436,0.21829 0,0.35117 -0.44607,0.66437 -0.72448,1.12942 -0.0601,0.1044 -0.0759,0.13604 -0.0759,0.22462 0,0.0158 0.003,0.0538 0.009,0.0791 h 1.07248 c 0.0538,0 0.0538,-0.0728 0.0538,-0.26574 0,0 -0.20248,0.0221 -0.37331,0.0221 h -0.42393 c 0.30687,-0.47771 0.75295,-0.78458 0.75295,-1.22433 0,-0.27524 -0.1044,-0.43025 -0.46822,-0.43025 -0.30688,0 -0.55997,0.0917 -0.55997,0.16767 0,0.0443 0.003,0.12338 0.0316,0.18982 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1961"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 177.84472,158.69472 c 0,0.62641 0.12338,0.96492 0.55997,0.96492 0.43974,0 0.57894,-0.35433 0.57894,-1.04084 0,-0.59161 -0.15501,-0.88582 -0.56312,-0.88582 -0.40812,0 -0.57579,0.33534 -0.57579,0.96174 z m 0.27524,0.019 c 0,-0.47139 0.0728,-0.75295 0.3132,-0.75295 0.21829,0 0.28156,0.22462 0.28156,0.65487 0,0.56946 -0.0886,0.8099 -0.30371,0.8099 -0.21829,0 -0.29105,-0.18982 -0.29105,-0.71182 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1963"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 179.29357,158.05567 c 0,0 0.25626,-0.0538 0.36066,-0.057 l -0.0348,1.38884 c -0.19298,0 -0.45556,0.0127 -0.45556,0.0664 0,0.0506 0.003,0.12655 0.006,0.17716 h 1.08197 c 0.0538,0 0.0538,-0.0791 0.0538,-0.25309 0,0 -0.0854,0.009 -0.18349,0.009 h -0.23411 l 0.0411,-1.63877 c -0.0127,-0.009 -0.0475,-0.0158 -0.0728,-0.0158 -0.10756,0 -0.60109,0.10756 -0.60109,0.15501 0,0.0633 0.0158,0.12339 0.038,0.16768 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1965"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 181.05879,157.39763 c -0.29105,0 -0.54098,0.18033 -0.54098,0.54415 0,0.12654 0.0474,0.24992 0.13287,0.33218 0.0506,0.0601 0.12655,0.11389 0.20564,0.16767 -0.20247,0.12022 -0.36066,0.33535 -0.36066,0.60742 0,0.33535 0.16768,0.60742 0.58844,0.60742 0.37015,0 0.55048,-0.26891 0.55048,-0.60109 0,-0.18665 -0.0664,-0.32269 -0.18666,-0.44607 -0.0474,-0.0506 -0.10756,-0.0981 -0.16767,-0.14553 0.17084,-0.11706 0.34167,-0.2784 0.34167,-0.55364 0,-0.40811 -0.27207,-0.51251 -0.56313,-0.51251 z m 0.18349,1.33189 c 0.0759,0.0664 0.14237,0.1487 0.14237,0.31953 0,0.22462 -0.12338,0.36066 -0.31637,0.36066 -0.20563,0 -0.33218,-0.14553 -0.33218,-0.37331 0,-0.2088 0.14553,-0.36066 0.32586,-0.4524 0.0664,0.0474 0.12971,0.0949 0.18032,0.14552 z m -0.14869,-1.08829 c 0.14869,0 0.29106,0.0822 0.29106,0.2784 0,0.174 -0.13287,0.30687 -0.29422,0.41127 -0.0791,-0.0538 -0.14869,-0.1044 -0.18982,-0.14869 -0.0822,-0.0664 -0.12338,-0.14552 -0.12338,-0.25625 0,-0.19931 0.14553,-0.28473 0.31636,-0.28473 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1967"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 181.85593,159.45716 c 0,0.0696 0.019,0.12339 0.0728,0.15502 -0.006,0.0918 -0.0158,0.14869 -0.0886,0.27208 0.0127,0.0538 0.0538,0.0728 0.10124,0.0728 0.057,0 0.24993,-0.2436 0.24993,-0.47455 0,-0.12971 -0.0633,-0.18982 -0.174,-0.18982 -0.0949,0 -0.16135,0.0728 -0.16135,0.16451 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1969"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 182.93108,159.63116 h 0.39862 c 0.32902,0 0.60109,-0.22145 0.60109,-0.75294 0,-0.37964 -0.22778,-0.45241 -0.37331,-0.4619 0.13604,-0.019 0.30371,-0.16134 0.30371,-0.50934 0,-0.40811 -0.2784,-0.49037 -0.53149,-0.49037 h -0.3132 c -0.0664,0 -0.0854,0.0222 -0.0854,0.0601 z m 0.26258,-1.98677 h 0.15186 c 0.12022,0 0.23411,0.0538 0.23411,0.3132 0,0.24993 -0.0981,0.36382 -0.23095,0.36382 h -0.15502 z m 0,0.89848 h 0.14553 c 0.17084,0 0.29106,0.0316 0.29106,0.35749 0,0.36066 -0.13604,0.50619 -0.29422,0.50619 h -0.14237 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1971"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 184.64563,158.0177 c -0.2784,0 -0.55997,0.11389 -0.55997,0.90481 0,0.61691 0.21197,0.74029 0.50619,0.74029 0.23727,0 0.43658,-0.0759 0.43658,-0.174 0,-0.0506 -0.006,-0.12655 -0.0221,-0.174 -0.10757,0.0601 -0.23411,0.0981 -0.36066,0.0981 -0.19298,0 -0.28157,-0.0886 -0.29422,-0.42393 0.15186,0 0.44291,-0.009 0.6612,-0.0506 0.0253,-0.1139 0.0348,-0.27208 0.0348,-0.41128 0,-0.34167 -0.13603,-0.50935 -0.40178,-0.50935 z m -0.0285,0.22462 c 0.13603,0 0.17716,0.0854 0.18032,0.3132 0,0.0601 -0.003,0.13288 -0.0158,0.18982 -0.11073,0.0316 -0.30688,0.038 -0.4271,0.0348 0.019,-0.42709 0.13288,-0.53782 0.26259,-0.53782 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1973"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 185.27307,159.63116 c 0.25626,0 0.25942,0 0.25942,-0.0506 l 0.003,-1.24332 c 0.0601,-0.0506 0.1392,-0.0728 0.2088,-0.0728 0.0538,0 0.1044,0.0127 0.15186,0.038 0.0222,-0.0538 0.0285,-0.11705 0.0285,-0.15185 0,-0.0854 -0.0601,-0.13288 -0.22145,-0.13288 -0.15502,0 -0.30688,0.057 -0.43026,0.14237 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1975"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 186.36665,157.30588 c -0.20563,0 -0.25625,0 -0.25625,0.11706 v 2.20822 c 0.25625,0 0.25625,0 0.25625,-0.0506 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1977"
-             inkscape:connector-curvature="0" />
-          <path
-             d="m 188.14012,159.63116 c 0.24993,0 0.25626,0 0.25626,-0.0506 v -1.28128 c 0.0696,-0.038 0.16767,-0.057 0.23411,-0.057 0.15818,0 0.18982,0.0759 0.18982,0.27524 v 1.1136 c 0.25942,0 0.26575,0 0.26575,-0.0506 v -1.13892 c 0,-0.30687 -0.1139,-0.42393 -0.44608,-0.42393 -0.16767,0 -0.37647,0.0538 -0.49986,0.10757 z"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
-             id="path1979"
-             inkscape:connector-curvature="0" />
-        </g>
-        <g
-           transform="matrix(0.20459945,0,0,0.20459945,173.99435,134.11683)"
-           id="g27740-5">
           <g
-             id="g28309-4">
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.90577996"
+             id="g3546-6"
+             transform="matrix(1.4615138,0,0,2.5218672,4.4272,31.547917)">
             <path
-               style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:normal;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.98000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#3465a4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6.24451828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-               d="m 3820.6562,472.26172 c -40.3422,0 -73.1445,32.3975 -73.1445,72.32812 0,30.32091 18.9212,56.28015 45.6875,67.02735 l 1.8555,-5.95508 c -24.2644,-9.91834 -41.2988,-33.51066 -41.2988,-61.07227 0,-36.51604 29.8935,-66.08398 66.9003,-66.08398 37.0069,0 66.8985,29.56794 66.8985,66.08398 0,24.66524 -13.6587,46.14338 -33.918,57.50977 -2.3907,1.34129 -4.8745,2.53952 -7.4355,3.58594 l 1.8535,5.96875 c 2.9828,-1.19355 5.8704,-2.56971 8.6426,-4.125 22.1465,-12.42531 37.1035,-35.96788 37.1035,-62.93946 0,-39.93062 -32.8023,-72.32812 -73.1446,-72.32812 z m 7.5,137.99414 c -2.4618,0.2706 -4.962,0.41602 -7.5,0.41602 -2.5028,0 -4.9696,-0.14473 -7.4003,-0.40821 l -1.8633,6.05469 c 3.0363,0.3807 6.1241,0.59767 9.2636,0.59766 3.182,0 6.3161,-0.2044 9.3926,-0.59571 z"
-               id="path3544-2-8"
-               inkscape:connector-curvature="0"
-               sodipodi:nodetypes="ssccsssscccsscsccccc"
-               transform="matrix(0.04785074,0,0,0.04785074,-118.05951,92.995687)" />
-            <path
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#a00000;stroke-width:6.34386444px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 3811.3887,563.87891 -30.2735,97.13867 h 78.9297 l -30.1523,-97.125 c -2.8017,1.31925 -5.9315,2.05859 -9.2364,2.05859 -3.3169,0 -6.4581,-0.74396 -9.2675,-2.07226 z m 9.2675,11.66406 19.3165,61.84961 h -38.4082 z"
-               transform="matrix(0.04785074,0,0,0.04785074,-118.05951,92.995687)"
-               id="path3548-6-1"
+               style="fill:url(#linearGradient3991-3-88-5);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3993-1-9-7);stroke-width:0.90577996px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               id="path3548-1"
+               d="m 24,13 -8.1875,15.225744 c 11.445471,0 5.976697,0 16.34375,0 z m 0,4.96875 4,7.421875 h -7.953125 z"
                inkscape:connector-curvature="0" />
             <path
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;fill-opacity:1;stroke:#a00000;stroke-width:0.3038334;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-               id="path3556-1-2"
-               d="m 65.796938,119.04618 c 0,0.56924 -0.463484,1.03071 -1.035215,1.03071 -0.571734,0 -1.035215,-0.46147 -1.035215,-1.03071 0,-0.56925 0.463481,-1.03071 1.035215,-1.03071 0.571731,0 1.035215,0.46146 1.035215,1.03071 z"
+               style="fill:none;stroke:#ffffff;stroke-width:1.18982303px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+               id="path3550-2"
+               transform="matrix(1,0,0,0.57953638,4,2.7937247)"
+               d="M 26.355979,42.522608 20,21.277828 13.644021,42.522609"
                inkscape:connector-curvature="0" />
           </g>
           <path
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;fill-opacity:1;stroke:#3465a4;stroke-width:0.29880485;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
-             id="path3552-8-8"
-             d="m 66.957088,119.05451 c 0,1.21246 -0.982899,2.19537 -2.195365,2.19537 -1.212466,0 -2.195365,-0.98291 -2.195365,-2.19537 0,-1.21246 0.982899,-2.19537 2.195365,-2.19537 1.212466,0 2.195365,0.98291 2.195365,2.19537 z"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:url(#radialGradient3995-7-4-0-2-02);fill-opacity:1;stroke:url(#radialGradient3997-3-3-4-7-3);stroke-width:1.32380998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+             id="path3552-9"
+             d="m 53.38791,67.493897 c 0,7.6681 -6.21625,13.8844 -13.88438,13.8844 -7.66813,0 -13.884379,-6.2163 -13.884379,-13.8844 0,-7.6681 6.216249,-13.8844 13.884379,-13.8844 7.66813,0 13.88438,6.2163 13.88438,13.8844 z"
              inkscape:connector-curvature="0" />
+          <g
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.90577996"
+             id="g3554-3"
+             transform="matrix(3.2735609,0,0,3.2593101,-24.33091,59.292917)">
+            <path
+               style="fill:url(#radialGradient3999-1-4-6-0-75);fill-opacity:1;stroke:#555753;stroke-width:0.35933584;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+               id="path3556-19"
+               transform="matrix(1.1130433,0,0,1.1428572,9.2565233,-0.07142864)"
+               d="M 11,2.25 C 11,3.2164983 10.195512,4 9.203125,4 8.2107383,4 7.40625,3.2164983 7.40625,2.25 7.40625,1.2835017 8.2107383,0.5 9.203125,0.5 10.195512,0.5 11,1.2835017 11,2.25 Z"
+               inkscape:connector-curvature="0" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.90577996"
+               id="path3558-4"
+               transform="matrix(1.8125,0,0,1.8125,-16.465404,-0.9288198)"
+               d="M 20,1.5 C 20,1.7761424 19.776142,2 19.5,2 19.223858,2 19,1.7761424 19,1.5 19,1.2238576 19.223858,1 19.5,1 19.776142,1 20,1.2238576 20,1.5 Z"
+               inkscape:connector-curvature="0" />
+          </g>
+          <path
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:url(#radialGradient4001-9-6-9-6-2);stroke-width:1.32380974;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+             id="path3560-7"
+             d="m 44.61882,67.441097 c 0,2.8124 -2.2902,5.0924 -5.1153,5.0924 -2.8251,0 -5.1153,-2.28 -5.1153,-5.0924 0,-2.8125 2.2902,-5.0924 5.1153,-5.0924 2.8251,0 5.1153,2.2799 5.1153,5.0924 z"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="text3743-6-8"
+           style="font-style:normal;font-weight:normal;font-size:144.67489624px;line-height:125%;font-family:Sans;letter-spacing:0.31647632px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755664"
+           transform="scale(0.99930844,1.000692)"
+           aria-label="Os">
+          <path
+             id="path1311"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';letter-spacing:0.31647632px;fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
+             d="m 687.78013,230.41897 c 0,41.66637 7.37842,52.51698 26.04148,52.51698 19.09708,0 27.34355,-13.16541 27.34355,-52.95101 0,-39.06222 -6.94439,-50.92556 -25.75213,-50.92556 -18.66306,0 -27.6329,12.87606 -27.6329,51.35959 z m 13.16541,2.8935 c 0,-31.24978 4.0509,-42.24507 14.17814,-42.24507 10.4166,0 13.31009,10.27191 13.31009,39.20689 0,29.51368 -3.61687,40.65365 -14.03346,40.65365 -10.27192,0 -13.45477,-10.70594 -13.45477,-37.61547 z"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path1313"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';letter-spacing:0.31647632px;fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
+             d="m 773.70571,207.84968 c -16.20359,0 -23.58201,6.9444 -23.58201,17.07164 0,4.77427 1.7361,9.98257 8.24647,15.33554 l 14.03347,12.00802 c 4.34025,3.90622 5.78699,7.37842 5.78699,11.28464 0,5.78699 -4.34024,8.96984 -11.71866,8.96984 -5.64232,0 -10.27192,-1.1574 -14.46749,-3.61687 -1.59143,2.60415 -2.02545,5.06362 -2.02545,6.79972 0,5.06362 7.37842,7.37842 17.65034,7.37842 14.75684,0 23.87135,-7.23375 23.87135,-20.10981 0,-7.23375 -2.31479,-12.00802 -8.53581,-18.08436 l -13.45477,-10.85062 c -4.91895,-4.0509 -5.787,-6.3657 -5.787,-8.96984 0,-4.48493 4.6296,-6.9444 11.42932,-6.9444 5.49765,0 9.83789,1.1574 14.17814,3.76155 1.59143,-1.7361 2.60415,-4.0509 2.60415,-5.93167 0,-2.8935 -3.32752,-8.1018 -18.22904,-8.1018 z"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="text3760-7-5"
+           style="font-style:normal;font-weight:normal;font-size:90.42181396px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755664"
+           transform="scale(0.99930844,1.000692)"
+           aria-label="o">
+          <path
+             id="path1316"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
+             d="m 889.56235,245.46516 c 0,32.55185 7.81244,37.61547 22.71396,37.61547 15.48021,0 23.72668,-11.13997 23.72668,-38.0495 0,-29.369 -7.23375,-37.18145 -22.42461,-37.18145 -15.19086,0 -24.01603,11.13997 -24.01603,37.61548 z m 12.73139,0.28935 c 0,-22.56929 4.48492,-27.63291 10.85061,-27.63291 6.79972,0 10.12725,4.0509 10.12725,27.05421 0,22.56928 -4.48492,27.92225 -10.70595,27.92225 -6.65504,0 -10.27191,-3.4722 -10.27191,-27.34355 z"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="text4707-3"
+           style="font-style:normal;font-weight:bold;font-size:144.67489624px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Yanone Kaffeesatz Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:2.04755664"
+           transform="scale(0.99930844,1.000692)"
+           aria-label="Con">
+          <path
+             id="path1319"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
+             d="m 973.8721,179.63802 c -13.02074,0 -28.93498,8.68049 -28.93498,56.13386 0,40.50897 7.81244,49.47881 24.16071,49.47881 10.99529,0 17.65034,-3.90622 17.65034,-10.70594 0,-3.4722 -1.01273,-7.08907 -2.17013,-9.54855 -2.74882,1.44675 -6.79972,2.17013 -11.28464,2.17013 -8.10179,0 -11.28464,-7.5231 -11.28464,-32.69653 0,-31.53913 7.52309,-39.06222 15.76956,-39.06222 3.18285,0 5.787,1.1574 7.5231,2.45947 1.1574,-2.45947 2.31479,-5.78699 2.31479,-9.69322 0,-4.34024 -1.44674,-8.53581 -13.74411,-8.53581 z"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path1321"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
+             d="m 989.41787,246.76717 c 0,32.40717 7.23374,37.76015 22.85863,37.76015 15.6249,0 23.7267,-10.4166 23.7267,-38.33885 0,-29.22433 -7.0891,-36.8921 -22.5693,-36.8921 -15.33554,0 -24.01603,11.28464 -24.01603,37.4708 z m 17.79503,-0.14468 c 0,-20.54383 2.4595,-23.43733 5.6423,-23.43733 4.1956,0 5.353,2.60415 5.353,23.43733 0,22.27994 -2.7488,24.45006 -5.4977,24.45006 -3.6168,0 -5.4976,-1.88077 -5.4976,-24.45006 z"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path1323"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144.67489624px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#a00000;fill-opacity:1;stroke-width:2.04755664"
+             d="m 1042.8843,283.08057 c 15.9142,0 16.2036,0 16.2036,-2.8935 v -55.26581 c 1.5914,-1.1574 3.6168,-1.7361 5.4976,-1.7361 4.0509,0 4.7743,2.3148 4.7743,9.83789 v 50.05752 c 16.3483,0 16.7823,0 16.7823,-2.8935 v -52.22764 c 0,-14.46749 -6.221,-18.66306 -20.8332,-18.66306 -7.2337,0 -17.9397,2.60415 -22.4246,4.77427 z"
+             inkscape:connector-curvature="0" />
+        </g>
+        <path
+           inkscape:connector-curvature="0"
+           id="path3959-9-26-3-1"
+           d="m 823.41493,209.02142 -9.79042,16.87305 -4.47845,-7.71858 1.32821,60.79421 c 4.28836,-2.99934 5.86536,1.6307 5.92979,-0.68481 l 1.57071,-56.34953 c 3.32532,-1.7373 6.64955,-2.46093 9.83013,-2.46093 5.78306,0 8.07937,2.02509 8.22423,7.23699 l 0.63968,52.10363 c 4.011,-1.14259 7.63376,0.87733 7.65043,-0.38878 l 0.71468,-54.20228 c 3.18069,-2.02685 7.93021,-4.60816 11.25543,-4.60816 5.78294,0 6.96144,2.90006 7.08126,9.84813 l 0.86914,50.38937 c 2.71964,-0.42843 6.58248,1.37366 6.61811,-0.43738 l 0.99713,-50.81796 c 0.25584,-13.02727 1.49029,-19.40466 -12.96692,-19.40466 -5.92758,0 -12.8653,1.73814 -17.78076,4.48887 -2.747,-2.89526 -6.79452,-4.48887 -13.01126,-4.48887 -1.69471,0 -3.22648,-0.0797 -4.68112,-0.17229 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Andale Mono';writing-mode:lr-tb;display:inline;fill:#a00000;fill-opacity:1;stroke:#a00000;stroke-width:2.04755688;stroke-opacity:1" />
+        <path
+           inkscape:connector-curvature="0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;fill-opacity:1;stroke:#e19c9c;stroke-width:10.23778343;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+           id="path3981-0-4-1-0"
+           d="m 813.62341,225.89435 -10.18097,-17.5395 -10.18097,-17.53971 h 20.36194 20.36183 l -10.18097,17.53971 z" />
+        <path
+           inkscape:connector-curvature="0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:10.28292942;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path3983-4-9-2-6"
+           d="M 867.50065,277.58651 V 214.87289" />
+        <path
+           inkscape:connector-curvature="0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:10.23778343;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path3985-4-0-9-3"
+           d="M 840.44878,277.56004 V 232.72162" />
+        <path
+           inkscape:connector-curvature="0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;stroke:#e19c9c;stroke-width:9.56036377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path3951-0-4-91-2-2"
+           d="m 813.62186,277.95296 -0.0243,-26.58591" />
+        <g
+           id="text4707-9-0"
+           style="font-style:normal;font-weight:bold;font-size:144.6749115px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Yanone Kaffeesatz Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#3566a5;fill-opacity:1;stroke:none;stroke-width:2.04755688"
+           transform="scale(0.99930844,1.000692)"
+           aria-label="18">
+          <path
+             id="path1326"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144.6749115px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#3566a5;fill-opacity:1;stroke-width:2.04755688"
+             d="m 1112.2689,215.66204 c 0,0 6.221,-1.44675 13.7441,-1.7361 l -1.3021,55.12114 c -13.4548,0 -18.3737,0.86805 -18.3737,4.48492 0,3.76155 0.1447,7.08907 0.434,10.70595 h 48.1768 c 3.6168,0 3.6168,-3.4722 3.6168,-15.76957 0,0 -4.3402,0.5787 -8.8251,0.5787 h -8.1018 l 1.7361,-70.74603 c -0.7234,-0.5787 -2.8935,-0.86805 -4.1956,-0.86805 -7.6678,0 -29.369,4.91895 -29.369,8.24647 0,3.90622 0.7234,6.94439 2.4595,9.98257 z"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path1328"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144.6749115px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz Bold';fill:#3566a5;fill-opacity:1;stroke-width:2.04755688"
+             d="m 1190.1605,182.09746 c -13.5995,0 -24.4501,8.68049 -24.4501,25.46278 0,5.06362 1.4468,9.8379 3.7616,13.16542 2.1701,3.32752 5.4976,6.3657 9.2592,9.40387 -8.3912,6.07634 -14.0335,15.33554 -14.0335,27.19888 0,14.75684 6.7997,27.92226 26.9095,27.92226 16.927,0 25.1735,-13.59944 25.1735,-27.48823 0,-7.23375 -2.3148,-13.59944 -7.5231,-19.67579 -1.8808,-2.17012 -4.1956,-4.34025 -6.5104,-6.65505 7.3784,-5.78699 13.8888,-13.16541 13.8888,-25.89681 0,-17.65034 -11.14,-23.43733 -26.4755,-23.43733 z m 6.5104,63.51228 c 2.0254,2.3148 4.1955,5.06363 4.1955,11.71867 0,8.1018 -4.6296,12.44204 -10.4166,12.44204 -5.9316,0 -10.7059,-4.62959 -10.7059,-13.59944 0,-7.52309 4.3402,-12.29736 10.2719,-16.78229 2.4595,2.02545 4.7743,4.0509 6.6551,6.22102 z m -4.1956,-48.32142 c 5.9317,0 9.1145,4.77428 9.1145,8.82517 0,6.65505 -3.7615,11.71867 -9.2592,16.34827 -2.8935,-2.60415 -5.6423,-5.06362 -7.2337,-7.08907 -1.5915,-2.02545 -3.0382,-4.6296 -3.0382,-8.82517 0,-6.3657 4.4849,-9.2592 10.4166,-9.2592 z"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           transform="matrix(19.592171,0,0,19.592171,-2611.4376,-2143.7586)"
+           id="g1750-4"
+           style="display:inline">
+          <g
+             id="text1124-7"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.16364908px;line-height:100%;font-family:Galette;-inkscape-font-specification:'Galette Bold';letter-spacing:0px;word-spacing:0px;fill:#a00000;fill-opacity:1;stroke:none;stroke-width:0.02372737px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             aria-label="Osmocom Conference 2018, 18-19 October 2018, Berl   n">
+            <path
+               inkscape:connector-curvature="0"
+               id="path1893"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 134.68756,158.51123 c 0,0.91113 0.16134,1.14841 0.56945,1.14841 0.41761,0 0.59793,-0.28789 0.59793,-1.1579 0,-0.85418 -0.15185,-1.1136 -0.56313,-1.1136 -0.40811,0 -0.60425,0.28156 -0.60425,1.12309 z m 0.28789,0.0633 c 0,-0.68335 0.0886,-0.92379 0.31004,-0.92379 0.22778,0 0.29105,0.22462 0.29105,0.85735 0,0.64538 -0.0791,0.88898 -0.30687,0.88898 -0.22462,0 -0.29422,-0.23411 -0.29422,-0.82254 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1895"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 136.5596,158.0177 c -0.35433,0 -0.51568,0.15186 -0.51568,0.37331 0,0.1044 0.038,0.2183 0.18033,0.33535 l 0.30687,0.26258 c 0.0949,0.0854 0.12655,0.16135 0.12655,0.24677 0,0.12654 -0.0949,0.19614 -0.25626,0.19614 -0.12338,0 -0.22461,-0.0253 -0.31636,-0.0791 -0.0348,0.057 -0.0443,0.11073 -0.0443,0.14869 0,0.11073 0.16134,0.16135 0.38596,0.16135 0.3227,0 0.52201,-0.15818 0.52201,-0.43975 0,-0.15818 -0.0506,-0.26258 -0.18666,-0.39545 l -0.29422,-0.23728 c -0.10756,-0.0886 -0.12654,-0.1392 -0.12654,-0.19614 0,-0.0981 0.10123,-0.15186 0.24992,-0.15186 0.12022,0 0.21513,0.0253 0.31004,0.0823 0.0348,-0.038 0.057,-0.0886 0.057,-0.12971 0,-0.0633 -0.0728,-0.17717 -0.39862,-0.17717 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1897"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 137.81146,159.63116 c 0.25942,0 0.25626,0 0.25626,-0.0506 v -1.27495 c 0.0696,-0.0443 0.1392,-0.0601 0.21196,-0.0601 0.12655,0 0.15502,0.0633 0.15502,0.21512 v 1.17055 c 0.24677,0 0.25626,0 0.25626,-0.0506 v -1.11677 c 0,-0.28473 -0.038,-0.44608 -0.35433,-0.44608 -0.12971,0 -0.28157,0.038 -0.38913,0.0981 -0.0601,-0.0633 -0.14869,-0.0981 -0.28473,-0.0981 -0.174,0 -0.33851,0.0411 -0.47771,0.1044 v 1.50906 c 0.24676,0 0.25626,0 0.25626,-0.0506 v -1.28445 c 0.0728,-0.038 0.14552,-0.0538 0.21512,-0.0538 0.12655,0 0.15186,0.0443 0.15502,0.15819 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1899"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 138.89501,158.84025 c 0,0.71182 0.17084,0.82255 0.4967,0.82255 0.33851,0 0.51883,-0.2436 0.51883,-0.83204 0,-0.64222 -0.15818,-0.81306 -0.49036,-0.81306 -0.33218,0 -0.52517,0.2436 -0.52517,0.82255 z m 0.2784,0.006 c 0,-0.49353 0.0981,-0.60426 0.23728,-0.60426 0.14869,0 0.22145,0.0886 0.22145,0.5916 0,0.49353 -0.0981,0.61059 -0.23411,0.61059 -0.14553,0 -0.22462,-0.0759 -0.22462,-0.59793 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1901"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 140.91085,158.16007 c 0,-0.0823 -0.11705,-0.14237 -0.26258,-0.14237 -0.26259,0 -0.56946,0.0981 -0.56946,0.85735 0,0.66753 0.17084,0.78775 0.47138,0.78775 0.20881,0 0.35433,-0.0759 0.35433,-0.16135 0,-0.0411 -0.009,-0.0823 -0.0253,-0.1392 -0.0538,0.0348 -0.14869,0.0728 -0.24992,0.0728 -0.19299,0 -0.28157,-0.11389 -0.28157,-0.55997 0,-0.56313 0.16451,-0.62956 0.3132,-0.62956 0.0854,0 0.17084,0.0285 0.22146,0.0569 0.0221,-0.0538 0.0285,-0.10756 0.0285,-0.14236 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1903"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 141.00823,158.84025 c 0,0.71182 0.17084,0.82255 0.49669,0.82255 0.33851,0 0.51884,-0.2436 0.51884,-0.83204 0,-0.64222 -0.15818,-0.81306 -0.49036,-0.81306 -0.33219,0 -0.52517,0.2436 -0.52517,0.82255 z m 0.2784,0.006 c 0,-0.49353 0.0981,-0.60426 0.23728,-0.60426 0.14869,0 0.22145,0.0886 0.22145,0.5916 0,0.49353 -0.0981,0.61059 -0.23411,0.61059 -0.14553,0 -0.22462,-0.0759 -0.22462,-0.59793 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1905"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 142.86589,159.63116 c 0.25942,0 0.25625,0 0.25625,-0.0506 v -1.27495 c 0.0696,-0.0443 0.1392,-0.0601 0.21197,-0.0601 0.12654,0 0.15502,0.0633 0.15502,0.21512 v 1.17055 c 0.24676,0 0.25625,0 0.25625,-0.0506 v -1.11677 c 0,-0.28473 -0.038,-0.44608 -0.35433,-0.44608 -0.12971,0 -0.28156,0.038 -0.38913,0.0981 -0.0601,-0.0633 -0.14869,-0.0981 -0.28473,-0.0981 -0.174,0 -0.33851,0.0411 -0.47771,0.1044 v 1.50906 c 0.24677,0 0.25626,0 0.25626,-0.0506 v -1.28445 c 0.0728,-0.038 0.14553,-0.0538 0.21513,-0.0538 0.12654,0 0.15185,0.0443 0.15502,0.15819 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1907"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 145.08914,157.37548 c -0.28156,0 -0.62324,0.15819 -0.62324,1.24015 0,0.92063 0.22462,1.05666 0.52517,1.05666 0.23411,0 0.39229,-0.1044 0.39229,-0.22778 0,-0.0538 -0.019,-0.11389 -0.038,-0.15502 -0.057,0.0475 -0.17084,0.0981 -0.29106,0.0981 -0.18665,0 -0.31636,-0.14236 -0.31636,-0.78458 0,-0.8352 0.20247,-0.97757 0.40178,-0.97757 0.0981,0 0.174,0.0506 0.20564,0.0791 0.0221,-0.038 0.0411,-0.0949 0.0411,-0.15502 0,-0.0822 -0.0633,-0.174 -0.29738,-0.174 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1909"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 145.46947,158.84025 c 0,0.71182 0.17084,0.82255 0.49669,0.82255 0.33851,0 0.51884,-0.2436 0.51884,-0.83204 0,-0.64222 -0.15818,-0.81306 -0.49036,-0.81306 -0.33219,0 -0.52517,0.2436 -0.52517,0.82255 z m 0.2784,0.006 c 0,-0.49353 0.0981,-0.60426 0.23728,-0.60426 0.14869,0 0.22145,0.0886 0.22145,0.5916 0,0.49353 -0.0981,0.61059 -0.23411,0.61059 -0.14553,0 -0.22462,-0.0759 -0.22462,-0.59793 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1911"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 146.69756,159.63116 c 0.24993,0 0.25626,0 0.25626,-0.0506 v -1.28128 c 0.0696,-0.038 0.16767,-0.057 0.23411,-0.057 0.15818,0 0.18981,0.0759 0.18981,0.27524 v 1.1136 c 0.25942,0 0.26575,0 0.26575,-0.0506 v -1.13892 c 0,-0.30687 -0.11389,-0.42393 -0.44607,-0.42393 -0.16768,0 -0.37648,0.0538 -0.49986,0.10757 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1913"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 148.02254,158.26763 v 1.36353 h 0.20563 c 0.0475,0 0.0506,-0.0443 0.0506,-0.0506 v -1.31292 h 0.23095 c 0.0506,0 0.0538,-0.0158 0.0538,-0.21829 h -0.28473 v -0.21196 c 0,-0.27208 0.15186,-0.31004 0.31637,-0.31004 0.0696,0 0.14869,0.006 0.22462,0.038 0.019,-0.0443 0.0285,-0.0981 0.0285,-0.14236 0,-0.0791 -0.10124,-0.12971 -0.29422,-0.12971 -0.24044,0 -0.53149,0.0759 -0.53149,0.56629 v 0.18982 h -0.15186 c -0.0664,0 -0.0664,0.0158 -0.0664,0.21829 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1915"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 149.17198,158.0177 c -0.2784,0 -0.55997,0.11389 -0.55997,0.90481 0,0.61691 0.21197,0.74029 0.50619,0.74029 0.23727,0 0.43658,-0.0759 0.43658,-0.174 0,-0.0506 -0.006,-0.12655 -0.0221,-0.174 -0.10756,0.0601 -0.23411,0.0981 -0.36065,0.0981 -0.19298,0 -0.28157,-0.0886 -0.29422,-0.42393 0.15185,0 0.44291,-0.009 0.6612,-0.0506 0.0253,-0.1139 0.0348,-0.27208 0.0348,-0.41128 0,-0.34167 -0.13603,-0.50935 -0.40178,-0.50935 z m -0.0285,0.22462 c 0.13603,0 0.17716,0.0854 0.18032,0.3132 0,0.0601 -0.003,0.13288 -0.0158,0.18982 -0.11073,0.0316 -0.30688,0.038 -0.4271,0.0348 0.019,-0.42709 0.13288,-0.53782 0.26259,-0.53782 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1917"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 149.79942,159.63116 c 0.25625,0 0.25942,0 0.25942,-0.0506 l 0.003,-1.24332 c 0.0601,-0.0506 0.1392,-0.0728 0.2088,-0.0728 0.0538,0 0.1044,0.0127 0.15186,0.038 0.0221,-0.0538 0.0285,-0.11705 0.0285,-0.15185 0,-0.0854 -0.0601,-0.13288 -0.22145,-0.13288 -0.15502,0 -0.30688,0.057 -0.43026,0.14237 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1919"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 151.08129,158.0177 c -0.2784,0 -0.55997,0.11389 -0.55997,0.90481 0,0.61691 0.21197,0.74029 0.50619,0.74029 0.23727,0 0.43658,-0.0759 0.43658,-0.174 0,-0.0506 -0.006,-0.12655 -0.0221,-0.174 -0.10757,0.0601 -0.23411,0.0981 -0.36066,0.0981 -0.19298,0 -0.28156,-0.0886 -0.29422,-0.42393 0.15186,0 0.44291,-0.009 0.6612,-0.0506 0.0253,-0.1139 0.0348,-0.27208 0.0348,-0.41128 0,-0.34167 -0.13603,-0.50935 -0.40178,-0.50935 z m -0.0285,0.22462 c 0.13603,0 0.17716,0.0854 0.18033,0.3132 0,0.0601 -0.003,0.13288 -0.0158,0.18982 -0.11073,0.0316 -0.30688,0.038 -0.4271,0.0348 0.019,-0.42709 0.13288,-0.53782 0.26259,-0.53782 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1921"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 151.70873,159.63116 c 0.24993,0 0.25626,0 0.25626,-0.0506 v -1.28128 c 0.0696,-0.038 0.16767,-0.057 0.23411,-0.057 0.15818,0 0.18981,0.0759 0.18981,0.27524 v 1.1136 c 0.25942,0 0.26575,0 0.26575,-0.0506 v -1.13892 c 0,-0.30687 -0.11389,-0.42393 -0.44607,-0.42393 -0.16768,0 -0.37648,0.0538 -0.49986,0.10757 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1923"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 153.70756,158.16007 c 0,-0.0823 -0.11705,-0.14237 -0.26258,-0.14237 -0.26258,0 -0.56946,0.0981 -0.56946,0.85735 0,0.66753 0.17084,0.78775 0.47139,0.78775 0.2088,0 0.35433,-0.0759 0.35433,-0.16135 0,-0.0411 -0.01,-0.0823 -0.0253,-0.1392 -0.0538,0.0348 -0.14869,0.0728 -0.24993,0.0728 -0.19298,0 -0.28157,-0.11389 -0.28157,-0.55997 0,-0.56313 0.16451,-0.62956 0.3132,-0.62956 0.0854,0 0.17084,0.0285 0.22146,0.0569 0.0222,-0.0538 0.0285,-0.10756 0.0285,-0.14236 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1925"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 154.3747,158.0177 c -0.2784,0 -0.55997,0.11389 -0.55997,0.90481 0,0.61691 0.21197,0.74029 0.50619,0.74029 0.23727,0 0.43658,-0.0759 0.43658,-0.174 0,-0.0506 -0.006,-0.12655 -0.0221,-0.174 -0.10756,0.0601 -0.23411,0.0981 -0.36065,0.0981 -0.19298,0 -0.28157,-0.0886 -0.29422,-0.42393 0.15185,0 0.44291,-0.009 0.6612,-0.0506 0.0253,-0.1139 0.0348,-0.27208 0.0348,-0.41128 0,-0.34167 -0.13604,-0.50935 -0.40178,-0.50935 z m -0.0285,0.22462 c 0.13603,0 0.17716,0.0854 0.18032,0.3132 0,0.0601 -0.003,0.13288 -0.0158,0.18982 -0.11073,0.0316 -0.30688,0.038 -0.4271,0.0348 0.019,-0.42709 0.13288,-0.53782 0.26259,-0.53782 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1927"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 155.54075,158.09047 c 0.1044,-0.0633 0.29738,-0.11073 0.46189,-0.11073 0.17717,0 0.2436,0.0854 0.2436,0.21829 0,0.35117 -0.44607,0.66437 -0.72447,1.12942 -0.0601,0.1044 -0.0759,0.13604 -0.0759,0.22462 0,0.0158 0.003,0.0538 0.009,0.0791 h 1.07248 c 0.0538,0 0.0538,-0.0728 0.0538,-0.26574 0,0 -0.20247,0.0221 -0.37331,0.0221 h -0.42393 c 0.30688,-0.47771 0.75295,-0.78458 0.75295,-1.22433 0,-0.27524 -0.1044,-0.43025 -0.46822,-0.43025 -0.30687,0 -0.55997,0.0917 -0.55997,0.16767 0,0.0443 0.003,0.12338 0.0316,0.18982 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1929"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 156.76815,158.69472 c 0,0.62641 0.12338,0.96492 0.55996,0.96492 0.43975,0 0.57895,-0.35433 0.57895,-1.04084 0,-0.59161 -0.15502,-0.88582 -0.56313,-0.88582 -0.40811,0 -0.57578,0.33534 -0.57578,0.96174 z m 0.27523,0.019 c 0,-0.47139 0.0728,-0.75295 0.31321,-0.75295 0.21829,0 0.28156,0.22462 0.28156,0.65487 0,0.56946 -0.0886,0.8099 -0.30371,0.8099 -0.21829,0 -0.29106,-0.18982 -0.29106,-0.71182 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1931"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 158.217,158.05567 c 0,0 0.25625,-0.0538 0.36065,-0.057 l -0.0348,1.38884 c -0.19298,0 -0.45556,0.0127 -0.45556,0.0664 0,0.0506 0.003,0.12655 0.006,0.17716 h 1.08196 c 0.0538,0 0.0538,-0.0791 0.0538,-0.25309 0,0 -0.0854,0.009 -0.1835,0.009 h -0.23411 l 0.0411,-1.63877 c -0.0127,-0.009 -0.0474,-0.0158 -0.0728,-0.0158 -0.10757,0 -0.6011,0.10756 -0.6011,0.15501 0,0.0633 0.0158,0.12339 0.038,0.16768 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1933"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 159.98222,157.39763 c -0.29106,0 -0.54099,0.18033 -0.54099,0.54415 0,0.12654 0.0475,0.24992 0.13288,0.33218 0.0506,0.0601 0.12654,0.11389 0.20563,0.16767 -0.20247,0.12022 -0.36065,0.33535 -0.36065,0.60742 0,0.33535 0.16767,0.60742 0.58844,0.60742 0.37014,0 0.55047,-0.26891 0.55047,-0.60109 0,-0.18665 -0.0664,-0.32269 -0.18665,-0.44607 -0.0475,-0.0506 -0.10757,-0.0981 -0.16768,-0.14553 0.17084,-0.11706 0.34168,-0.2784 0.34168,-0.55364 0,-0.40811 -0.27208,-0.51251 -0.56313,-0.51251 z m 0.18349,1.33189 c 0.0759,0.0664 0.14236,0.1487 0.14236,0.31953 0,0.22462 -0.12338,0.36066 -0.31636,0.36066 -0.20564,0 -0.33219,-0.14553 -0.33219,-0.37331 0,-0.2088 0.14553,-0.36066 0.32586,-0.4524 0.0664,0.0474 0.12971,0.0949 0.18033,0.14552 z m -0.14869,-1.08829 c 0.14869,0 0.29105,0.0822 0.29105,0.2784 0,0.174 -0.13287,0.30687 -0.29422,0.41127 -0.0791,-0.0538 -0.14869,-0.1044 -0.18982,-0.14869 -0.0822,-0.0664 -0.12338,-0.14552 -0.12338,-0.25625 0,-0.19931 0.14553,-0.28473 0.31637,-0.28473 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1935"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 160.77936,159.45716 c 0,0.0696 0.019,0.12339 0.0728,0.15502 -0.006,0.0918 -0.0158,0.14869 -0.0886,0.27208 0.0127,0.0538 0.0538,0.0728 0.10124,0.0728 0.0569,0 0.24992,-0.2436 0.24992,-0.47455 0,-0.12971 -0.0633,-0.18982 -0.174,-0.18982 -0.0949,0 -0.16134,0.0728 -0.16134,0.16451 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1937"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 161.93676,158.05567 c 0,0 0.25625,-0.0538 0.36065,-0.057 l -0.0348,1.38884 c -0.19298,0 -0.45556,0.0127 -0.45556,0.0664 0,0.0506 0.003,0.12655 0.006,0.17716 h 1.08196 c 0.0538,0 0.0538,-0.0791 0.0538,-0.25309 0,0 -0.0854,0.009 -0.1835,0.009 h -0.23411 l 0.0411,-1.63877 c -0.0127,-0.009 -0.0474,-0.0158 -0.0728,-0.0158 -0.10757,0 -0.6011,0.10756 -0.6011,0.15501 0,0.0633 0.0158,0.12339 0.038,0.16768 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1939"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 163.70198,157.39763 c -0.29106,0 -0.54099,0.18033 -0.54099,0.54415 0,0.12654 0.0475,0.24992 0.13288,0.33218 0.0506,0.0601 0.12654,0.11389 0.20563,0.16767 -0.20247,0.12022 -0.36065,0.33535 -0.36065,0.60742 0,0.33535 0.16767,0.60742 0.58844,0.60742 0.37014,0 0.55047,-0.26891 0.55047,-0.60109 0,-0.18665 -0.0664,-0.32269 -0.18666,-0.44607 -0.0474,-0.0506 -0.10756,-0.0981 -0.16767,-0.14553 0.17084,-0.11706 0.34168,-0.2784 0.34168,-0.55364 0,-0.40811 -0.27208,-0.51251 -0.56313,-0.51251 z m 0.18349,1.33189 c 0.0759,0.0664 0.14236,0.1487 0.14236,0.31953 0,0.22462 -0.12338,0.36066 -0.31636,0.36066 -0.20564,0 -0.33219,-0.14553 -0.33219,-0.37331 0,-0.2088 0.14553,-0.36066 0.32586,-0.4524 0.0664,0.0474 0.12971,0.0949 0.18033,0.14552 z m -0.14869,-1.08829 c 0.14869,0 0.29105,0.0822 0.29105,0.2784 0,0.174 -0.13287,0.30687 -0.29422,0.41127 -0.0791,-0.0538 -0.14869,-0.1044 -0.18982,-0.14869 -0.0822,-0.0664 -0.12338,-0.14552 -0.12338,-0.25625 0,-0.19931 0.14553,-0.28473 0.31637,-0.28473 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1941"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 165.07174,158.85291 c 0.0538,0 0.0538,-0.0664 0.0538,-0.22462 h -0.59477 c -0.0506,0 -0.0506,0.0633 -0.0506,0.22462 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1943"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 165.45879,158.05567 c 0,0 0.25625,-0.0538 0.36066,-0.057 l -0.0348,1.38884 c -0.19299,0 -0.45557,0.0127 -0.45557,0.0664 0,0.0506 0.003,0.12655 0.006,0.17716 h 1.08196 c 0.0538,0 0.0538,-0.0791 0.0538,-0.25309 0,0 -0.0854,0.009 -0.18349,0.009 h -0.23411 l 0.0411,-1.63877 c -0.0127,-0.009 -0.0474,-0.0158 -0.0728,-0.0158 -0.10757,0 -0.60109,0.10756 -0.60109,0.15501 0,0.0633 0.0158,0.12339 0.038,0.16768 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1945"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 166.96775,159.71342 c -0.0791,0 -0.15502,-0.009 -0.23095,-0.0316 -0.009,0.0443 -0.0221,0.12339 -0.0221,0.174 0,0.0759 0.12971,0.1044 0.28473,0.1044 0.54731,0 0.78775,-0.40811 0.79407,-1.26862 -0.0127,-0.73713 -0.0917,-0.98706 -0.54415,-0.98706 -0.39545,0 -0.60109,0.25309 -0.60109,0.79408 0,0.41444 0.19931,0.63589 0.46189,0.63589 0.20248,0 0.32902,-0.0759 0.4271,-0.22145 -0.0316,0.46822 -0.16451,0.8004 -0.56946,0.8004 z m 0.21829,-0.81622 c -0.174,0 -0.28473,-0.15186 -0.28473,-0.43026 0,-0.35749 0.13604,-0.53466 0.35117,-0.53466 0.24993,0 0.29422,0.24677 0.29422,0.71815 v 0.019 c -0.1044,0.15818 -0.22778,0.22778 -0.36066,0.22778 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1947"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 168.47434,158.51123 c 0,0.91113 0.16134,1.14841 0.56945,1.14841 0.41761,0 0.59793,-0.28789 0.59793,-1.1579 0,-0.85418 -0.15185,-1.1136 -0.56312,-1.1136 -0.40812,0 -0.60426,0.28156 -0.60426,1.12309 z m 0.28789,0.0633 c 0,-0.68335 0.0886,-0.92379 0.31004,-0.92379 0.22778,0 0.29105,0.22462 0.29105,0.85735 0,0.64538 -0.0791,0.88898 -0.30687,0.88898 -0.22462,0 -0.29422,-0.23411 -0.29422,-0.82254 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1949"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 170.64421,158.16007 c 0,-0.0823 -0.11706,-0.14237 -0.26258,-0.14237 -0.26259,0 -0.56946,0.0981 -0.56946,0.85735 0,0.66753 0.17084,0.78775 0.47138,0.78775 0.2088,0 0.35433,-0.0759 0.35433,-0.16135 0,-0.0411 -0.009,-0.0823 -0.0253,-0.1392 -0.0538,0.0348 -0.14869,0.0728 -0.24993,0.0728 -0.19298,0 -0.28156,-0.11389 -0.28156,-0.55997 0,-0.56313 0.16451,-0.62956 0.3132,-0.62956 0.0854,0 0.17084,0.0285 0.22146,0.0569 0.0221,-0.0538 0.0285,-0.10756 0.0285,-0.14236 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1951"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 170.99335,159.19142 c 0,0.28473 0.0348,0.47138 0.30371,0.47138 0.12338,0 0.27207,-0.0253 0.27207,-0.14236 0,-0.0506 -0.009,-0.0918 -0.019,-0.12655 -0.0633,0.0316 -0.11073,0.0475 -0.18349,0.0475 -0.1139,0 -0.1139,-0.1139 -0.1139,-0.24993 v -0.92062 h 0.27208 c 0.0506,0 0.0506,-0.0222 0.0506,-0.22146 h -0.3227 v -0.56946 c -0.21196,0 -0.25941,0 -0.25941,0.0886 v 0.48087 h -0.15819 c -0.0538,0 -0.0569,0.0253 -0.0569,0.22146 h 0.21513 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1953"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 171.66226,158.84025 c 0,0.71182 0.17084,0.82255 0.49669,0.82255 0.33851,0 0.51884,-0.2436 0.51884,-0.83204 0,-0.64222 -0.15818,-0.81306 -0.49036,-0.81306 -0.33219,0 -0.52517,0.2436 -0.52517,0.82255 z m 0.2784,0.006 c 0,-0.49353 0.0981,-0.60426 0.23728,-0.60426 0.14869,0 0.22145,0.0886 0.22145,0.5916 0,0.49353 -0.0981,0.61059 -0.23411,0.61059 -0.14553,0 -0.22462,-0.0759 -0.22462,-0.59793 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1955"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 172.89668,159.56789 c 0.0759,0.0601 0.20247,0.0949 0.37014,0.0949 0.26259,0 0.61059,-0.10756 0.61059,-1.02186 0,-0.46189 -0.13287,-0.62324 -0.38597,-0.62324 -0.14552,0 -0.25309,0.0411 -0.33851,0.11073 v -0.82255 c -0.21196,0 -0.25625,0 -0.25625,0.12022 z m 0.25625,-1.23066 c 0.0664,-0.0601 0.1392,-0.0886 0.22146,-0.0886 0.14553,0 0.21513,0.11073 0.21513,0.44924 0,0.64222 -0.17717,0.73713 -0.2879,0.73713 -0.0728,0 -0.12021,-0.019 -0.14869,-0.0411 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1957"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 174.61711,158.0177 c -0.2784,0 -0.55997,0.11389 -0.55997,0.90481 0,0.61691 0.21197,0.74029 0.50619,0.74029 0.23727,0 0.43658,-0.0759 0.43658,-0.174 0,-0.0506 -0.006,-0.12655 -0.0222,-0.174 -0.10756,0.0601 -0.23411,0.0981 -0.36065,0.0981 -0.19299,0 -0.28157,-0.0886 -0.29422,-0.42393 0.15185,0 0.44291,-0.009 0.6612,-0.0506 0.0253,-0.1139 0.0348,-0.27208 0.0348,-0.41128 0,-0.34167 -0.13604,-0.50935 -0.40178,-0.50935 z m -0.0285,0.22462 c 0.13604,0 0.17717,0.0854 0.18033,0.3132 0,0.0601 -0.003,0.13288 -0.0158,0.18982 -0.11072,0.0316 -0.30687,0.038 -0.42709,0.0348 0.019,-0.42709 0.13287,-0.53782 0.26258,-0.53782 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1959"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 175.24455,159.63116 c 0.25625,0 0.25942,0 0.25942,-0.0506 l 0.003,-1.24332 c 0.0601,-0.0506 0.1392,-0.0728 0.2088,-0.0728 0.0538,0 0.1044,0.0127 0.15186,0.038 0.0221,-0.0538 0.0285,-0.11705 0.0285,-0.15185 0,-0.0854 -0.0601,-0.13288 -0.22146,-0.13288 -0.15501,0 -0.30687,0.057 -0.43025,0.14237 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1961"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 176.61733,158.09047 c 0.1044,-0.0633 0.29738,-0.11073 0.46189,-0.11073 0.17716,0 0.2436,0.0854 0.2436,0.21829 0,0.35117 -0.44607,0.66437 -0.72448,1.12942 -0.0601,0.1044 -0.0759,0.13604 -0.0759,0.22462 0,0.0158 0.003,0.0538 0.009,0.0791 h 1.07248 c 0.0538,0 0.0538,-0.0728 0.0538,-0.26574 0,0 -0.20248,0.0221 -0.37331,0.0221 h -0.42393 c 0.30687,-0.47771 0.75295,-0.78458 0.75295,-1.22433 0,-0.27524 -0.1044,-0.43025 -0.46822,-0.43025 -0.30688,0 -0.55997,0.0917 -0.55997,0.16767 0,0.0443 0.003,0.12338 0.0316,0.18982 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1963"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 177.84472,158.69472 c 0,0.62641 0.12338,0.96492 0.55997,0.96492 0.43974,0 0.57894,-0.35433 0.57894,-1.04084 0,-0.59161 -0.15501,-0.88582 -0.56312,-0.88582 -0.40812,0 -0.57579,0.33534 -0.57579,0.96174 z m 0.27524,0.019 c 0,-0.47139 0.0728,-0.75295 0.3132,-0.75295 0.21829,0 0.28156,0.22462 0.28156,0.65487 0,0.56946 -0.0886,0.8099 -0.30371,0.8099 -0.21829,0 -0.29105,-0.18982 -0.29105,-0.71182 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1965"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 179.29357,158.05567 c 0,0 0.25626,-0.0538 0.36066,-0.057 l -0.0348,1.38884 c -0.19298,0 -0.45556,0.0127 -0.45556,0.0664 0,0.0506 0.003,0.12655 0.006,0.17716 h 1.08197 c 0.0538,0 0.0538,-0.0791 0.0538,-0.25309 0,0 -0.0854,0.009 -0.18349,0.009 h -0.23411 l 0.0411,-1.63877 c -0.0127,-0.009 -0.0475,-0.0158 -0.0728,-0.0158 -0.10756,0 -0.60109,0.10756 -0.60109,0.15501 0,0.0633 0.0158,0.12339 0.038,0.16768 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1967"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 181.05879,157.39763 c -0.29105,0 -0.54098,0.18033 -0.54098,0.54415 0,0.12654 0.0474,0.24992 0.13287,0.33218 0.0506,0.0601 0.12655,0.11389 0.20564,0.16767 -0.20247,0.12022 -0.36066,0.33535 -0.36066,0.60742 0,0.33535 0.16768,0.60742 0.58844,0.60742 0.37015,0 0.55048,-0.26891 0.55048,-0.60109 0,-0.18665 -0.0664,-0.32269 -0.18666,-0.44607 -0.0474,-0.0506 -0.10756,-0.0981 -0.16767,-0.14553 0.17084,-0.11706 0.34167,-0.2784 0.34167,-0.55364 0,-0.40811 -0.27207,-0.51251 -0.56313,-0.51251 z m 0.18349,1.33189 c 0.0759,0.0664 0.14237,0.1487 0.14237,0.31953 0,0.22462 -0.12338,0.36066 -0.31637,0.36066 -0.20563,0 -0.33218,-0.14553 -0.33218,-0.37331 0,-0.2088 0.14553,-0.36066 0.32586,-0.4524 0.0664,0.0474 0.12971,0.0949 0.18032,0.14552 z m -0.14869,-1.08829 c 0.14869,0 0.29106,0.0822 0.29106,0.2784 0,0.174 -0.13287,0.30687 -0.29422,0.41127 -0.0791,-0.0538 -0.14869,-0.1044 -0.18982,-0.14869 -0.0822,-0.0664 -0.12338,-0.14552 -0.12338,-0.25625 0,-0.19931 0.14553,-0.28473 0.31636,-0.28473 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1969"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 181.85593,159.45716 c 0,0.0696 0.019,0.12339 0.0728,0.15502 -0.006,0.0918 -0.0158,0.14869 -0.0886,0.27208 0.0127,0.0538 0.0538,0.0728 0.10124,0.0728 0.057,0 0.24993,-0.2436 0.24993,-0.47455 0,-0.12971 -0.0633,-0.18982 -0.174,-0.18982 -0.0949,0 -0.16135,0.0728 -0.16135,0.16451 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1971"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 182.93108,159.63116 h 0.39862 c 0.32902,0 0.60109,-0.22145 0.60109,-0.75294 0,-0.37964 -0.22778,-0.45241 -0.37331,-0.4619 0.13604,-0.019 0.30371,-0.16134 0.30371,-0.50934 0,-0.40811 -0.2784,-0.49037 -0.53149,-0.49037 h -0.3132 c -0.0664,0 -0.0854,0.0222 -0.0854,0.0601 z m 0.26258,-1.98677 h 0.15186 c 0.12022,0 0.23411,0.0538 0.23411,0.3132 0,0.24993 -0.0981,0.36382 -0.23095,0.36382 h -0.15502 z m 0,0.89848 h 0.14553 c 0.17084,0 0.29106,0.0316 0.29106,0.35749 0,0.36066 -0.13604,0.50619 -0.29422,0.50619 h -0.14237 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1973"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 184.64563,158.0177 c -0.2784,0 -0.55997,0.11389 -0.55997,0.90481 0,0.61691 0.21197,0.74029 0.50619,0.74029 0.23727,0 0.43658,-0.0759 0.43658,-0.174 0,-0.0506 -0.006,-0.12655 -0.0221,-0.174 -0.10757,0.0601 -0.23411,0.0981 -0.36066,0.0981 -0.19298,0 -0.28157,-0.0886 -0.29422,-0.42393 0.15186,0 0.44291,-0.009 0.6612,-0.0506 0.0253,-0.1139 0.0348,-0.27208 0.0348,-0.41128 0,-0.34167 -0.13603,-0.50935 -0.40178,-0.50935 z m -0.0285,0.22462 c 0.13603,0 0.17716,0.0854 0.18032,0.3132 0,0.0601 -0.003,0.13288 -0.0158,0.18982 -0.11073,0.0316 -0.30688,0.038 -0.4271,0.0348 0.019,-0.42709 0.13288,-0.53782 0.26259,-0.53782 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1975"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 185.27307,159.63116 c 0.25626,0 0.25942,0 0.25942,-0.0506 l 0.003,-1.24332 c 0.0601,-0.0506 0.1392,-0.0728 0.2088,-0.0728 0.0538,0 0.1044,0.0127 0.15186,0.038 0.0222,-0.0538 0.0285,-0.11705 0.0285,-0.15185 0,-0.0854 -0.0601,-0.13288 -0.22145,-0.13288 -0.15502,0 -0.30688,0.057 -0.43026,0.14237 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1977"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 186.36665,157.30588 c -0.20563,0 -0.25625,0 -0.25625,0.11706 v 2.20822 c 0.25625,0 0.25625,0 0.25625,-0.0506 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path1979"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#a00000;fill-opacity:1;stroke-width:0.02372737px"
+               d="m 188.14012,159.63116 c 0.24993,0 0.25626,0 0.25626,-0.0506 v -1.28128 c 0.0696,-0.038 0.16767,-0.057 0.23411,-0.057 0.15818,0 0.18982,0.0759 0.18982,0.27524 v 1.1136 c 0.25942,0 0.26575,0 0.26575,-0.0506 v -1.13892 c 0,-0.30687 -0.1139,-0.42393 -0.44608,-0.42393 -0.16767,0 -0.37647,0.0538 -0.49986,0.10757 z" />
+          </g>
+          <g
+             id="g27740-5"
+             transform="matrix(0.20459945,0,0,0.20459945,173.99435,134.11683)">
+            <g
+               id="g28309-4">
+              <path
+                 transform="matrix(0.04785074,0,0,0.04785074,-118.05951,92.995687)"
+                 sodipodi:nodetypes="ssccsssscccsscsccccc"
+                 inkscape:connector-curvature="0"
+                 id="path3544-2-8"
+                 d="m 3820.6562,472.26172 c -40.3422,0 -73.1445,32.3975 -73.1445,72.32812 0,30.32091 18.9212,56.28015 45.6875,67.02735 l 1.8555,-5.95508 c -24.2644,-9.91834 -41.2988,-33.51066 -41.2988,-61.07227 0,-36.51604 29.8935,-66.08398 66.9003,-66.08398 37.0069,0 66.8985,29.56794 66.8985,66.08398 0,24.66524 -13.6587,46.14338 -33.918,57.50977 -2.3907,1.34129 -4.8745,2.53952 -7.4355,3.58594 l 1.8535,5.96875 c 2.9828,-1.19355 5.8704,-2.56971 8.6426,-4.125 22.1465,-12.42531 37.1035,-35.96788 37.1035,-62.93946 0,-39.93062 -32.8023,-72.32812 -73.1446,-72.32812 z m 7.5,137.99414 c -2.4618,0.2706 -4.962,0.41602 -7.5,0.41602 -2.5028,0 -4.9696,-0.14473 -7.4003,-0.40821 l -1.8633,6.05469 c 3.0363,0.3807 6.1241,0.59767 9.2636,0.59766 3.182,0 6.3161,-0.2044 9.3926,-0.59571 z"
+                 style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:normal;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.98000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#3465a4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6.24451828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+              <path
+                 inkscape:connector-curvature="0"
+                 id="path3548-6-1"
+                 transform="matrix(0.04785074,0,0,0.04785074,-118.05951,92.995687)"
+                 d="m 3811.3887,563.87891 -30.2735,97.13867 h 78.9297 l -30.1523,-97.125 c -2.8017,1.31925 -5.9315,2.05859 -9.2364,2.05859 -3.3169,0 -6.4581,-0.74396 -9.2675,-2.07226 z m 9.2675,11.66406 19.3165,61.84961 h -38.4082 z"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#a00000;stroke-width:6.34386444px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+              <path
+                 inkscape:connector-curvature="0"
+                 d="m 65.796938,119.04618 c 0,0.56924 -0.463484,1.03071 -1.035215,1.03071 -0.571734,0 -1.035215,-0.46147 -1.035215,-1.03071 0,-0.56925 0.463481,-1.03071 1.035215,-1.03071 0.571731,0 1.035215,0.46146 1.035215,1.03071 z"
+                 id="path3556-1-2"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;fill-opacity:1;stroke:#a00000;stroke-width:0.3038334;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            </g>
+            <path
+               inkscape:connector-curvature="0"
+               d="m 66.957088,119.05451 c 0,1.21246 -0.982899,2.19537 -2.195365,2.19537 -1.212466,0 -2.195365,-0.98291 -2.195365,-2.19537 0,-1.21246 0.982899,-2.19537 2.195365,-2.19537 1.212466,0 2.195365,0.98291 2.195365,2.19537 z"
+               id="path3552-8-8"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';display:inline;fill:none;fill-opacity:1;stroke:#3465a4;stroke-width:0.29880485;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+          </g>
         </g>
       </g>
     </g>
@@ -1195,7 +1217,7 @@
      id="layer9"
      inkscape:label="cc">
     <g
-       id="layer1-3"
+       id="cclogo"
        inkscape:label="cclogo"
        transform="matrix(1.9531249,0,0,1.9531249,782.8125,525.13783)"
        inkscape:transform-center-x="-83.035751"
@@ -1204,7 +1226,7 @@
          inkscape:export-ydpi="300.23013"
          inkscape:export-xdpi="300.23013"
          inkscape:export-filename="/mnt/hgfs/Bov/Documents/Work/2007/cc/identity/srr buttons/big/by-sa.png"
-         id="cclogo"
+         id="g1146"
          transform="matrix(0.9937807,0,0,0.9936694,-177.69409,-74.436409)"
          inkscape:label="#g287">
         <path
