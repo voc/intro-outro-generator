@@ -509,8 +509,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497476"
-     inkscape:cx="1076.5888"
-     inkscape:cy="797.22332"
+     inkscape:cx="635.15215"
+     inkscape:cy="833.58881"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -768,9 +768,7 @@
         <g
            id="text1124-5"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.16364908px;line-height:100%;font-family:Galette;-inkscape-font-specification:'Galette Bold';letter-spacing:0px;word-spacing:0px;fill:#3465a4;fill-opacity:1;stroke:none;stroke-width:0.02372737px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           aria-label="0x2B || !0x2B
-18-19 Oct. 2018
-Berl   n">
+           aria-label="0x2B || !0x2B 18-19 Oct. 2018 Berl   n">
           <path
              id="path1435"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:'Yanone Kaffeesatz';-inkscape-font-specification:'Yanone Kaffeesatz';text-align:end;letter-spacing:0px;text-anchor:end;fill:#3465a4;fill-opacity:1;stroke-width:0.02372737px"
@@ -953,7 +951,8 @@ Berl   n">
   <g
      inkscape:groupmode="layer"
      id="layer1"
-     inkscape:label="title">
+     inkscape:label="title"
+     style="display:none">
     <g
        style="display:inline"
        id="g3732-6"
@@ -1081,7 +1080,8 @@ Berl   n">
   <g
      inkscape:groupmode="layer"
      id="layer6"
-     inkscape:label="subtitle">
+     inkscape:label="subtitle"
+     style="display:none">
     <g
        style="display:inline"
        id="g1750"
