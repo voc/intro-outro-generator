@@ -168,13 +168,13 @@ def enqueue_job(event):
                                 jobpath=work_doc,
                                 comp=event_id,
                                 locationpath=intermediate_clip)
-            
+
             if platform.system() == 'Windows':
                 run('C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2018/Support\ Files/aerender.exe -project {jobpath} -comp {comp} -output {locationpath}',
                                 jobpath=work_doc,
                                 comp=event_id,
                                 locationpath=intermediate_clip)
-        
+
         else:
             with open(args.project+'intro.jsx', 'r') as fp:
                     scriptstr = fp.read()
@@ -187,7 +187,7 @@ def enqueue_job(event):
                     fp.write(scriptstr)
 
             copyfile(args.project+'intro.aep',work_doc)
-            
+
             if platform.system() == 'Darwin':
                 copyfile(args.project+'intro.scpt',ascript_doc)
                 run('osascript {ascript_path} {jobpath} {scriptpath}',
@@ -200,14 +200,14 @@ def enqueue_job(event):
                                 locationpath=intermediate_clip)
 
             if platform.system() == 'Windows':
-                run_once('C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2018/Support\ Files/AfterFX.exe -noui {jobpath}', 
+                run_once('C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2018/Support\ Files/AfterFX.exe -noui {jobpath}',
                                 jobpath=work_doc)
                 time.sleep(15)
 
                 run_once('C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2018/Support\ Files/AfterFX.exe -noui -r {scriptpath}',
                                 scriptpath=script_doc)
                 time.sleep(5)
-                
+
                 run('C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2018/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -output {locationpath}',
                                 jobpath=work_doc,
                                 locationpath=intermediate_clip)
@@ -219,7 +219,7 @@ def finalize_job(job_id, event):
         intermediate_clip = os.path.join(tempdir.name, event_id+'.mov')
         final_clip = os.path.join(os.path.dirname(args.project), event_id+'.ts')
 
-        run('ffmpeg -y -hide_banner -loglevel error -i {input} -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 0:1 -shortest -f mpegts {output}',
+        run('ffmpeg -y -hide_banner -loglevel error -i {input} -f lavfi -i anullsrc -ar 48000 -ac 2 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:a -map 1:a -map 1:a -map 1:a -shortest -f mpegts {output}',
         #run('ffmpeg -y -hide_banner -loglevel error -i "{input}" -ar 48000 -ac 1 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:0 -c:a copy -map 2:0 -c:a copy -shortest -f mpegts "{output}"',
                 input=intermediate_clip,
                 output=final_clip)
@@ -265,7 +265,7 @@ for event in events:
                 intermediate_clip = os.path.join(tempdir.name, event_id+'.mov')
                 final_clip = os.path.join(os.path.dirname(args.project), event_id+'.mov')
                 copyfile(intermediate_clip, final_clip)
-                event_print(event, "copied intermediate clip to "+final_clip)      
+                event_print(event, "copied intermediate clip to "+final_clip)
 
 print('all done, cleaning up '+tempdir.name)
 tempdir.cleanup()
