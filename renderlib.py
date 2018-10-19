@@ -7,7 +7,6 @@ import glob
 import math
 import shutil
 import errno
-import shutil
 from lxml import etree
 from xml.sax.saxutils import escape as xmlescape
 import cssutils
@@ -17,7 +16,7 @@ from urllib.request import urlopen
 
 # Frames per second. Increasing this renders more frames, the avconf-statements would still need modifications
 fps = 25
-debug = False
+debug = True
 args = None
 
 cssutils.ser.prefs.lineSeparator = ' '
@@ -79,6 +78,9 @@ def rendertask(task):
 	if debug:
 		print("generating {0} from {1}".format(task.outfile, task.infile))
 
+	if not args.skip_frames and not 'only_rerender_frames_after' in task.parameters:
+	    shutil.rmtree(os.path.join(task.workdir, '.frames'))
+
 	# make sure a .frames-directory exists in out workdir
 	ensurePathExists(os.path.join(task.workdir, '.frames'))
 
@@ -106,13 +108,13 @@ def rendertask(task):
 		# skip first n frames, to speed up rerendering during debugging
 		if 'only_rerender_frames_after' in task.parameters:
 			skip_rendering = (frameNr <= task.parameters['only_rerender_frames_after'])
-		
+
 		if args.skip_frames:
 			skip_rendering = (frameNr <= args.skip_frames)
-		
+
 		if args.only_frame:
 			skip_rendering = (frameNr != args.only_frame)
-		
+
 		# print a line for each and every frame generated
 		if debug and not skip_rendering:
 			print("frameNr {0:3d} => {1}".format(frameNr, frame))
@@ -127,7 +129,7 @@ def rendertask(task):
 
 			frameNr += 1
 			continue
-		else:
+		elif not skip_rendering:
 			cache[frame] = frameNr
 
 		# apply the replace-pairs to the input text, by finding the specified xml-elements by thier id and modify thier css-parameter the correct value
@@ -151,14 +153,14 @@ def rendertask(task):
 			with open(os.path.join(task.workdir, '.gen.svg'), 'w') as fp:
 				# write the generated svg-text into the output-file
 				fp.write( etree.tostring(svg, encoding='unicode') )
-	
+
 			if task.outfile.endswith('.ts') or task.outfile.endswith('.mov'):
 				width = 1920
 				height = 1080
 			else:
 				width = 1024
 				height = 576
-	
+
 			# invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
 			cmd = 'cd {0} && inkscape --export-background=white --export-background-opacity=0 --export-width={2} --export-height={3} --export-png=$(pwd)/.frames/{1:04d}.png $(pwd)/.gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr, width, height)
 			errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
