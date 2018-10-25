@@ -79,7 +79,8 @@ def rendertask(task):
 		print("generating {0} from {1}".format(task.outfile, task.infile))
 
 	if not args.skip_frames and not 'only_rerender_frames_after' in task.parameters:
-	    shutil.rmtree(os.path.join(task.workdir, '.frames'))
+            if os.path.isdir(os.path.join(task.workdir, '.frames')):
+                shutil.rmtree(os.path.join(task.workdir, '.frames'))
 
 	# make sure a .frames-directory exists in out workdir
 	ensurePathExists(os.path.join(task.workdir, '.frames'))
