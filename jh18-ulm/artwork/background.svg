@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b3c8c8;
+        stroke: #e6e6e6;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #ea690b;
+      }
+
+      .cls-4 {
+        fill: #0a0a0a;
+      }
+    </style>
+  </defs>
+  <title>background-alpaka</title>
+  <g id="Background">
+    <g>
+      <g>
+        <g>
+          <polygon id="polygon2229" class="cls-1" points="280 97.5 110 -2.5 110 -197.5 280 -97.5 280 97.5"/>
+          <polygon id="polygon2233" class="cls-1" points="-60 97.5 -60 -97.5 110 -197.5 110 -2.5 -60 97.5"/>
+        </g>
+        <polygon id="polygon2301" class="cls-1" points="110 197.5 -60 97.5 110 -2.5 280 97.5 110 197.5"/>
+      </g>
+      <g>
+        <g>
+          <polygon id="polygon2229-2" data-name="polygon2229" class="cls-1" points="620 97.5 450 -2.5 450 -197.5 620 -97.5 620 97.5"/>
+          <polygon id="polygon2233-2" data-name="polygon2233" class="cls-1" points="280 97.5 280 -97.5 450 -197.5 450 -2.5 280 97.5"/>
+        </g>
+        <polygon id="polygon2301-2" data-name="polygon2301" class="cls-1" points="450 197.5 280 97.5 450 -2.5 620 97.5 450 197.5"/>
+      </g>
+      <g>
+        <g>
+          <polygon id="polygon2229-3" data-name="polygon2229" class="cls-1" points="960 97.5 790 -2.5 790 -197.5 960 -97.5 960 97.5"/>
+          <polygon id="polygon2233-3" data-name="polygon2233" class="cls-1" points="620 97.5 620 -97.5 790 -197.5 790 -2.5 620 97.5"/>
+        </g>
+        <polygon id="polygon2301-3" data-name="polygon2301" class="cls-1" points="790 197.5 620 97.5 790 -2.5 960 97.5 790 197.5"/>
+      </g>
+      <g>
+        <g>
+          <polygon id="polygon2229-4" data-name="polygon2229" class="cls-1" points="1300 97.5 1130 -2.5 1130 -197.5 1300 -97.5 1300 97.5"/>
+          <polygon id="polygon2233-4" data-name="polygon2233" class="cls-1" points="960 97.5 960 -97.5 1130 -197.5 1130 -2.5 960 97.5"/>
+        </g>
+        <polygon id="polygon2301-4" data-name="polygon2301" class="cls-1" points="1130 197.5 960 97.5 1130 -2.5 1300 97.5 1130 197.5"/>
+      </g>
+      <g>
+        <g>
+          <polygon id="polygon2229-5" data-name="polygon2229" class="cls-1" points="1640 97.5 1470 -2.5 1470 -197.5 1640 -97.5 1640 97.5"/>
+          <polygon id="polygon2233-5" data-name="polygon2233" class="cls-1" points="1300 97.5 1300 -97.5 1470 -197.5 1470 -2.5 1300 97.5"/>
+        </g>
+        <polygon id="polygon2301-5" data-name="polygon2301" class="cls-1" points="1470 197.5 1300 97.5 1470 -2.5 1640 97.5 1470 197.5"/>
+      </g>
+      <g>
+        <g>
+          <polygon id="polygon2229-6" data-name="polygon2229" class="cls-1" points="1980 97.5 1810 -2.5 1810 -197.5 1980 -97.5 1980 97.5"/>
+          <polygon id="polygon2233-6" data-name="polygon2233" class="cls-1" points="1640 97.5 1640 -97.5 1810 -197.5 1810 -2.5 1640 97.5"/>
+        </g>
+        <polygon id="polygon2301-6" data-name="polygon2301" class="cls-1" points="1810 197.5 1640 97.5 1810 -2.5 1980 97.5 1810 197.5"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-7" data-name="polygon2229" class="cls-1" points="280 687.5 110 587.5 110 392.5 280 492.5 280 687.5"/>
+        <polygon id="polygon2233-7" data-name="polygon2233" class="cls-1" points="-60 687.5 -60 492.5 110 392.5 110 587.5 -60 687.5"/>
+      </g>
+      <polygon id="polygon2301-7" data-name="polygon2301" class="cls-1" points="110 787.5 -60 687.5 110 587.5 280 687.5 110 787.5"/>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-8" data-name="polygon2229" class="cls-1" points="620 687.5 450 587.5 450 392.5 620 492.5 620 687.5"/>
+        <polygon id="polygon2233-8" data-name="polygon2233" class="cls-1" points="280 687.5 280 492.5 450 392.5 450 587.5 280 687.5"/>
+      </g>
+      <polygon id="polygon2301-8" data-name="polygon2301" class="cls-1" points="450 787.5 280 687.5 450 587.5 620 687.5 450 787.5"/>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-9" data-name="polygon2229" class="cls-1" points="960 687.5 790 587.5 790 392.5 960 492.5 960 687.5"/>
+        <polygon id="polygon2233-9" data-name="polygon2233" class="cls-1" points="620 687.5 620 492.5 790 392.5 790 587.5 620 687.5"/>
+      </g>
+      <polygon id="polygon2301-9" data-name="polygon2301" class="cls-1" points="790 787.5 620 687.5 790 587.5 960 687.5 790 787.5"/>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-10" data-name="polygon2229" class="cls-1" points="1300 687.5 1130 587.5 1130 392.5 1300 492.5 1300 687.5"/>
+        <polygon id="polygon2233-10" data-name="polygon2233" class="cls-1" points="960 687.5 960 492.5 1130 392.5 1130 587.5 960 687.5"/>
+      </g>
+      <polygon id="polygon2301-10" data-name="polygon2301" class="cls-1" points="1130 787.5 960 687.5 1130 587.5 1300 687.5 1130 787.5"/>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-11" data-name="polygon2229" class="cls-1" points="1640 687.5 1470 587.5 1470 392.5 1640 492.5 1640 687.5"/>
+        <polygon id="polygon2233-11" data-name="polygon2233" class="cls-1" points="1300 687.5 1300 492.5 1470 392.5 1470 587.5 1300 687.5"/>
+      </g>
+      <polygon id="polygon2301-11" data-name="polygon2301" class="cls-1" points="1470 787.5 1300 687.5 1470 587.5 1640 687.5 1470 787.5"/>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-12" data-name="polygon2229" class="cls-1" points="1980 687.5 1810 587.5 1810 392.5 1980 492.5 1980 687.5"/>
+        <polygon id="polygon2233-12" data-name="polygon2233" class="cls-1" points="1640 687.5 1640 492.5 1810 392.5 1810 587.5 1640 687.5"/>
+      </g>
+      <polygon id="polygon2301-12" data-name="polygon2301" class="cls-1" points="1810 787.5 1640 687.5 1810 587.5 1980 687.5 1810 787.5"/>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-13" data-name="polygon2229" class="cls-1" points="280 1277.5 110 1177.5 110 982.5 280 1082.5 280 1277.5"/>
+        <polygon id="polygon2233-13" data-name="polygon2233" class="cls-1" points="-60 1277.5 -60 1082.5 110 982.5 110 1177.5 -60 1277.5"/>
+      </g>
+      <g>
+        <polygon id="polygon2229-14" data-name="polygon2229" class="cls-1" points="620 1277.5 450 1177.5 450 982.5 620 1082.5 620 1277.5"/>
+        <polygon id="polygon2233-14" data-name="polygon2233" class="cls-1" points="280 1277.5 280 1082.5 450 982.5 450 1177.5 280 1277.5"/>
+      </g>
+      <g>
+        <polygon id="polygon2229-15" data-name="polygon2229" class="cls-1" points="960 1277.5 790 1177.5 790 982.5 960 1082.5 960 1277.5"/>
+        <polygon id="polygon2233-15" data-name="polygon2233" class="cls-1" points="620 1277.5 620 1082.5 790 982.5 790 1177.5 620 1277.5"/>
+      </g>
+      <g>
+        <polygon id="polygon2229-16" data-name="polygon2229" class="cls-1" points="1300 1277.5 1130 1177.5 1130 982.5 1300 1082.5 1300 1277.5"/>
+        <polygon id="polygon2233-16" data-name="polygon2233" class="cls-1" points="960 1277.5 960 1082.5 1130 982.5 1130 1177.5 960 1277.5"/>
+      </g>
+      <g>
+        <polygon id="polygon2229-17" data-name="polygon2229" class="cls-1" points="1640 1277.5 1470 1177.5 1470 982.5 1640 1082.5 1640 1277.5"/>
+        <polygon id="polygon2233-17" data-name="polygon2233" class="cls-1" points="1300 1277.5 1300 1082.5 1470 982.5 1470 1177.5 1300 1277.5"/>
+      </g>
+      <g>
+        <polygon id="polygon2229-18" data-name="polygon2229" class="cls-1" points="1980 1277.5 1810 1177.5 1810 982.5 1980 1082.5 1980 1277.5"/>
+        <polygon id="polygon2233-18" data-name="polygon2233" class="cls-1" points="1640 1277.5 1640 1082.5 1810 982.5 1810 1177.5 1640 1277.5"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-19" data-name="polygon2229" class="cls-1" points="450 392.5 280 292.5 280 97.5 450 197.5 450 392.5"/>
+        <polygon id="polygon2233-19" data-name="polygon2233" class="cls-1" points="110 392.5 110 197.5 280 97.5 280 292.5 110 392.5"/>
+      </g>
+      <polygon id="polygon2301-13" data-name="polygon2301" class="cls-1" points="280 492.5 110 392.5 280 292.5 450 392.5 280 492.5"/>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-20" data-name="polygon2229" class="cls-1" points="790 392.5 620 292.5 620 97.5 790 197.5 790 392.5"/>
+        <polygon id="polygon2233-20" data-name="polygon2233" class="cls-1" points="450 392.5 450 197.5 620 97.5 620 292.5 450 392.5"/>
+      </g>
+      <polygon id="polygon2301-14" data-name="polygon2301" class="cls-1" points="620 492.5 450 392.5 620 292.5 790 392.5 620 492.5"/>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-21" data-name="polygon2229" class="cls-1" points="1129.99 392.5 960 292.5 960 97.5 1129.99 197.5 1129.99 392.5"/>
+        <polygon id="polygon2233-21" data-name="polygon2233" class="cls-1" points="790 392.5 790 197.5 960 97.5 960 292.5 790 392.5"/>
+      </g>
+      <polygon id="polygon2301-15" data-name="polygon2301" class="cls-1" points="960 492.5 790 392.5 960 292.5 1129.99 392.5 960 492.5"/>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-22" data-name="polygon2229" class="cls-1" points="1469.99 392.5 1299.99 292.5 1299.99 97.5 1469.99 197.5 1469.99 392.5"/>
+        <polygon id="polygon2233-22" data-name="polygon2233" class="cls-1" points="1129.99 392.5 1129.99 197.5 1299.99 97.5 1299.99 292.5 1129.99 392.5"/>
+      </g>
+      <polygon id="polygon2301-16" data-name="polygon2301" class="cls-1" points="1299.99 492.5 1129.99 392.5 1299.99 292.5 1469.99 392.5 1299.99 492.5"/>
+    </g>
+    <g>
+      <g>
+        <polygon id="polygon2229-23" data-name="polygon2229" class="cls-1" points="1809.99 392.5 1639.99 292.5 1639.99 97.5 1809.99 197.5 1809.99 392.5"/>
+        <polygon id="polygon2233-23" data-name="polygon2233" class="cls-1" points="1469.99 392.5 1469.99 197.5 1639.99 97.5 1639.99 292.5 1469.99 392.5"/>
+      </g>
+      <polygon id="polygon2301-17" data-name="polygon2301" class="cls-1" points="1639.99 492.5 1469.99 392.5 1639.99 292.5 1809.99 392.5 1639.99 492.5"/>
+    </g>
+    <g>
+      <polygon id="polygon2233-24" data-name="polygon2233" class="cls-1" points="1809.99 392.5 1809.99 197.5 1979.99 97.5 1979.99 292.5 1809.99 392.5"/>
+      <polygon id="polygon2301-18" data-name="polygon2301" class="cls-1" points="1979.99 492.5 1809.99 392.5 1979.99 292.5 2149.99 392.5 1979.99 492.5"/>
+    </g>
+    <g>
+      <polygon id="polygon2229-24" data-name="polygon2229" class="cls-1" points="110 392.5 -60 292.5 -60 97.5 110 197.5 110 392.5"/>
+      <polygon id="polygon2301-19" data-name="polygon2301" class="cls-1" points="-60 492.5 -230 392.5 -60 292.5 110 392.5 -60 492.5"/>
+    </g>
+    <g>
+      <g>
+        <g>
+          <polygon id="polygon2229-25" data-name="polygon2229" class="cls-1" points="450 982.5 280 882.5 280 687.5 450 787.5 450 982.5"/>
+          <polygon id="polygon2233-25" data-name="polygon2233" class="cls-1" points="110 982.5 110 787.5 280 687.5 280 882.5 110 982.5"/>
+        </g>
+        <polygon id="polygon2301-20" data-name="polygon2301" class="cls-1" points="280 1082.5 110 982.5 280 882.5 450 982.5 280 1082.5"/>
+      </g>
+      <g>
+        <g>
+          <polygon id="polygon2229-26" data-name="polygon2229" class="cls-1" points="790 982.5 620 882.5 620 687.5 790 787.5 790 982.5"/>
+          <polygon id="polygon2233-26" data-name="polygon2233" class="cls-1" points="450 982.5 450 787.5 620 687.5 620 882.5 450 982.5"/>
+        </g>
+        <polygon id="polygon2301-21" data-name="polygon2301" class="cls-1" points="620 1082.5 450 982.5 620 882.5 790 982.5 620 1082.5"/>
+      </g>
+      <g>
+        <g>
+          <polygon id="polygon2229-27" data-name="polygon2229" class="cls-1" points="1130 982.5 960 882.5 960 687.5 1130 787.5 1130 982.5"/>
+          <polygon id="polygon2233-27" data-name="polygon2233" class="cls-1" points="790 982.5 790 787.5 960 687.5 960 882.5 790 982.5"/>
+        </g>
+        <polygon id="polygon2301-22" data-name="polygon2301" class="cls-1" points="960 1082.5 790 982.5 960 882.5 1130 982.5 960 1082.5"/>
+      </g>
+      <g>
+        <g>
+          <polygon id="polygon2229-28" data-name="polygon2229" class="cls-1" points="1470 982.5 1300 882.5 1300 687.5 1470 787.5 1470 982.5"/>
+          <polygon id="polygon2233-28" data-name="polygon2233" class="cls-1" points="1130 982.5 1130 787.5 1300 687.5 1300 882.5 1130 982.5"/>
+        </g>
+        <polygon id="polygon2301-23" data-name="polygon2301" class="cls-1" points="1300 1082.5 1130 982.5 1300 882.5 1470 982.5 1300 1082.5"/>
+      </g>
+      <g>
+        <g>
+          <polygon id="polygon2229-29" data-name="polygon2229" class="cls-1" points="1810 982.5 1640 882.5 1640 687.5 1810 787.5 1810 982.5"/>
+          <polygon id="polygon2233-29" data-name="polygon2233" class="cls-1" points="1470 982.5 1470 787.5 1640 687.5 1640 882.5 1470 982.5"/>
+        </g>
+        <polygon id="polygon2301-24" data-name="polygon2301" class="cls-1" points="1640 1082.5 1470 982.5 1640 882.5 1810 982.5 1640 1082.5"/>
+      </g>
+      <g>
+        <polygon id="polygon2233-30" data-name="polygon2233" class="cls-1" points="1810 982.5 1810 787.5 1980 687.5 1980 882.5 1810 982.5"/>
+        <polygon id="polygon2301-25" data-name="polygon2301" class="cls-1" points="1980 1082.5 1810 982.5 1980 882.5 2150 982.5 1980 1082.5"/>
+      </g>
+      <g>
+        <polygon id="polygon2229-30" data-name="polygon2229" class="cls-1" points="110 982.5 -60 882.5 -60 687.5 110 787.5 110 982.5"/>
+        <polygon id="polygon2301-26" data-name="polygon2301" class="cls-1" points="-60 1082.5 -230 982.5 -60 882.5 110 982.5 -60 1082.5"/>
+      </g>
+    </g>
+  </g>
+  <g id="Alpakas">
+    <g>
+      <polygon class="cls-2" points="1535.99 288.85 1553.33 288.85 1553.33 265.48 1723.77 265.48 1723.77 288.85 1746.88 288.85 1746.88 312.28 1746.88 336.08 1746.88 361.89 1723.77 361.89 1723.77 385.26 1700.66 385.26 1700.66 408.63 1674.63 408.63 1651.1 408.63 1627.58 408.63 1604.05 408.63 1582.22 408.63 1582.22 385.26 1559.11 385.26 1559.11 361.89 1535.99 361.89 1535.99 336.08 1535.99 312.28 1535.99 288.85"/>
+      <path class="cls-3" d="M1536,336.08V288.85h17.33V265.48h170.44v23.37h23.11v73h-23.11v23.37h-23.11v23.37H1582.22V385.26h-23.11V361.89H1536ZM1700.66,172v23.37h-26v23.37h-69.33V195.37h-23.11V172H1536v23.37h-26V385.26h26v23.37h23.11V432h164.66V408.63h23.11V385.26H1770V195.37h-23.12V172Z"/>
+      <rect class="cls-4" x="1562" y="310.3" width="20.22" height="25.3"/>
+      <polygon class="cls-4" points="1674.66 385.26 1674.66 358.97 1674.66 335.6 1651.55 335.6 1651.55 358.97 1628.44 358.97 1628.44 335.6 1605.33 335.6 1605.33 358.97 1605.33 385.26 1674.66 385.26"/>
+      <rect class="cls-4" x="1697.77" y="307.37" width="20.22" height="25.3"/>
+    </g>
+  </g>
+</svg>
