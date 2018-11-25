@@ -4,6 +4,7 @@ import subprocess
 import renderlib
 import argparse
 import tempfile
+import shutil
 import shlex
 import time
 import sys
@@ -172,6 +173,9 @@ def finalize_job(job_id, event):
 	event_id = str(event['id'])
 	intermediate_clip = os.path.join(tempdir.name, event_id+'.mov')
 	final_clip = os.path.join(os.path.dirname(args.motn), event_id+'.ts')
+	copy_clip = os.path.join(os.path.dirname(args.motn), event_id+'.mov')
+
+	shutil.copy(intermediate_clip, copy_clip)
 
 	run('ffmpeg -y -hide_banner -loglevel error -i "{input}" -f lavfi -i anullsrc -ar 48000 -ac 2 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:a -map 1:a -map 1:a -map 1:a -shortest -f mpegts "{output}"',
 		input=intermediate_clip,
