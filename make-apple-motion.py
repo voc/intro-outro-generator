@@ -177,7 +177,7 @@ def finalize_job(job_id, event):
 
 	shutil.copy(intermediate_clip, copy_clip)
 
-	run('ffmpeg -y -hide_banner -loglevel error -i "{input}" -f lavfi -i anullsrc -ar 48000 -ac 2 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:a -map 1:a -map 1:a -map 1:a -shortest -f mpegts "{output}"',
+	run('ffmpeg -y -hide_banner -loglevel error -i "{input}" -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 0:a -map 0:a -map 0:a -map 0:a -shortest -f mpegts "{output}"',
 		input=intermediate_clip,
 		output=final_clip)
 
