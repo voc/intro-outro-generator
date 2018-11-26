@@ -40,6 +40,11 @@ parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, hel
 	Usage: ./make.py yourproject/ --id 4711 0815 4223 1337
 	''')
 
+parser.add_argument('--exclude-id', dest='exclude_ids', nargs='+', action="store", type=int, help='''
+	Do not render the given ID(s) from your projects schedule.
+	Usage: ./make.py yourproject/ --exclude-id 1 8 15 16 23 42
+	''')
+
 args = parser.parse_args()
 
 def headline(str):
@@ -187,11 +192,13 @@ def finalize_job(job_id, event):
 
 active_jobs = []
 
-print("enqueuing {} jobs into compressor".format(len(events)))
-for event in events:
-	if args.ids and event['id'] not in args.ids:
-		continue
+filtered_events = events
+filtered_events = filter(lambda event: not args.ids or event['id'] in args.ids, filtered_events)
+filtered_events = filter(lambda event: not args.exclude_ids or event['id'] not in args.exclude_ids, filtered_events)
+filtered_events = list(filtered_events)
 
+print("enqueuing {} jobs into compressor".format(len(filtered_events)))
+for event in filtered_events:
 	job_id = enqueue_job(event)
 	if not job_id:
 		event_print(event, "job was not enqueued successfully, skipping postprocessing")
