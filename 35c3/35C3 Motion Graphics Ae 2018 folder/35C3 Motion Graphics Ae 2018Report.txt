@@ -1,0 +1,58 @@
+Report created: 
+	19.12.2018	13:33:01
+
+Project name: 35C3 Motion Graphics Ae 2018.aep
+
+Source files collected to: 
+	Y:\Bearbeitungsablage\schosch\35C3\35C3 Motion Graphics Ae 2018 folder
+
+Source files collected: All
+
+Collected comps:  
+	outro
+	35C3_Logo-mit-Verlauf
+	intro
+	creative commons
+	recorded by
+	more talks
+	loop
+	info
+	backgroundloop
+	
+Number of collected files:  16
+
+Size of collected files:  49,1 MB
+
+Collected source files: 
+	C:\Users\User\Documents\Adobe\After Effects CC 2019\User Libraries\4738f755-ff99-4281-8ff1-dc22ace0b43e\FeM Logo Schwarz.ai
+	Y:\Bearbeitungsablage\schosch\35C3\35C3 Musik\35C3 Drumloop.wav
+	Y:\Bearbeitungsablage\schosch\35C3\35C3 Musik\35C3 Intro 4.wav
+	Y:\Bearbeitungsablage\schosch\35C3\35C3 Musik\35C3 Loop.wav
+	Y:\Bearbeitungsablage\schosch\35C3\35C3 Musik\35C3 Single Drumbeat.wav
+	Y:\Bearbeitungsablage\schosch\35C3\statics\2880px-OpenSUSE_Logo.svg.png
+	Y:\Bearbeitungsablage\schosch\35C3\statics\35C3_Logo-mit-Verlauf.ai
+	Y:\Bearbeitungsablage\schosch\35C3\statics\AGS Logo.ai
+	Y:\Bearbeitungsablage\schosch\35C3\statics\CCC Logo.eps
+	Y:\Bearbeitungsablage\schosch\35C3\statics\creative commons by icon.eps
+	Y:\Bearbeitungsablage\schosch\35C3\statics\creative commons Logo.eps
+	Y:\Bearbeitungsablage\schosch\35C3\statics\intro_static_2.png
+	Y:\Bearbeitungsablage\schosch\35C3\statics\iSystems.io Logo RGB 1c.eps
+	Y:\Bearbeitungsablage\schosch\35C3\statics\iSystems.io Logo RGB.eps
+	Y:\Bearbeitungsablage\schosch\35C3\statics\Styleguide_35C3.jpg
+	Y:\Bearbeitungsablage\schosch\35C3\statics\voctocat.eps
+	
+Rendering plug-ins:
+	Classic 3D
+	Ray-traced 3D
+	
+Effects used:  2
+
+Effect:  Change to Color
+	
+Effect:  Gradient Ramp
+	
+
+Layer:  Text Layer
+	External dependencies:  
+		Font family: “Montserrat”, Font style: “Bold”
+
