@@ -154,7 +154,8 @@ def run(command, **kwargs):
 
 def enqueue_job(event):
         event_id = str(event['id'])
-        if os.path.exists(os.path.join(args.project, event_id+'.ts')) and not args.force:
+        if os.path.exists(os.path.join(args.project, event_id+'.ts')) or os.path.exists(os.path.join(args.project, event_id+'.mov')) and not args.force:
+            event_print(event, "file exist, skipping "+str(event['id']))
             return
         work_doc = os.path.join(tempdir.name, event_id+'.aep')
         script_doc = os.path.join(tempdir.name, event_id+'.jsx')
@@ -262,8 +263,12 @@ for event in events:
         else:
                 event_id = str(event['id'])
                 event_print(event, "skipping finalizing job")
-                intermediate_clip = os.path.join(tempdir.name, event_id+'.mov')
-                final_clip = os.path.join(os.path.dirname(args.project), event_id+'.mov')
+                if platform.system() == 'Windows':
+                    intermediate_clip = os.path.join(tempdir.name, event_id+'.avi')
+                    final_clip = os.path.join(os.path.dirname(args.project), event_id+'.avi')
+                else:
+                    intermediate_clip = os.path.join(tempdir.name, event_id+'.mov')
+                    final_clip = os.path.join(os.path.dirname(args.project), event_id+'.mov')
                 copyfile(intermediate_clip, final_clip)
                 event_print(event, "copied intermediate clip to "+final_clip)
 
