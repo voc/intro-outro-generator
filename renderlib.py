@@ -13,6 +13,7 @@ import cssutils
 import logging
 import subprocess
 from urllib.request import urlopen
+from wand.image import Image
 
 # Frames per second. Increasing this renders more frames, the avconf-statements would still need modifications
 fps = 25
@@ -168,12 +169,20 @@ def rendertask(task):
                 width = 1024
                 height = 576
 
-            # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-            cmd = 'cd {0} && inkscape --export-background=white --export-background-opacity=0 --export-width={2} --export-height={3} --export-png=$(pwd)/.frames/{1:04d}.png $(pwd)/.gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr, width, height)
-            errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
-            if errorReturn != '':
-                print("inkscape exitted with error\n" + errorReturn)
-                # sys.exit(42)
+            if args.imagemagick:
+                # invoke imagemagick to convert the generated svg-file into a png inside the .frames-directory
+                infile = '{0}/.gen.svg'.format(task.workdir)
+                outfile = '{0}/.frames/{1:04d}.png'.format(task.workdir, frameNr)
+                with Image(filename=infile) as img:
+                    with img.convert('png') as converted:
+                        converted.save(filename=outfile)
+            else:
+                # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
+                cmd = 'cd {0} && inkscape --export-background=white --export-background-opacity=0 --export-width={2} --export-height={3} --export-png=$(pwd)/.frames/{1:04d}.png $(pwd)/.gen.svg 2>&1 >/dev/null'.format(task.workdir, frameNr, width, height)
+                errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
+                if errorReturn != '':
+                    print("inkscape exitted with error\n" + errorReturn)
+                    # sys.exit(42)
 
         # increment frame-number
         frameNr += 1

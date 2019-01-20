@@ -48,6 +48,10 @@ parser.add_argument('--skip-frames', action="store", default=None, type=int, hel
     Skip first n frames e.g. to quickly rerender during debugging.
     Usage: ./make.py yourproject/ --debug --skip-frames 300
     ''')
+parser.add_argument('--imagemagick', action="store_true", default=False, help='''
+     Render frames using ImageMagick instead of Inkscape.
+     Usage: ./make.py yourproject/ --imagemagick
+     ''')
 
 if len(sys.argv) < 2:
     parser.print_help()
