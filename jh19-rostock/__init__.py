@@ -10,20 +10,11 @@ scheduleUrl = 'https://gist.githubusercontent.com/danimo/9c4cd61461435791b205d2b
 
 # For (really) too long titles
 titlemap = {
-  7: "Metawahl", 
-  8: "Radmesser",
-  4: "Flask",
- 10: "RIOT",
-  9: "API Reverse-Engineering",
- 13: "Eduship – Bock auf mehr Hackathons",
- 14: "Programmier-Praxistipps",
-  6: "Musik machen mit Code",
- 20: "Abschlusspraesentation",
- 26: "VKS",
+# 26: "VKS",
 }
 
 personmap = {
- 20 : "",
+# 20 : "",
 }
 
 def introFrames(parameters):
@@ -182,9 +173,6 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl):
-		if event['room'] not in ('Technologiezentrum'):
-			print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
-			continue
 		if not (idlist==[]):
 			if 000000 in idlist:
 				print("skipping id (%s [%s])" % (event['title'], event['id']))
@@ -193,20 +181,20 @@ def tasks(queue, args, idlist, skiplist):
 				print("skipping id (%s [%s])" % (event['title'], event['id']))
 				continue
 
-			# generate a task description and put them into the queue
-			projectname = event['title']
-			id = event['id']
-			queue.put(Rendertask(
-				infile = 'intro.svg',
-				outfile = str(event['id'])+".ts",
-				sequence = introFrames,
-				parameters = {
-#					'$id': event['id'],
-					'$PROJECTNAME': titlemap[id].upper() if id in titlemap else projectname.upper(),
-#					'$subtitle': event['subtitle'],
-					'$prenames': personmap[id] if id in personmap else event['personnames']
-				}
-			))
+		# generate a task description and put them into the queue
+		projectname = event['title']
+		id = event['id']
+		queue.put(Rendertask(
+			infile = 'intro.svg',
+			outfile = str(event['id'])+".ts",
+			sequence = introFrames,
+			parameters = {
+#				'$id': event['id'],
+				'$PROJECTNAME': titlemap[id].upper() if id in titlemap else projectname.upper(),
+#				'$subtitle': event['subtitle'],
+				'$prenames': personmap[id] if id in personmap else event['personnames']
+			}
+		))
 
 	# place a task for the outro into the queue
 	queue.put(Rendertask(

@@ -39,13 +39,13 @@
      id="namedview1000"
      showgrid="false"
      inkscape:zoom="0.4404686"
-     inkscape:cx="637.93302"
+     inkscape:cx="349.52467"
      inkscape:cy="749.77007"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg998"
-     showguides="true"
+     showguides="false"
      inkscape:guide-bbox="true">
     <sodipodi:guide
        position="597.09137,-229.30125"
@@ -3308,7 +3308,11 @@
        transform="translate(600,927.87)"
        id="text976"
        style="font-size:37.33000183px;font-family:ModernLEDBoard-7, 'Modern LED Board-7';isolation:isolate;fill:#ffffff"
-       inkscape:label="#projectname">$RROJECTNAME</text>
+       inkscape:label="#projectname">
+      <tspan
+         style="-inkscape-font-specification:'Ebisu, Normal';font-family:Ebisu;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:64px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+         id="tspan1367">$PROJECTNAME</tspan>
+    </text>
   </g>
   <g
      id="alpaca"
@@ -3353,8 +3357,6 @@
      id="style1831"
      type="text/css">
 	.st0{fill:#B5DDDF;}
-	.st1{clip-path:url(#SVGID_2_);fill:#0DA5DE;}
-	.st2{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
 	.st3{fill:#FFFFFF;}
 	.st4{font-family:'Ebisu';}
 	.st5{font-size:37px;}
@@ -3428,7 +3430,7 @@
        id="prenames"
        style="font-size:37.33000183px;font-family:ModernLEDBoard-7, 'Modern LED Board-7';isolation:isolate;fill:#ffffff">
       <tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;font-family:ModernLEDBoard-7, 'Modern LED Board-7';-inkscape-font-specification:'ModernLEDBoard-7, Modern LED Board-7, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666667px;font-family:Ebisu;-inkscape-font-specification:'Ebisu, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start"
          id="tspan5094">$prenames</tspan>
     </text>
   </g>
