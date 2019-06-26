@@ -4,7 +4,7 @@ from renderlib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'https://talks.kulturkosmos.de/content18/schedule/export?exporter=core-frab-xml'
+scheduleUrl = 'https://gist.githubusercontent.com/derpeter/0c2995117d54ecf701542e316dba5f5f/raw/09edb2395405e1421c8515da3d81b61a45dab981/proyektortest.xml'
 
 
 def bounce(i, min, max, frames):
@@ -51,6 +51,22 @@ def outroFrames(p):
     for i in range(0, frames):
         yield []
 
+def pauseFrames(args):
+    #fade in pause
+    frames = 4*fps
+    for i in range(0, frames):
+        yield(
+            ('pause',  'style', 'opacity', "%.4f" % easeInCubic(i, 0.2, 1, frames)),
+        )
+
+    # fade out
+    frames = 4*fps
+    for i in range(0, frames):
+        yield(
+            ('pause',  'style', 'opacity', "%.4f" % easeInCubic(i, 1, -0.8, frames)),
+        )
+
+
 
 def debug():
     render(
@@ -81,7 +97,7 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if event['room'] not in ('ConTent'):
+        if event['room'] not in ('content'):
             print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
             continue
         if not (idlist == []):
