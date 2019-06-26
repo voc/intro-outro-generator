@@ -70,6 +70,10 @@ def pauseFrames(args):
         )
 
 def debug():
+    render('outro.svg',
+        '../outro.ts',
+        outroFrames
+    )
     render('intro.svg',
         '../intro.ts',
         introFrames,
@@ -80,12 +84,6 @@ def debug():
             '$personnames':  'Alexander Chemeris + Harald Welte'
         }
     )
-
-    render('outro.svg',
-        '../outro.ts',
-        outroFrames
-    )
-
     render(
         'background.svg',
         '../background.ts',
@@ -96,7 +94,6 @@ def debug():
         '../pause.ts',
         pauseFrames
     )
-
 
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
