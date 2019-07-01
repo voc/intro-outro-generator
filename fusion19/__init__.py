@@ -4,7 +4,7 @@ from renderlib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'https://gist.githubusercontent.com/derpeter/0c2995117d54ecf701542e316dba5f5f/raw/09edb2395405e1421c8515da3d81b61a45dab981/proyektortest.xml'
+scheduleUrl = 'http://157.230.111.117/fusion19.xml'
 
 
 def bounce(i, min, max, frames):
@@ -52,6 +52,9 @@ def outroFrames(p):
         yield []
 
 def pauseFrames(args):
+    pass
+
+def pauseFrames_disable(args):
     #fade in pause
     frames = 4*fps
     for i in range(0, frames):
@@ -97,7 +100,7 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if event['room'] not in ('content'):
+        if event['room'] not in ('Content'):
             print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
             continue
         if not (idlist == []):
