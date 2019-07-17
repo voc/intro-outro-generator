@@ -162,7 +162,7 @@ def rendertask(task):
                 # write the generated svg-text into the output-file
                 fp.write(etree.tostring(svg, encoding='unicode'))
 
-            if task.outfile.endswith('.ts') or task.outfile.endswith('.mov'):
+            if task.outfile.endswith('.ts') or task.outfile.endswith('.mov') or task.outfile.endswith('.mkv'):
                 width = 1920
                 height = 1080
             else:
@@ -216,6 +216,8 @@ def rendertask(task):
     elif task.outfile.endswith('.mov'):
         cmd = 'cd {0} && '.format(task.workdir)
         cmd += 'ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -f image2 -i .frames/%04d.png -r 25 -shortest -c:v qtrle -f mov "{0}"'.format(task.outfile)
+    elif task.outfile.endswith('.mkv'):
+        cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -aspect 16:9 -c copy -shortest "{1}"'.format(task.workdir, task.outfile)
     else:
         cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
 
@@ -238,7 +240,7 @@ def rendertask(task):
 # Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event
 
 
-def events(scheduleUrl, titlemap={}):
+def downloadSchedule(scheduleUrl):
     print("downloading schedule")
 
     # download the schedule
@@ -249,8 +251,41 @@ def events(scheduleUrl, titlemap={}):
 
     # parse into ElementTree
     parser = etree.XMLParser(huge_tree=True)
-    schedule = etree.fromstring(xml, parser)
+    return etree.fromstring(xml, parser)
 
+def persons(scheduleUrl, personmap={}, taglinemap={}):
+    schedule = downloadSchedule(scheduleUrl)
+    # iterate all days
+    for day in schedule.iter('day'):
+        # iterate all rooms
+        for room in day.iter('room'):
+            # iterate events on that day in this room
+            for event in room.iter('event'):
+                # aggregate names of the persons holding this talk
+                persons_seen = []
+                if event.find('persons') is not None:
+                    for person in event.find('persons').iter('person'):
+                        id = int(person.get("id"))
+                        person = re.sub(r'\s+', ' ', person.text).strip()
+                        match = re.search(r'\((.*?)\)', person)
+                        tagline = ''
+                        if not match is None:
+                            tagline = match.group(1)
+                            person = person.split(" (")[0]
+                        if id in taglinemap:
+                            tagline = taglinemap[id]
+                        if id in personmap:
+                            person = personmap[id]
+                        if not id in persons_seen:
+                            persons_seen.append(id)
+                            yield {
+                                'id': id,
+                                'person': person,
+                                'tagline': tagline
+                            }
+
+def events(scheduleUrl, titlemap={}):
+    schedule = downloadSchedule(scheduleUrl)
     # iterate all days
     for day in schedule.iter('day'):
         # iterate all rooms
@@ -277,7 +312,6 @@ def events(scheduleUrl, titlemap={}):
                     subtitle = re.sub(r'\s+', ' ', event.find('subtitle').text).strip()
                 else:
                     subtitle = ''
-
                 # yield a tupel with the event-id, event-title and person-names
                 yield {
                     'id': id,
@@ -287,7 +321,7 @@ def events(scheduleUrl, titlemap={}):
                     'personnames': ', '.join(personnames),
                     'room': room.attrib['name'],
                     'track': event.find('track').text,
-		    'url': event.find('url').text
+		    #'url': event.find('url').text
                 }
 
 
