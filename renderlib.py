@@ -280,6 +280,7 @@ def events(scheduleUrl, titlemap={}):
 
                 # yield a tupel with the event-id, event-title and person-names
                 yield {
+                    'day': day.attrib['index'],
                     'id': id,
                     'title': title,
                     'subtitle': subtitle,
