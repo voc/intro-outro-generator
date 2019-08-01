@@ -6,9 +6,8 @@ import re
 import glob
 import shutil
 import errno
-import logging
 import subprocess
-import svgtemplate
+from svgtemplate import SVGTemplate
 from lxml import etree
 from urllib.request import urlopen
 from wand.image import Image
@@ -17,10 +16,6 @@ from wand.image import Image
 fps = 25
 debug = True
 args = None
-
-cssutils.ser.prefs.lineSeparator = ' '
-cssutils.log.setLevel(logging.FATAL)
-
 
 def loadProject(projectname):
     sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), projectname))
@@ -131,10 +126,10 @@ def cachedRenderFrame(frame, frameNr, task, cache):
         elif not skip_rendering:
             cache[frame] = frameNr
 
-        svgstr = svgtemplate.open(task)
-        svgstr = svgtemplate.replacetext(svgstr, task)
-        svgstr = svgtemplate.transform(svgstr, frame, task)
-        svgfile = svgtemplate.write(svgstr, task)
+        with SVGTemplate(task) as svg:
+            svg.replacetext()
+            svg.transform(frame)
+            svgfile = svg.write()
 
         outfile = '{0}/.frames/{1:04d}.png'.format(task.workdir, frameNr)
         renderFrame(svgfile, task, outfile)
@@ -144,9 +139,9 @@ def cachedRenderFrame(frame, frameNr, task, cache):
 
 
 def rendertask_image(task):
-    svgstr = svgtemplate.open(task)
-    svgstr = svgtemplate.replacetext(svgstr, task)
-    svgfile = svgtemplate.write(svgstr, task)
+    with SVGTemplate(task) as svg:
+        svg.replacetext()
+        svgfile = svg.write()
     renderFrame(svgfile, task, task.outfile)
 
 def rendertask_video(task):
