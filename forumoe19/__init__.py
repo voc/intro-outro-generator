@@ -124,28 +124,35 @@ def tasks(queue, args, idlist, skiplist):
         queue.put(Rendertask(
             infile = 'intro.svg',
             outfile = str(event['id'])+".ts",
-            sequence = introFrames,
             parameters = {
                 '$ID': event['id'],
                 '$TITLE': event['title'],
                 '$SUBTITLE': event['subtitle'],
                 '$SPEAKER': event['personnames']
                 }
-            ))
+            ).animated(introFrames))
 
     # place a task for the outro into the queue
     if not "out" in skiplist:
         queue.put(Rendertask(
             infile = 'outro.svg',
-            outfile = 'outro.ts',
-            sequence = outroFrames
-         ))
+            outfile = 'outro.ts'
+         ).animated(outroFrames))
 
     for person in persons(scheduleUrl, personmap, taglinemap):
         queue.put(Rendertask(
             infile = 'insert.svg',
             outfile = "insert_{}.mkv".format(person['person'].replace("/", "_")),
-            sequence = bbFrames,
+            parameters = {
+                '$PERSON': person['person'],
+                '$TAGLINE': person['tagline'],
+                }
+            ).animated(bbFrames))
+
+    for person in persons(scheduleUrl, personmap, taglinemap):
+        queue.put(Rendertask(
+            infile = 'insert.svg',
+            outfile = "insert_{}.png".format(person['person'].replace("/", "_")),
             parameters = {
                 '$PERSON': person['person'],
                 '$TAGLINE': person['tagline'],
