@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 # vim: tabstop=4 shiftwidth=4 expandtab
 
 import os
@@ -7,11 +6,10 @@ import re
 import glob
 import shutil
 import errno
-from lxml import etree
-from xml.sax.saxutils import escape as xmlescape
-import cssutils
 import logging
 import subprocess
+import svgtemplate
+from lxml import etree
 from urllib.request import urlopen
 from wand.image import Image
 
@@ -88,45 +86,6 @@ def ensureFilesRemoved(pattern):
     for f in glob.glob(pattern):
         os.unlink(f)
 
-
-def svgTemplate_open(task):
-    with open(os.path.join(task.workdir, task.infile), 'r') as fp:
-        return fp.read()
-
-
-def svgTemplate_replacetext(svgstr, task):
-    for key in task.parameters.keys():
-        svgstr = svgstr.replace(key, xmlescape(str(task.parameters[key])))
-    return svgstr
-
-def svgTemplate_transform(svgstr, frame, task):
-    parser = etree.XMLParser(huge_tree=True)
-    svg = etree.fromstring(svgstr.encode('utf-8'), parser)
-    # apply the replace-pairs to the input text, by finding the specified xml-elements by their id and modify their css-parameter the correct value
-    for replaceinfo in frame:
-        (id, type, key, value) = replaceinfo
-        for el in svg.findall(".//*[@id='" + id.replace("'", "\\'") + "']"):
-            if type == 'style':
-                style = cssutils.parseStyle(el.attrib['style'] if 'style' in el.attrib else '')
-                style[key] = str(value)
-                el.attrib['style'] = style.cssText
-            elif type == 'attr':
-                el.attrib[key] = str(value)
-            elif type == 'text':
-                el.text = str(value)
-    # if '$subtitle' in task.parameters and task.parameters['$subtitle'] == '':
-    #   child = svg.findall(".//*[@id='subtitle']")[0]
-    #   child.getparent().remove(child)
-    return etree.tostring(svg, encoding='unicode')
-
-def svgTemplate_write(svgstr, task):
-    # open the output-file (named ".gen.svg" in the workdir)
-    outfile = os.path.join(task.workdir, '.gen.svg')
-    with open(outfile, 'w') as fp:
-        # write the generated svg-text into the output-file
-        fp.write(svgstr)
-    return outfile
-
 def renderFrame(infile, task, outfile):
     width = 1920
     height = 1080
@@ -172,10 +131,10 @@ def cachedRenderFrame(frame, frameNr, task, cache):
         elif not skip_rendering:
             cache[frame] = frameNr
 
-        svgstr = svgTemplate_open(task)
-        svgstr = svgTemplate_replacetext(svgstr, task)
-        svgstr = svgTemplate_transform(svgstr, frame, task)
-        svgfile = svgTemplate_write(svgstr, task)
+        svgstr = svgtemplate.open(task)
+        svgstr = svgtemplate.replacetext(svgstr, task)
+        svgstr = svgtemplate.transform(svgstr, frame, task)
+        svgfile = svgtemplate.write(svgstr, task)
 
         outfile = '{0}/.frames/{1:04d}.png'.format(task.workdir, frameNr)
         renderFrame(svgfile, task, outfile)
@@ -185,9 +144,9 @@ def cachedRenderFrame(frame, frameNr, task, cache):
 
 
 def rendertask_image(task):
-    svgstr = svgTemplate_open(task)
-    svgstr = svgTemplate_replacetext(svgstr, task)
-    svgfile = svgTemplate_write(svgstr, task)
+    svgstr = svgtemplate.open(task)
+    svgstr = svgtemplate.replacetext(svgstr, task)
+    svgfile = svgtemplate.write(svgstr, task)
     renderFrame(svgfile, task, task.outfile)
 
 def rendertask_video(task):
