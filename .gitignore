@@ -1,7 +1,9 @@
 *.mp4
 *.dv
 *.ts
+*.mkv
 *.mov
+/*/*.png
 /*.png
 *.pyc
 schedule.de.xml
