@@ -9,25 +9,21 @@ import argparse
 import shlex
 from PIL import ImageFont
 from configparser import ConfigParser
+import json
 
 # Parse arguments
 parser = argparse.ArgumentParser(
     description='C3VOC Intro-Outro-Generator - Variant which renders only using video filters in ffmpeg',
-    usage="./make-ffmpeg.py yourproject/ https://url/to/schedule.xml",
+    usage="./make-ffmpeg.py yourproject/",
     formatter_class=argparse.RawTextHelpFormatter)
 
 parser.add_argument('project', action="store", metavar='Project folder', type=str, help='''
     Path to your project folder
     ''')
 
-parser.add_argument('schedule', action="store", metavar='Schedule-URL', type=str, nargs='?', help='''
-    URL or Path to your schedule.xml
-    ''')
-
 parser.add_argument('--debug', action="store_true", default=False, help='''
     Run script in debug mode and render with placeholder texts,
-    not parsing or accessing a schedule. Schedule-URL can be left blank when
-    used with --debug
+    not parsing or accessing a schedule.
     This argument must not be used together with --id
     Usage: ./make-ffmpeg.py yourproject/ --debug
     ''')
@@ -71,30 +67,6 @@ def error(str):
 	parser.print_help()
 	sys.exit(1)
 
-
-if not (os.path.exists(os.path.join(args.project, 'config.ini'))):
-    error("config.ini file in Project Path is missing")
-
-if not args.project:
-    error("The Project Path is a required argument")
-
-if not args.debug and not args.schedule:
-    error("Either specify --debug or supply a schedule")
-
-if args.debug:
-    persons = ['Thomas Roth', 'Dmitry Nedospasov', 'Josh Datko']
-    events = [{
-        'id': 'debug',
-        'title': 'wallet.fail',
-        'subtitle': 'Hacking the most popular cryptocurrency hardware wallets',
-        'persons': persons,
-        'personnames': ', '.join(persons),
-        'room': 'Borg',
-    }]
-
-else:
-    events = list(renderlib.events(args.schedule))
-
 parser = ConfigParser()
 parser.read(os.path.join(os.path.dirname(args.project), 'config.ini'))
 template = parser['default']['template']
@@ -130,6 +102,31 @@ font_tt = os.path.join(os.path.dirname(args.project), text_font)
 
 fileformat = os.path.splitext(template)[1]
 infile = os.path.join(os.path.dirname(args.project), template)
+
+schedule = parser['default']['schedule']
+
+if not (os.path.exists(os.path.join(args.project, 'config.ini'))):
+    error("config.ini file in Project Path is missing")
+
+if not args.project:
+    error("The Project Path is a required argument")
+
+if not args.debug and not schedule:
+    error("Either specify --debug or supply a schedule in config.ini")
+
+if args.debug:
+    persons = ['Thomas Roth', 'Dmitry Nedospasov', 'Josh Datko']
+    events = [{
+        'id': 'debug',
+        'title': 'wallet.fail',
+        'subtitle': 'Hacking the most popular cryptocurrency hardware wallets',
+        'persons': persons,
+        'personnames': ', '.join(persons),
+        'room': 'Borg',
+    }]
+
+else:
+    events = list(renderlib.events(schedule))
 
 def describe_event(event):
     return "#{}: {}".format(event['id'], event['title'])
@@ -202,6 +199,9 @@ def enqueue_job(event):
 
     event_title = str(event['title'])
     event_personnames = str(event['personnames'])
+    event_title = event_title.replace('"', '')
+    event_title = event_title.replace('\'', '')
+    event_personnames = event_personnames.replace('"', '')
 
     t = fit_title(event_title)
     s = fit_speaker(event_personnames)
@@ -220,7 +220,8 @@ def enqueue_job(event):
     videofilter += "drawtext=enable='between(n,{0},{1})':fontfile={2}:fontsize={3}:fontcolor={4}:x={5}:y={6}:text={7}".format(text_in, text_out, font_tt, text_fontsize, text_fontcolor, text_x, text_y, text_text)
 
     if fileformat == '.mov':
-        cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -vcodec prores_ks -pix_fmt yuva444p10le -profile:v 4444 -shortest -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile)
+        cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -shortest -c:v qtrle -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile)
+        #cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -vcodec prores_ks -pix_fmt yuva444p10le -profile:v 4444 -shortest -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile)
     else:
         cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
     if args.debug:
