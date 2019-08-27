@@ -59,8 +59,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="951.55258"
-     inkscape:cy="302.89237"
+     inkscape:cx="1018.3705"
+     inkscape:cy="672.02477"
      inkscape:document-units="px"
      inkscape:current-layer="layer_background"
      showgrid="false"
@@ -70,7 +70,10 @@
      inkscape:window-height="1080"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="0">
+     inkscape:window-maximized="0"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="true">
     <sodipodi:guide
        orientation="0,1"
        position="0,1080"
@@ -114,6 +117,20 @@
        inkscape:label=""
        inkscape:color="rgb(0,0,255)"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="960,0"
+       orientation="1,0"
+       id="guide1475"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,540"
+       orientation="0,1"
+       id="guide1477"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -134,14 +151,23 @@
     <image
        sodipodi:absref="/home/max/git/voc/intro-outro-generator/foss4g-2019/artwork/other_files/BACKDROP/BACKGROUND Bucharest.png"
        xlink:href="other_files/BACKDROP/BACKGROUND Bucharest.png"
-       width="1920"
-       height="1080"
-       preserveAspectRatio="none"
-       id="image1470"
-       x="0"
        y="476"
-       style=""
+       x="0"
+       id="image1470"
+       preserveAspectRatio="none"
+       height="1080"
+       width="1920"
+       style="fill:#01c690;fill-opacity:1"
        transform="translate(0,-476)" />
+    <image
+       sodipodi:absref="/home/max/git/voc/intro-outro-generator/foss4g-2019/artwork/other_files/BACKDROP/LOGO FOSS4G.png"
+       xlink:href="other_files/BACKDROP/LOGO FOSS4G.png"
+       y="666"
+       x="785.77783"
+       id="image1487"
+       preserveAspectRatio="none"
+       height="620"
+       width="1102.2222" />
   </g>
   <g
      inkscape:label="Background"
@@ -150,15 +176,15 @@
      transform="translate(0,-476)">
     <g
        id="g4170"
-       transform="matrix(6.6089511,0,0,6.6089511,-83.463584,-7736.2549)"
-       style="fill:#ff7f2a">
+       transform="matrix(8.6680277,0,0,8.6680277,-264.24652,-10513.466)"
+       style="fill:#01c48e;fill-opacity:1">
       <g
          transform="translate(-8.2519531e-7,504.00003)"
          id="text2"
-         style="opacity:1;fill:#ff7f2a">
+         style="opacity:1;fill:#01c48e;fill-opacity:1">
         <text
            xml:space="preserve"
-           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff7f2a;fill-opacity:1;stroke:none"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#01c48e;fill-opacity:1;stroke:none"
            x="77.218193"
            y="837.2262"
            id="text39"><tspan
@@ -166,19 +192,19 @@
              x="77.218193"
              y="837.2262"
              id="tspan41"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48.00025558px;line-height:89.99999762%;font-family:Marvel;-inkscape-font-specification:'Marvel, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7f2a;fill-opacity:1;stroke:none">pause</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48.00025558px;line-height:89.99999762%;font-family:'Linux Biolinum O';-inkscape-font-specification:'Linux Biolinum O Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#01c48e;fill-opacity:1;stroke:none">pause</tspan></text>
       </g>
       <g
-         style="opacity:1;fill:#ff7f2a"
+         style="opacity:1;fill:#01c48e;fill-opacity:1"
          id="text1"
          transform="translate(-8.2519531e-7,504.00003)">
         <text
            id="text2279"
            y="837.2262"
            x="77.218193"
-           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff7f2a;fill-opacity:1;stroke:none"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#01c48e;fill-opacity:1;stroke:none"
            xml:space="preserve"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48.00025558px;line-height:89.99999762%;font-family:Marvel;-inkscape-font-specification:'Marvel, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7f2a;fill-opacity:1;stroke:none"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48.00025558px;line-height:89.99999762%;font-family:'Linux Biolinum O';-inkscape-font-specification:'Linux Biolinum O Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#01c48e;fill-opacity:1;stroke:none"
              id="tspan2277"
              y="837.2262"
              x="77.218193"

@@ -51,13 +51,12 @@ def outroFrames(args):
         )
 
 def pauseFrames(params):
-
         # 2 sec Fadein Text1
         frames = 2*fps
         for i in range(0, frames):
                 yield (
                         ('text1', 'style', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames)),
-                        ('text2', 'style', 'opacity', 0)
+                        ('text2', 'style', 'opacity', 0),
                 )
 
     # 2 sec Text1
@@ -65,7 +64,7 @@ def pauseFrames(params):
         for i in range(0, frames):
                 yield (
                         ('text1', 'style', 'opacity', 1),
-                        ('text2', 'style', 'opacity', 0)
+                        ('text2', 'style', 'opacity', 0),
                 )
 
         # 2 sec Fadeout Text1
@@ -73,7 +72,7 @@ def pauseFrames(params):
         for i in range(0, frames):
             yield (
                         ('text1', 'style', 'opacity', "%.4f" % (1-easeOutCubic(i, 0, 1, frames))),
-                        ('text2', 'style', 'opacity', 0)
+                        ('text2', 'style', 'opacity', 0),
                 )
 
         # 2 sec blank
@@ -81,7 +80,7 @@ def pauseFrames(params):
         for i in range(0, frames):
                 yield (
                         ('text1', 'style', 'opacity', 0),
-                        ('text2', 'style', 'opacity', 0)
+                        ('text2', 'style', 'opacity', 0),
                 )
 
         # 2 sec Fadein Text2
@@ -89,7 +88,7 @@ def pauseFrames(params):
         for i in range(0, frames):
                 yield (
                         ('text2', 'style', 'opacity', "%.4f" % easeOutCubic(i, 0, 1, frames)),
-                        ('text1', 'style', 'opacity', 0)
+                        ('text1', 'style', 'opacity', 0),
                 )
 
 
@@ -98,7 +97,7 @@ def pauseFrames(params):
         for i in range(0, frames):
                 yield (
                         ('text2', 'style', 'opacity', 1),
-                        ('text1', 'style', 'opacity', 0)
+                        ('text1', 'style', 'opacity', 0),
                 )
 
         # 2 sec Fadeout Text2
@@ -106,7 +105,7 @@ def pauseFrames(params):
         for i in range(0, frames):
                 yield (
                         ('text2', 'style', 'opacity', "%.4f" % (1-easeOutCubic(i, 0, 1, frames))),
-                        ('text1', 'style', 'opacity', 0)
+                        ('text1', 'style', 'opacity', 0),
                 )
 
         # 2 sec blank
@@ -114,7 +113,7 @@ def pauseFrames(params):
         for i in range(0, frames):
                 yield (
                         ('text1', 'style', 'opacity', 0),
-                        ('text2', 'style', 'opacity', 0)
+                        ('text2', 'style', 'opacity', 0),
                 )
     
 def debug():
@@ -151,7 +150,7 @@ def tasks(queue, args, idlist, skiplist):
                 parameters = {
                     '$id': event['id'],
                     '$title': event['title'],
-#                    '$subtitle': event['subtitle'],
+                 '$subtitle': event['subtitle'],
                     '$personnames': event['personnames']
                 }
             ))
