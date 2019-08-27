@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1920"
+   height="1080"
+   viewBox="0 0 1920.0001 1080"
+   id="svg4261"
+   version="1.1"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="outro.svg">
+  <defs
+     id="defs4263" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.21535985"
+     inkscape:cx="521.81296"
+     inkscape:cy="412.43904"
+     inkscape:document-units="px"
+     inkscape:current-layer="svg4261"
+     showgrid="false"
+     units="px"
+     showguides="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="539"
+     inkscape:window-x="0"
+     inkscape:window-y="540"
+     inkscape:window-maximized="0"
+     inkscape:guide-bbox="true"
+     inkscape:snap-path-clip="true"
+     inkscape:snap-path-mask="true"
+     guidetolerance="10"
+     inkscape:snap-perpendicular="true"
+     inkscape:snap-tangential="true"
+     objecttolerance="10"
+     inkscape:object-paths="false"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="false"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:snap-bbox-midpoints="false"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-center="false"
+     inkscape:snap-text-baseline="false"
+     inkscape:snap-page="true"
+     inkscape:snap-nodes="false"
+     inkscape:snap-global="true"
+     gridtolerance="10">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4484" />
+    <sodipodi:guide
+       position="70.000004,1060"
+       orientation="1,0"
+       id="guide4684"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1900.0001,0"
+       orientation="1,0"
+       id="guide4686"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1900.0001,1060"
+       orientation="0,1"
+       id="guide4690"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1850.0001,20"
+       orientation="1,0"
+       id="guide4302"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="741.02483,205.67211"
+       orientation="1,0"
+       id="guide4244"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1339.2858,-257.14286"
+       orientation="0,-1"
+       id="guide4248"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1180.0001,-82.142857"
+       orientation="1,0"
+       id="guide4252"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4266">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="BG"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,27.637408)"
+     sodipodi:insensitive="true"
+     style="display:inline">
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#2c3e50;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.00000024;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="rect4230"
+       width="1920"
+       height="1080"
+       x="0"
+       y="-27.637341" />
+    <image
+       sodipodi:absref="/home/max/git/voc/intro-outro-generator/foss4g-2019/artwork/outro BACKGROUND Bucharest.png"
+       xlink:href="outro BACKGROUND Bucharest.png"
+       y="-27.637407"
+       x="0"
+       id="image1131"
+       preserveAspectRatio="none"
+       height="1080"
+       width="1920" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Text"
+     style="display:inline">
+    <image
+       sodipodi:absref="/home/max/git/voc/intro-outro-generator/foss4g-2019/artwork/outro C3VOC.png"
+       xlink:href="outro C3VOC.png"
+       y="0"
+       x="0"
+       id="image5113"
+       preserveAspectRatio="none"
+       height="1080"
+       width="1920" />
+    <image
+       sodipodi:absref="/home/max/git/voc/intro-outro-generator/foss4g-2019/artwork/outro DEUTSCHLAND.png"
+       xlink:href="outro DEUTSCHLAND.png"
+       y="0"
+       x="0"
+       id="image5048"
+       preserveAspectRatio="none"
+       height="1080"
+       width="1920" />
+    <g
+       id="g4238"
+       transform="matrix(0.42793827,0,0,0.42793827,13.580927,631.5475)" />
+    <image
+       sodipodi:absref="/home/max/git/voc/intro-outro-generator/foss4g-2019/artwork/outro FOSS4G.png"
+       xlink:href="outro FOSS4G.png"
+       y="0"
+       x="0"
+       id="image5178"
+       preserveAspectRatio="none"
+       height="1080"
+       width="1920" />
+  </g>
+</svg>
