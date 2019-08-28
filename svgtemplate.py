@@ -48,7 +48,7 @@ class SVGTemplate:
         # if '$subtitle' in task.parameters and task.parameters['$subtitle'] == '':
         #   child = svg.findall(".//*[@id='subtitle']")[0]
         #   child.getparent().remove(child)
-        self.xmlstr = etree.tostring(svg, encoding='unicode')
+        self.svgstr = etree.tostring(svg, encoding='unicode')
 
     def __exit__(self, exception_type, exception_value, traceback):
         pass

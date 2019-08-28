@@ -84,7 +84,6 @@ def ensureFilesRemoved(pattern):
 def renderFrame(infile, task, outfile):
     width = 1920
     height = 1080
-    infile = '{0}/.gen.svg'.format(task.workdir)
     if args.imagemagick:
         # invoke imagemagick to convert the generated svg-file into a png inside the .frames-directory
         with Image(filename=infile) as img:
@@ -92,7 +91,7 @@ def renderFrame(infile, task, outfile):
                 converted.save(filename=outfile)
     else:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-        cmd = 'cd {0} && inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-png="{3}" "{4}" 2>&1 >/dev/null'.format(task.workdir, width, height, outfile, infile)
+        cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-png="{3}" "{4}" 2>&1 >/dev/null'.format(task.workdir, width, height, outfile, infile)
         errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
         if errorReturn != '':
             print("inkscape exitted with error\n" + errorReturn)
