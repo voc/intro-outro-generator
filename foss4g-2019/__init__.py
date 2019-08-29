@@ -11,7 +11,7 @@ scheduleUrl = 'https://talks.2019.foss4g.org/bucharest/schedule/export/schedule.
 
 # For (really) too long titles
 titlemap = {
-    #
+        198: 'Revamp of CRS management in the OSGeo C/C++ stack with PROJ and GDAL',
 }
 
 
@@ -149,8 +149,8 @@ def tasks(queue, args, idlist, skiplist):
                 sequence = introFrames,
                 parameters = {
                     '$id': event['id'],
-                    '$title': event['title'],
-                 '$subtitle': event['subtitle'],
+                    '$title': event['title'] if event['id'] not in titlemap else titlemap[event['id']],
+                    '$subtitle': event['subtitle'],
                     '$personnames': event['personnames']
                 }
             ))
