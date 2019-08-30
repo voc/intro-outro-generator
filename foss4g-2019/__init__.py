@@ -12,6 +12,51 @@ scheduleUrl = 'https://talks.2019.foss4g.org/bucharest/schedule/export/schedule.
 # For (really) too long titles
 titlemap = {
         198: 'Revamp of CRS management in the OSGeo C/C++ stack with PROJ and GDAL',
+        398: 'Visualizing Temporal Trends in a Time Series of Satellite Imagery',
+        287: 'Linking geospatial foss technologies on big data in biodiversity research',
+        273: 'OGC Overview',
+        189: '3.6 million points to polygons',
+        66: "Creating Wallonia's new very high resolution land cover maps",
+        87: 'Automated GIS-based Complex Developed for the Long-term monitoring',
+        78: 'UN Open GIS: Spiral 3 Geo-Analysis',
+        103: 'Soil Erosion Model Entering Open Source Era with GPU-based Parallelization',
+        85: 'A use case of sharing software and experience from all over the world',
+        445: 'National Forest Inventory in the Czech Republic presented in Graphs and Maps',
+        457: 'GEO 101 - an intro to the Group on Earth Observations (GEO).',
+        384: 'The shift of trade powers',
+        90: 'Inter-comparison of the Global Land Cover Maps in Africa',
+        70: 'Modelling Spatial Accessibility of Primary Health Care in Malawi',
+        65: 'A Scalable Approach for Spatio-Temporal Assessment of Photovoltaic',
+        313: 'GNOSIS Map Tiles',
+        102: 'Comparing INSPIRE and OpenStreetMap data',
+        345: 'Exploring large amounts of weather forecast data through FOSS',
+        313: 'GNOSIS Map Tiles',
+        513: 'EO Data Challenge proposals',
+        63: 'Fine spatial scale modelling of Trentino past forest landscape',
+        362: 'QGIS as a reference project to find sustainable ways to rock!',
+        86: 'Fast insight about the severity of hurricane impact with spatial analysis of Twitter',
+        46: 'A FOSS mapping system for support of electronic communication regulations',
+        439: 'Using open & closed source s/w to manage Transportation Networks',
+        60: 'An open risk index with learning indicators from OSM-tags',
+        68: 'Open Science, Knowledge Sharing and Reproducibility as Drivers',
+        426: "How to host and access STAC Imagery",
+        94: 'Human Geography with Open GIS in Higher Education Course',
+        72: 'An open drought monitoring system for the Deduru Oya basin in Sri Lanka',
+        396: 'The case of PULSE',
+        157: 'Streaming and rendering the Turin 3D geospatial content',
+        180: 'Validation of new OGC standard WFS 3.0 and status update of project',
+        211: 'Implementing Earth Observation based Wetland Monitoring Capacity in Africa',
+        415: 'Social Dynamics in Urban Context (SoDUCo)',
+        199: 'SHOGun, GeoServer & QGIS Integration',
+        344: 'Implementing an openEO compliant back-end for processing data cubes',
+        129: 'Continental Scale Point Cloud Data Management and Exploitation',
+        258: 'Using Cloud Optimised GeoTiffs to Query 24 Billion Pixels In Real-Time',
+        172: 'Development of a flood risk monitoring system.',
+        30: 'Case Study of Data Collection & Data Sharing',
+        316: 'GNOSIS Cartographic Map Style Sheets (CMSS)',
+        431: 'Flood Vulnerability Index for coastal communities',
+        459: 'Processing and refining European Land use Inventory LUCAS for National Needs',
+        518: 'Pivoting to Monetize Mobile Hyperlocal Gamification in the Cloud',
 }
 
 
@@ -137,7 +182,7 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if event['room'] not in ('Plenary (National Theatre)', 'Ronda Ballroom', 'Fortuna West', 'Fortuna East', 'Rapsodia Ballroom', 'Opera Room', 'Opereta Room', 'Simfonia','Menuet','Hora Room','Coral Room'):
+        if event['room'] not in ('Plenary (National Theatre)', 'Ronda Ballroom', 'Fortuna West', 'Fortuna East', 'Rapsodia Ballroom', 'Opera Room', 'Opereta Room', 'Simfonia','Menuet Room','Hora Room','Coralle Room'):
             print("skipping room %s (%s)" % (event['room'], event['title']))
             continue
 
