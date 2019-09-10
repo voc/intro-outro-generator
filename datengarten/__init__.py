@@ -3,7 +3,7 @@
 from renderlib import *
 from easing import *
 
-scheduleUrl = "https://live.ber.c3voc.de/releases/datengarten/datengarten.xml"
+scheduleUrl = "https://berlin.ccc.de/datengarten/index.xml"
 
 def introFrames(p):
 	move=50
