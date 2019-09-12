@@ -125,10 +125,12 @@ def cachedRenderFrame(frame, frameNr, task, cache):
         elif not skip_rendering:
             cache[frame] = frameNr
 
-        with SVGTemplate(task) as svg:
+        svgfile = '{0}/.frames/{1:04d}.svg'.format(task.workdir, frameNr)
+
+        with SVGTemplate(task, svgfile) as svg:
             svg.replacetext()
             svg.transform(frame)
-            svgfile = svg.write()
+            svg.write()
 
         outfile = '{0}/.frames/{1:04d}.png'.format(task.workdir, frameNr)
         renderFrame(svgfile, task, outfile)
@@ -200,9 +202,12 @@ def rendertask(task):
     if debug:
         print("generating {0} from {1}".format(task.outfile, task.infile))
 
-    if args.skip_frames and 'only_rerender_frames_after' not in task.parameters:
-            if os.path.isdir(os.path.join(task.workdir, '.frames')):
-                shutil.rmtree(os.path.join(task.workdir, '.frames'))
+    ## Hacky workaround: Fix this properly without breaking the
+    ## support for partially rendered intros
+    if True: #args.skip_frames and 'only_rerender_frames_after' not in task.parameters:
+        if os.path.isdir(os.path.join(task.workdir, '.frames')):
+            print("Removing", os.path.join(task.workdir, '.frames'))
+            shutil.rmtree(os.path.join(task.workdir, '.frames'))
 
     # make sure a .frames-directory exists in out workdir
     ensurePathExists(os.path.join(task.workdir, '.frames'))
