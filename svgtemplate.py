@@ -3,6 +3,8 @@ import builtins
 import cssutils
 import logging
 import os
+import difflib
+import sys
 from lxml import etree
 from xml.sax.saxutils import escape as xmlescape
 
@@ -10,8 +12,9 @@ cssutils.ser.prefs.lineSeparator = ' '
 cssutils.log.setLevel(logging.FATAL)
 
 class SVGTemplate:
-    def __init__(self, task):
+    def __init__(self, task, outfile):
         self.task = task
+        self.outfile = outfile
 
     def __enter__(self):
         with builtins.open(os.path.join(self.task.workdir, self.task.infile), 'r') as fp:
@@ -20,11 +23,9 @@ class SVGTemplate:
 
     def write(self):
         # open the output-file (named ".gen.svg" in the workdir)
-        outfile = os.path.join(self.task.workdir, '.gen.svg')
-        with builtins.open(outfile, 'w') as fp:
+        with builtins.open(self.outfile, 'w') as fp:
             # write the generated svg-text into the output-file
             fp.write(self.svgstr)
-        return outfile
 
     def replacetext(self):
         for key in self.task.parameters.keys():
