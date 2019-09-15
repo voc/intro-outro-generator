@@ -67,34 +67,36 @@ def error(str):
 	parser.print_help()
 	sys.exit(1)
 
-parser = ConfigParser()
-parser.read(os.path.join(os.path.dirname(args.project), 'config.ini'))
-template = parser['default']['template']
+cparser = ConfigParser()
+cparser.read(os.path.join(os.path.dirname(args.project), 'config.ini'))
+template = cparser['default']['template']
+alpha = cparser['default']['alpha']
+prores = cparser['default']['prores']
 
-title_in = parser['title']['in']
-title_out = parser['title']['out']
-title_font = parser['title']['font']
-title_fontsize = parser['title']['fontsize']
-title_fontcolor = parser['title']['fontcolor']
-title_x = parser['title']['x']
-title_y = parser['title']['y']
+title_in = cparser['title']['in']
+title_out = cparser['title']['out']
+title_font = cparser['title']['font']
+title_fontsize = cparser['title']['fontsize']
+title_fontcolor = cparser['title']['fontcolor']
+title_x = cparser['title']['x']
+title_y = cparser['title']['y']
 
-speaker_in = parser['speaker']['in']
-speaker_out = parser['speaker']['out']
-speaker_font = parser['speaker']['font']
-speaker_fontsize = parser['speaker']['fontsize']
-speaker_fontcolor = parser['speaker']['fontcolor']
-speaker_x = parser['speaker']['x']
-speaker_y = parser['speaker']['y']
+speaker_in = cparser['speaker']['in']
+speaker_out = cparser['speaker']['out']
+speaker_font = cparser['speaker']['font']
+speaker_fontsize = cparser['speaker']['fontsize']
+speaker_fontcolor = cparser['speaker']['fontcolor']
+speaker_x = cparser['speaker']['x']
+speaker_y = cparser['speaker']['y']
 
-text_in = parser['text']['in']
-text_out = parser['text']['out']
-text_font = parser['text']['font']
-text_fontsize = parser['text']['fontsize']
-text_fontcolor = parser['text']['fontcolor']
-text_x = parser['text']['x']
-text_y = parser['text']['y']
-text_text = parser['text']['text']
+text_in = cparser['text']['in']
+text_out = cparser['text']['out']
+text_font = cparser['text']['font']
+text_fontsize = cparser['text']['fontsize']
+text_fontcolor = cparser['text']['fontcolor']
+text_x = cparser['text']['x']
+text_y = cparser['text']['y']
+text_text = cparser['text']['text']
 
 font_t = os.path.join(os.path.dirname(args.project), title_font)
 font_s = os.path.join(os.path.dirname(args.project), speaker_font)
@@ -103,10 +105,20 @@ font_tt = os.path.join(os.path.dirname(args.project), text_font)
 fileformat = os.path.splitext(template)[1]
 infile = os.path.join(os.path.dirname(args.project), template)
 
-schedule = parser['default']['schedule']
+schedule = cparser['default']['schedule']
+
+if not (os.path.exists(os.path.join(args.project, template))):
+    error("Template file {} in Project Path is missing".format(template))
+
+for ffile in (title_font, speaker_font, text_font):
+    if not (os.path.exists(os.path.join(args.project, ffile))):
+        error("Font file {} in Project Path is missing".format(ffile))
 
 if not (os.path.exists(os.path.join(args.project, 'config.ini'))):
     error("config.ini file in Project Path is missing")
+
+if alpha == 'true' and not fileformat == '.mov':
+    error("Alpha can only be rendered with .mov source files")
 
 if not args.project:
     error("The Project Path is a required argument")
@@ -210,20 +222,23 @@ def enqueue_job(event):
         print('Title: ', t)
         print('Speaker: ', s)
 
-    if fileformat == '.mov':
-        outfile = os.path.join(os.path.dirname(args.project), event_id + '.mov')
-    else:
-        outfile = os.path.join(os.path.dirname(args.project), event_id + '.ts')
+    outfile = os.path.join(os.path.dirname(args.project), event_id + '.ts')
 
     videofilter = "drawtext=enable='between(n,{0},{1})':fontfile={2}:fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(title_in, title_out, font_t, title_fontsize, title_fontcolor, title_x, title_y, t)
     videofilter += "drawtext=enable='between(n,{0},{1})':fontfile={2}:fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(speaker_in, speaker_out, font_s, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s)
     videofilter += "drawtext=enable='between(n,{0},{1})':fontfile={2}:fontsize={3}:fontcolor={4}:x={5}:y={6}:text={7}".format(text_in, text_out, font_tt, text_fontsize, text_fontcolor, text_x, text_y, text_text)
 
     if fileformat == '.mov':
-        cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -shortest -c:v qtrle -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile)
-        #cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -vcodec prores_ks -pix_fmt yuva444p10le -profile:v 4444 -shortest -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile)
+        if alpha == 'true':
+            if prores == 'true':
+                cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -vcodec prores_ks -pix_fmt yuva444p10le -profile:v 4444 -shortest -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile)
+            else:
+                cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -shortest -c:v qtrle -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile)
+        else:
+            cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
     else:
         cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
+
     if args.debug:
         print(cmd)
 
