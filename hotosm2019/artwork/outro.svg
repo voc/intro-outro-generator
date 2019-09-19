@@ -53,20 +53,12 @@
         fill: #d73534;
       }
 
-      .g {
-        clip-path: url(#b);
-      }
-
       .h {
         stroke: url(#c);
       }
 
       .i, .n {
         fill: #999696;
-      }
-
-      .j {
-        clip-path: url(#e);
       }
 
       .k {
