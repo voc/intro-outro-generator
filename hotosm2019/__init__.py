@@ -7,39 +7,12 @@ from easing import *
 scheduleUrl = 'https://summit2019.hotosm.org/schedule.xml'
 
 def introFrames(args):
-    # show logo first for 2 seconds
     frames = 4*fps
     for i in range(0, frames):
         yield (
             ('logo-artwork', 'style', 'opacity', 1),
             ('talk-metadata', 'style', 'opacity', 1),
         )
-#    # show title, subtitle and speakers for 3 seconds
-#    frames = 3*fps
-#    for i in range(0, frames):
-#        yield (
-#            ('logo-artwork', 'style', 'opacity', 0),
-#            ('talk-metadata', 'style', 'opacity', 1),
-#        )
-
-#def backgroundFrames(parameters):
-#    # 40 Sekunden
-#
-#        frames = 20*fps
-#        for i in range(0, frames):
-#            xshift = (i+1) * 300/frames
-#            yshift = ((i+1) * (150/frames))
-#            yield(
-#                        ('pillgroup', 'attr', 'transform', 'translate(%.4f, %.4f)' % (xshift, yshift)),
-#            )
-#
-#        frames = 20*fps
-#        for i in range(0, frames):
-#            xshift = 300 - ((i+1) * (300/frames))
-#            yshift = 150 - ((i+1) * (150/frames))
-#            yield(
-#                        ('pillgroup', 'attr', 'transform', 'translate(%.4f, %.4f)' % (xshift, yshift)),
-#            )
 
 def outroFrames(args):
 #fadein outro graphics
@@ -54,13 +27,17 @@ def outroFrames(args):
             ('everything', 'style', 'opacity', 1),
         )
 
+def linearFade(step, start, end, steps):
+    i = float(step)/steps
+    return i * (end - start) + start
+
 def pauseFrames(args):
         frames = int(3*fps) + 1
         for i in range(0, frames):
                 yield (
-                        ('logo', 'style', 'opacity', "%.4f" % easeInQuad(i, 0.0, 1.0, frames)),
+                        ('logo', 'style', 'opacity', "%.4f" % linearFade(i, 0.0, 1.0, frames)),
                 )
-        frames = int(3*fps)
+        frames = int(2*fps)
         for i in range(0, frames):
                 yield (
                         ('logo', 'style', 'opacity', 1.0),
@@ -68,37 +45,31 @@ def pauseFrames(args):
         frames = int(3*fps)
         for i in range(0, frames):
                 yield (
-                        ('logo', 'style', 'opacity', "%.4f" % easeOutQuad(i, 0.0, 1.0, frames)),
+                        ('logo', 'style', 'opacity', "%.4f" % linearFade(i, 1.0, 0.0, frames)),
                 )
-        frames = int(3*fps)
+        frames = int(2*fps)
         for i in range(0, frames):
                 yield (
                         ('logo', 'style', 'opacity', 0),
                 )
 
 def debug():
-#    render('intro.svg',
-#        '../intro.ts',
-#        introFrames,
-#        {
-#            '$id': 7776,
-#            '$title': 'StageWar live!',
-#            '$subtitle': 'Metal Konzert',
-#            '$persons':  'www.stagewar.de'
-#        }
-#    )
+    render('intro.svg',
+        '../intro.ts',
+        introFrames,
+        {
+            '$id': 7776,
+            '$title': 'StageWar live!',
+            '$subtitle': 'Metal Konzert',
+            '$persons':  'www.stagewar.de'
+        }
+    )
 
     render('outro.svg',
         '../outro.ts',
         outroFrames
     )
 
-#    render(
-#        'background.svg',
-#        '../background.ts',
-#        backgroundFrames
-#    )
-#
     render('pause.svg',
         '../pause.ts',
         pauseFrames
@@ -108,16 +79,19 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if event['room'] not in ('Chirurgie (Saal 1.04)', 'Kreißsaal (Saal 1.11)'):
+        if event['room'] not in ('Horsaal Ost', 'Horsaal West', 'Kleiner Horsaal'):
             print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
             continue
-        if not (idlist==[]):
-                if 000000 in idlist:
-                        print("skipping id (%s [%s])" % (event['title'], event['id']))
-                        continue
-                if int(event['id']) not in idlist:
-                        print("skipping id (%s [%s])" % (event['title'], event['id']))
-                        continue
+        if event['day'] == "1":
+            print("skipping id ({} [{}])".format(event["title"], event["id"]))
+            continue
+#        if not (idlist==[]):
+#                if 000000 in idlist:
+#                        print("skipping id (%s [%s])" % (event['title'], event['id']))
+#                        continue
+#                if int(event['id']) not in idlist:
+#                        print("skipping id (%s [%s])" % (event['title'], event['id']))
+#                        continue
 
         # generate a task description and put them into the queue
         queue.put(Rendertask(
@@ -147,11 +121,3 @@ def tasks(queue, args, idlist, skiplist):
             outfile = 'pause.ts',
             sequence = pauseFrames
         ))
-
-#    # place the background-sequence into the queue
-#    if not "bg" in skiplist:
-#        queue.put(Rendertask(
-#            infile = 'background.svg',
-#            outfile = 'background.ts',
-#            sequence = backgroundFrames
-#        ))
