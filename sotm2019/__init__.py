@@ -51,6 +51,29 @@ def outroFrames(args):
         )
 
 
+def pauseFrames(args):
+    frames = int(3*fps) + 1
+    for i in range(0, frames):
+        yield (
+            ('logo', 'style', 'opacity', "%.4f" % linearFade(i, 0.0, 1.0, frames)),
+        )
+    frames = int(2*fps)
+    for i in range(0, frames):
+        yield (
+            ('logo', 'style', 'opacity', 1.0),
+        )
+    frames = int(3*fps)
+    for i in range(0, frames):
+        yield (
+            ('logo', 'style', 'opacity', "%.4f" % linearFade(i, 1.0, 0.0, frames)),
+        )
+    frames = int(2*fps)
+    for i in range(0, frames):
+        yield (
+            ('logo', 'style', 'opacity', 0),
+        )
+
+
 def debug():
     render(
       'intro.svg',
@@ -65,6 +88,11 @@ def debug():
     render('outro.svg',
         '../outro.ts',
         outroFrames
+    )
+
+    render('pause.svg',
+        '../pause.ts',
+        pauseFrames
     )
 
 
