@@ -636,9 +636,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="1114.8938"
-     inkscape:cy="512.26502"
+     inkscape:zoom="0.25"
+     inkscape:cx="1269.4825"
+     inkscape:cy="542.94405"
      inkscape:document-units="mm"
      inkscape:current-layer="svg980"
      showgrid="false"
@@ -682,8 +682,8 @@
        id="flowRegion10641"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.01431465px;font-family:Barlow;-inkscape-font-specification:'Barlow, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#383838;fill-opacity:1"><rect
          id="rect10643"
-         width="256.41003"
-         height="109.6739"
+         width="254.53369"
+         height="130.31364"
          x="905.09668"
          y="344.60895"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.01431465px;font-family:Barlow;-inkscape-font-specification:'Barlow, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#383838;fill-opacity:1" /></flowRegion><flowPara
@@ -1086,7 +1086,7 @@
     </g>
   </g>
   <flowRoot
-     transform="matrix(0.89140781,0,0,0.89140781,-604.30849,-155.8539)"
+     transform="matrix(0.89140781,0,0,0.89140781,-604.30849,-133.09973)"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.83014107px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:'Barlow, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#383838;fill-opacity:1;stroke:none"
      id="persons"
      xml:space="preserve"
@@ -1096,7 +1096,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.83014107px;font-family:Barlow;-inkscape-font-specification:'Barlow, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#383838;fill-opacity:1"
          y="344.60895"
          x="905.09668"
-         height="165.51596"
-         width="316.81448"
+         height="106.15293"
+         width="309.69089"
          id="rect842" /></flowRegion><flowPara
        id="flowPara852">$persons</flowPara></flowRoot></svg>
