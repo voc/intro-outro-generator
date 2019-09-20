@@ -74,9 +74,6 @@ def tasks(queue, args, idlist, skiplist):
         if event['room'] not in ('Hörsaal Ost', 'Großer Hörsaal', 'Hörsaal West'):
             print("skipping room %s (%s)" % (event['room'], event['title']))
             continue
-        if event['day'] not in ('2'):
-            print("skipping day %s" % (event['day']))
-            continue
         if not (idlist==[]):
             if 000000 in idlist:
                 print("skipping id (%s [%s])" % (event['title'], event['id']))
