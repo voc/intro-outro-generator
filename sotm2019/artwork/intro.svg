@@ -636,16 +636,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="-380.21134"
-     inkscape:cy="554.28922"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="1114.8938"
+     inkscape:cy="512.26502"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="svg980"
      showgrid="false"
-     inkscape:window-width="1916"
-     inkscape:window-height="1029"
+     inkscape:window-width="1366"
+     inkscape:window-height="768"
      inkscape:window-x="0"
-     inkscape:window-y="22"
+     inkscape:window-y="31"
      inkscape:window-maximized="0"
      units="px" />
   <metadata
@@ -671,19 +671,19 @@
        width="507.93002"
        height="285.68002"
        x="0.03499547"
-       y="-144.94539" />
+       y="-148.68716" />
   </g>
   <flowRoot
      xml:space="preserve"
      id="title"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.01431465px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:'Barlow, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#383838;fill-opacity:1;stroke:none"
-     transform="matrix(1.1280815,0,0,1.1280815,-820.39123,-302.92044)"
+     transform="matrix(1.1280815,0,0,1.1280815,-820.39123,-366.04171)"
      inkscape:label="title"><flowRegion
        id="flowRegion10641"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.01431465px;font-family:Barlow;-inkscape-font-specification:'Barlow, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#383838;fill-opacity:1"><rect
          id="rect10643"
-         width="709.93518"
-         height="164.04877"
+         width="256.41003"
+         height="109.6739"
          x="905.09668"
          y="344.60895"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.01431465px;font-family:Barlow;-inkscape-font-specification:'Barlow, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#383838;fill-opacity:1" /></flowRegion><flowPara
@@ -1086,7 +1086,7 @@
     </g>
   </g>
   <flowRoot
-     transform="matrix(0.89140781,0,0,0.89140781,-604.30849,-169.18222)"
+     transform="matrix(0.89140781,0,0,0.89140781,-604.30849,-155.8539)"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.83014107px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:'Barlow, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#383838;fill-opacity:1;stroke:none"
      id="persons"
      xml:space="preserve"
@@ -1096,7 +1096,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.83014107px;font-family:Barlow;-inkscape-font-specification:'Barlow, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#383838;fill-opacity:1"
          y="344.60895"
          x="905.09668"
-         height="164.04877"
-         width="709.93518"
+         height="165.51596"
+         width="316.81448"
          id="rect842" /></flowRegion><flowPara
-       id="flowPara852">$speaker</flowPara></flowRoot></svg>
+       id="flowPara852">$persons</flowPara></flowRoot></svg>
