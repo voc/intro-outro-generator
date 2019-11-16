@@ -185,11 +185,16 @@ def filter_finished_jobs(active_jobs):
 def finalize_job(job_id, event):
     event_id = str(event['id'])
     intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
+    final_clip = os.path.join(os.path.dirname(args.motn), event_id + '.ts')
     copy_clip = os.path.join(os.path.dirname(args.motn), event_id + '.mov')
 
     shutil.copy(intermediate_clip, copy_clip)
-    event_print(event, "finalized intro to " + copy_clip)
 
+    run('ffmpeg -y -hide_banner -loglevel error -i {input} -f lavfi -i anullsrc -ar 48000 -ac 2 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:a -map 1:a -map 1:a -map 1:a -shortest -f mpegts {output}',
+        input=intermediate_clip,
+        output=final_clip)
+
+    event_print(event, "finalized intro to " + final_clip)
 
 active_jobs = []
 
