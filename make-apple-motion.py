@@ -191,9 +191,13 @@ def finalize_job(job_id, event):
     event_print(event, "finalized intro to " + copy_clip)
 
 
-
-
 active_jobs = []
+
+if args.ids:
+    print("only including ids: ", args.ids)
+
+if args.exclude_ids:
+    print("excluding ids: ", args.exclude_ids)
 
 filtered_events = events
 filtered_events = filter(lambda event: not args.ids or event['id'] in args.ids, filtered_events)
