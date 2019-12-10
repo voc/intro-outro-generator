@@ -5,6 +5,13 @@ from easing import *
 
 scheduleUrl = "https://berlin.ccc.de/datengarten/index.xml"
 
+personmap = {
+}
+
+taglinemap = {
+}
+
+
 def introFrames(p):
 	move=50
 
@@ -84,6 +91,25 @@ def tasks(queue, args, idlist, skiplist):
                 '$id': event['id'],
                 '$title': event['subtitle'],
                 '$person': event['personnames']
+                }
+            ))
+
+        for person in persons(scheduleUrl, personmap, taglinemap, event['id']):
+            queue.put(Rendertask(
+                infile = 'lower-third.svg',
+                outfile = "event_{}_person_{}.png".format(str(event['id']), str(person['id'])),
+                parameters = {
+                    '$PERSON': person['person'],
+                    '$TAGLINE': person['tagline'],
+                    }
+                ))
+            
+        queue.put(Rendertask(
+            infile = 'lower-third.svg',
+            outfile = "event_{}_persons.png".format(str(event['id'])),
+            parameters = {
+                '$PERSON': event['personnames'],
+                '$TAGLINE': '',
                 }
             ))
 

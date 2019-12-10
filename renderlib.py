@@ -92,7 +92,7 @@ def renderFrame(infile, task, outfile):
     else:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
         cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-png="{3}" "{4}" 2>&1 >/dev/null'.format(task.workdir, width, height, outfile, infile)
-        errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
+        errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
         if errorReturn != '':
             print("inkscape exitted with error\n" + errorReturn)
             # sys.exit(42)
@@ -239,7 +239,7 @@ def downloadSchedule(scheduleUrl):
     parser = etree.XMLParser(huge_tree=True)
     return etree.fromstring(xml, parser)
 
-def persons(scheduleUrl, personmap={}, taglinemap={}):
+def persons(scheduleUrl, personmap={}, taglinemap={}, forEventId=None):
     schedule = downloadSchedule(scheduleUrl)
     # iterate all days
     for day in schedule.iter('day'):
@@ -247,6 +247,9 @@ def persons(scheduleUrl, personmap={}, taglinemap={}):
         for room in day.iter('room'):
             # iterate events on that day in this room
             for event in room.iter('event'):
+                eventid = int(event.get("id"))
+                if event != None and not eventid == forEventId:
+                    continue
                 # aggregate names of the persons holding this talk
                 persons_seen = []
                 if event.find('persons') is not None:
