@@ -17,6 +17,8 @@ fps = 25
 debug = True
 args = None
 
+scheduleTree=None
+
 def loadProject(projectname):
     sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), projectname))
     return __import__(projectname)
@@ -224,8 +226,6 @@ def rendertask(task):
         # remove the generated svg
         ensureFilesRemoved(os.path.join(task.workdir, '.gen.svg'))
 
-
-
 # Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event
 def downloadSchedule(scheduleUrl):
     print("downloading schedule")
@@ -240,8 +240,15 @@ def downloadSchedule(scheduleUrl):
     parser = etree.XMLParser(huge_tree=True)
     return etree.fromstring(xml, parser)
 
+def getSchedule(scheduleUrl):
+    global scheduleTree
+    if not scheduleTree:
+        scheduleTree=downloadSchedule(scheduleUrl)
+    return scheduleTree
+
+
 def persons(scheduleUrl, personmap={}, taglinemap={}, forEventId=None):
-    schedule = downloadSchedule(scheduleUrl)
+    schedule = getSchedule(scheduleUrl)
     # iterate all days
     for day in schedule.iter('day'):
         # iterate all rooms
@@ -275,7 +282,7 @@ def persons(scheduleUrl, personmap={}, taglinemap={}, forEventId=None):
                             }
 
 def events(scheduleUrl, titlemap={}):
-    schedule = downloadSchedule(scheduleUrl)
+    schedule = getSchedule(scheduleUrl)
     # iterate all days
     for day in schedule.iter('day'):
         # iterate all rooms
