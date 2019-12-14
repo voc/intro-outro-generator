@@ -97,16 +97,16 @@ def tasks(queue, args, idlist, skiplist):
         for person in persons(scheduleUrl, personmap, taglinemap, event['id']):
             queue.put(Rendertask(
                 infile = 'lower-third.svg',
-                outfile = "event_{}_person_{}.png".format(str(event['id']), str(person['id'])),
+                outfile = 'event_{}_person_{}.png'.format(str(event['id']), str(person['id'])),
                 parameters = {
                     '$PERSON': person['person'],
                     '$TAGLINE': person['tagline'],
                     }
                 ))
-            
+
         queue.put(Rendertask(
             infile = 'lower-third.svg',
-            outfile = "event_{}_persons.png".format(str(event['id'])),
+            outfile = 'event_{}_persons.png'.format(str(event['id'])),
             parameters = {
                 '$PERSON': event['personnames'],
                 '$TAGLINE': '',
