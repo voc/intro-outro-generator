@@ -140,9 +140,10 @@ def cachedRenderFrame(frame, frameNr, task, cache):
 
 
 def rendertask_image(task):
-    with SVGTemplate(task) as svg:
+    svgfile = '{0}/image.svg'.format(task.workdir)
+    with SVGTemplate(task, svgfile) as svg:
         svg.replacetext()
-        svgfile = svg.write()
+        svg.write()
     renderFrame(svgfile, task, task.outfile)
 
 def rendertask_video(task):
