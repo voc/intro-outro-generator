@@ -49,6 +49,10 @@ parser.add_argument('--pause', action="store_true", default=False, help='''
     Render a pause loop from the pause.aep file in the project folder.
     ''')
 
+parser.add_argument('--alpha', action="store_true", default=False, help='''
+    Render intro/outro with alpha.
+    ''')
+
 parser.add_argument('--force', action="store_true", default=False, help='''
     Force render if file exists.
     ''')
@@ -173,13 +177,13 @@ def enqueue_job(event):
     if event_id == 'pause' or event_id == 'outro' or event_id == 'bgloop':
         copyfile(args.project + event_id + '.aep', work_doc)
         if platform.system() == 'Darwin':
-            run(r'/Applications/Adobe\ After\ Effects\ CC\ 2019/aerender -project {jobpath} -comp {comp} -output {locationpath}',
+            run(r'/Applications/Adobe\ After\ Effects\ 2020/aerender -project {jobpath} -comp {comp} -output {locationpath}',
                 jobpath=work_doc,
                 comp=event_id,
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2019/Support\ Files/aerender.exe -project {jobpath} -comp {comp} -output {locationpath}',
+            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/aerender.exe -project {jobpath} -comp {comp} -output {locationpath}',
                 jobpath=work_doc,
                 comp=event_id,
                 locationpath=intermediate_clip)
@@ -204,20 +208,20 @@ def enqueue_job(event):
                 scriptpath=script_doc,
                 ascript_path=ascript_doc)
 
-            run(r'/Applications/Adobe\ After\ Effects\ CC\ 2019/aerender -project {jobpath} -comp "intro" -output {locationpath}',
+            run(r'/Applications/Adobe\ After\ Effects\ 2020/aerender -project {jobpath} -comp "intro" -output {locationpath}',
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run_once(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2019/Support\ Files/AfterFX.exe -noui {jobpath}',
+            run_once(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/AfterFX.exe -noui {jobpath}',
                      jobpath=work_doc)
             time.sleep(15)
 
-            run_once(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2019/Support\ Files/AfterFX.exe -noui -r {scriptpath}',
+            run_once(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/AfterFX.exe -noui -r {scriptpath}',
                      scriptpath=script_doc)
             time.sleep(5)
 
-            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ CC\ 2019/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -output {locationpath}',
+            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -output {locationpath}',
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
 
@@ -229,9 +233,14 @@ def finalize_job(job_id, event):
     intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
     final_clip = os.path.join(os.path.dirname(args.project), event_id + '.ts')
 
-    run('ffmpeg -y -hide_banner -loglevel error -i {input} -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',
-    #run('ffmpeg -y -hide_banner -loglevel error -i {input} -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 1:0 -c:a mp2 -map 2:0 -c:a mp2 -shortest -f mpegts {output}',
-    #run('ffmpeg -y -hide_banner -loglevel error -i {input} -f lavfi -i anullsrc -ar 48000 -ac 2 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:0 -c:a copy -map 2:0 -c:a copy -shortest -f mpegts {output}',
+    if args.alpha:
+        run('ffmpeg -y -hide_banner -loglevel error -i {input} -map 0:0 -c:v qtrle -movflags faststart -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mov {output}',
+        input=intermediate_clip,
+        output=final_clip)
+    else:
+        run('ffmpeg -y -hide_banner -loglevel error -i {input} -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',
+        #run('ffmpeg -y -hide_banner -loglevel error -i {input} -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 1:0 -c:a mp2 -map 2:0 -c:a mp2 -shortest -f mpegts {output}',
+        #run('ffmpeg -y -hide_banner -loglevel error -i {input} -f lavfi -i anullsrc -ar 48000 -ac 2 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:0 -c:a copy -map 2:0 -c:a copy -shortest -f mpegts {output}',
         input=intermediate_clip,
         output=final_clip)
 
