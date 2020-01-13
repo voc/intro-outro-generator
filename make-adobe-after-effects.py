@@ -92,14 +92,15 @@ if not args.debug and not args.pause and not args.outro and not args.bgloop and 
     error("Either specify --debug, --pause, --outro or supply a schedule")
 
 if args.debug:
-    persons = ['watz']
+    persons = ['ln']
+    #persons = ['R. Rehak', 'julika', 'lislis', 'I. Hermann', 'E. Manifesti', 'joliyea', 'V. Schlüter', 'C. Haupt', 'K. Henneberger' , 'A. Höfner']
     events = [{
-        'id': 1,
-        'title': 'Eröffnungsveranstaltung',
-        'subtitle': 'Easterhegg 2018',
+        'id': 133,
+        'title': 'Lithium-Ion Batteries: Why do they work?',
+        'subtitle': '',
         'persons': persons,
         'personnames': ', '.join(persons),
-        'room': 'Heisenberg 1',
+        'room': 'schaoswest',
     }]
 
 elif args.pause:
@@ -162,6 +163,12 @@ def run(command, **kwargs):
         fmt_command(command, **kwargs),
         stderr=subprocess.STDOUT,
         stdout=subprocess.DEVNULL)
+
+
+def run_output(command, **kwargs):
+    return subprocess.check_output(
+        fmt_command(command, **kwargs),
+        stderr=subprocess.STDOUT)
 
 
 def enqueue_job(event):
@@ -234,15 +241,29 @@ def finalize_job(job_id, event):
     final_clip = os.path.join(os.path.dirname(args.project), event_id + '.ts')
 
     if args.alpha:
-        run('ffmpeg -y -hide_banner -loglevel error -i {input} -map 0:0 -c:v qtrle -movflags faststart -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mov {output}',
-        input=intermediate_clip,
-        output=final_clip)
+        ffprobe = run_output('ffprobe -i {input} -show_streams -select_streams a -loglevel error',
+            input=intermediate_clip)
+        if ffprobe:
+            run('ffmpeg -y -hide_banner -loglevel error -i {input} -c:v qtrle -movflags faststart -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mov {output}',
+                input=intermediate_clip,
+                output=final_clip)
+        else:
+            run('ffmpeg -y -hide_banner -loglevel error -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 -i {input} -c:v qtrle -movflags faststart -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mov {output}',
+                input=intermediate_clip,
+                output=final_clip)
     else:
-        run('ffmpeg -y -hide_banner -loglevel error -i {input} -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',
-        #run('ffmpeg -y -hide_banner -loglevel error -i {input} -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 1:0 -c:a mp2 -map 2:0 -c:a mp2 -shortest -f mpegts {output}',
-        #run('ffmpeg -y -hide_banner -loglevel error -i {input} -f lavfi -i anullsrc -ar 48000 -ac 2 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:0 -c:a copy -map 2:0 -c:a copy -shortest -f mpegts {output}',
-        input=intermediate_clip,
-        output=final_clip)
+        ffprobe = run_output('ffprobe -i {input} -show_streams -select_streams a -loglevel error',
+            input=intermediate_clip)
+        if ffprobe:
+            event_print(event, "finalize with audio from source file")
+            run('ffmpeg -y -hide_banner -loglevel error -i {input} -c:v mpeg2video -q:v 2 -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',
+                input=intermediate_clip,
+                output=final_clip)
+        else:
+            event_print(event, "finalize with silent audio")
+            run('ffmpeg -y -hide_banner -loglevel error -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 -i {input} -c:v mpeg2video -q:v 2 -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',
+                input=intermediate_clip,
+                output=final_clip)
 
     if event_id == 'pause' or event_id == 'outro' or event_id == 'bgloop':
         event_print(event, "finalized " + str(event_id) + " to " + final_clip)
