@@ -1,0 +1,33 @@
+<schedule>
+  <version>1.0</version>
+  <conference>
+    <title>hack!friday</title>
+    <acronym>muc</acronym>
+    <days>1</days>
+    <start>2020-01-10</start>
+    <end>2020-01-10</end>
+    <timeslot_duration>02:00</timeslot_duration>
+  </conference>
+  <day index="1" date="2020-01-10" start="2020-01-10T20:00:00+01:00" end="2020-01-10T22:00:00+01:00">
+    <room name="Hauptraum">
+      <event id="8001" guid="8d8d291c-dba0-48d2-911b-1c11c9ac8a63">
+        <date>2020-01-10T20:00:00+01:00</date>
+        <start>20:00</start>
+        <duration>02:00</duration>
+        <room>Hauptraum</room>
+        <slug>muc-8001-hf-freecad</slug>
+        <title>hack!friday: freeCAD</title>
+        <subtitle/>
+        <track/>
+        <type/>
+        <language>de</language>
+        <abstract/>
+        <description/>
+        <persons>
+          <person id="1">9R</person>
+        </persons>
+        <links/>
+      </event>
+    </room>
+  </day> 
+</schedule>
