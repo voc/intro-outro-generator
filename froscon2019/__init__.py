@@ -6,6 +6,13 @@ from renderlib import *
 from easing import *
 import svg.path
 
+
+personmap = {
+}
+
+taglinemap = {
+}
+
 # URL to Schedule-XML
 scheduleUrl = 'https://programm.froscon.de/2019/schedule.xml'
 
@@ -206,7 +213,8 @@ def tasks(queue, args, idlist, skiplist):
 			continue
 
 		if (event['id'] in idlist or not idlist) and not 'intro' in skiplist:
-		# generate a task description and put them into the queue
+			# generate a task description and put them into the queue
+
 			queue.put(Rendertask(
 				infile = 'intro.svg',
 				outfile = str(event['id'])+".ts",
@@ -218,6 +226,27 @@ def tasks(queue, args, idlist, skiplist):
 					'$personnames': event['personnames']
 				}
 			))
+
+			idx=0
+			for idx, person in enumerate(persons(scheduleUrl, personmap, taglinemap, event['id'])):
+				queue.put(Rendertask(
+					infile = 'insert.svg',
+					outfile = 'event_{}_person_{}.png'.format(str(event['id']), str(person['id'])),
+					parameters = {
+						'$PERSON': person['person'],
+						'$TAGLINE': person['tagline'],
+						}
+					))
+
+				if idx > 0:
+					queue.put(Rendertask(
+					infile = 'insert.svg',
+					outfile = 'event_{}_persons.png'.format(str(event['id'])),
+					parameters = {
+						'$PERSON': event['personnames'],
+						'$TAGLINE': '',
+						}
+					))
 
 	if not 'outro' in skiplist:
 		# place a task for the outro into the queue

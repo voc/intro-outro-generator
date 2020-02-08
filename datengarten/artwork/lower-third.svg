@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1920"
+   height="1080"
+   viewBox="0 0 508 285.75001"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="lower-third.svg"
+   inkscape:export-filename="/home/peter/DG-test.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient856">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop852" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop854" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient856"
+       id="linearGradient858"
+       x1="392.33929"
+       y1="241.43747"
+       x2="123.40669"
+       y2="240.67078"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(2.1651643e-6)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="641.42485"
+     inkscape:cy="446.1006"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:pagecheckerboard="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0">
+    <sodipodi:guide
+       position="71.059524,78.61905"
+       orientation="0,1"
+       id="guide860"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="55.5625,30.616073"
+       orientation="0,1"
+       id="guide862"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="136.44941,128.13393"
+       orientation="1,0"
+       id="guide864"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="64.255952,258.53572"
+       orientation="1,0"
+       id="guide1167"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-11.249983)">
+    <path
+       style="opacity:0.78800001;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path984"
+       sodipodi:type="arc"
+       sodipodi:cx="64.593704"
+       sodipodi:cy="240.56821"
+       sodipodi:rx="59.342266"
+       sodipodi:ry="53.86145"
+       sodipodi:start="0.40488148"
+       sodipodi:end="0.0019043287"
+       d="M 119.13809,261.78476 A 59.342266,53.86145 0 0 1 46.822471,291.95772 59.342266,53.86145 0 0 1 6.4746679,229.68855 59.342266,53.86145 0 0 1 70.674414,186.99027 59.342266,53.86145 0 0 1 123.93586,240.67078 l -59.342156,-0.10257 z" />
+    <rect
+       style="opacity:0.775;fill:url(#linearGradient858);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect850"
+       width="384.40176"
+       height="65.767853"
+       x="123.9762"
+       y="208.17557" />
+    <g
+       transform="matrix(0.26458334,0,0,0.26458334,25.65189,1.2923815)"
+       id="layer1-8"
+       inkscape:label="Layer 1"
+       style="fill:#000000">
+      <text
+         transform="scale(1.0084809,0.99159042)"
+         id="text3045"
+         y="774.61652"
+         x="4.957952"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:minecra;-inkscape-font-specification:minecra;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           y="774.61652"
+           x="4.957952"
+           id="tspan3047"
+           sodipodi:role="line">       1 1101 1110          </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3049"
+           y="796.039"
+           x="4.957952"
+           sodipodi:role="line">      111 \/1|011 |/1101    </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3051"
+           y="817.46143"
+           x="4.957952"
+           sodipodi:role="line">     11\/1/ \||/01/_/11/_1  </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3053"
+           y="838.88391"
+           x="4.957952"
+           sodipodi:role="line">   011  \/110|/ \/ 1 111    </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3055"
+           y="860.3064"
+           x="4.957952"
+           sodipodi:role="line"> 01_\_1\_\11 | 0/111_/_1011 </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3057"
+           y="881.72882"
+           x="4.957952"
+           sodipodi:role="line">11 0111 1 \ 0| /  1111 01/11</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3059"
+           y="903.15131"
+           x="4.957952"
+           sodipodi:role="line"> __1_--011`  |{,1101---111-~</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3061"
+           y="924.57373"
+           x="4.957952"
+           sodipodi:role="line">           \ }{             </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3063"
+           y="945.99622"
+           x="4.957952"
+           sodipodi:role="line">       CCC  }{{             </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3065"
+           y="967.4187"
+           x="4.957952"
+           sodipodi:role="line">            }{{  Berlin     </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3067"
+           y="988.84113"
+           x="4.957952"
+           sodipodi:role="line">            {}}             </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3069"
+           y="1010.2636"
+           x="4.957952"
+           sodipodi:role="line">      , -=-~{ .-^- _        </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3071"
+           y="1031.686"
+           x="4.957952"
+           sodipodi:role="line">             }              </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3073"
+           y="1053.1085"
+           x="4.957952"
+           sodipodi:role="line">             {              </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.13733279px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace, Bold';fill:#000000;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan3075"
+           y="1074.531"
+           x="4.957952"
+           sodipodi:role="line"> </tspan></text>
+    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot986"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;line-height:125%;font-family:monospace;-inkscape-font-specification:'monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ececec;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.26458334,0,0,0.26458334,-2.2678569,42.999983)"><flowRegion
+         id="flowRegion988"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ececec"><rect
+           id="rect990"
+           width="1375.7142"
+           height="94.285721"
+           x="525.71429"
+           y="782.85712"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ececec" /></flowRegion><flowPara
+         id="flowPara992"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ececec">$TAGLINE</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot994"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion996"><rect
+           id="rect998"
+           width="1222.8572"
+           height="65.714287"
+           x="514.28571"
+           y="782.85712" /></flowRegion><flowPara
+         id="flowPara1000" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot1002"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:66.66666412px;line-height:125%;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.26458334,0,0,0.26458334,17.386905,12.761888)"><flowRegion
+         id="flowRegion1004"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:66.66666412px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6"><rect
+           id="rect1006"
+           width="1401.4285"
+           height="105.71431"
+           x="454.28571"
+           y="782.85712"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:66.66666412px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6" /></flowRegion><flowPara
+         id="flowPara1008"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:66.66666412px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6">$PERSON</flowPara></flowRoot>  </g>
+</svg>

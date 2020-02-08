@@ -131,7 +131,7 @@ def enqueue_job(event):
         fp.write(xmlstr)
 
     compressor_info = run_output(
-        '/Applications/Compressor.app/Contents/MacOS/Compressor -batchname {batchname} -jobpath {jobpath} -settingpath apple-prores-4444.cmprstng -locationpath {locationpath}',
+        '/Applications/Compressor.app/Contents/MacOS/Compressor -batchname {batchname} -jobpath {jobpath} -settingpath hd1080p.compressorsetting -locationpath {locationpath}',
         batchname=describe_event(event),
         jobpath=work_doc,
         locationpath=intermediate_clip)
@@ -196,8 +196,13 @@ def finalize_job(job_id, event):
 
     event_print(event, "finalized intro to " + final_clip)
 
-
 active_jobs = []
+
+if args.ids:
+    print("only including ids: ", args.ids)
+
+if args.exclude_ids:
+    print("excluding ids: ", args.exclude_ids)
 
 filtered_events = events
 filtered_events = filter(lambda event: not args.ids or event['id'] in args.ids, filtered_events)

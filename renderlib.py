@@ -17,6 +17,8 @@ fps = 25
 debug = True
 args = None
 
+scheduleTree=None
+
 def loadProject(projectname):
     sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), projectname))
     return __import__(projectname)
@@ -92,7 +94,7 @@ def renderFrame(infile, task, outfile):
     else:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
         cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-png="{3}" "{4}" 2>&1 >/dev/null'.format(task.workdir, width, height, outfile, infile)
-        errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
+        errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
         if errorReturn != '':
             print("inkscape exitted with error\n" + errorReturn)
             # sys.exit(42)
@@ -140,9 +142,10 @@ def cachedRenderFrame(frame, frameNr, task, cache):
 
 
 def rendertask_image(task):
-    with SVGTemplate(task) as svg:
+    svgfile = '{0}/image.svg'.format(task.workdir)
+    with SVGTemplate(task, svgfile) as svg:
         svg.replacetext()
-        svgfile = svg.write()
+        svg.write()
     renderFrame(svgfile, task, task.outfile)
 
 def rendertask_video(task):
@@ -223,8 +226,6 @@ def rendertask(task):
         # remove the generated svg
         ensureFilesRemoved(os.path.join(task.workdir, '.gen.svg'))
 
-
-
 # Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event
 def downloadSchedule(scheduleUrl):
     print("downloading schedule")
@@ -239,14 +240,24 @@ def downloadSchedule(scheduleUrl):
     parser = etree.XMLParser(huge_tree=True)
     return etree.fromstring(xml, parser)
 
-def persons(scheduleUrl, personmap={}, taglinemap={}):
-    schedule = downloadSchedule(scheduleUrl)
+def getSchedule(scheduleUrl):
+    global scheduleTree
+    if not scheduleTree:
+        scheduleTree=downloadSchedule(scheduleUrl)
+    return scheduleTree
+
+
+def persons(scheduleUrl, personmap={}, taglinemap={}, forEventId=None):
+    schedule = getSchedule(scheduleUrl)
     # iterate all days
     for day in schedule.iter('day'):
         # iterate all rooms
         for room in day.iter('room'):
             # iterate events on that day in this room
             for event in room.iter('event'):
+                eventid = int(event.get("id"))
+                if event != None and not eventid == forEventId:
+                    continue
                 # aggregate names of the persons holding this talk
                 persons_seen = []
                 if event.find('persons') is not None:
@@ -271,7 +282,7 @@ def persons(scheduleUrl, personmap={}, taglinemap={}):
                             }
 
 def events(scheduleUrl, titlemap={}):
-    schedule = downloadSchedule(scheduleUrl)
+    schedule = getSchedule(scheduleUrl)
     # iterate all days
     for day in schedule.iter('day'):
         # iterate all rooms
