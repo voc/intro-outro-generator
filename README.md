@@ -50,7 +50,7 @@ $ pip3 install -r requirements.txt
 On debian you need to install ImageMagick and Python lxml dependencies:
 
 ```
-sudo apt-get install libmagickwand-dev libmagickcore5-extra libxml2-dev libxslt1-dev
+sudo apt-get install python3-pil libmagickwand-dev libmagickcore5-extra libxml2-dev libxslt1-dev
 ```
 
 Quick start
