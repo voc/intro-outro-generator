@@ -7,7 +7,7 @@ from easing import *
 import svg.path
 
 # URL to Schedule-XML
-scheduleUrl = 'https://programm.froscon.de/2019/schedule.xml'
+scheduleUrl = 'https://programm.froscon.de/2020/schedule.xml'
 
 # For (really) too long titles
 titlemap = {
