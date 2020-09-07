@@ -16,59 +16,37 @@ titlemap = {
 
 
 def introFrames(args):
-	xml = etree.parse('froscon2019/artwork/intro.svg').getroot()
+	xml = etree.parse('froscon2020/artwork/intro.svg').getroot()
 	pathstr = xml.find(".//*[@id='animatePath']").get('d')
 	frog = xml.find(".//*[@id='animatePath']").get('d')
 	path = svg.path.parse_path(pathstr)
 
 	init = path.point(0)
 
-	frames = int(0.5*fps)
-	for i in range(0, frames):
-		p = path.point(i / frames) - init
-		yield (
-			('animatePath', 'style', 'opacity', 0),
-			('date', 'style', 'opacity', 0),
-		)
-
 	frames = 3*fps
 	for i in range(0, frames):
 		p = path.point(i / frames) - init
 		yield (
-			('frog', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),
+			('animatePath', 'style', 'opacity', 0),
+			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag+120)),
+			('title', 'style', 'opacity', 0),
+			('names', 'style', 'opacity', 0),
 		)
 
 	frames = int(0.5*fps)
 	for i in range(0, frames):
-		yield tuple()
-
-	frames = 1*fps
-	for i in range(0, frames):
 		yield (
-			('url', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
-			('date', 'style', 'opacity', easeOutQuad(i, 0, 1, frames)),
+			('animatePath', 'style', 'opacity', 0),
+			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag+120)),
+			('title',   'style', 'opacity', easeLinear(i, 0, 1, frames)),
+			('names', 'style', 'opacity', easeLinear(i, 0, 1, frames)),
 		)
 
-	frames = int(1.5*fps)
+	frames = int(3.0*fps)
 	for i in range(0, frames):
 		yield (
-			('url', 'style', 'opacity', 0),
-			('date', 'style', 'opacity', 1),
-			('bar',   'style', 'opacity', easeLinear(i, 1, -1, frames)),
-			('title', 'style', 'opacity', easeLinear(i, 1, -1, frames)),
-		)
-
-
-	# frames = 1*fps
-	# for i in range(0, frames):
-	# 	yield (
-	# 	)
-
-	frames = int(0.5*fps)+1
-	for i in range(0, frames):
-		yield (
-			('bar',   'style', 'opacity', 0),
-			('title', 'style', 'opacity', 0),
+			('animatePath', 'style', 'opacity', 0),
+			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag+120)),
 		)
 
 def outroFrames(args):
@@ -79,57 +57,10 @@ def outroFrames(args):
 
 	init = path.point(0)
 
-	frames = int(0.5*fps)
+	frames = int(4*fps)
 	for i in range(0, frames):
 		p = path.point(i / frames) - init
 		yield (
-			('animatePath', 'style', 'opacity', 0),
-			('recordingby', 'style', 'opacity', 0),
-		)
-
-	frames = 3*fps
-	for i in range(0, frames):
-		p = path.point(i / frames) - init
-		yield (
-			('frog', 'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),
-		)
-
-	frames = int(0.5*fps)+1
-	for i in range(0, frames):
-		yield tuple()
-
-	frames = 1*fps
-	for i in range(0, frames):
-		yield (
-			('logo',   'style', 'opacity', easeLinear(i, 1, -1, frames)),
-		)
-
-	frames = 1*fps
-	for i in range(0, frames):
-		yield (
-			('logo',   'style', 'opacity', 0),
-			('recordingby',   'style', 'opacity', easeLinear(i, 0, 1, frames)),
-		)
-
-	frames = 2*fps
-	for i in range(0, frames):
-		yield (
-			('logo',   'style', 'opacity', 0),
-			('recordingby',   'style', 'opacity', 1),
-		)
-
-	frames = 1*fps
-	for i in range(0, frames):
-		yield (
-			('logo',   'style', 'opacity', 0),
-			('recordingby',   'style', 'opacity', easeLinear(i, 1, -1, frames)),
-		)
-
-	frames = 1*fps
-	for i in range(0, frames):
-		yield (
-			('logo',   'style', 'opacity', 0),
-			('recordingby',   'style', 'opacity', 0),
 		)
 
 def pauseFrames(args):
@@ -187,21 +118,21 @@ def debug():
 		}
 	)
 
-	render('outro.svg',
-		'../outro.ts',
-		outroFrames
-	)
+#	render('outro.svg',
+#		'../outro.ts',
+#		outroFrames
+#	)
 
-	render('pause.svg',
-		'../pause.ts',
-		pauseFrames
-	)
+#	render('pause.svg',
+#		'../pause.ts',
+#		pauseFrames
+#	)
 
 
 def tasks(queue, args, idlist, skiplist):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl):
-		if event['room'] not in ('HS1', 'HS3', 'HS4', 'HS5', 'HS6', 'HS7', 'HS8', 'C116'):
+		if event['room'] not in ('HS 1/2', 'HS3', 'HS4', 'HS5', 'HS6', 'HS7', 'HS8', 'C116', 'Workshop'):
 			print("skipping room %s (%s)" % (event['room'], event['title']))
 			continue
 
