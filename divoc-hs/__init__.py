@@ -72,9 +72,9 @@ def debug():
         introFrames,
         {
             '$id': 7776,
-            '$title': 'StageWar live! mit vielen Wörtern extra lang das wird jetzt echt zu viel',
-            '$subtitle': 'Metal Konzert mit vielen Wörtern extra lang das wird jetzt echt zu viel',
-            '$personnames':  'www.stagewar.de mit vielen Wörtern extra lang das wird jetzt echt zu viel'
+            '$title': 'StageWar live! mit vielen Wörtern extra lang das wird jetzt echt zu viel extra lang das wird jetzt echt zu viel extra lang das wird jetzt echt zu viel',
+            '$subtitle': 'Metal Konzert mit vielen Wörtern extra lang das wird jetzt echt zu viel extra lang das wird jetzt echt zu viel extra lang das wird jetzt echt zu viel',
+            '$personnames':  'www.stagewar.de mit vielen Wörtern extra lang das wird jetzt echt zu viel extra lang das wird jetzt echt zu viel extra lang das wird jetzt echt zu viel'
         }
     )
 

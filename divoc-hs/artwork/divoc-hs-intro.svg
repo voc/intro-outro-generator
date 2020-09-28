@@ -191,7 +191,7 @@
      id="namedview11760"
      showgrid="false"
      inkscape:zoom="0.69791667"
-     inkscape:cx="960"
+     inkscape:cx="905.55224"
      inkscape:cy="540"
      inkscape:window-x="276"
      inkscape:window-y="90"
@@ -547,18 +547,19 @@
   <text
      xml:space="preserve"
      id="title"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.66670000000000584px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-83);fill:#000000;fill-opacity:1;stroke:none;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-83);fill:#000000;fill-opacity:1;stroke:none;"
      transform="translate(31.114563,21.963791)"><tspan
        x="69.552734"
-       y="111.68592"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.6667px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">$title</tspan></tspan></text>
+       y="101.74472"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">$title</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="subtitle"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.66670000000000584px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-7-2);fill:#000000;fill-opacity:1;stroke:none;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-7-2);fill:#000000;fill-opacity:1;stroke:none;"
      transform="translate(31.114563,197.67452)"><tspan
        x="69.552734"
-       y="111.68592"><tspan>$subtitle</tspan></tspan></text>
+       y="101.74472"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">$subtitle</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="id"
@@ -570,8 +571,9 @@
   <text
      xml:space="preserve"
      id="personnames"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.66670000000000584px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-7-2-3);fill:#000000;fill-opacity:1;stroke:none;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-7-2-3);fill:#000000;fill-opacity:1;stroke:none;"
      transform="translate(31.114563,375.34616)"><tspan
        x="69.552734"
-       y="111.68592"><tspan>$personnames</tspan></tspan></text>
+       y="101.74472"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">$personnames</tspan></tspan></text>
 </svg>
