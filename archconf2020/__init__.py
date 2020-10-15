@@ -4,7 +4,7 @@ import easing
 import renderlib
 
 # URL to Schedule-XML
-scheduleUrl = "https://conf.archlinux.org/schedule2020.xml"
+scheduleUrl = "https://pretalx.com/arch-conf-online-2020/schedule/export/schedule.xml"
 
 
 def introFrames(args):
