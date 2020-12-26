@@ -45,6 +45,12 @@ parser.add_argument('--room', dest='rooms', nargs='+', action="store", type=str,
     Usage: ./make-adobe-after-effects.py yourproject/ --room "HfG_Studio" "ZKM_Vortragssaal"
     ''')
 
+parser.add_argument('--day', dest='days', nargs='+', action="store", type=str, help='''
+    Only render from your projects schedule for the given days.
+    This argument must not be used together with --debug
+    Usage: ./make-adobe-after-effects.py yourproject/ --day "1" "3"
+    ''')
+
 parser.add_argument('--pause', action="store_true", default=False, help='''
     Render a pause loop from the pause.aep file in the project folder.
     ''')
@@ -69,6 +75,9 @@ parser.add_argument('--bgloop', action="store_true", default=False, help='''
     Render background loop from the bgloop.aep file in the project folder.
     ''')
 
+parser.add_argument('--keep', action="store_true", default=False, help='''
+    Keep source file in the project folder after render.
+    ''')
 args = parser.parse_args()
 
 
@@ -92,15 +101,15 @@ if not args.debug and not args.pause and not args.outro and not args.bgloop and 
     error("Either specify --debug, --pause, --outro or supply a schedule")
 
 if args.debug:
-    persons = ['ln']
-    #persons = ['R. Rehak', 'julika', 'lislis', 'I. Hermann', 'E. Manifesti', 'joliyea', 'V. Schlüter', 'C. Haupt', 'K. Henneberger' , 'A. Höfner']
+    #persons = ['blubbel']
+    persons = ['Vitor Sakaguti', 'Sara', 'A.L. Fehlhaber']
     events = [{
-        'id': 133,
-        'title': 'Lithium-Ion Batteries: Why do they work?',
+        'id': 11450,
+        'title': 'PQ Mail: Enabling post quantum secure encryption for email communication',
         'subtitle': '',
         'persons': persons,
         'personnames': ', '.join(persons),
-        'room': 'schaoswest',
+        'room': 'rc1',
     }]
 
 elif args.pause:
@@ -231,6 +240,9 @@ def enqueue_job(event):
             run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -output {locationpath}',
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
+    if args.debug or args.keep:
+        copyfile(work_doc, args.project + event_id + '.aep')
+        copyfile(script_doc, args.project + event_id + '.jsx')
 
     return event_id
 
@@ -290,6 +302,10 @@ for event in events:
         print("skipping room %s (%s)" % (event['room'], event['title']))
         continue
 
+    if args.days and event['day'] not in args.days:
+        print("skipping day %s (%s)" % (event['day'], event['title']))
+        continue
+
     event_print(event, "enqueued as " + str(event['id']))
 
     job_id = enqueue_job(event)
@@ -312,5 +328,10 @@ for event in events:
         copyfile(intermediate_clip, final_clip)
         event_print(event, "copied intermediate clip to " + final_clip)
 
-print('all done, cleaning up ' + tempdir.name)
-tempdir.cleanup()
+if args.debug or args.keep:
+    print('all done, keeping debug files in ' + tempdir.name)
+    print('also keeping source files in ' + args.project)
+else:
+    print('all done, cleaning up ' + tempdir.name)
+    tempdir.cleanup()
+
