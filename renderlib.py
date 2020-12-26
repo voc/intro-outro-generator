@@ -293,7 +293,10 @@ def events(scheduleUrl, titlemap={}):
                 personnames = []
                 if event.find('persons') is not None:
                     for person in event.find('persons').iter('person'):
-                        personname = re.sub(r'\s+', ' ', person.text).strip()
+                        try:
+                            personname = re.sub(r'\s+', ' ', person.text).strip()
+                        except:
+                            personnames.append(str('None'))
                         personnames.append(personname)
 
                 id = int(event.get('id'))
@@ -328,3 +331,4 @@ try:
 except ImportError:
     def colored(str, col):
         return str
+
