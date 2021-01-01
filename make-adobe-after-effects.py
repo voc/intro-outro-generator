@@ -12,6 +12,10 @@ import os
 import platform
 from shutil import copyfile
 
+titlemap = {
+    'id': "11404", 'title': "Attacking CPUs with Power Side Channels from Software",
+}
+
 # Parse arguments
 parser = argparse.ArgumentParser(
     description='C3VOC Intro-Outro-Generator - Variant to use with Adobe After Effects Files',
@@ -211,12 +215,12 @@ def enqueue_job(event):
         for key, value in event.items():
             value = str(value).replace('"', '\\"')
             scriptstr = scriptstr.replace("$" + str(key), value)
-
+        
         with open(script_doc, 'w', encoding='utf-8') as fp:
             fp.write(scriptstr)
 
         copyfile(args.project + 'intro.aep', work_doc)
-
+        
         if platform.system() == 'Darwin':
             copyfile(args.project + 'intro.scpt', ascript_doc)
             run('osascript {ascript_path} {jobpath} {scriptpath}',
@@ -306,6 +310,10 @@ for event in events:
         print("skipping day %s (%s)" % (event['day'], event['title']))
         continue
 
+    if str(event['id']) in str(titlemap['id']):
+            event_print(event, "titlemap replacement")
+            event['title'] = titlemap['title']
+
     event_print(event, "enqueued as " + str(event['id']))
 
     job_id = enqueue_job(event)
@@ -334,4 +342,3 @@ if args.debug or args.keep:
 else:
     print('all done, cleaning up ' + tempdir.name)
     tempdir.cleanup()
-
