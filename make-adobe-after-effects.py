@@ -14,6 +14,7 @@ from shutil import copyfile
 
 titlemap = {
     'id': "11404", 'title': "Attacking CPUs with Power Side Channels from Software",
+    'id': "205", 'title': "Attacking CPUs with Power Side Channels from Software",
 }
 
 # Parse arguments
@@ -23,7 +24,7 @@ parser = argparse.ArgumentParser(
     formatter_class=argparse.RawTextHelpFormatter)
 
 parser.add_argument('project', action="store", metavar='Project folder', type=str, help='''
-    Path to your project folder with After Effects Files (intro.aep/scpt/jsx)
+    Path to your project folder with After Effects Files (intro.aepx)
     ''')
 parser.add_argument('schedule', action="store", metavar='Schedule-URL', type=str, nargs='?', help='''
     URL or Path to your schedule.xml
@@ -56,7 +57,7 @@ parser.add_argument('--day', dest='days', nargs='+', action="store", type=str, h
     ''')
 
 parser.add_argument('--pause', action="store_true", default=False, help='''
-    Render a pause loop from the pause.aep file in the project folder.
+    Render a pause loop from the pause.aepx file in the project folder.
     ''')
 
 parser.add_argument('--alpha', action="store_true", default=False, help='''
@@ -72,11 +73,11 @@ parser.add_argument('--no-finalize', dest='nof', action="store_true", default=Fa
     ''')
 
 parser.add_argument('--outro', action="store_true", default=False, help='''
-    Render outro from the outro.aep file in the project folder.
+    Render outro from the outro.aepx file in the project folder.
     ''')
 
 parser.add_argument('--bgloop', action="store_true", default=False, help='''
-    Render background loop from the bgloop.aep file in the project folder.
+    Render background loop from the bgloop.aepx file in the project folder.
     ''')
 
 parser.add_argument('--keep', action="store_true", default=False, help='''
@@ -159,18 +160,6 @@ def fmt_command(command, **kwargs):
     return shlex.split(command)
 
 
-def run_once(command, **kwargs):
-    DETACHED_PROCESS = 0x00000008
-    return subprocess.Popen(
-        fmt_command(command, **kwargs),
-        shell=False,
-        stdin=None,
-        stdout=None,
-        stderr=None,
-        close_fds=True,
-        creationflags=DETACHED_PROCESS)
-
-
 def run(command, **kwargs):
     return subprocess.check_call(
         fmt_command(command, **kwargs),
@@ -189,64 +178,45 @@ def enqueue_job(event):
     if (os.path.exists(os.path.join(args.project, event_id + '.ts')) or os.path.exists(os.path.join(args.project, event_id + '.mov'))) and not args.force:
         event_print(event, "file exist, skipping " + str(event['id']))
         return
-    work_doc = os.path.join(tempdir.name, event_id + '.aep')
-    script_doc = os.path.join(tempdir.name, event_id + '.jsx')
-    ascript_doc = os.path.join(tempdir.name, event_id + '.scpt')
+    work_doc = os.path.join(tempdir.name, event_id + '.aepx')
     intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
 
     if event_id == 'pause' or event_id == 'outro' or event_id == 'bgloop':
-        copyfile(args.project + event_id + '.aep', work_doc)
+        copyfile(args.project + event_id + '.aepx', work_doc)
         if platform.system() == 'Darwin':
-            run(r'/Applications/Adobe\ After\ Effects\ 2020/aerender -project {jobpath} -comp {comp} -output {locationpath}',
+            run(r'/Applications/Adobe\ After\ Effects\ 2020/aerender -project {jobpath} -comp {comp} -mp -output {locationpath}',
                 jobpath=work_doc,
                 comp=event_id,
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/aerender.exe -project {jobpath} -comp {comp} -output {locationpath}',
+            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/aerender.exe -project {jobpath} -comp {comp} -mp -output {locationpath}',
                 jobpath=work_doc,
                 comp=event_id,
                 locationpath=intermediate_clip)
 
     else:
-        with open(args.project + 'intro.jsx', 'r') as fp:
+        with open(args.project + 'intro.aepx', 'r') as fp:
             scriptstr = fp.read()
 
         for key, value in event.items():
             value = str(value).replace('"', '\\"')
             scriptstr = scriptstr.replace("$" + str(key), value)
         
-        with open(script_doc, 'w', encoding='utf-8') as fp:
+        with open(work_doc, 'w', encoding='utf-8') as fp:
             fp.write(scriptstr)
-
-        copyfile(args.project + 'intro.aep', work_doc)
         
         if platform.system() == 'Darwin':
-            copyfile(args.project + 'intro.scpt', ascript_doc)
-            run('osascript {ascript_path} {jobpath} {scriptpath}',
-                jobpath=work_doc,
-                scriptpath=script_doc,
-                ascript_path=ascript_doc)
-
-            run(r'/Applications/Adobe\ After\ Effects\ 2020/aerender -project {jobpath} -comp "intro" -output {locationpath}',
+            run(r'/Applications/Adobe\ After\ Effects\ 2020/aerender -project {jobpath} -comp "intro" -mp -output {locationpath}',
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run_once(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/AfterFX.exe -noui {jobpath}',
-                     jobpath=work_doc)
-            time.sleep(15)
-
-            run_once(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/AfterFX.exe -noui -r {scriptpath}',
-                     scriptpath=script_doc)
-            time.sleep(5)
-
-            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -output {locationpath}',
+            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -mp -output {locationpath}',
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
     if args.debug or args.keep:
-        copyfile(work_doc, args.project + event_id + '.aep')
-        copyfile(script_doc, args.project + event_id + '.jsx')
+        copyfile(work_doc, args.project + event_id + '.aepx')
 
     return event_id
 
@@ -260,11 +230,11 @@ def finalize_job(job_id, event):
         ffprobe = run_output('ffprobe -i {input} -show_streams -select_streams a -loglevel error',
             input=intermediate_clip)
         if ffprobe:
-            run('ffmpeg -y -hide_banner -loglevel error -i {input} -c:v qtrle -movflags faststart -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mov {output}',
+            run('ffmpeg -threads 0 -y -hide_banner -loglevel error -i {input} -c:v qtrle -movflags faststart -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mov {output}',
                 input=intermediate_clip,
                 output=final_clip)
         else:
-            run('ffmpeg -y -hide_banner -loglevel error -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 -i {input} -c:v qtrle -movflags faststart -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mov {output}',
+            run('ffmpeg -threads 0 -y -hide_banner -loglevel error -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 -i {input} -c:v qtrle -movflags faststart -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mov {output}',
                 input=intermediate_clip,
                 output=final_clip)
     else:
@@ -272,12 +242,12 @@ def finalize_job(job_id, event):
             input=intermediate_clip)
         if ffprobe:
             event_print(event, "finalize with audio from source file")
-            run('ffmpeg -y -hide_banner -loglevel error -i {input} -c:v mpeg2video -q:v 2 -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',
+            run('ffmpeg -threads 0 -y -hide_banner -loglevel error -i {input} -c:v mpeg2video -q:v 2 -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',
                 input=intermediate_clip,
                 output=final_clip)
         else:
             event_print(event, "finalize with silent audio")
-            run('ffmpeg -y -hide_banner -loglevel error -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 -i {input} -c:v mpeg2video -q:v 2 -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',
+            run('ffmpeg -threads 0 -y -hide_banner -loglevel error -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 -i {input} -c:v mpeg2video -q:v 2 -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',
                 input=intermediate_clip,
                 output=final_clip)
 
@@ -337,8 +307,7 @@ for event in events:
         event_print(event, "copied intermediate clip to " + final_clip)
 
 if args.debug or args.keep:
-    print('all done, keeping debug files in ' + tempdir.name)
-    print('also keeping source files in ' + args.project)
+    print('keeping source files in ' + args.project)
 else:
     print('all done, cleaning up ' + tempdir.name)
     tempdir.cleanup()
