@@ -11,7 +11,7 @@
    viewBox="0 0 1920 1080"
    version="1.1"
    sodipodi:docname="divoc-hs-intro.svg"
-   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata11764">
     <rdf:RDF>
@@ -141,10 +141,10 @@
        height="168.38895"
        id="rect2903" />
     <rect
-       x="69.551956"
-       y="42.097237"
+       x="31.114563"
+       y="197.67452"
        width="1746.1201"
-       height="212.31648"
+       height="350.31648"
        id="rect11768-7-2" />
     <rect
        x="69.551956"
@@ -186,15 +186,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1959"
-     inkscape:window-height="1235"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
      id="namedview11760"
      showgrid="false"
      inkscape:zoom="0.69791667"
-     inkscape:cx="905.55224"
-     inkscape:cy="540"
-     inkscape:window-x="276"
-     inkscape:window-y="90"
+     inkscape:cx="930.86547"
+     inkscape:cy="597.31343"
+     inkscape:window-x="0"
+     inkscape:window-y="31"
      inkscape:window-maximized="0"
      inkscape:current-layer="wave"
      inkscape:document-rotation="0"
@@ -204,7 +204,13 @@
     <sodipodi:guide
        position="100.6673,869.51382"
        orientation="1,0"
-       id="guide90" />
+       id="guide90"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="103.16418,1166.3284"
+       orientation="1,0"
+       id="guide129"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <linearGradient
      id="gradient"
@@ -546,34 +552,76 @@
   </g>
   <text
      xml:space="preserve"
-     id="title"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-83);fill:#000000;fill-opacity:1;stroke:none;"
-     transform="translate(31.114563,21.963791)"><tspan
-       x="69.552734"
-       y="101.74472"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">$title</tspan></tspan></text>
-  <text
-     xml:space="preserve"
-     id="subtitle"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-7-2);fill:#000000;fill-opacity:1;stroke:none;"
-     transform="translate(31.114563,197.67452)"><tspan
-       x="69.552734"
-       y="101.74472"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">$subtitle</tspan></tspan></text>
-  <text
-     xml:space="preserve"
      id="id"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66669999999999874px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-7-8-5-9);fill:#000000;fill-opacity:1;stroke:none;"
      transform="translate(31.114563,926.83834)"><tspan
        x="69.552734"
-       y="81.862392"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">$id</tspan></tspan></text>
-  <text
+       y="81.862392"
+       id="tspan117"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         id="tspan115">$id</tspan></tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot126"
+     style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+       id="flowRegion128"><rect
+         id="rect130"
+         width="357.84015"
+         height="49.031178"
+         x="100.6673"
+         y="250.38806" /></flowRegion><flowPara
+       id="flowPara132" /></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot134"
+     style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+       id="flowRegion136"><rect
+         id="rect138"
+         width="1723.3329"
+         height="248.19536"
+         x="100.6673"
+         y="248.95523" /></flowRegion><flowPara
+       id="flowPara140" /></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot150"
+     style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+       id="flowRegion152"><rect
+         id="rect154"
+         width="1703.6417"
+         height="169.07463"
+         x="103.16418"
+         y="75.582092" /></flowRegion><flowPara
+       id="flowPara156" /></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="subtitle"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     transform="translate(-12)"><flowRegion
+       id="flowRegion132"><rect
+         id="rect134"
+         width="1755.2239"
+         height="319.52234"
+         x="111.76119"
+         y="254.68657" /></flowRegion><flowPara
+       id="flowPara136"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, '">$subtitle</flowPara></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="title"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion133"><rect
+         id="rect135"
+         width="1677.8507"
+         height="200.59702"
+         x="103.16418"
+         y="55.522392" /></flowRegion><flowPara
+       id="flowPara137"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.66666412px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, '">$title</flowPara></flowRoot>  <flowRoot
      xml:space="preserve"
      id="personnames"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-7-2-3);fill:#000000;fill-opacity:1;stroke:none;"
-     transform="translate(31.114563,375.34616)"><tspan
-       x="69.552734"
-       y="101.74472"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">$personnames</tspan></tspan></text>
-</svg>
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion141"><rect
+         id="rect143"
+         width="1726.5671"
+         height="216.35822"
+         x="103.16418"
+         y="577.07465" /></flowRegion><flowPara
+       id="flowPara145"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.66666412px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, '">$personnames</flowPara></flowRoot></svg>

@@ -11,7 +11,7 @@
    viewBox="0 0 1920 1080"
    version="1.1"
    sodipodi:docname="divoc-ptt-intro.svg"
-   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata11764">
     <rdf:RDF>
@@ -78,15 +78,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1959"
-     inkscape:window-height="1235"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
      id="namedview11760"
      showgrid="false"
      inkscape:zoom="0.54635417"
-     inkscape:cx="945.35748"
+     inkscape:cx="803.22785"
      inkscape:cy="712.04957"
      inkscape:window-x="0"
-     inkscape:window-y="23"
+     inkscape:window-y="31"
      inkscape:window-maximized="0"
      inkscape:current-layer="wave"
      inkscape:document-rotation="0"
@@ -96,7 +96,13 @@
     <sodipodi:guide
        position="100.6673,869.51382"
        orientation="1,0"
-       id="guide90" />
+       id="guide90"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="104.32793,1332.469"
+       orientation="1,0"
+       id="guide70"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <linearGradient
      id="gradient"
@@ -395,25 +401,33 @@
   </g>
   <text
      xml:space="preserve"
-     id="title"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.66670000000000584px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768);fill:#000000;fill-opacity:1;stroke:none;"
-     transform="translate(31.114566,21.963775)"><tspan
-       x="69.552734"
-       y="111.68592"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.6667px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">$title</tspan></tspan></text>
-  <text
-     xml:space="preserve"
      id="personnames"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.66670000000000584px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-7);fill:#000000;fill-opacity:1;stroke:none;"
-     transform="translate(31.114566,197.6745)"><tspan
-       x="69.552734"
-       y="111.68592"><tspan>$personnames</tspan></tspan></text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.66670227px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;white-space:pre;shape-inside:url(#rect11768-7);fill:#000000;fill-opacity:1;stroke:none"
+     x="31.114567"
+     y="355.6745"><tspan
+       x="100.6673"
+       y="467.36041"
+       id="tspan61"><tspan
+         id="tspan59">$personnames</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="id"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66669999999999874px;line-height:1.25;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11768-7-8-5);fill:#000000;fill-opacity:1;stroke:none;"
      transform="translate(31.114566,926.83832)"><tspan
        x="69.552734"
-       y="81.862392"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">$id</tspan></tspan></text>
-</svg>
+       y="81.862392"
+       id="tspan66"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         id="tspan64">$id</tspan></tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="title"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion74"><rect
+         id="rect76"
+         width="1742.4595"
+         height="307.49286"
+         x="104.32793"
+         y="75.157295" /></flowRegion><flowPara
+       id="flowPara78"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.66666412px;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, '">$title</flowPara></flowRoot></svg>
