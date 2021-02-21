@@ -57,7 +57,7 @@ def introFrames(args):
 
 def outroFrames(args):
 #fadein outro graphics
-    frames = 3*fps
+    frames = 6*fps
     for i in range(0, frames):
         yield(())
 
