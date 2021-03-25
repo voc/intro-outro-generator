@@ -41,19 +41,19 @@ parser.add_argument('--debug', action="store_true", default=False, help='''
 parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, help='''
     Only render the given ID(s) from your projects schedule.
     This argument must not be used together with --debug
-    Usage: ./make-adobe-after-effects.py yourproject/ --id 4711 0815 4223 1337
+    Usage: ./make-blender.py yourproject/ --id 4711 0815 4223 1337
     ''')
 
 parser.add_argument('--room', dest='rooms', nargs='+', action="store", type=str, help='''
     Only render the given room(s) from your projects schedule.
     This argument must not be used together with --debug
-    Usage: ./make-adobe-after-effects.py yourproject/ --room "HfG_Studio" "ZKM_Vortragssaal"
+    Usage: ./make-blender.py yourproject/ --room "HfG_Studio" "ZKM_Vortragssaal"
     ''')
 
 parser.add_argument('--day', dest='days', nargs='+', action="store", type=str, help='''
     Only render from your projects schedule for the given days.
     This argument must not be used together with --debug
-    Usage: ./make-adobe-after-effects.py yourproject/ --day "1" "3"
+    Usage: ./make-blender.py yourproject/ --day "1" "3"
     ''')
 
 parser.add_argument('--pause', action="store_true", default=False, help='''
@@ -197,7 +197,7 @@ def enqueue_job(event):
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.91/blender.exe --background {comp} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.92/blender.exe --background {comp} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
                 comp=work_comp,
                 locationpath=intermediate_clip)
     else:
@@ -218,7 +218,9 @@ def enqueue_job(event):
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.91/blender.exe --background {source} --python-use-system-env --python {jobpath} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+            if args.debug:
+                print("running: blender.exe --background %s --python-use-system-env --python %s --use-extension 1 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
+            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.92/blender.exe --background {source} --python-use-system-env --python {jobpath} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
                 source=work_source,
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
@@ -266,14 +268,14 @@ def finalize_job(job_id, event):
 
 if args.ids:
     if len(args.ids) == 1:
-        print("enqueuing {} job into aerender".format(len(args.ids)))
+        print("enqueuing {} job into blender".format(len(args.ids)))
     else:
-        print("enqueuing {} jobs into aerender".format(len(args.ids)))
+        print("enqueuing {} jobs into blender".format(len(args.ids)))
 else:
     if len(events) == 1:
-        print("enqueuing {} job into aerender".format(len(events)))
+        print("enqueuing {} job into blender".format(len(events)))
     else:
-        print("enqueuing {} jobs into aerender".format(len(events)))
+        print("enqueuing {} jobs into blender".format(len(events)))
 
 for event in events:
     if args.ids and event['id'] not in args.ids:
