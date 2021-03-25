@@ -200,6 +200,10 @@ def enqueue_job(event):
             run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.92/blender.exe --background {comp} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
                 comp=work_comp,
                 locationpath=intermediate_clip)
+        if platform.system() == 'Linux':
+            run(r'blender --background {comp} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+                comp=work_comp,
+                locationpath=intermediate_clip)
     else:
         with open(args.project + 'intro.py', 'r') as fp:
             scriptstr = fp.read()
@@ -212,6 +216,8 @@ def enqueue_job(event):
             fp.write(scriptstr)
         
         if platform.system() == 'Darwin':
+            if args.debug:
+                print("running: Blender.app --background %s --python-use-system-env --python %s --use-extension 1 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
             run(r'/Applications/Blender.app/Contents/MacOS/Blender --background {source} --python-use-system-env --python {jobpath} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
                 source=work_source,
                 jobpath=work_doc,
@@ -221,6 +227,13 @@ def enqueue_job(event):
             if args.debug:
                 print("running: blender.exe --background %s --python-use-system-env --python %s --use-extension 1 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
             run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.92/blender.exe --background {source} --python-use-system-env --python {jobpath} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+                source=work_source,
+                jobpath=work_doc,
+                locationpath=intermediate_clip)
+        if platform.system() == 'Linux':
+            if args.debug:
+                print("running: blender --background %s --python-use-system-env --python %s --use-extension 1 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
+            run(r'blender --background {source} --python-use-system-env --python {jobpath} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
                 source=work_source,
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
