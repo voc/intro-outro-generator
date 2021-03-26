@@ -151,24 +151,49 @@ def rendertask_image(task):
 def rendertask_video(task):
     # iterate through the animation sequence frame by frame
     # frame is a ... tbd
+
+    if args.gst:
+        import gstrenderer
+        renderer = gstrenderer.GstRenderer(1920, 1080, "{0}/video.mov".format(task.workdir))
+
     cache = {}
     for frameNr, frame in enumerate(task.sequence(task.parameters)):
-        cachedRenderFrame(frame, frameNr, task, cache)
+        if args.gst:
+            with SVGTemplate(task, None) as svg:
+                svg.replacetext()
+                svg.transform(frame)
+                renderer.render_frame(svg.svgstr)
+        else:
+            cachedRenderFrame(frame, frameNr, task, cache)
+
+    if args.gst:
+        renderer.close()
 
     if args.only_frame:
+        if args.gst:
+            raise Exception("Single frame output not supported with gst renderer")
         task.outfile = '{0}.frame{1:04d}.png'.format(task.outfile, args.only_frame)
 
     # remove the dv/ts we are about to (re-)generate
     ensureFilesRemoved(os.path.join(task.workdir, task.outfile))
 
+    if args.gst:
+        videosrc = "-i video.mov"
+    else:
+        videosrc = "-f image2 -i .frames/%04d.png"
+
     if task.outfile.endswith('.png'):
+        if args.gst:
+            raise Exception("PNG output not supported with gst renderer")
         cmd = 'cd {0} && cp ".frames/{1:04d}.png" "{2}"'.format(task.workdir, args.only_frame, task.outfile)
 
     # invoke avconv aka ffmpeg and renerate a lossles-dv from the frames
     #  if we're not in debug-mode, suppress all output
     elif task.outfile.endswith('.ts'):
+        #os.system("cd {0}; cp -R .frames /tmp/frames".format(task.workdir))
         cmd = 'cd {0} && '.format(task.workdir)
-        cmd += 'ffmpeg -f image2 -i .frames/%04d.png '
+        cmd += 'ffmpeg {0} '.format(videosrc)
+
         if task.audiofile is None:
             cmd += '-ar 48000 -ac 1 -f s16le -i /dev/zero -ar 48000 -ac 1 -f s16le -i /dev/zero '
         else:
@@ -183,11 +208,12 @@ def rendertask_video(task):
         cmd += '-shortest -f mpegts "{0}"'.format(task.outfile)
     elif task.outfile.endswith('.mov'):
         cmd = 'cd {0} && '.format(task.workdir)
-        cmd += 'ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -f image2 -i .frames/%04d.png -r 25 -shortest -c:v qtrle -f mov "{0}"'.format(task.outfile)
+        cmd += 'ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 {0} '.format(videosrc)
+        cmd += '-r 25 -shortest -c:v qtrle -f mov "{0}"'.format(task.outfile)
     elif task.outfile.endswith('.mkv'):
-        cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -aspect 16:9 -c copy -shortest "{1}"'.format(task.workdir, task.outfile)
+        cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero {2} -aspect 16:9 -c copy -shortest "{1}"'.format(task.workdir, task.outfile, videosrc)
     else:
-        cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
+        cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero {2} -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile, videosrc)
 
     if debug:
         print(cmd)
