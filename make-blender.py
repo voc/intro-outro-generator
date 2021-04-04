@@ -12,10 +12,16 @@ import os
 import platform
 from shutil import copyfile
 
-titlemap = {
-    'id': "11404", 'title': "Attacking CPUs with Power Side Channels from Software",
-    'id': "205", 'title': "Attacking CPUs with Power Side Channels from Software",
-}
+titlemap = {}
+
+#titlemap = {
+#    "205" : {
+#        "title" : "Attacking CPUs with Power Side Channels from Software"
+#    },
+#    "20" : {
+#        "title" : "New title for Talk id 20"
+#    }
+#}
 
 # Parse arguments
 parser = argparse.ArgumentParser(
@@ -217,23 +223,23 @@ def enqueue_job(event):
         
         if platform.system() == 'Darwin':
             if args.debug:
-                print("running: Blender.app --background %s --python-use-system-env --python %s --use-extension 1 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
-            run(r'/Applications/Blender.app/Contents/MacOS/Blender --background {source} --python-use-system-env --python {jobpath} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+                print("running: Blender.app --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
+            run(r'/Applications/Blender.app/Contents/MacOS/Blender --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
                 source=work_source,
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
             if args.debug:
-                print("running: blender.exe --background %s --python-use-system-env --python %s --use-extension 1 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
-            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.92/blender.exe --background {source} --python-use-system-env --python {jobpath} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+                print("running: blender.exe --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
+            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.92/blender.exe --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
                 source=work_source,
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
         if platform.system() == 'Linux':
             if args.debug:
-                print("running: blender --background %s --python-use-system-env --python %s --use-extension 1 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
-            run(r'blender --background {source} --python-use-system-env --python {jobpath} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+                print("running: blender --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
+            run(r'blender --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
                 source=work_source,
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
@@ -302,9 +308,10 @@ for event in events:
         print("skipping day %s (%s)" % (event['day'], event['title']))
         continue
 
-    if str(event['id']) in str(titlemap['id']):
+    for replace_id, replace_title in titlemap.items():
+        if str(event['id']) == str(replace_id):
             event_print(event, "titlemap replacement")
-            event['title'] = titlemap['title']
+            event['title'] = str(replace_title['title'])
 
     event_print(event, "enqueued as " + str(event['id']))
 
