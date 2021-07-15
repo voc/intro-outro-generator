@@ -12,20 +12,13 @@ cssutils.ser.prefs.lineSeparator = ' '
 cssutils.log.setLevel(logging.FATAL)
 
 class SVGTemplate:
-    def __init__(self, task, outfile):
+    def __init__(self, task):
         self.task = task
-        self.outfile = outfile
 
     def __enter__(self):
         with builtins.open(os.path.join(self.task.workdir, self.task.infile), 'r') as fp:
             self.svgstr = fp.read()
         return self
-
-    def write(self):
-        # open the output-file (named ".gen.svg" in the workdir)
-        with builtins.open(self.outfile, 'w') as fp:
-            # write the generated svg-text into the output-file
-            fp.write(self.svgstr)
 
     def replacetext(self):
         for key in self.task.parameters.keys():
