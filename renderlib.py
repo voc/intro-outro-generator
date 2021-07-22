@@ -189,16 +189,18 @@ def rendertask_video(task):
         cmd = 'cd {0} && '.format(task.workdir)
         cmd += 'ffmpeg -f image2 -i .frames/%04d.png '
         if task.audiofile is None:
-            cmd += '-ar 48000 -ac 1 -f s16le -i /dev/zero -ar 48000 -ac 1 -f s16le -i /dev/zero '
+            audio_input = '-ar 48000 -ac 1 -f s16le -i /dev/zero '
         else:
-            cmd += '-i {0} -i {0} '.format(task.audiofile)
+            audio_input = '-i {0} '.format(task.audiofile)
+        cmd += audio_input * args.audio_streams
 
         cmd += '-map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 '
 
         if task.audiofile is None:
-            cmd += '-map 1:0 -map 2:0 '
+            audio_map = '-map {0}:0 '
         else:
-            cmd += '-map 1:0 -c:a copy -map 2:0 -c:a copy '
+            audio_map = '-map {0}:0 -c:a copy '
+        cmd += ''.join(audio_map.format(index + 1) for index in range(args.audio_streams))
         cmd += '-shortest -f mpegts "{0}"'.format(task.outfile)
     elif task.outfile.endswith('.mov'):
         cmd = 'cd {0} && '.format(task.workdir)
