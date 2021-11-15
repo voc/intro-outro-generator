@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# vim: tabstop=4 shiftwidth=4 expandtab
 
 from renderlib import *
 from easing import *
@@ -96,6 +97,7 @@ def tasks(queue, params, idlist, skiplist):
 
 		# generate a task description and put them into the queue
 		if int(event['id']) not in skiplist:
+			print("processing id (%s [%s])" % (event['title'], event['id']))
 			queue.put(Rendertask(
 				infile = 'intro.svg',
 				outfile = str(event['id'])+".ts",
@@ -107,6 +109,7 @@ def tasks(queue, params, idlist, skiplist):
 					'$personnames': event['personnames']
 				}
 			))
+
 
 	# place a task for the outro into the queue
 	if not "out" in skiplist:
