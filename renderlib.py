@@ -93,7 +93,7 @@ def renderFrame(infile, task, outfile):
                 converted.save(filename=outfile)
     else:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-        cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-png="{3}" "{4}" 2>&1 >/dev/null'.format(task.workdir, width, height, outfile, infile)
+        cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-filename="{3}" "{4}" --pipe 2>&1 >/dev/null'.format(task.workdir, width, height, os.path.abspath(outfile), os.path.abspath(infile))
         errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
         if errorReturn != '':
             print("inkscape exitted with error\n" + errorReturn)
@@ -312,6 +312,11 @@ def events(scheduleUrl, titlemap={}):
                     subtitle = re.sub(r'\s+', ' ', event.find('subtitle').text).strip()
                 else:
                     subtitle = ''
+
+                if event.find('url') is not None and event.find('url').text is not None:
+                    url = event.find('url').text.strip()
+                else:
+                    url = ''
                 # yield a tupel with the event-id, event-title and person-names
                 yield {
                     'day': day.get('index'),
@@ -322,7 +327,7 @@ def events(scheduleUrl, titlemap={}):
                     'personnames': ', '.join(personnames),
                     'room': room.attrib['name'],
                     'track': event.find('track').text,
-		            #'url': event.find('url').text
+		            'url': url
                 }
 
 
