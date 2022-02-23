@@ -93,7 +93,7 @@ def renderFrame(infile, task, outfile):
                 converted.save(filename=outfile)
     else:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-        cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-png="{3}" "{4}" 2>&1 >/dev/null'.format(task.workdir, width, height, outfile, infile)
+        cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-filename="{3}" --export-type="png" "{4}"'.format(task.workdir, width, height, outfile, infile)
         errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
         if errorReturn != '':
             print("inkscape exitted with error\n" + errorReturn)
@@ -322,7 +322,7 @@ def events(scheduleUrl, titlemap={}):
                     'personnames': ', '.join(personnames),
                     'room': room.attrib['name'],
                     'track': event.find('track').text,
-		            #'url': event.find('url').text
+		            'url': event.find('url').text
                 }
 
 

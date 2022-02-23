@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1920"
+   height="1080"
+   id="svg2"
+   version="1.1"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="intro.svg">
+  <defs
+     id="defs20">
+    <filter
+       id="filter3772"
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow">
+      <feFlood
+         id="feFlood3774"
+         flood-opacity="0.5"
+         flood-color="rgb(255,255,255)"
+         result="flood" />
+      <feComposite
+         id="feComposite3776"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur3778"
+         in="composite"
+         stdDeviation="3"
+         result="blur" />
+      <feOffset
+         id="feOffset3780"
+         dx="1"
+         dy="1"
+         result="offset" />
+      <feComposite
+         id="feComposite3782"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="1237.7451"
+     inkscape:cy="-112.36108"
+     inkscape:document-units="px"
+     inkscape:current-layer="g_background"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="2318"
+     inkscape:window-height="1243"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-page="true"
+     inkscape:document-rotation="0">
+    <sodipodi:guide
+       orientation="0,1"
+       position="1987.9802,1080.8632"
+       id="guide2996" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,0"
+       id="guide2998" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="0,0"
+       id="guide3000" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1920,2297.1429"
+       id="guide3002" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="32,0"
+       id="guide3029" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,1048"
+       id="guide3031"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="1888,0"
+       orientation="1,0"
+       id="guide4176"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="1865.6255,13.404053"
+       orientation="0,1"
+       id="guide4183" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer_background"
+     transform="translate(0,28)">
+    <g
+       id="g_background"
+       transform="translate(-162.78572,747.3215)">
+      <image
+         sodipodi:absref="stadtansicht_marburg_c_markus_farnung_blured.png"
+         xlink:href="../stadtansicht_marburg_c_markus_farnung_blured.png"
+         y="-775.32147"
+         x="162.78572"
+         id="image_background"
+         height="1080"
+         width="1920" />
+      <image
+         sodipodi:absref="fossgis22_logo.png"
+         xlink:href="../fossgis22_logo.png"
+         y="-743.32147"
+         x="1801.7858"
+         id="image_logo"
+         height="249"
+         width="249" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       x="1900.0262"
+       y="1035.1428"
+       id="text2992-5-5-3"><tspan
+         sodipodi:role="line"
+         x="1900.0262"
+         y="1035.1428"
+         id="url"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;line-height:80%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';text-align:end;text-anchor:end;fill:#f2f4f5;fill-opacity:1;stroke:none">$url</tspan></text>
+    <g
+       id="box-und-text1"
+       inkscape:label="#g4270"
+       style="opacity:1">
+      <rect
+         style="fill:#333333;fill-opacity:0.70196078"
+         ry="0.0084510781"
+         y="697"
+         x="0"
+         height="310"
+         width="1920"
+         id="rect_banderole_1" />
+      <g
+         transform="matrix(1.3478261,0,0,1.3478261,0,-350.26087)"
+         style="opacity:0.25"
+         id="text1">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           x="75.964493"
+           y="879.83752"
+           id="text2992"><tspan
+             sodipodi:role="line"
+             x="75.964493"
+             y="879.83752"
+             id="tspan2996"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#c2ced2;fill-opacity:1;stroke:none">         Marburg</tspan><tspan
+             sodipodi:role="line"
+             x="75.964493"
+             y="923.03754"
+             id="tspan3002"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#c2ced2;fill-opacity:1;stroke:none">09. - 12. März 2022</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           x="77.218193"
+           y="837.2262"
+           id="text2992-5"><tspan
+             sodipodi:role="line"
+             id="tspan2994-9"
+             x="77.218193"
+             y="837.2262"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none">FOSSGIS Konferenz</tspan><tspan
+             sodipodi:role="line"
+             x="77.218193"
+             y="880.42621"
+             id="tspan2998-1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none">2022</tspan></text>
+      </g>
+    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="text2"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       inkscape:label="#text2"><flowRegion
+         id="flowRegion3041"
+         style="font-family:sans-serif"><rect
+           id="rect3043"
+           width="1782.4845"
+           height="248.00835"
+           x="105.51553"
+           y="738.59009" /></flowRegion><flowPara
+         style="font-weight:bold;font-size:64.6957px;line-height:95%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#c2ced2;fill-opacity:1;stroke:none"
+         id="flowPara3025">$persons</flowPara><flowPara
+         id="flowPara3048"
+         style="font-weight:bold;font-size:64.6957px;line-height:99%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none">$title</flowPara></flowRoot>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       x="30.53125"
+       y="1038.3694"
+       id="text2992-5-5-3-3"><tspan
+         sodipodi:role="line"
+         x="30.53125"
+         y="1038.3694"
+         id="url-6"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;line-height:80%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';text-align:start;text-anchor:start;fill:#f2f4f5;fill-opacity:1;stroke:none">Photo: Markus Farnung</tspan></text>
+  </g>
+</svg>
