@@ -52,6 +52,10 @@ parser.add_argument('--imagemagick', action="store_true", default=False, help=''
      Render frames using ImageMagick instead of Inkscape.
      Usage: ./make.py yourproject/ --imagemagick
      ''')
+parser.add_argument('--resvg', action="store_true", default=False, help='''
+     Render frames using resvg instead of Inkscape.
+     Usage: ./make.py yourproject/ --resvg
+     ''')
 
 if len(sys.argv) < 2:
     parser.print_help()

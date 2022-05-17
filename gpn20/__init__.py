@@ -132,15 +132,15 @@ def debug():
       '../intro.ts',
       introFrames,
       {
-          '$title': "Long Long Long title is LONG",
+          '$title': "Long Long Long title is LONG   ",
           '$speaker': 'Long Name of Dr. Dr. Prof. Dr. Long Long'
       }
     )
 
-    render('outro.svg',
-        '../outro.ts',
-        outroFrames
-    )
+    #render('outro.svg',
+    #    '../outro.ts',
+    #    outroFrames
+    #)
 
 
 def tasks(queue, args, idlist, skiplist):

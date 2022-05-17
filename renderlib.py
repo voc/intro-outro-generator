@@ -91,12 +91,20 @@ def renderFrame(infile, task, outfile):
         with Image(filename=infile) as img:
             with img.convert('png') as converted:
                 converted.save(filename=outfile)
+    elif args.resvg:
+        # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
+        cmd = 'resvg --background white --width={1} --height={2}  "{4}" "{3}" 2>&1 >/dev/null'.format(task.workdir, width, height, outfile, infile)
+        errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
+        if errorReturn != '':
+            print("resvg exited with error\n" + errorReturn)
+            # sys.exit(42)
+
     else:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
         cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-png="{3}" "{4}" 2>&1 >/dev/null'.format(task.workdir, width, height, outfile, infile)
         errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
         if errorReturn != '':
-            print("inkscape exitted with error\n" + errorReturn)
+            print("inkscape exited with error\n" + errorReturn)
             # sys.exit(42)
 
 def cachedRenderFrame(frame, frameNr, task, cache):
