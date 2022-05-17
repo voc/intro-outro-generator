@@ -119,7 +119,7 @@ def pauseFrames(params):
             *((f'g{i}', 'style', 'opacity', 1) for i in range(0,26))
         )
     # kringel
-    for frame in range(0, fps):
+    for frame in range(0, fps+2):
         yield (
             ('pause', 'style', 'opacity', 0),
             ('gfactoryreset', 'style', 'opacity', 0),
@@ -149,7 +149,7 @@ def tasks(queue, args, idlist, skiplist):
         if event['room'] not in ('Medientheater', "Vortragssaal", "Blauer Salon"):
             print("skipping room %s (%s)" % (event['room'], event['title']))
             continue
-        if event['day'] not in ('0', '1', '2', '3'):
+        if event['day'] not in ('0', '1', '2', '3', '4'):
             print("skipping day %s" % (event['day']))
             continue
         if not (idlist==[]):
