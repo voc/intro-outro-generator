@@ -62,6 +62,69 @@ def outroFrames(args):
             ('logo', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
         )
 
+def pauseFrames(params):
+    # kringel
+    for frame in range(0, fps):
+        yield (
+            ('pause', 'style', 'opacity', 0),
+            ('gfactoryreset', 'style', 'opacity', 0),
+            *((f'g{i}', 'style', 'opacity', int(i<=frame)) for i in range(0,26))
+        )
+    # ease in factory
+    frames = int(0.5*fps)
+    for i in range(0, frames):
+        yield(
+            ('pause', 'style', 'opacity', 0),
+            ('gfactoryreset', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
+            *((f'g{i}', 'style', 'opacity', 1) for i in range(0,26))
+        )
+    # show factory
+    frames = 1*fps
+    for i in range(0, frames):
+        yield(
+            ('pause', 'style', 'opacity', 0),
+            ('gfactoryreset', 'style', 'opacity', 1),
+            *((f'g{i}', 'style', 'opacity', 1) for i in range(0,26))
+        )
+    # ease out factory
+    frames = int(0.5*fps)
+    for i in range(0, frames):
+        yield(
+            ('pause', 'style', 'opacity', 0),
+            ('gfactoryreset', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
+            *((f'g{i}', 'style', 'opacity', 1) for i in range(0,26))
+        )
+    # ease in pause
+    frames = int(0.5*fps)
+    for i in range(0, frames):
+        yield(
+            ('pause', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
+            ('gfactoryreset', 'style', 'opacity', 0),
+            *((f'g{i}', 'style', 'opacity', 1) for i in range(0,26))
+        )
+    # show pause
+    frames = 1*fps
+    for i in range(0, frames):
+        yield(
+            ('pause', 'style', 'opacity', 1),
+            ('gfactoryreset', 'style', 'opacity', 0),
+            *((f'g{i}', 'style', 'opacity', 1) for i in range(0,26))
+        )
+    # ease out pause
+    frames = int(0.5*fps)
+    for i in range(0, frames):
+        yield(
+            ('pause', 'style', 'opacity',  easeOutQuad(i, 1, -1, frames)),
+            ('gfactoryreset', 'style', 'opacity', 0),
+            *((f'g{i}', 'style', 'opacity', 1) for i in range(0,26))
+        )
+    # kringel
+    for frame in range(0, fps):
+        yield (
+            ('pause', 'style', 'opacity', 0),
+            ('gfactoryreset', 'style', 'opacity', 0),
+            *((f'g{i}', 'style', 'opacity', int(i>=frame)) for i in range(0,26))
+        )
 
 def debug():
     render(
@@ -83,10 +146,10 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if event['room'] not in ('Medientheater', "Vortragssaal", "Blauer Salon", "Ausstellung BioMedien"):
+        if event['room'] not in ('Medientheater', "Vortragssaal", "Blauer Salon"):
             print("skipping room %s (%s)" % (event['room'], event['title']))
             continue
-        if event['day'] not in ('1', '2', '3', '4'):
+        if event['day'] not in ('0', '1', '2', '3'):
             print("skipping day %s" % (event['day']))
             continue
         if not (idlist==[]):
@@ -115,4 +178,13 @@ def tasks(queue, args, idlist, skiplist):
             outfile = 'outro.ts',
             sequence = outroFrames
          ))
+
+    if not 'pause' in skiplist:
+            # place the pause-sequence into the queue
+            queue.put(Rendertask(
+                    infile = 'pause.svg',
+                    outfile = 'pause.ts',
+                    sequence = pauseFrames
+            ))
+
 
