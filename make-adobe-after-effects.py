@@ -12,22 +12,25 @@ import os
 import platform
 from shutil import copyfile
 
-titlemap = {
-    'id': "11404", 'title': "Attacking CPUs with Power Side Channels from Software",
-    'id': "205", 'title': "Attacking CPUs with Power Side Channels from Software",
-}
+titlemap = (
+    {'id': "000000", 'title': "Short title goes here"},
+)
 
 # Parse arguments
 parser = argparse.ArgumentParser(
     description='C3VOC Intro-Outro-Generator - Variant to use with Adobe After Effects Files',
-    usage="./make-adobe-after-effects.py yourproject/ https://url/to/schedule.xml",
+    usage="./make-adobe-after-effects.py yourproject/ https://url/to/schedule.xml filename_of_intro.aepx",
     formatter_class=argparse.RawTextHelpFormatter)
 
 parser.add_argument('project', action="store", metavar='Project folder', type=str, help='''
-    Path to your project folder with After Effects Files (intro.aepx)
+    Path to your project folder with After Effects Files
     ''')
 parser.add_argument('schedule', action="store", metavar='Schedule-URL', type=str, nargs='?', help='''
     URL or Path to your schedule.xml
+    ''')
+
+parser.add_argument('introfile', action="store", metavar='Name of intro source file', default='intro.aepx', type=str, nargs='?', help='''
+    Filename of the intro source file inside the project folder
     ''')
 
 parser.add_argument('--debug', action="store_true", default=False, help='''
@@ -173,13 +176,30 @@ def run_output(command, **kwargs):
         stderr=subprocess.STDOUT)
 
 
+def run_once(command, **kwargs):
+        DETACHED_PROCESS = 0x00000008
+        return subprocess.Popen(
+                fmt_command(command, **kwargs),
+                shell=False,
+                stdin=None,
+                stdout=None,
+                stderr=None,
+                close_fds=True,
+                creationflags=DETACHED_PROCESS)
+
+
 def enqueue_job(event):
     event_id = str(event['id'])
     if (os.path.exists(os.path.join(args.project, event_id + '.ts')) or os.path.exists(os.path.join(args.project, event_id + '.mov'))) and not args.force:
         event_print(event, "file exist, skipping " + str(event['id']))
         return
     work_doc = os.path.join(tempdir.name, event_id + '.aepx')
-    intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
+    script_doc = os.path.join(tempdir.name, event_id+'.jsx')
+    ascript_doc = os.path.join(tempdir.name, event_id+'.scpt')
+    if platform.system() == 'Windows':
+        intermediate_clip = os.path.join(tempdir.name, event_id + '.avi')
+    else:
+        intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
 
     if event_id == 'pause' or event_id == 'outro' or event_id == 'bgloop':
         copyfile(args.project + event_id + '.aepx', work_doc)
@@ -196,34 +216,58 @@ def enqueue_job(event):
                 locationpath=intermediate_clip)
 
     else:
-        with open(args.project + 'intro.aepx', 'r') as fp:
+        with open(args.project + 'intro.jsx', 'r') as fp:
             scriptstr = fp.read()
 
+        scriptstr = scriptstr.replace("$filename", work_doc.replace("\\", "/"))
         for key, value in event.items():
             value = str(value).replace('"', '\\"')
             scriptstr = scriptstr.replace("$" + str(key), value)
         
-        with open(work_doc, 'w', encoding='utf-8') as fp:
+        with open(script_doc, 'w', encoding='utf-8') as fp:
             fp.write(scriptstr)
+
+        copyfile(args.project+args.introfile,work_doc)
         
         if platform.system() == 'Darwin':
-            run(r'/Applications/Adobe\ After\ Effects\ 2020/aerender -project {jobpath} -comp "intro" -mp -output {locationpath}',
+            copyfile(args.project+'intro.scpt',ascript_doc)
+            run('osascript {ascript_path} {jobpath} {scriptpath}',
+                jobpath=work_doc,
+                scriptpath=script_doc,
+                ascript_path=ascript_doc)
+
+            run(r'/Applications/Adobe\ After\ Effects\ 2022/aerender -project {jobpath} -comp "intro" -mp -output {locationpath}',
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -mp -output {locationpath}',
+            run_once(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2022/Support\ Files/AfterFX.exe -noui -r {scriptpath}',
+                scriptpath=script_doc)
+
+            time.sleep(5)
+
+            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2022/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -mfr on 100 -output {locationpath}',
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
     if args.debug or args.keep:
+        path = tempdir.name
+        dirs = os.listdir( path )
+
+        for file in dirs:
+            print(file)
         copyfile(work_doc, args.project + event_id + '.aepx')
+        copyfile(script_doc, args.project + event_id + '.jsx')
+        copyfile(intermediate_clip, args.project + event_id + '.avi')
 
     return event_id
 
 
 def finalize_job(job_id, event):
     event_id = str(event['id'])
-    intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
+    if platform.system() == 'Windows':
+        intermediate_clip = os.path.join(tempdir.name, event_id + '.avi')
+    else:
+        intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
     final_clip = os.path.join(os.path.dirname(args.project), event_id + '.ts')
 
     if args.alpha:
@@ -280,10 +324,13 @@ for event in events:
         print("skipping day %s (%s)" % (event['day'], event['title']))
         continue
 
-    if str(event['id']) in str(titlemap['id']):
+    for item in titlemap:
+        if str(item['id']) == str(event['id']):
+            title = item['title']
             event_print(event, "titlemap replacement")
-            event['title'] = titlemap['title']
-
+            event_print(event, "replacing title %s with %s" % (event['title'], title))
+            event['title'] = title
+ 
     event_print(event, "enqueued as " + str(event['id']))
 
     job_id = enqueue_job(event)

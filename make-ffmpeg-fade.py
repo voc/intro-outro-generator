@@ -177,7 +177,9 @@ def fit_text(string: str, frame_width):
     line = ""
     for word in split_line:
         w, _ = translation_font.getsize(" ".join([line, word]))
-        if w > (frame_width - (2 * 6)):
+        print("{}, {}".format(w, line))
+        if w > (frame_width):
+            print("too wide, breaking")
             lines += line.strip() + "\n"
             line = ""
 
@@ -189,8 +191,7 @@ def fit_text(string: str, frame_width):
 
 def fit_title(string: str):
     global translation_font
-    translation_font = ImageFont.truetype(
-    font_t, size=80, encoding="unic")
+    translation_font = ImageFont.truetype(font_t, size=title_fontsize-10, encoding="unic")
     title = fit_text(string, 1080)
 
     return title
@@ -198,8 +199,7 @@ def fit_title(string: str):
 
 def fit_speaker(string: str):
     global translation_font
-    translation_font = ImageFont.truetype(
-    font_s, size=50, encoding="unic")
+    translation_font = ImageFont.truetype(font_s, size=speaker_fontsize-10, encoding="unic")
     speaker = fit_text(string, 1080)
 
     return speaker
@@ -222,6 +222,7 @@ def enqueue_job(event):
 
     t = fit_title(event_title)
     s = fit_speaker(event_personnames)
+    print(s)
 
     if args.debug:
         print('Title: ', t)
@@ -281,7 +282,7 @@ def enqueue_job(event):
         else:
             cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
     else:
-        cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
+        cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0  -c:v mpeg2video -pix_fmt:v yuv420p -qscale:v 2 -qmin:v 2 -qmax:v 7 -keyint_min 0 -bf 0 -g 0 -intra:0 -maxrate:0 90M  -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
 
     if args.debug:
         print(cmd)
