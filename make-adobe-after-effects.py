@@ -223,18 +223,23 @@ def enqueue_job(event):
         for key, value in event.items():
             value = str(value).replace('"', '\\"')
             scriptstr = scriptstr.replace("$" + str(key), value)
-        
+
         with open(script_doc, 'w', encoding='utf-8') as fp:
             fp.write(scriptstr)
 
         copyfile(args.project+args.introfile,work_doc)
-        
+
         if platform.system() == 'Darwin':
             copyfile(args.project+'intro.scpt',ascript_doc)
-            run('osascript {ascript_path} {jobpath} {scriptpath}',
-                jobpath=work_doc,
-                scriptpath=script_doc,
-                ascript_path=ascript_doc)
+
+            run('osascript {ascript_path} {scriptpath}',
+                 scriptpath=script_doc,
+                 ascript_path=ascript_doc)
+
+            #run('osascript {ascript_path} {jobpath} {scriptpath}',
+            #    jobpath=work_doc,
+            #    scriptpath=script_doc,
+            #    ascript_path=ascript_doc)
 
             run(r'/Applications/Adobe\ After\ Effects\ 2022/aerender -project {jobpath} -comp "intro" -mp -output {locationpath}',
                 jobpath=work_doc,
@@ -330,7 +335,7 @@ for event in events:
             event_print(event, "titlemap replacement")
             event_print(event, "replacing title %s with %s" % (event['title'], title))
             event['title'] = title
- 
+
     event_print(event, "enqueued as " + str(event['id']))
 
     job_id = enqueue_job(event)
