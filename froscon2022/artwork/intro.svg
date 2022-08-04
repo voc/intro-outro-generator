@@ -282,12 +282,12 @@
        style="fill:#1f1fa3;fill-opacity:1;stroke-width:3.6841" />
     <flowRoot
        transform="matrix(1.8789785,0,0,1.8788549,11.03754,2.8810923)"
-       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:Open Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        id="title"
        xml:space="preserve"><flowRegion
-         style="font-family:sans-serif;fill:#ffffff"
+         style="font-family:Open Sans;fill:#ffffff"
          id="flowRegion3042"><rect
-           style="font-size:48px;font-family:sans-serif;fill:#ffffff;fill-opacity:1"
+           style="font-size:48px;font-family:Open Sans;fill:#ffffff;fill-opacity:1"
            y="30.517624"
            x="24.243662"
            height="194.80345"
@@ -297,27 +297,27 @@
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:48px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">$title</flowPara></flowRoot>
     <flowRoot
        transform="matrix(1.8789785,0,0,1.8788549,-44.620037,12.436556)"
-       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:Open Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        id="names"
        xml:space="preserve"><flowRegion
          id="flowRegion3840"
-         style="font-family:sans-serif"><rect
+         style="font-family:Open Sans"><rect
            y="243"
            x="56"
            height="271.10471"
            width="673.89355"
            id="rect3842"
-           style="font-family:sans-serif" /></flowRegion><flowPara
+           style="font-family:Open Sans" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1"
          id="flowPara3844">$personnames</flowPara></flowRoot>
     <flowRoot
        transform="matrix(1.8789785,0,0,1.8788549,-555.36165,435.49229)"
-       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:Open Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
        id="url"
        xml:space="preserve"><flowRegion
-         style="font-family:sans-serif"
+         style="font-family:Open Sans"
          id="flowRegion3817"><rect
-           style="font-family:sans-serif;text-align:end;text-anchor:end"
+           style="font-family:Open Sans;text-align:end;text-anchor:end"
            y="312.37131"
            x="790.53937"
            height="22.430193"
@@ -344,18 +344,18 @@
     <flowRoot
        xml:space="preserve"
        id="url-8"
-       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:Open Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
        transform="matrix(1.8789785,0,0,1.8788549,-2034.9167,435.85672)"><flowRegion
          id="flowRegion3817-6"
-         style="font-family:sans-serif"><rect
+         style="font-family:Open Sans"><rect
            id="rect3819-0"
            width="486.27167"
            height="22.430193"
            x="790.53937"
            y="312.37131"
-           style="font-family:sans-serif;text-align:end;text-anchor:end" /></flowRegion><flowPara
+           style="font-family:Open Sans;text-align:end;text-anchor:end" /></flowRegion><flowPara
          id="flowPara3821-4"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:Sans;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1">20.-21. August 2022</flowPara></flowRoot>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:125%;font-family:Open Sans;-inkscape-font-specification:Sans;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1">20.-21. August 2022</flowPara></flowRoot>
     <path
        sodipodi:nodetypes="cscscscssc"
        inkscape:connector-curvature="0"
