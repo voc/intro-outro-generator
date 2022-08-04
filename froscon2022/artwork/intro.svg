@@ -279,7 +279,7 @@
        height="1080"
        width="1920"
        id="rect3809-1"
-       style="fill:#00a2e1;fill-opacity:1;stroke-width:3.6841" />
+       style="fill:#1f1fa3;fill-opacity:1;stroke-width:3.6841" />
     <flowRoot
        transform="matrix(1.8789785,0,0,1.8788549,11.03754,2.8810923)"
        style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -330,7 +330,7 @@
        transform="translate(22.214258,208.04834)"
        inkscape:label="#frog">
       <circle
-         style="clip-rule:evenodd;fill:#00a2e1;fill-rule:evenodd;stroke-width:0.351653;stroke-miterlimit:10"
+         style="clip-rule:evenodd;fill:#1f1fa3;fill-rule:evenodd;stroke-width:0.351653;stroke-miterlimit:10"
          id="path11200"
          cy="1014.46198"
          cx="-49.135002"
