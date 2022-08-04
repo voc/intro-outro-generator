@@ -51,17 +51,10 @@ def introFrames(args):
 
 def outroFrames(args):
 	xml = etree.parse('froscon2022/artwork/outro.svg').getroot()
-	pathstr = xml.find(".//*[@id='animatePath']").get('d')
-	frog = xml.find(".//*[@id='animatePath']").get('d')
-	path = svg.path.parse_path(pathstr)
-
-	init = path.point(0)
 
 	frames = int(4*fps)
 	for i in range(0, frames):
-		p = path.point(i / frames) - init
-		yield (
-		)
+		yield ()
 
 def pauseFrames(args):
 	frames = 2*fps
