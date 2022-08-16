@@ -137,13 +137,14 @@ def cachedRenderFrame(frame, frameNr, task, cache):
 
         svgfile = '{0}/.frames/{1:04d}.svg'.format(task.workdir, frameNr)
 
-        with SVGTemplate(task, svgfile) as svg:
-            svg.replacetext()
-            svg.transform(frame)
-            svg.write()
+        if not skip_rendering:
+            with SVGTemplate(task, svgfile) as svg:
+                svg.replacetext()
+                svg.transform(frame)
+                svg.write()
 
-        outfile = '{0}/.frames/{1:04d}.png'.format(task.workdir, frameNr)
-        renderFrame(svgfile, task, outfile)
+            outfile = '{0}/.frames/{1:04d}.png'.format(task.workdir, frameNr)
+            renderFrame(svgfile, task, outfile)
 
         # increment frame-number
         frameNr += 1
