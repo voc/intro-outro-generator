@@ -1,2 +1,0 @@
-ffmpeg -i session_opener-25fps.mp4 given-frames/frame%04d.png
-ffmpeg -i session_opener-25fps.mp4 -map 0:a -ar 48000 -ac 1 -f s16le  -shortest -f mpegts intro_audio.ts

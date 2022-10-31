@@ -1,0 +1,45 @@
+<body>
+<h1>C3VOC-Intro-Outro-Generator</h1>
+<form id="myForm" action="http://127.0.0.1:8000/generate/">
+<input name="schedule" type="text">
+<input name="intro" type="file">
+<input name="outro" type="file">
+<input type="submit">
+</form>
+<div id="result">result will appear here</div>
+<a href="/images/myw3schoolsimage.jpg" download>
+</body>
+<script>
+
+function download(id){
+
+}
+
+function getStatus(id){
+setInterval(function(){
+  fetch("http://127.0.0.1:8000/progress/") // Any output from the script will go to the "result" div
+  .then(response => response.text())
+  .catch(error => document.getElementById("result").innerHTML = error)
+  .then(response => document.getElementById("result").innerHTML = response)
+}, 1000); // Poll every 1000ms
+}
+
+var form = document.getElementById('myForm');
+form.onsubmit = async (e) => {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const url = form.action;
+  try {
+      const formData = new FormData(form);
+      const response = await fetch(url, {
+          method: 'POST',
+          body: formData
+      });
+      console.log(response);
+      getStatus(response.id);
+  } catch (error) {
+      console.error(error);
+  }
+}
+
+</script>

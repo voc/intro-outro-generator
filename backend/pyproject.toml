@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "intro-outro-api"
+version = "0.1.0"
+description = ""
+authors = ["voc <voc@c3voc.de>"]
+readme = "README.md"
+packages = [{include = "main.py"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.85.1"
+python-multipart = "^0.0.5"
+cssutils = "1.0.2"
+lxml = "4.6.3"
+Wand = "0.6.5"
+pillow = "^9.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
