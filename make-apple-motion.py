@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # vim: tabstop=4 shiftwidth=4 expandtab
 
-import subprocess
 import renderlib
 import argparse
 import tempfile
@@ -100,21 +99,21 @@ def fmt_command(command, **kwargs):
     for key, value in kwargs.items():
         args[key] = shlex.quote(value)
 
-    command = command.format(**args)
-    return shlex.split(command)
+    return command.format(**args)
 
 
 def run(command, **kwargs):
-    return subprocess.check_call(
-        fmt_command(command, **kwargs))
-
+    os.system(fmt_command(command, **kwargs))
 
 def run_output(command, **kwargs):
-    return subprocess.check_output(
-        fmt_command(command, **kwargs),
-        encoding='utf-8',
-        stderr=subprocess.STDOUT)
-
+    # Apple Compressor behaves weirdly with its stdout. It will not terminate right when ran through
+    # os.subprocess, but work fine when run via os.system. To still get the output, we pipe it into a
+    # tempfile. This solution is quite stable.
+    # see https://twitter.com/mazdermind/status/1588286020121870336
+    with tempfile.NamedTemporaryFile() as t:
+        cmd = fmt_command(command, **kwargs)
+        os.system(f'{cmd} >{t.name} 2>&1')
+        return t.read().decode('utf-8')
 
 def enqueue_job(event):
     event_id = str(event['id'])
