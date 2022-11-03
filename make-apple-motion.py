@@ -45,6 +45,18 @@ parser.add_argument('--exclude-id', dest='exclude_ids', nargs='+', action="store
     Usage: ./make.py yourproject/ --exclude-id 1 8 15 16 23 42
     ''')
 
+parser.add_argument('--vcodec', type=str, default='mpeg2video', help='''
+    ffmpeg video codec to use. defaults to mpeg2video, libx264 or copy (keeps the original h264 stream) is also often used.
+    ''')
+
+parser.add_argument('--acodec', type=str, default='mp2', help='''
+    ffmpeg video codec to use. defaults to mp2, aac or copy (keeps the m4a stream) is also often used.
+    ''')
+
+parser.add_argument('--num-audio-streams', dest='naudio', type=int, default=1, help='''
+    number of audio-streams to generate. defaults to 1
+    ''')
+
 args = parser.parse_args()
 
 
@@ -189,9 +201,11 @@ def finalize_job(job_id, event):
 
     shutil.copy(intermediate_clip, copy_clip)
 
-    run('ffmpeg -y -hide_banner -loglevel error -i {input} -f lavfi -i anullsrc -ar 48000 -ac 2 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:a -map 1:a -map 1:a -map 1:a -shortest -f mpegts {output}',
+    run('ffmpeg -y -hide_banner -loglevel error -i {input} -ar 48000 -ac 2 -map 0:v:0 -c:v {vcodec} -q:v 0 -aspect 16:9 '+(args.naudio * '-map 0:a:0 ')+' -c:a {acodec} -f mpegts {output}',
         input=intermediate_clip,
-        output=final_clip)
+        output=final_clip,
+        vcodec=args.vcodec,
+        acodec=args.acodec)
 
     event_print(event, "finalized intro to " + final_clip)
 
