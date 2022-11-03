@@ -26,17 +26,17 @@ parser.add_argument('schedule', action="store", metavar='Schedule-URL', type=str
     URL or Path to your schedule.xml
     ''')
 
-parser.add_argument('--debug', action="store_true", default=False, help='''
-    Run script in debug mode and render with placeholder texts,
+parser.add_argument('--develop', action="store_true", default=False, help='''
+    Run script in develop mode and render with placeholder texts,
     not parsing or accessing a schedule. Schedule-URL can be left blank when
-    used with --debug
+    used with --develop
     This argument must not be used together with --id
-    Usage: ./make.py yourproject/ --debug
+    Usage: ./make.py yourproject/ --develop
     ''')
 
 parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, help='''
     Only render the given ID(s) from your projects schedule.
-    This argument must not be used together with --debug
+    This argument must not be used together with --develop
     Usage: ./make.py yourproject/ --id 4711 0815 4223 1337
     ''')
 
@@ -64,10 +64,10 @@ def error(str):
 if not args.motn:
     error("The Motion-File is a rquired argument")
 
-if not args.debug and not args.schedule:
-    error("Either specify --debug or supply a schedule")
+if not args.develop and not args.schedule:
+    error("Either specify --develop or supply a schedule")
 
-if args.debug:
+if args.develop:
     persons = ['Arnulf Christl', 'Astrid Emde', 'Dominik Helle', 'Till Adams']
     events = [{
         'id': 3773,
