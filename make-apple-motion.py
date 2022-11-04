@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # vim: tabstop=4 shiftwidth=4 expandtab
 
-import subprocess
 import renderlib
 import argparse
 import tempfile
@@ -27,23 +26,35 @@ parser.add_argument('schedule', action="store", metavar='Schedule-URL', type=str
     URL or Path to your schedule.xml
     ''')
 
-parser.add_argument('--debug', action="store_true", default=False, help='''
-    Run script in debug mode and render with placeholder texts,
+parser.add_argument('--develop', action="store_true", default=False, help='''
+    Run script in develop mode and render with placeholder texts,
     not parsing or accessing a schedule. Schedule-URL can be left blank when
-    used with --debug
+    used with --develop
     This argument must not be used together with --id
-    Usage: ./make.py yourproject/ --debug
+    Usage: ./make.py yourproject/ --develop
     ''')
 
 parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, help='''
     Only render the given ID(s) from your projects schedule.
-    This argument must not be used together with --debug
+    This argument must not be used together with --develop
     Usage: ./make.py yourproject/ --id 4711 0815 4223 1337
     ''')
 
 parser.add_argument('--exclude-id', dest='exclude_ids', nargs='+', action="store", type=int, help='''
     Do not render the given ID(s) from your projects schedule.
     Usage: ./make.py yourproject/ --exclude-id 1 8 15 16 23 42
+    ''')
+
+parser.add_argument('--vcodec', type=str, default='mpeg2video', help='''
+    ffmpeg video codec to use. defaults to mpeg2video, libx264 or copy (keeps the original h264 stream) is also often used.
+    ''')
+
+parser.add_argument('--acodec', type=str, default='mp2', help='''
+    ffmpeg video codec to use. defaults to mp2, aac or copy (keeps the m4a stream) is also often used.
+    ''')
+
+parser.add_argument('--num-audio-streams', dest='naudio', type=int, default=1, help='''
+    number of audio-streams to generate. defaults to 1
     ''')
 
 args = parser.parse_args()
@@ -65,10 +76,10 @@ def error(str):
 if not args.motn:
     error("The Motion-File is a rquired argument")
 
-if not args.debug and not args.schedule:
-    error("Either specify --debug or supply a schedule")
+if not args.develop and not args.schedule:
+    error("Either specify --develop or supply a schedule")
 
-if args.debug:
+if args.develop:
     persons = ['Arnulf Christl', 'Astrid Emde', 'Dominik Helle', 'Till Adams']
     events = [{
         'id': 3773,
@@ -100,21 +111,21 @@ def fmt_command(command, **kwargs):
     for key, value in kwargs.items():
         args[key] = shlex.quote(value)
 
-    command = command.format(**args)
-    return shlex.split(command)
+    return command.format(**args)
 
 
 def run(command, **kwargs):
-    return subprocess.check_call(
-        fmt_command(command, **kwargs))
-
+    os.system(fmt_command(command, **kwargs))
 
 def run_output(command, **kwargs):
-    return subprocess.check_output(
-        fmt_command(command, **kwargs),
-        encoding='utf-8',
-        stderr=subprocess.STDOUT)
-
+    # Apple Compressor behaves weirdly with its stdout. It will not terminate right when ran through
+    # os.subprocess, but work fine when run via os.system. To still get the output, we pipe it into a
+    # tempfile. This solution is quite stable.
+    # see https://twitter.com/mazdermind/status/1588286020121870336
+    with tempfile.NamedTemporaryFile() as t:
+        cmd = fmt_command(command, **kwargs)
+        os.system(f'{cmd} >{t.name} 2>&1')
+        return t.read().decode('utf-8')
 
 def enqueue_job(event):
     event_id = str(event['id'])
@@ -190,9 +201,11 @@ def finalize_job(job_id, event):
 
     shutil.copy(intermediate_clip, copy_clip)
 
-    run('ffmpeg -y -hide_banner -loglevel error -i {input} -f lavfi -i anullsrc -ar 48000 -ac 2 -map 0:v -c:v mpeg2video -q:v 0 -aspect 16:9 -map 1:a -map 1:a -map 1:a -map 1:a -shortest -f mpegts {output}',
+    run('ffmpeg -y -hide_banner -loglevel error -i {input} -ar 48000 -ac 2 -map 0:v:0 -c:v {vcodec} -q:v 0 -aspect 16:9 '+(args.naudio * '-map 0:a:0 ')+' -c:a {acodec} -f mpegts {output}',
         input=intermediate_clip,
-        output=final_clip)
+        output=final_clip,
+        vcodec=args.vcodec,
+        acodec=args.acodec)
 
     event_print(event, "finalized intro to " + final_clip)
 
@@ -222,7 +235,7 @@ for event in filtered_events:
 print("waiting for rendering to complete")
 
 while len(active_jobs) > 0:
-    time.sleep(15)
+    time.sleep(10)
     active_jobs, finished_jobs = filter_finished_jobs(active_jobs)
 
     print("{} jobs in queue, {} ready to finalize".format(len(active_jobs), len(finished_jobs)))
