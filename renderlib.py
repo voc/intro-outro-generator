@@ -11,6 +11,7 @@ from svgtemplate import SVGTemplate
 from lxml import etree
 from urllib.request import urlopen
 from wand.image import Image
+from tempfile import NamedTemporaryFile
 
 # Frames per second. Increasing this renders more frames, the avconf-statements would still need modifications
 fps = 25
@@ -83,14 +84,18 @@ def ensureFilesRemoved(pattern):
     for f in glob.glob(pattern):
         os.unlink(f)
 
-def renderFrame(infile, task, outfile):
+def renderFrame(svg, task, outfile):
     width = 1920
     height = 1080
+    outfile = os.path.abspath(outfile)
     if args.imagemagick:
         # invoke imagemagick to convert the generated svg-file into a png inside the .frames-directory
-        with Image(filename=infile) as img:
-            with img.convert('png') as converted:
-                converted.save(filename=outfile)
+        with NamedTemporaryFile(dir=task.workdir, suffix='.svg') as svgfile:
+            svgfile.write(svg.svgstr.encode('utf-8'))
+            svgfile.flush()
+            with Image(filename=svgfile.name) as img:
+                with img.convert('png') as converted:
+                    converted.save(filename=outfile)
     elif args.resvg:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
         cmd = 'resvg --background white --width={1} --height={2}  "{4}" "{3}" 2>&1 >/dev/null'.format(task.workdir, width, height, outfile, infile)
@@ -98,11 +103,10 @@ def renderFrame(infile, task, outfile):
         if errorReturn != '':
             print("resvg exited with error\n" + errorReturn)
             # sys.exit(42)
-
     else:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-        cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-filename="{3}" "{4}" --pipe 2>&1 >/dev/null'.format(task.workdir, width, height, os.path.abspath(outfile), os.path.abspath(infile))
-        errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
+        cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-filename="{3}" --pipe 2>&1 >/dev/null'.format(task.workdir, width, height, outfile)
+        errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, input=svg.svgstr, stderr=subprocess.STDOUT, cwd=task.workdir)
         if errorReturn != '':
             print("inkscape exited with error\n" + errorReturn)
             # sys.exit(42)
@@ -135,26 +139,20 @@ def cachedRenderFrame(frame, frameNr, task, cache):
         elif not skip_rendering:
             cache[frame] = frameNr
 
-        svgfile = '{0}/.frames/{1:04d}.svg'.format(task.workdir, frameNr)
-
-        with SVGTemplate(task, svgfile) as svg:
+        outfile = '{0}/.frames/{1:04d}.png'.format(task.workdir, frameNr)
+        with SVGTemplate(task) as svg:
             svg.replacetext()
             svg.transform(frame)
-            svg.write()
-
-        outfile = '{0}/.frames/{1:04d}.png'.format(task.workdir, frameNr)
-        renderFrame(svgfile, task, outfile)
+            renderFrame(svg, task, outfile)
 
         # increment frame-number
         frameNr += 1
 
 
 def rendertask_image(task):
-    svgfile = '{0}/image.svg'.format(task.workdir)
-    with SVGTemplate(task, svgfile) as svg:
+    with SVGTemplate(task) as svg:
         svg.replacetext()
-        svg.write()
-    renderFrame(svgfile, task, task.outfile)
+        renderFrame(svg, task, task.outfile)
 
 def rendertask_video(task):
     # iterate through the animation sequence frame by frame
@@ -178,16 +176,18 @@ def rendertask_video(task):
         cmd = 'cd {0} && '.format(task.workdir)
         cmd += 'ffmpeg -f image2 -i .frames/%04d.png '
         if task.audiofile is None:
-            cmd += '-ar 48000 -ac 1 -f s16le -i /dev/zero -ar 48000 -ac 1 -f s16le -i /dev/zero '
+            audio_input = '-ar 48000 -ac 1 -f s16le -i /dev/zero '
         else:
-            cmd += '-i {0} -i {0} '.format(task.audiofile)
+            audio_input = '-i {0} '.format(task.audiofile)
+        cmd += audio_input * args.audio_streams
 
         cmd += '-map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 '
 
         if task.audiofile is None:
-            cmd += '-map 1:0 -map 2:0 '
+            audio_map = '-map {0}:0 '
         else:
-            cmd += '-map 1:0 -c:a copy -map 2:0 -c:a copy '
+            audio_map = '-map {0}:0 -c:a copy '
+        cmd += ''.join(audio_map.format(index + 1) for index in range(args.audio_streams))
         cmd += '-shortest -f mpegts "{0}"'.format(task.outfile)
     elif task.outfile.endswith('.mov'):
         cmd = 'cd {0} && '.format(task.workdir)
