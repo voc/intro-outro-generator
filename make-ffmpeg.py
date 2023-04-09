@@ -211,9 +211,9 @@ def enqueue_job(event):
 
     event_title = str(event['title'])
     event_personnames = str(event['personnames'])
-    event_title = event_title.replace('"', '')
+    event_title = event_title.replace('"', '\\"')
     event_title = event_title.replace('\'', '')
-    event_personnames = event_personnames.replace('"', '')
+    event_personnames = event_personnames.replace('"', '\\"')
 
     t = fit_title(event_title)
     t = t.replace(':', "\:") # the ffmpeg command needs colons to be escaped
