@@ -216,6 +216,7 @@ def enqueue_job(event):
     event_personnames = event_personnames.replace('"', '')
 
     t = fit_title(event_title)
+    t = t.replace(':', "\:") # the ffmpeg command needs colons to be escaped
     s = fit_speaker(event_personnames)
 
     if args.debug:
