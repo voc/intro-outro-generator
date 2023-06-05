@@ -7,9 +7,18 @@ import subprocess
 import renderlib
 import argparse
 import shlex
+from toml import load
 from PIL import ImageFont
-from configparser import ConfigParser
 import json
+
+from rich import print,inspect
+import logging
+from rich.logging import RichHandler
+
+FORMAT = "%(message)s"
+logging.basicConfig(
+    level="INFO", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()]
+)
 
 # Parse arguments
 parser = argparse.ArgumentParser(
@@ -51,24 +60,20 @@ parser.add_argument('--force', action="store_true", default=False, help='''
 
 args = parser.parse_args()
 
+if args.debug:
+    logging.getLogger().setLevel(logging.DEBUG)
+
 if (args.skip is None):
 	args.skip = []
 
 
-def headline(str):
-	print("##################################################")
-	print(str)
-	print("##################################################")
-	print()
+if not (os.path.exists(os.path.join(args.project, 'config.toml'))):
+    logging.error("config.toml file in Project Path is missing")
+    sys.exit(1)
 
-
-def error(str):
-	headline(str)
-	parser.print_help()
-	sys.exit(1)
-
-cparser = ConfigParser()
-cparser.read(os.path.join(os.path.dirname(args.project), 'config.ini'))
+with open(os.path.join(args.project, 'config.toml'), 'r') as f:
+    cparser = load(f)
+logging.debug(cparser)
 template = cparser['default']['template']
 alpha = cparser['default']['alpha']
 prores = cparser['default']['prores']
@@ -103,33 +108,31 @@ text_x = int(cparser['text']['x'])
 text_y = int(cparser['text']['y'])
 text_text = cparser['text']['text']
 
-font_t = os.path.join(os.path.dirname(args.project), title_font)
-font_s = os.path.join(os.path.dirname(args.project), speaker_font)
-font_tt = os.path.join(os.path.dirname(args.project), text_font)
+font_t = os.path.join(args.project, title_font)
+font_s = os.path.join(args.project, speaker_font)
+font_tt = os.path.join(args.project, text_font)
 
 fileformat = os.path.splitext(template)[1]
-infile = os.path.join(os.path.dirname(args.project), template)
+infile = os.path.join(args.project, template)
 
 schedule = cparser['default']['schedule']
 
 if not (os.path.exists(os.path.join(args.project, template))):
-    error("Template file {} in Project Path is missing".format(template))
+    logging.error("Template file {} in Project Path is missing".format(template))
 
 for ffile in (title_font, speaker_font, text_font):
     if not (os.path.exists(os.path.join(args.project, ffile))):
-        error("Font file {} in Project Path is missing".format(ffile))
+        logging.error("Font file {} in Project Path is missing".format(ffile))
 
-if not (os.path.exists(os.path.join(args.project, 'config.ini'))):
-    error("config.ini file in Project Path is missing")
 
 if alpha == 'true' and not fileformat == '.mov':
-    error("Alpha can only be rendered with .mov source files")
+    logging.error("Alpha can only be rendered with .mov source files")
 
 if not args.project:
-    error("The Project Path is a required argument")
+    logging.error("The Project Path is a required argument")
 
 if not args.debug and not schedule:
-    error("Either specify --debug or supply a schedule in config.ini")
+    logging.error("Either specify --debug or supply a schedule in config.ini")
 
 if args.debug:
     persons = ['Thomas Roth', 'Dmitry Nedospasov', 'Josh Datko']
@@ -150,7 +153,7 @@ def describe_event(event):
 
 
 def event_print(event, message):
-    print("{} – {}".format(describe_event(event), message))
+    logging.info("{} – {}".format(describe_event(event), message))
 
 
 def fmt_command(command, **kwargs):
@@ -176,10 +179,10 @@ def fit_text(string: str, frame_width):
     line_num = 0
     line = ""
     for word in split_line:
-        w, _ = translation_font.getsize(" ".join([line, word]))
-        print("{}, {}".format(w, line))
+        w = translation_font.getlength(" ".join([line, word]))
+        logging.debug("{}, {}".format(w, line))
         if w > (frame_width):
-            print("too wide, breaking")
+            logging.debug("too wide, breaking")
             lines += line.strip() + "\n"
             line = ""
 
@@ -222,13 +225,13 @@ def enqueue_job(event):
 
     t = fit_title(event_title)
     s = fit_speaker(event_personnames)
-    print(s)
+    logging.info(s)
 
     if args.debug:
-        print('Title: ', t)
-        print('Speaker: ', s)
+        logging.info(f'Title: {t}')
+        logging.info(f'Speaker: {s}')
 
-    outfile = os.path.join(os.path.dirname(args.project), event_id + '.ts')
+    outfile = os.path.join(args.project, event_id + '.ts')
 
     videofilter = "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
             fontfile = font_t, 
@@ -284,8 +287,7 @@ def enqueue_job(event):
     else:
         cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0  -c:v mpeg2video -pix_fmt:v yuv420p -qscale:v 2 -qmin:v 2 -qmax:v 7 -keyint_min 0 -bf 0 -g 0 -intra:0 -maxrate:0 90M  -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
 
-    if args.debug:
-        print(cmd)
+    logging.debug(cmd)
 
     run(cmd)
 
@@ -294,14 +296,14 @@ def enqueue_job(event):
 
 if args.ids:
     if len(args.ids) == 1:
-        print("enqueuing {} job".format(len(args.ids)))
+        logging.info("enqueuing {} job".format(len(args.ids)))
     else:
-        print("enqueuing {} jobs".format(len(args.ids)))
+        logging.info("enqueuing {} jobs".format(len(args.ids)))
 else:
     if len(events) == 1:
-        print("enqueuing {} job".format(len(events)))
+        logging.info("enqueuing {} job".format(len(events)))
     else:
-        print("enqueuing {} jobs".format(len(events)))
+        logging.info("enqueuing {} jobs".format(len(events)))
 
 
 for event in events:
@@ -309,7 +311,7 @@ for event in events:
         continue
 
     if args.rooms and event['room'] not in args.rooms:
-        print("skipping room %s (%s)" % (event['room'], event['title']))
+        logging.info("skipping room %s (%s)" % (event['room'], event['title']))
         continue
 
     event_print(event, "enqueued as " + str(event['id']))
@@ -320,6 +322,6 @@ for event in events:
         continue
 
 
-print('all done')
+logging.info('all done')
 
 
