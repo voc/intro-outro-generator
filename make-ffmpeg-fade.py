@@ -233,9 +233,10 @@ def enqueue_job(event):
 
     outfile = os.path.join(args.project, event_id + '.ts')
 
-    videofilter = "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
+    videofilter = "drawtext=fontfile={fontfile}:fontsize={fontsize}:line_spacing={linespacing}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
             fontfile = font_t, 
             fontsize = title_fontsize, 
+            linespacing = int(0.05*title_fontsize),
             fontcolor = title_fontcolor, 
             x = title_x, 
             y = title_y, 
@@ -247,9 +248,10 @@ def enqueue_job(event):
             fade_out_end_time = title_in + fade_duration + title_duration + fade_duration,
             fade_duration = fade_duration
             )
-    videofilter += "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
+    videofilter += "drawtext=fontfile={fontfile}:fontsize={fontsize}:line_spacing={linespacing}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
             fontfile = font_s, 
             fontsize = speaker_fontsize, 
+            linespacing = int(0.05*speaker_fontsize),
             fontcolor = speaker_fontcolor, 
             x = speaker_x, 
             y = speaker_y, 
@@ -261,9 +263,10 @@ def enqueue_job(event):
             fade_out_end_time = speaker_in + fade_duration + speaker_duration + fade_duration,
             fade_duration = fade_duration
             )
-    videofilter += "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text={text}:".format(
+    videofilter += "drawtext=fontfile={fontfile}:fontsize={fontsize}:line_spacing={linespacing}:fontcolor={fontcolor}:x={x}:y={y}:text={text}:".format(
             fontfile = font_tt, 
             fontsize = text_fontsize, 
+            linespacing = int(0.05*text_fontsize),
             fontcolor = text_fontcolor, 
             x = text_x, 
             y = text_y, 

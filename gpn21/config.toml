@@ -1,12 +1,12 @@
 [default]
 schedule = "https://cfp.gulas.ch/gpn21/schedule/export/schedule.xml"
-template = "gpn21_intro_template.ts"
+template = "gpn21_intro_template_audio.mp4"
 alpha = false
 prores = false
 
 [title]
 in = 1.5
-out = 7.5
+out = 7
 font = "Roboto-Regular-enriched.ttf"
 fontsize = 100
 fontcolor = "#000000"
@@ -15,7 +15,7 @@ y = 200
 
 [speaker]
 in = 2.5
-out = 7.5
+out = 7
 font = "Roboto-Regular-enriched.ttf"
 fontsize = 60
 fontcolor = "#000000"
@@ -24,7 +24,7 @@ y = 900
 
 [text]
 in = 3
-out = 7.5
+out = 7
 font = "Roboto-Regular-enriched.ttf"
 fontsize = 45
 fontcolor = "#000000"
