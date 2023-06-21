@@ -181,8 +181,6 @@ def worker():
 
         # prepend workdir to input file
         task.infile = os.path.join(workdir, task.infile)
-        if task.audiofile:
-            task.audiofile = os.path.join(workdir, task.audiofile)
         task.outfile = os.path.join(outdir, task.outfile)
         task.workdir = workdir
 
