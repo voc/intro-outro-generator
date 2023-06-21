@@ -35,13 +35,16 @@ def easeDelay(easer, delay, t, b, c, d, *args):
 
 
 class Rendertask:
-    def __init__(self, infile, parameters={}, outfile=None, workdir='.', sequence=None):
+    def __init__(self, infile, audiofile=None, parameters={}, outfile=None, workdir='.', sequence=None):
         if isinstance(infile, list):
             self.infile = infile[0]
-            # self.audiofile = infile[1]
+            self.audiofile = infile[1]
         else:
             self.infile = infile
-            self.audiofile = None
+            if audiofile:
+                self.audiofile = audiofile
+            else:
+                self.audiofile = None
         self.parameters = parameters
         self.outfile = outfile
         self.workdir = workdir
@@ -188,7 +191,7 @@ def rendertask_video(task):
         if task.audiofile is None:
             cmd += '-map 1:0 -map 2:0 '
         else:
-            cmd += '-map 1:0 -c:a copy -map 2:0 -c:a copy '
+            cmd += '-map 1:a -c:a copy -map 2:a -c:a copy '
         cmd += '-shortest -f mpegts "{0}"'.format(task.outfile)
     elif task.outfile.endswith('.mov'):
         cmd = 'cd {0} && '.format(task.workdir)
