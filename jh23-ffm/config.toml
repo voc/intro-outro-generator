@@ -1,0 +1,34 @@
+[default]
+schedule = "https://jh.franzi.business/schedule/jh23ffm.xml"
+template = "jh23-ffm-template.ts"
+alpha = false
+prores = false
+
+[title]
+in = 1.5
+out = 7
+font = "Roboto-Regular-enriched.ttf"
+fontsize = 80
+fontcolor = "#ffffff"
+x = 400
+y = 860
+
+[speaker]
+in = 2.5
+out = 7
+font = "Roboto-Regular-enriched.ttf"
+fontsize = 60
+fontcolor = "#ffffff"
+x = 400
+y = 960
+
+[text]
+in = 3
+out = 7
+font = "Roboto-Regular-enriched.ttf"
+fontsize = 45
+fontcolor = "#ffffff"
+x = 64
+y = 1000
+text = ''
+
