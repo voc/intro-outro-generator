@@ -7,7 +7,7 @@ from easing import *
 import svg.path
 
 # URL to Schedule-XML
-scheduleUrl = 'https://bats.science/froscon2022/schedule.xml'
+scheduleUrl = 'https://programm.froscon.de/2021/schedule.xml'
 
 # For (really) too long titles
 titlemap = {
@@ -16,7 +16,7 @@ titlemap = {
 
 
 def introFrames(args):
-	xml = etree.parse('froscon2022/artwork/intro.svg').getroot()
+	xml = etree.parse('froscon2021/artwork/intro.svg').getroot()
 	pathstr = xml.find(".//*[@id='animatePath']").get('d')
 	frog = xml.find(".//*[@id='animatePath']").get('d')
 	path = svg.path.parse_path(pathstr)
@@ -33,14 +33,14 @@ def introFrames(args):
 			('names', 'style', 'opacity', 0),
 		)
 
-#	frames = int(0.5*fps)
-#	for i in range(0, frames):
-#		yield (
-#			('animatePath', 'style', 'opacity', 0),
-#			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag+120)),
-#			('title',   'style', 'opacity', easeLinear(i, 0, 1, frames)),
-#			('names', 'style', 'opacity', easeLinear(i, 0, 1, frames)),
-#		)
+	frames = int(0.5*fps)
+	for i in range(0, frames):
+		yield (
+			('animatePath', 'style', 'opacity', 0),
+			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag+120)),
+			('title',   'style', 'opacity', easeLinear(i, 0, 1, frames)),
+			('names', 'style', 'opacity', easeLinear(i, 0, 1, frames)),
+		)
 
 	frames = int(3.0*fps)
 	for i in range(0, frames):
@@ -50,11 +50,18 @@ def introFrames(args):
 		)
 
 def outroFrames(args):
-	xml = etree.parse('froscon2022/artwork/outro.svg').getroot()
+	xml = etree.parse('froscon2019/artwork/outro.svg').getroot()
+	pathstr = xml.find(".//*[@id='animatePath']").get('d')
+	frog = xml.find(".//*[@id='animatePath']").get('d')
+	path = svg.path.parse_path(pathstr)
+
+	init = path.point(0)
 
 	frames = int(4*fps)
 	for i in range(0, frames):
-		yield ()
+		p = path.point(i / frames) - init
+		yield (
+		)
 
 def pauseFrames(args):
 	frames = 2*fps
@@ -125,7 +132,7 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl):
-		if event['room'] not in ('HS 1/2', 'HS3', 'HS4', 'HS7', 'HS8'):
+		if event['room'] not in ('HS 1/2', 'HS3', 'HS4', 'HS5', 'HS6', 'HS7', 'HS8', 'C116', 'Workshop'):
 			print("skipping room %s (%s)" % (event['room'], event['title']))
 			continue
 

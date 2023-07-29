@@ -7,7 +7,7 @@ from easing import *
 import svg.path
 
 # URL to Schedule-XML
-scheduleUrl = 'https://bats.science/froscon2022/schedule.xml'
+scheduleUrl = 'https://bats.science/froscon2023/schedule.xml'
 
 # For (really) too long titles
 titlemap = {
@@ -16,7 +16,7 @@ titlemap = {
 
 
 def introFrames(args):
-	xml = etree.parse('froscon2022/artwork/intro.svg').getroot()
+	xml = etree.parse('froscon2023/artwork/intro.svg').getroot()
 	pathstr = xml.find(".//*[@id='animatePath']").get('d')
 	frog = xml.find(".//*[@id='animatePath']").get('d')
 	path = svg.path.parse_path(pathstr)
@@ -50,7 +50,7 @@ def introFrames(args):
 		)
 
 def outroFrames(args):
-	xml = etree.parse('froscon2022/artwork/outro.svg').getroot()
+	xml = etree.parse('froscon2023/artwork/outro.svg').getroot()
 
 	frames = int(4*fps)
 	for i in range(0, frames):
@@ -125,7 +125,7 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
 	# iterate over all events extracted from the schedule xml-export
 	for event in events(scheduleUrl):
-		if event['room'] not in ('HS 1/2', 'HS3', 'HS4', 'HS7', 'HS8'):
+		if event['room'] not in ('HS1', 'HS3', 'HS4', 'HS6', 'HS7', 'HS8'):
 			print("skipping room %s (%s)" % (event['room'], event['title']))
 			continue
 
