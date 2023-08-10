@@ -10,6 +10,9 @@ import shlex
 from PIL import ImageFont
 from configparser import ConfigParser
 import json
+import platform
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 # Parse arguments
 parser = argparse.ArgumentParser(
@@ -72,10 +75,13 @@ cparser.read(os.path.join(os.path.dirname(args.project), 'config.ini'))
 template = cparser['default']['template']
 alpha = cparser['default']['alpha']
 prores = cparser['default']['prores']
+fontfile = cparser['default']['fontfile']
+inout = cparser['default']['inout']
 
 title_in = cparser['title']['in']
 title_out = cparser['title']['out']
-title_font = cparser['title']['font']
+title_fontfamily = cparser['title']['fontfamily']
+title_fontfile = cparser['title']['fontfile']
 title_fontsize = cparser['title']['fontsize']
 title_fontcolor = cparser['title']['fontcolor']
 title_x = cparser['title']['x']
@@ -83,7 +89,8 @@ title_y = cparser['title']['y']
 
 speaker_in = cparser['speaker']['in']
 speaker_out = cparser['speaker']['out']
-speaker_font = cparser['speaker']['font']
+speaker_fontfamily = cparser['speaker']['fontfamily']
+speaker_fontfile = cparser['speaker']['fontfile']
 speaker_fontsize = cparser['speaker']['fontsize']
 speaker_fontcolor = cparser['speaker']['fontcolor']
 speaker_x = cparser['speaker']['x']
@@ -91,16 +98,17 @@ speaker_y = cparser['speaker']['y']
 
 text_in = cparser['text']['in']
 text_out = cparser['text']['out']
-text_font = cparser['text']['font']
+text_fontfamily = cparser['text']['fontfamily']
+text_fontfile = cparser['text']['fontfile']
 text_fontsize = cparser['text']['fontsize']
 text_fontcolor = cparser['text']['fontcolor']
 text_x = cparser['text']['x']
 text_y = cparser['text']['y']
 text_text = cparser['text']['text']
 
-font_t = os.path.join(os.path.dirname(args.project), title_font)
-font_s = os.path.join(os.path.dirname(args.project), speaker_font)
-font_tt = os.path.join(os.path.dirname(args.project), text_font)
+font_t = os.path.join(os.path.dirname(args.project), title_fontfile)
+font_s = os.path.join(os.path.dirname(args.project), speaker_fontfile)
+font_tt = os.path.join(os.path.dirname(args.project), text_fontfile)
 
 fileformat = os.path.splitext(template)[1]
 infile = os.path.join(os.path.dirname(args.project), template)
@@ -110,7 +118,7 @@ schedule = cparser['default']['schedule']
 if not (os.path.exists(os.path.join(args.project, template))):
     error("Template file {} in Project Path is missing".format(template))
 
-for ffile in (title_font, speaker_font, text_font):
+for ffile in (title_fontfile, speaker_fontfile, text_fontfile):
     if not (os.path.exists(os.path.join(args.project, ffile))):
         error("Font file {} in Project Path is missing".format(ffile))
 
@@ -127,7 +135,7 @@ if not args.debug and not schedule:
     error("Either specify --debug or supply a schedule in config.ini")
 
 if args.debug:
-    persons = ['Thomas Roth', 'Dmitry Nedospasov', 'Josh Datko']
+    persons = ['Thomas Roth', 'Dmitry Nedospasov', 'Josh Datko',]
     events = [{
         'id': 'debug',
         'title': 'wallet.fail',
@@ -171,8 +179,9 @@ def fit_text(string: str, frame_width):
     line_num = 0
     line = ""
     for word in split_line:
-        w, _ = translation_font.getsize(" ".join([line, word]))
-        if w > (frame_width - (2 * 6)):
+        left, top, right, bottom = translation_font.getbbox(" ".join([line, word]))
+        width, height = right - left, bottom - top
+        if width > (frame_width - (2 * 6)):
             lines += line.strip() + "\n"
             line = ""
 
@@ -225,20 +234,39 @@ def enqueue_job(event):
 
     outfile = os.path.join(os.path.dirname(args.project), event_id + '.ts')
 
-    videofilter = "drawtext=enable='between(n,{0},{1})':fontfile={2}:fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(title_in, title_out, font_t, title_fontsize, title_fontcolor, title_x, title_y, t)
-    videofilter += "drawtext=enable='between(n,{0},{1})':fontfile={2}:fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(speaker_in, speaker_out, font_s, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s)
-    videofilter += "drawtext=enable='between(n,{0},{1})':fontfile={2}:fontsize={3}:fontcolor={4}:x={5}:y={6}:text={7}".format(text_in, text_out, font_tt, text_fontsize, text_fontcolor, text_x, text_y, text_text)
+    if platform.system() == 'Windows':
+        ffmpeg_path = './ffmpeg.exe'
+        font_t_win = "/".join(font_t.split("\\"))
+        font_s_win = "/".join(font_s.split("\\"))
+        font_tt_win = "/".join(font_tt.split("\\"))     
+    else:
+        ffmpeg_path  = 'ffmpeg'
+
+    if fontfile == 'true':
+        if platform.system() == 'Windows':
+            videofilter = "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(title_in, title_out, font_t_win, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
+            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}':box=1,".format(speaker_in, speaker_out, font_s_win, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
+            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(text_in, text_out, font_tt_win, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
+        else:
+            videofilter = "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(title_in, title_out, font_t, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
+            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'box=1,".format(speaker_in, speaker_out, font_s, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
+            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(text_in, text_out, font_tt, text_fontsize, text_fontcolor, text_x, text_y, text_text), inout
+    else:
+        videofilter = "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(title_in, title_out, title_fontfamily, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
+        videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'box=1,".format(speaker_in, speaker_out, speaker_fontfamily, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
+        videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(text_in, text_out, text_fontfamily, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
+
 
     if fileformat == '.mov':
         if alpha == 'true':
             if prores == 'true':
-                cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -vcodec prores_ks -pix_fmt yuva444p10le -profile:v 4444 -shortest -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile)
+                cmd = '{3} -y -i "{0}" -vf "{1}" -vcodec prores_ks -pix_fmt yuva444p10le -profile:v 4444 -shortest -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile, ffmpeg_path)
             else:
-                cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -shortest -c:v qtrle -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile)
+                cmd = '{3} -y -i "{0}" -vf "{1}" -shortest -c:v qtrle -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile, ffmpeg_path)
         else:
-            cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
+            cmd = '{3} -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile, ffmpeg_path)
     else:
-        cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
+        cmd = '{3} -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile, ffmpeg_path)
 
     if args.debug:
         print(cmd)
