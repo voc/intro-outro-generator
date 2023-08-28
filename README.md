@@ -9,7 +9,7 @@ Yes! That's what I want!
 ------------------------
 Okay, let's go.
 
- - Install python3, python3-lxml, python3-cssutils (or use virtualenv, see below), inkscape and libav-tools
+ - Install python3, python3-lxml, python3-cssutils, python3-wand (or use virtualenv, see below), inkscape and libav-tools
  - Fork this repo on github and clone your personal fork to your local system.
  - Copy one of the existing setup: 00_example_render_byid
     - If you are using a newer version of intro-outro-generator, don't copy any of the other projects, as the __init.py__ may not contain all mandatory parameters in the tasks function.
