@@ -28,7 +28,7 @@ Okay, let's go.
    - search for `def debug()` and comment the sections about outro (postroll) and pause
    - run `./make.py yourproject/ --debug` to generate your first intro
    - if it looks good, duplicate intro.svg to outro.svg (postroll) and pause.svg (pause-loop) and modify them according to your needs. You can use different IDs in your SVG if required
-   - modify outroFrames and pauseFrames like before an test them using `./make.py yourproject/ --debug`
+   - modify outroFrames and pauseFrames like before and test them using `./make.py yourproject/ --debug`
    - if everything look like you'd want them to, run `./make.py yourproject/`.
    - You can use any debianesque linux (can be headless) to generate the videos. More cores help more.
  - Run `./make-snapshots.sh yourproject/` to generate a png from a specific time-index of your .ts or .dv-files. You can run `./make-snapshots.sh yourproject/ 5` to get a png for the frame at the 5th second of all your clips. Default is 3 seconds.
