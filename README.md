@@ -109,7 +109,7 @@ The animation sequence is controlled by the three frame-generator routines vorsp
 ### CSS-Style-Modifications
 `('logo',  'style',    'opacity', 1),` - locate object with id `logo` in the svg, parse its `style`-attribute as css-inline-string and change the value of the css-property `opacity` to 1. The Tupel-Element `'style'` is fixed and declares the type of action which is applied to the specified element. All other tupel-mebers can be modified to suit your needs.
 
-To form an fade-in-opacity-animation, the frame-generator could look like this:
+To form a fade-in-opacity-animation, the frame-generator could look like this:
 
 	# three seconds of animation
 	frames = 3*fps
@@ -150,7 +150,7 @@ FEM/VOC-Tracker-Integration
 *that script-Z-thingy*
 The [FEM](http://fem.tu-ilmenau.de/) and the [VOC](https://c3voc.de/) uses a special Ticket-Tracker to keep track of the Talks on an event. Various tasks are performed around the recorded Videomaterial (preparing, cutting, encoding, releasing) - synchronized by the Tracker. The files starting with `script-Z` are experiments to integrate the intro-rendering into this process. On some Events the Schedule is very fluid with talks being addes or names changing over the whole conference. Using the Scripts to render the prerols when they are actually needed (and not some days before the conference) would help to get the always-freshest prerolls but it would an additional (computational intense) task to the publishing process.
 
-Generating an Live-Stream-Overlay
+Generating a Live-Stream-Overlay
 ---------------------------------
 While your working on your Video-Artwork you can create another required asset: the stream overlay. When we'll live-stream your Talks we can't send prerolls ovet the live-stream. To let your viewer now what program they are watching at, we usually overlay a transparent image over the live-stream like most television programs do, too.
 Just create another SVG of the size 1920×1080 (or 1024×576 if you're only targeting the legacy SD-Pipeline) and throw your logo into your prefered corner. To have it looking good we would suggest
