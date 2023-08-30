@@ -277,8 +277,25 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#sleep 1
+#sleep 
     frames =  round(6*fps*speedfactor)
+    for i in range(0, frames):
+        yield (
+            ('houses', 'style', 'opacity', 1),
+            ('vr', 'style', 'opacity', 1),
+            ('person', 'style', 'opacity', 1),
+            ('personhit', 'style', 'opacity',0),
+            ('motto', 'style', 'opacity', 1),
+            ('text', 'style', 'opacity',  1),
+            ('vr-darkening', 'style', 'opacity',  .4),
+            ('title', 'style', 'opacity', 0),
+            ('subtitle', 'style', 'opacity', 0),
+            ('persons', 'style', 'opacity', 0),
+            ('id', 'style', 'opacity', 0),
+        )
+
+def introShort(parameters):
+    frames =  round(3*fps*speedfactor)
     for i in range(0, frames):
         yield (
             ('houses', 'style', 'opacity', 1),
@@ -315,25 +332,9 @@ def backgroundFrames(parameters):
 
 def outroFrames(args):
 #fadein outro graphics
-    frames = 3*fps
+    frames = 6*fps
     for i in range(0, frames):
         yield(
-            ('pillgroup', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('logotext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('c3voclogo', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('c3voctext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('bysalogo', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('bysatext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-        )
-    frames = 3*fps
-    for i in range(0, frames):
-        yield(
-            ('pillgroup', 'style', 'opacity', 1),
-            ('logotext', 'style', 'opacity', 1),
-            ('c3voclogo', 'style', 'opacity', 1),
-            ('c3voctext', 'style', 'opacity', 1),
-            ('bysalogo', 'style', 'opacity', 1),
-            ('bysatext', 'style', 'opacity', 1),
         )
 
 def pauseFrames(args):
@@ -417,11 +418,22 @@ def debug():
 #        introFrames,
 #        {
 #            '$id': 7776,
-#            '$title': 'StageWar live!',
-#            '$subtitle': 'Metal Konzert',
-#            '$persons':  'www.stagewar.de'
+#            '$title': 'Memetische Agitation des jungen Rechtsau&#223;enspektrums: Mechanismen, Strategien, Narrative',
+#            '$subtitle': '',
+#            '$persons':  'Vincent Knopp'
 #        }
 #    )
+    
+    render('intro.svg',
+        '../intro.ts',
+        introShort,
+        {
+            '$id': 7776,
+            '$title': 'Memetische Agitation des jungen Rechtsaussen-Spektrums: Mechanismen, Strategien, Narrative',
+            '$subtitle': '',
+            '$persons':  'Vincent Knopp'
+        }
+    )
 
 #    render('outro.svg',
 #        '../outro.ts',
@@ -434,10 +446,10 @@ def debug():
 #        backgroundFrames
 #    )
 #
-    render('pause.svg',
-        '../pause.ts',
-        pauseFrames
-    )
+#    render('pause.svg',
+#        '../pause.ts',
+#        pauseFrames
+#    )
 
 
 def tasks(queue, args, idlist, skiplist):
