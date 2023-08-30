@@ -10,7 +10,7 @@ scheduleUrl = 'https://talks.mrmcd.net/2023/schedule.xml'
 
 speedfactor=1
 def introFrames(args):
-#sleep .5s
+# sleep .5s
     frames = round(.5*fps*speedfactor)
     for i in range(0, frames*2):
         yield (
@@ -26,7 +26,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#fade in houses and sleep one second
+# fade in houses and sleep one second
     frames = round(1*fps*speedfactor)
     for i in range(0, frames*2):
         yield (
@@ -42,7 +42,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#Move in person
+# move in person
     frames = round(1*fps*speedfactor)
     for i in range(0, frames):
         t=i/frames
@@ -63,7 +63,7 @@ def introFrames(args):
             ('id', 'style', 'opacity', 0),
         )
 
-#wait 1s
+# sleep 1s
     for i in range(0, round(1*fps*speedfactor)):
         yield (
             ('houses', 'style', 'opacity', 1),
@@ -78,7 +78,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#look around
+# look around
     for i in range(0, round(.5*fps*speedfactor)):
         yield (
             ('houses', 'style', 'opacity', 1),
@@ -108,7 +108,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#wait 1s
+# sleep 1s
     for i in range(0, round(1*fps*speedfactor)):
         yield (
             ('houses', 'style', 'opacity', 1),
@@ -123,7 +123,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#bonk once
+# bonk once
     for i in range(0, math.ceil(.1*fps*speedfactor)):
         yield (
             ('houses', 'style', 'opacity', 1),
@@ -138,7 +138,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#wait 1s
+# wait 1s
     for i in range(0, 1*fps*speedfactor):
         yield (
             ('houses', 'style', 'opacity', 1),
@@ -153,7 +153,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#bonk twice
+# bonk twice
     for j in range(0,2):
         for i in range(0, math.ceil(.1*fps*speedfactor)):
             yield (
@@ -169,21 +169,21 @@ def introFrames(args):
                 ('persons', 'style', 'opacity', 0),
                 ('id', 'style', 'opacity', 0),
             )
-        for i in range(0, round(.1*fps*speedfactor)):
-            yield (
-                ('houses', 'style', 'opacity', 1),
-                ('vr', 'style', 'opacity', 0),
-                ('vr-blurry', 'style', 'opacity', j),
-                ('person', 'style', 'opacity', 0),
-                ('personhit', 'style', 'opacity', 1),
-                ('motto', 'style', 'opacity', 0),
-                ('logotext', 'style', 'opacity', 0),
-                ('text', 'style', 'opacity',  0),
-                ('title', 'style', 'opacity', 0),
-                ('subtitle', 'style', 'opacity', 0),
-                ('persons', 'style', 'opacity', 0),
-                ('id', 'style', 'opacity', 0),
-            )
+#        for i in range(0, round(.1*fps*speedfactor)):
+#            yield (
+#                ('houses', 'style', 'opacity', 1),
+#                ('vr', 'style', 'opacity', 0),
+#                ('vr-blurry', 'style', 'opacity', j),
+#                ('person', 'style', 'opacity', 0),
+#                ('personhit', 'style', 'opacity', 1),
+#                ('motto', 'style', 'opacity', 0),
+#                ('logotext', 'style', 'opacity', 0),
+#                ('text', 'style', 'opacity',  0),
+#                ('title', 'style', 'opacity', 0),
+#                ('subtitle', 'style', 'opacity', 0),
+#                ('persons', 'style', 'opacity', 0),
+#                ('id', 'style', 'opacity', 0),
+#            )
         for i in range(0, round(.2*fps*speedfactor)):
             yield (
                 ('houses', 'style', 'opacity', 1),
@@ -199,7 +199,7 @@ def introFrames(args):
                 ('persons', 'style', 'opacity', 0),
                 ('id', 'style', 'opacity', 0),
             )
-#wait 1s
+# wait 1s
     for i in range(0, round(1*fps*speedfactor)):
         yield (
             ('houses', 'style', 'opacity', 1),
@@ -215,7 +215,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#bonk for speaker
+# bonk for speaker
     for i in range(0, round(.1*fps*speedfactor)):
         yield (
             ('houses', 'style', 'opacity', 1),
@@ -230,7 +230,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#wait 1s
+# wait 1s
     for i in range(0, round(1*fps*speedfactor)):
         yield (
             ('houses', 'style', 'opacity', 1),
@@ -245,7 +245,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#fade in speaker
+# fade in speaker
     frames =  round(1*fps*speedfactor)
     for i in range(0, frames):
         yield (
@@ -261,7 +261,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#fade in wgdh
+# fade in wgdh
     frames =  round(1*fps*speedfactor)
     for i in range(0, frames):
         yield (
@@ -277,7 +277,7 @@ def introFrames(args):
             ('persons', 'style', 'opacity', 0),
             ('id', 'style', 'opacity', 0),
         )
-#sleep 
+# sleep 
     frames =  round(6*fps*speedfactor)
     for i in range(0, frames):
         yield (
@@ -426,12 +426,12 @@ def debug():
     
     render('intro.svg',
         '../intro.ts',
-        introShort,
+        introFrames,
         {
             '$id': 7776,
-            '$title': 'Memetische Agitation des jungen Rechtsaussen-Spektrums: Mechanismen, Strategien, Narrative',
+            '$title': 'Memetische Agitation des jungen Rechtsaußenspektrums: Mechanismen, Strategien, Narrative',
             '$subtitle': '',
-            '$persons':  'Vincent Knopp'
+            '$persons':  'Berlin Busters Social Club'
         }
     )
 
@@ -455,9 +455,9 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if event['room'] not in ('Chirurgie (Saal 1.04)', 'Kreißsaal (Saal 1.11)'):
-            print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
-            continue
+#        if event['room'] not in ('Chirurgie (Saal 1.04)', 'Kreißsaal (Saal 1.11)'):
+#            print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
+#            continue
         if not (idlist==[]):
                 if 000000 in idlist:
                         print("skipping id (%s [%s])" % (event['title'], event['id']))
