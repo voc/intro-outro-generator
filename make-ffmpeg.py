@@ -75,8 +75,8 @@ cparser.read(os.path.join(os.path.dirname(args.project), 'config.ini'))
 template = cparser['default']['template']
 alpha = cparser['default']['alpha']
 prores = cparser['default']['prores']
-fontfile = cparser['default']['fontfile']
-inout = cparser['default']['inout']
+fontfile = cparser['default']['fontfile'] # use a font file instead of a font family
+inout = cparser['default']['inout'] # in and out time format: t for seconds, n for frame number
 
 title_in = cparser['title']['in']
 title_out = cparser['title']['out']
