@@ -249,11 +249,11 @@ def enqueue_job(event):
             videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(text_in, text_out, font_tt_win, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
         else:
             videofilter = "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(title_in, title_out, font_t, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
-            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'box=1,".format(speaker_in, speaker_out, font_s, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
-            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(text_in, text_out, font_tt, text_fontsize, text_fontcolor, text_x, text_y, text_text), inout
+            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}':box=1,".format(speaker_in, speaker_out, font_s, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
+            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(text_in, text_out, font_tt, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
     else:
         videofilter = "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(title_in, title_out, title_fontfamily, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
-        videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'box=1,".format(speaker_in, speaker_out, speaker_fontfamily, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
+        videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}':box=1,".format(speaker_in, speaker_out, speaker_fontfamily, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
         videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(text_in, text_out, text_fontfamily, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
 
 
