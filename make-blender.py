@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 # vim: tabstop=4 shiftwidth=4 expandtab
+"""
+Generate intros by rendering a blender project with some text fields replaced by
+the schedule contents.
+The blender project must be configured to use mkv/matroska as output file format!
+"""
 
 import subprocess
 import renderlib
@@ -217,10 +222,10 @@ def enqueue_job(event):
         for key, value in event.items():
             value = str(value).replace('"', '\\"')
             scriptstr = scriptstr.replace("$" + str(key), value)
-        
+
         with open(work_doc, 'w', encoding='utf-8') as fp:
             fp.write(scriptstr)
-        
+
         if platform.system() == 'Darwin':
             if args.debug:
                 print("running: Blender.app --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
@@ -330,8 +335,8 @@ for event in events:
             intermediate_clip = os.path.join(tempdir.name, event_id + '.avi')
             final_clip = os.path.join(os.path.dirname(args.project), event_id + '.avi')
         else:
-            intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
-            final_clip = os.path.join(os.path.dirname(args.project), event_id + '.mov')
+            intermediate_clip = os.path.join(tempdir.name, event_id + '.mkv')
+            final_clip = os.path.join(os.path.dirname(args.project), event_id + '.mkv')
         copyfile(intermediate_clip, final_clip)
         event_print(event, "copied intermediate clip to " + final_clip)
 
