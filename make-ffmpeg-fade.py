@@ -282,7 +282,7 @@ def enqueue_job(event):
         else:
             cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
     else:
-        cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0  -c:v mpeg2video -pix_fmt:v yuv420p -qscale:v 2 -qmin:v 2 -qmax:v 7 -keyint_min 0 -bf 0 -g 0 -intra:0 -maxrate:0 90M  -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
+        cmd = 'ffmpeg -y -i "{0}" -vf "{1}" -map 0:0  -c:v mpeg2video -pix_fmt:v yuv420p -qscale:v 2 -qmin:v 2 -qmax:v 7 -keyint_min 0 -bf 0 -g 0 -maxrate:0 90M  -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile)
 
     if args.debug:
         print(cmd)
