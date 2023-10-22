@@ -7,7 +7,7 @@ The blender project must be configured to use mkv/matroska as output file format
 """
 
 import subprocess
-import renderlib
+import schedulelib
 import argparse
 import tempfile
 import shlex
@@ -147,7 +147,7 @@ elif args.bgloop:
     }]
 
 else:
-    events = list(renderlib.events(args.schedule))
+    events = list(schedulelib.events(args.schedule))
 
 
 def describe_event(event):

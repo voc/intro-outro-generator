@@ -2,7 +2,7 @@
 # vim: tabstop=4 shiftwidth=4 expandtab
 
 import subprocess
-import renderlib
+import schedulelib
 import argparse
 import tempfile
 import shlex
@@ -139,7 +139,7 @@ elif args.bgloop:
     }]
 
 else:
-    events = list(renderlib.events(args.schedule))
+    events = list(schedulelib.events(args.schedule))
 
 
 def describe_event(event):

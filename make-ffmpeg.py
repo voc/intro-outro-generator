@@ -4,7 +4,7 @@
 import os
 import sys
 import subprocess
-import renderlib
+import schedulelib
 import argparse
 import shlex
 from PIL import ImageFont
@@ -146,7 +146,7 @@ if args.debug:
     }]
 
 else:
-    events = list(renderlib.events(schedule))
+    events = list(schedulelib.events(schedule))
 
 def describe_event(event):
     return "#{}: {}".format(event['id'], event['title'])
@@ -238,7 +238,7 @@ def enqueue_job(event):
         ffmpeg_path = './ffmpeg.exe'
         font_t_win = "/".join(font_t.split("\\"))
         font_s_win = "/".join(font_s.split("\\"))
-        font_tt_win = "/".join(font_tt.split("\\"))     
+        font_tt_win = "/".join(font_tt.split("\\"))
     else:
         ffmpeg_path  = 'ffmpeg'
 

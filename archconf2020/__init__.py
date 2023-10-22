@@ -320,7 +320,7 @@ def debug():
 
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
-    for event in renderlib.events(scheduleUrl):
+    for event in schedulelib.events(scheduleUrl):
         if not (idlist == []):
             if 000000 in idlist:
                 print("skipping id (%s [%s])" % (event["title"], event["id"]))

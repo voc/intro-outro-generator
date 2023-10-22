@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # vim: tabstop=4 shiftwidth=4 expandtab
 
-import renderlib
+import schedulelib
 import argparse
 import tempfile
 import shutil
@@ -91,7 +91,7 @@ if args.develop:
     }]
 
 else:
-    events = list(renderlib.events(args.schedule))
+    events = list(schedulelib.events(args.schedule))
 
 
 def describe_event(event):

@@ -143,7 +143,7 @@ if args.debug:
     }]
 
 else:
-    events = list(renderlib.events(schedule))
+    events = list(schedulelib.events(schedule))
 
 def describe_event(event):
     return "#{}: {}".format(event['id'], event['title'])
@@ -231,11 +231,11 @@ def enqueue_job(event):
     outfile = os.path.join(os.path.dirname(args.project), event_id + '.ts')
 
     videofilter = "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
-            fontfile = font_t, 
-            fontsize = title_fontsize, 
-            fontcolor = title_fontcolor, 
-            x = title_x, 
-            y = title_y, 
+            fontfile = font_t,
+            fontsize = title_fontsize,
+            fontcolor = title_fontcolor,
+            x = title_x,
+            y = title_y,
             text = t)
     videofilter += "alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))',".format(
             fade_in_start_time = title_in,
@@ -245,11 +245,11 @@ def enqueue_job(event):
             fade_duration = fade_duration
             )
     videofilter += "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
-            fontfile = font_s, 
-            fontsize = speaker_fontsize, 
-            fontcolor = speaker_fontcolor, 
-            x = speaker_x, 
-            y = speaker_y, 
+            fontfile = font_s,
+            fontsize = speaker_fontsize,
+            fontcolor = speaker_fontcolor,
+            x = speaker_x,
+            y = speaker_y,
             text = s)
     videofilter += "alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))',".format(
             fade_in_start_time = speaker_in,
@@ -259,11 +259,11 @@ def enqueue_job(event):
             fade_duration = fade_duration
             )
     videofilter += "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text={text}:".format(
-            fontfile = font_tt, 
-            fontsize = text_fontsize, 
-            fontcolor = text_fontcolor, 
-            x = text_x, 
-            y = text_y, 
+            fontfile = font_tt,
+            fontsize = text_fontsize,
+            fontcolor = text_fontcolor,
+            x = text_x,
+            y = text_y,
             text = text_text)
     videofilter += "alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))'".format(
             fade_in_start_time = text_in,
