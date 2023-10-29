@@ -11,6 +11,7 @@ from xml.sax.saxutils import escape as xmlescape
 cssutils.ser.prefs.lineSeparator = ' '
 cssutils.log.setLevel(logging.FATAL)
 
+
 class SVGTemplate:
     def __init__(self, task, outfile):
         self.task = task

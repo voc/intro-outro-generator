@@ -109,7 +109,7 @@ if not args.debug and not args.pause and not args.outro and not args.bgloop and 
     error("Either specify --debug, --pause, --outro or supply a schedule")
 
 if args.debug:
-    #persons = ['blubbel']
+    # persons = ['blubbel']
     persons = ['Vitor Sakaguti', 'Sara', 'A.L. Fehlhaber']
     events = [{
         'id': 11450,
@@ -177,15 +177,15 @@ def run_output(command, **kwargs):
 
 
 def run_once(command, **kwargs):
-        DETACHED_PROCESS = 0x00000008
-        return subprocess.Popen(
-                fmt_command(command, **kwargs),
-                shell=False,
-                stdin=None,
-                stdout=None,
-                stderr=None,
-                close_fds=True,
-                creationflags=DETACHED_PROCESS)
+    DETACHED_PROCESS = 0x00000008
+    return subprocess.Popen(
+        fmt_command(command, **kwargs),
+        shell=False,
+        stdin=None,
+        stdout=None,
+        stderr=None,
+        close_fds=True,
+        creationflags=DETACHED_PROCESS)
 
 
 def enqueue_job(event):
@@ -227,16 +227,16 @@ def enqueue_job(event):
         with open(script_doc, 'w', encoding='utf-8') as fp:
             fp.write(scriptstr)
 
-        copyfile(args.project+args.introfile,work_doc)
+        copyfile(args.project+args.introfile, work_doc)
 
         if platform.system() == 'Darwin':
-            copyfile(args.project+'intro.scpt',ascript_doc)
+            copyfile(args.project+'intro.scpt', ascript_doc)
 
             run('osascript {ascript_path} {scriptpath}',
-                 scriptpath=script_doc,
-                 ascript_path=ascript_doc)
+                scriptpath=script_doc,
+                ascript_path=ascript_doc)
 
-            #run('osascript {ascript_path} {jobpath} {scriptpath}',
+            # run('osascript {ascript_path} {jobpath} {scriptpath}',
             #    jobpath=work_doc,
             #    scriptpath=script_doc,
             #    ascript_path=ascript_doc)
@@ -247,7 +247,7 @@ def enqueue_job(event):
 
         if platform.system() == 'Windows':
             run_once(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2022/Support\ Files/AfterFX.exe -noui -r {scriptpath}',
-                scriptpath=script_doc)
+                     scriptpath=script_doc)
 
             time.sleep(5)
 
@@ -256,7 +256,7 @@ def enqueue_job(event):
                 locationpath=intermediate_clip)
     if args.debug or args.keep:
         path = tempdir.name
-        dirs = os.listdir( path )
+        dirs = os.listdir(path)
 
         for file in dirs:
             print(file)
@@ -277,7 +277,7 @@ def finalize_job(job_id, event):
 
     if args.alpha:
         ffprobe = run_output('ffprobe -i {input} -show_streams -select_streams a -loglevel error',
-            input=intermediate_clip)
+                             input=intermediate_clip)
         if ffprobe:
             run('ffmpeg -threads 0 -y -hide_banner -loglevel error -i {input} -c:v qtrle -movflags faststart -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mov {output}',
                 input=intermediate_clip,
@@ -288,7 +288,7 @@ def finalize_job(job_id, event):
                 output=final_clip)
     else:
         ffprobe = run_output('ffprobe -i {input} -show_streams -select_streams a -loglevel error',
-            input=intermediate_clip)
+                             input=intermediate_clip)
         if ffprobe:
             event_print(event, "finalize with audio from source file")
             run('ffmpeg -threads 0 -y -hide_banner -loglevel error -i {input} -c:v mpeg2video -q:v 2 -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',

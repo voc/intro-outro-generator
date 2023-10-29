@@ -55,28 +55,29 @@ parser.add_argument('--force', action="store_true", default=False, help='''
 args = parser.parse_args()
 
 if (args.skip is None):
-	args.skip = []
+    args.skip = []
 
 
 def headline(str):
-	print("##################################################")
-	print(str)
-	print("##################################################")
-	print()
+    print("##################################################")
+    print(str)
+    print("##################################################")
+    print()
 
 
 def error(str):
-	headline(str)
-	parser.print_help()
-	sys.exit(1)
+    headline(str)
+    parser.print_help()
+    sys.exit(1)
+
 
 cparser = ConfigParser()
 cparser.read(os.path.join(os.path.dirname(args.project), 'config.ini'))
 template = cparser['default']['template']
 alpha = cparser['default']['alpha']
 prores = cparser['default']['prores']
-fontfile = cparser['default']['fontfile'] # use a font file instead of a font family
-inout = cparser['default']['inout'] # in and out time format: t for seconds, n for frame number
+fontfile = cparser['default']['fontfile']  # use a font file instead of a font family
+inout = cparser['default']['inout']  # in and out time format: t for seconds, n for frame number
 
 title_in = cparser['title']['in']
 title_out = cparser['title']['out']
@@ -148,6 +149,7 @@ if args.debug:
 else:
     events = list(schedulelib.events(schedule))
 
+
 def describe_event(event):
     return "#{}: {}".format(event['id'], event['title'])
 
@@ -194,7 +196,7 @@ def fit_text(string: str, frame_width):
 def fit_title(string: str):
     global translation_font
     translation_font = ImageFont.truetype(
-    font_t, size=80, encoding="unic")
+        font_t, size=80, encoding="unic")
     title = fit_text(string, 1080)
 
     return title
@@ -203,7 +205,7 @@ def fit_title(string: str):
 def fit_speaker(string: str):
     global translation_font
     translation_font = ImageFont.truetype(
-    font_s, size=50, encoding="unic")
+        font_s, size=50, encoding="unic")
     speaker = fit_text(string, 1080)
 
     return speaker
@@ -225,7 +227,7 @@ def enqueue_job(event):
     event_personnames = event_personnames.replace('"', '\\"')
 
     t = fit_title(event_title)
-    t = t.replace(':', "\:") # the ffmpeg command needs colons to be escaped
+    t = t.replace(':', "\:")  # the ffmpeg command needs colons to be escaped
     s = fit_speaker(event_personnames)
 
     if args.debug:
@@ -240,33 +242,45 @@ def enqueue_job(event):
         font_s_win = "/".join(font_s.split("\\"))
         font_tt_win = "/".join(font_tt.split("\\"))
     else:
-        ffmpeg_path  = 'ffmpeg'
+        ffmpeg_path = 'ffmpeg'
 
     if fontfile == 'true':
         if platform.system() == 'Windows':
-            videofilter = "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(title_in, title_out, font_t_win, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
-            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}':box=1,".format(speaker_in, speaker_out, font_s_win, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
-            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(text_in, text_out, font_tt_win, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
+            videofilter = "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(
+                title_in, title_out, font_t_win, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
+            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}':box=1,".format(
+                speaker_in, speaker_out, font_s_win, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
+            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(
+                text_in, text_out, font_tt_win, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
         else:
-            videofilter = "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(title_in, title_out, font_t, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
-            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}':box=1,".format(speaker_in, speaker_out, font_s, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
-            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(text_in, text_out, font_tt, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
+            videofilter = "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(
+                title_in, title_out, font_t, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
+            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}':box=1,".format(
+                speaker_in, speaker_out, font_s, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
+            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(
+                text_in, text_out, font_tt, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
     else:
-        videofilter = "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(title_in, title_out, title_fontfamily, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
-        videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}':box=1,".format(speaker_in, speaker_out, speaker_fontfamily, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
-        videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(text_in, text_out, text_fontfamily, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
-
+        videofilter = "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(
+            title_in, title_out, title_fontfamily, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
+        videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}':box=1,".format(
+            speaker_in, speaker_out, speaker_fontfamily, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
+        videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(
+            text_in, text_out, text_fontfamily, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
 
     if fileformat == '.mov':
         if alpha == 'true':
             if prores == 'true':
-                cmd = '{3} -y -i "{0}" -vf "{1}" -vcodec prores_ks -pix_fmt yuva444p10le -profile:v 4444 -shortest -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile, ffmpeg_path)
+                cmd = '{3} -y -i "{0}" -vf "{1}" -vcodec prores_ks -pix_fmt yuva444p10le -profile:v 4444 -shortest -movflags faststart -f mov "{2}"'.format(
+                    infile, videofilter, outfile, ffmpeg_path)
             else:
-                cmd = '{3} -y -i "{0}" -vf "{1}" -shortest -c:v qtrle -movflags faststart -f mov "{2}"'.format(infile, videofilter, outfile, ffmpeg_path)
+                cmd = '{3} -y -i "{0}" -vf "{1}" -shortest -c:v qtrle -movflags faststart -f mov "{2}"'.format(
+                    infile, videofilter, outfile, ffmpeg_path)
         else:
-            cmd = '{3} -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile, ffmpeg_path)
+            cmd = '{3} -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(
+                infile, videofilter, outfile, ffmpeg_path)
     else:
-        cmd = '{3} -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(infile, videofilter, outfile, ffmpeg_path)
+        cmd = '{3} -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(
+            infile, videofilter, outfile, ffmpeg_path)
 
     if args.debug:
         print(cmd)
@@ -305,5 +319,3 @@ for event in events:
 
 
 print('all done')
-
-

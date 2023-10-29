@@ -117,6 +117,7 @@ def fmt_command(command, **kwargs):
 def run(command, **kwargs):
     os.system(fmt_command(command, **kwargs))
 
+
 def run_output(command, **kwargs):
     # Apple Compressor behaves weirdly with its stdout. It will not terminate right when ran through
     # os.subprocess, but work fine when run via os.system. To still get the output, we pipe it into a
@@ -126,6 +127,7 @@ def run_output(command, **kwargs):
         cmd = fmt_command(command, **kwargs)
         os.system(f'{cmd} >{t.name} 2>&1')
         return t.read().decode('utf-8')
+
 
 def enqueue_job(event):
     event_id = str(event['id'])
@@ -156,7 +158,8 @@ def enqueue_job(event):
 
 
 def fetch_job_status():
-    compressor_status = run_output('/Applications/Compressor.app/Contents/MacOS/Compressor -monitor')
+    compressor_status = run_output(
+        '/Applications/Compressor.app/Contents/MacOS/Compressor -monitor')
     job_status_matches = re.finditer(r"<jobStatus (.*) \/jobStatus>", compressor_status)
 
     status_dict = {}
@@ -188,7 +191,8 @@ def filter_finished_jobs(active_jobs):
         elif status == 'Successful':
             finished_jobs.append((job_id, event))
         else:
-            event_print(event, "failed with staus=" + status + " – removing from postprocessing queue")
+            event_print(event, "failed with staus=" + status +
+                        " – removing from postprocessing queue")
 
     return new_active_jobs, finished_jobs
 
@@ -209,6 +213,7 @@ def finalize_job(job_id, event):
 
     event_print(event, "finalized intro to " + final_clip)
 
+
 active_jobs = []
 
 if args.ids:
@@ -219,7 +224,8 @@ if args.exclude_ids:
 
 filtered_events = events
 filtered_events = filter(lambda event: not args.ids or event['id'] in args.ids, filtered_events)
-filtered_events = filter(lambda event: not args.exclude_ids or event['id'] not in args.exclude_ids, filtered_events)
+filtered_events = filter(
+    lambda event: not args.exclude_ids or event['id'] not in args.exclude_ids, filtered_events)
 filtered_events = list(filtered_events)
 
 print("enqueuing {} jobs into compressor".format(len(filtered_events)))

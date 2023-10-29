@@ -4,7 +4,7 @@ import re
 from lxml import etree
 from urllib.request import urlopen
 
-scheduleTree=None
+scheduleTree = None
 
 
 # Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event
@@ -21,10 +21,11 @@ def downloadSchedule(scheduleUrl):
     parser = etree.XMLParser(huge_tree=True)
     return etree.fromstring(xml, parser)
 
+
 def getSchedule(scheduleUrl):
     global scheduleTree
     if not scheduleTree:
-        scheduleTree=downloadSchedule(scheduleUrl)
+        scheduleTree = downloadSchedule(scheduleUrl)
     return scheduleTree
 
 
@@ -61,6 +62,7 @@ def persons(scheduleUrl, personmap={}, taglinemap={}, forEventId=None):
                                 'person': person,
                                 'tagline': tagline
                             }
+
 
 def events(scheduleUrl, titlemap={}):
     schedule = getSchedule(scheduleUrl)
@@ -108,7 +110,7 @@ def events(scheduleUrl, titlemap={}):
                     'personnames': ', '.join(personnames),
                     'room': room.attrib['name'],
                     'track': event.find('track').text,
-		            'url': url
+                    'url': url
                 }
 
 
@@ -117,4 +119,3 @@ try:
 except ImportError:
     def colored(str, col):
         return str
-

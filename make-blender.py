@@ -19,14 +19,14 @@ from shutil import copyfile
 
 titlemap = {}
 
-#titlemap = {
+# titlemap = {
 #    "205" : {
 #        "title" : "Attacking CPUs with Power Side Channels from Software"
 #    },
 #    "20" : {
 #        "title" : "New title for Talk id 20"
 #    }
-#}
+# }
 
 # Parse arguments
 parser = argparse.ArgumentParser(
@@ -117,7 +117,7 @@ if not args.debug and not args.pause and not args.outro and not args.bgloop and 
     error("Either specify --debug, --pause, --outro or supply a schedule")
 
 if args.debug:
-    #persons = ['blubbel']
+    # persons = ['blubbel']
     persons = ['Vitor Sakaguti', 'Sara', 'A.L. Fehlhaber']
     events = [{
         'id': 11450,
@@ -228,7 +228,8 @@ def enqueue_job(event):
 
         if platform.system() == 'Darwin':
             if args.debug:
-                print("running: Blender.app --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
+                print("running: Blender.app --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
+                      (work_source, work_doc, intermediate_clip))
             run(r'/Applications/Blender.app/Contents/MacOS/Blender --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
                 source=work_source,
                 jobpath=work_doc,
@@ -236,14 +237,16 @@ def enqueue_job(event):
 
         if platform.system() == 'Windows':
             if args.debug:
-                print("running: blender.exe --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
+                print("running: blender.exe --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
+                      (work_source, work_doc, intermediate_clip))
             run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.92/blender.exe --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
                 source=work_source,
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
         if platform.system() == 'Linux':
             if args.debug:
-                print("running: blender --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" % (work_source, work_doc, intermediate_clip))
+                print("running: blender --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
+                      (work_source, work_doc, intermediate_clip))
             run(r'blender --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
                 source=work_source,
                 jobpath=work_doc,
@@ -261,7 +264,7 @@ def finalize_job(job_id, event):
 
     if args.alpha:
         ffprobe = run_output('ffprobe -i {input} -show_streams -select_streams a -loglevel error',
-            input=intermediate_clip)
+                             input=intermediate_clip)
         if ffprobe:
             run('ffmpeg -threads 0 -y -hide_banner -loglevel error -i {input} -c:v qtrle -movflags faststart -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mov {output}',
                 input=intermediate_clip,
@@ -272,7 +275,7 @@ def finalize_job(job_id, event):
                 output=final_clip)
     else:
         ffprobe = run_output('ffprobe -i {input} -show_streams -select_streams a -loglevel error',
-            input=intermediate_clip)
+                             input=intermediate_clip)
         if ffprobe:
             event_print(event, "finalize with audio from source file")
             run('ffmpeg -threads 0 -y -hide_banner -loglevel error -i {input} -c:v mpeg2video -q:v 2 -aspect 16:9 -c:a mp2 -b:a 384k -shortest -f mpegts {output}',
