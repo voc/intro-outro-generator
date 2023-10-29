@@ -193,20 +193,20 @@ def fit_text(string: str, frame_width):
     return lines
 
 
-def fit_title(string: str):
+def fit_title(string: str, fontsize: int, x_offset: int):
     global translation_font
     translation_font = ImageFont.truetype(
-        font_t, size=80, encoding="unic")
-    title = fit_text(string, 1080)
+        font_t, size=fontsize, encoding="unic")
+    title = fit_text(string, (1920-x_offset-100))
 
     return title
 
 
-def fit_speaker(string: str):
+def fit_speaker(string: str, fontsize: int, x_offset: int):
     global translation_font
     translation_font = ImageFont.truetype(
-        font_s, size=50, encoding="unic")
-    speaker = fit_text(string, 1080)
+        font_s, size=fontsize, encoding="unic")
+    speaker = fit_text(string, (1920-x_offset-100))
 
     return speaker
 
@@ -226,9 +226,9 @@ def enqueue_job(event):
     event_title = event_title.replace('\'', '')
     event_personnames = event_personnames.replace('"', '\\"')
 
-    t = fit_title(event_title)
+    t = fit_title(event_title, int(title_fontsize), int(title_x))
     t = t.replace(':', "\:")  # the ffmpeg command needs colons to be escaped
-    s = fit_speaker(event_personnames)
+    s = fit_speaker(event_personnames, int(speaker_fontsize), int(speaker_x))
 
     if args.debug:
         print('Title: ', t)
