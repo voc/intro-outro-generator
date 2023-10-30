@@ -86,6 +86,10 @@ parser.add_argument('--bgloop', action="store_true", default=False, help='''
 parser.add_argument('--keep', action="store_true", default=False, help='''
     Keep source file in the project folder after render.
     ''')
+    
+parser.add_argument('--mp4', action="store_true", default=False, help='''
+    Also create a MP4 for preview.
+    ''')   
 args = parser.parse_args()
 
 
@@ -196,21 +200,18 @@ def enqueue_job(event):
     work_doc = os.path.join(tempdir.name, event_id + '.aepx')
     script_doc = os.path.join(tempdir.name, event_id+'.jsx')
     ascript_doc = os.path.join(tempdir.name, event_id+'.scpt')
-    if platform.system() == 'Windows':
-        intermediate_clip = os.path.join(tempdir.name, event_id + '.avi')
-    else:
-        intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
+    intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
 
     if event_id == 'pause' or event_id == 'outro' or event_id == 'bgloop':
         copyfile(args.project + event_id + '.aepx', work_doc)
         if platform.system() == 'Darwin':
-            run(r'/Applications/Adobe\ After\ Effects\ 2020/aerender -project {jobpath} -comp {comp} -mp -output {locationpath}',
+            run(r'/Applications/Adobe\ After\ Effects\ 2024/aerender -project {jobpath} -comp {comp} -mp -output {locationpath}',
                 jobpath=work_doc,
                 comp=event_id,
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2020/Support\ Files/aerender.exe -project {jobpath} -comp {comp} -mp -output {locationpath}',
+            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2024/Support\ Files/aerender.exe -project {jobpath} -comp {comp} -mp -output {locationpath}',
                 jobpath=work_doc,
                 comp=event_id,
                 locationpath=intermediate_clip)
@@ -241,17 +242,17 @@ def enqueue_job(event):
             #    scriptpath=script_doc,
             #    ascript_path=ascript_doc)
 
-            run(r'/Applications/Adobe\ After\ Effects\ 2022/aerender -project {jobpath} -comp "intro" -mp -output {locationpath}',
+            run(r'/Applications/Adobe\ After\ Effects\ 2024/aerender -project {jobpath} -comp "intro" -mp -output {locationpath}',
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run_once(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2022/Support\ Files/AfterFX.exe -noui -r {scriptpath}',
+            run_once(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2024/Support\ Files/AfterFX.exe -noui -r {scriptpath}',
                      scriptpath=script_doc)
 
             time.sleep(5)
 
-            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2022/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -mfr on 100 -output {locationpath}',
+            run(r'C:/Program\ Files/Adobe/Adobe\ After\ Effects\ 2024/Support\ Files/aerender.exe -project {jobpath} -comp "intro" -mfr on 100 -output {locationpath}',
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
     if args.debug or args.keep:
@@ -262,18 +263,16 @@ def enqueue_job(event):
             print(file)
         copyfile(work_doc, args.project + event_id + '.aepx')
         copyfile(script_doc, args.project + event_id + '.jsx')
-        copyfile(intermediate_clip, args.project + event_id + '.avi')
+        copyfile(intermediate_clip, args.project + event_id + '.mov')
 
     return event_id
 
 
 def finalize_job(job_id, event):
     event_id = str(event['id'])
-    if platform.system() == 'Windows':
-        intermediate_clip = os.path.join(tempdir.name, event_id + '.avi')
-    else:
-        intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
+    intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
     final_clip = os.path.join(os.path.dirname(args.project), event_id + '.ts')
+    preview = os.path.join(os.path.dirname(args.project), event_id + '.mp4')
 
     if args.alpha:
         ffprobe = run_output('ffprobe -i {input} -show_streams -select_streams a -loglevel error',
@@ -304,7 +303,12 @@ def finalize_job(job_id, event):
         event_print(event, "finalized " + str(event_id) + " to " + final_clip)
     else:
         event_print(event, "finalized intro to " + final_clip)
-
+        
+    if args.mp4:
+        run('ffmpeg -threads 0 -y -hide_banner -loglevel error -i {input} {output}',
+            input=final_clip,
+            output=preview)
+        event_print(event, "created mp4 preview " + preview)
 
 if args.ids:
     if len(args.ids) == 1:
