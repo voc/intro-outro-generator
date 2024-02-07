@@ -2,6 +2,7 @@
 
 import subprocess
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'http://www.fossgis.de/konferenz/2014/programm/schedule.de.xml'

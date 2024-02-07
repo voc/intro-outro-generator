@@ -2,6 +2,7 @@
 import subprocess
 import os.path
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'https://frab.sendegate.de/de/ppw15b/public/schedule.xml'

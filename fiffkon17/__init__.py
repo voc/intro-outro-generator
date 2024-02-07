@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from renderlib import *
+from schedulelib import *
 from easing import *
 import math
 

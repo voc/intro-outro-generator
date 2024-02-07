@@ -3,7 +3,9 @@
 from lxml import etree
 from slugify import slugify
 from renderlib import *
+from schedulelib import *
 from renderlib import *
+from schedulelib import *
 from easing import *
 
 

@@ -2,6 +2,7 @@
 
 import random, sys
 from renderlib import *
+from schedulelib import *
 from easing import *
 from colour import Color
 

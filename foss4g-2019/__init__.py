@@ -3,6 +3,7 @@
 import subprocess
 import os.path
 from renderlib import *
+from schedulelib import *
 from easing import *
 import svg.path
 
@@ -160,7 +161,7 @@ def pauseFrames(params):
                         ('text1', 'style', 'opacity', 0),
                         ('text2', 'style', 'opacity', 0),
                 )
-    
+
 def debug():
     render('intro.svg',
         '../intro.ts',

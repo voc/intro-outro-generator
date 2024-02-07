@@ -4,6 +4,7 @@ import svg.path, random
 from lxml import etree
 from slugify import slugify
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'https://www.datenspuren.de/2014/fahrplan/schedule.xml'

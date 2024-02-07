@@ -3,6 +3,7 @@
 import subprocess
 import os.path
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'http://bl0rg.net/~andi/gpn15-fahrplan/schedule.xml'

@@ -2,6 +2,7 @@
 
 
 from renderlib import *
+from schedulelib import *
 from easing import *
 from collections import deque
 
@@ -184,7 +185,7 @@ def debug():
 		'../insert_Hanno.mkv',
 		insertFrames,
 		{
-			'$TITLE': "Hanno", 
+			'$TITLE': "Hanno",
 			'$SUBTITLE': "Jugend hackt Hamburg",
 		}
 	)
@@ -193,7 +194,7 @@ def debug():
 		'../insert_Julia.mkv',
 		insertFrames,
 		{
-			'$TITLE': "Julia", 
+			'$TITLE': "Julia",
 			'$SUBTITLE': "Moderatorin und Mentorin",
 		}
 	)
@@ -240,7 +241,7 @@ def tasks(queue, args, idlist, skiplist):
 			infile = 'insert.svg',
 			outfile = "insert_{}.mkv".format(projectname.replace("/", "_")),
 			parameters = {
-				'$TITLE': event['title'], 
+				'$TITLE': event['title'],
 				'$SUBTITLE': event['personnames'],
 			}
 		).animated(insertFrames))

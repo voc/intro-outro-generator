@@ -3,6 +3,7 @@
 import svg.path
 from lxml import etree
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'http://programm.froscon.de/2014/schedule.xml'

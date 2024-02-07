@@ -3,6 +3,7 @@
 import svg.path, random
 from lxml import etree
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'http://fahrplan.mrmcd.net/schedule.xml'

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'http://annaberg6.de/stuff/camp99/schedule.xml'

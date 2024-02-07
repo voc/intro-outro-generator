@@ -3,6 +3,7 @@
 import subprocess
 import os.path
 from renderlib import *
+from schedulelib import *
 from easing import *
 import svg.path
 import random
@@ -277,7 +278,7 @@ def tasks(queue, args, idlist, skiplist):
 
         if event['id'] == 8496:
             eventTitle = 'Know your tools                        - I’m firing my laser! -'
-        
+
         # generate a task description and put them into the queue
         queue.put(Rendertask(
             infile='intro.svg',

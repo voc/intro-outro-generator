@@ -2,6 +2,7 @@
 
 import subprocess
 from renderlib import *
+from schedulelib import *
 
 def pyconFrames(params):
 	frames = 500

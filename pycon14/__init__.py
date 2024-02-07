@@ -2,13 +2,14 @@
 
 import subprocess
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'https://ep2014.europython.eu/schedule.frab.xml'
 
 # For (really) too long titles
 titlemap = {
-	
+
 }
 
 def pyconFrames():

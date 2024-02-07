@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from renderlib import *
+from schedulelib import *
 from easing import *
 
 # URL to Schedule-XML
@@ -15,13 +16,13 @@ def introFrames(p):
 
 	nr = p['$id'];
 
-	# 9 Sekunden nix 
+	# 9 Sekunden nix
 	frames = 9*fps
 	for i in range(0, frames):
 		givenFrame += 1
 		yield (
 			('bg',    'attr',  '{http://www.w3.org/1999/xlink}href', "given-frames/frame%04d.png" % (givenFrame)),
-			('layer1', 'style',    'opacity', "%.4f" % 0),  # nix 
+			('layer1', 'style',    'opacity', "%.4f" % 0),  # nix
 			# ('text', 'attr',     'transform', 'translate(%.4f, 0)' % easeOutQuad(i, move, -move, frames)),
 		)
 

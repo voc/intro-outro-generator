@@ -3,6 +3,7 @@
 import svg.path
 from lxml import etree
 from renderlib import *
+from schedulelib import *
 from easing import *
 
 # URL to Schedule-XML

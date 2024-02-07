@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<schedule>
+    <generator name="manual" />
+    <conference>
+        <acronym>jugend-hackt-hamburg-2023</acronym>
+        <title>Jugend hackt Hamburg 2023</title>
+        <start>2023-10-29</start>
+        <end>2023-10-29</end>
+        <days>1</days>
+        <timeslot_duration>00:05</timeslot_duration>
+        <time_zone_name>Europe/Berlin</time_zone_name>
+    </conference>
+    <day index='1' date='2023-10-29' start='2023-10-29T00:00:00+02:00' end='2023-10-29T23:59:00+02:00'>
+        <room name='Betahaus'>
+            <event guid='46806780-36f2-413d-8088-90f4ad0173f2' id='101'>
+                <date>2023-10-29T13:00:00+02:00</date>
+                <start>13:00</start>
+                <duration>01:00</duration>
+                <room>Betahaus</room>
+                <slug>jugend-hackt-hamburg-2023-101-abschluss</slug>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Abschlusspräsentation</title>
+                <subtitle>Teilnehmende von Jugend hackt Hamburg 2023</subtitle>
+                <track></track>
+                <type>Talk</type>
+                <language>de</language>
+                <abstract>Alle Projekte werden auf der großen Bühne vorgestellt.</abstract>
+                <description></description>
+                <logo></logo>
+                <persons>
+                    <person id='1'>Hanno S.</person>
+                    <person id='2'>Rike</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+        </room>
+    </day>
+</schedule>

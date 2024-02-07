@@ -3,6 +3,7 @@
 import subprocess
 import os.path
 from renderlib import *
+from schedulelib import *
 from easing import *
 import svg.path
 

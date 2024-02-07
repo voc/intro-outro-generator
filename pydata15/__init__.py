@@ -3,6 +3,7 @@
 import subprocess
 import os.path
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'https://raw.githubusercontent.com/pydataberlin/pydataberlin.github.io/master/utils/pydata_berlin_voc.xml'

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from renderlib import *
+from schedulelib import *
 from easing import *
 import math
 
@@ -121,7 +122,7 @@ def tasks(queue, params, idlist, skiplist):
 #				'$TAGLINE': person['tagline'],
 #				}
 #			))
-#	
+#
 #		queue.put(Rendertask(
 #			infile = 'lower-third.svg',
 #			outfile = 'event_{}_persons.png'.format(str(event['id'])),
@@ -130,7 +131,7 @@ def tasks(queue, params, idlist, skiplist):
 #			'$TAGLINE': '',
 #			}
 #			))
-#	
+#
 	# place a task for the outro into the queue
 	if not "out" in skiplist:
 		queue.put(Rendertask(

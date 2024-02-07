@@ -2,6 +2,7 @@
 # vim: tabstop=4 shiftwidth=4 expandtab
 
 from renderlib import *
+from schedulelib import *
 from easing import *
 import math
 

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'https://eh15.easterhegg.eu/frab/en/eh15/public/schedule.xml'

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from renderlib import *
+from schedulelib import *
 from easing import *
 
 # URL to Schedule-XML
@@ -31,7 +32,7 @@ def introFrames(p):
 			('text', 'style',    'opacity', easeLinear(i, 1, 0, frames)),
 			('bg', 'style',    'opacity', easeLinear(i, 1, 0, frames)),
 		)
-	
+
 	frames = int(fps/2)
 	for i in range(0, frames):
 		yield (
@@ -40,7 +41,7 @@ def introFrames(p):
 			('text', 'style',    'opacity', 0),
 			('bg', 'style',    'opacity',0),
 		)
-		
+
 	# Show Sponsor
 	frames = 5*fps
 	for i in range(0, frames):

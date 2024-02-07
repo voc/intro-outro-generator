@@ -3,6 +3,7 @@
 import subprocess
 import os.path
 from renderlib import *
+from schedulelib import *
 from easing import *
 
 # URL to Schedule-XML
@@ -100,7 +101,7 @@ def pauseFrames(p):
         yield (
             ('onhold', 'style',    'opacity', "%.4f" % easeLinear(i, 1, -0.8, frames-1)),
         )
-        
+
     frames = int(1.5*fps)
     for i in range(0, frames):
         yield (
@@ -116,7 +117,7 @@ def outroFrames(p):
         scale = easeLinear(i, 1.3, 0.3  , frames-1)
         opacity = 0
         if i > int(frames*0.7):
-            opacity = easeLinear(int(i-frames*0.7), 0, 1, int(frames-frames*0.7)-1)      
+            opacity = easeLinear(int(i-frames*0.7), 0, 1, int(frames-frames*0.7)-1)
         yield (
             ('guadeclogoscale', 'attr', 'transform', 'scale({scale},{scale})'.format(scale=scale),),
             ('fadetoblack', 'style',    'opacity', '{opac}'.format(opac=opacity),),
@@ -129,7 +130,7 @@ def outroFrames(p):
             ('fadetoblack', 'style',    'opacity', "1"),
         )
 
-        
+
 def debug():
     render(
       'intro.svg',
@@ -162,7 +163,7 @@ def tasks(queue, args):
             if not str(event['id']) in args:
                 continue
 
-        if len(event['title']) < 71: 
+        if len(event['title']) < 71:
             params = {
                 '$title': event['title'],
                 '$longtitle': '',

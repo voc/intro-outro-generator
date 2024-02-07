@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from renderlib import *
+from schedulelib import *
 from easing import *
 from lxml import etree
 
@@ -62,7 +63,7 @@ def tasks(queue, args):
 def tasks(queue, args):
         # iterate over all events extracted from the schedule xml-export
         for event in events(scheduleUrl):
-                if event['room'] not in ('Seminar room', 'Soundlab', 'Mainhall'): 
+                if event['room'] not in ('Seminar room', 'Soundlab', 'Mainhall'):
                         print("skipping room %s (%s)" % (event['room'], event['title']))
                         continue
 

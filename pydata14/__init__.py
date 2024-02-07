@@ -3,13 +3,14 @@
 import subprocess
 import os.path
 from renderlib import *
+from schedulelib import *
 
 # URL to Schedule-XML
 scheduleUrl = 'file://' + os.path.join(os.path.dirname(os.path.abspath(__file__)), 'schedule.xml')
 
 # For (really) too long titles
 titlemap = {
-	
+
 }
 
 def introFrames():
