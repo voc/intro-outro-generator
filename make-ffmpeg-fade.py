@@ -5,6 +5,7 @@ import os
 import sys
 import subprocess
 import renderlib
+import schedulelib
 import argparse
 import shlex
 from PIL import ImageFont
