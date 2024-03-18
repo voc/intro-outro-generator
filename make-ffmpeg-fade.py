@@ -5,6 +5,7 @@ import os
 import sys
 import subprocess
 import renderlib
+import schedulelib
 import argparse
 import shlex
 from PIL import ImageFont
@@ -173,21 +174,28 @@ def run(command, **kwargs):
 
 def fit_text(string: str, frame_width):
     split_line = [x.strip() for x in string.split()]
-    lines = ""
+    lines = []
     w = 0
     line_num = 0
-    line = ""
+    line = []
     for word in split_line:
-        w, _ = translation_font.getsize(" ".join([line, word]))
-        print("{}, {}".format(w, line))
-        if w > (frame_width):
-            print("too wide, breaking")
-            lines += line.strip() + "\n"
-            line = ""
+        new_line = line + [word.rstrip(':')]
+        w, _ = translation_font.getsize(" ".join(new_line))
+        print(w, new_line)
+        if w > frame_width:
+            print("too wide, breaking", line)
+            lines.append(' '.join(line))
+            line = []
 
-        line += word + " "
+        line.append(word.rstrip(':'))
 
-    lines += line.strip()
+        if word.endswith(':'):
+            print(':, breaking', line)
+            lines.append(' '.join(line))
+            line = []
+
+    if line:
+        lines.append(' '.join(line))
     return lines
 
 
@@ -232,48 +240,38 @@ def enqueue_job(event):
 
     outfile = os.path.join(os.path.dirname(args.project), event_id + '.ts')
 
-    videofilter = "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
-        fontfile=font_t,
-        fontsize=title_fontsize,
-        fontcolor=title_fontcolor,
-        x=title_x,
-        y=title_y,
-        text=t)
-    videofilter += "alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))',".format(
-        fade_in_start_time=title_in,
-        fade_in_end_time=title_in + fade_duration,
-        fade_out_start_time=title_in + fade_duration + title_duration,
-        fade_out_end_time=title_in + fade_duration + title_duration + fade_duration,
-        fade_duration=fade_duration
-    )
-    videofilter += "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
-        fontfile=font_s,
-        fontsize=speaker_fontsize,
-        fontcolor=speaker_fontcolor,
-        x=speaker_x,
-        y=speaker_y,
-        text=s)
-    videofilter += "alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))',".format(
-        fade_in_start_time=speaker_in,
-        fade_in_end_time=speaker_in + fade_duration,
-        fade_out_start_time=speaker_in + fade_duration + speaker_duration,
-        fade_out_end_time=speaker_in + fade_duration + speaker_duration + fade_duration,
-        fade_duration=fade_duration
-    )
-    videofilter += "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text={text}:".format(
-        fontfile=font_tt,
-        fontsize=text_fontsize,
-        fontcolor=text_fontcolor,
-        x=text_x,
-        y=text_y,
-        text=text_text)
-    videofilter += "alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))'".format(
-        fade_in_start_time=text_in,
-        fade_in_end_time=text_in + fade_duration,
-        fade_out_start_time=text_in + fade_duration + text_duration,
-        fade_out_end_time=text_in + fade_duration + text_duration + fade_duration,
-        fade_duration=fade_duration
-    )
+    videofilter = ""
+    for idx, line in enumerate(t):
+        videofilter += "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
+            fontfile=font_t,
+            fontsize=title_fontsize,
+            fontcolor=title_fontcolor,
+            x=title_x,
+            y=title_y + (idx * title_fontsize),
+            text=line)
+        videofilter += "alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))',".format(
+            fade_in_start_time=title_in,
+            fade_in_end_time=title_in + fade_duration,
+            fade_out_start_time=title_in + fade_duration + title_duration,
+            fade_out_end_time=title_in + fade_duration + title_duration + fade_duration,
+            fade_duration=fade_duration
+        )
+
+    for idx, line in enumerate(s):
+        videofilter += "drawtext=fontfile={fontfile}:fontsize={fontsize}:fontcolor={fontcolor}:x={x}:y={y}:text='{text}':".format(
+            fontfile=font_s,
+            fontsize=speaker_fontsize,
+            fontcolor=speaker_fontcolor,
+            x=speaker_x,
+            y=speaker_y + (idx * speaker_fontsize),
+            text=line)
+        videofilter += "alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))',".format(
+            fade_in_start_time=speaker_in,
+            fade_in_end_time=speaker_in + fade_duration,
+            fade_out_start_time=speaker_in + fade_duration + speaker_duration,
+            fade_out_end_time=speaker_in + fade_duration + speaker_duration + fade_duration,
+            fade_duration=fade_duration
+        )
 
     if fileformat == '.mov':
         if alpha == 'true':
