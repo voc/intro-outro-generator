@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1920"
+   height="1080"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="outro.svg">
+  <defs
+     id="defs20">
+    <filter
+       id="filter3772"
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow">
+      <feFlood
+         id="feFlood3774"
+         flood-opacity="0.5"
+         flood-color="rgb(255,255,255)"
+         result="flood" />
+      <feComposite
+         id="feComposite3776"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur3778"
+         in="composite"
+         stdDeviation="3"
+         result="blur" />
+      <feOffset
+         id="feOffset3780"
+         dx="1"
+         dy="1"
+         result="offset" />
+      <feComposite
+         id="feComposite3782"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter3772-5"
+       inkscape:label="Drop Shadow">
+      <feFlood
+         id="feFlood3774-9"
+         flood-opacity="0.5"
+         flood-color="rgb(255,255,255)"
+         result="flood" />
+      <feComposite
+         id="feComposite3776-9"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur3778-3"
+         stdDeviation="3"
+         result="blur" />
+      <feOffset
+         id="feOffset3780-4"
+         dx="1"
+         dy="1"
+         result="offset" />
+      <feComposite
+         id="feComposite3782-9"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="617.24097"
+     inkscape:cy="402.75815"
+     inkscape:document-units="px"
+     inkscape:current-layer="g_background-5"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1031"
+     inkscape:window-x="1920"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,1080"
+       id="guide2996"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,0"
+       id="guide2998" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="0,0"
+       id="guide3000" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1920,0"
+       id="guide3002"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="32,0"
+       id="guide3029" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,1048"
+       id="guide3031"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="1888,281.42857"
+       orientation="1,0"
+       id="guide4165"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer_background"
+     transform="translate(0,-476)">
+    <g
+       id="g_background"
+       transform="translate(437.21428,1251.3215)">
+      <image
+         xlink:href="/Users/thorti/Git/c3voc/intro-outro-generator/fossgis24/artwork/fossgis24_logo.png"
+         y="-743.32147"
+         x="1801.7858"
+         id="image_logo"
+         height="249"
+         width="249" />
+      <g
+         id="g_background-5"
+         transform="translate(1.4433594e-5,-2.7832031e-5)">
+        <image
+           xlink:href="/Users/thorti/Git/c3voc/intro-outro-generator/fossgis24/artwork/Titelbild_FOSSGIS2024_fullhd.png"
+           y="-775.32147"
+           x="-437.21429"
+           id="image_background"
+           height="1080"
+           width="1920" />
+        <image
+           xlink:href="/Users/thorti/Git/c3voc/intro-outro-generator/fossgis24/artwork/fossgis24_logo.png"
+           y="-743.32147"
+           x="1801.7858"
+           id="image_logo-3"
+           height="249"
+           width="249" />
+      </g>
+    </g>
+    <g
+       style="opacity:1"
+       id="banderole"
+       transform="matrix(1.3478261,0,0,1.3478261,2.8702447e-7,-525.56522)">
+      <rect
+         id="rect_banderole"
+         width="1424.5161"
+         height="230"
+         x="-8.2519534e-07"
+         y="1281"
+         ry="0.0062701544"
+         style="fill:#333333;fill-opacity:0.70196078" />
+      <text
+         sodipodi:linespacing="90.000001%"
+         id="text2992"
+         y="1382.8375"
+         x="75.964493"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:90.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#c2ced2;fill-opacity:1;stroke:none"
+           id="tspan3002"
+           y="1382.8375"
+           x="75.964493"
+           sodipodi:role="line">         Hamburg</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#c2ced2;fill-opacity:1;stroke:none"
+           y="1420.2375"
+           x="75.964493"
+           sodipodi:role="line"
+           id="tspan4213">20. - 23. März 2024</tspan></text>
+      <text
+         sodipodi:linespacing="90.000001%"
+         id="text2992-5"
+         y="1341.2262"
+         x="77.218193"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:90.00000119%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none"
+           y="1341.2262"
+           x="77.218193"
+           id="tspan2994-9"
+           sodipodi:role="line">FOSSGIS Konferenz</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:90.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none"
+           id="tspan2998-1"
+           y="1379.6262"
+           x="77.218193"
+           sodipodi:role="line">2024</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;line-height:90.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none"
+           id="tspan3002-3"
+           y="1418.0262"
+           x="77.218193"
+           sodipodi:role="line" /><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;line-height:90.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';fill:#f2f4f5;fill-opacity:1;stroke:none"
+           y="1438.5645"
+           x="77.218193"
+           sodipodi:role="line"
+           id="tspan3013">www.fossgis-konferenz.de/2024</tspan></text>
+    </g>
+    <g
+       transform="matrix(1.9786883,0,0,1.9784667,1294.4604,1263.9383)"
+       id="license"
+       inkscape:export-filename="/mnt/hgfs/Bov/Documents/Work/2007/cc/identity/srr buttons/big/by-sa.png"
+       inkscape:export-xdpi="300.23013"
+       inkscape:export-ydpi="300.23013"
+       inkscape:label="#g287">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3817_2_"
+         nodetypes="ccccccc"
+         d="m 182.23532,75.39014 114.06396,0.20312 c 1.59375,0 3.01758,-0.23682 3.01758,3.18018 l -0.13965,37.56689 -119.82031,0 0,-37.70654 c 0,-1.68457 0.16309,-3.24365 2.87842,-3.24365 z"
+         style="fill:#aab2ab" />
+      <g
+         id="g5908_2_"
+         transform="matrix(0.872921,0,0,0.872921,50.12536,143.2144)">
+        <path
+           inkscape:connector-curvature="0"
+           id="path5906_2_"
+           cx="296.35416"
+           ry="22.939548"
+           cy="264.3577"
+           type="arc"
+           rx="22.939548"
+           d="m 187.20944,-55.6792 c 0.006,8.68024 -7.02786,15.72095 -15.7081,15.72708 -8.68021,0.005 -15.72205,-7.02786 -15.72708,-15.70804 0,-0.0067 0,-0.01233 0,-0.01904 -0.005,-8.68134 7.02783,-15.72205 15.70807,-15.72711 8.68134,-0.0056 15.72208,7.02789 15.72711,15.70807 0,0.0056 0,0.01233 0,0.01904 z"
+           style="fill:#ffffff" />
+        <g
+           id="g5706_2_"
+           transform="translate(-289.6157,99.0653)">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5708_2_"
+             d="m 473.88455,-167.54724 c 3.48541,3.48596 5.22839,7.75391 5.22839,12.80273 0,5.04938 -1.7128,9.27148 -5.13834,12.66736 -3.63531,3.5766 -7.93179,5.36432 -12.88947,5.36432 -4.89777,0 -9.11987,-1.77261 -12.6651,-5.31955 -3.54584,-3.54581 -5.31845,-7.78299 -5.31845,-12.71213 0,-4.92859 1.77261,-9.19598 5.31845,-12.80273 3.4552,-3.48651 7.67725,-5.22894 12.6651,-5.22894 5.04829,0 9.31401,1.74243 12.79942,5.22894 z m -23.11798,2.34485 c -2.94675,2.97638 -4.41956,6.46289 -4.41956,10.46234 0,3.99835 1.45828,7.4552 4.37424,10.37067 2.91653,2.9165 6.38849,4.37476 10.41705,4.37476 4.02853,0 7.53018,-1.47281 10.50656,-4.41901 2.8259,-2.73584 4.23941,-6.17706 4.23941,-10.32642 0,-4.11804 -1.43646,-7.61292 -4.30768,-10.48474 -2.87064,-2.87067 -6.34988,-4.30652 -10.43829,-4.30652 -4.08837,0 -7.54638,1.44318 -10.37173,4.32892 z m 7.75449,8.70312 c -0.45032,-0.98163 -1.12433,-1.47223 -2.02325,-1.47223 -1.58914,0 -2.38342,1.06952 -2.38342,3.2085 0,2.13959 0.79428,3.20911 2.38342,3.20911 1.04938,0 1.79895,-0.5213 2.24866,-1.56512 l 2.20276,1.17303 c -1.04993,1.86548 -2.62506,2.79901 -4.72549,2.79901 -1.6199,0 -2.91763,-0.4967 -3.89206,-1.48956 -0.97607,-0.99341 -1.46274,-2.36273 -1.46274,-4.10797 0,-1.71558 0.50229,-3.07709 1.50748,-4.08563 1.00519,-1.00793 2.25705,-1.51251 3.75781,-1.51251 2.22012,0 3.80984,0.87488 4.77081,2.62286 l -2.38398,1.22051 z m 10.36334,0 c -0.45087,-0.98163 -1.11148,-1.47223 -1.98239,-1.47223 -1.62106,0 -2.43213,1.06952 -2.43213,3.2085 0,2.13959 0.81107,3.20911 2.43213,3.20911 1.05103,0 1.78717,-0.5213 2.20724,-1.56512 l 2.25201,1.17303 c -1.04825,1.86548 -2.62119,2.79901 -4.71768,2.79901 -1.61771,0 -2.91263,-0.4967 -3.88647,-1.48956 -0.97217,-0.99341 -1.45938,-2.36273 -1.45938,-4.10797 0,-1.71558 0.49448,-3.07709 1.48288,-4.08563 0.98782,-1.00793 2.24527,-1.51251 3.77347,-1.51251 2.21619,0 3.80368,0.87488 4.76132,2.62286 l -2.431,1.22051 z" />
+        </g>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         d="m 297.29639,74.91064 -116.22951,0 c -1.24658,0 -2.26074,1.01465 -2.26074,2.26123 l 0,39.49561 c 0,0.28174 0.22852,0.51074 0.51025,0.51074 l 119.73,0 c 0.28174,0 0.51074,-0.229 0.51074,-0.51074 l 0,-39.4956 c 0,-1.24659 -1.01416,-2.26124 -2.26074,-2.26124 z m -116.22951,1.02149 116.22951,0 c 0.68359,0 1.23926,0.55615 1.23926,1.23975 0,0 0,15.91943 0,27.41846 l -83.07375,0 c -3.04492,5.50537 -8.91113,9.24365 -15.64355,9.24365 -6.73535,0 -12.6001,-3.73486 -15.64355,-9.24365 l -4.34814,0 c 0,-11.49902 0,-27.41846 0,-27.41846 -2e-5,-0.6836 0.55663,-1.23975 1.24022,-1.23975 z"
+         id="path294" />
+      <g
+         id="g313"
+         transform="translate(16.172332,0)">
+        <circle
+           cx="242.56226"
+           cy="90.224609"
+           r="10.8064"
+           id="circle315"
+           style="fill:#ffffff" />
+        <g
+           id="g317">
+          <path
+             inkscape:connector-curvature="0"
+             d="m 245.68994,87.09766 c 0,-0.4165 -0.33789,-0.75342 -0.75391,-0.75342 l -4.77246,0 c -0.41602,0 -0.75391,0.33691 -0.75391,0.75342 l 0,4.77295 1.33105,0 0,5.65234 3.61719,0 0,-5.65234 1.33203,0 0,-4.77295 1e-5,0 z"
+             id="path319" />
+          <circle
+             cx="242.5498"
+             cy="84.083008"
+             r="1.63232"
+             id="circle321" />
+        </g>
+        <path
+           inkscape:connector-curvature="0"
+           d="m 242.53467,78.31836 c -3.23145,0 -5.96826,1.12744 -8.20752,3.38379 -2.29785,2.33301 -3.44629,5.09521 -3.44629,8.28418 0,3.18897 1.14844,5.93213 3.44629,8.22705 2.29785,2.29443 5.03418,3.44189 8.20752,3.44189 3.21289,0 5.99805,-1.15674 8.35352,-3.47168 2.2207,-2.19678 3.33008,-4.92969 3.33008,-8.19727 0,-3.26758 -1.12891,-6.02881 -3.3877,-8.28418 -2.25879,-2.25634 -5.02442,-3.38378 -8.2959,-3.38378 z m 0.0293,2.09961 c 2.64844,0 4.89746,0.93359 6.74707,2.80078 1.87012,1.84717 2.80469,4.10352 2.80469,6.76758 0,2.68359 -0.91504,4.91113 -2.74609,6.68066 -1.92773,1.90576 -4.19629,2.8584 -6.80566,2.8584 -2.60937,0 -4.8584,-0.94287 -6.74658,-2.82959 -1.88965,-1.88623 -2.8335,-4.12256 -2.8335,-6.70947 0,-2.58643 0.9541,-4.84229 2.8623,-6.76758 1.83057,-1.86719 4.07031,-2.80078 6.71777,-2.80078 z"
+           id="path323"
+           style="clip-rule:evenodd;fill-rule:evenodd" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:20.2165451px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="236.42627"
+         y="113.75954"
+         id="text3393"
+         sodipodi:linespacing="125%"
+         transform="scale(0.999944,1.000056)"><tspan
+           sodipodi:role="line"
+           id="tspan3395"
+           x="236.42627"
+           y="113.75954"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.84473801px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'"> BY 4.0 DE</tspan></text>
+     <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:80.00000119%;font-family:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       x="306.42627"
+       y="140.1428"
+       id="text2992-5-5-3"
+       sodipodi:linespacing="80.000001%"><tspan
+         sodipodi:role="line"
+         x="306.42627"
+         y="140.1428"
+         id="url"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';text-align:end;text-anchor:end;fill:#f2f4f5;fill-opacity:1;stroke:none">https://creativecommons.org/licenses/by/4.0/</tspan></text>
+</g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:80.00000119%;font-family:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       x="30.53125"
+       y="1542.3694"
+       id="text2992-5-5-3-3"
+       sodipodi:linespacing="80.000001%"><tspan
+         sodipodi:role="line"
+         x="30.53125"
+         y="1542.3694"
+         id="url-6"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;line-height:80.00000119%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';text-align:start;text-anchor:start;fill:#f2f4f5;fill-opacity:1;stroke:none">Photo: Hauke Stieler</tspan></text>
+  </g>
+</svg>
