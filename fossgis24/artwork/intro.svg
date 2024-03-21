@@ -135,14 +135,14 @@
        id="g_background"
        transform="translate(-162.78572,747.3215)">
       <image
-         xlink:href="/Users/thorti/Git/c3voc/intro-outro-generator/fossgis24/artwork/Titelbild_FOSSGIS2024_fullhd.png"
+         xlink:href="../Titelbild_FOSSGIS2024_fullhd.png"
          width="1920"
          height="1080"
          id="image_background"
          x="162.78572"
          y="-775.32147" />
       <image
-         xlink:href="/Users/thorti/Git/c3voc/intro-outro-generator/fossgis24/artwork/fossgis24_logo.png"
+         xlink:href="../fossgis24_logo.png"
          width="249"
          height="249"
          id="image_logo"
