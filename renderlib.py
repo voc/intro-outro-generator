@@ -97,7 +97,7 @@ def renderFrame(infile, task, outfile):
                 converted.save(filename=outfile)
     elif args.resvg:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-        cmd = 'resvg --background white --width={1} --height={2}  "{4}" "{3}" 2>&1 >/dev/null'.format(
+        cmd = 'resvg --use-fonts-dir ~/.local/share/fonts/ --background white --width={1} --height={2}  "{4}" "{3}" 2>&1 >/dev/null'.format(
             task.workdir, width, height, outfile, infile)
         errorReturn = subprocess.check_output(
             cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
@@ -107,12 +107,15 @@ def renderFrame(infile, task, outfile):
 
     else:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-        cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-filename="{3}" "{4}" --pipe 2>&1 >/dev/null'.format(
+        cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-filename="{3}" "{4}"'.format(
             task.workdir, width, height, os.path.abspath(outfile), os.path.abspath(infile))
-        errorReturn = subprocess.check_output(
-            cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
-        if errorReturn != '':
-            print("inkscape exited with error\n" + errorReturn)
+        try:
+            errorReturn = subprocess.check_output(
+                cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
+        except subprocess.CalledProcessError as e:
+            print(f"inkscape exited with error")
+            print(f"returncode={e.returncode}")
+            print(f"output={e.output}")
             # sys.exit(42)
 
 

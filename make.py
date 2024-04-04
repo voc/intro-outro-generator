@@ -99,7 +99,9 @@ renderlib.args = args
 # sys.exit(1)
 
 
-def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projectname, 'artwork')):
+cwd = os.getcwd()
+
+def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(cwd, projectname, 'artwork')):
     task = renderlib.Rendertask(infile=infile, outfile=outfile,
                                 sequence=sequence, parameters=parameters, workdir=workdir)
     return renderlib.rendertask(task)

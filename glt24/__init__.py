@@ -21,8 +21,8 @@ def introFrames(args):
     frames = 2*fps
     for i in range(0, frames):
         yield(
-            ('title', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('persons', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
+            ('title', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
+            ('persons', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
         )
 
 #show whole image for 5 seconds
@@ -59,15 +59,15 @@ def debug():
       '../intro.ts',
       introFrames,
       {
-          '$title': "Long Long Long title is LONG",
-          '$speaker': 'Long Name of Dr. Dr. Prof. Dr. Long Long'
+          '$title': " Fully declarative Homelab on NixOS ❄️",
+          '$persons': 'Long Name of Dr. Dr. Prof. Dr. Long Long'
       }
     )
 
-    render('outro.svg',
-        '../outro.ts',
-        outroFrames
-    )
+    #render('outro.svg',
+    #    '../outro.ts',
+    #    outroFrames
+    #)
 
 
 def tasks(queue, args, idlist, skiplist):
