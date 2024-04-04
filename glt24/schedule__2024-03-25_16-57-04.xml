@@ -1,0 +1,1618 @@
+<!-- Made with love by pretalx v2023.1.3. -->
+<schedule>
+    <generator name="pretalx" version="2023.1.3" />
+    <version>1.0</version>
+    <conference>
+        <acronym>glt24</acronym>
+        <title>Grazer Linuxtage 2024</title>
+        <start>2024-04-05</start>
+        <end>2024-04-06</end>
+        <days>2</days>
+        <timeslot_duration>00:05</timeslot_duration>
+        <base_url>https://pretalx.linuxtage.at/glt24/schedule/</base_url>
+        <time_zone_name>Europe/Vienna</time_zone_name>
+    </conference>
+    <day index='1' date='2024-04-05' start='2024-04-05T04:00:00+02:00' end='2024-04-06T03:59:00+02:00'>
+        <room name='HS i4'>
+            <event guid='65343783-8f96-5b48-a765-e2ee82f88d57' id='410'>
+                <date>2024-04-05T13:00:00+02:00</date>
+                <start>13:00</start>
+                <duration>03:40</duration>
+                <room>HS i4</room>
+                <slug>glt24-410-musikproduktion-mit-freier-software</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/NGXNXR/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>Musikproduktion mit freier Software</title>
+                <subtitle></subtitle>
+                <track>Anwendung</track>
+                <type>Workshop (3,5h)</type>
+                <language>de</language>
+                <abstract>Ich bin (u.a.) Hobby-Musiker und arbeite gerade an zwei Alben,
+welche ich ausschlie&#223;lich mit freier Software produziere.
+Die Musikrichtung liegt abgesehen von einer instrumentalen Synth-Nummer irgendwo zwischen &quot;Rock-Ballade&quot; und &quot;Metal&quot;.
+In diesem Workshop m&#246;chte ich meinen Prozess von der Entstehung der Songs bis hin zum fertigen Mix durchgehen.</abstract>
+                <description>F&#252;r den diesj&#228;hrigen Workshop habe ich mir vorgenommen, da&#223; ich zusammen mit meiner Bands&#228;ngerin einen Cover von einem Dio-Klassiker produzieren werde. Welchen genau, verrate ich jedoch noch nicht. :-)
+Der Fokus in diesem Jahr wird auf Aufnahme und Schnitt von Gesang bzw. Gitarre und dem Mix liegen.
+Die Drums und der Bass-Track wird schon vorbereitet sein, damit wir auch gleich mit dem Aufnehmen loslegen koennen.
+
+Themengebiete:
+1. Ardour
+   * Ardour Projekt einrichten (Tracks, Groups, Busse, Connection Matrix)
+2. Recording
+   * Hardware: Mikrofone, Audio-Devices, Kabel/Adapter
+   * Gitarre: direkt oder via Verst&#228;rker und Mikrofon(e)?
+   * GIRATS ;-)
+   * Schnitt und Timing-Korrekturen
+3. Guitarix
+   * &#220;bersicht der Guitarix-Plugins
+   * Von der &quot;direct in&quot; Aufnahme zu einem g&apos;scheiten Gitarrensound
+4. Mixing (in Ardour)
+   * Basic Mix: nur Gain, Fader und Pan, aber noch keine Plugins (Ausnahme: Guitarix)
+   * Advanced Mix: Standard Plugins von LSP (EQ, Compressor, Gate, etc.)
+   * Visualisierungs-Plugins
+   * Effekt-Plugins und andere Tricks
+   * Automatisierung
+
+Wer kann mitmachen?
+Jeder, der unter Linux Musik macht oder machen m&#246;chte, aber sich bis jetzt vielleicht gescheut hat, alles bis zum Schlu&#223; durchzuziehen.
+
+
+Ergebnis vom Vorjahr:
+https://coldwhisper-graz.bandcamp.com/track/diamonds-and-rust-cover
+
+Ardour Stammtisch Graz:
+https://lists.mur.at/mailman/listinfo/ardour-stammtisch-graz</description>
+                <logo></logo>
+                <persons>
+                    <person id='12'>Bernhard &quot;Slash&quot; Trummer</person><person id='342'>Katharina Heczendorfer</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='a6b843b7-f22e-5e2f-a7fe-8a875a37f0fd' id='452'>
+                <date>2024-04-05T17:00:00+02:00</date>
+                <start>17:00</start>
+                <duration>02:50</duration>
+                <room>HS i4</room>
+                <slug>glt24-452-cloud-native-workshop-from-the-source-code-to-the-deployment-of-a-cloud-service</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/VWBVLQ/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>Cloud Native Workshop - From the source code to the deployment of a cloud service</title>
+                <subtitle></subtitle>
+                <track>Admin</track>
+                <type>Workshop (2,8h)</type>
+                <language>de</language>
+                <abstract>Are you a cloud native developer?
+
+Was bedeutet es, ein &quot;cloud nativer&quot; Entwickler zu sein, wie sieht ein entsprechender Workflow dazu aus, welche Tools kommen zum Einsatz? Wie spielen Konzepte und Tools von GitHub, Hashicorp und Microsoft zusammen?
+Die Fragen dazu m&#246;chten wir mit euch mittels einer Hands-On Session beantworten.
+
+Lasst uns gemeinsam mit Hilfe von &apos;Visual Studio Code&apos; und &apos;GitHub Codespaces&apos; Cloud Ressourcen mittels &apos;Infrastructure as Code&apos; definieren und deployen. Zudem werden wir auch zusammen Befehle f&#252;r das Command Line Interface zu Kubernetes Clustern ausf&#252;hren.
+
+Der volle Inhalt:
+* Erstellung deines eigenens GitHub Codespaces
+* Installieren der Extension f&#252;r GitHub Codespaces f&#252;r Visual Studio Code
+* Definieren einer Azure ressource mittels einer Terraform Configuration
+* Provisionieren der Ressource in einer Azure Subscription mittels Terraform
+* Deployment von Kubernetes Jobs auf einem Kubernetes Cluster
+* Skalieren der Workloads
+* Zerst&#246;ren der Ressourcen in der Azure Subscription 
+
+Was du daf&#252;r brauchst:
+* einen Laptop (ideal deinen privaten Laptop)
+* einen GitHub Account
+* Visual Studio Code</abstract>
+                <description></description>
+                <logo></logo>
+                <persons>
+                    <person id='343'>Patrick Koch</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            
+        </room>
+        <room name='HS i11'>
+            <event guid='f27afec3-b805-5a35-9c87-f8011d843c57' id='431'>
+                <date>2024-04-05T17:00:00+02:00</date>
+                <start>17:00</start>
+                <duration>02:50</duration>
+                <room>HS i11</room>
+                <slug>glt24-431-vom-anfnger-zum-vim-keyboard-ninja</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/HUY9BH/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>Vom Anf&#228;nger zum vim Keyboard-Ninja</title>
+                <subtitle></subtitle>
+                <track>Anwendung</track>
+                <type>Workshop (2,8h)</type>
+                <language>de</language>
+                <abstract>In diesem Workshop lernen vim-Novizen alles, um effizient mit dem de-facto Standard-Unix Editor umzugehen. Der Fokus liegt darauf, beim Bearbeiten von Texten und Konfigurationsdateien nur wenige Tastendr&#252;cke zu ben&#246;tigen. Anf&#228;nger lernen hier die Philosophie des Editors kennen und k&#246;nnen diese hinterher selbst anwenden.</abstract>
+                <description>Der vim Editor (und seine Verwandten) ist zwar im Unix-Umfeld umnipr&#228;sent, gleichzeitig scheuen sich viele Anwender, diesen einzusetzen. Gerade f&#252;r Neulinge scheint dieser Editor ein Buch mit sieben Siegeln zu sein und gilt oft als benutzerunfreundlich. Das muss aber nicht so sein.
+
+In diesem praktischen Workshop lernen wir die Grundlagen des Editors kennen und welche tolle Features dort bereits eingebaut sind. Anf&#228;nger lernen die Philosophie von vim kennen und wir werden nach kurzer Zeit schon sehr effizient und mit wenig Aufwand allt&#228;gliche Aufgaben erledigen.
+Hier ein kleiner Vorgeschmack:
+* Zahlen &#228;ndern ohne in den INSERT-Modus zu wechseln
+* Autovervollst&#228;ndigung von W&#246;rtern, Zeilen, und Pfaden im Dateisystem
+* Autokorrektur von h&#228;ufigen Tippfehlern
+* Inhalte des Editors durch die Shell filtern
+* Eingabesequenzen mit Makros automatisieren
+* die Aktion-Bereich-Objekt Notation effektiv einsetzen
+
+Hinterher f&#252;hlen wir uns bestimmt wie Tastatur-Ninjas, weil wir mit wenig Tastendr&#252;cken viel Arbeit erledigen k&#246;nnen. Vielleicht wird vim dadurch doch der Lieblingseditor und Standard-Textbearbeitung geht uns viel einfacher von der Hand.
+
+Hinweis: wir betrachten den Editor in seiner Grundkonfiguration und gehen nicht auf Plugins ein.</description>
+                <logo></logo>
+                <persons>
+                    <person id='169'>Benedict Reuschling</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            
+        </room>
+        <room name='HS i12'>
+            <event guid='199edd17-d5e5-5ae2-ac51-5709b17d4cd5' id='451'>
+                <date>2024-04-05T13:00:00+02:00</date>
+                <start>13:00</start>
+                <duration>03:40</duration>
+                <room>HS i12</room>
+                <slug>glt24-451-ctf-101-introduction-to-capture-the-flag-challenges</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/USFBSQ/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>CTF 101: Introduction to Capture the Flag Challenges</title>
+                <subtitle></subtitle>
+                <track>Sicherheit</track>
+                <type>Workshop (3,5h)</type>
+                <language>de</language>
+                <abstract>In diesem Workshop zeigen Mitgleider des CTF Teams LosFuzzys einen kleinen Einblick in das L&#246;sen von CTF Challenges.
+Wir erkl&#228;ren was CTF Challenges sind, welche Arten von Challenges es gibt und warum CTFs eine gro&#223;artige Art sind, um in der Welt der Information Security Fu&#223; zu fassen.
+
+Im Anschluss haben die Teilnehmer die M&#246;glichkeit selbst CTF Challenges zu l&#246;sen, dabei stehen ihnen Mitglieder von LosFuzzys helfend zur Seite.</abstract>
+                <description></description>
+                <logo>/media/glt24/submissions/USFBSQ/logo_losfuzzys_150_zC99vNI.png</logo>
+                <persons>
+                    <person id='296'>Markus Ostermayer</person><person id='156'>Kevin Saiger</person><person id='328'>Marcell Haritopoulus</person><person id='247'>Hannes Weissteiner</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            
+        </room>
+        <room name='HS i13'>
+            <event guid='97630ac9-6daf-551c-aa9c-de5cf1d938d5' id='432'>
+                <date>2024-04-05T13:00:00+02:00</date>
+                <start>13:00</start>
+                <duration>01:50</duration>
+                <room>HS i13</room>
+                <slug>glt24-432-josm-workshop</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/BWMP93/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>JOSM Workshop</title>
+                <subtitle></subtitle>
+                <track>Anwendung</track>
+                <type>Workshop (2h)</type>
+                <language>de</language>
+                <abstract>Die ersten Schritte in der OpenStreetMap sind oft leicht gemacht: Webbasierte Editoren wie Id machen es leicht, ein Gesch&#228;ft oder einen neuer Weg einzuzeichnen.
+Doch die ersten H&#252;rden sind nicht weit: Etwa ein Kreisverkehr, &#252;ber den Busrelationen verlaufen, oder eine gro&#223;e Waldfl&#228;che, die als Multipolygon abgebildet ist.
+Hier empfiehlt sich JOSM als Editor und um gemeinsam mit Euch die ersten Schritte zu machen, halte ich diesen Workshop. Ich will diesen Workshop dabei als Beitrag verstehen, die Beteiligung an OpenStreetMap in Form von Craftmapping zu kultivieren, dabei aber auch auf sinnvolle, verf&#252;gbare Quellen eingehen.</abstract>
+                <description>Der Workshop hat ein altbew&#228;hrtes Format, geht aber auf aktuelle Themen ein:
+
+ * Kurze Einf&#252;hrung in das OpenStreetMap-Datenmodell inklusive Ausblick auf die beabsichtigten &#196;nderungen
+ * Kurzer &#220;berblick &#252;ber das Dokumentations- und Hilfsmaterial im OpenStreetMap-Wiki
+ * Craftmapping vs. Automatisierte Editierungen
+ * Umgang mit bereits bestehenden Relationen
+ * Die wichtigsten Datenquellen in &#214;sterreich, welche zur Benutzung in OpenStreetMap freigegeben sind</description>
+                <logo></logo>
+                <persons>
+                    <person id='66'>Stefan Tiran</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='a5fc4bc7-2891-5c84-b6cd-54d351898bd1' id='426'>
+                <date>2024-04-05T15:00:00+02:00</date>
+                <start>15:00</start>
+                <duration>01:50</duration>
+                <room>HS i13</room>
+                <slug>glt24-426-onlineumfragetool-limesurvey-installations-und-admin-workshop</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/CN7ZRW/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>Onlineumfragetool Limesurvey: Installations- und Admin-Workshop</title>
+                <subtitle></subtitle>
+                <track>Admin</track>
+                <type>Workshop (2h)</type>
+                <language>de</language>
+                <abstract>Bei Onlineumfrage kommt es gleicherma&#223;en auf drei Dinge an: Den INHALT, die VERPACKUNG und bei wem alle Rohdaten und Metadaten aus einer Online Umfrage zur Auswertung landen.
+
+Im Workshop wird exemplarisch und life Limesurvey mit Hilfe des im Programm eingebetten Installationsautomatismus zum Leben erweckt und auch gleich aktiv bespielt.</abstract>
+                <description>Nach erfolgter Installation gehts weiter mit praxisbezogenen Anwendungen wie 
+* das &#220;bertrag einer bestehenden Umfrage
+* Eingeben von Fragen samt ***sinnvollen*** Antwortoptionen
+  **==&gt; Hinweis**: Darauf geht ein Vortrag am Samstag vertieft ein.
+* Verkn&#252;pfungen von Bedingungen f&#252;r Fragen
+* Sicherung von Umfragen und Daten
+* Auswertung und Weiterverarbeitung der Rohdaten und nicht zuletzt
+* die Administration von Berechtigungen 
+
+
+
+**T I P P** : 
+F&#252;r Workshop Partizipierende mit eigenem (dynamischen) Webspace besteht die M&#246;glichkeit, das Limesurvey Programm bereits vorab zu installieren, um am Workshop-Tag Admin-Einstellungen und erste Fragen f&#252;r sich selbst schon anwenden zu k&#246;nnen. Dazu wird folgender Weblink angeboten.
+
+https://meisterreischl.eu/GLT24-limesurvey/ 
+wird sp&#228;testens eine Woche vor dem GLT24 (05. und 06. April 2024) 
+als Link zum Herunterladen der betreffenden Version zu finden sein. 
+
+Auf diese Weise kann in Vorbereitung auf den Workshop-Tag mit den eigenen Admin-Einstellungen und Umfragen herum gespielt werden.</description>
+                <logo></logo>
+                <persons>
+                    <person id='348'>MeisterReischl</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='10efaf63-0148-58bb-9e75-8f159e972d51' id='413'>
+                <date>2024-04-05T17:00:00+02:00</date>
+                <start>17:00</start>
+                <duration>01:00</duration>
+                <room>HS i13</room>
+                <slug>glt24-413-anwendung-von-fido2</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/3TMFSM/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>Anwendung von FIDO2</title>
+                <subtitle></subtitle>
+                <track>Anwendung</track>
+                <type>Workshop (2h)</type>
+                <language>de</language>
+                <abstract>In diesem Workshop soll die Anwendung/Verwendung von FIDO2-Tokens beispielhaft erl&#228;utert und gezeigt werden. Insbesondere soll auf die Verwendung von FIDO2 mit der ID-Austria eingegangen werden. Der Workshop richtet sich speziell an die Bed&#252;rfnisse von Technik-Neulingen.</abstract>
+                <description></description>
+                <logo></logo>
+                <persons>
+                    <person id='14'>J&#252;rgen Bruckner</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            
+        </room>
+        <room name='Seminarraum ISW'>
+            <event guid='580188ef-267e-519e-9e9c-f19b953def01' id='483'>
+                <date>2024-04-05T14:30:00+02:00</date>
+                <start>14:30</start>
+                <duration>02:30</duration>
+                <room>Seminarraum ISW</room>
+                <slug>glt24-483-lpi-prfung</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/SJCYSQ/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>LPI Pr&#252;fung</title>
+                <subtitle></subtitle>
+                <track>Prüfung</track>
+                <type>Pr&#252;fung</type>
+                <language>de</language>
+                <abstract>LPI Exams</abstract>
+                <description>Erm&#228;&#223;igte Pr&#252;fungen!
+Die Pr&#252;fungen werden mit einem Community-Rabatt angeboten und kosten 85 EUR jede Essentials Pr&#252;fung und 140 EUR jede Professional Pr&#252;fung.
+
+Kandidaten k&#246;nnen die Pr&#252;fungen Linux Essentials, Security Essentials, Web Development Essentials, LPIC-1 und LPIC-2 auf Englisch und Deutsch ablegen. Open Source Essentials, LPIC-3, DevOps Tools Engineer und BSD Specialist sind nur auf Englisch verf&#252;gbar.
+
+Daher bitten wir Kandidaten, sich f&#252;r die Veranstaltung zu registrieren unter: https://www.lpi.org/exam-registration/.
+
+Kurzentschlossene sind ebenfalls herzlich willkommen!
+
+So nehmen Sie an den Pr&#252;fungssitzungen teil
+Die Kandidaten m&#252;ssen 15 Minuten vor Pr&#252;fungsbeginn im Pr&#252;fungsraum sein und einen amtlichen Lichtbildausweis (Reisepass, Personalausweis oder F&#252;hrerschein), ihren LPI-Ausweis und die Pr&#252;fungsgeb&#252;hr in bar mitbringen.</description>
+                <logo></logo>
+                <persons>
+                    <person id='317'>LPI</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            
+        </room>
+        
+    </day>
+    <day index='2' date='2024-04-06' start='2024-04-06T04:00:00+02:00' end='2024-04-07T03:59:00+02:00'>
+        <room name='HS i1'>
+            <event guid='cf9d0af9-a439-5c10-9005-107e5aac045b' id='409'>
+                <date>2024-04-06T10:00:00+02:00</date>
+                <start>10:00</start>
+                <duration>00:45</duration>
+                <room>HS i1</room>
+                <slug>glt24-409-erfolgreiche-zusammenarbeit-von-linux-distributionen</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/KYDAVN/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Erfolgreiche Zusammenarbeit von Linux-Distributionen</title>
+                <subtitle></subtitle>
+                <track>Community</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>openSUSE, Fedora und Debian haben sich als Linux Distributions Working Group beim Open Mainframe Project mit einer IBM-Vertreterin zusammen geschlossen mit dem Ziel, dass man die Pflege der jeweiligen Mainframe (s390x) Ports gemeinsam macht und alle Linux-Distributionen am Ende die entsprechenden Patches und Erweiterungen integrieren k&#246;nnen. Anfangs wurde diese Idee von au&#223;en etwas erstaunt betrachtet, aber auf Community-Level sind wir eine &quot;internationale&quot; Linux-Community bestehend aus unterschiedlichen Linux-Distributionen. In der Zwischenzeit haben sich auch SUSE, Canonical (Ubuntu), AlmaLinux und Rocky Linux angeschlossen. Genauso ist man dazu &#252;bergegangen die Toolings f&#252;r automatische Tests mit openQA gemeinsam zu entwickeln.
+In diesem Vortrag werden die Vorteile gemeinsamer Zusammenarbeit bei Linux-Distributionen mit unterschiedlichen Communities dargestellt und am Beispiel der Linux Distributions Working Group aufgezeigt, wie man gemeinsam entwickeln kann, so dass alle am Ende einen Vorteil haben.</abstract>
+                <description></description>
+                <logo>/media/glt24/submissions/KYDAVN/LinuxDistributionsWorkingGroup_SCk6cab.png</logo>
+                <persons>
+                    <person id='341'>Sarah Julia Kriesch</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='b98b033c-9a20-5c6b-8e4c-51ac01a71b13' id='467'>
+                <date>2024-04-06T11:00:00+02:00</date>
+                <start>11:00</start>
+                <duration>00:25</duration>
+                <room>HS i1</room>
+                <slug>glt24-467--sponsor-vusiongroup-talk</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/AZR3WG/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>[SPONSOR] VusionGroup Talk</title>
+                <subtitle></subtitle>
+                <track>Hardware</track>
+                <type>Vortrag</type>
+                <language>en</language>
+                <abstract>VusionGroup alias SES-Imagotag is one of the technology leaders for electronic shelf labels (ESL). In 2020, the decision was made to innovate ESL technology by using open standards such as Bluetooth. Already at the starting point it was not clear how one BLE-controller would be apply to drive 7k of end devices in an effective and high responsive way. The goal was achieved after 3 years of development work and changes were pushed to Bluetooth V5.4 Core specification and ESL profile release.  A rough overview of how Bluetooth SIG works, how multi-device support found its way into the Bluetooth Core Spec, the technical aspects and finally why BLE chip vendors were forced with a completely new situation for their chips and why this forms a base for full IOT environments.</abstract>
+                <description></description>
+                <logo>/media/glt24/submissions/AZR3WG/vusion_kTaWukb.jpg</logo>
+                <persons>
+                    <person id='359'>Horst Kautschitz</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='c630108b-616a-5885-be89-e49e3aa11d21' id='476'>
+                <date>2024-04-06T11:35:00+02:00</date>
+                <start>11:35</start>
+                <duration>00:25</duration>
+                <room>HS i1</room>
+                <slug>glt24-476-embedded-linux-security-the-good-the-bad-and-the-ugly</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/N8FX7N/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Embedded Linux Security: The Good, the Bad and the Ugly</title>
+                <subtitle></subtitle>
+                <track>Sicherheit</track>
+                <type>Vortrag</type>
+                <language>en</language>
+                <abstract>Linux-based embedded systems are not uncommon these days, but they still have some rough edges, especially in terms of security.
+In this talk, Richard will outline common problems he encounters when working with customers on embedded systems.
+The goal is to make you aware of these critical pitfalls you should definitely avoid in your next project.</abstract>
+                <description></description>
+                <logo></logo>
+                <persons>
+                    <person id='201'>Richard Weinberger</person><person id='376'>David Gstir</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='32a2b5f2-9282-528b-bf67-971f79594fab' id='411'>
+                <date>2024-04-06T12:10:00+02:00</date>
+                <start>12:10</start>
+                <duration>00:45</duration>
+                <room>HS i1</room>
+                <slug>glt24-411-lightning-talks</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/HT9MKN/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Lightning Talks</title>
+                <subtitle></subtitle>
+                <track>Community</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>Kurzvortr&#228;ge (max. 5 min) zu verschiedenen Themen.
+
+Quick talks (max. 5 min) about different topics.</abstract>
+                <description>- Wenn Du einen Lightning Talk halten m&#246;chtest, dann melde Dich bitte via Email an lightning@linuxtage.at
+- Um in der vorhandenen Zeit m&#246;glichst viele Talks durchf&#252;hren zu k&#246;nnen, bitten wir Dich, Deine Folien (bzw. einen Download-Link) an die gleiche Email-Adresse zu senden.
+- Das Zeitlimit pro Vortrag wird 5 Minuten sein.
+- Deine Slides m&#252;ssen auf einem Standard Ubuntu Laptop &quot;abspielbar&quot; sein:
+  - D.h. am besten ein PDF
+  - oder als ZIP mit Bildern bzw. Videos (als Slideshow)
+  - oder in Libreoffice
+- F&#252;r die Reihenfolge der Vortr&#228;ge gilt:
+  - die Reihenfolge des Email-Einganges (first come, first serve)
+  - Erst danach spontane Talks aus dem Publikum, bzw. Talks mit eigenem Laptop.
+
+--
+
+- If you want to do a lightning talk, then please contact us on the email address lightning@linuxtage.at
+- In order to perform as many talks as possible, we kindly ask you to provide your slides (or a download link) to the same email address.
+- The time limit for each talk is 5 minutes.
+- Your slides must be &quot;playable&quot; on a standard Ubuntu laptop
+  - best would be a PDF
+  - or a ZIP containing images and videos (slideshow)
+  - or via libreoffice
+- The sequence of talks is determined as follows:
+  - the sequence of the incoming emails (first come, first serve)
+  - then people from the audience may do spontaneous talks, optionally using the own laptop.</description>
+                <logo></logo>
+                <persons>
+                    <person id='12'>Bernhard &quot;Slash&quot; Trummer</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='79670551-ac62-5eae-acb0-62664ea5f292' id='479'>
+                <date>2024-04-06T12:25:00+02:00</date>
+                <start>12:25</start>
+                <duration>00:05</duration>
+                <room>HS i1</room>
+                <slug>glt24-479-securely-access-your-home-server-from-anywhere</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/ULPNCG/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Securely access your home server from anywhere</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lightning Talk</type>
+                <language>en</language>
+                <abstract>In this talk, we&apos;ll explore how you can securely access your home server or homelab from anywhere using a managed Wireguard VPN (Virtual Private Network).
+
+With Headscale, an open source, self-hosted implementation of the Tailscale control server, we can forward traffic from a cheap, rented VPS (Virtual Private Server) to devices in our home network added to our tailnet.
+
+This way you don&apos;t have to open any ports on your devices at home towards the world wide web to be able to access services running on them. Thereby you mitigate a lot of the risks coming with a publicly accessible server.</abstract>
+                <description>In this talk, we&apos;ll explore how you can securely access your home server or homelab from anywhere using a managed Wireguard VPN (Virtual Private Network).
+
+With Headscale, an open source, self-hosted implementation of the Tailscale control server, we can forward traffic from a cheap, rented VPS (Virtual Private Server) to devices in our home network added to our tailnet.
+
+This way you don&apos;t have to open any ports on your devices at home towards the world wide web to be able to access services running on them. Thereby you mitigate a lot of the risks coming with a publicly accessible server.</description>
+                <logo></logo>
+                <persons>
+                    <person id='195'>Matthias Thym</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='f2491cb9-8436-5f54-96b6-e35de058373e' id='449'>
+                <date>2024-04-06T12:30:00+02:00</date>
+                <start>12:30</start>
+                <duration>00:05</duration>
+                <room>HS i1</room>
+                <slug>glt24-449-mutual-external-monitoring-w-uptime-kuma</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/SEVDTS/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Mutual External Monitoring w/ uptime/kuma</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Lightning Talk</type>
+                <language>de</language>
+                <abstract>In Zusammenarbeit mit unserem Schwesterverein aus dem Netzkunst- / nicht-kommerziellen OpenSource-Webhosting-Bereich stellen wir, [mur.at][mur1] und [servus.at][servus1], uns gegenseitig ein externes Monitoring zu Verf&#252;gung.
+Wir betreiben, im jeweils anderen Rechenzentrum eine Serviceinstanz des freien OpenSource-Monitoringwerkzeugs [Uptime Kuma][uk1] in einem angepassten Docker-Stack inkl SSH-Zugang.
+
+[uk1]: https://github.com/louislam/uptime-kuma/ 
+[mur1]: https://mur.at
+[servus1]: https://servus.at</abstract>
+                <description>In Zusammenarbeit mit unserem Schwesterverein aus dem Netzkunst- / nicht-kommerziellen OpenSource-Webhosting-Bereich betreiben wir, [mur.at][mur1] und [servus.at][servus1], im jeweils anderen Rechenzentrum eine Serviceinstanz des freien OpenSource-Monitoringwerkzeugs [Uptime Kuma][uk1] in einer [Docker][docker1]-Umgebung.
+
+Um die Instanz maximal unabh&#228;ngig von unseren Kollegen administrieren zu k&#246;nnen, kombinieren wir `sshd` mit `uptime/kuma` in einem mittels `docker-compose` konfigurierten Docker-Stack.  
+Das erm&#246;glicht uns, die komplette Datenbank via `scp` auszutauschen,  
+i.e. in einer lokalen Instanz die Konfiguration zu verwalten und die aktuellste Version in die Produktions-Instanz einzuspielen.
+Um das Neustarten von Docker-Stacks den User:innen selbst zu erm&#246;glichen, verwenden wir bei [mur.at][mur1] das Docker-Managementwerkzeug [Portainer][port1]
+
+Links:
+
+https://github.com/louislam/uptime-kuma/  
+https://www.portainer.io/
+https://status.mur.at  
+https://status.servus.at  
+
+[uk1]: https://github.com/louislam/uptime-kuma/ 
+[mur1]: https://mur.at
+[servus1]: https://servus.at
+[docker1]: https://www.docker.com/
+[port1]: https://www.portainer.io/</description>
+                <logo>/media/glt24/submissions/SEVDTS/Screenshot_20240112_170554_qCf99M8.png</logo>
+                <persons>
+                    <person id='268'>Ralph Wozelka</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='c11a9003-e76f-5891-9680-bbe5d248d716' id='443'>
+                <date>2024-04-06T13:05:00+02:00</date>
+                <start>13:05</start>
+                <duration>00:25</duration>
+                <room>HS i1</room>
+                <slug>glt24-443-freie-basis-software-fr-unternehmen-ohne-cloud</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/CYEDMA/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Freie Basis-Software f&#252;r Unternehmen ohne Cloud</title>
+                <subtitle></subtitle>
+                <track>Admin</track>
+                <type>Vortrag</type>
+                <language>de</language>
+                <abstract>F&#252;r neugegr&#252;ndete und kleinere Unternehmen ist die Nutzung von Cloud-Software f&#252;r Abl&#228;ufe wie internen Kommunikation, Dokumentenverwaltung, CRM, Projektmanagement oder Zeiterfassung. Das hat etliche Vorteile, f&#252;hrt aber zu Einschr&#228;nkungen bei Vertraulichkeit und mit laufenden Wachstum zu oft &#252;berraschend hohen Kosten. Dieser Vortrag stelle einige Alternativen mit freier Software vor, die sich auch in der eigenen IT-Infrastruktur betreiben lassen. Besuchende sollten damit reflektieren k&#246;nnen, welche davon in ihrem Unternehmen sinnvoll und wirtschaftlich sein k&#246;nnten.</abstract>
+                <description>Gerade f&#252;r kleine oder neu gegr&#252;ndete Unternehmen ist es auf den ersten Blick attraktiv, auf Cloud-L&#246;sungen zur&#252;ck zu greifen. Zum Beispiel Slack oder Discord f&#252;r die Kommunikation, Google Docs oder Office 365 f&#252;r Dokumente, Salesforces oder Hubspot f&#252;r das CRM, Projektmanagement mit Trello oder Notion, und dann noch eine der zahlreichen Zeiterfassungsl&#246;sungen. Jedes der Teile kostet ein paar Euro pro Monat oder ist f&#252;r kleine Teams gar gratis, und die Wartung der Infrastruktur macht der Hersteller. Klar, die eigenen Daten geistern irgendwo in der Welt herum und werden f&#252;r Analysen und zum Trainieren von k&#252;nstlichen Intelligenzen genutzt. Aber das ist heute sowie normal, oder?
+
+Schwierig werden kann das f&#252;r Branchen, wo Kunden erwarten, dass alle Daten im Unternehmen vor Ort liegen. Auch wenn das Unternehmen w&#228;chst, kann es preislich ein b&#246;ses Erwachen geben. Die Gratis-Software will auf einmal Geld, wenn mehr als 10 Projekte darin abgebildet sein sollen. 10 Euro pro Monate und Benutzenden erscheinen mit 3 Personen &#252;berschaubar, bei 20 Leuten sind das schon 2400 Euro im Jahr. Und das nur f&#252;r nur 1 Produkt.
+
+Welche Alternativen gibt es hier mit freier Software, die ich selbst hosten kann? Oft sind auch diese nur teilweise gratis, welchen m&#246;glicherweisen wichtigen Eigenschaften gibt es erst gegen Bezahlung? Ist die Benutzbarkeit ertr&#228;glich oder ist das Teil nur f&#252;r Masochisten geeignet? Wie viel Infrastruktur brauche ich in etwa f&#252;r ein Hosting? Wie hoch ist der Aufwand f&#252;r die Installation und das Teil aktuell und am Leben zu erhalten?
+
+Die Antwort auf diese Fragen sehen wir uns f&#252;r einige der g&#228;ngigsten Alternativen zu Cloud-Software f&#252;r Unternehmen an.
+
+An Ende sollen neugegr&#252;ndete Unternehmen bewerten k&#246;nnen, welche der vorgestellten L&#246;sungen f&#252;r sie fr&#252;h Sinn machen k&#246;nnen, und wo der Einrichtungs- und Wartungsaufwand auf Sicht zu viele Kapazit&#228;ten der ressourcenknappen Gr&#252;ndungsphase bindet. Bestehende Unternehmen sollen reflektieren k&#246;nnen, f&#252;r welche ihrer vorhandenen Anwendungen aus einer Kostenbetrachtung eine Migration vor allem wirtschaflich n&#252;tzlich sein kann.</description>
+                <logo></logo>
+                <persons>
+                    <person id='68'>Thomas Aglassinger</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='a212813a-1476-5f32-9944-70641f2ffb87' id='470'>
+                <date>2024-04-06T14:00:00+02:00</date>
+                <start>14:00</start>
+                <duration>00:45</duration>
+                <room>HS i1</room>
+                <slug>glt24-470-was-ich-immer-schon-ber-photovoltaik-wrmepumpen-und-heimautomation-wissen-wollte</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/3TJ3MH/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Was ich immer schon &#252;ber Photovoltaik, W&#228;rmepumpen und Heimautomation wissen wollte</title>
+                <subtitle></subtitle>
+                <track>Hardware</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>Mein &#252;ber 100 Jahre altes Haus hat seit einem Jahr eine W&#228;rmepumpenheizung, und seit einigen Monaten eine Photovoltaikanlage. Was bedeutet das f&#252;r&apos;s Wohnen, f&#252;r&apos;s Klima, und f&#252;r das Energiebudget? Wie verkn&#252;pft man das alles in einer Home Assistant-Installation auf einem Raspberry Pi? Und wie navigiert man sich durch den &#246;sterreichischen Beh&#246;rden-, Energieversorger-, und F&#246;rderdschungel? Dieser Vortrag gibt Antworten.</abstract>
+                <description>F&#252;r diesen Vortrag sind keine besonderen Vorkenntnisse im Bereich Heimautomation oder Energietechnik erforderlich. Ich erkl&#228;re unter anderem:
+
+* Was ist eine W&#228;rmepumpe? Was ist eine Photovoltaik- (PV-) Anlage?
+* Wie wirkt sich der Einbau einer W&#228;rmepumpe und einer PV-Anlage auf einen Altbau aus?
+* Wie kann ich den Energieverbrauch in meinem Haus messen und steuern?
+* Wie kann ich das alles mittels Home Assistant zusammenf&#252;hren?
+* Wie betreibe ich Home Assistant (und ein paar andere Dienste, wie Mosquitto und Grott) mit Podman und systemd auf einem Ubuntu-Raspberry&#160;Pi?
+* Welche Erfahrungen macht man unterwegs?</description>
+                <logo></logo>
+                <persons>
+                    <person id='360'>Florian Haas</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='715dc51a-f240-52c7-bdbf-294dd459aa90' id='454'>
+                <date>2024-04-06T15:00:00+02:00</date>
+                <start>15:00</start>
+                <duration>00:45</duration>
+                <room>HS i1</room>
+                <slug>glt24-454-container-management-leicht-gemacht</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/UTAQS9/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Container-Management leicht gemacht</title>
+                <subtitle></subtitle>
+                <track>Admin</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>An Containern f&#252;hrt leider (fast) kein Weg mehr vorbei. Das Problem mit Kubernetes zu erschlagen ist allerdings f&#252;r viele Overkill bzw nicht stemmbar.
+Dieser Vortrag zeigt einen Zwischenweg um Container in existierende Systemlandschaften zu integrieren ohne alles bisher &#252;ber System-Management gelernte &#252;ber den Haufen zu schmei&#223;en.</abstract>
+                <description>Sp&#228;testens seit Kubernetes sind Container &quot;in&quot; und entwickeln sich immer mehr zu einem Paketformat f&#252;r Software. Im schlimmsten Fall gibt es Software &#252;berhaupt nur mehr als Container.
+Was also tun wenn man solch eine Software verwenden muss/will und sich nicht einen Rattenschwanz an Tooling eintreten will? Mit Podman gibt es hierf&#252;r seit ein paar Jahren eine L&#246;sung 
+die sich gut mit Systemd verheiraten l&#228;sst und mit der sich Container quasi wie native Services anf&#252;hlen. Wie sich das m&#246;glichst einfach bewerkstelligen l&#228;sst wird im Laufe des Vortrages
+pr&#228;sentiert werden.
+
+Der Vortrag setzt keine speziellen Vorkenntnisse voraus und es sollte f&#252;r alle die irgendwo Software warten etwas dabei sein (sei das nun auf einem Raspberry PI, sonstigen Home-Servern oder einer Serverfarm).</description>
+                <logo></logo>
+                <persons>
+                    <person id='355'>Florian Apolloner</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='a8a432dc-5438-5c53-856d-85e45157907f' id='438'>
+                <date>2024-04-06T16:00:00+02:00</date>
+                <start>16:00</start>
+                <duration>00:45</duration>
+                <room>HS i1</room>
+                <slug>glt24-438-skyfield-elegante-astronomie-fr-python</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/XLW3EZ/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Skyfield - Elegante Astronomie f&#252;r Python</title>
+                <subtitle></subtitle>
+                <track>Entwicklung</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>Manchmal kann es f&#252;r Python-Entwickler erforderlich sein, die Position
+astronomischer Objekte, wie z.B. von Sonne und Mond, und die
+entsprechenden Auf- und Untergangszeiten zu berechnen.
+
+F&#252;r Python gibt es diverse astronomische Bibliotheken f&#252;r
+unterschiedliche Anwendungen. Gro&#223;er Beliebtheit erfreute und erfreut
+sich *PyEphem* (siehe [GLT2016](https://glt.foehnwall.at/glt16.html#pyephem-sonne-mond-und-sterne-in-python)), welches einen Python-Wrapper f&#252;r eine inzwischen in
+die Jahre gekommen C-Bibliothek darstellt und f&#252;r die Entwickler entsprechend umst&#228;ndlich
+zu warten ist.
+
+Vom Betreuer dieses Projektes, Brandon Rhodes, wurde mit **Skyfield** eine vollst&#228;ndige
+Neuentwicklung unternommen.  Skyfield ist in **reinem Python**
+geschrieben und hat als einzige bin&#228;re Abh&#228;ngigkeit **NumPy**, die
+bekannte numerische Bibliothek f&#252;r wissenschaftliches Rechnen, welche
+mit schnellen Vektoroperationen die Effizienz von Skyfield
+garantiert. Der Anspruch von Skyfield ist es, sich den vom *United
+States Naval Observatory* im *Astronomical Almanac* publizierten
+Werten mit einer Genauigkeit von 0.5 Tausendstel(!) Bogensekunden
+anzun&#228;hern.
+
+Der Vortrag bringt zun&#228;chst einige f&#252;r das Verst&#228;ndnis wichtige
+Vorbemerkungen zu Koordinaten- und Zeitsystemen. Anschlie&#223;end erfolgt
+eine Einf&#252;hrung in die Grundkonzepte von Skyfield mit beispeilhafter
+Berechnung einfacher astronomischer Alltagsprobleme. Vorausgesetzt
+wird von den Zuh&#246;ren elementare Erfahrung mit Python.</abstract>
+                <description></description>
+                <logo></logo>
+                <persons>
+                    <person id='55'>Dietmar Thaler</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='a93efe60-e89d-5b63-8b0e-9a57519813a5' id='459'>
+                <date>2024-04-06T17:00:00+02:00</date>
+                <start>17:00</start>
+                <duration>00:25</duration>
+                <room>HS i1</room>
+                <slug>glt24-459-metriken-fr-alle-mit-prometheus-und-grafana</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/HCXKUZ/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Metriken f&#252;r alle - mit Prometheus und Grafana</title>
+                <subtitle></subtitle>
+                <track>Entwicklung</track>
+                <type>Vortrag</type>
+                <language>de</language>
+                <abstract>_Business_ will Daten und h&#252;bsche Diagramme &#252;ber die Applikation sehen und du hast keine Lust, Tage damit zu verschwenden? Dann bist du hier richtig. Dieser Vortrag zeigt, wie du RaspberryPi Pico und Linux Server gleicherma&#223;en mit Hilfe von Prometheus &#252;berwachen kannst - und Diagramme in Grafana anzeigst.</abstract>
+                <description>Traditionelle Monitoring-System, wie Nagios, Zabbix und andere, sind schon lange am Markt und bringen viele Features mit. Diese Tools zu konfigurieren ist leider nicht immer trivial und bringt vor allem auch f&#252;r Einsteiger einige H&#252;rden mit sich.
+
+Prometheus hingegen definiert ein einfaches HTTP-basiertes Protokoll und besinnt sich auf das Wesentliche - Metriken von verschiedenen System zu sammeln, zu speichern und mittels der eigenen Abfragesprache _PromQL_ zur Abfrage bereitzustellen. Auf Applikations-Seite gen&#252;gt nun meist das Einbinden einer Library, um Standard Metriken f&#252;r Prometheus bereitzustellen.
+
+Der Vortrag zeigt, wie man auf einem RaspberryPi Pico Metriken nur mit einem Standard Webserver exportiert. In einem zweiten Schritt konfigurieren wir dann auf einer klassischen Linux VM einen Standard Node Exporter. Die Metriken beider Systeme zeigen wir dann in auf einem h&#252;bschen Dashboard in Grafana an. Und so einfach haben wir unsere _Business Owners_ gl&#252;cklich gemacht.</description>
+                <logo></logo>
+                <persons>
+                    <person id='357'>Nicolas Angelo</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='5b2fda63-0bc2-5100-96c8-dfb5b6838958' id='461'>
+                <date>2024-04-06T17:30:00+02:00</date>
+                <start>17:30</start>
+                <duration>00:25</duration>
+                <room>HS i1</room>
+                <slug>glt24-461-your-web-app-is-taking-up-too-much-ram-let-s-fix-it-using-foss-tools-</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/BFWYDZ/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Your web app is taking up too much RAM. Let&apos;s fix it using FOSS tools!</title>
+                <subtitle></subtitle>
+                <track>Entwicklung</track>
+                <type>Vortrag</type>
+                <language>en</language>
+                <abstract>We&apos;ve all seen the memes about Google Chrome devouring all the available RAM on your notebook. Is that only due to how the browser works or is it also our fault as web apps developers? In fact, modern JS apps are becoming increasingly complicated, so their compute and memory requirements are rising as well, with some famous websites even taking up entire gigabytes of memory. This does not only fill up the memory of your users devices, but can also cause crashes and performance drops. How do we monitor if that&apos;s the case, and how can we fix it? This talk will shed some light on the dark art of memory allocations and profiling, showing how some data structures and some JS frameworks are less efficient than others. Also, what are some FOSS tools that are available to measure it, such as the Chrome Memory Profiler and MemLab, showcasing some custom tooling I&apos;ve built around those two.</abstract>
+                <description></description>
+                <logo></logo>
+                <persons>
+                    <person id='237'>Giulio Zausa</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            
+        </room>
+        <room name='HS i2'>
+            <event guid='c68c0959-0696-5fa2-ae68-dc40ae2cf786' id='484'>
+                <date>2024-04-06T10:00:00+02:00</date>
+                <start>10:00</start>
+                <duration>00:45</duration>
+                <room>HS i2</room>
+                <slug>glt24-484-open-doors-open-source-der-weg-zum-smart-home-fr-alle</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/3MYSWM/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Open Doors, Open Source: Der Weg zum Smart Home f&#252;r Alle</title>
+                <subtitle></subtitle>
+                <track>Hardware</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>Entdecken Sie die Zukunft des Wohnens mit Open-Source Heimautomatisierungs-Systemen! In diesem Vortrag pr&#228;sentiert Fridolin Einb&#246;ck eine fesselnde Reise durch die Evolution der Heimautomatisierung. Erfahren Sie, wie offene Softwarel&#246;sungen eine kosteng&#252;nstige und flexible Alternative f&#252;r Smart-Home-Systeme bieten. Von der Einf&#252;hrung in die Grundlagen bis hin zu praktischen Anwendungsbeispielen zeigt dieser Vortrag, wie Open-Source-Technologien die Heimautomatisierung neu definieren und f&#252;r jedermann zug&#228;nglich machen.</abstract>
+                <description>Dieser praxisorientierte Vortrag bietet einen umfassenden Einblick in die Implementierung von Smart-Home-L&#246;sungen unter Verwendung von Open-Source-Technologien. Unter der Anleitung von Fridolin Einb&#246;ck, werden die Teilnehmer durch einen Schritt-f&#252;r-Schritt-Prozess gef&#252;hrt, der es ihnen erm&#246;glicht, ihre eigenen Smart-Home-Systeme zu planen, zu entwickeln und umzusetzen.
+
+Der Vortrag beginnt mit einer Einf&#252;hrung in die Grundlagen der Heimautomatisierung und einer Diskussion &#252;ber die Vorteile und Herausforderungen von Open-Source-L&#246;sungen in diesem Bereich. Anschlie&#223;end werden verschiedene Open-Source-Plattformen, Frameworks und Tools vorgestellt, die f&#252;r die Umsetzung von Smart-Home-Projekten geeignet sind, sowie bew&#228;hrte Praktiken f&#252;r ihre Integration und Nutzung.
+
+Ein zentraler Bestandteil des Vortrags sind praktische Demonstrationen und Fallstudien, die den Teilnehmern helfen, die Konzepte und Techniken in der Praxis zu verstehen und anzuwenden. Von der Auswahl der richtigen Hardwarekomponenten &#252;ber die Konfiguration von Softwarel&#246;sungen bis hin zur Integration von Sensoren und Aktoren - dieser Vortrag bietet alles, was ben&#246;tigt wird, um erfolgreich ein eigenes Smart-Home-System aufzubauen.
+
+Das Ziel des Vortrags ist es, den Teilnehmern das notwendige Wissen und die praktischen F&#228;higkeiten zu vermitteln, um selbstbewusst und kompetent ihre eigenen Smart-Home-Projekte umzusetzen. Durch die F&#246;rderung von Offenheit, Kreativit&#228;t und Zusammenarbeit in der Open-Source-Gemeinschaft soll dieser Vortrag dazu beitragen, die Barrieren f&#252;r den Einstieg in die Heimautomatisierung zu senken und die Teilnehmer zu bef&#228;higen, ihre Wohnr&#228;ume nach ihren individuellen Bed&#252;rfnissen zu gestalten und zu optimieren.</description>
+                <logo></logo>
+                <persons>
+                    <person id='286'>Fridolin Einb&#246;ck</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='2b73cea3-5921-50ce-844a-459d929e28cf' id='475'>
+                <date>2024-04-06T11:00:00+02:00</date>
+                <start>11:00</start>
+                <duration>00:25</duration>
+                <room>HS i2</room>
+                <slug>glt24-475-markup-languages-contemplated-categorized-and-criticized</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/G7ALGR/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Markup languages: contemplated, categorized, and criticized</title>
+                <subtitle></subtitle>
+                <track>Anwendung</track>
+                <type>Vortrag</type>
+                <language>en</language>
+                <abstract>As part of my FOSS project in digital typesetting, I am interested in the depths of markup languages. How did markup languages emerge? How powerful and extensible shall they be? In this talk, I want to summarize my findings.</abstract>
+                <description>Markup languages like Markdown &amp; MediaWiki are prevalent for software developers to specify formatted content. One might wonder whether all problems are solved because most software developer resort to &#8220;Markdown&#8221; when user-provided texts are written these days. But are they? At least once you discover the differences between Markdown dialects, you wonder whether Markdown is really a good choice.
+
+In my investigations, I started with the simple question how to build a simple markup language parser. It turns out the simplicity in the parser is orthogonal to user friendliness. Simultaneously, I recognized how escaping mechanisms can - indeed - be designed simple and memorable. And they are too often forgotten. When I continued with the parsing topic, I recognized that markup languages do not at all serve the same purpose and need to be categorized. But this seems nontrivial. What is a &#8220;lightweight&#8221; markup language? What is a &#8220;document&#8221; markup language? And how can the simplicity of syntax be measured? What makes &#8220;XML&#8221; extensible? And what limits the adoption of markup languages besides Markdown?
+
+In this talk, I want to revisit how SGML turned into XML, remember the good old bbcodes of board software from the 2000s, how Wiki syntaxes were popularized and vanished, and Github made Markdown a big player. Afterwards I will present my findings and propose how to solve related questions.</description>
+                <logo></logo>
+                <persons>
+                    <person id='16'>tajpulo</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='8432ea3f-662b-5087-91da-b46af48cc661' id='478'>
+                <date>2024-04-06T11:35:00+02:00</date>
+                <start>11:35</start>
+                <duration>00:25</duration>
+                <room>HS i2</room>
+                <slug>glt24-478-fully-declarative-homelab-on-nixos-</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/T37KQQ/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Fully declarative Homelab on NixOS &#10052;&#65039;</title>
+                <subtitle></subtitle>
+                <track>Anwendung</track>
+                <type>Vortrag</type>
+                <language>en</language>
+                <abstract>In this talk, we&apos;ll explore the intricacies of setting up a reproducible personal home server or homelab using a fully declarative approach on NixOS.
+
+Building upon the foundation laid by last year&apos;s introduction to NixOS and the Nix ecosystem, this talk takes participants on a journey from a fully declarative disk setup to the configuration of a wide range of services suitable for Linux server and homelab enthusiasts.
+
+Emphasizing reproducibility and ease of configuration, this session should appeal to NixOS users and homelab enthusiasts running other Linux distributions.</abstract>
+                <description>Have you ever wanted to have complete control over your personal home server or homelab? Are you tired of manually configuring and maintaining your server, only to encounter unexpected issues down the line? Look no further! In this Linux conference talk, we will take another look at NixOS (a Linux distribution doing things different) and explore the benefits of a fully declarative approach to setting up your own server.
+
+Building upon the foundations laid in last year&apos;s talk that served as an introduction to NixOS and the Nix ecosystem, we will dive deeper into the possibilities that await you. Our focus will be on achieving reproducibility in your server setup, ensuring that you can confidently recreate your environment on-demand, without any surprises.
+
+We will begin by guiding you through a declarative disk setup and will then venture into the exciting realm of service configuration. Whether you have a particular interest in containerized services or prefer traditional setups, we&apos;ve got you covered. Our talk will provide plenty of configuration examples, showcasing various services that you could run on your home server or homelab.
+ 
+Join us as we unravel the power and simplicity of NixOS. Discover how a fully declarative approach can revolutionize the way you set up and maintain your personal home server or homelab. Whether you&apos;re a seasoned Linux enthusiast or new to the world of server administration, this talk will equip you with the knowledge and tools to take control of your server infrastructure and create a reproducible, reliable, and personalized server environment.</description>
+                <logo></logo>
+                <persons>
+                    <person id='195'>Matthias Thym</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='185c5ca2-f3c1-530c-a255-b131b4c41a29' id='433'>
+                <date>2024-04-06T12:10:00+02:00</date>
+                <start>12:10</start>
+                <duration>00:45</duration>
+                <room>HS i2</room>
+                <slug>glt24-433-integrationstests-mit-szenarien-fr-container-kompositionen</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/YQKPAS/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Integrationstests mit Szenarien f&#252;r Container-Kompositionen</title>
+                <subtitle></subtitle>
+                <track>Entwicklung</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>Hinter Web-Diensten steht h&#228;ufig eine Zusammenstellung verschiedener Komponenten wie Webserver, Datenbanken oder selbst entwickelter Software. Der Vortrag zeigt wie das Backend der Videokonferenzsoftware OpenTalk in Integrationstests verschiedene Szenarien mit unterschliedlichen Container-Kompositionen implementiert.</abstract>
+                <description>Um ein Videokonferenzsystem auf Basis der Open-Source-Software [OpenTalk](https://opentalk.eu/) zur Verf&#252;gung zu stellen, werden verschiedene Komponenten verwendet, die h&#228;ufig in Containern laufen:
+
+- Die &quot;Kernkomponente&quot; [*OpenTalk Controller*](https://gitlab.opencode.de/opentalk/controller) (eine oder mehrere Instanzen davon)
+- Das [*OpenTalk Web-Frontend*](https://gitlab.opencode.de/opentalk/web-frontend)
+- [Janus](https://janus.conf.meetecho.com/) als WebRTC-Service
+- [PostgreSQL](https://www.postgresql.org/)-Datenbankservice
+- [RabbitMQ](https://www.rabbitmq.com/) zum Austausch von Nachrichten zwischen den Komponenten
+- [Redis](https://redis.io/) zur Speicherung der laufenden Videokonferenzen
+- OIDC-Provider, meist [Keycloak](https://www.keycloak.org/)
+- [*OpenTalk SMTP-Mailer*](https://gitlab.opencode.de/opentalk/smtp-mailer) zum Versand von Einladungs-Mails
+- [*OpenTalk Obelisk*](https://gitlab.opencode.de/opentalk/obelisk) als Dial-In-Service
+- [*OpenTalk Recorder*](https://gitlab.opencode.de/opentalk/recorder) zum Aufnehmen oder Streamen von Videokonferenzen
+
+F&#252;r die eigenen Komponenten waren bereits in weiten Teilen Unit-Tests vorhanden, die von der CI ausgef&#252;hrt werden. Integrationstests, welche das Backend auf die korrekte Abarbeitung von Web-Requests und Websocket-Verbindungen in verschiedenen Szenarien pr&#252;fen, fehlten jedoch weitgehend.
+
+Beispiele f&#252;r solche Szenarien sind:
+
+- Simples Setup mit einem *OpenTalk Controller* und den Beispiel-Accounts *Alice*, *Bob*, *Charlie*, *Dave* und *Erin*
+- Komplexeres Setup mit mehreren *OpenTalk Controllern*
+- Ausfallsszenarien (z.B. nachstellen dass *RabbitMQ* w&#228;hrend des Betriebs ausf&#228;llt und wieder verf&#252;gbar wird)
+
+Der Vortrag skizziert, wie solch ein Integrationstest aussieht. Es wird gezeigt wie Szenarien aufgebaut sind und welche Methoden wir verwenden um den Code les- und wartbar zu halten. Ans&#228;tze die wir wieder verworfen oder ersetzt haben, werden kurz angeschnitten, und was wir daraus gelernt haben. &#220;ber Technische und organisatorische H&#252;rden, die wir &#252;berwinden mussten oder noch &#252;berwinden m&#252;ssen, wird klarerweise auch berichtet.
+
+Die gezeigten Code-Beispiele sind zum Gro&#223;teil in [Rust](https://www.rust-lang.org/), da der Backend-Teil von OpenTalk in Rust geschrieben ist. Wenngleich Kenntnis dieser Sprache von Vorteil ist, sind die Beispiele in einer Form gehalten, die auch ohne spezifisches Vorwissen gut genug verst&#228;ndlich sein sollte.</description>
+                <logo></logo>
+                <persons>
+                    <person id='175'>Wolfgang Silbermayr</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='e798667b-3262-501b-a5e7-d93bc0105c59' id='468'>
+                <date>2024-04-06T13:05:00+02:00</date>
+                <start>13:05</start>
+                <duration>00:45</duration>
+                <room>HS i2</room>
+                <slug>glt24-468--sponsor-grommunio-die-open-source-revolution-bei-groupware-lsungen</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/GKTJKV/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>[SPONSOR] grommunio: Die Open Source Revolution bei Groupware-L&#246;sungen</title>
+                <subtitle></subtitle>
+                <track>Anwendung</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>In einer dynamischen Landschaft der Unternehmenskommunikation ist die Suche nach effizienten, sicheren und kosteng&#252;nstigen Groupware-L&#246;sungen heutzutage von entscheidender Bedeutung. Die politischen und organisatorischen Umw&#228;lzungen der letzten Jahre haben die Notwendigkeit neuer innovativer und transparenter L&#246;sungen ins Zentrum unternehmerischen Handelns ger&#252;ckt, insbesondere aus &#246;sterreichischer und europ&#228;ischer Perspektive. Es ist l&#228;ngst &#252;berf&#228;llig, eigene Groupware-L&#246;sungen und IT-Strukturen zu entwickeln, um die organisatorische und wirtschaftliche Unabh&#228;ngigkeit gegen&#252;ber den USA und China zu wahren.
+
+Wir sind uns alle bewusst, dass Fragen zur Sicherheit, Unabh&#228;ngigkeit und Privatsph&#228;re aus dem t&#228;glichen Leben nicht mehr wegzudenken sind, was f&#252;r dien einzelnen gilt und in unserem Bewusstsein zunehmend verankert ist, gilt f&#252;r Unternehmen in einem noch gr&#246;&#223;eren Ma&#223;e. Sie m&#252;ssen langfristige Unabh&#228;ngigkeit und Handlungsf&#228;higkeit sicherstellen, um ihr &#220;berleben zu gew&#228;hrleisten.
+
+Grommunio hat sich entschlossen, dieser Herausforderung zu begegnen und strebt danach, ein Leuchtturm der Innovation und Transparenz zu sein. Ziel ist es, die langj&#228;hrige Dominanz propriet&#228;rer Plattformen wie Microsoft Exchange herauszufordern. Wir m&#246;chten Teil der L&#246;sung sein und eine Alternative bieten, die Innovation, Unabh&#228;ngigkeit, Freiheit bietet und bei Sicherheit keine Abstriche macht und  vor allem unseren Kunden vor allem eines erm&#246;glicht. Innovativ und erfolgreich zu sein.  Groupware verstehen wir nicht nur als technische Kommunikationsplattform, sondern als eine gemeinsame Basis des Handelns und Wachsens, die auf der Community aufbaut und Wachstum, Sicherheit und Freiheit f&#246;rdert.
+
+Die Pr&#228;sentation skizziert die Reise von Grommunio in diesem Marktumfeld und wirft einen Blick auf die technischen Herausforderungen und gefundenen L&#246;sungen. Mit einem Ausblick auf die Zukunft wird die Pr&#228;sentation die laufenden Entwicklungen und die zuk&#252;nftige Roadmap von Grommunio vorstellen. Wir werden erl&#228;utern, wie Grommunio durch kontinuierliche Verbesserung und Community-gesteuerte Entwicklung die Standards f&#252;r Groupware-L&#246;sungen neu definiert.
+
+Seien Sie dabei, wenn wir erkunden, warum Grommunio nicht nur eine Alternative, sondern eine &#252;berlegene Wahl f&#252;r Organisationen darstellt.</abstract>
+                <description></description>
+                <logo></logo>
+                <persons>
+                    <person id='375'>Peter Windhofer</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='72bfe961-27ec-5d1d-bd20-0eb3c159b2dd' id='435'>
+                <date>2024-04-06T14:00:00+02:00</date>
+                <start>14:00</start>
+                <duration>00:45</duration>
+                <room>HS i2</room>
+                <slug>glt24-435-pointless-blinking-evolution</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/7XWWLC/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Pointless Blinking: Evolution</title>
+                <subtitle></subtitle>
+                <track>Hardware</track>
+                <type>Vortrag lang</type>
+                <language>en</language>
+                <abstract>Continuing the [story of pointlessly blinking lights](https://pretalx.linuxtage.at/glt23/talk/LKZYPX/), I add a number of features to the project. Add hardware buttons that actually do something, add a [user interface (textual)](https://textual.textualize.io/) to &quot;add value&quot;, and so on ...</abstract>
+                <description>The [2023 talk](https://pretalx.linuxtage.at/glt23/talk/LKZYPX/) focused much on Python&apos;s beauty (the
+lovely [`asyncio`](https://docs.python.org/3/library/asyncio.html), and decorators that
+can be used creatively). In this year&apos;s edition I&apos;ll extend the
+pointless project like so ...
+
+* GPIO input, and debouncing hardware buttons with [`libgpiod`](https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git)
+* [`textual`](https://textual.textualize.io/), a *very cool* user interface toolkit which is *terminal-only*. It is completely *async*, and integrates perfectly with blinking. I&apos;ll use it to  simulate physical lights and buttons that I cannot use when I&apos;m on a train.</description>
+                <logo></logo>
+                <persons>
+                    <person id='149'>J&#246;rg Faschingbauer</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='2f47363d-73b6-5b5d-9125-e8bafc3e2c16' id='418'>
+                <date>2024-04-06T15:00:00+02:00</date>
+                <start>15:00</start>
+                <duration>00:45</duration>
+                <room>HS i2</room>
+                <slug>glt24-418-we-got-hacked-lektionen-aus-realen-security-vorfllen</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/3MMQBF/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>We got hacked: Lektionen aus realen Security-Vorf&#228;llen</title>
+                <subtitle></subtitle>
+                <track>Sicherheit</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>System-AdministratorInnen (Sysadmins) sind daf&#252;r verantwortlich, dass die IT-Infrastruktur rund l&#228;uft. Dazu geh&#246;rt auch das Thema IT-Security. Jeder tats&#228;chliche Vorfall bietet dabei wertvolle Erkenntnisse, die uns helfen k&#246;nnen, die Systeme widerstandsf&#228;higer und sicherer zu gestalten. Dieser Vortrag gibt einen Einblick in reale Security-Incidents und welche Lektionen sich aus solchen Vorf&#228;llen mitnehmen lassen.</abstract>
+                <description>Im t&#228;glichen Gesch&#228;ft k&#252;mmert sich der Vortragende eigentlich darum, dass die IT-Infrastruktur von verschiedenen Kunden wie gew&#252;nscht und m&#246;glichst stressfrei funktioniert. Zwischendurch gibt es aber immer wieder spannende Feuerwehr-Eins&#228;tze, z.B. wenn Hacker erfolgreich waren und eine Hintert&#252;r in einer IT-Infrastruktur gefunden haben.
+
+Wir sehen uns einige dieser Security-Incidents an und was wir aus diesen lernen k&#246;nnen. Wie wird so ein Angriff &#252;berhaupt entdeckt und wie erfolgt die Identifizierung der Schwachstelle, die zu den Vorf&#228;llen gef&#252;hrt hat? Welche effektiven Strategien gibt es zur Abwehr? Welche Fehler haben zu dem erfolgreichen Angriff gef&#252;hrt? Und welche Best Practices sollte man beachten, um die eigene Infrastruktur resilienter zu gestalten und &#228;hnliche Vorf&#228;lle in Zukunft zu vermeiden?
+
+Dieser Vortrag richtet sich zwar besonders, aber nicht nur an Sysadmins. Auch Entwickler:Innen und andere IT-Interessierte, die einen Einblick daf&#252;r bekommen wollen, wie echte Hacker-Angriffe in der Praxis aussehen k&#246;nnen und welche Schwachstellen in IT-Infrastruktur schlummern bzw. wie man diese vermeidet, werden auf ihre Kosten kommen.</description>
+                <logo></logo>
+                <persons>
+                    <person id='74'>Michael Prokop</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='bdf5423f-c23c-524b-a1a0-5ef1102a4025' id='480'>
+                <date>2024-04-06T16:15:00+02:00</date>
+                <start>16:15</start>
+                <duration>00:30</duration>
+                <room>HS i2</room>
+                <slug>glt24-480-designing-for-safety-key-considerations</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/7YZUC3/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Designing for Safety: Key Considerations</title>
+                <subtitle></subtitle>
+                <track>Sicherheit</track>
+                <type>Vortrag lang</type>
+                <language>en</language>
+                <abstract>There are no silver bullets when it comes to designing for interpersonal safety and privacy, but knowing and understanding of some of our most common blind spots as technologists helps. This talk covers the key areas of concern, including trouble with shared accounts, Internet-connected harm, location data, and surveillance, as well as a high-level overview of implementing a practice of designing for safety into your everyday work.</abstract>
+                <description>&#8220;How will our products harm people?&#8221; As tech workers, we don&#8217;t often ask this question&#8212;but we should. Too often, we design for an ideal circumstance that doesn&#8217;t account for the complicated personal dynamics our users bring to the table, including dangerous lived realities such as domestic violence. And when we fail to design for our most at-risk users, we end up unintentionally prioritizing their abusers. In this talk, Eva will show how every day tech can easily be weaponized for abuse, and how to prevent and mitigate that harm through a specific design strategy of prioritizing our most vulnerable users.
+
+We&#8217;ll cover the domestic violence threat model and specific areas of concern: trouble with shared accounts, Internet-connected harm, location data, and surveillance. We&apos;ll also discuss what technologists can learn about authentic consent from the anti-sexual assault space. Finally, the audience will walk away with a high-level overview of implementing a practice of designing for safety into their everyday work.</description>
+                <logo></logo>
+                <persons>
+                    <person id='366'>Eva</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='9db18390-d1b2-5d87-9001-d35415c69517' id='425'>
+                <date>2024-04-06T17:00:00+02:00</date>
+                <start>17:00</start>
+                <duration>00:25</duration>
+                <room>HS i2</room>
+                <slug>glt24-425-more-than-a-dj-aura-das-freie-softwareprojekt-fr-freie-radiosender</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/9WTAQH/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>more than a DJ - AURA, das freie Softwareprojekt f&#252;r freie Radiosender</title>
+                <subtitle></subtitle>
+                <track>Community</track>
+                <type>Vortrag</type>
+                <language>de</language>
+                <abstract>AURA ist eine freie Software-Suite f&#252;r Radio-Automation. Gestaltet und entwickelt nach den Bed&#252;rfnissen von freien Radiosendern in &#214;sterreich und Deutschland, bietet AURA mit seiner modularen Architektur ein &quot;Komplettl&#246;sung&quot; f&#252;r den Radiobetrieb. Das Projekt verwirklicht zudem das Prinzip &quot;Community by Design&quot; - Radiomacher:innen d&#252;rfen die Software von Anfang an testen und mitgestalten. Im Talk erfahrt ihr etwas &#252;ber das Projekt, seine Architektur und erlebt AURA in einer hands-on Demo in Aktion.</abstract>
+                <description>Wolltest Du schon immer selbst &quot;on air&quot; gehen und Dein eigenes Radioprogramm gestalten? Freie Sender stehen vor der Herausforderung, dass Softwarel&#246;sungen f&#252;r Radio-Programmverwaltung und -automation rar und teuer sind. Das Projekt AURA setzt ein Zeichen, dass es auch anders geht: AURA ist eine Open Source-Softwaresuite, die von Mitgliedern der freien Radios aus Graz, Linz, Wien, Innsbruck u.A. entwickelt wird. Nach dem &#8222;Baukastenprinzip&#8220; k&#246;nnen Funktionsmodule wie Playout, Aufnahme, Scheduling, Medienverwaltung, etc. kombiniert werden. Eine moderne und nutzer:innenfreundliche Weboberfl&#228;che macht die Programmverwaltung f&#252;r die ganze Redaktion auch von zu Hause aus m&#246;glich. UX und Design von AURA werden in engem Austausch mit der Radio-Community entworfen und verbessert.
+Mitglieder vom Aura-Team stellen das Projekt und seine Architektur vor. Anhand einer Kurz-Demo kann man AURA in Aktion sehen. Au&#223;erdem wird gezeigt, wie das Prinzip &#8222;Community by design&#8220; im Aura-Projekt in der Planung und Gestaltung verwirklicht wird.
+
+Codebase &amp; Homepage: https://aura.radio</description>
+                <logo>/media/glt24/submissions/9WTAQH/aura-logo-color-trans_FsCSJuS.png</logo>
+                <persons>
+                    <person id='347'>Margarethe Maierhofer-Lischka</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='2e0a3696-b0c3-56c2-940d-49c578232109' id='442'>
+                <date>2024-04-06T17:30:00+02:00</date>
+                <start>17:30</start>
+                <duration>00:25</duration>
+                <room>HS i2</room>
+                <slug>glt24-442-why-is-archiving-so-un-sexy-again-floss-archiving-tools-for-organisations</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/YY7R37/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Why is archiving so (un)sexy again? - FLOSS archiving tools for organisations</title>
+                <subtitle></subtitle>
+                <track>Admin</track>
+                <type>Vortrag</type>
+                <language>en</language>
+                <abstract>For the unaware archiving seems boring and not so attractive, yet without archiving there would&apos;t be no Internet or Chat-GTP. The talk dismantles the urban legend of its dullness and presents outcomes of mur.at research into FLOSS tools for NGOs (and other organisations) to archive and document their projects.</abstract>
+                <description>Regardless of the experience, archiving seems for the unaware as not so attractive, even boring for the general public. And yet, without archiving there wouldn&#8217;t be no Internet. Indeed, without archiving there wouldn&#8217;t be no Chat-GTP&#8230; or even a Tabelle f&#252;r die Bundesliga.
+
+To dismantle the urban legend of its dullness, we will get back to the roots of archiving in history before taking a look into Open Software and the possibilities it offers for archiving today. Thus, we will see how archiving is crucial to raise awareness about the present legacy of what we do&#8212;this being something alive (and kicking) that you will be able to re-use and expand. 
+
+The talk sums up an ambitious endeavor by mur.at and Artist in Residence Ricardo Gin&#233;s (Tactical Tech Berlin) to collect FLOSS tools that NGOs and other organizations can use to better document and archive their projects. Local stakeholders from the arts &amp; culture sector in Graz were interviewed as well as archiving experts from Tactical Tech Berlin, Ars Electronica Archive, ADA - Austrian Digital Art Archive, Stadtarchiv Graz and TU Graz to create hands-on guidelines that were further elaborated on in the mur-worklab 2023.</description>
+                <logo></logo>
+                <persons>
+                    <person id='244'>Andreas Zingerle</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='fe0d522f-c92a-5de6-ba17-e3db9cd2ec7d' id='460'>
+                <date>2024-04-06T18:00:00+02:00</date>
+                <start>18:00</start>
+                <duration>00:25</duration>
+                <room>HS i2</room>
+                <slug>glt24-460-radfahren-und-wandern-mit-dem-osm-kartenmaterial-im-vergleich</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/HYXSAV/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Radfahren und Wandern mit dem OSM-Kartenmaterial im Vergleich</title>
+                <subtitle></subtitle>
+                <track>Anwendung</track>
+                <type>Vortrag</type>
+                <language>de</language>
+                <abstract>Der Vortrag bietet einen Vergleich &#252;ber verschiedene Kartendarstellungen und das Routing bei der Navigation mit Radfahr- und Wander-Apps. Dabei spielt ganz speziell auch das Kartenmaterial von OpenStreetMap eine Rolle.</abstract>
+                <description></description>
+                <logo>/media/glt24/submissions/HYXSAV/wanderkarten_oY8SB5v.jpg</logo>
+                <persons>
+                    <person id='358'>Martin Brunner</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            
+        </room>
+        <room name='HS i7'>
+            <event guid='f6338e82-40cf-5cae-bedb-33fa5cb0d8af' id='466'>
+                <date>2024-04-06T09:00:00+02:00</date>
+                <start>09:00</start>
+                <duration>00:45</duration>
+                <room>HS i7</room>
+                <slug>glt24-466-die-demokratisierung-von-game-development-the-good-the-bad-and-the-ugly</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/Y88M7U/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Die Demokratisierung von Game Development - The Good, the Bad, and the Ugly</title>
+                <subtitle></subtitle>
+                <track>Keynote</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>In diesem Vortrag diskutieren wir die vielschichtigen Effekte der Demokratisierung in der Spieleentwicklung, angefangen bei der Zug&#228;nglichkeit durch popul&#228;re Game Engines bis hin zu den Herausforderungen und Abh&#228;ngigkeiten, die sich daraus ergeben und welche die Spieleindustrie 2023 mehr als nur bewegt hat. Wir stellen uns die Fragen: Wird die Spieleentwicklung nun auf Open Source-L&#246;sungen umsteigen? Und welche Optionen stehen &#252;berhaupt zur Verf&#252;gung? Wir diskutieren das Potential von Open Source und Community-Beteiligung in der Game Development-Branche und reflektieren &#252;ber m&#246;gliche Zukunftsszenarien.</abstract>
+                <description></description>
+                <logo></logo>
+                <persons>
+                    <person id='380'>Johanna Pirker</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='1f39a629-2891-5433-b98a-b19ae98b41fd' id='453'>
+                <date>2024-04-06T10:00:00+02:00</date>
+                <start>10:00</start>
+                <duration>00:45</duration>
+                <room>HS i7</room>
+                <slug>glt24-453-wordpress-activitypub-eine-nachhaltige-identitt-im-web</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/EHAKHD/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>WordPress ActivityPub &#8211; Eine nachhaltige Identit&#228;t im Web</title>
+                <subtitle></subtitle>
+                <track>Community</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>Mit dem **ActivityPub**-Protokoll kann eine **WordPress**-Seite direkt Interessierte erreichen und wird zu einem interaktiven Ort, an dem man mit dem gesamten Web kommunizieren kann.
+
+Als weiteres Beispiel, dass ActivityPub mehr kann als mittels Mastodon ein dezentrales Twitter zu bauen, wird anhand der Vision des **Calendiverse** vorgestellt.</abstract>
+                <description>Das [Fediverse](https://de.wikipedia.org/wiki/Fediverse#Kommunikationsprotokolle_und_Instanzen) bietet eine Alternative zu kommerziellen Sozialen Netzwerken. Aber Konten auf Plattformen anderer haben immer ein Probleme gemeinsam: egal ob es sich um Instagram oder einen Mastodon-Server handelt, die Betreiberinnen bestimmen die Rahmenbedingungen der Plattform, nicht du.
+
+Viele Fediverse-Anwendungen wie [Mastodon](https://joinmastodon.org/) entsch&#228;rfen das Problem stark, indem sie es erm&#246;glichen, mit einem Konto auf einen anderen Server umzuziehen (und deine Follower*innen mitzunehmen).
+
+F&#252;r Personen oder Organisationen mit einer WordPress-Seite gibt es jedoch eine noch nachhaltigere Alternative: mit Hilfe von [Plugins](https://wordpress.com/de/plugins/activitypub) wird deine Webseite direkt zu deiner Identit&#228;t im Fediverse, es ist gar kein zus&#228;tzlicher Account auf z.B. einem Mastodon-Server mehr n&#246;tig. Das bedeutet auch, dass du keine zus&#228;tzliche Plattform bespielen musst, sondern Funktionalit&#228;ten wie Folgen und Gefolgt werden und Interaktionen, wie sie aus sozialen Netzwerken bekannt sind, wie Liken, Teilen, Kommentieren direkt mit deiner Website handhaben kannst.
+
+Durch eine in [Entwicklung befindliche Erweiterung](https://event-federation.eu/) wird es in Zukunft auch m&#246;glich sein, Veranstaltungen, die auf einer WordPress-Seite verwaltet werden, in dieses dezentrale Netzwerk einzubinden. Dadurch ergeben sich viele neue M&#246;glichkeiten, auch &#252;ber das Fediverse hinaus.</description>
+                <logo></logo>
+                <persons>
+                    <person id='354'>Andr&#233; Menrath</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='f52900ac-5d2d-5391-a0ba-9fbf228af10c' id='456'>
+                <date>2024-04-06T11:00:00+02:00</date>
+                <start>11:00</start>
+                <duration>00:25</duration>
+                <room>HS i7</room>
+                <slug>glt24-456-das-fediverse-grundlagen-und-eigenbetrieb-einer-instanz</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/MVUQB8/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Das Fediverse: Grundlagen und Eigenbetrieb einer Instanz</title>
+                <subtitle></subtitle>
+                <track>Admin</track>
+                <type>Vortrag</type>
+                <language>de</language>
+                <abstract>Der Verein &quot;graz.social &#8211; Verein zur F&#246;rderung ethischer Digitalkultur&quot; pr&#228;sentiert das Fediverse. Das Fediverse ist ein verteiltes soziales Netzwerk mit Apps wie Mastodon (Alternative zu Twitter), Peertube (Alternative zu youtube) und Pixelfed (Alternative zu Instagram). Es wird kurz und visuell auf die Besonderheiten dieses Netzwerks eingegangen und danach gezeigt, wie jede und jeder sich mit einem Server darin einbringen kann. In einer Fragerunde teilen Aktive von graz.social gerne ihre Erfahrung in der Moderation einer Instanz.</abstract>
+                <description></description>
+                <logo></logo>
+                <persons>
+                    <person id='297'>Marcus Meindel</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='e6516672-88a5-5746-8590-64cd30cb359b' id='448'>
+                <date>2024-04-06T11:35:00+02:00</date>
+                <start>11:35</start>
+                <duration>00:25</duration>
+                <room>HS i7</room>
+                <slug>glt24-448-open-source-software-und-compliance-im-unternehmen-ein-sheriff-im-wilden-westen</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/GSVKTF/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Open Source Software und Compliance im Unternehmen: Ein Sheriff im Wilden Westen</title>
+                <subtitle></subtitle>
+                <track>Sicherheit</track>
+                <type>Vortrag</type>
+                <language>de</language>
+                <abstract>Wenn wir uns vorstellen, dass OSS der Wilde Westen ist, k&#246;nnen viele Dinge sehr frei gemacht und umgesetzt werden &#8211; jedoch auch zum Vorteil Einzelner und nicht zwingend im Interesse der Gemeinschaft.
+
+Um gewisse Grenzen und Rahmenbedingungen in der Pr&#228;rie aufzuzeigen, wird im Wilden Westen ein Sheriff ernannt. In Unternehmen werden im OSS-Kontext Open Source Program Offices (OSPOs) als eigene Instanzen etabliert, um die Rahmenbedingungen der OSS-Nutzung zu definieren und die Interessen des Unternehmens und der Community zu sch&#252;tzen.
+
+In diesem Talk betrachten wir das WAS und das WIE der Etablierung eines OSPOs in Unternehmen und teilen Erfahrungen und Einblicke aus der Praxis.</abstract>
+                <description>Nachdem Unternehmen die tlw. strategische Entscheidung getroffen haben, Open Source Software einzusetzen, gilt es sicherzustellen, dass diese nicht willk&#252;rlich und unkontrolliert eingesetzt wird.
+Ziel ist es, die Balance zwischen Unternehmenszielen und freier Software-Entwicklung herzustellen, um den technischen Fortschritt zu f&#246;rdern, die Potenziale von OSS auszusch&#246;pfen, und Compliance-Einhaltung sicherzustellen.
+
+Warum?
+- Herausfordernd ist (1) die Einhaltung der komplexen und oftmals un&#252;bersichtlichen Rechte und Pflichten von Lizenz-Anforderungen, Identifikation von Lizenz-Inkompatibilit&#228;ten, Umgang mit Lizenz-&#196;nderungen, oder die verpflichtende Anzeige von OSS-Lizenztexten. Zudem spielt (2) die R&#252;ckverfolgbarkeit von OSS-Komponenten entlang der Supply Chain eine Rolle und die verl&#228;ssliche Erstellung einer Software Bill of Material. (3) Bei OSS ist aufgrund des &#246;ffentlichen Sourcecodes die Anzahl an gezielt gesuchten und gefundenen Vulnerabilities h&#246;her als bei propriet&#228;rer Software.
+- M&#246;gliche Konsequenzen von Lizenz-Verst&#246;&#223;en beinhalten Rechtsstreitigkeiten, Vertragsbr&#252;che, Reputationsverluste, Produktr&#252;ckrufe, Blacklisting,&#8230;
+
+Was?
+- H&#228;ufig wird eine eigene interdisziplin&#228;re Instanz &#8211; ein Open Source Program Office &#8211; im Unternehmen etabliert 
+- Die Lizenz.Konformit&#228;t und Compliance von Produkten wird vor Release sichergestellt.
+
+Wie?
+- Die Aspekte Prozesse, Methoden, Tools, Organisationsstrukturen werden betrachtet und OSS-Compliance-Standards dahingehend etabliert.
+- Die rechtlichen Anforderungen werden aufgenommen und in die technischen Entwicklungsprozesse und in die CI/CD und Build Pipleline integriert.
+- Einf&#252;hrung von standardisierten Formaten wie SPDX, CycloneDX,&#8230;, um eine unternehmens&#252;bergreifende Zusammenarbeit sicherzustellen.
+
+Was kann da noch schief laufen?
+- Prozesse k&#246;nnen den Time-to-market verl&#228;ngern und den Entwicklungsprozess verlangsamen, wenn wichtige Prozessschritte nicht korrekt verortet sind.
+- Tools: Nach dem Motto &#8221;A fool with a tool is still a fool&#8221; ist eine Tooleinf&#252;hrung nicht inh&#228;rent eine Produktivit&#228;tssteigerung.
+- Organisationsstrukturen: Organizational Change durch Ver&#228;nderung von Verantwortlichkeiten, Ver&#228;nderung bestehender Job-Descriptions, B&#252;rokratien,&#8230;.
+
+Was erwartet uns im Vortrag?
+- Einblicke und Erfahrungen aus der Praxis in der Etablierung eines OSPOs in Unternehmen</description>
+                <logo></logo>
+                <persons>
+                    <person id='353'>Birgit Brandstetter</person><person id='374'>Nepomuk Trauttmansdorff</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='96d9f4fd-15c8-5ea6-97fd-1cb4487daeda' id='463'>
+                <date>2024-04-06T12:10:00+02:00</date>
+                <start>12:10</start>
+                <duration>00:45</duration>
+                <room>HS i7</room>
+                <slug>glt24-463--sponsor-running-air-gapped-vm-updates-on-scale</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/9WZ8AN/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>[SPONSOR] Running air-gapped VM updates on scale</title>
+                <subtitle></subtitle>
+                <track>Admin</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>Der Vortrag behandelt die Herausforderungen und L&#246;sungen f&#252;r das automatisierte Erstellen von virtuellen Maschinen (VMs) und Aktualisieren in abgeschotteten Umgebungen. Es werden effektive Strategien und Tools zur Verwaltung von Updates in solchen Umgebungen vorgestellt. Der Fokus liegt auf Skalierbarkeit und Effizienz, um gro&#223;e VM-Best&#228;nde zuverl&#228;ssig zu aktualisieren um Einheitlichkeit und Sicherheit zu garantieren. Die Pr&#228;sentation gibt Einblicke in ausgew&#228;hlte Praktiken, Technologien und Automatisierungstools, die es erm&#246;glichen, abgeschottete VMs mittels image-basiertem Update zu aktualisieren.</abstract>
+                <description>Erfahren Sie in diesem Vortrag mehr &#252;ber das innovative Caretaker-Projekt der NTS Netzwerk Telekom Service AG. Der Caretaker ist ein leistungsstarkes Remote Monitoring &amp; Management (RMM)-System, das auf Ubuntu und Kubernetes basiert. Als virtuelle Maschine in Kundeninfrastrukturen bereitgestellt, &#252;berwacht und &#252;berpr&#252;ft der Caretaker automatisch die Gesundheit und Leistung der IT-Systeme. Insbesondere wird darauf eingegangen, wie das Image f&#252;r die VM strukturiert ist und wie automatisierte Updates des Betriebssystems erm&#246;glicht werden. Tauchen Sie ein in die Welt des Caretakers und erfahren Sie, wie er NTS erm&#246;glicht eine gro&#223;e Anzahl an VMs automatisiert und skalierbar zu aktualisieren.</description>
+                <logo>/media/glt24/submissions/9WZ8AN/Untitled_XSzf0g3.png</logo>
+                <persons>
+                    <person id='369'>Fabian Lichtenegger-Lukas</person><person id='370'>Roland Urbano</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='405798cf-4e3c-5871-86e2-4b4d5f0a56b6' id='421'>
+                <date>2024-04-06T13:05:00+02:00</date>
+                <start>13:05</start>
+                <duration>00:25</duration>
+                <room>HS i7</room>
+                <slug>glt24-421-infrastructure-as-code-and-ai-does-it-fit-</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/N73FQV/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Infrastructure as Code and AI - does it fit?</title>
+                <subtitle></subtitle>
+                <track>Admin</track>
+                <type>Vortrag</type>
+                <language>en</language>
+                <abstract>AI combined with cloud computing and infrastructure as a code - does that fit? Yes, indeed!
+
+Are you curious how the GitHub Copilot could support you in implementing &apos;Infrastructure as Code&apos; to deploy resources on Azure in an automated way? 
+This talk reveals my approach to using the AI pair programming tool. Starting from scratch, I will create a working Terraform configuration that can deploy a Kubernetes cluster on Azure, by just providing comments.
+What could good practice for that look like?
+It shall prove that AI speeds up your development speed and works well for infrastructure as code approaches.</abstract>
+                <description></description>
+                <logo></logo>
+                <persons>
+                    <person id='343'>Patrick Koch</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='d653bf16-3c96-57c8-a66a-dd8c76e83abf' id='450'>
+                <date>2024-04-06T14:00:00+02:00</date>
+                <start>14:00</start>
+                <duration>00:45</duration>
+                <room>HS i7</room>
+                <slug>glt24-450-2023-s-top-cyber-threats</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/VBSVW9/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>2023&apos;s Top Cyber Threats</title>
+                <subtitle></subtitle>
+                <track>Sicherheit</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>Einige Mitglieder des CTF-Teams, LosFuzzys, stellen Exploits aus dem vergangenen Jahr vor, diskutieren deren Auswirkungen und zeigen L&#246;sungsans&#228;tze.
+
+Der Vortrag richtet sich an Menschen, die sich f&#252;r Informationssicherheit interessieren.</abstract>
+                <description></description>
+                <logo>/media/glt24/submissions/VBSVW9/logo_losfuzzys_150_v8NxxK9.png</logo>
+                <persons>
+                    <person id='296'>Markus Ostermayer</person><person id='156'>Kevin Saiger</person><person id='328'>Marcell Haritopoulus</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='10f006e5-a58f-5b85-a4b4-3bb2af2eecb7' id='462'>
+                <date>2024-04-06T15:00:00+02:00</date>
+                <start>15:00</start>
+                <duration>00:45</duration>
+                <room>HS i7</room>
+                <slug>glt24-462-gpio-development-mit-dem-raspberry-pi</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/YFYM3H/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>GPIO Development mit dem Raspberry Pi</title>
+                <subtitle></subtitle>
+                <track>Hardware</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>Zuerst gibt es ein Update zum aktuellen Status des &apos;Raspberry Pi&apos;. Welche neuen Modelle gibt es und was hat sich im allgemeinen im Softwarebereich getan?
+Viele beliebte GPIO-Libraries wurden in letzter Zeit nicht mehr aktiv weiterentwickelt - was bedeutet das f&#252;r den Endanwender? Welche Vor- und Nachteile bringt die allgemeine GPIO-Library libgpiod. 
+Im zweiten Teil des Vortrags wird f&#252;r professionelle Entwickler demonstriert wie man sich mit profiling und debugging Tools tiefgreifend die Performance der Library analysieren kann.</abstract>
+                <description>Die letzten Jahre waren schwierig f&#252;r Raspberry Pi Fans, Lieferkettenprobleme machten es kaum m&#246;glich, die aktuellen Modelle zu erwerben, w&#228;hrend gleichzeitig die Gebrauchtpreise in die H&#246;he schossen.
+Zum Gl&#252;ck hat sich die Lage stark verbessert und die neuen Modelle &quot;Zero 2 W&quot; und &quot;Raspberry Pi 5&quot; sind bei den meisten Shops nun lieferbar.&#160;
+Auch Raspberry Pi OS setzt mittlerweile auf Debian Bookworm - und damit den Linux Kernel in Version 6. Dazu gab es auch einige &#196;nderungen, die wir uns im Vortrag ansehen. 
+Einen gro&#223;en Einfluss gab es bei den GPIO Librarys. Sie scheinen fast alle nicht mehr aktiv unterst&#252;tzt zu werden, denn libgpiod ist gekommen um sie alle abzul&#246;sen. Doch wie ist die Geschwindigkeit der universellen Library gegen&#252;ber der alten? 
+Im zweiten Teil wird mittels debugging und profiling Tools die API und Performance von libgpiod ganz genau unter die Lupe genommen.</description>
+                <logo></logo>
+                <persons>
+                    <person id='40'>Martin Strohmayer</person><person id='23'>Manfred Wallner</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='8d0225e3-43e0-5051-b30f-0c5ad6a03c1d' id='464'>
+                <date>2024-04-06T16:00:00+02:00</date>
+                <start>16:00</start>
+                <duration>00:45</duration>
+                <room>HS i7</room>
+                <slug>glt24-464-shepherding-software-dependencies</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/DXJLMZ/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Shepherding Software Dependencies</title>
+                <subtitle></subtitle>
+                <track>Sicherheit</track>
+                <type>Vortrag lang</type>
+                <language>en</language>
+                <abstract>The number of external dependencies in today&apos;s software has grown steadily over the years. With all these dependencies come bugs and security issues. Like a flock of sheep, it can be difficult to keep track of them all, take care of their needs, and leave no one behind.
+
+In this talk, I&apos;ll present solutions for software composition analysis and dependency management using free and open source tools. Afterwards, I hope you will be convinced that this is something everyone should consider in their software projects, because it is relatively easy to get started, and it will make your life easier in the long run.</abstract>
+                <description>The number of external dependencies in today&apos;s software has grown steadily over the years. With all these dependencies come bugs and security issues. Like a flock of sheep, it can be difficult to keep track of them all, take care of their needs, and leave no one behind.
+
+In this talk, I&apos;ll present solutions for software composition analysis and dependency management using free and open source tools. Afterwards, I hope you will be convinced that this is something everyone should consider in their software projects, because it is relatively easy to get started, and it will make your life easier in the long run.
+
+I will demonstrate how to create a *Software Bill Of Material (SBOM)* at build time using the *OWASP CycloneDX* tools. To further analyze the SBOM, I will demonstrate the use of *OWASP Dependency Track*. I will also demonstrate the use of *Renovate* to help maintainers keep up with dependency updates. To run all these tools in a CI/CD environment, I use *GitLab*.
+
+- CycloneDX: https://cyclonedx.org/
+- Dependency Track: https://dependencytrack.org/
+- Renovate: https://www.mend.io/renovate-free/
+- GitLab: https://about.gitlab.com/</description>
+                <logo></logo>
+                <persons>
+                    <person id='172'>Michael Gissing</person><person id='379'>Tobias Kulmburg</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='64130dbc-6121-50b0-936d-bac79ca2eab2' id='423'>
+                <date>2024-04-06T17:00:00+02:00</date>
+                <start>17:00</start>
+                <duration>00:25</duration>
+                <room>HS i7</room>
+                <slug>glt24-423-gizual-browser-based-git-repository-visualisation-with-webassembly-and-web-workers</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/VSQXGS/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Gizual: Browser-Based Git Repository Visualisation with WebAssembly and Web Workers</title>
+                <subtitle></subtitle>
+                <track>Anwendung</track>
+                <type>Vortrag</type>
+                <language>en</language>
+                <abstract>This talk presents Gizual, a cutting-edge open-source web application
+for visualising and interacting with Git code repositories. It
+leverages the power of web workers, WebAssembly, and a combination of
+optimisation techniques to run a Git visualisation locally in the web
+browser. The talk will look at some of the technical challenges which
+were overcome, including strategies to minimise memory footprint,
+implement performant file operations, and distribute workload using
+web workers and SharedArrayBuffers.</abstract>
+                <description>This talk presents Gizual, a cutting-edge open-source web application,
+which reimagines Git code repository visualisation and interaction in
+the spirit of SeeSoft [1]. The Gizual user interface uses a zoomable
+timeline component for detailed navigation through the commit history
+of a repository. A zoomable visual overview is then provided for a
+specified (sub)set of files for the chosen commit, which is
+colour-coded by metrics such as age of line of code, or author of line
+of code. Pre-generated preview images and a pool of web workers are
+used for enhanced performance. Overview statistics such as
+contribution charts are also provided.
+
+Beneath the user interface, Gizual exploits the bleeding edge of
+WebAssembly (WASM) to run performant Git operations directly in the
+browser. The WebAssembly System Interface (WASI) [2] is used to run
+libgit2 [3], together with various custom implementations for
+efficient file i/o and git index parsing.
+
+The talk will cover Gizual&apos;s innovative approaches to interaction and
+visualisation, and some of the technical challenges which were
+overcome, including strategies to minimise memory footprint, implement
+performant file operations, and distribute workload using web workers
+and SharedArrayBuffers. It will conclude with a look at ongoing and
+potential future work.
+
+[1] https://doi.org/10.1109/32.177365
+[2] https://wasi.dev/
+[3] https://github.com/libgit2/libgit2</description>
+                <logo>/media/glt24/submissions/VSQXGS/screenshot1080_rCP3HHw.png</logo>
+                <persons>
+                    <person id='345'>Andreas Steinkellner</person><person id='346'>Stefan Schintler</person><person id='47'>Keith Andrews</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='a1730da2-ce25-5e81-b966-cfa04b8d4d80' id='457'>
+                <date>2024-04-06T17:30:00+02:00</date>
+                <start>17:30</start>
+                <duration>00:45</duration>
+                <room>HS i7</room>
+                <slug>glt24-457-zephyr-ein-open-source-realtime-embedded-os</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/TVG9ES/</url>
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <title>Zephyr - Ein Open Source Realtime Embedded OS</title>
+                <subtitle></subtitle>
+                <track>Entwicklung</track>
+                <type>Vortrag lang</type>
+                <language>de</language>
+                <abstract>Embedded Ger&#228;te sind Ger&#228;te mit sehr geringen Resourcen wie zum Beispiel Speicher und CPU.
+Meist verrichten diese unbemerkt ihre Arbeit.
+Bei der Entwicklung von Embedded Ger&#228;ten gibt es viele Herausvorderungen.
+Geringe Resourcen, Schnittstellen zu Sensoren, Schnittstellen zur Au&#223;enwelt (Bluteooth, Ethernet), Updatef&#228;higkeit...
+Hier k&#246;nnen Embedded Betriebssysteme wie Zephyr die Entwicklung vereinfachen und beschleunigen.</abstract>
+                <description>Embedded Ger&#228;te sind Ger&#228;te mit sehr geringen Resourcen wie zum Beispiel Speicher und CPU.
+Meist verrichten diese unbemerkt ihre Arbeit.
+Bei der Entwicklung von Embedded Ger&#228;ten gibt es viele Herausvorderungen.
+Geringe Resourcen, Schnittstellen zu Sensoren, Schnittstellen zur Au&#223;enwelt (Bluteooth, Ethernet), Updatef&#228;higkeit, ...
+
+Hier k&#246;nnen Embedded Betriebssysteme wie Zephyr die Entwicklung vereinfachen und beschleunigen.
+Der Vortrag liefert eine kurze &#220;bersicht &#252;ber Zephyr. Welche Vor- und Nachteile es gibt, welche Hardware unterst&#252;tzt wird und einen Vergleich mit anderen RTOS Systemen wie bzw. FreeRTOS.
+Anschlie&#223;end wird anhand einer kleinen Beispielapplikation die M&#246;glichkeiten von Zephyr demonstriert und das Konzept des Devicetrees vorgestellt.
+Dies erm&#246;glicht eine leichtere Portierbarkeit auf eine andere Plattform.</description>
+                <logo></logo>
+                <persons>
+                    <person id='356'>Bernd Bauer</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            
+        </room>
+        <room name='Seminarraum ISW'>
+            <event guid='b379ffc7-7fe2-5094-b733-520010c9c23c' id='486'>
+                <date>2024-04-06T09:30:00+02:00</date>
+                <start>09:30</start>
+                <duration>02:30</duration>
+                <room>Seminarraum ISW</room>
+                <slug>glt24-486-lpi-prfung</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/JSYMYC/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>LPI Pr&#252;fung</title>
+                <subtitle></subtitle>
+                <track>Prüfung</track>
+                <type>Pr&#252;fung</type>
+                <language>de</language>
+                <abstract>LPI exams</abstract>
+                <description>Erm&#228;&#223;igte Pr&#252;fungen!
+Die Pr&#252;fungen werden mit einem Community-Rabatt angeboten und kosten 85 EUR jede Essentials Pr&#252;fung und 140 EUR jede Professional Pr&#252;fung.
+
+Kandidaten k&#246;nnen die Pr&#252;fungen Linux Essentials, Security Essentials, Web Development Essentials, LPIC-1 und LPIC-2 auf Englisch und Deutsch ablegen. Open Source Essentials, LPIC-3, DevOps Tools Engineer und BSD Specialist sind nur auf Englisch verf&#252;gbar.
+
+Daher bitten wir Kandidaten, sich f&#252;r die Veranstaltung zu registrieren unter: https://www.lpi.org/exam-registration/.
+
+Kurzentschlossene sind ebenfalls herzlich willkommen!
+
+So nehmen Sie an den Pr&#252;fungssitzungen teil
+Die Kandidaten m&#252;ssen 15 Minuten vor Pr&#252;fungsbeginn im Pr&#252;fungsraum sein und einen amtlichen Lichtbildausweis (Reisepass, Personalausweis oder F&#252;hrerschein), ihren LPI-Ausweis und die Pr&#252;fungsgeb&#252;hr in bar mitbringen.</description>
+                <logo></logo>
+                <persons>
+                    <person id='317'>LPI</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            <event guid='b66b0ac3-6f51-5ecc-93e0-fc3de8ac2040' id='485'>
+                <date>2024-04-06T14:30:00+02:00</date>
+                <start>14:30</start>
+                <duration>02:30</duration>
+                <room>Seminarraum ISW</room>
+                <slug>glt24-485-lpi-prfung</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/9ZNCMP/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>LPI Pr&#252;fung</title>
+                <subtitle></subtitle>
+                <track>Prüfung</track>
+                <type>Pr&#252;fung</type>
+                <language>de</language>
+                <abstract>LPI Exams</abstract>
+                <description>Erm&#228;&#223;igte Pr&#252;fungen!
+Die Pr&#252;fungen werden mit einem Community-Rabatt angeboten und kosten 85 EUR jede Essentials Pr&#252;fung und 140 EUR jede Professional Pr&#252;fung.
+
+Kandidaten k&#246;nnen die Pr&#252;fungen Linux Essentials, Security Essentials, Web Development Essentials, LPIC-1 und LPIC-2 auf Englisch und Deutsch ablegen. Open Source Essentials, LPIC-3, DevOps Tools Engineer und BSD Specialist sind nur auf Englisch verf&#252;gbar.
+
+Daher bitten wir Kandidaten, sich f&#252;r die Veranstaltung zu registrieren unter: https://www.lpi.org/exam-registration/.
+
+Kurzentschlossene sind ebenfalls herzlich willkommen!
+
+So nehmen Sie an den Pr&#252;fungssitzungen teil
+Die Kandidaten m&#252;ssen 15 Minuten vor Pr&#252;fungsbeginn im Pr&#252;fungsraum sein und einen amtlichen Lichtbildausweis (Reisepass, Personalausweis oder F&#252;hrerschein), ihren LPI-Ausweis und die Pr&#252;fungsgeb&#252;hr in bar mitbringen.</description>
+                <logo></logo>
+                <persons>
+                    <person id='317'>LPI</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            
+        </room>
+        <room name='HS i3'>
+            <event guid='429b1395-a9ba-5756-9ddc-ed58cae7eeb9' id='445'>
+                <date>2024-04-06T09:00:00+02:00</date>
+                <start>09:00</start>
+                <duration>09:00</duration>
+                <room>HS i3</room>
+                <slug>glt24-445-mini-froglabs</slug>
+                <url>https://pretalx.linuxtage.at/glt24/talk/9HD9CW/</url>
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <title>Mini-FrogLabs</title>
+                <subtitle></subtitle>
+                <track></track>
+                <type>Workshop (3,5h)</type>
+                <language>de</language>
+                <abstract>Workshops rund um Technik, Coding und freie Software f&#252;r Kinder und Jugendliche zwischen 9 und 15 Jahre</abstract>
+                <description># Was sind die Mini-FrogLabs?
+
+Interessierst du dich f&#252;r Informatik und Programmieren? Hast du Spa&#223; daran, mit Elektronik zu experimentieren?
+
+Die FrogLabs sind ein Workshop-Programm f&#252;r Kinder und Jugendliche von etwa 9 bis 16 Jahren, bei dem du gemeinsam mit Anderen in deinem Alter an spannenden Projekten aus den Bereichen Informatik und Technik basteln, forschen und lernen kannst.
+
+Du verbringst den Tag in einer Gruppe von vielen Sch&#252;lerinnen und Sch&#252;lern, die dieselben Interessen teilen wie du. Bei den Mini-FrogLabs handelt es sich nur um ein Tagesprogramm ohne &#220;bernachtung.
+
+Die FrogLabs finden immer zusammen mit so genannten Open-Source-Konferenzen statt. Das sind Treffen, bei denen sich viele Leute &#252;ber Themen wie freie Software, Programmierung, Sicherheit und vieles mehr austauschen. Die FrogLabs stammen urspr&#252;nglich von der FrOSCon, der Konferenz mit dem wohl umfangreichsten Kinder- und Jugendprogramm in Deutschland.
+
+Die Mini-FrogLabs sind eine kleine Variante, bei der &quot;nur&quot; Workshops stattfinden, aber kein Rahmenprogramm mit &#220;bernachtung und &#228;hnlichem.
+
+# Termin und Ort
+
+Dieses Mal finden die Mini-FrogLabs am 6. April 2024 von 11 bis 17 Uhr auf den Grazer Linux-Tagen in Graz (in der Technischen Universit&#228;t) statt.
+
+# Workshopthemen
+
+Die Workshops, die dich bei den FrogLabs erwarten, richten sich an alle Teilnehmerinnen und Teilnehmer gleicherma&#223;en. Egal, ob du schon viel &#252;ber das Thema wei&#223;t oder sogar schon einmal bei den FrogLabs warst. Unser Ziel ist es, dass bei den Workshops jeder gleich viel Spa&#223; haben kann und gleich viel beitragen kann.
+
+F&#252;r alle, die schon einmal da waren: Alle neuen und auch alten Teilnehmer bekommen die M&#246;glichkeit, sich in verschiedenen Themen zu besch&#228;ftigen. Auch Teilnehmer, die schon &#246;fter bei den FrogLabs waren, werden sich nicht langweilen.
+
+Dieses Jahr in Graz bieten wir zwei Workshops an:
+
+* Spiele programmieren mit Python und Pygame
+* Elekronik und Mikrocontroller mit Python (LED-Animationen)
+
+# Anmeldung und Kosten
+
+Die Teilnahme kostet regul&#228;r 40 &#8364;. Uns ist aber wichtig, dass alle Interessierten mitmachen k&#246;nnen. Bitte kontaktiert uns, falls ihr weniger bezahlen m&#246;chtet.
+
+**Alle Kinder, die teilnehmen m&#246;chten, m&#252;ssen sich selber (gerne mit Hilfe ihrer Eltern) bei Teckids registrieren.**
+
+Alle weiteren Informationen und die Anmeldung gibt es [im Anmeldesystem des Teckids e.V.](https://ticdesk.teckids.org/app/paweljong/event/froglabs-2024-glt/). Dort sind auch Kontaktdaten f&#252;r Fragen hinterlegt.
+
+**Sollte es bei der Anmeldung Schwierigkeiten geben, kontaktiert uns bitte per E-Mail oder Telefon.**</description>
+                <logo></logo>
+                <persons>
+                    <person id='198'>Dominik George</person><person id='276'>Martin Winter</person>
+                </persons>
+                <links></links>
+                <attachments></attachments>
+            </event>
+            
+        </room>
+        
+    </day>
+    
+</schedule>

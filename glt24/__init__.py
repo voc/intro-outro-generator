@@ -5,7 +5,8 @@ from schedulelib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'https://pretalx.linuxtage.at/glt24/schedule.xml'
+#scheduleUrl = 'https://pretalx.linuxtage.at/glt24/schedule.xml'
+scheduleUrl = 'file:/home/sophie/coding/voc/intro-outro-generator/glt24/schedule__2024-03-25_16-57-04.xml'
 
 def introFrames(args):
 #fade in tux and set other opacities to 0
