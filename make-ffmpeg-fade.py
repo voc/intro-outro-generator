@@ -180,7 +180,7 @@ def fit_text(string: str, frame_width):
     line = []
     for word in split_line:
         new_line = line + [word.rstrip(':')]
-        w, _ = translation_font.getsize(" ".join(new_line))
+        w = translation_font.getlength(" ".join(new_line))
         print(w, new_line)
         if w > frame_width:
             print("too wide, breaking", line)
@@ -272,6 +272,7 @@ def enqueue_job(event):
             fade_out_end_time=speaker_in + fade_duration + speaker_duration + fade_duration,
             fade_duration=fade_duration
         )
+    videofilter = videofilter.strip(',')
 
     if fileformat == '.mov':
         if alpha == 'true':
