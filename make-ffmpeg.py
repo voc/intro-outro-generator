@@ -28,6 +28,7 @@ class TextConfig:
 
     fontsize: int
     fontcolor: str = "#ffffff"
+    bordercolor: str = None  # border is added, if a color is set
 
     def parse(self, cparser_sect, use_fontfile: bool):
         self.inpoint = cparser_sect.getfloat('in')
@@ -47,6 +48,7 @@ class TextConfig:
 
         self.fontsize = cparser_sect.getint('fontsize')
         self.fontcolor = cparser_sect.get('fontcolor', self.fontcolor)
+        self.bordercolor = cparser_sect.get('bordercolor', None)
 
     def fit_text(self, text: str):
         global translation_font
@@ -65,6 +67,9 @@ class TextConfig:
             filter_str += ":fontfile='{}'".format(self.fontfile_path)
         else:
             filter_str += ":font='{}'".format(self.fontfamily)
+
+        if self.bordercolor is not None:
+            filter_str += ":borderw={}:bordercolor={}".format(self.fontsize / 30, self.bordercolor)
 
         filter_str += ":fontsize={0}:fontcolor={1}:x={2}:y={3}:text={4}".format(
             self.fontsize, self.fontcolor, self.x, self.y, ffmpeg_escape_str(text))
