@@ -66,8 +66,8 @@ class TextConfig:
         else:
             filter_str += ":font='{}'".format(self.fontfamily)
 
-        filter_str += ":fontsize={0}:fontcolor={1}:x={2}:y={3}:text='{4}'".format(
-            self.fontsize, self.fontcolor, self.x, self.y, text)
+        filter_str += ":fontsize={0}:fontcolor={1}:x={2}:y={3}:text={4}".format(
+            self.fontsize, self.fontcolor, self.x, self.y, ffmpeg_escape_str(text))
 
         return filter_str
 
@@ -167,7 +167,12 @@ def fit_text(string: str, frame_width):
 
 
 def ffmpeg_escape_str(text: str) -> str:
-    text = text.replace(':', "\:")  # the ffmpeg command needs colons to be escaped
+    # Escape according to https://ffmpeg.org/ffmpeg-filters.html#Notes-on-filtergraph-escaping
+    # and don't put the string in quotes afterwards!
+    text = text.replace(",", r"\,")
+    text = text.replace(':', r"\\:")
+    text = text.replace("'", r"\\\'")
+
     return text
 
 
@@ -186,13 +191,9 @@ def enqueue_job(conf: Config, event):
 
     event_title = str(event['title'])
     event_personnames = str(event['personnames'])
-    event_title = event_title.replace('"', '\\"')
-    event_title = event_title.replace('\'', '')
-    event_personnames = event_personnames.replace('"', '\\"')
 
-    title = ffmpeg_escape_str(conf.title.fit_text(event_title))
-    speakers = ffmpeg_escape_str(conf.speaker.fit_text(event_personnames))
-    text = ffmpeg_escape_str(conf.text_text)
+    title = conf.title.fit_text(event_title)
+    speakers = conf.speaker.fit_text(event_personnames)
 
     if args.debug:
         print('Title: ', title)
@@ -205,7 +206,7 @@ def enqueue_job(conf: Config, event):
 
     videofilter = conf.title.get_ffmpeg_filter(conf.inout_type, title) + ","
     videofilter += conf.speaker.get_ffmpeg_filter(conf.inout_type, speakers) + ","
-    videofilter += conf.text.get_ffmpeg_filter(conf.inout_type, text)
+    videofilter += conf.text.get_ffmpeg_filter(conf.inout_type, conf.text_text)
 
     cmd = [ffmpeg_path, '-y', '-i', conf.template_file, '-vf', videofilter]
 
