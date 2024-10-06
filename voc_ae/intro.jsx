@@ -26,4 +26,4 @@ textDocument_persons.text = "$personnames"
 textProp_persons.setValue(textDocument_persons)
 
 app.project.save()
-// app.quit()
+app.quit()
