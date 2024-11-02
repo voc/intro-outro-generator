@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # vim: tabstop=4 shiftwidth=4 expandtab
 
+"""See jugendhackt/config.ini for some config file documentation."""
+
 import os
 import sys
 import subprocess
@@ -21,33 +23,39 @@ class TextConfig:
     x: int
     y: int
 
-    use_fontfile: bool
-    fontfile: str
     fontfile_path: str
     fontfamily: str
 
     fontsize: int
-    fontcolor: str = "#ffffff"
+    fontcolor: str
     bordercolor: str = None  # border is added, if a color is set
 
-    def parse(self, cparser_sect, use_fontfile: bool):
+    def uses_fontfile(self):
+        return self.fontfile_path is not None
+
+    def parse(self, cparser_sect, default_fontfile, default_fontfamily, default_fontcolor):
         self.inpoint = cparser_sect.getfloat('in')
         self.outpoint = cparser_sect.getfloat('out')
         self.x = cparser_sect.getint('x')
         self.y = cparser_sect.getint('y')
 
-        self.use_fontfile = use_fontfile
-        if use_fontfile:
-            self.fontfile = cparser_sect.get('fontfile')
-            self.fontfile_path = str(PurePath(args.project, self.fontfile).as_posix())
+        self.fontcolor = cparser_sect.get('fontcolor', default_fontcolor)
+
+        fontfile = cparser_sect.get('fontfile', default_fontfile)
+        fontfamily = cparser_sect.get('fontfamily', default_fontfamily)
+        if fontfile != None and fontfamily is None:
+            self.fontfile_path = str(PurePath(args.project, fontfile).as_posix())
 
             if not os.path.exists(self.fontfile_path):
                 error("Font file {} in Project Path is missing".format(self.fontfile_path))
+
+        elif fontfamily != None and fontfile is None:
+            self.fontfamily = fontfamily
+
         else:
-            self.fontfamily = cparser_sect.get('fontfamily')
+            error("Either provide a 'fontfamily' or 'fontfile', not both")
 
         self.fontsize = cparser_sect.getint('fontsize')
-        self.fontcolor = cparser_sect.get('fontcolor', self.fontcolor)
         self.bordercolor = cparser_sect.get('bordercolor', None)
 
     def fit_text(self, text: str):
@@ -63,7 +71,7 @@ class TextConfig:
         filter_str = "drawtext=enable='between({},{},{})'".format(
             inout_type, self.inpoint, self.outpoint)
 
-        if self.use_fontfile:
+        if self.uses_fontfile():
             filter_str += ":fontfile='{}'".format(self.fontfile_path)
         else:
             filter_str += ":font='{}'".format(self.fontfamily)
@@ -82,7 +90,6 @@ class Config:
     template_file: str  # video background
     alpha: bool = False
     prores: bool = False
-    use_fontfile: bool = False
     inout_type: str = "t"  # in and out time format: t for seconds, n for frame number
 
     fileext: str
@@ -102,21 +109,25 @@ def parse_config(filename) -> Config:
     cparser = ConfigParser()
     cparser.read(filename)
 
-    defaults = cparser['default']
-    conf.schedule = defaults.get('schedule')
-    infile = PurePath(args.project, defaults.get('template'))
+    meta = cparser['meta']
+    conf.schedule = meta.get('schedule')
+    infile = PurePath(args.project, meta.get('template'))
     conf.template_file = str(infile)
-    conf.alpha = defaults.getboolean('alpha', conf.alpha)
-    conf.prores = defaults.getboolean('prores', conf.prores)
-    conf.use_fontfile = defaults.get('fontfile', conf.use_fontfile)
-    conf.inout_type = defaults.get('inout', conf.inout_type)
+    conf.alpha = meta.getboolean('alpha', conf.alpha)
+    conf.prores = meta.getboolean('prores', conf.prores)
+    conf.inout_type = meta.get('inout_type', conf.inout_type)
+
+    defaults = cparser['default']
+    default_fontfile = defaults.get('fontfile', None)
+    default_fontfamily = defaults.get('fontfamily', None)
+    default_fontcolor = defaults.get('fontcolor', "#ffffff")
 
     conf.title = TextConfig()
-    conf.title.parse(cparser['title'], conf.use_fontfile)
+    conf.title.parse(cparser['title'], default_fontfile, default_fontfamily, default_fontcolor)
     conf.speaker = TextConfig()
-    conf.speaker.parse(cparser['speaker'], conf.use_fontfile)
+    conf.speaker.parse(cparser['speaker'], default_fontfile, default_fontfamily, default_fontcolor)
     conf.text = TextConfig()
-    conf.text.parse(cparser['text'], conf.use_fontfile)
+    conf.text.parse(cparser['text'], default_fontfile, default_fontfamily, default_fontcolor)
 
     conf.text_text = cparser['text'].get('text', '')
 
