@@ -71,10 +71,11 @@ class TextConfig:
 
         return fit_text(text, (FRAME_WIDTH-self.x-100), font)
 
-    def get_ffmpeg_filter(self, inout_type: str, text: list[str]):
+    def get_ffmpeg_filter(self, inout_type: str, fade_time: float, text: list[str]):
         if not text:
             return ""
 
+        text_duration = self.outpoint - self.inpoint
         filter_str = ""
         for idx, line in enumerate(text):
             filter_str += "drawtext=enable='between({},{},{})'".format(
@@ -92,6 +93,14 @@ class TextConfig:
             filter_str += ":fontsize={0}:fontcolor={1}:x={2}:y={3}:text={4}".format(
                 self.fontsize, self.fontcolor, self.x, self.y + (idx*self.fontsize), ffmpeg_escape_str(line))
 
+            if fade_time > 0:
+                filter_str += ":alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))'".format(
+                    fade_in_start_time=self.inpoint,
+                    fade_in_end_time=self.inpoint + fade_time,
+                    fade_out_start_time=self.inpoint + fade_time + text_duration,
+                    fade_out_end_time=self.inpoint + fade_time + text_duration + fade_time,
+                    fade_duration=fade_time)
+
             filter_str += ","
 
         return filter_str[:-1]
@@ -103,6 +112,7 @@ class Config:
     alpha: bool = False
     prores: bool = False
     inout_type: str = "t"  # in and out time format: t for seconds, n for frame number
+    fade_duration: float = 0  # fade duration in seconds, 0 to disable
 
     fileext: str
 
@@ -128,6 +138,7 @@ def parse_config(filename) -> Config:
     conf.alpha = meta.getboolean('alpha', conf.alpha)
     conf.prores = meta.getboolean('prores', conf.prores)
     conf.inout_type = meta.get('inout_type', conf.inout_type)
+    conf.fade_duration = meta.getfloat('fade_duration', conf.fade_duration)
 
     defaults = cparser['default']
     default_fontfile = defaults.get('fontfile', None)
@@ -242,9 +253,10 @@ def enqueue_job(conf: Config, event):
     else:
         ffmpeg_path = 'ffmpeg'
 
-    videofilter = conf.title.get_ffmpeg_filter(conf.inout_type, title) + ","
-    videofilter += conf.speaker.get_ffmpeg_filter(conf.inout_type, speakers) + ","
-    videofilter += conf.text.get_ffmpeg_filter(conf.inout_type, extra_text)
+    videofilter = conf.title.get_ffmpeg_filter(conf.inout_type, conf.fade_duration, title) + ","
+    videofilter += conf.speaker.get_ffmpeg_filter(conf.inout_type,
+                                                  conf.fade_duration, speakers) + ","
+    videofilter += conf.text.get_ffmpeg_filter(conf.inout_type, conf.fade_duration, extra_text)
 
     cmd = [ffmpeg_path, '-y', '-i', conf.template_file, '-vf', videofilter]
 

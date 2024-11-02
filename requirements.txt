@@ -1,4 +1,4 @@
-pillow
+pillow>=8.0.0
 cssutils==1.0.2
 lxml==4.9.1
 svg.path==4.0.2
