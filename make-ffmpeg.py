@@ -26,8 +26,6 @@ class TextConfig:
     y: int
 
     fontfile_path: str
-    fontfamily: str
-
     fontsize: int
     fontcolor: str
     bordercolor: str = None  # border is added, if a color is set
@@ -35,7 +33,7 @@ class TextConfig:
     def uses_fontfile(self):
         return self.fontfile_path is not None
 
-    def parse(self, cparser_sect, default_fontfile, default_fontfamily, default_fontcolor):
+    def parse(self, cparser_sect, default_fontfile, default_fontcolor):
         self.inpoint = cparser_sect.getfloat('in')
         self.outpoint = cparser_sect.getfloat('out')
         self.x = cparser_sect.getint('x')
@@ -44,18 +42,10 @@ class TextConfig:
         self.fontcolor = cparser_sect.get('fontcolor', default_fontcolor)
 
         fontfile = cparser_sect.get('fontfile', default_fontfile)
-        fontfamily = cparser_sect.get('fontfamily', default_fontfamily)
-        if fontfile != None and fontfamily is None:
-            self.fontfile_path = str(PurePath(args.project, fontfile).as_posix())
+        self.fontfile_path = str(PurePath(args.project, fontfile).as_posix())
 
-            if not os.path.exists(self.fontfile_path):
-                error("Font file {} in Project Path is missing".format(self.fontfile_path))
-
-        elif fontfamily != None and fontfile is None:
-            self.fontfamily = fontfamily
-
-        else:
-            error("Either provide a 'fontfamily' or 'fontfile', not both")
+        if not os.path.exists(self.fontfile_path):
+            error("Font file {} in Project Path is missing".format(self.fontfile_path))
 
         self.fontsize = cparser_sect.getint('fontsize')
         self.bordercolor = cparser_sect.get('bordercolor', None)
@@ -67,8 +57,6 @@ class TextConfig:
         font = ImageFont.truetype(
             self.fontfile_path, size=self.fontsize, encoding="unic")
 
-        # TODO: Make this work with font family as well!
-
         return fit_text(text, (FRAME_WIDTH-self.x-100), font)
 
     def get_ffmpeg_filter(self, inout_type: str, fade_time: float, text: list[str]):
@@ -78,20 +66,15 @@ class TextConfig:
         text_duration = self.outpoint - self.inpoint
         filter_str = ""
         for idx, line in enumerate(text):
-            filter_str += "drawtext=enable='between({},{},{})'".format(
-                inout_type, self.inpoint, self.outpoint)
+            filter_str += "drawtext=enable='between({},{},{})':x={}:y={}".format(
+                inout_type, self.inpoint, self.outpoint, self.x, self.y + (idx*self.fontsize))
 
-            if self.uses_fontfile():
-                filter_str += ":fontfile='{}'".format(self.fontfile_path)
-            else:
-                filter_str += ":font='{}'".format(self.fontfamily)
+            filter_str += ":fontfile='{}':fontsize={}:fontcolor={}:text={}".format(
+                self.fontfile_path, self.fontsize, self.fontcolor, ffmpeg_escape_str(line))
 
             if self.bordercolor is not None:
                 filter_str += ":borderw={}:bordercolor={}".format(
                     self.fontsize / 30, self.bordercolor)
-
-            filter_str += ":fontsize={0}:fontcolor={1}:x={2}:y={3}:text={4}".format(
-                self.fontsize, self.fontcolor, self.x, self.y + (idx*self.fontsize), ffmpeg_escape_str(line))
 
             if fade_time > 0:
                 filter_str += ":alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))'".format(
@@ -142,15 +125,14 @@ def parse_config(filename) -> Config:
 
     defaults = cparser['default']
     default_fontfile = defaults.get('fontfile', None)
-    default_fontfamily = defaults.get('fontfamily', None)
     default_fontcolor = defaults.get('fontcolor', "#ffffff")
 
     conf.title = TextConfig()
-    conf.title.parse(cparser['title'], default_fontfile, default_fontfamily, default_fontcolor)
+    conf.title.parse(cparser['title'], default_fontfile, default_fontcolor)
     conf.speaker = TextConfig()
-    conf.speaker.parse(cparser['speaker'], default_fontfile, default_fontfamily, default_fontcolor)
+    conf.speaker.parse(cparser['speaker'], default_fontfile, default_fontcolor)
     conf.text = TextConfig()
-    conf.text.parse(cparser['text'], default_fontfile, default_fontfamily, default_fontcolor)
+    conf.text.parse(cparser['text'], default_fontfile, default_fontcolor)
 
     conf.extra_text = cparser['text'].get('text', '')
 
