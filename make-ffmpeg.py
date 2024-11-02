@@ -16,6 +16,8 @@ from PIL import ImageFont
 import schedulelib
 ssl._create_default_https_context = ssl._create_unverified_context
 
+FRAME_WIDTH = 1920
+
 
 class TextConfig:
     inpoint: float
@@ -58,31 +60,41 @@ class TextConfig:
         self.fontsize = cparser_sect.getint('fontsize')
         self.bordercolor = cparser_sect.get('bordercolor', None)
 
-    def fit_text(self, text: str):
-        global translation_font
-        translation_font = ImageFont.truetype(
+    def fit_text(self, text: str) -> list[str]:
+        if not text:
+            return [""]
+
+        font = ImageFont.truetype(
             self.fontfile_path, size=self.fontsize, encoding="unic")
 
         # TODO: Make this work with font family as well!
 
-        return fit_text(text, (1920-self.x-100))
+        return fit_text(text, (FRAME_WIDTH-self.x-100), font)
 
-    def get_ffmpeg_filter(self, inout_type: str, text: str):
-        filter_str = "drawtext=enable='between({},{},{})'".format(
-            inout_type, self.inpoint, self.outpoint)
+    def get_ffmpeg_filter(self, inout_type: str, text: list[str]):
+        if not text:
+            return ""
 
-        if self.uses_fontfile():
-            filter_str += ":fontfile='{}'".format(self.fontfile_path)
-        else:
-            filter_str += ":font='{}'".format(self.fontfamily)
+        filter_str = ""
+        for idx, line in enumerate(text):
+            filter_str += "drawtext=enable='between({},{},{})'".format(
+                inout_type, self.inpoint, self.outpoint)
 
-        if self.bordercolor is not None:
-            filter_str += ":borderw={}:bordercolor={}".format(self.fontsize / 30, self.bordercolor)
+            if self.uses_fontfile():
+                filter_str += ":fontfile='{}'".format(self.fontfile_path)
+            else:
+                filter_str += ":font='{}'".format(self.fontfamily)
 
-        filter_str += ":fontsize={0}:fontcolor={1}:x={2}:y={3}:text={4}".format(
-            self.fontsize, self.fontcolor, self.x, self.y, ffmpeg_escape_str(text))
+            if self.bordercolor is not None:
+                filter_str += ":borderw={}:bordercolor={}".format(
+                    self.fontsize / 30, self.bordercolor)
 
-        return filter_str
+            filter_str += ":fontsize={0}:fontcolor={1}:x={2}:y={3}:text={4}".format(
+                self.fontsize, self.fontcolor, self.x, self.y + (idx*self.fontsize), ffmpeg_escape_str(line))
+
+            filter_str += ","
+
+        return filter_str[:-1]
 
 
 class Config:
@@ -97,7 +109,7 @@ class Config:
     title: TextConfig
     speaker: TextConfig
     text: TextConfig
-    text_text: str = ""  # additional text
+    extra_text: str = ""  # additional text
 
 
 def parse_config(filename) -> Config:
@@ -129,7 +141,7 @@ def parse_config(filename) -> Config:
     conf.text = TextConfig()
     conf.text.parse(cparser['text'], default_fontfile, default_fontfamily, default_fontcolor)
 
-    conf.text_text = cparser['text'].get('text', '')
+    conf.extra_text = cparser['text'].get('text', '')
 
     conf.fileext = infile.suffix
 
@@ -165,20 +177,29 @@ def event_print(event, message):
     print("{} – {}".format(describe_event(event), message))
 
 
-def fit_text(string: str, frame_width):
+def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
+    """Break text into array of strings which fit certain a width (in pixels) for the specified font."""
+
     split_line = [x.strip() for x in string.split()]
-    lines = ""
-    line = ""
+    lines = []
+    w = 0
+    line = []
     for word in split_line:
-        left, top, right, bottom = translation_font.getbbox(" ".join([line, word]))
-        width, height = right - left, bottom - top
-        if width > (frame_width - (2 * 6)):
-            lines += line.strip() + "\n"
-            line = ""
+        new_line = line + [word.rstrip(':')]
+        w = font.getlength(" ".join(new_line))
+        if w > max_width:
+            lines.append(' '.join(line))
+            line = []
 
-        line += word + " "
+        line.append(word.rstrip(':'))
 
-    lines += line.strip()
+        if word.endswith(':'):
+            lines.append(' '.join(line))
+            line = []
+
+    if line:
+        lines.append(' '.join(line))
+
     return lines
 
 
@@ -210,9 +231,10 @@ def enqueue_job(conf: Config, event):
 
     title = conf.title.fit_text(event_title)
     speakers = conf.speaker.fit_text(event_personnames)
+    extra_text = conf.text.fit_text(conf.extra_text)
 
     if args.debug:
-        print('Title: ', title)
+        print('Title:   ', title)
         print('Speaker: ', speakers)
 
     if platform.system() == 'Windows':
@@ -222,7 +244,7 @@ def enqueue_job(conf: Config, event):
 
     videofilter = conf.title.get_ffmpeg_filter(conf.inout_type, title) + ","
     videofilter += conf.speaker.get_ffmpeg_filter(conf.inout_type, speakers) + ","
-    videofilter += conf.text.get_ffmpeg_filter(conf.inout_type, conf.text_text)
+    videofilter += conf.text.get_ffmpeg_filter(conf.inout_type, extra_text)
 
     cmd = [ffmpeg_path, '-y', '-i', conf.template_file, '-vf', videofilter]
 
@@ -298,7 +320,7 @@ if __name__ == "__main__":
         persons = ['Thomas Roth', 'Dmitry Nedospasov', 'Josh Datko',]
         events = [{
             'id': 'debug',
-            'title': 'wallet.fail',
+            'title': 'wallet.fail and the longest talk title to test if the template is big enough',
             'subtitle': 'Hacking the most popular cryptocurrency hardware wallets',
             'persons': persons,
             'personnames': ', '.join(persons),
