@@ -11,8 +11,6 @@ import sys
 import os
 import re
 
-from xml.sax.saxutils import escape as xmlescape
-
 # Parse arguments
 parser = argparse.ArgumentParser(
     description='C3VOC Intro-Outro-Generator - Variant to use with apple Motion Files',
@@ -155,6 +153,13 @@ def run_output(command, **kwargs):
         os.system(f'{cmd} >{t.name} 2>&1')
         return t.read().decode('utf-8')
 
+def xmlescape(xml):
+    xml = xml.replace("&", "&amp;")
+    xml = xml.replace("<", "&lt;")
+    xml = xml.replace(">", "&gt;")
+    xml = xml.replace("\"", "&quot;")
+    xml = xml.replace("'", "&apos;")
+    return xml
 
 def enqueue_job(event):
     event_id = str(event['id'])
