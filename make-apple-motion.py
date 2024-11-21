@@ -61,6 +61,10 @@ parser.add_argument('--no-cleanup', action='store_true', help='''
     keep temp-dir for debugging purposes
     ''')
 
+parser.add_argument('--snapshot-sec', type=int, default=3, help='''
+    number of seconds into the final clip when to take a snapshot (for inspection purposes or as thumbnail)
+    ''')
+
 parser.add_argument('--setting-path', default='hd1080p.compressorsetting', help='''
     filename in the script-dir (where this python script resides),
     the work-dir (where the .motn-file resides) or absolute path to
@@ -226,6 +230,7 @@ def finalize_job(job_id, event):
     intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
     final_clip = os.path.join(os.path.dirname(args.motn), event_id + '.ts')
     copy_clip = os.path.join(os.path.dirname(args.motn), event_id + '.mov')
+    snapshot_file = os.path.join(os.path.dirname(args.motn), event_id + '.png')
 
     shutil.copy(intermediate_clip, copy_clip)
 
@@ -234,6 +239,11 @@ def finalize_job(job_id, event):
         output=final_clip,
         vcodec=args.vcodec,
         acodec=args.acodec)
+
+    run('ffmpeg -y -hide_banner -loglevel error -i {input} -ss {snapshot_sec} -frames:v 1 -vf scale="iw*sar:ih" -f image2 -y -c png {output}',
+        input=intermediate_clip,
+        output=snapshot_file,
+        snapshot_sec=str(args.snapshot_sec))
 
     event_print(event, "finalized intro to " + final_clip)
 
