@@ -11,8 +11,6 @@ import sys
 import os
 import re
 
-from xml.sax.saxutils import escape as xmlescape
-
 # Parse arguments
 parser = argparse.ArgumentParser(
     description='C3VOC Intro-Outro-Generator - Variant to use with apple Motion Files',
@@ -55,6 +53,20 @@ parser.add_argument('--acodec', type=str, default='mp2', help='''
 
 parser.add_argument('--num-audio-streams', dest='naudio', type=int, default=1, help='''
     number of audio-streams to generate. defaults to 1
+    ''')
+
+parser.add_argument('--no-cleanup', action='store_true', help='''
+    keep temp-dir for debugging purposes
+    ''')
+
+parser.add_argument('--snapshot-sec', type=int, default=3, help='''
+    number of seconds into the final clip when to take a snapshot (for inspection purposes or as thumbnail)
+    ''')
+
+parser.add_argument('--setting-path', default='hd1080p.compressorsetting', help='''
+    filename in the script-dir (where this python script resides),
+    the work-dir (where the .motn-file resides) or absolute path to
+    a .compressorsetting file
     ''')
 
 args = parser.parse_args()
@@ -101,9 +113,22 @@ def describe_event(event):
 def event_print(event, message):
     print("{} – {}".format(describe_event(event), message))
 
+def find_settingpath():
+    artwork_dir = os.path.dirname(args.motn)
+    setting_path = os.path.join(artwork_dir, args.setting_path)
+    if os.path.exists(setting_path):
+        return setting_path
+
+    setting_path = os.path.join(os.path.dirname(__file__), args.setting_path)
+    if os.path.exists(setting_path):
+        return setting_path
+
+    return args.setting_path
+
 
 tempdir = tempfile.TemporaryDirectory()
 print('working in ' + tempdir.name)
+settingpath = find_settingpath()
 
 
 def fmt_command(command, **kwargs):
@@ -128,6 +153,13 @@ def run_output(command, **kwargs):
         os.system(f'{cmd} >{t.name} 2>&1')
         return t.read().decode('utf-8')
 
+def xmlescape(xml):
+    xml = xml.replace("&", "&amp;")
+    xml = xml.replace("<", "&lt;")
+    xml = xml.replace(">", "&gt;")
+    xml = xml.replace("\"", "&quot;")
+    xml = xml.replace("'", "&apos;")
+    return xml
 
 def enqueue_job(event):
     event_id = str(event['id'])
@@ -144,10 +176,11 @@ def enqueue_job(event):
         fp.write(xmlstr)
 
     compressor_info = run_output(
-        '/Applications/Compressor.app/Contents/MacOS/Compressor -batchname {batchname} -jobpath {jobpath} -settingpath hd1080p.compressorsetting -locationpath {locationpath}',
+        '/Applications/Compressor.app/Contents/MacOS/Compressor -batchname {batchname} -jobpath {jobpath} -settingpath {settingpath} -locationpath {locationpath}',
         batchname=describe_event(event),
         jobpath=work_doc,
-        locationpath=intermediate_clip)
+        locationpath=intermediate_clip,
+        settingpath=settingpath)
 
     match = re.search(r"<jobID ([A-Z0-9\-]+) ?\/>", compressor_info)
     if not match:
@@ -202,6 +235,7 @@ def finalize_job(job_id, event):
     intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
     final_clip = os.path.join(os.path.dirname(args.motn), event_id + '.ts')
     copy_clip = os.path.join(os.path.dirname(args.motn), event_id + '.mov')
+    snapshot_file = os.path.join(os.path.dirname(args.motn), event_id + '.png')
 
     shutil.copy(intermediate_clip, copy_clip)
 
@@ -210,6 +244,11 @@ def finalize_job(job_id, event):
         output=final_clip,
         vcodec=args.vcodec,
         acodec=args.acodec)
+
+    run('ffmpeg -y -hide_banner -loglevel error -i {input} -ss {snapshot_sec} -frames:v 1 -vf scale="iw*sar:ih" -f image2 -y -c png {output}',
+        input=intermediate_clip,
+        output=snapshot_file,
+        snapshot_sec=str(args.snapshot_sec))
 
     event_print(event, "finalized intro to " + final_clip)
 
@@ -250,5 +289,9 @@ while len(active_jobs) > 0:
         finalize_job(job_id, event)
 
 
-print('all done, cleaning up ' + tempdir.name)
-tempdir.cleanup()
+if args.no_cleanup:
+    print('all done, *NOT* cleaning up, *TEMPFILES REMAIN* in ' + tempdir.name)
+
+else:
+    print('all done, cleaning up ' + tempdir.name)
+    tempdir.cleanup()
