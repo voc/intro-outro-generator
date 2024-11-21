@@ -57,6 +57,10 @@ parser.add_argument('--num-audio-streams', dest='naudio', type=int, default=1, h
     number of audio-streams to generate. defaults to 1
     ''')
 
+parser.add_argument('--no-cleanup', action='store_true', help='''
+    keep temp-dir for debugging purposes
+    ''')
+
 args = parser.parse_args()
 
 
@@ -250,5 +254,9 @@ while len(active_jobs) > 0:
         finalize_job(job_id, event)
 
 
-print('all done, cleaning up ' + tempdir.name)
-tempdir.cleanup()
+if args.no_cleanup:
+    print('all done, *NOT* cleaning up, *TEMPFILES REMAIN* in ' + tempdir.name)
+
+else:
+    print('all done, cleaning up ' + tempdir.name)
+    tempdir.cleanup()
