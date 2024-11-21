@@ -61,6 +61,12 @@ parser.add_argument('--no-cleanup', action='store_true', help='''
     keep temp-dir for debugging purposes
     ''')
 
+parser.add_argument('--setting-path', default='hd1080p.compressorsetting', help='''
+    filename in the script-dir (where this python script resides),
+    the work-dir (where the .motn-file resides) or absolute path to
+    a .compressorsetting file
+    ''')
+
 args = parser.parse_args()
 
 
@@ -105,9 +111,22 @@ def describe_event(event):
 def event_print(event, message):
     print("{} – {}".format(describe_event(event), message))
 
+def find_settingpath():
+    artwork_dir = os.path.dirname(args.motn)
+    setting_path = os.path.join(artwork_dir, args.setting_path)
+    if os.path.exists(setting_path):
+        return setting_path
+
+    setting_path = os.path.join(os.path.dirname(__file__), args.setting_path)
+    if os.path.exists(setting_path):
+        return setting_path
+
+    return args.setting_path
+
 
 tempdir = tempfile.TemporaryDirectory()
 print('working in ' + tempdir.name)
+settingpath = find_settingpath()
 
 
 def fmt_command(command, **kwargs):
@@ -148,10 +167,11 @@ def enqueue_job(event):
         fp.write(xmlstr)
 
     compressor_info = run_output(
-        '/Applications/Compressor.app/Contents/MacOS/Compressor -batchname {batchname} -jobpath {jobpath} -settingpath hd1080p.compressorsetting -locationpath {locationpath}',
+        '/Applications/Compressor.app/Contents/MacOS/Compressor -batchname {batchname} -jobpath {jobpath} -settingpath {settingpath} -locationpath {locationpath}',
         batchname=describe_event(event),
         jobpath=work_doc,
-        locationpath=intermediate_clip)
+        locationpath=intermediate_clip,
+        settingpath=settingpath)
 
     match = re.search(r"<jobID ([A-Z0-9\-]+) ?\/>", compressor_info)
     if not match:
