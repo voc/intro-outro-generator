@@ -199,7 +199,6 @@ def enqueue_job(event):
         return
     work_doc = os.path.join(tempdir.name, event_id + '.aepx')
     script_doc = os.path.join(tempdir.name, event_id+'.jsx')
-    ascript_doc = os.path.join(tempdir.name, event_id+'.scpt')
     intermediate_clip = os.path.join(tempdir.name, event_id + '.mov')
 
     if event_id == 'pause' or event_id == 'outro' or event_id == 'bgloop':
@@ -231,19 +230,9 @@ def enqueue_job(event):
         copyfile(args.project+args.introfile, work_doc)
 
         if platform.system() == 'Darwin':
-            copyfile(args.project+'intro.scpt', ascript_doc)
 
             run(r'''osascript -l JavaScript -e "ae = Application('Adobe After Effects 2025'); ae.activate(); ae.doscriptfile('{scriptpath}');"''',
                      scriptpath=script_doc)
-
-            #run('osascript {ascript_path} {scriptpath}',
-            #    scriptpath=script_doc,
-            #    ascript_path=ascript_doc)
-
-            # run('osascript {ascript_path} {jobpath} {scriptpath}',
-            #    jobpath=work_doc,
-            #    scriptpath=script_doc,
-            #    ascript_path=ascript_doc)
 
             run(r'/Applications/Adobe\ After\ Effects\ 2025/aerender -project {jobpath} -comp "intro" -mp -output {locationpath}',
                 jobpath=work_doc,
