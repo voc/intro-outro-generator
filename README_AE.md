@@ -65,7 +65,7 @@ C3VOC Intro-Outro-Generator - Variant to use with Adobe After Effects Files
 
 positional arguments:
   Project folder
-                              Path to your project folder with After Effects Files (intro.aep/scpt/jsx)
+                              Path to your project folder with After Effects Files (intro.aepx/jsx)
 
   Schedule-URL
                               URL or Path to your schedule.xml
@@ -88,7 +88,7 @@ optional arguments:
 
 How does it work
 --------------------
-There are two files required to make the render work `intro.aep`, `intro.jsx`. 
+There are two files required to make the render work `intro.aepx`, `intro.jsx`. 
 `make-adobe-after-effects.py` will run `intro.aepx` with `intro.jsx` as argument.
 Once done, the project file will be passed to aerender to create an intermediate <id>.mov file. Make sure you set .mov as a default in After Effects.
 Final step is to convert the <id>.mov to <id>.ts
