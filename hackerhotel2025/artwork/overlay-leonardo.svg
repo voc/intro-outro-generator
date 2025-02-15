@@ -8,8 +8,11 @@
    id="svg2"
    version="1.1"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   sodipodi:docname="bg.svg"
+   sodipodi:docname="overlay-leonardo.svg"
    enable-background="new"
+   inkscape:export-filename="/home/thorsten/git/voc/intro-outro-generator/hackerhotel2024/artwork/overlay-leonardo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -137,9 +140,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.71805506"
-     inkscape:cx="1298.6469"
-     inkscape:cy="351.64434"
+     inkscape:zoom="0.31543523"
+     inkscape:cx="749.75772"
+     inkscape:cy="936.80088"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -178,10 +181,6 @@
        orientation="1,0"
        id="guide5827"
        inkscape:locked="false" />
-    <sodipodi:guide
-       position="1482.841,1277.9437"
-       orientation="1,0"
-       id="guide918" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -203,22 +202,9 @@
      id="layer3"
      inkscape:label="Text"
      style="display:inline">
-    <rect
-       style="fill:#000000;stroke:#000000;stroke-width:2.50195;fill-opacity:1"
-       id="rect1419"
-       width="1917.498"
-       height="1077.498"
-       x="1.2509733"
-       y="1.2509733"
-       inkscape:export-filename="/home/thorsten/git/voc/intro-outro-generator/hackerhotel2024/artwork/bg.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96" />
     <g
        id="g3984"
-       transform="matrix(0.35798835,0,0,0.35806,1470.0496,-22.882206)"
-       inkscape:export-filename="/home/thorsten/git/voc/intro-outro-generator/hackerhotel2024/artwork/bg.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       transform="matrix(0.32730293,0,0,0.32730293,1502.6167,-11.313358)">
       <path
          style="fill:#eeee23;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.41408"
          d="m 212.06547,284.45341 h -17.60391 v -35.20783 h -52.81173 v 35.20783 h -17.60392 v -83.6319 h 17.60392 v 30.82016 h 52.81173 v -30.82016 h 17.60391 z m 0,0"
@@ -468,6 +454,22 @@
          d="m 617.26207,454.35784 h 34.99453 l 13.50956,-7.37498 h 47.26401"
          id="path133" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:39.892px;line-height:0%;font-family:'Open Sans Pro';-inkscape-font-specification:'Open Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#eeee23;fill-opacity:1;stroke:none;stroke-width:3.24291px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1852.1141"
+       y="181.15578"
+       id="text5802"><tspan
+         sodipodi:role="line"
+         id="tspan5804"
+         x="1852.1141"
+         y="181.15578"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.892px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';text-align:end;text-anchor:end;fill:#eeee23;fill-opacity:1;stroke-width:3.24291px">Room</tspan><tspan
+         sodipodi:role="line"
+         x="1852.1141"
+         y="231.02078"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.892px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';text-align:end;text-anchor:end;fill:#eeee23;fill-opacity:1;stroke-width:3.24291px"
+         id="tspan11281">Leonardo Da Vinci</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"

@@ -5,7 +5,7 @@ from schedulelib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'https://pretalx.hackerhotel.nl/hackerhotel-2024/schedule.xml'
+scheduleUrl = 'https://pretalx.hackerhotel.nl/2025/schedule/export/schedule.xml'
 
 def bounce(i, min, max, frames):
     if i == frames - 1:
@@ -99,7 +99,7 @@ def debug():
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
     for event in events(scheduleUrl):
-        if event['room'] not in ('Leonardo Da Vinci', 'Rembrandt', 'Willem van Oranje'):
+        if event['room'] not in ('Leonardo Da Vinci', 'Mission Critical Room (Rembrandt)', 'Willem van Oranje'):
             print("skipping room %s (%s [%s])" % (event['room'], event['title'], event['id']))
             continue
         if not (idlist==[]):
