@@ -38,6 +38,7 @@ class TextConfig:
         self.outpoint = cparser_sect.getfloat('out')
         self.x = cparser_sect.getint('x')
         self.y = cparser_sect.getint('y')
+        self.width = cparser_sect.getint('width', FRAME_WIDTH-self.x-100)
 
         self.fontcolor = cparser_sect.get('fontcolor', default_fontcolor)
 
@@ -57,7 +58,7 @@ class TextConfig:
         font = ImageFont.truetype(
             self.fontfile_path, size=self.fontsize, encoding="unic")
 
-        return fit_text(text, (FRAME_WIDTH-self.x-100), font)
+        return fit_text(text, self.width, font)
 
     def get_ffmpeg_filter(self, inout_type: str, fade_time: float, text: list[str]):
         if not text:
