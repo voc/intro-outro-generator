@@ -68,7 +68,7 @@ class TextConfig:
         if not text:
             return ""
 
-        text_duration = self.outpoint - self.inpoint
+        text_duration = self.outpoint - self.inpoint - fade_time * 2
         filter_str = ""
         for idx, (line_width, line) in enumerate(text):
             line_x = self.x
