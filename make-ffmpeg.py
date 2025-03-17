@@ -39,6 +39,10 @@ class TextConfig:
         self.x = cparser_sect.getint('x')
         self.y = cparser_sect.getint('y')
         self.width = cparser_sect.getint('width', FRAME_WIDTH-self.x-100)
+        self.alignment = cparser_sect.get('alignment', 'left')
+
+        if self.alignment not in ('left', 'center', 'right'):
+            error(f"text alignment {self.alignment} unknown, must be left, right or center")
 
         self.fontcolor = cparser_sect.get('fontcolor', default_fontcolor)
 
@@ -53,7 +57,7 @@ class TextConfig:
 
     def fit_text(self, text: str) -> list[str]:
         if not text:
-            return [""]
+            return [(0, "")]
 
         font = ImageFont.truetype(
             self.fontfile_path, size=self.fontsize, encoding="unic")
@@ -66,9 +70,15 @@ class TextConfig:
 
         text_duration = self.outpoint - self.inpoint
         filter_str = ""
-        for idx, line in enumerate(text):
+        for idx, (line_width, line) in enumerate(text):
+            line_x = self.x
+            if self.alignment == "center":
+                line_x = self.x + (self.width - line_width) / 2
+            elif self.alignment == "right":
+                line_x = self.x + (self.width - line_width)
+
             filter_str += "drawtext=enable='between({},{},{})':x={}:y={}".format(
-                inout_type, self.inpoint, self.outpoint, self.x, self.y + (idx*self.fontsize))
+                inout_type, self.inpoint, self.outpoint, line_x, self.y + (idx*self.fontsize))
 
             filter_str += ":fontfile='{}':fontsize={}:fontcolor={}:text={}".format(
                 self.fontfile_path, self.fontsize, self.fontcolor, ffmpeg_escape_str(line))
@@ -172,7 +182,11 @@ def event_print(event, message):
 
 
 def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
-    """Break text into array of strings which fit certain a width (in pixels) for the specified font."""
+    """
+        Break text into list of strings which fit certain a width (in pixels)
+        for the specified font. Returns list of tulpes in format
+        (width_px, text)
+    """
 
     split_line = [x.strip() for x in string.split()]
     lines = []
@@ -182,17 +196,26 @@ def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
         new_line = line + [word.rstrip(':')]
         w = font.getlength(" ".join(new_line))
         if w > max_width:
-            lines.append(' '.join(line))
+            lines.append((
+                font.getlength(' '.join(line)),
+                ' '.join(line),
+            ))
             line = []
 
         line.append(word.rstrip(':'))
 
         if word.endswith(':'):
-            lines.append(' '.join(line))
+            lines.append((
+                font.getlength(' '.join(line)),
+                ' '.join(line),
+            ))
             line = []
 
     if line:
-        lines.append(' '.join(line))
+        lines.append((
+            font.getlength(' '.join(line)),
+            ' '.join(line),
+        ))
 
     return lines
 
