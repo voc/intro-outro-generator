@@ -168,9 +168,17 @@ def tasks(queue, args, idlist, skiplist):
 
 
 		if (event['id'] in idlist or not idlist) and not 'intro' in skiplist:
+			event['source'] = 'intro.svg'
+			if event['id'] == 57948:
+				event['personnames'] = 'S. Fuest, A. Gollenstede, J. Tadge, M. Herbers, R. M. Kaiser'
+			elif event['id'] == 58038:
+				event['personnames'] = 'N. Alt, K. Greve, S. Sander, P. Kalberer, A. Hocevar, B. E. Reiter'
+				event['source'] = 'intro-smaller.svg'
+			elif event['id'] == 58250:
+				event['personnames'] = 'M. Metz, M. Eichhorn, V.-L. Brunn, A. Weinmann'
 		# generate a task description and put them into the queue
 			queue.put(Rendertask(
-				infile = 'intro.svg',
+				infile = event['source'],
 				outfile = str(event['id'])+".ts",
 				sequence = introFrames,
 				parameters = {
