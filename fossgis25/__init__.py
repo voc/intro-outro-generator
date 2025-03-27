@@ -169,6 +169,10 @@ def tasks(queue, args, idlist, skiplist):
 
 		if (event['id'] in idlist or not idlist) and not 'intro' in skiplist:
 			event['source'] = 'intro.svg'
+			if event['id'] == 58083:
+				event['personnames'] = 'Laura Meierkort, Erik Jost'
+			elif event['id'] == 57449:
+				event['personnames'] = 'Thomas Bartoschek'
 			if event['id'] == 57948:
 				event['personnames'] = 'S. Fuest, A. Gollenstede, J. Tadge, M. Herbers, R. M. Kaiser'
 			elif event['id'] == 58038:
