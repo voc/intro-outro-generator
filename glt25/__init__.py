@@ -26,7 +26,7 @@ def introFrames(args):
         )
 
 #show whole image for 5 seconds
-    frames = 5*fps
+    frames = 5*fps + 12
     for i in range(0, frames):
         yield(
             ('title', 'style', 'opacity', 1),
