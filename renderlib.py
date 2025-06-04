@@ -111,8 +111,8 @@ def renderFrame(infile, task, outfile):
             task.workdir, width, height, os.path.abspath(outfile), os.path.abspath(infile))
         errorReturn = subprocess.check_output(
             cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
-        if errorReturn != '':
-            print("inkscape exited with error\n" + errorReturn)
+        #if errorReturn != '':
+        #    print("inkscape exited with error\n" + errorReturn)
             # sys.exit(42)
 
 
