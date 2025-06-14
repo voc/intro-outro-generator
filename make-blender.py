@@ -11,7 +11,6 @@ import schedulelib
 import argparse
 import tempfile
 import shlex
-import time
 import sys
 import os
 import platform
@@ -93,6 +92,10 @@ parser.add_argument('--bgloop', action="store_true", default=False, help='''
 
 parser.add_argument('--keep', action="store_true", default=False, help='''
     Keep source file in the project folder after render.
+    ''')
+
+parser.add_argument('--verbose', action="store_true", default=False, help='''
+    Enable some verbose logging.
     ''')
 args = parser.parse_args()
 
@@ -208,7 +211,7 @@ def enqueue_job(event):
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.92/blender.exe --background {comp} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 4.4/blender.exe --background {comp} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
                 comp=work_comp,
                 locationpath=intermediate_clip)
         if platform.system() == 'Linux':
@@ -227,7 +230,7 @@ def enqueue_job(event):
             fp.write(scriptstr)
 
         if platform.system() == 'Darwin':
-            if args.debug:
+            if args.debug or args.verbose:
                 print("running: Blender.app --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
                       (work_source, work_doc, intermediate_clip))
             run(r'/Applications/Blender.app/Contents/MacOS/Blender --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
@@ -236,15 +239,15 @@ def enqueue_job(event):
                 locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            if args.debug:
-                print("running: blender.exe --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
+            if args.debug or args.verbose:
+                print("running: blender.exe --background %s -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
                       (work_source, work_doc, intermediate_clip))
-            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 2.92/blender.exe --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
+            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 4.4/blender.exe --background {source} -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
                 source=work_source,
                 jobpath=work_doc,
                 locationpath=intermediate_clip)
         if platform.system() == 'Linux':
-            if args.debug:
+            if args.debug or args.verbose:
                 print("running: blender --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
                       (work_source, work_doc, intermediate_clip))
             run(r'blender --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
@@ -334,12 +337,8 @@ for event in events:
     else:
         event_id = str(event['id'])
         event_print(event, "skipping finalizing job")
-        if platform.system() == 'Windows':
-            intermediate_clip = os.path.join(tempdir.name, event_id + '.avi')
-            final_clip = os.path.join(os.path.dirname(args.project), event_id + '.avi')
-        else:
-            intermediate_clip = os.path.join(tempdir.name, event_id + '.mkv')
-            final_clip = os.path.join(os.path.dirname(args.project), event_id + '.mkv')
+        intermediate_clip = os.path.join(tempdir.name, event_id + '.mkv')
+        final_clip = os.path.join(os.path.dirname(args.project), event_id + '.mkv')
         copyfile(intermediate_clip, final_clip)
         event_print(event, "copied intermediate clip to " + final_clip)
 
