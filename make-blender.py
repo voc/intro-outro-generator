@@ -206,18 +206,33 @@ def enqueue_job(event):
     if event_id == 'pause' or event_id == 'outro' or event_id == 'bgloop':
         copyfile(args.project + event_id + '.blend', work_doc)
         if platform.system() == 'Darwin':
-            run(r'/Applications/Blender.app/Contents/MacOS/Blender --background {comp} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
-                comp=work_comp,
-                locationpath=intermediate_clip)
+            if verbose:
+                run_show(r'/Applications/Blender.app/Contents/MacOS/Blender --background {comp} --E BLENDER_EEVEE_NEXT -y --log-level -1 -use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+                    comp=work_comp,
+                    locationpath=intermediate_clip)
+            else:
+                run(r'/Applications/Blender.app/Contents/MacOS/Blender --background {comp} --E BLENDER_EEVEE_NEXT -y --log-level -1 -use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+                    comp=work_comp,
+                    locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
-            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 4.4/blender.exe --background {comp} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
-                comp=work_comp,
-                locationpath=intermediate_clip)
+            if verbose:
+                run_show(r'C:/Program\ Files/Blender\ Foundation/Blender\ 4.4/blender.exe --background {comp} -E BLENDER_EEVEE_NEXT -y --log-level -1 --use-extension 1 --threads 0 --render-output {locationpath} --render- anim',
+                    comp=work_comp,
+                    locationpath=intermediate_clip)
+            else:
+                run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 4.4/blender.exe --background {comp} -E BLENDER_EEVEE_NEXT -y --log-level -1 --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+                    comp=work_comp,
+                    locationpath=intermediate_clip)
         if platform.system() == 'Linux':
-            run(r'blender --background {comp} --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
-                comp=work_comp,
-                locationpath=intermediate_clip)
+            if verbose:
+                run_show(r'blender --background {comp} -E BLENDER_EEVEE_NEXT -y --log-level -1 --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+                    comp=work_comp,
+                    locationpath=intermediate_clip)
+            else:
+                run(r'blender --background {comp} -E BLENDER_EEVEE_NEXT -y --log-level -1 --use-extension 1 --threads 0 --render-output {locationpath} --render-anim',
+                    comp=work_comp,
+                    locationpath=intermediate_clip)
     else:
         with open(args.project + 'intro.py', 'r') as fp:
             scriptstr = fp.read()
@@ -231,29 +246,44 @@ def enqueue_job(event):
 
         if platform.system() == 'Darwin':
             if args.debug or args.verbose:
-                print("running: Blender.app --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
+                print("running: Blender.app --background %s -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
                       (work_source, work_doc, intermediate_clip))
-            run(r'/Applications/Blender.app/Contents/MacOS/Blender --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
-                source=work_source,
-                jobpath=work_doc,
-                locationpath=intermediate_clip)
+                run_show(r'/Applications/Blender.app/Contents/MacOS/Blender --background {source} -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
+                    source=work_source,
+                    jobpath=work_doc,
+                    locationpath=intermediate_clip)
+            else:
+                run(r'/Applications/Blender.app/Contents/MacOS/Blender --background {source} -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
+                    source=work_source,
+                    jobpath=work_doc,
+                    locationpath=intermediate_clip)
 
         if platform.system() == 'Windows':
             if args.debug or args.verbose:
                 print("running: blender.exe --background %s -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
                       (work_source, work_doc, intermediate_clip))
-            run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 4.4/blender.exe --background {source} -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
-                source=work_source,
-                jobpath=work_doc,
-                locationpath=intermediate_clip)
+                run_show(r'C:/Program\ Files/Blender\ Foundation/Blender\ 4.4/blender.exe --background {source} -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python {jobpath} --use-extension 0 --      threads 0 --render-output {locationpath} --render-anim',
+                    source=work_source,
+                    jobpath=work_doc,
+                    locationpath=intermediate_clip)
+            else:
+                run(r'C:/Program\ Files/Blender\ Foundation/Blender\ 4.4/blender.exe --background {source} -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
+                    source=work_source,
+                    jobpath=work_doc,
+                    locationpath=intermediate_clip)
         if platform.system() == 'Linux':
             if args.debug or args.verbose:
-                print("running: blender --background %s --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
+                print("running: blender --background %s -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python %s --use-extension 0 --threads 0 --render-output %s --render-anim" %
                       (work_source, work_doc, intermediate_clip))
-            run(r'blender --background {source} --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
-                source=work_source,
-                jobpath=work_doc,
-                locationpath=intermediate_clip)
+                run_show(r'blender --background {source} -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
+                    source=work_source,
+                    jobpath=work_doc,
+                    locationpath=intermediate_clip)
+            else:
+                run(r'blender --background {source} -E BLENDER_EEVEE_NEXT -y --log-level -1 --python-use-system-env --python {jobpath} --use-extension 0 --threads 0 --render-output {locationpath} --render-anim',
+                    source=work_source,
+                    jobpath=work_doc,
+                    locationpath=intermediate_clip)
     if args.debug or args.keep:
         copyfile(work_doc, args.project + event_id + '.py')
 
