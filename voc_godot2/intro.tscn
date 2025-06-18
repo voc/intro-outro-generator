@@ -1,0 +1,237 @@
+[gd_scene load_steps=17 format=3 uid="uid://beok3pkgee4n3"]
+
+[ext_resource type="Script" uid="uid://ddptiqptgiax6" path="res://intro.gd" id="1_ds5sv"]
+[ext_resource type="Script" uid="uid://difmvslr6y8dp" path="res://example-intro_3d.gd" id="2_3b5an"]
+
+[sub_resource type="Animation" id="Animation_k3p7u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.714, 2.834)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.122173, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pn2dc"]
+resource_name = "intro"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(-1.8, -1.8),
+"update": 0,
+"values": [Vector3(0, 0.714, 2.834), Vector3(-0.09, 0.809, 2.074)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(-1.8, -1.8),
+"update": 0,
+"values": [Vector3(-0.122173, 0, 0), Vector3(-0.0296706, 0.191986, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2i7b0"]
+_data = {
+&"RESET": SubResource("Animation_k3p7u"),
+&"intro": SubResource("Animation_pn2dc")
+}
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xfs3j"]
+dof_blur_far_distance = 3.61
+dof_blur_far_transition = 1.1
+dof_blur_near_transition = 3.0
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rowd3"]
+
+[sub_resource type="Sky" id="Sky_rvx8q"]
+sky_material = SubResource("ProceduralSkyMaterial_rowd3")
+
+[sub_resource type="Environment" id="Environment_jb13s"]
+background_mode = 2
+sky = SubResource("Sky_rvx8q")
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.0
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.25
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_min_cell_size = 0.0146484
+glow_enabled = true
+glow_levels/1 = 1.0
+glow_levels/2 = 1.0
+glow_levels/4 = 0.3
+glow_levels/5 = 0.5
+glow_intensity = 0.03
+glow_bloom = 0.21
+glow_blend_mode = 1
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1359
+volumetric_fog_length = 20.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_03n16"]
+frequency = 0.0975
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cjxdm"]
+width = 1024
+height = 1024
+seamless = true
+as_normal_map = true
+bump_strength = 2.0
+noise = SubResource("FastNoiseLite_03n16")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmqfo"]
+albedo_color = Color(0.427451, 0.427451, 0.427451, 1)
+detail_enabled = true
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_normal = SubResource("NoiseTexture2D_cjxdm")
+uv2_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlvam"]
+emission_enabled = true
+emission = Color(0.768627, 1, 0, 1)
+emission_energy_multiplier = 10.0
+
+[sub_resource type="TextMesh" id="TextMesh_h0pqx"]
+text = "SPEAKER"
+font_size = 24
+vertical_alignment = 2
+autowrap_mode = 3
+depth = 0.021
+width = 215.61
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jxy0"]
+emission_enabled = true
+emission = Color(1, 0, 0.541176, 1)
+emission_energy_multiplier = 10.0
+
+[sub_resource type="TextMesh" id="TextMesh_jpxk7"]
+text = "TITLE"
+font_size = 24
+vertical_alignment = 2
+autowrap_mode = 3
+depth = 0.021
+width = 215.61
+
+[node name="Intro" type="Node3D" node_paths=PackedStringArray("title_node", "personnames_node")]
+script = ExtResource("1_ds5sv")
+title_node = NodePath("Templateparts/Title")
+personnames_node = NodePath("Templateparts/Personnames")
+path_to_title_property = "mesh:text"
+path_to_personnames_property = "mesh:text"
+
+[node name="ApplyTemplate" type="Node" parent="."]
+script = ExtResource("2_3b5an")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2i7b0")
+}
+autoplay = "intro"
+movie_quit_on_finish = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.992546, 0.121869, 0, -0.121869, 0.992546, 0, 0.714, 2.834)
+attributes = SubResource("CameraAttributesPractical_xfs3j")
+fov = 62.9016
+far = 30.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jb13s")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.383617, 0.835144)
+material_override = SubResource("StandardMaterial3D_nmqfo")
+size = Vector3(5.22168, 3.52734, 6.4447)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGBox3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.799059, 0)
+operation = 2
+size = Vector3(4.81445, 2.58813, 6.0354)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.893, -0.100964, -1.64389)
+size = Vector3(1.29395, 1.56531, 1.70007)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D3"]
+transform = Transform3D(-0.798635, 0, -0.601815, 0, 1, 0, 0.601815, 0, -0.798635, -1.446, -0.419, -0.835)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 1.607, -0.778)
+size = Vector3(5.00171, 0.214844, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.955, -0.479, -1.454)
+size = Vector3(1, 2.37402, 1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.325791, -0.467066, 0.822016, -0.17209, 0.884223, 0.434207, -0.929648, -1.38528e-08, -0.368449, 0, 3.29215, 0)
+shadow_enabled = true
+shadow_bias = 0.001
+shadow_blur = 2.0
+directional_shadow_fade_start = 0.9
+directional_shadow_max_distance = 13.5
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.311, 1.009)
+light_color = Color(1, 0, 0.85098, 1)
+light_energy = 0.345
+shadow_enabled = true
+shadow_bias = 0.01
+shadow_blur = 5.0
+omni_range = 2.35
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.314, 0.583, 0.143)
+light_color = Color(0.745098, 1, 0, 1)
+light_energy = 0.345
+shadow_enabled = true
+shadow_bias = 0.01
+shadow_blur = 5.0
+omni_range = 2.35
+
+[node name="Templateparts" type="Node3D" parent="."]
+
+[node name="Personnames" type="MeshInstance3D" parent="Templateparts"]
+transform = Transform3D(0.594823, 0, 0.803857, 0, 1, 0, -0.803857, 0, 0.594823, -1.41, 0.416, 0)
+material_override = SubResource("StandardMaterial3D_tlvam")
+cast_shadow = 0
+mesh = SubResource("TextMesh_h0pqx")
+skeleton = NodePath("../..")
+
+[node name="Title" type="MeshInstance3D" parent="Templateparts"]
+transform = Transform3D(0.999848, 0, 0.0174524, 0, 1, 0, -0.0174524, 0, 0.999848, 0.025, 0.096, 0.995)
+material_override = SubResource("StandardMaterial3D_7jxy0")
+cast_shadow = 0
+mesh = SubResource("TextMesh_jpxk7")
+skeleton = NodePath("../..")
