@@ -204,12 +204,12 @@ def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
 
         line.append(word.rstrip(':'))
 
-        if word.endswith(':'):
-            lines.append((
-                font.getlength(' '.join(line)),
-                ' '.join(line),
-            ))
-            line = []
+        #if word.endswith(':'):
+        #    lines.append((
+        #        font.getlength(' '.join(line)),
+        #        ' '.join(line),
+        #    ))
+        #    line = []
 
     if line:
         lines.append((
@@ -225,6 +225,9 @@ def ffmpeg_escape_str(text: str) -> str:
     # and don't put the string in quotes afterwards!
     text = text.replace(",", r"\,")
     text = text.replace(':', r"\\:")
+    text = text.replace (';', r"\;")
+    text = text.replace(']', r"\]")
+    text = text.replace('[', r"\[")
     text = text.replace("'", r"\\\'")
 
     return text

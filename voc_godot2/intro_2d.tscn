@@ -1,0 +1,365 @@
+[gd_scene load_steps=21 format=3 uid="uid://cyis64xp4hcaq"]
+
+[ext_resource type="Script" uid="uid://ddptiqptgiax6" path="res://intro.gd" id="1_4sbos"]
+[ext_resource type="Script" uid="uid://bgg2kfvr7gsn7" path="res://example-intro_2d.gd" id="2_dv5he"]
+[ext_resource type="Texture2D" uid="uid://cd0d8kpnb0gjj" path="res://logo_large_color_dark.svg" id="2_vflx5"]
+
+[sub_resource type="Animation" id="Animation_7u36l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(182.5, 472)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Personnames:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(183, 824)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Personnames:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LogoLargeColorDark:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 300)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LogoLargeColorDark:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f5a7a"]
+resource_name = "intro"
+length = 5.0
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.8),
+"transitions": PackedFloat32Array(1, 0.307786, 0.307786),
+"update": 0,
+"values": [Vector2(182.5, 422), Vector2(182.5, 422), Vector2(182.5, 472)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.8),
+"transitions": PackedFloat32Array(1, 0.307786, 0.307786),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Personnames:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 0.307786, 0.307786),
+"update": 0,
+"values": [Vector2(183, 874), Vector2(183, 874), Vector2(183, 824)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Personnames:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 0.307786, 0.307786),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LogoLargeColorDark:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.203063, 0.203063),
+"update": 0,
+"values": [Vector2(960, 250), Vector2(960, 300)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LogoLargeColorDark:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.203063, 0.203063),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nqosa"]
+_data = {
+&"RESET": SubResource("Animation_7u36l"),
+&"intro": SubResource("Animation_f5a7a")
+}
+
+[sub_resource type="Gradient" id="Gradient_ybe2h"]
+colors = PackedColorArray(0.0399583, 0.101125, 0.144531, 1, 0.148823, 0.383727, 0.46875, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qjlbc"]
+gradient = SubResource("Gradient_ybe2h")
+fill_from = Vector2(0.581197, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_f2uac"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_181sc"]
+colors = PackedColorArray(0, 0.201633, 0.3125, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2td70"]
+gradient = SubResource("Gradient_181sc")
+
+[sub_resource type="Gradient" id="Gradient_fudmm"]
+offsets = PackedFloat32Array(0, 0.441748, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xp4ws"]
+gradient = SubResource("Gradient_fudmm")
+
+[sub_resource type="Curve" id="Curve_75uth"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0.149573, 0.659341), 0.0, 0.0, 0, 0, Vector2(1, 3), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_kp1dl"]
+curve = SubResource("Curve_75uth")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d5287"]
+lifetime_randomness = 0.6
+particle_flag_disable_z = true
+particle_flag_damping_as_friction = true
+emission_shape_scale = Vector3(960, 540, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+gravity = Vector3(0, -100, 0)
+damping_min = 0.5
+damping_max = 0.5
+scale_min = 0.1
+scale_max = 3.0
+scale_over_velocity_min = 10.0
+scale_over_velocity_max = 400.0
+scale_over_velocity_curve = SubResource("CurveTexture_kp1dl")
+color_ramp = SubResource("GradientTexture1D_xp4ws")
+color_initial_ramp = SubResource("GradientTexture1D_2td70")
+turbulence_enabled = true
+turbulence_noise_scale = 9.95
+turbulence_influence_min = 0.01
+turbulence_influence_max = 0.15
+
+[sub_resource type="Gradient" id="Gradient_62je6"]
+colors = PackedColorArray(1, 1, 1, 1, 0.0781912, 0.52173, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uuvj4"]
+gradient = SubResource("Gradient_62je6")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Shader" id="Shader_kn2nw"]
+code = "/*
+	動的電子背景シェーダー by あるる（きのもと 結衣） @arlez80
+	Procedural Electric Background Shader by Yui Kinomoto @arlez80
+
+	MIT License
+*/
+shader_type canvas_item;
+render_mode blend_add;
+
+uniform vec4 background_color : source_color = vec4( 0.0, 0.0, 0.0, 1.0 );
+uniform vec4 line_color : source_color = vec4( 0.0, 1.0, 1.0, 1.0 );
+uniform float line_freq = 9.56;
+uniform float height = 0.6;
+uniform float speed = 0.8;
+uniform vec2 scale = vec2( 2.0, 16.0 );
+
+void fragment( )
+{
+	vec2 uv = UV * scale;
+	float shift = cos( floor( uv.y ) );
+	uv.x += shift;
+
+	float freq = clamp( cos( uv.x * line_freq ) * 3.0, 0.0, 1.0 ) * height;
+	float line = 1.0 - clamp( abs( freq - mod( uv.y, 1.0 ) ) * 11.0, 0.0, 1.0 );
+
+	COLOR = mix( background_color, line_color, line * mod( uv.x - TIME * speed * abs( shift ), 1.0 ) /*  * mod( TIME + shift, 1.0 ) */ );
+}"
+metadata/_edit_res_path = "res://intro_2d.tscn::Shader_kn2nw"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0nhle"]
+shader = SubResource("Shader_kn2nw")
+shader_parameter/background_color = Color(0, 0, 0, 1)
+shader_parameter/line_color = Color(0, 0.0431373, 0.0431373, 1)
+shader_parameter/line_freq = 9.56
+shader_parameter/height = 0.6
+shader_parameter/speed = 0.8
+shader_parameter/scale = Vector2(2, 16)
+
+[node name="intro2d" type="Control" node_paths=PackedStringArray("title_node", "personnames_node")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4sbos")
+title_node = NodePath("Title")
+personnames_node = NodePath("Personnames")
+path_to_title_property = "text"
+path_to_personnames_property = "text"
+
+[node name="ApplyTemplate" type="Node" parent="."]
+script = ExtResource("2_dv5he")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nqosa")
+}
+autoplay = "intro"
+movie_quit_on_finish = true
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_qjlbc")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(0, 0.129412, 0.176471, 1)
+material = SubResource("CanvasItemMaterial_f2uac")
+position = Vector2(1005, 527)
+amount = 40
+process_material = SubResource("ParticleProcessMaterial_d5287")
+texture = SubResource("GradientTexture2D_uuvj4")
+lifetime = 4.0
+fixed_fps = 60
+interpolate = false
+
+[node name="BackgroundEffect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_0nhle")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_qjlbc")
+
+[node name="LogoLargeColorDark" type="Sprite2D" parent="."]
+position = Vector2(960, 300)
+texture = ExtResource("2_vflx5")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 182.5
+offset_top = 472.0
+offset_right = 1737.5
+offset_bottom = 807.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 121
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="Personnames" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 183.0
+offset_top = 824.0
+offset_right = 1738.0
+offset_bottom = 1081.01
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 86
+text = "Personnames"
+horizontal_alignment = 1
+autowrap_mode = 3
