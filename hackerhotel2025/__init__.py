@@ -71,10 +71,10 @@ def debug():
       '../intro.ts',
       introFrames,
       {
-          '$ID': 4711,
-          '$TITLE': "Long Long Long title is LONG",
-          '$SUBTITLE': 'Long Long Long Long subtitle is LONGER',
-          '$SPEAKER': 'Long Name of Dr. Dr. Prof. Dr. Long Long'
+          '$ID': 999,
+          '$TITLE': "Onaangekondigde Persconferentie",
+          '$SUBTITLE': '',
+          '$SPEAKER': 'Dimitri'
       }
     )
 
