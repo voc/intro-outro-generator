@@ -204,12 +204,12 @@ def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
 
         line.append(word.rstrip(':'))
 
-        if word.endswith(':'):
-            lines.append((
-                font.getlength(' '.join(line)),
-                ' '.join(line),
-            ))
-            line = []
+        #if word.endswith(':'):
+        #    lines.append((
+        #        font.getlength(' '.join(line)),
+        #        ' '.join(line),
+        #    ))
+        #    line = []
 
     if line:
         lines.append((
