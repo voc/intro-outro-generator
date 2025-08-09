@@ -225,7 +225,7 @@ def ffmpeg_escape_str(text: str) -> str:
     # and don't put the string in quotes afterwards!
     text = text.replace(",", r"\,")
     text = text.replace(':', r"\\:")
-    text = text.replace (';', r"\;")
+    text = text.replace (';', r"\\\;")
     text = text.replace(']', r"\]")
     text = text.replace('[', r"\[")
     text = text.replace("'", r"\\\'")
