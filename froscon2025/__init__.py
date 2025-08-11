@@ -3,6 +3,7 @@
 import subprocess
 import os.path
 from renderlib import *
+from schedulelib import *
 from easing import *
 import svg.path
 
@@ -16,7 +17,7 @@ titlemap = {
 
 
 def introFrames(args):
-	xml = etree.parse('froscon2023/artwork/intro.svg').getroot()
+	xml = etree.parse('froscon2025/artwork/intro.svg').getroot()
 	pathstr = xml.find(".//*[@id='animatePath']").get('d')
 	frog = xml.find(".//*[@id='animatePath']").get('d')
 	path = svg.path.parse_path(pathstr)
@@ -50,7 +51,7 @@ def introFrames(args):
 		)
 
 def outroFrames(args):
-	xml = etree.parse('froscon2023/artwork/outro.svg').getroot()
+	xml = etree.parse('froscon2025/artwork/outro.svg').getroot()
 
 	frames = int(4*fps)
 	for i in range(0, frames):

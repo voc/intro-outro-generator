@@ -17,7 +17,8 @@ fps = 25
 debug = True
 args = None
 
-scheduleTree=None
+scheduleTree = None
+
 
 def loadProject(projectname):
     sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), projectname))
@@ -45,7 +46,7 @@ class Rendertask:
         self.parameters = parameters
         self.outfile = outfile
         self.workdir = workdir
-        self.sequence = sequence # deprecated, use animated()
+        self.sequence = sequence  # deprecated, use animated()
 
     def animated(self, sequence):
         atask = self
@@ -70,6 +71,8 @@ class Rendertask:
             return None
 
 # try to create all folders needed and skip, they already exist
+
+
 def ensurePathExists(path):
     try:
         os.makedirs(path)
@@ -83,6 +86,7 @@ def ensureFilesRemoved(pattern):
     for f in glob.glob(pattern):
         os.unlink(f)
 
+
 def renderFrame(infile, task, outfile):
     width = 1920
     height = 1080
@@ -93,50 +97,57 @@ def renderFrame(infile, task, outfile):
                 converted.save(filename=outfile)
     elif args.resvg:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-        cmd = 'resvg --background white --width={1} --height={2}  "{4}" "{3}" 2>&1 >/dev/null'.format(task.workdir, width, height, outfile, infile)
-        errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
+        cmd = 'resvg --background white --width={1} --height={2}  "{4}" "{3}" 2>&1 >/dev/null'.format(
+            task.workdir, width, height, outfile, infile)
+        errorReturn = subprocess.check_output(
+            cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
         if errorReturn != '':
             print("resvg exited with error\n" + errorReturn)
             # sys.exit(42)
 
     else:
         # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-        cmd = 'dbus-run-session inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-png="{3}" "{4}" 2>&1 >/dev/null'.format(task.workdir, width, height, os.path.abspath(outfile), os.path.abspath(infile))
-        errorReturn = subprocess.check_output(cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
-        if errorReturn != '':
-            print("inkscape exited with error\n" + errorReturn)
+        cmd = 'inkscape --export-background=white --export-background-opacity=0 --export-width={1} --export-height={2} --export-filename="{3}" "{4}" --pipe 2>&1 >/dev/null'.format(
+            task.workdir, width, height, os.path.abspath(outfile), os.path.abspath(infile))
+        errorReturn = subprocess.check_output(
+            cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)
+        #if errorReturn != '':
+        #    print("inkscape exited with error\n" + errorReturn)
             # sys.exit(42)
 
+
 def cachedRenderFrame(frame, frameNr, task, cache):
-        skip_rendering = False
-        # skip first n frames, to speed up rerendering during debugging
-        if 'only_rerender_frames_after' in task.parameters:
-            skip_rendering = (frameNr <= task.parameters['only_rerender_frames_after'])
+    skip_rendering = False
+    # skip first n frames, to speed up rerendering during debugging
+    if 'only_rerender_frames_after' in task.parameters:
+        skip_rendering = (frameNr <= task.parameters['only_rerender_frames_after'])
 
-        if args.skip_frames:
-            skip_rendering = (frameNr <= args.skip_frames)
+    if args.skip_frames:
+        skip_rendering = (frameNr <= args.skip_frames)
 
-        if args.only_frame:
-            skip_rendering = (frameNr != args.only_frame)
+    if args.only_frame:
+        skip_rendering = (frameNr != args.only_frame)
 
-        # print a line for each and every frame generated
-        if debug and not skip_rendering:
-            print("frameNr {0:3d} => {1}".format(frameNr, frame))
+    # print a line for each and every frame generated
+    if debug and not skip_rendering:
+        print("frameNr {0:3d} => {1}".format(frameNr, frame))
 
-        frame = tuple(frame)
-        if frame in cache:
-            if debug:
-                print("cache hit, reusing frame {0}".format(cache[frame]))
+    frame = tuple(frame)
+    if frame in cache:
+        if debug:
+            print("cache hit, reusing frame {0}".format(cache[frame]))
 
-            framedir = task.workdir + "/.frames/"
-            shutil.copyfile("{0}/{1:04d}.png".format(framedir, cache[frame]), "{0}/{1:04d}.png".format(framedir, frameNr))
+        framedir = task.workdir + "/.frames/"
+        shutil.copyfile("{0}/{1:04d}.png".format(framedir,
+                        cache[frame]), "{0}/{1:04d}.png".format(framedir, frameNr))
 
-            return
-        elif not skip_rendering:
-            cache[frame] = frameNr
+        return
+    elif not skip_rendering:
+        cache[frame] = frameNr
 
-        svgfile = '{0}/.frames/{1:04d}.svg'.format(task.workdir, frameNr)
+    svgfile = '{0}/.frames/{1:04d}.svg'.format(task.workdir, frameNr)
 
+    if not skip_rendering:
         with SVGTemplate(task, svgfile) as svg:
             svg.replacetext()
             svg.transform(frame)
@@ -145,8 +156,8 @@ def cachedRenderFrame(frame, frameNr, task, cache):
         outfile = '{0}/.frames/{1:04d}.png'.format(task.workdir, frameNr)
         renderFrame(svgfile, task, outfile)
 
-        # increment frame-number
-        frameNr += 1
+    # increment frame-number
+    frameNr += 1
 
 
 def rendertask_image(task):
@@ -155,6 +166,7 @@ def rendertask_image(task):
         svg.replacetext()
         svg.write()
     renderFrame(svgfile, task, task.outfile)
+
 
 def rendertask_video(task):
     # iterate through the animation sequence frame by frame
@@ -170,7 +182,8 @@ def rendertask_video(task):
     ensureFilesRemoved(os.path.join(task.workdir, task.outfile))
 
     if task.outfile.endswith('.png'):
-        cmd = 'cd {0} && cp ".frames/{1:04d}.png" "{2}"'.format(task.workdir, args.only_frame, task.outfile)
+        cmd = 'cd {0} && cp ".frames/{1:04d}.png" "{2}"'.format(
+            task.workdir, args.only_frame, task.outfile)
 
     # invoke avconv aka ffmpeg and renerate a lossles-dv from the frames
     #  if we're not in debug-mode, suppress all output
@@ -191,11 +204,14 @@ def rendertask_video(task):
         cmd += '-shortest -f mpegts "{0}"'.format(task.outfile)
     elif task.outfile.endswith('.mov'):
         cmd = 'cd {0} && '.format(task.workdir)
-        cmd += 'ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -f image2 -i .frames/%04d.png -r 25 -shortest -c:v qtrle -f mov "{0}"'.format(task.outfile)
+        cmd += 'ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -f image2 -i .frames/%04d.png -r 25 -shortest -c:v qtrle -f mov "{0}"'.format(
+            task.outfile)
     elif task.outfile.endswith('.mkv'):
-        cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -aspect 16:9 -c copy -shortest "{1}"'.format(task.workdir, task.outfile)
+        cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -aspect 16:9 -c copy -shortest "{1}"'.format(
+            task.workdir, task.outfile)
     else:
-        cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(task.workdir, task.outfile)
+        cmd = 'cd {0} && ffmpeg -ar 48000 -ac 2 -f s16le -i /dev/zero -f image2 -i .frames/%04d.png -target pal-dv -aspect 16:9 -shortest "{1}"'.format(
+            task.workdir, task.outfile)
 
     if debug:
         print(cmd)
@@ -207,15 +223,16 @@ def rendertask_video(task):
         if r != 0:
             sys.exit()
 
+
 def rendertask(task):
     global args
     # in debug mode we have no thread-worker which prints its progress
     if debug:
         print("generating {0} from {1}".format(task.outfile, task.infile))
 
-    ## Hacky workaround: Fix this properly without breaking the
-    ## support for partially rendered intros
-    if True: #args.skip_frames and 'only_rerender_frames_after' not in task.parameters:
+    # Hacky workaround: Fix this properly without breaking the
+    # support for partially rendered intros
+    if True:  # args.skip_frames and 'only_rerender_frames_after' not in task.parameters:
         if os.path.isdir(os.path.join(task.workdir, '.frames')):
             print("Removing", os.path.join(task.workdir, '.frames'))
             shutil.rmtree(os.path.join(task.workdir, '.frames'))
@@ -234,114 +251,9 @@ def rendertask(task):
         # remove the generated svg
         ensureFilesRemoved(os.path.join(task.workdir, '.gen.svg'))
 
-# Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event
-def downloadSchedule(scheduleUrl):
-    print("downloading schedule")
-
-    # download the schedule
-    response = urlopen(scheduleUrl)
-
-    # read xml-source
-    xml = response.read()
-
-    # parse into ElementTree
-    parser = etree.XMLParser(huge_tree=True)
-    return etree.fromstring(xml, parser)
-
-def getSchedule(scheduleUrl):
-    global scheduleTree
-    if not scheduleTree:
-        scheduleTree=downloadSchedule(scheduleUrl)
-    return scheduleTree
-
-
-def persons(scheduleUrl, personmap={}, taglinemap={}, forEventId=None):
-    schedule = getSchedule(scheduleUrl)
-    # iterate all days
-    for day in schedule.iter('day'):
-        # iterate all rooms
-        for room in day.iter('room'):
-            # iterate events on that day in this room
-            for event in room.iter('event'):
-                eventid = int(event.get("id"))
-                if event != None and not eventid == forEventId:
-                    continue
-                # aggregate names of the persons holding this talk
-                persons_seen = []
-                if event.find('persons') is not None:
-                    for person in event.find('persons').iter('person'):
-                        id = int(person.get("id"))
-                        person = re.sub(r'\s+', ' ', person.text).strip()
-                        match = re.search(r'\((.*?)\)', person)
-                        tagline = ''
-                        if not match is None:
-                            tagline = match.group(1)
-                            person = person.split(" (")[0]
-                        if id in taglinemap:
-                            tagline = taglinemap[id]
-                        if id in personmap:
-                            person = personmap[id]
-                        if not id in persons_seen:
-                            persons_seen.append(id)
-                            yield {
-                                'id': id,
-                                'person': person,
-                                'tagline': tagline
-                            }
-
-def events(scheduleUrl, titlemap={}):
-    schedule = getSchedule(scheduleUrl)
-    # iterate all days
-    for day in schedule.iter('day'):
-        # iterate all rooms
-        for room in day.iter('room'):
-            # iterate events on that day in this room
-            for event in room.iter('event'):
-                # aggregate names of the persons holding this talk
-                personnames = []
-                if event.find('persons') is not None:
-                    for person in event.find('persons').iter('person'):
-                        try:
-                            personname = re.sub(r'\s+', ' ', person.text).strip()
-                        except:
-                            personnames.append(str('None'))
-                        personnames.append(personname)
-
-                id = int(event.get('id'))
-
-                if id in titlemap:
-                    title = titlemap[id]
-                elif event.find('title') is not None and event.find('title').text is not None:
-                    title = re.sub(r'\s+', ' ', event.find('title').text).strip()
-                else:
-                    title = ''
-
-                if event.find('subtitle') is not None and event.find('subtitle').text is not None:
-                    subtitle = re.sub(r'\s+', ' ', event.find('subtitle').text).strip()
-                else:
-                    subtitle = ''
-
-                if event.find('url') is not None and event.find('url').text is not None:
-                    url = event.find('url').text.strip()
-                else:
-                    url = ''
-                # yield a tupel with the event-id, event-title and person-names
-                yield {
-                    'day': day.get('index'),
-                    'id': id,
-                    'title': title,
-                    'subtitle': subtitle,
-                    'persons': personnames,
-                    'personnames': ', '.join(personnames),
-                    'room': room.attrib['name'],
-                    'track': event.find('track').text,
-		            'url': url
-                }
-
 
 try:
     from termcolor import colored
 except ImportError:
     def colored(str, col):
         return str
-

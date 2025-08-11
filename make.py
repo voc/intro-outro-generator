@@ -14,7 +14,8 @@ import renderlib
 import argparse
 
 # Parse arguments
-parser = argparse.ArgumentParser(description='C3VOC Intro-Outro-Generator', usage="see help with option -h", formatter_class=argparse.RawTextHelpFormatter)
+parser = argparse.ArgumentParser(description='C3VOC Intro-Outro-Generator',
+                                 usage="see help with option -h", formatter_class=argparse.RawTextHelpFormatter)
 parser.add_argument('projectpath', action="store", metavar='yourproject/', type=str, help='''
     Path to your project is a required argument.
     Usage: ./make.py yourproject/
@@ -87,7 +88,8 @@ projectpath = args.projectpath
 try:
     project = renderlib.loadProject(projectname)
 except ImportError:
-    print("you must specify a project-name as first argument, eg. './make.py sotmeu14'. The supplied value '{0}' seems not to be a valid project (there is no '{0}/__init__.py').\n".format(projectname))
+    print(
+        "you must specify a project-name as first argument, eg. './make.py sotmeu14'. The supplied value '{0}' seems not to be a valid project (there is no '{0}/__init__.py').\n".format(projectname))
     raise
 
 # using --debug skips the threading, the network fetching of the schedule and
@@ -98,7 +100,8 @@ renderlib.args = args
 
 
 def render(infile, outfile, sequence, parameters={}, workdir=os.path.join(projectname, 'artwork')):
-    task = renderlib.Rendertask(infile=infile, outfile=outfile, sequence=sequence, parameters=parameters, workdir=workdir)
+    task = renderlib.Rendertask(infile=infile, outfile=outfile,
+                                sequence=sequence, parameters=parameters, workdir=workdir)
     return renderlib.rendertask(task)
 
 
@@ -188,7 +191,8 @@ def worker():
         renderlib.rendertask(task)
 
         # print that we're finished
-        tprint('finished {0}, {1} tasks left'.format(task.outfile, max(0, tasks.qsize() - num_worker_threads)))
+        tprint('finished {0}, {1} tasks left'.format(
+            task.outfile, max(0, tasks.qsize() - num_worker_threads)))
 
         # mark the task as finished
         tasks.task_done()
