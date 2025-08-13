@@ -6,30 +6,31 @@ from renderlib import *
 from schedulelib import *
 from easing import *
 import svg.path
+import re
 
 # URL to Schedule-XML
 scheduleUrl = 'https://programm.froscon.org/2025/schedule.xml'
 
 # For (really) too long titles
 titlemap = {
-    #
+	#
 }
 
 
 def introFrames(args):
 	xml = etree.parse('froscon2025/artwork/intro.svg').getroot()
 	pathstr = xml.find(".//*[@id='animatePath']").get('d')
-	frog = xml.find(".//*[@id='animatePath']").get('d')
 	path = svg.path.parse_path(pathstr)
 
-	init = path.point(0)
+	final = path.point(1.0)
+	frogpos = complex(1565.289, -157.31493) # target frog transform xy
 
 	frames = 3*fps
-	for i in range(0, frames):
-		p = path.point(i / frames) - init
+	for i in range(0, frames + 1):
+		p = path.point(i / frames) - final + frogpos
 		yield (
 			('animatePath', 'style', 'opacity', 0),
-			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag+120)),
+			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),
 			('title', 'style', 'opacity', 0),
 			('names', 'style', 'opacity', 0),
 		)
@@ -38,7 +39,7 @@ def introFrames(args):
 #	for i in range(0, frames):
 #		yield (
 #			('animatePath', 'style', 'opacity', 0),
-#			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag+120)),
+#			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),
 #			('title',   'style', 'opacity', easeLinear(i, 0, 1, frames)),
 #			('names', 'style', 'opacity', easeLinear(i, 0, 1, frames)),
 #		)
@@ -47,7 +48,7 @@ def introFrames(args):
 	for i in range(0, frames):
 		yield (
 			('animatePath', 'style', 'opacity', 0),
-			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag+120)),
+			('frog',  'attr', 'transform', 'translate(%.4f, %.4f)' % (p.real, p.imag)),
 		)
 
 def outroFrames(args):
@@ -112,15 +113,15 @@ def debug():
 		}
 	)
 
-#	render('outro.svg',
-#		'../outro.ts',
-#		outroFrames
-#	)
+	render('outro.svg',
+		'../outro.ts',
+		outroFrames
+	)
 
-#	render('pause.svg',
-#		'../pause.ts',
-#		pauseFrames
-#	)
+	render('pause.svg',
+		'../pause.ts',
+		pauseFrames
+	)
 
 
 def tasks(queue, args, idlist, skiplist):

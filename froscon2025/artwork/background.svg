@@ -4,13 +4,14 @@
 <svg
    id="svg2"
    version="1.1"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    width="1920"
    height="1080"
    viewBox="0 0 1920 1080"
    sodipodi:docname="background.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -28,7 +29,29 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs6" />
+     id="defs6">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5"
+       id="linearGradient6"
+       x1="960"
+       y1="0"
+       x2="960"
+       y2="1499.8922"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient5"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#313495;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+      <stop
+         style="stop-color:#1a1b3e;stop-opacity:1;"
+         offset="1"
+         id="stop6" />
+    </linearGradient>
+  </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -38,40 +61,40 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1269"
-     inkscape:window-height="1035"
+     inkscape:window-width="2560"
+     inkscape:window-height="1368"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="1.9809152"
-     inkscape:cx="1606.0758"
-     inkscape:cy="144.88253"
-     inkscape:window-x="2564"
-     inkscape:window-y="1070"
+     inkscape:zoom="0.4952288"
+     inkscape:cx="725.92709"
+     inkscape:cy="679.48391"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Assets"
+     inkscape:current-layer="svg2"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:pagecheckerboard="0"
      inkscape:showpageshadow="2"
      inkscape:deskcolor="#d1d1d1">
     <sodipodi:guide
-       position="1664.2857,871.42857"
+       position="1536.0966,1012.0669"
        orientation="1,0"
        id="guide4731"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="1840.4762,-14.285714"
+       position="1899.6491,967.5623"
        orientation="1,0"
        id="guide4733"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <rect
-     id="rect2600"
-     width="1920"
-     height="1080"
-     x="0"
      y="0"
-     style="fill:#1f1fa3;fill-opacity:1;stroke-width:1" />
+     x="0"
+     height="1080"
+     width="1920"
+     id="rect3809-1"
+     style="fill:url(#linearGradient6);fill-opacity:1;stroke-width:3.6841" />
   <g
      id="Assets"
      stroke="none"
