@@ -275,27 +275,6 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 1030.1811 : 1"
        sodipodi:type="inkscape:persp3d" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5"
-       id="linearGradient6"
-       x1="960"
-       y1="0"
-       x2="960"
-       y2="1499.8922"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       id="linearGradient5"
-       inkscape:collect="always">
-      <stop
-         style="stop-color:#313495;stop-opacity:1;"
-         offset="0"
-         id="stop5" />
-      <stop
-         style="stop-color:#1a1b3e;stop-opacity:1;"
-         offset="1"
-         id="stop6" />
-    </linearGradient>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -304,11 +283,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.54716266"
-     inkscape:cx="1039.9101"
-     inkscape:cy="711.85413"
+     inkscape:zoom="0.31702453"
+     inkscape:cx="1433.643"
+     inkscape:cy="89.898406"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="2560"
      inkscape:window-height="1368"
@@ -527,7 +506,7 @@
        height="452.69049"
        width="1920"
        id="textBg"
-       style="display:inline;fill:url(#linearGradient6);fill-opacity:1;stroke-width:3.6841"
+       style="display:inline;fill:#2a2c79;fill-opacity:1;stroke-width:3.6841"
        mask="none"
        transform="translate(0,476.36218)"
        inkscape:label="textBg" />
