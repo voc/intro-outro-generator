@@ -13,7 +13,7 @@ scheduleUrl = 'https://programm.froscon.org/2025/schedule.xml'
 
 # For (really) too long titles
 titlemap = {
-	#
+	3370: "Viel Public Money wenig Public Code"
 }
 
 
@@ -139,7 +139,7 @@ def tasks(queue, args, idlist, skiplist):
 				sequence = introFrames,
 				parameters = {
 					'$id': event['id'],
-					'$title': event['title'],
+					'$title': titlemap.get(event['id'], event['title']),
 #					'$subtitle': event['subtitle'],
 					'$personnames': event['personnames']
 				}
