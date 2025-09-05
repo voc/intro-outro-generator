@@ -79,30 +79,31 @@ def debug():
 
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
-    for event in events(scheduleUrl):
-        if not (idlist==[]):
-                if 000000 in idlist:
-                        print("skipping id (%s [%s])" % (event['title'], event['id']))
-                        continue
-                if int(event['id']) not in idlist:
-                        print("skipping id (%s [%s])" % (event['title'], event['id']))
-                        continue
+    if not "events" in skiplist:
+        for event in events(scheduleUrl):
+            if not (idlist==[]):
+                    if 000000 in idlist:
+                            print("skipping id (%s [%s])" % (event['title'], event['id']))
+                            continue
+                    if int(event['id']) not in idlist:
+                            print("skipping id (%s [%s])" % (event['title'], event['id']))
+                            continue
 
-        # generate a task description and put them into the queue
-        queue.put(Rendertask(
-            infile = 'intro.svg',
-            outfile = str(event['id'])+".ts",
-            sequence = introFrames,
-            parameters = {
-                '$id': event['id'],
-                '$title': event['title'],
-                '$subtitle': event['subtitle'],
-                '$persons': event['personnames']
-            }
-        ))
+            # generate a task description and put them into the queue
+            queue.put(Rendertask(
+                infile = 'intro.svg',
+                outfile = str(event['id'])+".ts",
+                sequence = introFrames,
+                parameters = {
+                    '$id': event['id'],
+                    '$title': event['title'],
+                    '$subtitle': event['subtitle'],
+                    '$persons': event['personnames']
+                }
+            ))
 
     # place a task for the outro into the queue
-    if not "out" in skiplist:
+    if not "out" in skiplist and idlist==[]:
         queue.put(Rendertask(
             infile = 'outro.svg',
             outfile = 'outro.ts',
