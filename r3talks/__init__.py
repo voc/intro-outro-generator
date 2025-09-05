@@ -79,7 +79,7 @@ def debug():
 
 def tasks(queue, args, idlist, skiplist):
     # iterate over all events extracted from the schedule xml-export
-    if not "events" in skiplist:
+    if not "intro" in skiplist:
         for event in events(scheduleUrl):
             if not (idlist==[]):
                     if 000000 in idlist:
