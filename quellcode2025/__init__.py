@@ -99,18 +99,32 @@ def tasks(queue, args, idlist, skiplist):
                         print("skipping id (%s [%s])" % (event['title'], event['id']))
                         continue
 
-        # generate a task description and put them into the queue
-        queue.put(Rendertask(
-            infile = 'intro_small.svg',
-            outfile = str(event['id'])+".ts",
-            sequence = introFrames,
-            parameters = {
-                '$id': event['id'],
-                '$title': event['title'],
-                '$subtitle': event['subtitle'],
-                '$personnames': event['personnames']
-            }
-        ))
+        if(event['id'] == 30):
+            # generate a task description and put them into the queue
+            queue.put(Rendertask(
+                infile = 'intro_small.svg',
+                outfile = str(event['id'])+".ts",
+                sequence = introFrames,
+                parameters = {
+                    '$id': event['id'],
+                    '$title': 'Einführung in die numerische Strömungssimulation',
+                    '$subtitle': event['subtitle'],
+                    '$personnames': event['personnames']
+                }
+            ))
+        else:
+            # generate a task description and put them into the queue
+            queue.put(Rendertask(
+                infile = 'intro_small.svg',
+                outfile = str(event['id'])+".ts",
+                sequence = introFrames,
+                parameters = {
+                    '$id': event['id'],
+                    '$title': event['title'],
+                    '$subtitle': event['subtitle'],
+                    '$personnames': event['personnames']
+                }
+            ))
 
     # place a task for the outro into the queue
     if not "out" in skiplist:

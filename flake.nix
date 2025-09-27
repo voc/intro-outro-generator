@@ -19,8 +19,8 @@
         fonts = with pkgs; [
           dejavu_fonts
           noto-fonts
-          noto-fonts-cjk
           noto-fonts-emoji
+          noto-fonts-cjk-sans
         ];
       in {
         devShells.default = pkgs.mkShell {
