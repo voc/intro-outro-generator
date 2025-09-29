@@ -169,6 +169,15 @@ Save your file as `artwork/overlay.svg`
 
 When you're done, call `./make-overlay.sh yourproject/` which will generate three .pngs in your artwork directory. One of them looks squeezed - don't worry, that is correct.
 
+Running with Docker
+-------------------
+If you're looking to run the intro-outro-generator on an unsupported platform (mac, windows, etc), it is possible to use docker to generate and render the intros and outros:
+
+```bash
+docker build -t introoutro .
+docker run -v {eventName}:/app/{eventName} -i -t introoutro ./make.py {eventName} --debug
+```
+
 It works! It doesn't work!
 --------------------------
 If it works, push your code to github. This way everybody can see which beautiful animations you created and we can all learn from each other.
