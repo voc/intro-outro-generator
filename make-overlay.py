@@ -25,11 +25,13 @@ class TextConfig:
     fontsize: int
     fontcolor: str
     bordercolor: str = None  # border is added, if a color is set
+    box: int
+    boxcolor: str
 
     def uses_fontfile(self):
         return self.fontfile_path is not None
 
-    def parse(self, cparser_sect, default_fontfile, default_fontcolor):
+    def parse(self, cparser_sect, default_fontfile, default_fontcolor, default_box, default_boxcolor):
         self.x = cparser_sect.getint('x')
         self.y = cparser_sect.getint('y')
         self.width = cparser_sect.getint('width', FRAME_WIDTH-self.x-100)
@@ -48,6 +50,8 @@ class TextConfig:
 
         self.fontsize = cparser_sect.getint('fontsize')
         self.bordercolor = cparser_sect.get('bordercolor', None)
+        self.box = cparser_sect.getint('box', default_box)
+        self.boxcolor = cparser_sect.get('boxcolor', default_boxcolor)
 
     def fit_text(self, text: str) -> list[str]:
         if not text:
@@ -70,8 +74,8 @@ class TextConfig:
             elif self.alignment == "right":
                 line_x = self.x + (self.width - line_width)
 
-            filter_str += "drawtext=box=1:boxcolor=black:x={}:y={}".format(
-                line_x, self.y + (idx*self.fontsize))
+            filter_str += "drawtext=box={}:boxcolor={}:x={}:y={}".format(
+                self.box, self.boxcolor, line_x, self.y + (idx*self.fontsize))
 
             filter_str += ":fontfile='{}':fontsize={}:fontcolor={}:text={}".format(
                 self.fontfile_path, self.fontsize, self.fontcolor, ffmpeg_escape_str(line))
@@ -113,12 +117,15 @@ def parse_config(filename) -> Config:
     default_fontfile = defaults.get('fontfile', None)
     default_fontcolor = defaults.get('fontcolor', "#ffffff")
 
+    default_box = defaults.getint('box', 1)
+    default_boxcolor = defaults.get('boxcolor', 'black')
+
     conf.title = TextConfig()
-    conf.title.parse(cparser['title'], default_fontfile, default_fontcolor)
+    conf.title.parse(cparser['title'], default_fontfile, default_fontcolor, default_box, default_boxcolor)
     conf.speaker = TextConfig()
-    conf.speaker.parse(cparser['speaker'], default_fontfile, default_fontcolor)
+    conf.speaker.parse(cparser['speaker'], default_fontfile, default_fontcolor, default_box, default_boxcolor)
     conf.text = TextConfig()
-    conf.text.parse(cparser['text'], default_fontfile, default_fontcolor)
+    conf.text.parse(cparser['text'], default_fontfile, default_fontcolor, default_box, default_boxcolor)
 
     conf.extra_text = cparser['text'].get('text', '')
 
@@ -294,7 +301,7 @@ if __name__ == "__main__":
     if (args.skip is None):
         args.skip = []
 
-    config = parse_config(PurePath(args.project, 'config.ini'))
+    config = parse_config(PurePath(args.project, 'overlay.ini'))
 
     if args.debug:
         persons = ['Kenneth Edwall', 'Anna Engström',]
