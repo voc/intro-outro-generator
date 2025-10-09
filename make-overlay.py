@@ -101,7 +101,7 @@ class Config:
 
 def parse_config(filename) -> Config:
     if not os.path.exists(filename):
-        error("config.ini file in Project Path is missing")
+        error("overlay.ini file in Project Path is missing")
 
     conf = Config()
 
@@ -136,7 +136,7 @@ def parse_config(filename) -> Config:
         error("The Project Path is a required argument")
 
     if not args.debug and not conf.schedule:
-        error("Either specify --debug or supply a schedule in config.ini")
+        error("Either specify --debug or supply a schedule in overlay.ini")
 
     return conf
 
@@ -170,7 +170,8 @@ def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
     w = 0
     line = []
     for word in split_line:
-        new_line = line + [word.rstrip(':')]
+        #new_line = line + [word.rstrip(':')]
+        new_line = line + [word]
         w = font.getlength(" ".join(new_line))
         if w > max_width:
             lines.append((
@@ -179,7 +180,8 @@ def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
             ))
             line = []
 
-        line.append(word.rstrip(':'))
+        #line.append(word.rstrip(':'))
+        line.append(word)
 
         #if word.endswith(':'):
         #    lines.append((
