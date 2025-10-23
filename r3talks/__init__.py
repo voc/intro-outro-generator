@@ -5,7 +5,8 @@ from schedulelib import *
 from easing import *
 
 # URL to Schedule-XML
-scheduleUrl = 'https://import.c3voc.de/schedule/realraum.xml?showall=yes'
+#scheduleUrl = 'https://import.c3voc.de/schedule/realraum.xml?showall=yes'
+scheduleUrl = 'https://cfp.realraum.at/realraum-october/schedule/export/schedule.xml'
 
 def introFrames(args):
     frames = int(0.5 * fps)
