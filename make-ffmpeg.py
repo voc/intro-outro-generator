@@ -1,153 +1,176 @@
 #!/usr/bin/env python3
 # vim: tabstop=4 shiftwidth=4 expandtab
 
+"""See jugendhackt/config.ini for some config file documentation."""
+
 import os
 import sys
 import subprocess
-import schedulelib
 import argparse
-import shlex
-from PIL import ImageFont
-from configparser import ConfigParser
-import json
-import platform
 import ssl
+from configparser import ConfigParser
+from pathlib import PurePath
+import platform
+
+from PIL import ImageFont
+import schedulelib
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# Parse arguments
-parser = argparse.ArgumentParser(
-    description='C3VOC Intro-Outro-Generator - Variant which renders only using video filters in ffmpeg',
-    usage="./make-ffmpeg.py yourproject/",
-    formatter_class=argparse.RawTextHelpFormatter)
-
-parser.add_argument('project', action="store", metavar='Project folder', type=str, help='''
-    Path to your project folder
-    ''')
-
-parser.add_argument('--debug', action="store_true", default=False, help='''
-    Run script in debug mode and render with placeholder texts,
-    not parsing or accessing a schedule.
-    This argument must not be used together with --id
-    Usage: ./make-ffmpeg.py yourproject/ --debug
-    ''')
-
-parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, help='''
-    Only render the given ID(s) from your projects schedule.
-    This argument must not be used together with --debug
-    Usage: ./make-adobe-after-effects.py yourproject/ --id 4711 0815 4223 1337
-    ''')
-
-parser.add_argument('--room', dest='rooms', nargs='+', action="store", type=str, help='''
-    Only render the given room(s) from your projects schedule.
-    This argument must not be used together with --debug
-    Usage: ./make-adobe-after-effects.py yourproject/ --room "HfG_Studio" "ZKM_Vortragssaal"
-    ''')
-
-parser.add_argument('--skip', nargs='+', action="store", type=str, help='''
-    Skip ID(s) not needed to be rendered.
-    Usage: ./make-ffmpeg.py yourproject/ --skip 4711 0815 4223 1337
-    ''')
-
-parser.add_argument('--force', action="store_true", default=False, help='''
-    Force render if file exists.
-    ''')
-
-args = parser.parse_args()
-
-if (args.skip is None):
-    args.skip = []
+FRAME_WIDTH = 1920
 
 
-def headline(str):
+class TextConfig:
+    inpoint: float
+    outpoint: float
+    x: int
+    y: int
+
+    fontfile_path: str
+    fontsize: int
+    fontcolor: str
+    bordercolor: str = None  # border is added, if a color is set
+
+    def uses_fontfile(self):
+        return self.fontfile_path is not None
+
+    def parse(self, cparser_sect, default_fontfile, default_fontcolor):
+        self.inpoint = cparser_sect.getfloat('in')
+        self.outpoint = cparser_sect.getfloat('out')
+        self.x = cparser_sect.getint('x')
+        self.y = cparser_sect.getint('y')
+        self.width = cparser_sect.getint('width', FRAME_WIDTH-self.x-100)
+        self.alignment = cparser_sect.get('alignment', 'left')
+
+        if self.alignment not in ('left', 'center', 'right'):
+            error(f"text alignment {self.alignment} unknown, must be left, right or center")
+
+        self.fontcolor = cparser_sect.get('fontcolor', default_fontcolor)
+
+        fontfile = cparser_sect.get('fontfile', default_fontfile)
+        self.fontfile_path = str(PurePath(args.project, fontfile).as_posix())
+
+        if not os.path.exists(self.fontfile_path):
+            error("Font file {} in Project Path is missing".format(self.fontfile_path))
+
+        self.fontsize = cparser_sect.getint('fontsize')
+        self.bordercolor = cparser_sect.get('bordercolor', None)
+
+    def fit_text(self, text: str) -> list[str]:
+        if not text:
+            return [(0, "")]
+
+        font = ImageFont.truetype(
+            self.fontfile_path, size=self.fontsize, encoding="unic")
+
+        return fit_text(text, self.width, font)
+
+    def get_ffmpeg_filter(self, inout_type: str, fade_time: float, text: list[str]):
+        if not text:
+            return ""
+
+        text_duration = self.outpoint - self.inpoint - fade_time * 2
+        filter_str = ""
+        for idx, (line_width, line) in enumerate(text):
+            line_x = self.x
+            if self.alignment == "center":
+                line_x = self.x + (self.width - line_width) / 2
+            elif self.alignment == "right":
+                line_x = self.x + (self.width - line_width)
+
+            filter_str += "drawtext=enable='between({},{},{})':x={}:y={}".format(
+                inout_type, self.inpoint, self.outpoint, line_x, self.y + (idx*self.fontsize))
+
+            filter_str += ":fontfile='{}':fontsize={}:fontcolor={}:text={}".format(
+                self.fontfile_path, self.fontsize, self.fontcolor, ffmpeg_escape_str(line))
+
+            if self.bordercolor is not None:
+                filter_str += ":borderw={}:bordercolor={}".format(
+                    self.fontsize / 30, self.bordercolor)
+
+            if fade_time > 0:
+                filter_str += ":alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))'".format(
+                    fade_in_start_time=self.inpoint,
+                    fade_in_end_time=self.inpoint + fade_time,
+                    fade_out_start_time=self.inpoint + fade_time + text_duration,
+                    fade_out_end_time=self.inpoint + fade_time + text_duration + fade_time,
+                    fade_duration=fade_time)
+
+            filter_str += ","
+
+        return filter_str[:-1]
+
+
+class Config:
+    schedule: str
+    template_file: str  # video background
+    alpha: bool = False
+    prores: bool = False
+    inout_type: str = "t"  # in and out time format: t for seconds, n for frame number
+    fade_duration: float = 0  # fade duration in seconds, 0 to disable
+
+    fileext: str
+
+    title: TextConfig
+    speaker: TextConfig
+    text: TextConfig
+    extra_text: str = ""  # additional text
+
+
+def parse_config(filename) -> Config:
+    if not os.path.exists(filename):
+        error("config.ini file in Project Path is missing")
+
+    conf = Config()
+
+    cparser = ConfigParser()
+    cparser.read(filename)
+
+    meta = cparser['meta']
+    conf.schedule = meta.get('schedule')
+    infile = PurePath(args.project, meta.get('template'))
+    conf.template_file = str(infile)
+    conf.alpha = meta.getboolean('alpha', conf.alpha)
+    conf.prores = meta.getboolean('prores', conf.prores)
+    conf.inout_type = meta.get('inout_type', conf.inout_type)
+    conf.fade_duration = meta.getfloat('fade_duration', conf.fade_duration)
+
+    defaults = cparser['default']
+    default_fontfile = defaults.get('fontfile', None)
+    default_fontcolor = defaults.get('fontcolor', "#ffffff")
+
+    conf.title = TextConfig()
+    conf.title.parse(cparser['title'], default_fontfile, default_fontcolor)
+    conf.speaker = TextConfig()
+    conf.speaker.parse(cparser['speaker'], default_fontfile, default_fontcolor)
+    conf.text = TextConfig()
+    conf.text.parse(cparser['text'], default_fontfile, default_fontcolor)
+
+    conf.extra_text = cparser['text'].get('text', '')
+
+    conf.fileext = infile.suffix
+
+    if not os.path.exists(conf.template_file):
+        error("Template file {} in Project Path is missing".format(conf.template_file))
+
+    if conf.alpha and conf.fileext != '.mov':
+        error("Alpha can only be rendered with .mov source files")
+
+    if not args.project:
+        error("The Project Path is a required argument")
+
+    if not args.debug and not conf.schedule:
+        error("Either specify --debug or supply a schedule in config.ini")
+
+    return conf
+
+
+def error(err_str):
     print("##################################################")
-    print(str)
+    print(err_str)
     print("##################################################")
     print()
-
-
-def error(str):
-    headline(str)
     parser.print_help()
     sys.exit(1)
-
-
-cparser = ConfigParser()
-cparser.read(os.path.join(os.path.dirname(args.project), 'config.ini'))
-template = cparser['default']['template']
-alpha = cparser['default']['alpha']
-prores = cparser['default']['prores']
-fontfile = cparser['default']['fontfile']  # use a font file instead of a font family
-inout = cparser['default']['inout']  # in and out time format: t for seconds, n for frame number
-
-title_in = cparser['title']['in']
-title_out = cparser['title']['out']
-title_fontfamily = cparser['title']['fontfamily']
-title_fontfile = cparser['title']['fontfile']
-title_fontsize = cparser['title']['fontsize']
-title_fontcolor = cparser['title']['fontcolor']
-title_x = cparser['title']['x']
-title_y = cparser['title']['y']
-
-speaker_in = cparser['speaker']['in']
-speaker_out = cparser['speaker']['out']
-speaker_fontfamily = cparser['speaker']['fontfamily']
-speaker_fontfile = cparser['speaker']['fontfile']
-speaker_fontsize = cparser['speaker']['fontsize']
-speaker_fontcolor = cparser['speaker']['fontcolor']
-speaker_x = cparser['speaker']['x']
-speaker_y = cparser['speaker']['y']
-
-text_in = cparser['text']['in']
-text_out = cparser['text']['out']
-text_fontfamily = cparser['text']['fontfamily']
-text_fontfile = cparser['text']['fontfile']
-text_fontsize = cparser['text']['fontsize']
-text_fontcolor = cparser['text']['fontcolor']
-text_x = cparser['text']['x']
-text_y = cparser['text']['y']
-text_text = cparser['text']['text']
-
-font_t = os.path.join(os.path.dirname(args.project), title_fontfile)
-font_s = os.path.join(os.path.dirname(args.project), speaker_fontfile)
-font_tt = os.path.join(os.path.dirname(args.project), text_fontfile)
-
-fileformat = os.path.splitext(template)[1]
-infile = os.path.join(os.path.dirname(args.project), template)
-
-schedule = cparser['default']['schedule']
-
-if not (os.path.exists(os.path.join(args.project, template))):
-    error("Template file {} in Project Path is missing".format(template))
-
-for ffile in (title_fontfile, speaker_fontfile, text_fontfile):
-    if not (os.path.exists(os.path.join(args.project, ffile))):
-        error("Font file {} in Project Path is missing".format(ffile))
-
-if not (os.path.exists(os.path.join(args.project, 'config.ini'))):
-    error("config.ini file in Project Path is missing")
-
-if alpha == 'true' and not fileformat == '.mov':
-    error("Alpha can only be rendered with .mov source files")
-
-if not args.project:
-    error("The Project Path is a required argument")
-
-if not args.debug and not schedule:
-    error("Either specify --debug or supply a schedule in config.ini")
-
-if args.debug:
-    persons = ['Thomas Roth', 'Dmitry Nedospasov', 'Josh Datko',]
-    events = [{
-        'id': 'debug',
-        'title': 'wallet.fail',
-        'subtitle': 'Hacking the most popular cryptocurrency hardware wallets',
-        'persons': persons,
-        'personnames': ', '.join(persons),
-        'room': 'Borg',
-    }]
-
-else:
-    events = list(schedulelib.events(schedule))
 
 
 def describe_event(event):
@@ -158,164 +181,200 @@ def event_print(event, message):
     print("{} – {}".format(describe_event(event), message))
 
 
-def fmt_command(command, **kwargs):
-    args = {}
-    for key, value in kwargs.items():
-        args[key] = shlex.quote(value)
+def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
+    """
+        Break text into list of strings which fit certain a width (in pixels)
+        for the specified font. Returns list of tulpes in format
+        (width_px, text)
+    """
 
-    command = command.format(**args)
-    return shlex.split(command)
-
-
-def run(command, **kwargs):
-    return subprocess.check_call(
-        fmt_command(command, **kwargs),
-        stderr=subprocess.STDOUT,
-        stdout=subprocess.DEVNULL)
-
-
-def fit_text(string: str, frame_width):
     split_line = [x.strip() for x in string.split()]
-    lines = ""
+    lines = []
     w = 0
-    line_num = 0
-    line = ""
+    line = []
     for word in split_line:
-        left, top, right, bottom = translation_font.getbbox(" ".join([line, word]))
-        width, height = right - left, bottom - top
-        if width > (frame_width - (2 * 6)):
-            lines += line.strip() + "\n"
-            line = ""
+        new_line = line + [word.rstrip(':')]
+        w = font.getlength(" ".join(new_line))
+        if w > max_width:
+            lines.append((
+                font.getlength(' '.join(line)),
+                ' '.join(line),
+            ))
+            line = []
 
-        line += word + " "
+        line.append(word.rstrip(':'))
 
-    lines += line.strip()
+        #if word.endswith(':'):
+        #    lines.append((
+        #        font.getlength(' '.join(line)),
+        #        ' '.join(line),
+        #    ))
+        #    line = []
+
+    if line:
+        lines.append((
+            font.getlength(' '.join(line)),
+            ' '.join(line),
+        ))
+
     return lines
 
 
-def fit_title(string: str, fontsize: int, x_offset: int):
-    global translation_font
-    translation_font = ImageFont.truetype(
-        font_t, size=fontsize, encoding="unic")
-    title = fit_text(string, (1920-x_offset-100))
+def ffmpeg_escape_str(text: str) -> str:
+    # Escape according to https://ffmpeg.org/ffmpeg-filters.html#Notes-on-filtergraph-escaping
+    # and don't put the string in quotes afterwards!
+    text = text.replace(",", r"\,")
+    text = text.replace(':', r"\\:")
+    text = text.replace (';', r"\\\;")
+    text = text.replace(']', r"\]")
+    text = text.replace('[', r"\[")
+    text = text.replace("'", r"\\\'")
 
-    return title
-
-
-def fit_speaker(string: str, fontsize: int, x_offset: int):
-    global translation_font
-    translation_font = ImageFont.truetype(
-        font_s, size=fontsize, encoding="unic")
-    speaker = fit_text(string, (1920-x_offset-100))
-
-    return speaker
+    return text
 
 
-def enqueue_job(event):
+def enqueue_job(conf: Config, event):
     event_id = str(event['id'])
+
+    outfile = str(PurePath(args.project, event_id + '.ts'))
+    outfile_mov = str(PurePath(args.project, event_id + '.mov'))
+
     if event_id in args.skip:
         event_print(event, "skipping " + str(event['id']))
         return
-    if (os.path.exists(os.path.join(args.project, event_id + '.ts')) or os.path.exists(os.path.join(args.project, event_id + '.mov'))) and not args.force:
+    if (os.path.exists(outfile) or os.path.exists(outfile_mov)) and not args.force:
         event_print(event, "file exist, skipping " + str(event['id']))
         return
 
     event_title = str(event['title'])
     event_personnames = str(event['personnames'])
-    event_title = event_title.replace('"', '\\"')
-    event_title = event_title.replace('\'', '')
-    event_personnames = event_personnames.replace('"', '\\"')
 
-    t = fit_title(event_title, int(title_fontsize), int(title_x))
-    t = t.replace(':', "\:")  # the ffmpeg command needs colons to be escaped
-    s = fit_speaker(event_personnames, int(speaker_fontsize), int(speaker_x))
+    title = conf.title.fit_text(event_title)
+    speakers = conf.speaker.fit_text(event_personnames)
+    extra_text = conf.text.fit_text(conf.extra_text)
 
     if args.debug:
-        print('Title: ', t)
-        print('Speaker: ', s)
-
-    outfile = os.path.join(os.path.dirname(args.project), event_id + '.ts')
+        print('Title:   ', title)
+        print('Speaker: ', speakers)
 
     if platform.system() == 'Windows':
         ffmpeg_path = './ffmpeg.exe'
-        font_t_win = "/".join(font_t.split("\\"))
-        font_s_win = "/".join(font_s.split("\\"))
-        font_tt_win = "/".join(font_tt.split("\\"))
     else:
         ffmpeg_path = 'ffmpeg'
 
-    if fontfile == 'true':
-        if platform.system() == 'Windows':
-            videofilter = "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(
-                title_in, title_out, font_t_win, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
-            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(
-                speaker_in, speaker_out, font_s_win, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
-            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(
-                text_in, text_out, font_tt_win, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
-        else:
-            videofilter = "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(
-                title_in, title_out, font_t, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
-            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(
-                speaker_in, speaker_out, font_s, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
-            videofilter += "drawtext=enable='between({8},{0},{1})':fontfile='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(
-                text_in, text_out, font_tt, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
-    else:
-        videofilter = "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(
-            title_in, title_out, title_fontfamily, title_fontsize, title_fontcolor, title_x, title_y, t, inout)
-        videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}',".format(
-            speaker_in, speaker_out, speaker_fontfamily, speaker_fontsize, speaker_fontcolor, speaker_x, speaker_y, s, inout)
-        videofilter += "drawtext=enable='between({8},{0},{1})':font='{2}':fontsize={3}:fontcolor={4}:x={5}:y={6}:text='{7}'".format(
-            text_in, text_out, text_fontfamily, text_fontsize, text_fontcolor, text_x, text_y, text_text, inout)
+    videofilter = conf.title.get_ffmpeg_filter(conf.inout_type, conf.fade_duration, title) + ","
+    videofilter += conf.speaker.get_ffmpeg_filter(conf.inout_type,
+                                                  conf.fade_duration, speakers) + ","
+    videofilter += conf.text.get_ffmpeg_filter(conf.inout_type, conf.fade_duration, extra_text)
 
-    if fileformat == '.mov':
-        if alpha == 'true':
-            if prores == 'true':
-                cmd = '{3} -y -i "{0}" -vf "{1}" -vcodec prores_ks -pix_fmt yuva444p10le -profile:v 4444 -shortest -movflags faststart -f mov "{2}"'.format(
-                    infile, videofilter, outfile, ffmpeg_path)
-            else:
-                cmd = '{3} -y -i "{0}" -vf "{1}" -shortest -c:v qtrle -movflags faststart -f mov "{2}"'.format(
-                    infile, videofilter, outfile, ffmpeg_path)
+    cmd = [ffmpeg_path, '-y', '-i', conf.template_file, '-vf', videofilter]
+
+    if conf.fileext == '.mov' and conf.alpha:
+        if conf.prores:
+            cmd += ['-vcodec', 'prores_ks', '-pix_fmt', 'yuva444p10le', '-profile:v',
+                    '4444', '-shortest', '-movflags', 'faststart', '-f', 'mov', outfile_mov]
         else:
-            cmd = '{3} -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(
-                infile, videofilter, outfile, ffmpeg_path)
+            cmd += ['-shortest', '-c:v', 'qtrle', '-movflags',
+                    'faststart', '-f', 'mov', outfile_mov]
     else:
-        cmd = '{3} -y -i "{0}" -vf "{1}" -map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 -map 0:1 -c:a mp2 -b:a 384k -shortest -f mpegts "{2}"'.format(
-            infile, videofilter, outfile, ffmpeg_path)
+        cmd += ['-map', '0:0', '-c:v', 'mpeg2video', '-q:v', '2', '-aspect', '16:9', '-map',
+                '0:1', '-c:a', 'mp2', '-b:a', '384k', '-shortest', '-f', 'mpegts', outfile]
 
     if args.debug:
         print(cmd)
 
-    run(cmd)
+    subprocess.check_call(cmd,
+                          stderr=subprocess.STDOUT,
+                          stdout=subprocess.DEVNULL
+                          )
 
     return event_id
 
 
-if args.ids:
-    if len(args.ids) == 1:
-        print("enqueuing {} job".format(len(args.ids)))
+if __name__ == "__main__":
+    # Parse arguments
+    parser = argparse.ArgumentParser(
+        description='C3VOC Intro-Outro-Generator - Variant which renders only using video filters in ffmpeg',
+        usage="./make-ffmpeg.py yourproject/",
+        formatter_class=argparse.RawTextHelpFormatter)
+
+    parser.add_argument('project', action="store", metavar='Project folder', type=str, help='''
+        Path to your project folder
+        ''')
+
+    parser.add_argument('--debug', action="store_true", default=False, help='''
+        Run script in debug mode and render with placeholder texts,
+        not parsing or accessing a schedule.
+        This argument must not be used together with --id
+        Usage: ./make-ffmpeg.py yourproject/ --debug
+        ''')
+
+    parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, help='''
+        Only render the given ID(s) from your projects schedule.
+        This argument must not be used together with --debug
+        Usage: ./make-adobe-after-effects.py yourproject/ --id 4711 0815 4223 1337
+        ''')
+
+    parser.add_argument('--room', dest='rooms', nargs='+', action="store", type=str, help='''
+        Only render the given room(s) from your projects schedule.
+        This argument must not be used together with --debug
+        Usage: ./make-adobe-after-effects.py yourproject/ --room "HfG_Studio" "ZKM_Vortragssaal"
+        ''')
+
+    parser.add_argument('--skip', nargs='+', action="store", type=str, help='''
+        Skip ID(s) not needed to be rendered.
+        Usage: ./make-ffmpeg.py yourproject/ --skip 4711 0815 4223 1337
+        ''')
+
+    parser.add_argument('--force', action="store_true", default=False, help='''
+        Force render if file exists.
+        ''')
+
+    args = parser.parse_args()
+
+    if (args.skip is None):
+        args.skip = []
+
+    config = parse_config(PurePath(args.project, 'config.ini'))
+
+    if args.debug:
+        persons = ['Thomas Roth', 'Dmitry Nedospasov', 'Josh Datko',]
+        events = [{
+            'id': 'debug',
+            'title': 'wallet.fail and the longest talk title to test if the template is big enough',
+            'subtitle': 'Hacking the most popular cryptocurrency hardware wallets',
+            'persons': persons,
+            'personnames': ', '.join(persons),
+            'room': 'Borg',
+        }]
+
     else:
-        print("enqueuing {} jobs".format(len(args.ids)))
-else:
-    if len(events) == 1:
-        print("enqueuing {} job".format(len(events)))
+        events = list(schedulelib.events(config.schedule))
+
+    if args.ids:
+        if len(args.ids) == 1:
+            print("enqueuing {} job".format(len(args.ids)))
+        else:
+            print("enqueuing {} jobs".format(len(args.ids)))
     else:
-        print("enqueuing {} jobs".format(len(events)))
+        if len(events) == 1:
+            print("enqueuing {} job".format(len(events)))
+        else:
+            print("enqueuing {} jobs".format(len(events)))
 
+    for event in events:
+        if args.ids and event['id'] not in args.ids:
+            continue
 
-for event in events:
-    if args.ids and event['id'] not in args.ids:
-        continue
+        if args.rooms and event['room'] not in args.rooms:
+            print("skipping room %s (%s)" % (event['room'], event['title']))
+            continue
 
-    if args.rooms and event['room'] not in args.rooms:
-        print("skipping room %s (%s)" % (event['room'], event['title']))
-        continue
+        event_print(event, "enqueued as " + str(event['id']))
 
-    event_print(event, "enqueued as " + str(event['id']))
+        job_id = enqueue_job(config, event)
+        if not job_id:
+            event_print(event, "job was not enqueued successfully, skipping postprocessing")
+            continue
 
-    job_id = enqueue_job(event)
-    if not job_id:
-        event_print(event, "job was not enqueued successfully, skipping postprocessing")
-        continue
-
-
-print('all done')
+    print('all done')

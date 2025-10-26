@@ -1,0 +1,38 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="C3 VOC Intro Outro Generator - Godot Example"
+run/main_scene="res://intro.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[editor]
+
+movie_writer/fps=25
+
+[rendering]
+
+lights_and_shadows/directional_shadow/size=8192
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=4
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=4
+global_illumination/voxel_gi/quality=1
+environment/ssao/quality=3
+environment/ssil/quality=3
+anti_aliasing/quality/msaa_3d=2
+environment/volumetric_fog/volume_size=256
+environment/volumetric_fog/volume_depth=128
+anti_aliasing/quality/use_debanding=true

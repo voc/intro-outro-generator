@@ -1,5 +1,5 @@
-pillow
+pillow>=8.0.0
 cssutils==1.0.2
-lxml==4.9.1
-svg.path==4.0.2
-Wand==0.6.5
+lxml~=5.3
+svg.path~=6.0
+Wand~=0.6.5

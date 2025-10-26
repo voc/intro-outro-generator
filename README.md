@@ -53,6 +53,14 @@ On debian you need to install ImageMagick and Python lxml dependencies:
 sudo apt-get install python3-pil libmagickwand-dev libmagickcore5-extra libxml2-dev libxslt1-dev
 ```
 
+#### Nix(OS)
+
+You could also try and improve the nix dev shell, contained in `flake.nix`:
+
+```
+$ nix develop
+```
+
 Quick start
 --------------------
 

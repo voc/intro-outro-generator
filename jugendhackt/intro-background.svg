@@ -315,7 +315,7 @@
      sodipodi:insensitive="true">
     <path
        d="M 54.44754,180.84833 V 315.36446 L 92.77012,277.04188 H 630.44754 V 180.84833 Z"
-       fill="#00b48d"
+       fill="#00498c"
        id="path5258"
        style="font-family:none;mix-blend-mode:normal;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0" />
     <path
@@ -1575,7 +1575,7 @@
        x="81.367104"
        y="245.48883"
        style="font-size:41.3333px"
-       dx="0">HAMBURG</tspan></text>
+       dx="0">BERLIN</tspan></text>
   <g
      fill="none"
      fill-rule="nonzero"
@@ -1622,7 +1622,7 @@
       </g>
       <path
          d="M 729.45455,337.04545 V 279.83333 H 615.03031 v 57.21212 h -57.21212 v 57.21212 H 386.18183 V 337.04545 H 328.96971 V 279.83333 H 214.54547 v 57.21212 h -57.21212 v 457.69697 h 57.21212 v 57.21212 h 57.21212 v 57.21212 h 400.48485 v -57.21212 h 57.21212 v -57.21212 h 57.21212 V 337.04545 Z m 0,400.48485 h -57.21212 v 57.21212 h -57.21212 v 57.21212 H 328.9697 V 794.74242 H 271.75758 V 737.5303 H 214.54546 V 565.89394 h 57.21212 v -57.21212 h 400.48485 v 57.21212 h 57.21212 z"
-         fill="#00b48d"
+         fill="#00498c"
          id="path3" />
     </g>
   </g>

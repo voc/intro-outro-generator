@@ -17,7 +17,7 @@ def bounce(i, min, max, frames):
         return max - easeInOutQuad(i - frames/2, min, max, frames/2)
 
 def introFrames(parameters):
-    # 3 Sekunde Text Fadein
+    # 1 Sekunde Text Fadein
     frames = 1*fps
     for i in range(0, frames):
         yield (
