@@ -57,6 +57,10 @@ parser.add_argument('--resvg', action="store_true", default=False, help='''
      Render frames using resvg instead of Inkscape.
      Usage: ./make.py yourproject/ --resvg
      ''')
+parser.add_argument('--audio-streams', action="store", default=2, type=int, help='''
+     Number of audio streams to generate.
+     Usage: ./make.py yourproject/ --audio-streams 4
+     ''')
 
 if len(sys.argv) < 2:
     parser.print_help()
