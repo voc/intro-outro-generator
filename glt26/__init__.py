@@ -89,7 +89,7 @@ def tasks(queue, args, idlist, skiplist):
 
     # generate a task description and put it into the queue
         queue.put(Rendertask(
-            infile = 'intro.svg',
+            infile = ['intro.svg', 'intro.wav'],
             outfile = str(event['id'])+".ts",
             sequence = introFrames,
             parameters = {
