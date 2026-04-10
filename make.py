@@ -57,6 +57,10 @@ parser.add_argument('--resvg', action="store_true", default=False, help='''
      Render frames using resvg instead of Inkscape.
      Usage: ./make.py yourproject/ --resvg
      ''')
+parser.add_argument('--workers', action="store", default=None, type=int, help='''
+    Configure how many workers to use. The default is to use as many workers as there are CPU cores.
+    Usage: ./make.py yourproject/ --workers 4
+''')
 
 if len(sys.argv) < 2:
     parser.print_help()
@@ -132,7 +136,7 @@ if (args.skip is None):
 project.tasks(tasks, projectpath, args.id, args.skip)
 
 # one working thread per cpu
-num_worker_threads = multiprocessing.cpu_count()
+num_worker_threads = args.workers if args.workers is not None else multiprocessing.cpu_count()
 print("{0} tasks in queue, starting {1} worker threads".format(tasks.qsize(), num_worker_threads))
 
 # put a sentinel for each thread into the queue to signal the end
