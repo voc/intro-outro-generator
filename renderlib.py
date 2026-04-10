@@ -39,7 +39,7 @@ class Rendertask:
     def __init__(self, infile, parameters={}, outfile=None, workdir='.', sequence=None):
         if isinstance(infile, list):
             self.infile = infile[0]
-            # self.audiofile = infile[1]
+            self.audiofile = infile[1]
         else:
             self.infile = infile
             self.audiofile = None
@@ -193,14 +193,14 @@ def rendertask_video(task):
         if task.audiofile is None:
             cmd += '-ar 48000 -ac 1 -f s16le -i /dev/zero -ar 48000 -ac 1 -f s16le -i /dev/zero '
         else:
-            cmd += '-i {0} -i {0} '.format(task.audiofile)
+            cmd += '-i {0} -i {0} -strict -2 '.format(task.audiofile)
 
         cmd += '-map 0:0 -c:v mpeg2video -q:v 2 -aspect 16:9 '
 
         if task.audiofile is None:
             cmd += '-map 1:0 -map 2:0 '
         else:
-            cmd += '-map 1:0 -c:a copy -map 2:0 -c:a copy '
+            cmd += '-map 1:0 -c:a s302m -map 2:0 -c:a s302m '
         cmd += '-shortest -f mpegts "{0}"'.format(task.outfile)
     elif task.outfile.endswith('.mov'):
         cmd = 'cd {0} && '.format(task.workdir)
