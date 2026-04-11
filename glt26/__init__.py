@@ -71,8 +71,12 @@ def debug():
 
 
 def tasks(queue, args, idlist, skiplist):
+    intro_overrides = [648, 681, 713, 738]
     # iterate over all events extracted from the schedule xml-export
-    for event in events(scheduleUrl):
+    for event in events(scheduleUrl, titlemap = {
+        737: "CANCOM - SMART Workplace",
+        709: "Bridging Reality: Open Source, Digital Sovereignty. Open Source, Not Open-Washed.",
+    }):
         if event['room'] not in ('HS i1', 'HS i2', 'HS i7', 'HS i13'):
             print("skipping room %s (%s)" % (event['room'], event['title']))
             continue
@@ -89,7 +93,7 @@ def tasks(queue, args, idlist, skiplist):
 
     # generate a task description and put it into the queue
         queue.put(Rendertask(
-            infile = ['intro.svg', 'intro.wav'],
+            infile = ['intro.svg' if event['id'] not in intro_overrides else str(event['id'])+".svg", 'intro.wav'],
             outfile = str(event['id'])+".ts",
             sequence = introFrames,
             parameters = {
