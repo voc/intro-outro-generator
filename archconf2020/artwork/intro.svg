@@ -44,7 +44,7 @@
        x="10.583333"
        y="10.583333"
        width="243.41667"
-       height="84.666659"
+       height="105.83333"
        id="rect187105" />
   </defs>
   <sodipodi:namedview
@@ -54,11 +54,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
+     inkscape:zoom="0.57"
      inkscape:cx="694.08671"
      inkscape:cy="468.61437"
      inkscape:document-units="px"
-     inkscape:current-layer="layer7"
+     inkscape:current-layer="layer8"
      inkscape:document-rotation="0"
      showgrid="true"
      units="px"
@@ -66,8 +66,8 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:lockguides="false"
-     inkscape:window-width="830"
-     inkscape:window-height="1315"
+     inkscape:window-width="1920"
+     inkscape:window-height="1030"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1">
@@ -112,7 +112,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
       </cc:Work>
@@ -274,33 +274,19 @@
        xml:space="preserve"
        id="title"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect187105);fill:#000000;fill-opacity:1;stroke:none;"
-       inkscape:label="#title"><tspan
+       inkscape:label="#title"
+       transform="translate(0,24.037701)"><tspan
          x="10.583984"
-         y="26.212916"><tspan
+         y="25.647606"><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6389px;font-family:'Droid Sans Mono';-inkscape-font-specification:'Droid Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#1793d1;fill-opacity:1">$title</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       id="subtitle"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect188233);fill:#000000;fill-opacity:1;stroke:none;"
-       inkscape:label="#subtitle"><tspan
-         x="10.583984"
-         y="104.62732"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:'Droid Sans Mono';-inkscape-font-specification:'Droid Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1">$subtitle</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="persons"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect188239);fill:#000000;fill-opacity:1;stroke:none;"
-       inkscape:label="#persons"><tspan
+       inkscape:label="#persons"
+       transform="translate(0,-46.827914)"><tspan
          x="10.583984"
-         y="199.87732"><tspan
+         y="199.53814"><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:'Droid Sans Mono';-inkscape-font-specification:'Droid Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1">$persons</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       id="id"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect188251);fill:#000000;fill-opacity:1;stroke:none;"
-       inkscape:label="#id"><tspan
-         x="201.08398"
-         y="252.79334"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:'Droid Sans Mono';-inkscape-font-specification:'Droid Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1">$id</tspan></tspan></text>
   </g>
 </svg>
