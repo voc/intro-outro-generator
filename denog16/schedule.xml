@@ -1,0 +1,1167 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- Made with love by pretalx v2024.4.0.dev0. -->
+<schedule>
+    <generator name="pretalx" version="2024.4.0.dev0" />
+    <version>0.9</version>
+    <conference>
+        <title>DENOG16</title>
+        <acronym>denog16</acronym>
+        <start>2024-11-17</start>
+        <end>2024-11-19</end>
+        <days>3</days>
+        <timeslot_duration>00:05</timeslot_duration>
+        <base_url>https://pretalx.com</base_url>
+        
+        <time_zone_name>Europe/Berlin</time_zone_name>
+        
+        
+    </conference>
+    <day index='1' date='2024-11-17' start='2024-11-17T04:00:00+01:00' end='2024-11-18T03:59:00+01:00'>
+        <room name='Workshop 7' guid='2f5a10d1-a33a-57d5-843f-8216fa82cfb6'>
+            <event guid='f860f986-b0a9-561f-8a48-6cb64f6b3efb' id='57249'>
+                <room>Workshop 7</room>
+                <title>Coaching Skills for Managers and Leaders</title>
+                <subtitle></subtitle>
+                <type>Workshop</type>
+                <date>2024-11-17T10:00:00+01:00</date>
+                <start>10:00</start>
+                <duration>03:00</duration>
+                <abstract>As managers and leaders, it&#8217;s easy to jump straight into problem-solving and advice-giving when your team comes to you with challenges. But what if offering guidance isn&#8217;t always the best solution? In this hands-on workshop, you&#8217;ll learn how to tame your &#8220;advice monster&#8221; and discover the power of coaching as a leadership tool. By focusing on active listening, asking the right questions, and creating a space where your team can think for themselves, you&#8217;ll help them grow into more confident and independent problem-solvers.
+
+In this session, you&#8217;ll dive into practical coaching techniques that you can immediately apply in your day-to-day interactions. We&#8217;ll explore how to shift from telling to asking, how to give feedback that fuels growth, and how to cultivate a team culture that thrives on trust and collaboration.
+
+What You&#8217;ll Learn:
+
+Taming the Advice Monster: Recognise when your instinct to give advice takes over, and learn how to step back to let your team take the lead.
+Active Listening: Become a leader who listens deeply, so your team feels truly heard and empowered.
+Powerful Questioning: Master the art of asking questions that spark insight and ownership, rather than relying on instructions.
+Effective Feedback: Learn how to offer feedback in a way that encourages growth and reflection, without overwhelming or disempowering your team.
+Fostering Trust and Psychological Safety: Build a space where your team feels safe to experiment, make mistakes, and learn from them.
+Supporting Autonomy and Accountability: Help your team step into their full potential by balancing empowerment with responsibility.
+
+Why Attend?
+This workshop is for anyone who wants to move beyond traditional leadership approaches and explore how coaching can unlock the potential in their team. Whether you&apos;re managing engineers or leading a product team, you&apos;ll leave with practical skills that will help you guide others without constantly needing to provide the answers. If you&#8217;re ready to transform the way you support your team&#8217;s growth, this session will equip you with the tools to do it&#8212;and help you keep that advice monster in check!</abstract>
+                <slug>denog16-57249-0-coaching-skills-for-managers-and-leaders</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='50016'>Susi Bauer</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/AUFKAH/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/AUFKAH/feedback/</feedback_url>
+            </event>
+            <event guid='87aa42bf-a76f-5ebd-81eb-e82f85842583' id='57249'>
+                <room>Workshop 7</room>
+                <title>Coaching Skills for Managers and Leaders</title>
+                <subtitle></subtitle>
+                <type>Workshop</type>
+                <date>2024-11-17T14:30:00+01:00</date>
+                <start>14:30</start>
+                <duration>03:00</duration>
+                <abstract>As managers and leaders, it&#8217;s easy to jump straight into problem-solving and advice-giving when your team comes to you with challenges. But what if offering guidance isn&#8217;t always the best solution? In this hands-on workshop, you&#8217;ll learn how to tame your &#8220;advice monster&#8221; and discover the power of coaching as a leadership tool. By focusing on active listening, asking the right questions, and creating a space where your team can think for themselves, you&#8217;ll help them grow into more confident and independent problem-solvers.
+
+In this session, you&#8217;ll dive into practical coaching techniques that you can immediately apply in your day-to-day interactions. We&#8217;ll explore how to shift from telling to asking, how to give feedback that fuels growth, and how to cultivate a team culture that thrives on trust and collaboration.
+
+What You&#8217;ll Learn:
+
+Taming the Advice Monster: Recognise when your instinct to give advice takes over, and learn how to step back to let your team take the lead.
+Active Listening: Become a leader who listens deeply, so your team feels truly heard and empowered.
+Powerful Questioning: Master the art of asking questions that spark insight and ownership, rather than relying on instructions.
+Effective Feedback: Learn how to offer feedback in a way that encourages growth and reflection, without overwhelming or disempowering your team.
+Fostering Trust and Psychological Safety: Build a space where your team feels safe to experiment, make mistakes, and learn from them.
+Supporting Autonomy and Accountability: Help your team step into their full potential by balancing empowerment with responsibility.
+
+Why Attend?
+This workshop is for anyone who wants to move beyond traditional leadership approaches and explore how coaching can unlock the potential in their team. Whether you&apos;re managing engineers or leading a product team, you&apos;ll leave with practical skills that will help you guide others without constantly needing to provide the answers. If you&#8217;re ready to transform the way you support your team&#8217;s growth, this session will equip you with the tools to do it&#8212;and help you keep that advice monster in check!</abstract>
+                <slug>denog16-57249-1-coaching-skills-for-managers-and-leaders</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='50016'>Susi Bauer</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/AUFKAH/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/AUFKAH/feedback/</feedback_url>
+            </event>
+            
+        </room>
+        <room name='Workshop 8' guid='ef8a4b47-ce44-5e31-9da1-b937b20102d2'>
+            <event guid='e836613d-e7f1-5584-94f1-f1b59ad18870' id='54139'>
+                <room>Workshop 8</room>
+                <title>BNG Blaster Hands-On Training</title>
+                <subtitle></subtitle>
+                <type>Workshop</type>
+                <date>2024-11-17T10:00:00+01:00</date>
+                <start>10:00</start>
+                <duration>05:00</duration>
+                <abstract>This workshop is designed to provide participants with a practical introduction and best practices for using the BNG Blaster for testing. Each participant will be provided with a test environment that includes a pre-configured DUT (Device Under Test) for the workshop duration. There will be various exercises available in areas such as Access (PPPoE, L2TP, etc.) and Routing (ISIS, BGP, etc.), which participants can utilize. These exercises can be customized, or participants can develop their own tests.
+
+
+Participants with their own test environments are welcome to use them and will receive support from us in using these environments effectively.
+
+**Requirements:**
+
+* Participants must bring their own laptops to access the test environment via SSH.
+* Basic knowledge of networking concepts is recommended.
+* It is suggested to watch one of the previous BNG Blaster talks before attending the workshop for a more comprehensive understanding.
+
+**Note:** A brief introduction to the BNG Blaster will be provided, but it is recommended that attendees watch one of the previous talks on this topic beforehand.
+
+* DKNOG14: https://www.youtube.com/live/WdATdbaveRI?si=lgw1W-HckormViK9&amp;t=13599
+* DENOG15: https://youtu.be/4rmwf6livyI</abstract>
+                <slug>denog16-54139-bng-blaster-hands-on-training</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='13588'>Christian Giese</person><person id='49549'>Elmar Kirchner</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/JKHX3Q/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/JKHX3Q/feedback/</feedback_url>
+            </event>
+            
+        </room>
+        <room name='Workshop 9' guid='bad7b071-eeee-5179-9232-f75ef0cbb0bd'>
+            <event guid='cea2bedd-da03-5b73-a9d2-2f239fe35848' id='54344'>
+                <room>Workshop 9</room>
+                <title>BGP Configuration and Operations Workshop - being an ISP, IXP or customer</title>
+                <subtitle></subtitle>
+                <type>Workshop</type>
+                <date>2024-11-17T10:00:00+01:00</date>
+                <start>10:00</start>
+                <duration>05:00</duration>
+                <abstract>Want to perform the bgp handshake in real life based on a realistic topology? We got you covered ... in this workshop for **intermediates** we will dive into some network basics of bgp driven networks and also explore route filtering best practices (mainly for the DfZ = default free zone).
+
+After some theory every attendee will receive one network node to configure. The fellow participants will be your peers. You will depend on the peers to reach your goals.
+
+Teams work together in small groups. One group either jointly manages an AS consisting of 3 routers and a customer downlink router or the IXP infrastructure based on EVPN with additional route server. Troubleshooting takes place across groups in order to verify the corresponding availability within the lab topology.
+
+**Warning: You will have to socialise with the peers around you!**
+
+Topics Covered:
+ * Running BGP (iBGP and eBGP)
+ * BGP Attributes
+ * BGP &amp; Routing Security
+ * Filtering
+ * BGP Tips &amp; Tricks
+
+Technologies Covered:
+
+IPv4 and IPv6, IS-IS, iBGP, eBGP, BGP Scaling, BGP Policies,
+BGP Best Practices, BGP Configuration Essentials, IXP Design.
+
+Pre-requisites:
+
+Participants must have technical hands on experience of routers.
+Network Fundamentals, user level UNIX and maybe some system administration,
+some use of network design preferably TCP/IP-based is also helpful.
+Ideally, you should already have some experience with EOS or a comparable CLI.</abstract>
+                <slug>denog16-54344-bgp-configuration-and-operations-workshop-being-an-isp-ixp-or-customer</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='22797'>Vincentz Petzholtz</person><person id='47643'>Peter Sievers</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/S8ECVF/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/S8ECVF/feedback/</feedback_url>
+            </event>
+            
+        </room>
+        <room name='Workshop 10' guid='f17557e2-61ae-5ff2-bb46-ac09768fc8dd'>
+            <event guid='3bfb2a8b-f362-5ab7-87b3-20c3445a8dd1' id='55584'>
+                <room>Workshop 10</room>
+                <title>Intermediate Linux (II)</title>
+                <subtitle></subtitle>
+                <type>Workshop</type>
+                <date>2024-11-17T10:00:00+01:00</date>
+                <start>10:00</start>
+                <duration>03:00</duration>
+                <abstract>Let&apos;s do this again.  In this workshop I&apos;ll show some tools, shortcuts and tips to work with Linux. Topics will include setting up your basic work environment, networking tools, working with the industry standard database format (aka CSV/Excel), working with JSON, finding stuff, troubleshooting and much more. 
+
+I did a similar workshop in 2022 and try to avoid repeating myself, although some repetition might be necessary, e.g., I still see people typing clear instead of hitting CTRL-L. 
+
+The audience is invited to try some tools discussed, so bring your own Linux (or Mac or Windows with WSL). Note that not all tools may be available for your system, and you may need root privileges to execute some of them.</abstract>
+                <slug>denog16-55584-intermediate-linux-ii-</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='21963'>Jens Link</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/9UCU9T/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/9UCU9T/feedback/</feedback_url>
+            </event>
+            <event guid='5b5b1a1d-c4c4-5272-9ca4-e9c8c66518e6' id='53259'>
+                <room>Workshop 10</room>
+                <title>Getting started with Containerlab</title>
+                <subtitle></subtitle>
+                <type>Workshop</type>
+                <date>2024-11-17T14:00:00+01:00</date>
+                <start>14:00</start>
+                <duration>03:30</duration>
+                <abstract>This is a beginner-level hands-on workshop that provides an introduction to Containerlab, an environment that provides a CLI for orchestrating and managing container-based networking labs. It starts the containers, builds a virtual wiring between them to create lab topologies of users choice and manages labs lifecycle.
+
+This hands-on workshop will cover:
++ Installation
++ Container images (container-native and VM-based NOSes)
++ Topology file
++ Basic lab deployment workflow
++ Connectivity to the nodes
++ Lab lifecycle
++ VM-based lab
++ Sharing the lab
++ Troubleshooting and Wireshark pcaps
++ Exploring the catalog of existing labs
+
+Student Requirements: personal laptop with an SSH client. VMs will be provided for each attendee to have their own isolated environment.</abstract>
+                <slug>denog16-53259-getting-started-with-containerlab</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='46934'>Roman Dodin</person><person id='50358'>Tobias Weber</person><person id='50362'>Florian Schilling</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/Y7XNSF/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/Y7XNSF/feedback/</feedback_url>
+            </event>
+            
+        </room>
+        <room name='Workshop 11' guid='931c83e1-f986-5001-95e2-41f7d579027e'>
+            <event guid='97cb242f-f531-5376-9200-68d8010271c5' id='55283'>
+                <room>Workshop 11</room>
+                <title>Introduction to BGP for networks who peer</title>
+                <subtitle></subtitle>
+                <type>Workshop</type>
+                <date>2024-11-17T10:00:00+01:00</date>
+                <start>10:00</start>
+                <duration>04:00</duration>
+                <abstract>Workshop about the basics of BGP. Topics include:
+
+- Prefixes and Autonomous Systems
+- Why you also need an IGP (like OSPF, IS-IS)
+- iBGP: BGP within your network
+- eBGP: Talking to your neighbours
+- Multihoming and Peering
+- BGP Best Path Selection
+- Bonus-Topics, if time permits:
+    - BGP Communities
+    - BGP Security
+
+Lab experiments will be done using FRRouting, so participants do need a laptop. No special software is needed.</abstract>
+                <slug>denog16-55283-introduction-to-bgp-for-networks-who-peer</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='9915'>Wolfgang Tremmel</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/H9MPP9/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/H9MPP9/feedback/</feedback_url>
+            </event>
+            <event guid='00580056-8a3c-5016-8f89-0baea5cf01a2' id='57273'>
+                <room>Workshop 11</room>
+                <title>Learning Grafana Skills for Effective Monitoring</title>
+                <subtitle></subtitle>
+                <type>Workshop</type>
+                <date>2024-11-17T14:30:00+01:00</date>
+                <start>14:30</start>
+                <duration>03:00</duration>
+                <abstract>Join us for an in-depth, hands-on workshop at DENOG, where we&apos;ll explore the powerful capabilities of Grafana, from local installations to cloud integration. You&apos;ll dive into the full Grafana stack, including Prometheus and Loki while learning how to set up and visualize data in Grafana dashboards. We&#8217;ll also introduce Grafana Cloud and Alloy, guiding you through setting up a free account and connecting Alloy to the cloud. Bring your dashboards for a clinic session where you can get expert advice on improvements. Whether you&apos;re new to Grafana or an experienced user, this workshop is packed with insights, tips, and practical exercises!</abstract>
+                <slug>denog16-57273-learning-grafana-skills-for-effective-monitoring</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='50028'>Maria Dubinets</person><person id='36238'>Syed Usman Ahmad</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/KFFYVH/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/KFFYVH/feedback/</feedback_url>
+            </event>
+            
+        </room>
+        <room name='Workshop 14' guid='cf56f326-d726-53a5-9fef-e563e4a3f62e'>
+            <event guid='d6fcdafd-84e3-5035-bcba-4cda24d9a27c' id='54148'>
+                <room>Workshop 14</room>
+                <title>Network Fundamentals: OSI layers, optical transmission and transceiver technologies</title>
+                <subtitle></subtitle>
+                <type>Workshop</type>
+                <date>2024-11-17T10:00:00+01:00</date>
+                <start>10:00</start>
+                <duration>05:00</duration>
+                <abstract>Abstract:
+Fundamentals and Layer 1 (Physical Layer)
+Introduction to the OSI model: history, purpose and overview of the 7 layers.
+Layer 1 - Physical Layer:
+Fundamentals of signal transmission
+Cable types and network hardware
+Transceiver technologies:
+Form factors (e.g. SFP, QSFP)
+Transceiver selection criteria
+Compatibility and performance issues
+Coherent
+Dense Wavelength Division Multiplexing (DWDM): Technology, application and benefits
+Coarse Wavelength Division Multiplexing (CWDM): Differences from DWDM, applications</abstract>
+                <slug>denog16-54148-network-fundamentals-osi-layers-optical-transmission-and-transceiver-technologies</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='47504'>Rene Fichtmueller</person><person id='34859'>Thomas Weible</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>true</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/RGVESY/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/RGVESY/feedback/</feedback_url>
+            </event>
+            
+        </room>
+        
+    </day>
+    <day index='2' date='2024-11-18' start='2024-11-18T04:00:00+01:00' end='2024-11-19T03:59:00+01:00'>
+        <room name='Auditorium' guid='08033030-3dcb-5f0c-97c4-d71577fdb115'>
+            <event guid='c5ea97df-2a81-578a-9311-211d31cbad3f' id='57454'>
+                <room>Auditorium</room>
+                <title>Newcomer Session</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-18T09:30:00+01:00</date>
+                <start>09:30</start>
+                <duration>00:30</duration>
+                <abstract>Welcome to DENOG, if this is your first event, feel free to join us to learn everything about the event, the community and more!</abstract>
+                <slug>denog16-57454-newcomer-session</slug>
+                <track></track>
+                
+                <persons>
+                    
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/VWX3FM/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/VWX3FM/feedback/</feedback_url>
+            </event>
+            <event guid='52a4874d-3327-5a23-8e33-4acaee6e93a0' id='55000'>
+                <room>Auditorium</room>
+                <title>DENOG16 Opening</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-18T10:00:00+01:00</date>
+                <start>10:00</start>
+                <duration>00:30</duration>
+                <abstract>Welcome to Berlin, welcome to DENOG16</abstract>
+                <slug>denog16-55000-denog16-opening</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='9871'>Moritz Frenzel</person><person id='10532'>Patrick Bussmann</person><person id='34974'>Franziska Lichtblau</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/AYJDAW/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/AYJDAW/feedback/</feedback_url>
+            </event>
+            <event guid='2fd3a1b5-545b-5b55-ae92-ca5b7b8d2799' id='55071'>
+                <room>Auditorium</room>
+                <title>The Elephant on an Adventure: A Custom-Built Shelter for Network Devices</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-18T10:30:00+01:00</date>
+                <start>10:30</start>
+                <duration>00:30</duration>
+                <abstract>We take you along on our adventurous journey through the design and implementation phases of a custom-built outdoor cabinet, from conception to completion, sharing what we&#8217;ve learned in the process.
+
+While building a new fiber network from scratch, Eurofiber faced a dilemma: We needed to install network devices in the great outdoors of Berlin&#8217;s heating power plant sites, but your typical data center devices wouldn&#8217;t fit in the standard telco cabinets available on the market. For our purposes, we require full-depth racks, access from both sides, and active cooling. So we could either go for smaller, hardened outdoor equipment, which limits the choice of devices. Or we&#8217;d have to buy concrete data center containers the size of a garage, which are larger than we need, take more bureaucracy to build, and are also expensive.
+
+To bridge this gap and keep the costs reasonable, we designed our own micro-datacenter, basically a larger street cabinet tailored specifically to our requirements: It provides active cooling, front and rear access, and fits full-depth devices while providing redundant power and sufficient protection from the elements.
+
+This adventure took us deep into the engineering world of the infrastructure required for operating network devices. Have you ever had to consider cooling capacities, battery temperatures, air-flow velocities, or noise emission laws? We take you through the design process as well as the lessons we learned on the construction site and the operational experiences after finally taking the network into production.</abstract>
+                <slug>denog16-55071-the-elephant-on-an-adventure-a-custom-built-shelter-for-network-devices</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='47479'>Leon Weber</person><person id='48255'>Julia Sontag</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/8GNVX9/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/8GNVX9/feedback/</feedback_url>
+            </event>
+            <event guid='08127952-d6b3-59fa-9320-8d2ab790499e' id='55446'>
+                <room>Auditorium</room>
+                <title>Introduction of RPKI at the Deutsche Telekom global Network AS 3320</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-18T11:00:00+01:00</date>
+                <start>11:00</start>
+                <duration>00:30</duration>
+                <abstract>Introduction of RPKI at the Deutsche Telekom global Network AS3320 was finalized in February 2024, since 22nd February 2024 AS 3320 rejects RPKI invalid Prefixes.
+This presentation talks about the Project phases, the implementation and experiences we made during the introduction of RPKI on a global Tier-1 ISP Network.
+This includes some technical details and organizational view for the continuous RPKI operation.</abstract>
+                <slug>denog16-55446-introduction-of-rpki-at-the-deutsche-telekom-global-network-as-3320</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='48565'>Gerrit Wenig</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/ACGCDS/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/ACGCDS/feedback/</feedback_url>
+            </event>
+            <event guid='79e323b8-dca3-5ff5-a666-8e93ddba47d8' id='55438'>
+                <room>Auditorium</room>
+                <title>Creating a Sustainable Supply Chain in the Network Industry</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-18T11:30:00+01:00</date>
+                <start>11:30</start>
+                <duration>00:30</duration>
+                <abstract>In response to increasing regulatory pressures, major telecommunications providers have begun to measure and report their carbon footprints. However, this initial step is just the beginning of a complex journey toward achieving sustainability. One of the most significant challenges these companies face is addressing Scope 3 emissions, which are generated by their supply chains and lie outside their direct control.
+
+In this presentation, I will discuss the current state of sustainability efforts within the telecom industry, with a particular focus on the intricacies of reducing Scope 3 emissions. Rather than offering quick fixes, I will explore practical approaches companies can consider, such as switching to more sustainable suppliers, collaborating closely with existing suppliers, and gradually introducing contractual clauses that emphasize sustainability.
+
+Attendees will gain a realistic understanding of the challenges involved and will be introduced to strategies that can help their organizations begin the process of reducing their supply chain&apos;s carbon footprint. This discussion aims to provide a balanced view, emphasizing that while these steps are crucial, they require time, commitment, and a willingness to engage in long-term efforts.</abstract>
+                <slug>denog16-55438-creating-a-sustainable-supply-chain-in-the-network-industry</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='22705'>Nicol N&#243;gr&#225;di</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/7VPLSK/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/7VPLSK/feedback/</feedback_url>
+            </event>
+            <event guid='1b0249f7-bc1f-59e7-816c-94c26e42a8c6' id='55002'>
+                <room>Auditorium</room>
+                <title>Deployment of a multi vendor EVPN based data center fabric using Netbox and Ansible</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-18T14:00:00+01:00</date>
+                <start>14:00</start>
+                <duration>00:30</duration>
+                <abstract>This year we deployed a new data center fabric from scratch. A requirement was to use different vendors with different nos. In addition we use Ansible for the whole configuration.
+
+This talk is about:
+- how to efficiently use Netbox with Ansible
+- using Ansible with multi vendor equipment
+- challenges building a multi vendor EVPN fabric from scratch</abstract>
+                <slug>denog16-55002-deployment-of-a-multi-vendor-evpn-based-data-center-fabric-using-netbox-and-ansible</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='48189'>Jan Mu&#223;mann</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/DSWSHD/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/DSWSHD/feedback/</feedback_url>
+            </event>
+            <event guid='4281547b-c0f4-51b0-9f50-f82a6645e4d1' id='54594'>
+                <room>Auditorium</room>
+                <title>Submarine cables - lifelines of countries and continents</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-18T14:30:00+01:00</date>
+                <start>14:30</start>
+                <duration>00:30</duration>
+                <abstract>In recent years, we&#8217;ve heard a bit more about submarine cables, mostly related to fiber cuts. Given that they&#8217;re lifelines of countries or even continents, they are important, yet we know little about them. So, what&#8217;s the rationale behind the large selection of submarine cables, often on the same route? Is it just about resiliency and shorter routes, or are there other differentiators?
+
+This talk will provide insight into the construction, operation, maintenance, and selection of submarine cables, using the connections between the United Kingdom and Continental Europe as an example.
+We will dive into what it takes to construct a submarine cable, discover why and how it breaks, and provide guidance on what to consider when purchasing.</abstract>
+                <slug>denog16-54594-submarine-cables-lifelines-of-countries-and-continents</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='9871'>Moritz Frenzel</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/CKRBRG/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/CKRBRG/feedback/</feedback_url>
+            </event>
+            <event guid='b2edd345-3311-5696-8279-0360c94c0295' id='54814'>
+                <room>Auditorium</room>
+                <title>&#8220;Subsea internet cables could help detect earthquakes&#8221;</title>
+                <subtitle></subtitle>
+                <type>Lightning Talk</type>
+                <date>2024-11-18T15:00:00+01:00</date>
+                <start>15:00</start>
+                <duration>00:10</duration>
+                <abstract>There are plenty of seismic stations on land helping detect and record earthquakes but very little deployed in our sea&#8217;s and oceans. Marine seismic detectors have traditionally been expensive, unreliable and not widely deployed. In recent years, research has shown that new and existing submarine cables can be used to detect seismic activity. Given that two thirds of our planet is covered by Oceans, this new development provides a great opportunity to improve our knowledge of the geological activity of our planet. Additionally, an early warning of an imminent Tsunami can save thousands of lives.
+
+This presentation will introduce the recent developments in sensing on Submarine Fibre Optic Cables and introduce the key sensing technologies employed.</abstract>
+                <slug>denog16-54814--subsea-internet-cables-could-help-detect-earthquakes-</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='48017'>David Lloyd</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/SVMJWM/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/SVMJWM/feedback/</feedback_url>
+            </event>
+            <event guid='86a6862f-b730-5f5c-87d5-399fb7616766' id='55287'>
+                <room>Auditorium</room>
+                <title>SCION: Secure Path-Aware Internet Routing</title>
+                <subtitle></subtitle>
+                <type>Lightning Talk</type>
+                <date>2024-11-18T15:10:00+01:00</date>
+                <start>15:10</start>
+                <duration>00:10</duration>
+                <abstract>SCION is a secure path-aware Internet architecture, designed to achieve high resilience to routing attacks and path selection for Internet users and operators with safety critical traffic such as in financial and healthcare sectors. RPKI/ROV is useful for origin validation but does not validate paths, ASPA is still an evolving technology, whilst BGPSEC has yet to be widely deployed and needs explicit router support along a path to achieve the full benefits.
+
+SCION has commercial and open-source implementations and is in production use by the financial services and healthcare industry in Switzerland and internationally. This includes the SCION Research &amp; Education Network (SCIERA) which includes connections to OVGU Magdeburg. It is also currently being evaluated for use in government, power utility, aviation, military and other applications, with a number of vendors interested in implementing it in their products. 
+
+This talk will discuss the SCION design and architecture, its trust model, how it can be deployed, as well as some deployment experiences to-date. It will also discuss the IETF/IRTF work, and the community efforts supported by the SCION Association to encourage further deployment and development.</abstract>
+                <slug>denog16-55287-scion-secure-path-aware-internet-routing</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='48417'>Kevin Meynell</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/GZAQ7E/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/GZAQ7E/feedback/</feedback_url>
+            </event>
+            <event guid='419ec56f-7904-5295-9a86-9bd07b41fadf' id='55591'>
+                <room>Auditorium</room>
+                <title>IPv4 over IPv6 networks</title>
+                <subtitle></subtitle>
+                <type>Lightning Talk</type>
+                <date>2024-11-18T15:20:00+01:00</date>
+                <start>15:20</start>
+                <duration>00:10</duration>
+                <abstract>In this session we are going to cover usage of RFC8950 (IPv4 NLRIs with IPv6 Next Hop)</abstract>
+                <slug>denog16-55591-ipv4-over-ipv6-networks</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='23024'>Michael Pergament</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/BWWEJ7/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/BWWEJ7/feedback/</feedback_url>
+            </event>
+            <event guid='b37e645e-17c5-5f93-8d03-6481f87f37a4' id='54862'>
+                <room>Auditorium</room>
+                <title>Instant Overflow Injection - Shifting traffic to overflow providers in a moment&apos;s notice</title>
+                <subtitle></subtitle>
+                <type>Lightning Talk</type>
+                <date>2024-11-18T15:30:00+01:00</date>
+                <start>15:30</start>
+                <duration>00:10</duration>
+                <abstract>Single peering interfaces can get loaded during peak usage and/or failure scenarios while the network as a whole still has spare capacity. As remedy we can use upstream via our so-called overflow providers. In normal operation mode we will prefer direct peerings and only use overflow providers as fallback.
+
+For events like the European Football Championship we want to be able to shift traffic to those fallback routes with low effort, low wait times, high granularity and high confidence.
+
+We have implemented a service that injects on-demand copies of the existing fallback routes with the preferences tuned to let them be preferred over the &quot;normal&quot; peering routes. The routes are advertised via BGP sessions to our routers and are not distributed any further. The service is using GoBGP and running in Kubernetes.</abstract>
+                <slug>denog16-54862-instant-overflow-injection-shifting-traffic-to-overflow-providers-in-a-moment-s-notice</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='31570'>Tobias Krischer</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/NCYK9Q/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/NCYK9Q/feedback/</feedback_url>
+            </event>
+            <event guid='5711d03c-91a5-549e-bd82-92f9e85d9e9a' id='55875'>
+                <room>Auditorium</room>
+                <title>What could possibly go wrong with FTTH - ask the Swiss!</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-18T16:30:00+01:00</date>
+                <start>16:30</start>
+                <duration>00:30</duration>
+                <abstract>The so-called &#8216;Glasfaserstreit&apos; (fibre optic dispute), an antitrust case, successfully prevented the intention of the incumbent to monopolise the Swiss fibre optic network. As a result, &gt;2 million households can currently subscribe to a symmetrical 25 Gigabit FTTH connection for ~&#8364;70 per month.</abstract>
+                <slug>denog16-55875-what-could-possibly-go-wrong-with-ftth-ask-the-swiss-</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='15515'>Fredy K&#252;nzler</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/DJAA3V/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/DJAA3V/feedback/</feedback_url>
+            </event>
+            <event guid='b6e253d9-c480-5773-a680-050fd04f2e7c' id='55744'>
+                <room>Auditorium</room>
+                <title>Certification of Network Products for Application in German Public Mobile Networks</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-18T17:00:00+01:00</date>
+                <start>17:00</start>
+                <duration>00:30</duration>
+                <abstract>Starting with 1st of January, 2026, operators of public mobile networks in Germany are obliged to
+employ certified network products within their networks. The obligation affects all network products,
+which are newly introduced into public mobile networks and provide functions, for which a security
+assessment document has been approved by the BSI. This also includes network products, which
+provide 3GPP-specified functionalities and are listed in the list of critical functions by the Federal
+Office for Information Security (BSI) and the Bundesnetzagentur (BNetzA). 
+The talk will address the necessary steps by operators of public mobile networks to successfully include certification of network products into their procurement and onboarding processes. Therefore, the talk will showcase the technical approaches taken in the certification process and how they are intended to interplay with provider processes.</abstract>
+                <slug>denog16-55744-certification-of-network-products-for-application-in-german-public-mobile-networks</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='48765'>Thomas Rahimi</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/BHTKAJ/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/BHTKAJ/feedback/</feedback_url>
+            </event>
+            <event guid='1fe84c49-49c9-54ec-815b-f95ccefe4234' id='55842'>
+                <room>Auditorium</room>
+                <title>Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-18T17:30:00+01:00</date>
+                <start>17:30</start>
+                <duration>00:30</duration>
+                <abstract>This presentation investigates the proximity to a low Signal-to-Noise Ratio (SNR) threshold that can still maintain a tolerable Bit Error Rate (BER) in 100G / 400G / 800G network links. Additionally, we account for factors such as temperature and cable length to predict the duration for which a reliable network connection can be sustained between transceivers. The analysis, based on data retrieved using a Flexbox, focuses on comparing the reliability of coherent (16QAM) and non-coherent (PAM4) transceivers, with a detailed discussion on the implications of these technologies on network performance. For a better understanding of the correlation between these factors, Machine Learning techniques were used.</abstract>
+                <slug>denog16-55842-analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber-for-coherent-16qam-and-non-coherent-pam4-high-speed-transceivers-under-environmental-variations</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='36410'>Dr. Gerhard Stein</person><person id='34859'>Thomas Weible</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/KBFMT3/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/KBFMT3/feedback/</feedback_url>
+            </event>
+            <event guid='ef23afde-4b5c-51cd-a4b7-0d36248173ce' id='57426'>
+                <room>Auditorium</room>
+                <title>End of Day 1</title>
+                <subtitle></subtitle>
+                <type>Lightning Talk</type>
+                <date>2024-11-18T18:00:00+01:00</date>
+                <start>18:00</start>
+                <duration>00:10</duration>
+                <abstract>That&apos;s a wrap for day1, we&apos;ll share all details about the social and how to get there!</abstract>
+                <slug>denog16-57426-end-of-day-1</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='9910'>Tim Kleefass</person><person id='49951'>Janina</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/38JPGU/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/38JPGU/feedback/</feedback_url>
+            </event>
+            
+        </room>
+        
+    </day>
+    <day index='3' date='2024-11-19' start='2024-11-19T04:00:00+01:00' end='2024-11-20T03:59:00+01:00'>
+        <room name='Auditorium' guid='08033030-3dcb-5f0c-97c4-d71577fdb115'>
+            <event guid='5e874e03-35ab-5280-8ac2-056432595d42' id='55395'>
+                <room>Auditorium</room>
+                <title>NIS2 Implementing Act for Digital Services &#8211; EU regulation maze revisited</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-19T09:00:00+01:00</date>
+                <start>09:00</start>
+                <duration>00:30</duration>
+                <abstract>Following up on last year&apos;s introductory talk about NIS2 and the cybersecurity regulations, we&apos;ll look at the technical and methodological requirements specifically for digital service providers.</abstract>
+                <slug>denog16-55395-nis2-implementing-act-for-digital-services-eu-regulation-maze-revisited</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='33544'>Ulrich Plate</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/Y88EBE/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/Y88EBE/feedback/</feedback_url>
+            </event>
+            <event guid='58db89d1-d597-58f5-b02f-8a3091581ec8' id='55449'>
+                <room>Auditorium</room>
+                <title>SIP Interworking between voice carriers</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-19T09:30:00+01:00</date>
+                <start>09:30</start>
+                <duration>00:30</duration>
+                <abstract>Everything uses IP nowadays but some stuff is special: Telephony. The connection between customers and their provider is well known but the interconnections of providers themselves are something different. This talk covers the German market, other countries work totally different (some examples might be given).</abstract>
+                <slug>denog16-55449-sip-interworking-between-voice-carriers</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='48568'>Nicola von Thadden (aka nicoduck)</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/HSQJC7/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/HSQJC7/feedback/</feedback_url>
+            </event>
+            <event guid='6f3aad36-054c-5a2a-8fce-7f834760e9ad' id='53304'>
+                <room>Auditorium</room>
+                <title>Return loss problems associated with faster optical networks</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-19T10:00:00+01:00</date>
+                <start>10:00</start>
+                <duration>00:30</duration>
+                <abstract>As communication speeds increase, a new problem of communication errors caused by &quot;return loss&quot; has become apparent in optical connector connections.</abstract>
+                <slug>denog16-53304-return-loss-problems-associated-with-faster-optical-networks</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='46959'>Takaya Nakagawa</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/LYC7PW/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/LYC7PW/feedback/</feedback_url>
+            </event>
+            <event guid='26bae35c-f034-528b-a796-f089de05b4ac' id='53610'>
+                <room>Auditorium</room>
+                <title>DDoS mitigation state-of-the-union</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-19T11:00:00+01:00</date>
+                <start>11:00</start>
+                <duration>00:30</duration>
+                <abstract>DDoS attacks and attackers are out there today, and likely won&apos;t go away anymore. This talk will outline some current available technologies and developments in the area of DDoS countermeasures, which are designed to make DDoS detection faster, provide better information and decision criteria on what is currently going on in a network, and what is required to mitigate attacks with as few as possible unwanted side effects.</abstract>
+                <slug>denog16-53610-ddos-mitigation-state-of-the-union</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='47146'>Oliver Knapp</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/TG9GBD/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/TG9GBD/feedback/</feedback_url>
+            </event>
+            <event guid='2b86dee9-ae97-5996-a86e-0e7f7cc6bf33' id='55903'>
+                <room>Auditorium</room>
+                <title>Measuring the State of DNS Privacy: Past, Present and Future</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-19T11:30:00+01:00</date>
+                <start>11:30</start>
+                <duration>00:30</duration>
+                <abstract>The Domain Name System (DNS) is a critical component of the Internet infrastructure, responsible for translating human-readable domain names into machine-readable IP addresses.  However, the
+increasing centralization of DNS traffic through large content-delivery hyper-giants (such as Google), coupled with the fact that the majority of DNS communication traditionally runs over unencrypted transports (UDP/TCP), has led to increased security and privacy concerns. In this talk, I will
+present recent results on the resiliency and efficiency of DNS, the state of adoption of protocols that enable DNS privacy and their performance implications. I will conclude with a future outlook of a protocol design whereby traditional communications no longer have to trade performance for privacy, but can achieve the best of both worlds: privacy-enhancing DNS + secure communication on the Web.</abstract>
+                <slug>denog16-55903-measuring-the-state-of-dns-privacy-past-present-and-future</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='48870'>Prof. Dr. Vaibhav Bajpai</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/SLHTY7/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/SLHTY7/feedback/</feedback_url>
+            </event>
+            <event guid='d861dcd6-6e05-521c-bc00-4737170671fc' id='55432'>
+                <room>Auditorium</room>
+                <title>From shared broadcast domain into fully routed network without renumbering</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-19T12:00:00+01:00</date>
+                <start>12:00</start>
+                <duration>00:30</duration>
+                <abstract>We had to move a couple of hundred machines from a big Layer 2 broadcast domain into a fully routed network. We also increased the bandwidth available for each server by mounting a new NIC into each server, To avoid synchronisation with service owners, we did not renumber hosts. In addition, there is connectivity to the large Layer 2 domain that is still in place and still has a few thousand hosts in need of migration.
+
+In this talk you will learn how we engineered this migration, minimised downtime and ensured the documentation of our network is always up to date.</abstract>
+                <slug>denog16-55432-from-shared-broadcast-domain-into-fully-routed-network-without-renumbering</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='48533'>Christoph Petrausch</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/WNS7MA/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/WNS7MA/feedback/</feedback_url>
+            </event>
+            <event guid='d93052e4-79c0-5318-bf80-4f7e2fa700ec' id='55847'>
+                <room>Auditorium</room>
+                <title>Modern Metro Networks: Everything, Everywhere, all at Once</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-19T14:00:00+01:00</date>
+                <start>14:00</start>
+                <duration>00:30</duration>
+                <abstract>Metro networks are arguably one of the more challenging areas in carrier network engineering: Feature creep, space constraints, harsh physical environments and the requirement to deliver all services everywhere, for cheap.
+
+At Wobcom AS9136 we _just_ wanted to modernize the transport network. Two years later we ended up redesigning just about everything: Putting white box routers into outdoor shelters, moving subscriber services to the edge and rethinking business CPEs.
+
+This talk covers our journey and what design considerations lead us where we are.
+We will explore a wide range of linked topics:
+
+- Environment (Power, Space, Temperature)
+- Optical problems and solutions (OWDM, OpenZR+)
+- Network ASICs
+- Network Operating Systems
+- Protocols (MPLS, SR, EVPN, etc.)
+- Subscriber Management
+- Full Automation
+- CPEs and their management</abstract>
+                <slug>denog16-55847-modern-metro-networks-everything-everywhere-all-at-once</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='13595'>Fiona Weber</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/ZDGXDY/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/ZDGXDY/feedback/</feedback_url>
+            </event>
+            <event guid='682c9a42-0a18-5c00-b3a2-7aa5c46ad429' id='53110'>
+                <room>Auditorium</room>
+                <title>VPP: A 1Tbps+ router with a single IPv4 address</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-19T14:30:00+01:00</date>
+                <start>14:30</start>
+                <duration>00:30</duration>
+                <abstract>In this talk, we explore the changes needed to convert a set of fully open source amd64 based VPP routers running in AS8298 to be able to use exactly one IPv4 and IPv6 address in an OSPFv3 and iBGP configuration. The use of /30 or /31 IPv4 transit networks between routers is a thing of the past, paving the way to conserve IPv4 addresses!
+
+The talk discusses the changes made to VPP and a popular routing suite Bird2, to enable both Babel and OSPFv3 to route traffic without using IPv4 transit networks, including operational notes how the author rolled this out in AS8298.
+
+Finally, the author will make good on his promise from previous DENOG, predicting a 1Tbps VPP machine.</abstract>
+                <slug>denog16-53110-vpp-a-1tbps-router-with-a-single-ipv4-address</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='21040'>Pim van Pelt</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/YGU3SW/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/YGU3SW/feedback/</feedback_url>
+            </event>
+            <event guid='198282aa-1b01-56d6-8549-b1ca11983889' id='54999'>
+                <room>Auditorium</room>
+                <title>IXP Update</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-19T15:00:00+01:00</date>
+                <start>15:00</start>
+                <duration>00:30</duration>
+                <abstract>News from IXPs in Germany
+As introduced 2021 we collect some parameters from all IXPs, which are active in Germany. 
+This talk aggregates the Updates for all the IXPs in a common format and will be presented in a neutral way.</abstract>
+                <slug>denog16-54999-ixp-update</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='9910'>Tim Kleefass</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/Y9RMD9/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/Y9RMD9/feedback/</feedback_url>
+            </event>
+            <event guid='f0945a87-aaaa-53b6-ac98-eaa3d5652d3b' id='55504'>
+                <room>Auditorium</room>
+                <title>Carrier Scale DNS - DNS@DT</title>
+                <subtitle></subtitle>
+                <type>Lightning Talk</type>
+                <date>2024-11-19T15:30:00+01:00</date>
+                <start>15:30</start>
+                <duration>00:10</duration>
+                <abstract>This talk will give an overview of DTs DNS platform and the challenges arising from carrier scale DNS deployments. It will cover the architecture and new requirements as well as scalability and the implementation status and impact of encrypted DNS (e.g., DoH/DoT and DNS discovery). The presentation will also address shortcomings of the new discovery mechanisms which are currently being standardized within IETF.</abstract>
+                <slug>denog16-55504-carrier-scale-dns-dns-dt</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='48606'>Nicolai Leymann</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/GJGBFQ/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/GJGBFQ/feedback/</feedback_url>
+            </event>
+            <event guid='290c8fd7-8ee0-5b07-8005-e2577eb2f677' id='55001'>
+                <room>Auditorium</room>
+                <title>DENOG16 Closing</title>
+                <subtitle></subtitle>
+                <type>Talk</type>
+                <date>2024-11-19T15:40:00+01:00</date>
+                <start>15:40</start>
+                <duration>00:30</duration>
+                <abstract>Thank you for joining us for DENOG16, join us for a quick review and some announcements before heading home!</abstract>
+                <slug>denog16-55001-denog16-closing</slug>
+                <track></track>
+                
+                <persons>
+                    <person id='9910'>Tim Kleefass</person><person id='9871'>Moritz Frenzel</person><person id='10532'>Patrick Bussmann</person>
+                </persons>
+                <language>en</language>
+                
+                <recording>
+                    <license></license>
+                    <optout>false</optout>
+                </recording>
+                <links></links>
+                <attachments></attachments>
+
+                <url>https://pretalx.com/denog16/talk/P8QBJW/</url>
+                <feedback_url>https://pretalx.com/denog16/talk/P8QBJW/feedback/</feedback_url>
+            </event>
+            
+        </room>
+        
+    </day>
+    
+</schedule>
