@@ -12,8 +12,8 @@ To setup a new event, take the color codes from below and follow these steps:
 
 1. Generate "outro.ts"
   - Copy `outro-template.svg` to `outro.svg`
-  - Replace `$LOCATION` in the SVG with the location name (in capital letters)
-  - Replace `$alpaca_color` in the SVG with corresponding color code
+  - Set the location's name in the text span inside element with `id="location"`.
+  - Set the fill colour of element with `id="topbar"` in the SVG to the location's color code
   - Convert the SVG into png, e.g. with `inkscape --export-filename=outro.png outro.svg`
   - Generate a video from the background: `ffmpeg -loop 1 -i outro.png -f lavfi -i anullsrc -c:v mpeg2video -t 10 -aspect 16:9 -c:a mp2 -b:v 2500k -map 0:v -map 1:a outro.ts`
 2. Generate "intro-background.ts"
