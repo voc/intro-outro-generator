@@ -87,16 +87,16 @@ def debug():
         outroFrames
     )
 
-    render(
-        'background.svg',
-        '../background.ts',
-        backgroundFrames
-    )
+    # render(
+    #     'background.svg',
+    #     '../background.ts',
+    #     backgroundFrames
+    # )
 
-    render('pause.svg',
-        '../pause.ts',
-        pauseFrames
-    )
+    # render('pause.svg',
+    #     '../pause.ts',
+    #     pauseFrames
+    # )
 
 
 def tasks(queue, args, idlist, skiplist):
@@ -132,17 +132,17 @@ def tasks(queue, args, idlist, skiplist):
          ))
 
     # place the pause-sequence into the queue
-    if not "pause" in skiplist:
-        queue.put(Rendertask(
-            infile = 'pause.svg',
-            outfile = 'pause.ts',
-            sequence = pauseFrames
-        ))
+    # if not "pause" in skiplist:
+    #     queue.put(Rendertask(
+    #         infile = 'pause.svg',
+    #         outfile = 'pause.ts',
+    #         sequence = pauseFrames
+    #     ))
 
     # place the background-sequence into the queue
-    if not "bg" in skiplist:
-        queue.put(Rendertask(
-            infile = 'background.svg',
-            outfile = 'background.ts',
-            sequence = backgroundFrames
-        ))
+    # if not "bg" in skiplist:
+    #     queue.put(Rendertask(
+    #         infile = 'background.svg',
+    #         outfile = 'background.ts',
+    #         sequence = backgroundFrames
+    #     ))
