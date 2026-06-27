@@ -14,3 +14,4 @@ env
 .DS_Store
 intro-outro-gen
 .*render_daemon.cache
+.venv

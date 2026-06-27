@@ -2,22 +2,17 @@
 
 import os
 import sys
-import re
 import glob
 import shutil
 import errno
 import subprocess
 from svgtemplate import SVGTemplate
-from lxml import etree
-from urllib.request import urlopen
 from wand.image import Image
 
 # Frames per second. Increasing this renders more frames, the avconf-statements would still need modifications
 fps = 25
 debug = True
 args = None
-
-scheduleTree = None
 
 
 def loadProject(projectname):
@@ -96,8 +91,8 @@ def renderFrame(infile, task, outfile):
             with img.convert('png') as converted:
                 converted.save(filename=outfile)
     elif args.resvg:
-        # invoke inkscape to convert the generated svg-file into a png inside the .frames-directory
-        cmd = 'resvg --background white --width={1} --height={2}  "{4}" "{3}" 2>&1 >/dev/null'.format(
+        # invoke resvg to convert the generated svg-file into a png inside the .frames-directory
+        cmd = 'resvg --background white --use-fonts-dir ~/.fonts --width={1} --height={2}  "{4}" "{3}" 2>&1 >/dev/null'.format(
             task.workdir, width, height, outfile, infile)
         errorReturn = subprocess.check_output(
             cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT, cwd=task.workdir)

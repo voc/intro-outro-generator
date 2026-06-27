@@ -3,8 +3,6 @@ import builtins
 import cssutils
 import logging
 import os
-import difflib
-import sys
 from lxml import etree
 from xml.sax.saxutils import escape as xmlescape
 

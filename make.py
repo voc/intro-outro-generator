@@ -179,7 +179,7 @@ def worker():
         # fetch a task from the queue
         task = renderlib.Rendertask.ensure(tasks.get())
 
-        # if it is a stop-sentinal break out of the loop
+        # if it is a stop-sentinel break out of the loop
         if task is None:
             break
 
@@ -207,7 +207,7 @@ def worker():
     # remove the tempdir
     shutil.rmtree(tempdir)
 
-    # mark the sentinal as done
+    # mark the sentinel as done
     tasks.task_done()
 
 
