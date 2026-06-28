@@ -283,10 +283,17 @@ def enqueue_job(conf: Config, event):
     if args.debug:
         print(cmd)
 
-    subprocess.check_call(cmd,
-                          stderr=subprocess.STDOUT,
-                          stdout=subprocess.DEVNULL
-                          )
+    try:
+        subprocess.check_output(cmd,
+                              stderr=subprocess.PIPE,
+                              )
+    except Exception as e:
+        print(cmd)
+        if getattr(e, 'output', None):
+            print(e.output.decode())
+        if getattr(e, 'stderr', None):
+            print(e.stderr.decode())
+        raise e
 
     return event_id
 
