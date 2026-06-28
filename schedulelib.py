@@ -17,7 +17,7 @@ def _from_file(schedule_url):
         return f.read()
 
 
-def events(schedule_url):
+def events(schedule_url, **kwargs):
     if schedule_url.startswith("file://"):
         schedule_url = schedule_url[7:]
 
@@ -27,7 +27,7 @@ def events(schedule_url):
         schedule_text = _from_file(schedule_url)
 
     if schedule_url.endswith(".xml"):
-        return events_from_xml_schedule(schedule_text)
+        return events_from_xml_schedule(schedule_text, **kwargs)
     if schedule_url.endswith(".json"):
         return events_from_json_schedule(schedule_text)
     raise ValueError(
