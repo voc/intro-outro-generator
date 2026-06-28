@@ -475,15 +475,18 @@ if __name__ == "__main__":
         events = list(schedulelib.events(config.schedule))
 
     if args.ids:
-        if len(args.ids) == 1:
-            print("enqueuing {} job".format(len(args.ids)))
-        else:
-            print("enqueuing {} jobs".format(len(args.ids)))
+        events = [event for event in events if event["id"] in args.ids]
+
+    if args.rooms:
+        events = [event for event in events if event["room"] in args.rooms]
+
+    if len(events) == 0:
+        print("WARNING: no events match filter")
+        sys.exit(1)
+    if len(events) == 1:
+        print("enqueuing {} job".format(len(events)))
     else:
-        if len(events) == 1:
-            print("enqueuing {} job".format(len(events)))
-        else:
-            print("enqueuing {} jobs".format(len(events)))
+        print("enqueuing {} jobs".format(len(events)))
 
     if args.debug:
         if args.ffmpeg:
@@ -493,13 +496,6 @@ if __name__ == "__main__":
             print(f"using ffmpeg: {ffmpeg.decode().strip()}")
 
     for event in events:
-        if args.ids and event["id"] not in args.ids:
-            continue
-
-        if args.rooms and event["room"] not in args.rooms:
-            print("skipping room %s (%s)" % (event["room"], event["title"]))
-            continue
-
         event_print(event, "enqueued as " + str(event["id"]))
 
         job_id = enqueue_job(config, event)
