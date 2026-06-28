@@ -14,6 +14,7 @@ import platform
 
 from PIL import ImageFont
 import schedulelib
+
 ssl._create_default_https_context = ssl._create_unverified_context
 
 FRAME_WIDTH = 1920
@@ -34,33 +35,36 @@ class TextConfig:
         return self.fontfile_path is not None
 
     def parse(self, cparser_sect, default_fontfile, default_fontcolor):
-        self.inpoint = cparser_sect.getfloat('in')
-        self.outpoint = cparser_sect.getfloat('out')
-        self.x = cparser_sect.getint('x')
-        self.y = cparser_sect.getint('y')
-        self.width = cparser_sect.getint('width', FRAME_WIDTH-self.x-100)
-        self.alignment = cparser_sect.get('alignment', 'left')
+        self.inpoint = cparser_sect.getfloat("in")
+        self.outpoint = cparser_sect.getfloat("out")
+        self.x = cparser_sect.getint("x")
+        self.y = cparser_sect.getint("y")
+        self.width = cparser_sect.getint("width", FRAME_WIDTH - self.x - 100)
+        self.alignment = cparser_sect.get("alignment", "left")
 
-        if self.alignment not in ('left', 'center', 'right'):
-            error(f"text alignment {self.alignment} unknown, must be left, right or center")
+        if self.alignment not in ("left", "center", "right"):
+            error(
+                f"text alignment {self.alignment} unknown, must be left, right or center"
+            )
 
-        self.fontcolor = cparser_sect.get('fontcolor', default_fontcolor)
+        self.fontcolor = cparser_sect.get("fontcolor", default_fontcolor)
 
-        fontfile = cparser_sect.get('fontfile', default_fontfile)
+        fontfile = cparser_sect.get("fontfile", default_fontfile)
         self.fontfile_path = str(PurePath(args.project, fontfile).as_posix())
 
         if not os.path.exists(self.fontfile_path):
             error("Font file {} in Project Path is missing".format(self.fontfile_path))
 
-        self.fontsize = cparser_sect.getint('fontsize')
-        self.bordercolor = cparser_sect.get('bordercolor', None)
+        self.fontsize = cparser_sect.getint("fontsize")
+        self.bordercolor = cparser_sect.get("bordercolor", None)
 
     def fit_text(self, text: str) -> list[str]:
         if not text:
             return [(0, "")]
 
         font = ImageFont.truetype(
-            self.fontfile_path, size=self.fontsize, encoding="unic")
+            self.fontfile_path, size=self.fontsize, encoding="unic"
+        )
 
         return fit_text(text, self.width, font)
 
@@ -78,22 +82,36 @@ class TextConfig:
                 line_x = self.x + (self.width - line_width)
 
             filter_str += "drawtext=enable='between({},{},{})':x={}:y={}".format(
-                inout_type, self.inpoint, self.outpoint, line_x, self.y + (idx*self.fontsize))
+                inout_type,
+                self.inpoint,
+                self.outpoint,
+                line_x,
+                self.y + (idx * self.fontsize),
+            )
 
             filter_str += ":fontfile='{}':fontsize={}:fontcolor={}:text={}".format(
-                self.fontfile_path, self.fontsize, self.fontcolor, ffmpeg_escape_str(line))
+                self.fontfile_path,
+                self.fontsize,
+                self.fontcolor,
+                ffmpeg_escape_str(line),
+            )
 
             if self.bordercolor is not None:
                 filter_str += ":borderw={}:bordercolor={}".format(
-                    self.fontsize / 30, self.bordercolor)
+                    self.fontsize / 30, self.bordercolor
+                )
 
             if fade_time > 0:
                 filter_str += ":alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))'".format(
                     fade_in_start_time=self.inpoint,
                     fade_in_end_time=self.inpoint + fade_time,
                     fade_out_start_time=self.inpoint + fade_time + text_duration,
-                    fade_out_end_time=self.inpoint + fade_time + text_duration + fade_time,
-                    fade_duration=fade_time)
+                    fade_out_end_time=self.inpoint
+                    + fade_time
+                    + text_duration
+                    + fade_time,
+                    fade_duration=fade_time,
+                )
 
             filter_str += ","
 
@@ -125,34 +143,34 @@ def parse_config(filename) -> Config:
     cparser = ConfigParser()
     cparser.read(filename)
 
-    meta = cparser['meta']
-    conf.schedule = meta.get('schedule')
-    infile = PurePath(args.project, meta.get('template'))
+    meta = cparser["meta"]
+    conf.schedule = meta.get("schedule")
+    infile = PurePath(args.project, meta.get("template"))
     conf.template_file = str(infile)
-    conf.alpha = meta.getboolean('alpha', conf.alpha)
-    conf.prores = meta.getboolean('prores', conf.prores)
-    conf.inout_type = meta.get('inout_type', conf.inout_type)
-    conf.fade_duration = meta.getfloat('fade_duration', conf.fade_duration)
+    conf.alpha = meta.getboolean("alpha", conf.alpha)
+    conf.prores = meta.getboolean("prores", conf.prores)
+    conf.inout_type = meta.get("inout_type", conf.inout_type)
+    conf.fade_duration = meta.getfloat("fade_duration", conf.fade_duration)
 
-    defaults = cparser['default']
-    default_fontfile = defaults.get('fontfile', None)
-    default_fontcolor = defaults.get('fontcolor', "#ffffff")
+    defaults = cparser["default"]
+    default_fontfile = defaults.get("fontfile", None)
+    default_fontcolor = defaults.get("fontcolor", "#ffffff")
 
     conf.title = TextConfig()
-    conf.title.parse(cparser['title'], default_fontfile, default_fontcolor)
+    conf.title.parse(cparser["title"], default_fontfile, default_fontcolor)
     conf.speaker = TextConfig()
-    conf.speaker.parse(cparser['speaker'], default_fontfile, default_fontcolor)
+    conf.speaker.parse(cparser["speaker"], default_fontfile, default_fontcolor)
     conf.text = TextConfig()
-    conf.text.parse(cparser['text'], default_fontfile, default_fontcolor)
+    conf.text.parse(cparser["text"], default_fontfile, default_fontcolor)
 
-    conf.extra_text = cparser['text'].get('text', '')
+    conf.extra_text = cparser["text"].get("text", "")
 
     conf.fileext = infile.suffix
 
     if not os.path.exists(conf.template_file):
         error("Template file {} in Project Path is missing".format(conf.template_file))
 
-    if conf.alpha and conf.fileext != '.mov':
+    if conf.alpha and conf.fileext != ".mov":
         error("Alpha can only be rendered with .mov source files")
 
     if not args.project:
@@ -174,7 +192,7 @@ def error(err_str):
 
 
 def describe_event(event):
-    return "#{}: {}".format(event['id'], event['title'])
+    return "#{}: {}".format(event["id"], event["title"])
 
 
 def event_print(event, message):
@@ -183,9 +201,9 @@ def event_print(event, message):
 
 def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
     """
-        Break text into list of strings which fit certain a width (in pixels)
-        for the specified font. Returns list of tulpes in format
-        (width_px, text)
+    Break text into list of strings which fit certain a width (in pixels)
+    for the specified font. Returns list of tulpes in format
+    (width_px, text)
     """
 
     split_line = [x.strip() for x in string.split()]
@@ -193,18 +211,20 @@ def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
     w = 0
     line = []
     for word in split_line:
-        new_line = line + [word.rstrip(':')]
+        new_line = line + [word.rstrip(":")]
         w = font.getlength(" ".join(new_line))
         if w > max_width:
-            lines.append((
-                font.getlength(' '.join(line)),
-                ' '.join(line),
-            ))
+            lines.append(
+                (
+                    font.getlength(" ".join(line)),
+                    " ".join(line),
+                )
+            )
             line = []
 
-        line.append(word.rstrip(':'))
+        line.append(word.rstrip(":"))
 
-        #if word.endswith(':'):
+        # if word.endswith(':'):
         #    lines.append((
         #        font.getlength(' '.join(line)),
         #        ' '.join(line),
@@ -212,10 +232,12 @@ def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
         #    line = []
 
     if line:
-        lines.append((
-            font.getlength(' '.join(line)),
-            ' '.join(line),
-        ))
+        lines.append(
+            (
+                font.getlength(" ".join(line)),
+                " ".join(line),
+            )
+        )
 
     return lines
 
@@ -224,136 +246,230 @@ def ffmpeg_escape_str(text: str) -> str:
     # Escape according to https://ffmpeg.org/ffmpeg-filters.html#Notes-on-filtergraph-escaping
     # and don't put the string in quotes afterwards!
     text = text.replace(",", r"\,")
-    text = text.replace(':', r"\\:")
-    text = text.replace (';', r"\\\;")
-    text = text.replace(']', r"\]")
-    text = text.replace('[', r"\[")
+    text = text.replace(":", r"\\:")
+    text = text.replace(";", r"\\\;")
+    text = text.replace("]", r"\]")
+    text = text.replace("[", r"\[")
     text = text.replace("'", r"\\\'")
 
     return text
 
 
 def enqueue_job(conf: Config, event):
-    event_id = str(event['id'])
+    event_id = str(event["id"])
 
-    outfile = str(PurePath(args.project, event_id + '.ts'))
-    outfile_mov = str(PurePath(args.project, event_id + '.mov'))
+    outfile = str(PurePath(args.project, event_id + ".ts"))
+    outfile_mov = str(PurePath(args.project, event_id + ".mov"))
 
     if event_id in args.skip:
-        event_print(event, "skipping " + str(event['id']))
+        event_print(event, "skipping " + str(event["id"]))
         return
     if (os.path.exists(outfile) or os.path.exists(outfile_mov)) and not args.force:
-        event_print(event, "file exist, skipping " + str(event['id']))
+        event_print(event, "file exist, skipping " + str(event["id"]))
         return
 
-    event_title = str(event['title'])
-    event_personnames = str(event['personnames'])
+    event_title = str(event["title"])
+    event_personnames = str(event["personnames"])
 
     title = conf.title.fit_text(event_title)
     speakers = conf.speaker.fit_text(event_personnames)
     extra_text = conf.text.fit_text(conf.extra_text)
 
     if args.debug:
-        print('Title:   ', title)
-        print('Speaker: ', speakers)
+        event_print(event, f"Title:   {title}")
+        event_print(event, f"Speaker: {speakers}")
 
-    if platform.system() == 'Windows':
-        ffmpeg_path = './ffmpeg.exe'
-    else:
-        ffmpeg_path = 'ffmpeg'
+    videofilter = (
+        conf.title.get_ffmpeg_filter(conf.inout_type, conf.fade_duration, title) + ","
+    )
+    videofilter += (
+        conf.speaker.get_ffmpeg_filter(conf.inout_type, conf.fade_duration, speakers)
+        + ","
+    )
+    videofilter += conf.text.get_ffmpeg_filter(
+        conf.inout_type, conf.fade_duration, extra_text
+    )
 
-    videofilter = conf.title.get_ffmpeg_filter(conf.inout_type, conf.fade_duration, title) + ","
-    videofilter += conf.speaker.get_ffmpeg_filter(conf.inout_type,
-                                                  conf.fade_duration, speakers) + ","
-    videofilter += conf.text.get_ffmpeg_filter(conf.inout_type, conf.fade_duration, extra_text)
+    cmd = [args.ffmpeg, "-y", "-i", conf.template_file, "-vf", videofilter]
 
-    cmd = [ffmpeg_path, '-y', '-i', conf.template_file, '-vf', videofilter]
-
-    if conf.fileext == '.mov' and conf.alpha:
+    if conf.fileext == ".mov" and conf.alpha:
         if conf.prores:
-            cmd += ['-vcodec', 'prores_ks', '-pix_fmt', 'yuva444p10le', '-profile:v',
-                    '4444', '-shortest', '-movflags', 'faststart', '-f', 'mov', outfile_mov]
+            cmd += [
+                "-vcodec",
+                "prores_ks",
+                "-pix_fmt",
+                "yuva444p10le",
+                "-profile:v",
+                "4444",
+                "-shortest",
+                "-movflags",
+                "faststart",
+                "-f",
+                "mov",
+                outfile_mov,
+            ]
         else:
-            cmd += ['-shortest', '-c:v', 'qtrle', '-movflags',
-                    'faststart', '-f', 'mov', outfile_mov]
+            cmd += [
+                "-shortest",
+                "-c:v",
+                "qtrle",
+                "-movflags",
+                "faststart",
+                "-f",
+                "mov",
+                outfile_mov,
+            ]
     else:
-        cmd += ['-map', '0:0', '-c:v', 'mpeg2video', '-q:v', '2', '-aspect', '16:9', '-map',
-                '0:1', '-c:a', 'mp2', '-b:a', '384k', '-shortest', '-f', 'mpegts', outfile]
+        cmd += [
+            "-map",
+            "0:0",
+            "-c:v",
+            "mpeg2video",
+            "-q:v",
+            "2",
+            "-aspect",
+            "16:9",
+            "-map",
+            "0:1",
+            "-c:a",
+            "mp2",
+            "-b:a",
+            "384k",
+            "-shortest",
+            "-f",
+            "mpegts",
+            outfile,
+        ]
 
     if args.debug:
-        print(cmd)
+        event_print(event, cmd)
 
     try:
-        subprocess.check_output(cmd,
-                              stderr=subprocess.PIPE,
-                              )
+        subprocess.check_output(
+            cmd,
+            stderr=subprocess.PIPE,
+        )
     except Exception as e:
-        print(cmd)
-        if getattr(e, 'output', None):
-            print(e.output.decode())
-        if getattr(e, 'stderr', None):
-            print(e.stderr.decode())
+        if not args.debug:
+            # debug prints it before executing already
+            event_print(event, cmd)
+        if getattr(e, "output", None):
+            event_print(event, e.output.decode())
+        if getattr(e, "stderr", None):
+            event_print(event, e.stderr.decode())
         raise e
 
     return event_id
 
 
 if __name__ == "__main__":
+    if platform.system() == "Windows":
+        ffmpeg_path = "./ffmpeg.exe"
+    else:
+        ffmpeg_path = "ffmpeg"
+
     # Parse arguments
     parser = argparse.ArgumentParser(
-        description='C3VOC Intro-Outro-Generator - Variant which renders only using video filters in ffmpeg',
+        description="C3VOC Intro-Outro-Generator - Variant which renders only using video filters in ffmpeg",
         usage="./make-ffmpeg.py yourproject/",
-        formatter_class=argparse.RawTextHelpFormatter)
+        formatter_class=argparse.RawTextHelpFormatter,
+    )
 
-    parser.add_argument('project', action="store", metavar='Project folder', type=str, help='''
+    parser.add_argument(
+        "project",
+        action="store",
+        metavar="Project folder",
+        type=str,
+        help="""
         Path to your project folder
-        ''')
+        """,
+    )
 
-    parser.add_argument('--debug', action="store_true", default=False, help='''
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        default=False,
+        help="""
         Run script in debug mode and render with placeholder texts,
         not parsing or accessing a schedule.
         This argument must not be used together with --id
         Usage: ./make-ffmpeg.py yourproject/ --debug
-        ''')
+        """,
+    )
 
-    parser.add_argument('--id', dest='ids', nargs='+', action="store", type=int, help='''
+    parser.add_argument(
+        "--id",
+        dest="ids",
+        nargs="+",
+        action="store",
+        type=int,
+        help="""
         Only render the given ID(s) from your projects schedule.
         This argument must not be used together with --debug
         Usage: ./make-adobe-after-effects.py yourproject/ --id 4711 0815 4223 1337
-        ''')
+        """,
+    )
 
-    parser.add_argument('--room', dest='rooms', nargs='+', action="store", type=str, help='''
+    parser.add_argument(
+        "--room",
+        dest="rooms",
+        nargs="+",
+        action="store",
+        type=str,
+        help="""
         Only render the given room(s) from your projects schedule.
         This argument must not be used together with --debug
         Usage: ./make-adobe-after-effects.py yourproject/ --room "HfG_Studio" "ZKM_Vortragssaal"
-        ''')
+        """,
+    )
 
-    parser.add_argument('--skip', nargs='+', action="store", type=str, help='''
+    parser.add_argument(
+        "--skip",
+        nargs="+",
+        action="store",
+        type=str,
+        help="""
         Skip ID(s) not needed to be rendered.
         Usage: ./make-ffmpeg.py yourproject/ --skip 4711 0815 4223 1337
-        ''')
+        """,
+    )
 
-    parser.add_argument('--force', action="store_true", default=False, help='''
-        Force render if file exists.
-        ''')
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        default=False,
+        help="Force render if file exists.",
+    )
+
+    parser.add_argument(
+        "--ffmpeg",
+        default=ffmpeg_path,
+        help="ffmpeg binary to use",
+    )
 
     args = parser.parse_args()
 
-    if (args.skip is None):
+    if args.skip is None:
         args.skip = []
 
-    config = parse_config(PurePath(args.project, 'config.ini'))
+    config = parse_config(PurePath(args.project, "config.ini"))
 
     if args.debug:
-        persons = ['Thomas Roth', 'Dmitry Nedospasov', 'Josh Datko',]
-        events = [{
-            'id': 'debug',
-            'title': 'wallet.fail and the longest talk title to test if the template is big enough',
-            'subtitle': 'Hacking the most popular cryptocurrency hardware wallets',
-            'persons': persons,
-            'personnames': ', '.join(persons),
-            'room': 'Borg',
-        }]
+        persons = [
+            "Thomas Roth",
+            "Dmitry Nedospasov",
+            "Josh Datko",
+        ]
+        events = [
+            {
+                "id": args.ids[0] if args.ids else "debug",
+                "title": "wallet.fail and the longest talk title to test if the template is big enough",
+                "subtitle": "Hacking the most popular cryptocurrency hardware wallets",
+                "persons": persons,
+                "personnames": ", ".join(persons),
+                "room": "Borg",
+            }
+        ]
 
     else:
         events = list(schedulelib.events(config.schedule))
@@ -369,19 +485,28 @@ if __name__ == "__main__":
         else:
             print("enqueuing {} jobs".format(len(events)))
 
+    if args.debug:
+        if args.ffmpeg:
+            print(f"using ffmpeg: {args.ffmpeg}")
+        else:
+            ffmpeg = subprocess.check_output(["command", "-v", args.ffmpeg])
+            print(f"using ffmpeg: {ffmpeg.decode().strip()}")
+
     for event in events:
-        if args.ids and event['id'] not in args.ids:
+        if args.ids and event["id"] not in args.ids:
             continue
 
-        if args.rooms and event['room'] not in args.rooms:
-            print("skipping room %s (%s)" % (event['room'], event['title']))
+        if args.rooms and event["room"] not in args.rooms:
+            print("skipping room %s (%s)" % (event["room"], event["title"]))
             continue
 
-        event_print(event, "enqueued as " + str(event['id']))
+        event_print(event, "enqueued as " + str(event["id"]))
 
         job_id = enqueue_job(config, event)
         if not job_id:
-            event_print(event, "job was not enqueued successfully, skipping postprocessing")
+            event_print(
+                event, "job was not enqueued successfully, skipping postprocessing"
+            )
             continue
 
-    print('all done')
+    print("all done")
