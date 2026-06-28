@@ -1,10 +1,8 @@
-from requests import get
+from json import loads
 
 
-def events_from_json_schedule(schedule_url):
-    r = get(schedule_url, timeout=10)
-    r.raise_for_status()
-    schedule = r.json()
+def events_from_json_schedule(schedule_text):
+    schedule = loads(schedule_text)
 
     for day in schedule["schedule"]["conference"]["days"]:
         for room_name, room in day["rooms"].items():

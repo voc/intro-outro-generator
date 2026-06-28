@@ -2,36 +2,20 @@
 
 import re
 from lxml import etree
-from requests import get
 
 scheduleTree = None
 
 
-# Download the Events-Schedule and parse all Events out of it. Yield a tupel for each Event
-def downloadSchedule(scheduleUrl):
-    print("downloading schedule")
-
-    # download the schedule
-    r = get(scheduleUrl, timeout=10)
-    r.raise_for_status()
-
-    # read xml-source
-    xml = r.text
-
-    # parse into ElementTree
-    parser = etree.XMLParser(huge_tree=True)
-    return etree.fromstring(xml, parser)
-
-
-def getSchedule(scheduleUrl):
+def getSchedule(schedule_text):
     global scheduleTree
     if not scheduleTree:
-        scheduleTree = downloadSchedule(scheduleUrl)
+        parser = etree.XMLParser(huge_tree=True)
+        scheduleTree = etree.fromstring(schedule_text, parser)
     return scheduleTree
 
 
-def persons(scheduleUrl, personmap={}, taglinemap={}, forEventId=None):
-    schedule = getSchedule(scheduleUrl)
+def persons(schedule_text, personmap={}, taglinemap={}, forEventId=None):
+    schedule = getSchedule(schedule_text)
     # iterate all days
     for day in schedule.iter("day"):
         # iterate all rooms
@@ -61,8 +45,8 @@ def persons(scheduleUrl, personmap={}, taglinemap={}, forEventId=None):
                             yield {"id": id, "person": person, "tagline": tagline}
 
 
-def events_from_xml_schedule(scheduleUrl, titlemap={}):
-    schedule = getSchedule(scheduleUrl)
+def events_from_xml_schedule(schedule_text, titlemap={}):
+    schedule = getSchedule(schedule_text)
     # iterate all days
     for day in schedule.iter("day"):
         # iterate all rooms
