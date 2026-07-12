@@ -15,3 +15,5 @@ env
 intro-outro-gen
 .*render_daemon.cache
 .venv
+.direnv
+.envrc
