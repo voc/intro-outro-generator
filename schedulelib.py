@@ -17,7 +17,7 @@ def _from_file(schedule_url):
         return f.read()
 
 
-def events(schedule_url, **kwargs):
+def events(schedule_url, format="auto", **kwargs):
     if schedule_url.startswith("file://"):
         schedule_url = schedule_url[7:]
 
@@ -26,10 +26,10 @@ def events(schedule_url, **kwargs):
     else:
         schedule_text = _from_file(schedule_url)
 
-    if schedule_url.endswith(".xml"):
+    if schedule_url.endswith(".xml") or format == "xml":
         return events_from_xml_schedule(schedule_text, **kwargs)
-    if schedule_url.endswith(".json"):
+    if schedule_url.endswith(".json") or format == "json":
         return events_from_json_schedule(schedule_text)
     raise ValueError(
-        f"schedulelib.events(): could not determine whether {schedule_url!r} is XML or JSON"
+        f"schedulelib.events(): could not determine whether {schedule_url!r} is XML or JSON, specify manually as `schedule_format=xml` or `schedule_format=json` in config"
     )

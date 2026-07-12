@@ -120,6 +120,7 @@ class TextConfig:
 
 class Config:
     schedule: str
+    schedule_format: str = "auto"
     template_file: str  # video background
     alpha: bool = False
     prores: bool = False
@@ -145,6 +146,7 @@ def parse_config(filename) -> Config:
 
     meta = cparser["meta"]
     conf.schedule = meta.get("schedule")
+    conf.schedule_format = meta.get("schedule_format", conf.schedule_format)
     infile = PurePath(args.project, meta.get("template"))
     conf.template_file = str(infile)
     conf.alpha = meta.getboolean("alpha", conf.alpha)
@@ -472,7 +474,9 @@ if __name__ == "__main__":
         ]
 
     else:
-        events = list(schedulelib.events(config.schedule))
+        events = list(
+            schedulelib.events(config.schedule, format=config.schedule_format)
+        )
 
     if args.ids:
         events = [event for event in events if event["id"] in args.ids]
