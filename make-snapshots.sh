@@ -1,19 +1,24 @@
 #!/bin/bash
+
+[[ -n "$DEBUG" ]] && set -x
+set -euo pipefail
+shopt -s nullglob
+
 if ! pushd $1 >/dev/null 2>&1; then
-	echo "call with a project-name, eg. './make-snapshots sotmeu14' after you rendered your dv/ts-files."
-	exit 1
+    echo "call with a project-name, eg. './make-snapshots sotmeu14' after you rendered your dv/ts-files."
+    exit 1
 fi
 
 ss=$2
 if [ -z $ss ]; then
-	# three seconds
-	ss=3
+    # three seconds
+    ss=3
 fi
 
 for dv in *.dv; do
-	png="${dv%.*}-thumbnail.png"
-	echo "$dv @ second $ss -> $png"
-	ffmpeg -loglevel error -i $dv -ss $ss -frames:v 1 -vf scale='iw*sar:ih' -f image2 -y -c png $png;
+    png="${dv%.*}-thumbnail.png"
+    echo "$dv @ second $ss -> $png"
+    ffmpeg -loglevel error -i $dv -ss $ss -frames:v 1 -vf scale='iw*sar:ih' -f image2 -y -c png $png;
 done
 
 for ts in *.ts; do
