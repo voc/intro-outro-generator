@@ -3,12 +3,14 @@
 
 """See jugendhackt/config.ini for some config file documentation."""
 
+import json
 import os
 import sys
 import subprocess
 import argparse
 import ssl
 from configparser import ConfigParser
+from hashlib import sha256
 from pathlib import PurePath
 import platform
 
@@ -257,7 +259,7 @@ def ffmpeg_escape_str(text: str) -> str:
     return text
 
 
-def enqueue_job(conf: Config, event):
+def enqueue_job(conf: Config, event, already_rendered):
     event_id = str(event["id"])
 
     outfile = str(PurePath(args.project, event_id + ".ts"))
@@ -265,9 +267,6 @@ def enqueue_job(conf: Config, event):
 
     if event_id in args.skip:
         event_print(event, "skipping " + str(event["id"]))
-        return
-    if (os.path.exists(outfile) or os.path.exists(outfile_mov)) and not args.force:
-        event_print(event, "file exist, skipping " + str(event["id"]))
         return
 
     event_title = str(event["title"])
@@ -343,6 +342,28 @@ def enqueue_job(conf: Config, event):
             outfile,
         ]
 
+    command_hash = sha256(" ".join(cmd).encode()).hexdigest()
+    if args.debug:
+        event_print(event, f"command hash is {command_hash}")
+
+    if not args.force:
+        previous_hash = already_rendered.get(event_id)
+        if args.debug:
+            event_print(event, f"previous hash is {previous_hash}")
+
+        if previous_hash is not None and command_hash == previous_hash:
+            if args.debug:
+                event_print(
+                    event,
+                    "would have been skipped because hash matches but rendering anyway because --debug",
+                )
+            else:
+                event_print(
+                    event, "skipped because it was already rendered with identical data"
+                )
+                return None
+
+    event_print(event, "rendering ...")
     if args.debug:
         event_print(event, cmd)
 
@@ -361,7 +382,8 @@ def enqueue_job(conf: Config, event):
             event_print(event, e.stderr.decode())
         raise e
 
-    return event_id
+    event_print(event, "DONE")
+    return event_id, command_hash
 
 
 if __name__ == "__main__":
@@ -499,14 +521,18 @@ if __name__ == "__main__":
             ffmpeg = subprocess.check_output(["command", "-v", args.ffmpeg])
             print(f"using ffmpeg: {ffmpeg.decode().strip()}")
 
-    for event in events:
-        event_print(event, "enqueued as " + str(event["id"]))
+    already_rendered = {}
+    rendered_json = PurePath(args.project, "rendered.json")
+    if os.path.isfile(rendered_json):
+        with open(rendered_json) as f:
+            already_rendered = json.load(f)
 
-        job_id = enqueue_job(config, event)
-        if not job_id:
-            event_print(
-                event, "job was not enqueued successfully, skipping postprocessing"
-            )
-            continue
+    for event in events:
+        result = enqueue_job(config, event, already_rendered)
+        if result:
+            already_rendered[result[0]] = result[1]
+
+    with open(rendered_json, "w") as f:
+        json.dump(already_rendered, f)
 
     print("all done")

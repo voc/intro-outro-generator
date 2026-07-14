@@ -3,6 +3,7 @@
 *.ts
 *.mkv
 *.mov
+*/rendered.json
 /*/*.png
 /*.png
 *.pyc
