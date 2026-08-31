@@ -162,7 +162,7 @@ def tprint(str):
 # thread worker
 def worker():
     # generate a tempdir for this worker-thread and use the artwork-subdir as temporary folder
-    tempdir = tempfile.mkdtemp()
+    tempdir = tempfile.mkdtemp(dir='./tmp/')
     workdir = os.path.join(tempdir, 'artwork')
 
     # save the current working dir as output-dir
