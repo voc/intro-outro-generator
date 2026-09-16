@@ -67,6 +67,15 @@ You also need to have this set in your environment:
 export MAGICK_HOME=/opt/homebrew/opt/imagemagick/
 ```
 
+If there is no inkscape cli available, you can try creating a file in `~/.local/bin/inkscape` with the following contents:
+
+```bash
+#!/bin/bash
+cd /Applications/Inkscape.app/Contents/MacOS/
+
+./inkscape $@
+```
+
 #### Nix(OS)
 
 You could also try and improve the nix dev shell, contained in `flake.nix`:
