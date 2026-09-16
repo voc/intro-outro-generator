@@ -53,6 +53,20 @@ On debian you need to install ImageMagick and Python lxml dependencies:
 sudo apt-get install python3-pil libmagickwand-dev libmagickcore5-extra libxml2-dev libxslt1-dev
 ```
 
+##### MacOS
+
+On MacOS you need to install these dependencies:
+
+```
+brew install freetype imagemagick
+```
+
+You also need to have this set in your environment:
+
+```
+export MAGICK_HOME=/opt/homebrew/opt/imagemagick/
+```
+
 #### Nix(OS)
 
 You could also try and improve the nix dev shell, contained in `flake.nix`:
