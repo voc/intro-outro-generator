@@ -158,11 +158,15 @@ def tprint(str):
     # release lock
     printLock.release()
 
+tempdirs = []
 
 # thread worker
 def worker():
+    global tempdirs
+
     # generate a tempdir for this worker-thread and use the artwork-subdir as temporary folder
     tempdir = tempfile.mkdtemp()
+    tempdirs.append(tempdir)
     workdir = os.path.join(tempdir, 'artwork')
 
     # save the current working dir as output-dir
@@ -206,29 +210,35 @@ def worker():
 
     # remove the tempdir
     shutil.rmtree(tempdir)
+    tempdirs.remove(tempdir)
 
     # mark the sentinel as done
     tasks.task_done()
 
+try:
+    # List of running threads
+    threads = []
 
-# List of running threads
-threads = []
+    # generate and start the threads
+    for i in range(num_worker_threads):
+        t = Thread(target=worker)
+        t.daemon = True
+        t.start()
+        threads.append(t)
 
-# generate and start the threads
-for i in range(num_worker_threads):
-    t = Thread(target=worker)
-    t.daemon = True
-    t.start()
-    threads.append(t)
+    # wait until they finished doing the work
+    # we're doing it the manual way because tasks.join() would wait until all tasks are done,
+    # even if the worker threads crash due to broken svgs, Ctrl-C termination or whatnot
+    while True:
+        if tasks.empty():
+            break
 
-# wait until they finished doing the work
-# we're doing it the manual way because tasks.join() would wait until all tasks are done,
-# even if the worker threads crash due to broken svgs, Ctrl-C termination or whatnot
-while True:
-    if tasks.empty() is True:
-        break
+        # sleep while the workers work
+        time.sleep(1)
 
-    # sleep while the workers work
-    time.sleep(1)
-
-print("all worker threads ended")
+    print("all worker threads ended")
+except KeyboardInterrupt:
+    if tempdirs:
+        print("Cleaning up left-over tempdirs...")
+        for directory in tempdirs:
+            shutil.rmtree(directory)
