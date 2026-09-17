@@ -9,25 +9,30 @@ scheduleUrl = 'https://data.c3voc.de/kde2026/schedule.xml'
 
 def outroFrames(args):
 #fadein outro graphics
-    frames = 3*fps
+    frames = int(0.6*fps)
     for i in range(0, frames):
         yield(
-            ('pillgroup', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('logotext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('c3voclogo', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
-            ('c3voctext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
+            ('logo', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
+            ('bottom_text', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
             ('bysalogo', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
             ('bysatext', 'style', 'opacity', easeInQuad(i, 0.01, 1, frames)),
         )
-    frames = 3*fps
+    frames = int(4.4*fps)
     for i in range(0, frames):
         yield(
-            ('pillgroup', 'style', 'opacity', 1),
-            ('logotext', 'style', 'opacity', 1),
-            ('c3voclogo', 'style', 'opacity', 1),
-            ('c3voctext', 'style', 'opacity', 1),
+            ('logo', 'style', 'opacity', 1),
+            ('bottom_text', 'style', 'opacity', 1),
             ('bysalogo', 'style', 'opacity', 1),
             ('bysatext', 'style', 'opacity', 1),
+        )
+
+    frames = int(0.6 * fps)
+    for i in range(0, frames):
+        yield(
+            ('logo', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
+            ('bottom_text', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
+            ('bysalogo', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
+            ('bysatext', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
         )
 
 def pauseFrames(args):
