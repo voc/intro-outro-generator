@@ -8,89 +8,30 @@ from easing import *
 scheduleUrl = 'https://data.c3voc.de/kde2026/schedule.xml'
 
 def introFrames(args):
-#fade in pillgroup0
-    frames = 1*fps
+    frames = int(0.5 * fps)
     for i in range(0, frames):
         yield (
-            ('pillgroup0', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('pillgroup1', 'style', 'opacity', 0),
-            ('pillgroup2', 'style', 'opacity', 0),
-            ('pillgroup3', 'style', 'opacity', 0),
-            ('pillgroup4', 'style', 'opacity', 0),
-            ('logotext', 'style', 'opacity', 0),
             ('title', 'style', 'opacity', 0),
-            ('subtitle', 'style', 'opacity', 0),
             ('persons', 'style', 'opacity', 0),
-            ('id', 'style', 'opacity', 0),
+            ('header', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
+            ('logo_group', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
         )
-#fade in and move in pillgroup 1-4 of thorax + fade in logotext
-    y12start = 1450
-    y12end = 917.679
-    x3start = 610
-    x4start = 610
-    frames = 2*fps
+
+    # fade in title, subtitle, persons and id
+    frames = 1 * fps
     for i in range(0, frames):
-        y12 = (y12end-y12start) - ((i+1) * ((y12end-y12start)/frames))
-        x3 = -x3start + ((i+1) * (x3start/frames))
-        x4 = x4start - ((i+1) * ((x4start)/frames))
-        #print("---------------------------------------------------")
-        #print (i, "/", frames)
-        #print(y12)
-        #print(x3)
-        #print(x4)
-        #print("---------------------------------------------------")
         yield (
-            ('pillgroup1', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('pillgroup2', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('pillgroup3', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('pillgroup4', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('logotext', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('pillgroup1', 'attr', 'transform', 'translate(0, %.4f)' % (y12)),
-            ('pillgroup2', 'attr', 'transform', 'translate(0, %.4f)' % (y12)),
-            ('pillgroup3', 'attr', 'transform', 'translate(%.4f, 0)' % (x3)),
-            ('pillgroup4', 'attr', 'transform', 'translate(%.4f, 0)' % (x4)),
-        )
-#show pillgroup 0-4 + logotext for 1 second
-    frames = 1*fps
-    for i in range(0, frames):
-        yield(
-            ('pillgroup0', 'style', 'opacity', 1),
-            ('pillgroup1', 'style', 'opacity', 1),
-            ('pillgroup2', 'style', 'opacity', 1),
-            ('pillgroup3', 'style', 'opacity', 1),
-            ('pillgroup4', 'style', 'opacity', 1),
-            ('logotext', 'style', 'opacity', 1),
-        )
-#move pillgroup 0-4 + logotext to right
-    frames = 2*fps
-    for i in range(0, frames):
-        xshift = (i+1) * 490/frames
-        #print(xshift)
-        yield(
-            ('pillgroup0', 'attr', 'transform', 'translate(%.4f, 0)' % (xshift)),
-            ('pillgroup1', 'attr', 'transform', 'translate(%.4f, 0)' % (xshift)),
-            ('pillgroup2', 'attr', 'transform', 'translate(%.4f, 0)' % (xshift)),
-            ('pillgroup3', 'attr', 'transform', 'translate(%.4f, 0)' % (xshift)),
-            ('pillgroup4', 'attr', 'transform', 'translate(%.4f, 0)' % (xshift)),
-            ('logotext', 'attr', 'transform', 'translate(%.4f, 0)' % (xshift)),
-        )
-#fade in title, subtitle, persons and id
-    frames = 2*fps
-    for i in range(0, frames):
-        yield(
             ('title', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('subtitle', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
             ('persons', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('id', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
         )
-#show whole image for 2 seconds
-    frames = 2*fps
+
+    # show whole image for 4 seconds
+    frames = 4 * fps
     for i in range(0, frames):
-        yield(
+        yield (
             ('title', 'style', 'opacity', 1),
             ('subtitle', 'style', 'opacity', 1),
             ('persons', 'style', 'opacity', 1),
-            ('id', 'style', 'opacity', 1),
         )
 
 def backgroundFrames(parameters):
