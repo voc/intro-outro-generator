@@ -41,8 +41,8 @@ class TextConfig:
         self.outpoint = cparser_sect.getfloat("out")
         self.x = cparser_sect.getint("x")
         self.y = cparser_sect.getint("y")
-        self.width = cparser_sect.getint("width", FRAME_WIDTH - self.x - 100)
         self.alignment = cparser_sect.get("alignment", "left")
+        self.width = cparser_sect.getint("width", FRAME_WIDTH - (self.x if self.alignment == 'left' else 0) - 100)
 
         if self.alignment not in ("left", "center", "right"):
             error(
@@ -70,28 +70,42 @@ class TextConfig:
 
         return fit_text(text, self.width, font)
 
-    def get_ffmpeg_filter(self, inout_type: str, fade_time: float, text: list[str]):
+    def get_ffmpeg_filter(self, inout_type: str, fade_time: float, text):
         if not text:
             return ""
 
         text_duration = self.outpoint - self.inpoint - fade_time * 2
-        filter_str = ""
-        for idx, (line_width, line) in enumerate(text):
-            line_x = self.x
-            if self.alignment == "center":
-                line_x = self.x + (self.width - line_width) / 2
-            elif self.alignment == "right":
-                line_x = self.x + (self.width - line_width)
+        filters = []
 
-            filter_str += "drawtext=enable='between({},{},{})':x={}:y={}".format(
+        for idx, (line_width, line) in enumerate(text):
+            if self.alignment == "center":
+                # Center the text in the full video frame
+                text_line_x = (FRAME_WIDTH / 2) - (line_width / 2)
+            elif self.alignment == "right":
+                # Right align to the full frame
+                text_line_x = FRAME_WIDTH - line_width
+            else:
+                # Left align
+                text_line_x = self.x
+
+            drawtext = (
+                "drawtext="
+                "enable='between({},{},{})':"
+                "x={}:y={}:"
+                "text_align='M+L':"
+                "boxw={}"
+            ).format(
                 inout_type,
                 self.inpoint,
                 self.outpoint,
-                line_x,
-                self.y + (idx * self.fontsize),
+                int(text_line_x),
+                int(self.y + (idx * self.fontsize)),
+                line_width,
             )
 
-            filter_str += ":fontfile='{}':fontsize={}:fontcolor={}:text={}".format(
+            drawtext += (
+                ":fontfile='{}':fontsize={}:fontcolor={}:text={}"
+            ).format(
                 self.fontfile_path,
                 self.fontsize,
                 self.fontcolor,
@@ -99,25 +113,30 @@ class TextConfig:
             )
 
             if self.bordercolor is not None:
-                filter_str += ":borderw={}:bordercolor={}".format(
-                    self.fontsize / 30, self.bordercolor
+                drawtext += ":borderw={}:bordercolor={}".format(
+                    self.fontsize / 30,
+                    self.bordercolor,
                 )
 
             if fade_time > 0:
-                filter_str += ":alpha='if(lt(t,{fade_in_start_time}),0,if(lt(t,{fade_in_end_time}),(t-{fade_in_start_time})/{fade_duration},if(lt(t,{fade_out_start_time}),1,if(lt(t,{fade_out_end_time}),({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))'".format(
+                drawtext += (
+                    ":alpha='if(lt(t,{fade_in_start_time}),0,"
+                    "if(lt(t,{fade_in_end_time}),"
+                    "(t-{fade_in_start_time})/{fade_duration},"
+                    "if(lt(t,{fade_out_start_time}),1,"
+                    "if(lt(t,{fade_out_end_time}),"
+                    "({fade_duration}-(t-{fade_out_start_time}))/{fade_duration},0))))'"
+                ).format(
                     fade_in_start_time=self.inpoint,
                     fade_in_end_time=self.inpoint + fade_time,
                     fade_out_start_time=self.inpoint + fade_time + text_duration,
-                    fade_out_end_time=self.inpoint
-                    + fade_time
-                    + text_duration
-                    + fade_time,
+                    fade_out_end_time=self.outpoint,
                     fade_duration=fade_time,
                 )
 
-            filter_str += ","
+            filters.append(drawtext)
 
-        return filter_str[:-1]
+        return ",".join(filters)
 
 
 class Config:
