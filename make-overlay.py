@@ -202,6 +202,7 @@ def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
 def ffmpeg_escape_str(text: str) -> str:
     # Escape according to https://ffmpeg.org/ffmpeg-filters.html#Notes-on-filtergraph-escaping
     # and don't put the string in quotes afterwards!
+    text = text.replace("\\", r"\\\\\\\\")
     text = text.replace(",", r"\,")
     text = text.replace(':', r"\\:")
     text = text.replace (';', r"\\\;")
