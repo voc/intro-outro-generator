@@ -245,14 +245,14 @@ def fit_text(string: str, max_width: int, font: ImageFont) -> list[str]:
             )
             line = []
 
-        line.append(word.rstrip(":"))
+        line.append(word)
 
-        # if word.endswith(':'):
-        #    lines.append((
-        #        font.getlength(' '.join(line)),
-        #        ' '.join(line),
-        #    ))
-        #    line = []
+        if word.endswith(':'):
+           lines.append((
+               font.getlength(' '.join(line)),
+               ' '.join(line),
+           ))
+           line = []
 
     if line:
         lines.append(
@@ -498,7 +498,7 @@ if __name__ == "__main__":
 
     config = parse_config(PurePath(args.project, "config.ini"))
 
-    if args.debug:
+    if args.debug and False:
         persons = [
             "Thomas Roth",
             "Dmitry Nedospasov",
