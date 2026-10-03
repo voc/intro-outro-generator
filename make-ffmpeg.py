@@ -70,7 +70,7 @@ class TextConfig:
 
         return fit_text(text, self.width, font)
 
-    def get_ffmpeg_filter(self, inout_type: str, fade_time: float, text):
+    def get_ffmpeg_filter(self, inout_type: str, fade_time: float, text: list[str]):
         if not text:
             return ""
 
