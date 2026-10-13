@@ -233,14 +233,14 @@ def enqueue_job(event):
         if platform.system() == 'Darwin':
             copyfile(args.project+'intro.scpt', ascript_doc)
 
-            run('osascript {ascript_path} {scriptpath}',
-                scriptpath=script_doc,
-                ascript_path=ascript_doc)
+            # run('osascript {ascript_path} {scriptpath}',
+            #     scriptpath=script_doc,
+            #     ascript_path=ascript_doc)
 
-            # run('osascript {ascript_path} {jobpath} {scriptpath}',
-            #    jobpath=work_doc,
-            #    scriptpath=script_doc,
-            #    ascript_path=ascript_doc)
+            run('osascript {ascript_path} {jobpath} {scriptpath}',
+               jobpath=work_doc,
+               scriptpath=script_doc,
+               ascript_path=ascript_doc)
 
             run(r'/Applications/Adobe\ After\ Effects\ 2024/aerender -project {jobpath} -comp "intro" -mp -output {locationpath}',
                 jobpath=work_doc,
