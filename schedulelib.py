@@ -22,7 +22,7 @@ def events(schedule_url, format="auto", **kwargs):
         schedule_url = schedule_url[7:]
 
     if "://" in schedule_url:
-        schedule_text = _from_url(schedule_url)
+        schedule_text = _from_url(schedule_url).encode()
     else:
         schedule_text = _from_file(schedule_url)
 
