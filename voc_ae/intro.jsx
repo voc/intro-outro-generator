@@ -1,3 +1,4 @@
+app.open(new File("$filename"));
 var comp;
 for (var i = 1; i <= app.project.numItems; i ++) {
     if ((app.project.item(i) instanceof CompItem) && (app.project.item(i).name === 'intro')) {
@@ -19,5 +20,4 @@ textProp_title.setValue(textDocument_title);
 textDocument_persons.text = "$personnames";
 textProp_persons.setValue(textDocument_persons);
 
-app.project.save();
-app.quit();
+app.project.close(CloseOptions.SAVE_CHANGES);
